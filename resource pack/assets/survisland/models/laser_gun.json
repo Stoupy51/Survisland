@@ -1,0 +1,28 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "survisland:laser_gun"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, 90, 45],
+			"translation": [0, 3.25, -1.25]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, -90, -45],
+			"translation": [0, 3.25, -1.25]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 90, 0],
+			"translation": [0, 3.25, -1.25]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, -90, 0],
+			"translation": [0, 3.25, -1.25]
+		},
+		"gui": {
+			"scale": [1.2, 1.2, 1.2]
+		}
+	}
+}
