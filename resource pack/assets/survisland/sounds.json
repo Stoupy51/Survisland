@@ -1,0 +1,8 @@
+{
+	"laser_gun": {
+		"subtitle": "LaserGun",
+		"sounds": [
+			"survisland:laser_gun"
+		]
+	}
+}

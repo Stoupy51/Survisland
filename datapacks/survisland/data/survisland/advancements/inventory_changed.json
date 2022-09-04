@@ -1,0 +1,11 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {}
+		}
+	},
+	"rewards": {
+		"function": "survisland:advancements/inventory_changed"
+	}
+}
