@@ -4,7 +4,7 @@ tag Stoupy51 add convention.debug
 scoreboard objectives add survisland.data dummy
 scoreboard objectives add survisland.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
 
-scoreboard players set survisland load.status 1000
+scoreboard players set survisland load.status 1001
 forceload add 0 0
 
 #define storage survisland:main
