@@ -38,12 +38,3 @@ execute if score #color survisland.data matches 1 run function survisland:modes/
 scoreboard players set #base_reload survisland.data 30
 setblock -1253 60 -2791 dark_oak_trapdoor[powered=true,open=true]
 
-/say Pour les bonus du LaserGame qu'il y avait :
-/say - un Bouclier résistant à 5 tirs [+20 points]
-/say - une Mitraillette pendant 15 secondes [+20 points]
-/say - un Effet Darkness à la team ennemie [+20 points]
-/say - un Effet Glowing à la team ennemie [+20 points]
-/say - un Changement de couleur visuellement pendant 30 secondes [+20 points]
-
-
-

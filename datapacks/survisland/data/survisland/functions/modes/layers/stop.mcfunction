@@ -1,28 +1,18 @@
 
 ## mPeluang VS mTuarua
 ## mAkijan VS mHainy
-team join mPeluang @a[tag=mPeluang]
-team join mTuarua @a[tag=mTuarua]
-team join mHainy @a[tag=mHainy]
-team join mAkijan @a[tag=mAkijan]
+team modify mHainy nametagVisibility hideForOwnTeam
+team modify mAkijan nametagVisibility hideForOwnTeam
+team modify mHainy friendlyFire true
+team modify mAkijan friendlyFire true
 
-tag @a remove survisland.laser_game.blue
-tag @a remove survisland.laser_game.red
-tag @a remove global.ignore
-scoreboard objectives remove survisland.temp.kills
-scoreboard objectives remove survisland.temp.shield
-scoreboard objectives remove survisland.temp.cooldown
-scoreboard objectives remove survisland.temp.dead_cooldown
-scoreboard objectives remove survisland.temp.sidebar
-team remove survisland.laser_game.blue
-team remove survisland.laser_game.red
-team remove survisland.temp.sidebar.1
+execute as @a run attribute @s generic.attack_speed base set 4.0
+clear @a #survisland:layers
+
 team remove survisland.temp.sidebar.2
-team remove survisland.temp.sidebar.3
+team remove survisland.temp.sidebar.1
+scoreboard objectives remove survisland.temp.deathCount
+scoreboard objectives remove survisland.temp.sidebar
 
-clear @a warped_fungus_on_a_stick
-clear @a leather_chestplate
-
-schedule clear survisland:modes/laser_game/tick
-schedule clear survisland:modes/laser_game/second
+schedule clear survisland:modes/layers/tick
 
