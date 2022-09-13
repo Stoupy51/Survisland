@@ -1,18 +1,22 @@
 
 ##Fonction executée tous les ticks lorsque le mode de jeu est activé
 
-scoreboard players add #laser_game_ticks survisland.data 1
+scoreboard players add #layers_ticks survisland.data 1
 
-scoreboard players add @a[team=!zStaff,team=!zSpec,team=!zOut,team=!aMJ] survisland.temp.cooldown 0
-scoreboard players add @a[team=!zStaff,team=!zSpec,team=!zOut,team=!aMJ] survisland.temp.dead_cooldown 0
-scoreboard players add @a[scores={survisland.temp.cooldown=..-1}] survisland.temp.cooldown 1
-execute as @a[scores={survisland.temp.dead_cooldown=..-1}] at @s run function survisland:modes/laser_game/death_animation
-execute as @a[scores={survisland.right_click=1..},sort=random] at @s run function survisland:modes/laser_game/right_click
-execute as @a[team=!zStaff,team=!zSpec,team=!zOut,team=!aMJ] run function survisland:modes/laser_game/give_items
-kill @e[type=item]
+##Traitement des joueurs
+execute if score #layers_ticks survisland.data matches 40 as @a[sort=random,team=!zStaff,team=!zSpec,team=!zOut,team=!aMJ] run function survisland:modes/layers/teleport_players
+execute if score #layers_ticks survisland.data matches 40 as @a at @s run playsound entity.wither.spawn ambient @s
 
-scoreboard players reset @a survisland.right_click
+execute as @e[type=player,scores={survisland.temp.deathCount=1..}] run function survisland:modes/layers/death
 
-schedule function survisland:modes/laser_game/tick 1t replace
-execute if score #remaining_time survisland.data matches ..0 run function survisland:modes/laser_game/process_end
+scoreboard players set #mHainy_restants survisland.data 0
+scoreboard players set #mAkijan_restants survisland.data 0
+execute store result score #mHainy_restants survisland.data if entity @a[team=mHainy,gamemode=survival]
+execute store result score #mAkijan_restants survisland.data if entity @a[team=mAkijan,gamemode=survival]
+function survisland:modes/layers/update_sidebar
+
+schedule function survisland:modes/layers/tick 1t replace
+
+execute if score #mHainy_restants survisland.data matches 0 run function survisland:modes/layers/process_end
+execute unless score #mHainy_restants survisland.data matches 0 if score #mAkijan_restants survisland.data matches 0 run function survisland:modes/layers/process_end
 
