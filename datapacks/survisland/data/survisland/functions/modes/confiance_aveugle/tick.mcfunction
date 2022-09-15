@@ -53,8 +53,8 @@ execute positioned -1267 59 -2780 if block ~ ~ ~ stone_button[powered=true] run 
 execute positioned -1267 59 -2763 if block ~ ~ ~ stone_button[powered=true] run function survisland:modes/confiance_aveugle/button_peluang
 execute positioned -1267 59 -2747 if block ~ ~ ~ stone_button[powered=true] run function survisland:modes/confiance_aveugle/button_peluang
 
-execute if score #detect_end survisland.data matches 0 if blocks -1277 50 -2734 -1285 58 -2742 -1285 50 -2754 masked run scoreboard players set #detect_end survisland.data 1
+execute if score #detect_end survisland.data matches 0 if blocks -1277 50 -2800 -1285 58 -2808 -1285 50 -2820 masked run scoreboard players set #detect_end survisland.data 1
 execute if score #detect_end survisland.data matches 0 if blocks -1277 50 -2767 -1285 58 -2775 -1285 50 -2787 masked run scoreboard players set #detect_end survisland.data 2
-execute if score #detect_end survisland.data matches 0 if blocks -1277 50 -2800 -1285 58 -2808 -1285 50 -2820 masked run scoreboard players set #detect_end survisland.data 3
+execute if score #detect_end survisland.data matches 0 if blocks -1277 50 -2734 -1285 58 -2742 -1285 50 -2754 masked run scoreboard players set #detect_end survisland.data 3
 execute if score #detect_end survisland.data matches 1.. run function survisland:modes/confiance_aveugle/process_end
 
