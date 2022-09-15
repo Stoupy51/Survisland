@@ -19,6 +19,8 @@ scoreboard objectives setdisplay sidebar survisland.temp.sidebar
 
 scoreboard players set #layers_seconds survisland.data 0
 scoreboard players set #layers_ticks survisland.data 0
+scoreboard players set #mHainy_restants survisland.data 1
+scoreboard players set #mAkijan_restants survisland.data 1
 scoreboard players set #process_end survisland.data 0
 
 team add survisland.temp.sidebar.2
