@@ -60,7 +60,7 @@ setblock -1267 59 -2747 stone_button[face=wall,facing=north]
 
 tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Lancement de la partie de Confiance Aveugle, communiquez bien !"}]
 
-scoreboard objectives add survisland.temp.sidebar dummy {"text":"Boutons validés","color":"green"}
+scoreboard objectives add survisland.temp.sidebar dummy {"text":"Boutons validés","color":"gray"}
 scoreboard objectives setdisplay sidebar survisland.temp.sidebar
 
 scoreboard players set #conf_av_seconds survisland.data 0
