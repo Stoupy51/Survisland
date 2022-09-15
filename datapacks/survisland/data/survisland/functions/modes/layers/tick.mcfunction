@@ -11,8 +11,8 @@ execute as @e[type=player,scores={survisland.temp.deathCount=1..}] run function 
 
 scoreboard players set #mHainy_restants survisland.data 0
 scoreboard players set #mAkijan_restants survisland.data 0
-execute store result score #mHainy_restants survisland.data if entity @a[team=mHainy,gamemode=survival]
-execute store result score #mAkijan_restants survisland.data if entity @a[team=mAkijan,gamemode=survival]
+execute unless score #mHainy_restants survisland.data matches 0 store result score #mHainy_restants survisland.data if entity @a[team=mHainy,gamemode=survival]
+execute unless score #mAkijan_restants survisland.data matches 0 store result score #mAkijan_restants survisland.data if entity @a[team=mAkijan,gamemode=survival]
 function survisland:modes/layers/update_sidebar
 
 schedule function survisland:modes/layers/tick 1t replace
