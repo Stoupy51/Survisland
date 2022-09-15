@@ -69,6 +69,7 @@ scoreboard players set #mKembali_buttons survisland.data 0
 scoreboard players set #mTuarua_buttons survisland.data 0
 scoreboard players set #mPeluang_buttons survisland.data 0
 scoreboard players set #process_end survisland.data 0
+scoreboard players set #detect_end survisland.data 0
 
 team add survisland.temp.sidebar.3
 team add survisland.temp.sidebar.2
