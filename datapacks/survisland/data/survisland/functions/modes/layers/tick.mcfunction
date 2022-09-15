@@ -9,8 +9,6 @@ execute if score #layers_ticks survisland.data matches 40 as @a at @s run playso
 
 execute as @e[type=player,scores={survisland.temp.deathCount=1..}] run function survisland:modes/layers/death
 
-scoreboard players set #mHainy_restants survisland.data 0
-scoreboard players set #mAkijan_restants survisland.data 0
 execute unless score #mHainy_restants survisland.data matches 0 store result score #mHainy_restants survisland.data if entity @a[team=mHainy,gamemode=survival]
 execute unless score #mAkijan_restants survisland.data matches 0 store result score #mAkijan_restants survisland.data if entity @a[team=mAkijan,gamemode=survival]
 function survisland:modes/layers/update_sidebar
