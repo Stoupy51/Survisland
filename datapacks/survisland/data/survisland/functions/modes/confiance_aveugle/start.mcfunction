@@ -73,9 +73,9 @@ scoreboard players set #process_end survisland.data 0
 team add survisland.temp.sidebar.3
 team add survisland.temp.sidebar.2
 team add survisland.temp.sidebar.1
-team modify survisland.temp.sidebar.3 suffix [{"text":"embali : ","color":"yellow"},{"text":"0/14","color":"green"}]
-team modify survisland.temp.sidebar.2 suffix [{"text":"uarua : ","color":"light_purple"},{"text":"0/14","color":"green"}]
-team modify survisland.temp.sidebar.1 suffix [{"text":"eluang : ","color":"aqua"},{"text":"0/14","color":"green"}]
+team modify survisland.temp.sidebar.3 suffix [{"text":"embali : ","color":"yellow"},{"text":"0","color":"green"},{"text":"/","color":"gray"},{"text":"14","color":"green"}]
+team modify survisland.temp.sidebar.2 suffix [{"text":"uarua : ","color":"light_purple"},{"text":"0","color":"green"},{"text":"/","color":"gray"},{"text":"14","color":"green"}]
+team modify survisland.temp.sidebar.1 suffix [{"text":"eluang : ","color":"aqua"},{"text":"0","color":"green"},{"text":"/","color":"gray"},{"text":"14","color":"green"}]
 team modify survisland.temp.sidebar.3 color yellow
 team modify survisland.temp.sidebar.2 color light_purple
 team modify survisland.temp.sidebar.1 color aqua
