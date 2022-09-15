@@ -2,7 +2,7 @@
 ##Fonction executée lors du lancement de la partie
 
 effect clear @a[team=!zStaff,team=!zSpec,team=!zOut,team=!aMJ]
-execute at @a run particle campfire_cosy_smoke ~ ~60 ~ 2 5 2 0 1000
+execute at @a run particle campfire_cosy_smoke ~ ~60 ~ 2 5 2 0 1000 force
 effect give @a levitation 2 30 true
 
 ## mAkijan VS mHainy
