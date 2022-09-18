@@ -21,3 +21,4 @@ scoreboard players remove #remaining_time survisland.data 1
 function survisland:modes/laser_game/update_sidebar/timer
 
 schedule function survisland:modes/laser_game/second 1s replace
+
