@@ -1,5 +1,6 @@
 
 schedule function survisland:modes/mob_escape/second 1s replace
+scoreboard players add #mob_escape_seconds survisland.data 1
 
 
 execute if score #mob_escape_seconds survisland.data matches 5 run summon bat -2253 100 -1172 {Tags:["survisland.new","survisland.mob"],Passengers:[{id:"minecraft:skeleton",Tags:["survisland.new","survisland.mob"],HandItems:[{id:"minecraft:bow",Count:1b},{}]}]}
