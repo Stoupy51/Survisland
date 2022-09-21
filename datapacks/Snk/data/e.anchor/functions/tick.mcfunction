@@ -1,6 +1,6 @@
 
 # ストレージ
-    execute as @a at @s run function e.anchor:storage
+    execute as @a[gamemode=!spectator] at @s run function e.anchor:storage
 
 # 飛び道具チェック 
     execute as @e[type=bat,tag=E.Anchor_Hook] at @s run function e.anchor:entity/hook/tick
@@ -18,4 +18,4 @@
     execute as @a[scores={E.Anchor_Resist=0..}] run function e.anchor:item/ender_anchor/clear_resist
 
 # スコアID
-    execute as @a unless score @s Chuz_Pl.ID matches 0.. run function e.anchor:score_id
+    execute as @a[gamemode=!spectator] unless score @s Chuz_Pl.ID matches 0.. run function e.anchor:score_id

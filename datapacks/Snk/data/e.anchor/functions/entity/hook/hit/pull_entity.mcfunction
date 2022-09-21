@@ -11,7 +11,7 @@
     execute at @p[tag=Chuz.This] run summon marker ~ ~ ~ {Tags:["E.Anchor_PullPos"]}
 
 # プレイヤーを引っ張る
-    execute as @e[type=player,dx=0,sort=nearest,limit=1] at @s run function e.anchor:entity/hook/pull/player
+    execute as @e[type=player,gamemode=!spectator,dx=0,sort=nearest,limit=1] at @s run function e.anchor:entity/hook/pull/player
 
 # エンティティを引っ張る (不安定なので封印しておきます)
     #execute as @e[type=!#e.anchor:cannot_hook,type=!#e.anchor:heavy,type=!player,tag=!E.Anchor_Hook,dx=0,sort=nearest,limit=1] at @s run function e.anchor:entity/hook/pull/entity

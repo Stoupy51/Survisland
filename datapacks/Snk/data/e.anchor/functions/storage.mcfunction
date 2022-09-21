@@ -12,9 +12,9 @@
         execute if data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:"Momentum_Hookshot_Reload"} run function e.anchor:item/ender_anchor/reload/main
 
     # オフハンド、メインハンドにクロスボウがないなら
-        execute if data storage chuz:context Item.Inventory[{Slot:-106b}].tag.ChuzData{ItemID:"Momentum_Hookshot"} unless data storage chuz:context Item.Mainhand{id:"minecraft:crossbow"} run function e.anchor:item/ender_anchor/main
+        execute if data storage chuz:context Item.Offhand{Slot:-106b,tag:{ChuzData:{ItemID:"Momentum_Hookshot"}}} unless data storage chuz:context Item.Mainhand{id:"minecraft:crossbow"} run function e.anchor:item/ender_anchor/main
     # リロード
-        execute if data storage chuz:context Item.Inventory[{Slot:-106b}].tag.ChuzData{ItemID:"Momentum_Hookshot_Reload"} run function e.anchor:item/ender_anchor/reload/main
+        execute if data storage chuz:context Item.Offhand{Slot:-106b,tag:{ChuzData:{ItemID:"Momentum_Hookshot_Reload"}}} run function e.anchor:item/ender_anchor/reload/main
 
 # 共通処理
     # アイテムが変わったら状態リセット

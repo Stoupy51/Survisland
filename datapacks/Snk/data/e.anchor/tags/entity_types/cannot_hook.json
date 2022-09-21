@@ -1,13 +1,16 @@
 {
-  "replace": false,
-  "values": [
-    "minecraft:arrow",
-    "minecraft:spectral_arrow",
-    "minecraft:item_frame",
-    "minecraft:painting",
-    "minecraft:evoker_fangs",
-    "minecraft:area_effect_cloud",
-    "minecraft:fishing_bobber",
-    "minecraft:falling_block"
-  ]
+	"replace": false,
+	"values": [
+		"arrow",
+		"spectral_arrow",
+		"item_frame",
+		"painting",
+		"evoker_fangs",
+		"area_effect_cloud",
+		"fishing_bobber",
+		"falling_block",
+		"marker",
+		"glow_item_frame",
+		"player"
+	]
 }
