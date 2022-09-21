@@ -11,5 +11,3 @@
         scoreboard players remove @s[scores={E.Anchor_Sound=1..}] E.Anchor_Sound 1
         scoreboard players reset @s[scores={E.Anchor_Sound=..0}] E.Anchor_Sound
 
-# 改造レティクル
-    execute anchored eyes run function e.anchor:item/ender_anchor/check_block

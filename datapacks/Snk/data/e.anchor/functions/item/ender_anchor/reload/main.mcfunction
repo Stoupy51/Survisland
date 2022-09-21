@@ -12,7 +12,7 @@
     scoreboard players add @s E.Anchor_Reload 1
 
 # リロード完了
-    execute if entity @s[scores={E.Anchor_Reload=20..}] run function e.anchor:item/ender_anchor/reload/finish
+    execute if entity @s[scores={E.Anchor_Reload=50..}] run function e.anchor:item/ender_anchor/reload/finish
 
 # 音関連
     # リロード
@@ -25,7 +25,3 @@
 
 # ボーナスリセット
     tag @s remove E.Anchor_Bonus
-
-# 改造レティクル
-    title @s title {"text":""}
-    title @s subtitle {"text":" ","color":"dark_gray","underlined":true}

@@ -3,9 +3,9 @@
     tag @s add E.Anchor_Hooked
     
 # 音
-    playsound minecraft:entity.goat.long_jump player @a ~ ~ ~ 1.5 1.2
-    playsound minecraft:entity.zombie.infect player @a ~ ~ ~ 1.5 2
-    playsound minecraft:entity.witch.throw player @a ~ ~ ~ 1.5 1
+    playsound entity.goat.long_jump player @a ~ ~ ~ 1.5 1.2
+    playsound entity.zombie.infect player @a ~ ~ ~ 1.5 2
+    playsound entity.witch.throw player @a ~ ~ ~ 1.5 1
 
 # 足元のスライムを隠す
     execute at @s facing entity @e[type=marker,tag=E.Anchor_PullPos,sort=nearest,limit=1] feet rotated ~ 0 positioned ^ ^-2 ^-0.2 run summon armor_stand ~ ~ ~ {NoGravity:1b,Silent:1b,HasVisualFire:1b,Marker:1b,Invisible:1b,Tags:["E.Anchor_Hider"],DisabledSlots:4144959,ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-2097361313,1024410766,-1135746352,-1925943514],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjNlZWI0NDA0YTIyZTNjNWZiZGQ0ODM2YzcyYTdmNTljMTYxNTU4OGE5YzU3ZDI4NzE1NTQ1MzcyOGFlYSJ9fX0="}]}}}}]}

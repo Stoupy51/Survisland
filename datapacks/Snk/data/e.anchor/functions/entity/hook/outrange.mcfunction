@@ -4,7 +4,7 @@
     execute at @a if score @s Chuz_En.ID = @p Chuz_Pl.ID run tag @p add Chuz.This
 
 # サウンド
-    execute at @a[tag=Chuz.This] run playsound minecraft:entity.magma_cube.jump player @p ~ ~ ~ 2 1
+    execute at @a[tag=Chuz.This] run playsound entity.magma_cube.jump player @p ~ ~ ~ 2 1
 
 # タグ削除
     tag @a[tag=Chuz.This] remove Chuz.This

@@ -13,7 +13,8 @@
     scoreboard players remove @s Chuz.Range 1
 
 # エンティティに当たったとき
-    execute positioned ~-0.5 ~0.0 ~-0.5 positioned ~0.3 ~-0.1 ~0.3 if entity @e[type=!#e.anchor:cannot_hook,tag=!E.Anchor_Hook,dx=0,sort=nearest,limit=1] at @s positioned ~-0.5 ~-0.4 ~-0.5 positioned ~-0.3 ~-0.3 ~-0.3 unless score @s Chuz_En.ID = @e[type=!#e.anchor:cannot_hook,tag=!E.Anchor_Hook,dx=0,sort=nearest,limit=1] Chuz_Pl.ID run function e.anchor:entity/hook/hit/pull_entity
+    scoreboard players operation #predicate Chuz_Pl.ID = @s Chuz_En.ID
+    execute at @s positioned ~-0.8 ~-0.7 ~-0.8 if entity @e[type=!#e.anchor:cannot_hook,tag=!E.Anchor_Hook,dx=0,predicate=!e.anchor:has_same_pl_id,sort=nearest,limit=1] run function e.anchor:entity/hook/hit/pull_entity
 
 # 対ドラゴン
     #execute at @s at @e[type=minecraft:ender_dragon,team=!null,distance=..6,sort=nearest,limit=1] run function craftsman_arms:entity/projectile_common/hit

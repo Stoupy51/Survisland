@@ -1,8 +1,8 @@
 
 # 拡散用のエンティティを消す
-    execute facing entity @e[type=marker,tag=Chuz.Spread,distance=..100] feet run tp @s ~ ~-0.15 ~ ~ ~
+    execute facing entity @e[type=marker,tag=Chuz.Spread,distance=..128] feet run tp @s ~ ~-0.15 ~ ~ ~
     execute at @s run tp @s ^ ^ ^1
-    kill @e[type=marker,tag=Chuz.Spread,distance=..100]
+    kill @e[type=marker,tag=Chuz.Spread,distance=..128]
 
 # 弾速と射程を設定
     scoreboard players set @s Chuz.Speed 70

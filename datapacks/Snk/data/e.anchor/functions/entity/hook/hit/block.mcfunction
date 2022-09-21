@@ -6,9 +6,9 @@
     execute at @a if score @s Chuz_En.ID = @p Chuz_Pl.ID run tag @p add Chuz.This
 
 # ヒット時の音
-    execute at @a[tag=Chuz.This] run playsound minecraft:block.iron_door.open player @p ~ ~ ~ 2 1
-    execute at @a[tag=Chuz.This] run playsound minecraft:entity.blaze.hurt neutral @p ~ ~ ~ 2 2
-    execute at @a[tag=Chuz.This] run playsound minecraft:entity.item.break player @p ~ ~ ~ 2 1.5
+    execute at @a[tag=Chuz.This] run playsound block.iron_door.open player @p ~ ~ ~ 2 1
+    execute at @a[tag=Chuz.This] run playsound entity.blaze.hurt neutral @p ~ ~ ~ 2 2
+    execute at @a[tag=Chuz.This] run playsound entity.item.break player @p ~ ~ ~ 2 1.5
 
 # 持ち主のフックをリロード
     tag @a[tag=Chuz.This] add E.Anchor_Bonus

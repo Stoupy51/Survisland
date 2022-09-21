@@ -1,7 +1,4 @@
 
-# ここが変わると困っちゃうんだな
-    gamerule maxCommandChainLength 65536
-
 # 他のライブラリに必要なものもこっから呼び出してやる
     function oh_my_dat:sys/load
 

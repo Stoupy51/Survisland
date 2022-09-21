@@ -4,9 +4,9 @@
     scoreboard players set @s E.Anchor_NoFall2 40
     
 # 音
-    playsound minecraft:entity.goat.long_jump player @a ~ ~ ~ 1.5 1.2
-    playsound minecraft:entity.zombie.infect player @a ~ ~ ~ 1.5 2
-    playsound minecraft:entity.witch.throw player @a ~ ~ ~ 1.5 1
+    playsound entity.goat.long_jump player @a ~ ~ ~ 1.5 1.2
+    playsound entity.zombie.infect player @a ~ ~ ~ 1.5 2
+    playsound entity.witch.throw player @a ~ ~ ~ 1.5 1
 
 # 落下速度リセット
     tp @s 0 0 0

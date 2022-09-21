@@ -5,4 +5,4 @@
 
 # VFX
     particle minecraft:smoke ~ ~0.1 ~ 0.3 0 0.3 0 20
-    playsound minecraft:entity.zombie.infect player @a ~ ~ ~ 1 1.5
+    playsound entity.zombie.infect player @a ~ ~ ~ 1 1.5
