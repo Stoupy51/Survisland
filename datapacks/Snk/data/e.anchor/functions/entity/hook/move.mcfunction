@@ -15,6 +15,7 @@
 # エンティティに当たったとき
     scoreboard players operation #predicate Chuz_Pl.ID = @s Chuz_En.ID
     execute at @s positioned ~-0.8 ~-0.7 ~-0.8 if entity @e[type=!#e.anchor:cannot_hook,tag=!E.Anchor_Hook,dx=0,predicate=!e.anchor:has_same_pl_id,sort=nearest,limit=1] run function e.anchor:entity/hook/hit/pull_entity
+    execute at @s positioned ~-0.8 ~-0.7 ~-0.8 if entity @a[gamemode=!spectator,tag=!E.Anchor_Hook,dx=0,predicate=!e.anchor:has_same_pl_id,sort=nearest,limit=1] run function e.anchor:entity/hook/hit/pull_entity
 
 # 対ドラゴン
     #execute at @s at @e[type=minecraft:ender_dragon,team=!null,distance=..6,sort=nearest,limit=1] run function craftsman_arms:entity/projectile_common/hit
