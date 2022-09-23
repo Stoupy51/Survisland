@@ -13,5 +13,5 @@ execute if score #process_end survisland.data matches 1 run effect give @a[gamem
 execute if score #process_end survisland.data matches 1 as @a at @s run playsound entity.wither.death ambient @s
 
 #Fin
-execute if score #process_end survisland.data matches 1000 run function survisland:modes/find_the_button/stop
+execute if score #process_end survisland.data matches 1000 run function survisland:modes/find_that_button/stop
 

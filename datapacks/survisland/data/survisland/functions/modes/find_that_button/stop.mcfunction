@@ -5,5 +5,5 @@ team remove survisland.temp.sidebar.1
 scoreboard objectives remove survisland.temp.sidebar
 gamerule fallDamage true
 
-schedule clear survisland:modes/find_the_button/tick
+schedule clear survisland:modes/find_that_button/tick
 
