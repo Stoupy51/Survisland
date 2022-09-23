@@ -4,13 +4,13 @@
 gamemode adventure @a[gamemode=survival]
 gamerule fallDamage false
 
-tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Lancement de la partie de Find The Button ! Activez-les tous, BOUTONMONE !"}]
+tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Lancement de la partie de Find That Button ! Activez-les tous, BOUTONMONE !"}]
 
 scoreboard objectives add survisland.temp.sidebar dummy {"text":"Boutons validés","color":"gray"}
 scoreboard objectives setdisplay sidebar survisland.temp.sidebar
 
-scoreboard players set #find_the_button_seconds survisland.data 0
-scoreboard players set #find_the_button_ticks survisland.data 0
+scoreboard players set #find_that_button_seconds survisland.data 0
+scoreboard players set #find_that_button_ticks survisland.data 0
 scoreboard players set #mKembali_buttons survisland.data 0
 scoreboard players set #mTuarua_buttons survisland.data 0
 scoreboard players set #mPeluang_buttons survisland.data 0
@@ -33,5 +33,5 @@ scoreboard players set K survisland.temp.sidebar 3
 scoreboard players set T survisland.temp.sidebar 2
 scoreboard players set P survisland.temp.sidebar 1
 
-schedule function survisland:modes/find_the_button/tick 1t replace
+schedule function survisland:modes/find_that_button/tick 1t replace
 
