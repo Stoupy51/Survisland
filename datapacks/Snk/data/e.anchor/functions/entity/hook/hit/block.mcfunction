@@ -16,7 +16,7 @@
 
 
 # 持ち主としてジャンプ関数を実行
-    execute as @a[tag=Chuz.This] at @s run function e.anchor:item/ender_anchor/jump
+    execute unless block ~ ~ ~ glass as @a[tag=Chuz.This] at @s run function e.anchor:item/ender_anchor/jump
 
 # タグ
     scoreboard players reset @s Chuz.Range
