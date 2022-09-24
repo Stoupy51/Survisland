@@ -9,7 +9,7 @@
 					"functions": [
 						{
 							"function": "minecraft:set_nbt",
-							"tag": "{display:{Name:'[{\"text\":\"Momentum Hookshot\",\"color\":\"aqua\",\"italic\":false}]'},CustomModelData:38,Charged:1b,ChuzData:{ItemID:Momentum_Hookshot}}"
+							"tag": "{display:{Name:'[{\"text\":\"Équipement tridimensionnel\",\"color\":\"aqua\",\"italic\":false}]'},CustomModelData:38,Charged:1b,ChuzData:{ItemID:Momentum_Hookshot}}"
 						}
 					]
 				}
