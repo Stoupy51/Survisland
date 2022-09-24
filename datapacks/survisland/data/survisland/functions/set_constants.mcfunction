@@ -217,6 +217,7 @@ scoreboard players set #98 survisland.data 98
 scoreboard players set #99 survisland.data 99
 scoreboard players set #100 survisland.data 100
 scoreboard players set #1000 survisland.data 1000
+scoreboard players set #7800 survisland.data 7800
 scoreboard players set #10000 survisland.data 10000
 scoreboard players set #100000 survisland.data 100000
 scoreboard players set #1000000 survisland.data 1000000
