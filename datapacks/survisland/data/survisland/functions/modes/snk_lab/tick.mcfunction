@@ -4,6 +4,8 @@ schedule function survisland:modes/snk_lab/tick 1t replace
 
 scoreboard players add #snk_lab_ticks survisland.data 1
 
+time set 6000
+
 execute as @a[gamemode=adventure,nbt={Inventory:[{tag:{ChuzData:{}}}]}] at @s if block ~ ~ ~ powder_snow run tp @s ~1.5 ~ ~
 execute as @a[gamemode=adventure,nbt=!{Inventory:[{tag:{ChuzData:{}}}]}] at @s if block ~ ~-1 ~ note_block run tp @s ~1.5 ~ ~
 
