@@ -83,6 +83,7 @@
         "#minecraft:standing_signs",
         "#minecraft:trapdoors",
         "#minecraft:wall_corals",
-        "#minecraft:wall_signs"
+        "#minecraft:wall_signs",
+		"minecraft:barrier"
     ]
 }
