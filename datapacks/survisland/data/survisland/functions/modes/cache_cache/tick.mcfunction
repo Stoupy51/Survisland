@@ -4,10 +4,6 @@
 schedule function survisland:modes/cache_cache/tick 1t replace
 scoreboard players add #cache_cache_ticks survisland.data 1
 
-#On passe pas de l'autre côté !
-execute as @a[team=mAkijan,tag=survisland.alive,predicate=survisland:in_water] at @s run tp @s ~5 ~1 ~
-execute as @a[team=mHainy,tag=survisland.alive,predicate=survisland:in_water] at @s run tp @s ~-5 ~1 ~
-
 #Detection de mort
 execute as @a[scores={survisland.temp.deathCount=1..}] run function survisland:modes/cache_cache/death
 execute as @e[type=player,tag=survisland.dead] run function survisland:modes/cache_cache/death_teleport
@@ -18,6 +14,7 @@ execute as @a[tag=survisland.alive] at @s run function survisland:modes/cache_ca
 #Comptage des entités restantes
 execute if score #detect_end survisland.data matches 0 unless score #mAkijan_restants survisland.data matches 0 store result score #mAkijan_restants survisland.data if entity @a[team=mAkijan,tag=survisland.alive]
 execute if score #detect_end survisland.data matches 0 unless score #mHainy_restants survisland.data matches 0 store result score #mHainy_restants survisland.data if entity @a[team=mHainy,tag=survisland.alive]
+execute if score #detect_end survisland.data matches 0 unless score #specs_restants survisland.data matches 0 store result score #specs_restants survisland.data if entity @a[team=!mHainy,team=!mAkijan,tag=survisland.alive]
 
 ##Detection de fin
 execute if score #detect_end survisland.data matches 0 unless entity @a[tag=survisland.alive] run scoreboard players set #detect_end survisland.data 1
