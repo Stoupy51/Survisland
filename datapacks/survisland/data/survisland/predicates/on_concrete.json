@@ -1,0 +1,21 @@
+[
+	{
+		"condition": "minecraft:location_check",
+		"predicate": {
+			"block": {
+				"blocks": [
+					"minecraft:black_carpet"
+				]
+			}
+		}
+	},
+	{
+		"condition": "minecraft:location_check",
+		"offsetY": -1,
+		"predicate": {
+			"block": {
+				"tag": "survisland:concretes"
+			}
+		}
+	}
+]
