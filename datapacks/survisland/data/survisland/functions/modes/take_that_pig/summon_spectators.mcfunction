@@ -1,5 +1,10 @@
 
+tag @s add survisland.spec_used
 tag @s add survisland.to_take_spec
 gamemode adventure @s
-tp @s -2261 80 -1175
+effect clear @s
+tp @s -1220 64 -2806
+
+title @s title {"text":"Reste appuyé sur Jump","color":"gold"}
+title @s subtitle {"text":"Ne bouge pas, laisse-toi prendre","color":"red"}
 

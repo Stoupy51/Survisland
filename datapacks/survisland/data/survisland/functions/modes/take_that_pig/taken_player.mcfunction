@@ -1,7 +1,6 @@
 
 ##Ajout des points selon la couleur et le type :
-scoreboard players set #add survisland.data 3
-execute if entity @s[type=pig] run scoreboard players set #add survisland.data 1
+scoreboard players set #add survisland.data 10
 
 scoreboard players set #success survisland.data 0
 execute if score #success survisland.data matches 0 store success score #success survisland.data if block ~ ~-1 ~ red_concrete run scoreboard players operation @a[scores={survisland.temp.color=1}] survisland.temp.sidebar += #add survisland.data
@@ -21,5 +20,6 @@ execute if score #success survisland.data matches 0 store success score #success
 execute if score #success survisland.data matches 0 store success score #success survisland.data if block ~ ~-1 ~ white_concrete run scoreboard players operation @a[scores={survisland.temp.color=15}] survisland.temp.sidebar += #add survisland.data
 execute if score #success survisland.data matches 0 store success score #success survisland.data if block ~ ~-1 ~ black_concrete run scoreboard players operation @a[scores={survisland.temp.color=16}] survisland.temp.sidebar += #add survisland.data
 
-tp @s 0 -10000 0
+gamemode spectator @s
+tag @s remove survisland.to_take_spec
 
