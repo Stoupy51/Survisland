@@ -13,7 +13,8 @@ execute if score #process_end survisland.data matches 1 run gamemode survival @a
 execute if score #process_end survisland.data matches 1 run effect give @a[gamemode=survival] jump_boost 10 20 true
 execute if score #process_end survisland.data matches 1 run effect give @a[gamemode=survival] slow_falling 20 0 true
 execute if score #process_end survisland.data matches 1 as @a at @s run playsound entity.wither.death ambient @s
-
+execute if score #process_end survisland.data matches 1 run clear @a fishing_rod{survisland:{temp:1b}}
+execute if score #process_end survisland.data matches 1 run clear @a netherite_sword{survisland:{temp:1b}}
 
 #Fin
 execute if score #process_end survisland.data matches 2400 run function survisland:modes/take_that_pig/stop
