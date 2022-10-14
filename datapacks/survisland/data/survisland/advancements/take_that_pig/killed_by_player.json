@@ -1,0 +1,15 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:entity_killed_player",
+			"conditions": {
+				"entity": {
+					"type": "minecraft:player"
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "survisland:modes/take_that_pig/advancements/killed_by_player"
+	}
+}
