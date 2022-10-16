@@ -21,7 +21,7 @@ scoreboard players set @a[gamemode=!creative,gamemode=!spectator] survisland.tem
 
 
 ##Définition des couleurs selon la concrete sous le pied des joueurs
-execute as @a[gamemode=!creative,gamemode=!spectator] run function survisland:modes/take_that_pig/define_color
+execute as @a[gamemode=!creative,gamemode=!spectator] at @s run function survisland:modes/take_that_pig/define_color
 
 #Start
 fill -1219 58 -2805 -1221 61 -2807 birch_planks replace structure_void
