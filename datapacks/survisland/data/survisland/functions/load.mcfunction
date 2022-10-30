@@ -15,7 +15,7 @@ forceload add 0 0
 #define score_holder #pos
 
 ##Storage
-#tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Souhaitez tous la bienvenue à "},{"selector":"@s","color":"aqua"},{"text":" !\n!!!!"}]
+#tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Souhaitez tous la bienvenue à "},{"selector":"@s","color":"aqua"},{"text":" !\nIl est le "},{"score":{"name":"#next_id","objective":"survisland.data"},"color":"aqua"},{"text":"ème joueur a rejoindre !"}]
 data modify storage survisland:main SurvislandWarning set value '[{"text":"[SurvislandWarning]","color":"gold"}]'
 data modify storage survisland:main SurvislandError set value '[{"text":"[SurvislandError]","color":"red"}]'
 data modify storage survisland:main SurvislandHelp set value '[{"text":"[","color":"dark_aqua"},{"text":"SurvislandHelp","color":"aqua"},{"text":"]","color":"dark_aqua"}]'
