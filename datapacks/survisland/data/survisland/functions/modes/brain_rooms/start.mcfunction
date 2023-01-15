@@ -5,7 +5,7 @@ gamemode adventure @a[gamemode=survival]
 
 tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Lancement de l'épreuve, bonne chance !\n"}]
 
-scoreboard objectives add survisland.temp.sidebar dummy {"text":" Progression en % ","color":"white"}
+scoreboard objectives add survisland.temp.sidebar dummy {"text":" Progressions ","color":"white"}
 scoreboard objectives setdisplay sidebar survisland.temp.sidebar
 
 scoreboard players set #brain_rooms_seconds survisland.data 0
