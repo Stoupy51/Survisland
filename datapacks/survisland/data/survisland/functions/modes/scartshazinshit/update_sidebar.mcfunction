@@ -1,6 +1,6 @@
 
 scoreboard players set #newPercentage survisland.data 0
-execute store result score #newPercentage survisland.data run data get entity @s Pos[0] -100
+execute store result score #newPercentage survisland.data run data get entity @s Pos[0] 100
 scoreboard players remove #newPercentage survisland.data 1001700
 
 scoreboard players set #divide survisland.data 11800
