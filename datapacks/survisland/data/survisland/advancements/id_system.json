@@ -5,6 +5,6 @@
 		}
 	},
 	"rewards": {
-		"function": "survisland:player/joined"
+		"function": "survisland:player/first_join"
 	}
 }

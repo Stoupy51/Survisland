@@ -1,11 +1,16 @@
 
 tag Stoupy51 add convention.debug
 
+scoreboard objectives add survisland.id dummy
 scoreboard objectives add survisland.data dummy
 scoreboard objectives add survisland.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
+scoreboard objectives add survisland.deathCount deathCount
 
-scoreboard players set survisland load.status 1010
+scoreboard players set survisland load.status 1020
+scoreboard players add #keepInventory survisland.data 0
 forceload add 0 0
+
+gamerule keepInventory true
 
 #define storage survisland:main
 #define score_holder #success
