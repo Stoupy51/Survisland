@@ -10,8 +10,7 @@ execute if score #state survisland.data matches 0 as @a[scores={survisland.death
 ## States
 # 1 = Player is dead
 # 2 = Player is dead and there are items to drop
-execute unless score #keepInventory survisland.data matches 1 if score #state survisland.data matches 2 run data modify storage survisland:main copy set from storage survisland:main newInventory
-execute unless score #keepInventory survisland.data matches 1 if score #state survisland.data matches 2 run function survisland:keep_inventory/drop_inventory/
+execute unless score #keepInventory survisland.data matches 1 if score #state survisland.data matches 2 if data storage survisland:main newInventory[0] run function survisland:keep_inventory/drop_inventory/
 
 
 ## Teleport to the player or 0 0 0 if the player is dead
