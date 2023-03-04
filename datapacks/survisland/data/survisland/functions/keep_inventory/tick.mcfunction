@@ -4,7 +4,7 @@ scoreboard players operation #predicate survisland.id = @s survisland.id
 scoreboard players set #state survisland.data 0
 
 # Check if the player is dead
-execute if score #state survisland.data matches 0 as @a[scores={survisland.deathCount=1..},predicate=survisland:has_same_id,gamemode=!creative] run function survisland:keep_inventory/player_died
+execute if score #state survisland.data matches 0 as @a[scores={survisland.deathCount=1..},predicate=survisland:has_same_id,gamemode=!creative,gamemode=!spectator] run function survisland:keep_inventory/player_died
 
 
 ## States
