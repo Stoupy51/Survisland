@@ -7,4 +7,3 @@ scoreboard players reset @a[scores={survisland.deathCount=1..}] survisland.death
 scoreboard players add #tick survisland.data 1
 execute if score #tick survisland.data matches 20.. run function survisland:second
 
-

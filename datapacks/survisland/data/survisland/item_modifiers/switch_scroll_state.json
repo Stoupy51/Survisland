@@ -1,0 +1,36 @@
+[
+	{
+		"function": "minecraft:set_nbt",
+		"tag": "{CustomModelData:2010003}",
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"mainhand": {
+							"nbt": "{CustomModelData:2010001}"
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_nbt",
+		"tag": "{CustomModelData:2010001}",
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"mainhand": {
+							"nbt": "{CustomModelData:2010003}"
+						}
+					}
+				}
+			}
+		]
+	}
+]
