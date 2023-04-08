@@ -7,3 +7,6 @@ execute if score #second survisland.data matches 60.. run function survisland:mi
 # Check if their marker is still there
 execute as @a run function survisland:player/check_marker
 
+# System pour les zones de gamemode adventure
+function survisland:adventure_zone/second
+
