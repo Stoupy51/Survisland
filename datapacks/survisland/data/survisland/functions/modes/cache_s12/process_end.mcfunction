@@ -18,7 +18,7 @@ execute if score #process_end survisland.data matches 1 if score #detect_end sur
 execute if score #process_end survisland.data matches 1 run schedule clear survisland:modes/cache_s12/second
 execute if score #process_end survisland.data matches 1 as @a at @s run function survisland:sounds/toast.challenge_complete
 
-execute if score #process_end survisland.data matches 1 run effect clear @a blindness
+execute if score #process_end survisland.data matches 1 run effect clear @a
 execute if score #process_end survisland.data matches 1 run effect give @a slow_falling 20 1 true
 execute if score #process_end survisland.data matches 1 run effect give @a saturation 20 255 true
 execute if score #process_end survisland.data matches 1 run gamemode spectator @a[team=!mKuning,team=!mMayra,gamemode=!creative]
