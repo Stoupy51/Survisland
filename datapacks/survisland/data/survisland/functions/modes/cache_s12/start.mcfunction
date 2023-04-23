@@ -12,7 +12,7 @@ scoreboard objectives setdisplay sidebar survisland.temp.sidebar
 scoreboard players set #cache_s12_seconds survisland.data 0
 scoreboard players set #cache_s12_ticks survisland.data 0
 scoreboard players set #remaining_time survisland.data 1200
-scoreboard players set #glowing survisland.data -600
+scoreboard players set #glowing survisland.data -540
 scoreboard players set #mKuning_restants survisland.data 1
 scoreboard players set #mMayra_restants survisland.data 1
 scoreboard players set #specs_restants survisland.data 1
