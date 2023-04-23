@@ -34,7 +34,7 @@ team modify survisland.temp.sidebar.7 suffix [{"text":" restants : ","color":"gr
 team modify survisland.temp.sidebar.6 suffix [{"text":"ning------","color":"yellow"}]
 team modify survisland.temp.sidebar.5 suffix [{"text":"eurs restants : ","color":"yellow"},{"text":"0","color":"gray"}]
 team modify survisland.temp.sidebar.4 suffix [{"text":"s : ","color":"yellow"},{"text":"0","color":"gray"}]
-team modify survisland.temp.sidebar.3 suffix [{"text":"ra-------","color":"red"}]
+team modify survisland.temp.sidebar.3 suffix [{"text":"yra------","color":"red"}]
 team modify survisland.temp.sidebar.2 suffix [{"text":"urs restants : ","color":"red"},{"text":"0","color":"gray"}]
 team modify survisland.temp.sidebar.1 suffix [{"text":" : ","color":"red"},{"text":"0","color":"gray"}]
 team modify survisland.temp.sidebar.8 color white
@@ -50,7 +50,7 @@ team join survisland.temp.sidebar.7 Specs
 team join survisland.temp.sidebar.6 ------Ku
 team join survisland.temp.sidebar.5 Jou
 team join survisland.temp.sidebar.4 Point
-team join survisland.temp.sidebar.3 -------Ma
+team join survisland.temp.sidebar.3 ------Ma
 team join survisland.temp.sidebar.2 Joue
 team join survisland.temp.sidebar.1 Points
 scoreboard players set T survisland.temp.sidebar 8
@@ -58,7 +58,7 @@ scoreboard players set Specs survisland.temp.sidebar 7
 scoreboard players set ------Ku survisland.temp.sidebar 6
 scoreboard players set Jou survisland.temp.sidebar 5
 scoreboard players set Point survisland.temp.sidebar 4
-scoreboard players set -------Ma survisland.temp.sidebar 3
+scoreboard players set ------Ma survisland.temp.sidebar 3
 scoreboard players set Joue survisland.temp.sidebar 2
 scoreboard players set Points survisland.temp.sidebar 1
 
