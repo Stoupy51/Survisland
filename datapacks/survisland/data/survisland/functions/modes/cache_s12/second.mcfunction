@@ -4,6 +4,7 @@
 schedule function survisland:modes/cache_s12/second 20t replace
 scoreboard players add #cache_s12_seconds survisland.data 1
 scoreboard players remove #remaining_time survisland.data 1
+function survisland:modes/cache_s12/update_sidebar_points
 function survisland:modes/cache_s12/update_sidebar_timer
 
 scoreboard players add #glowing survisland.data 1
