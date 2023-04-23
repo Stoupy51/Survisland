@@ -10,6 +10,6 @@
 		}
 	},
 	"rewards": {
-		"function": "survisland:modes/cache_cache/adv/killed_player"
+		"function": "survisland:modes/cache_s12/adv/killed_player"
 	}
 }
