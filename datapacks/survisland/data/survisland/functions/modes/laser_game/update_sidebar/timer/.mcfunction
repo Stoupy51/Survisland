@@ -1,0 +1,36 @@
+
+execute if score #remaining_time survisland.data matches 0..35 run function survisland:modes/laser_game/update_sidebar/timer/1
+execute if score #remaining_time survisland.data matches 36..71 run function survisland:modes/laser_game/update_sidebar/timer/2
+execute if score #remaining_time survisland.data matches 72..107 run function survisland:modes/laser_game/update_sidebar/timer/3
+execute if score #remaining_time survisland.data matches 108..144 run function survisland:modes/laser_game/update_sidebar/timer/4
+execute if score #remaining_time survisland.data matches 145..180 run function survisland:modes/laser_game/update_sidebar/timer/5
+execute if score #remaining_time survisland.data matches 181..216 run function survisland:modes/laser_game/update_sidebar/timer/6
+execute if score #remaining_time survisland.data matches 217..253 run function survisland:modes/laser_game/update_sidebar/timer/7
+execute if score #remaining_time survisland.data matches 254..289 run function survisland:modes/laser_game/update_sidebar/timer/8
+execute if score #remaining_time survisland.data matches 290..325 run function survisland:modes/laser_game/update_sidebar/timer/9
+execute if score #remaining_time survisland.data matches 326..361 run function survisland:modes/laser_game/update_sidebar/timer/10
+execute if score #remaining_time survisland.data matches 362..398 run function survisland:modes/laser_game/update_sidebar/timer/11
+execute if score #remaining_time survisland.data matches 399..434 run function survisland:modes/laser_game/update_sidebar/timer/12
+execute if score #remaining_time survisland.data matches 435..470 run function survisland:modes/laser_game/update_sidebar/timer/13
+execute if score #remaining_time survisland.data matches 471..507 run function survisland:modes/laser_game/update_sidebar/timer/14
+execute if score #remaining_time survisland.data matches 508..543 run function survisland:modes/laser_game/update_sidebar/timer/15
+execute if score #remaining_time survisland.data matches 544..579 run function survisland:modes/laser_game/update_sidebar/timer/16
+execute if score #remaining_time survisland.data matches 580..616 run function survisland:modes/laser_game/update_sidebar/timer/17
+execute if score #remaining_time survisland.data matches 617..652 run function survisland:modes/laser_game/update_sidebar/timer/18
+execute if score #remaining_time survisland.data matches 653..688 run function survisland:modes/laser_game/update_sidebar/timer/19
+execute if score #remaining_time survisland.data matches 689..724 run function survisland:modes/laser_game/update_sidebar/timer/20
+execute if score #remaining_time survisland.data matches 725..761 run function survisland:modes/laser_game/update_sidebar/timer/21
+execute if score #remaining_time survisland.data matches 762..797 run function survisland:modes/laser_game/update_sidebar/timer/22
+execute if score #remaining_time survisland.data matches 798..833 run function survisland:modes/laser_game/update_sidebar/timer/23
+execute if score #remaining_time survisland.data matches 834..870 run function survisland:modes/laser_game/update_sidebar/timer/24
+execute if score #remaining_time survisland.data matches 871..906 run function survisland:modes/laser_game/update_sidebar/timer/25
+execute if score #remaining_time survisland.data matches 907..942 run function survisland:modes/laser_game/update_sidebar/timer/26
+execute if score #remaining_time survisland.data matches 943..978 run function survisland:modes/laser_game/update_sidebar/timer/27
+execute if score #remaining_time survisland.data matches 979..1015 run function survisland:modes/laser_game/update_sidebar/timer/28
+execute if score #remaining_time survisland.data matches 1016..1051 run function survisland:modes/laser_game/update_sidebar/timer/29
+execute if score #remaining_time survisland.data matches 1052..1087 run function survisland:modes/laser_game/update_sidebar/timer/30
+execute if score #remaining_time survisland.data matches 1088..1124 run function survisland:modes/laser_game/update_sidebar/timer/31
+execute if score #remaining_time survisland.data matches 1125..1160 run function survisland:modes/laser_game/update_sidebar/timer/32
+execute if score #remaining_time survisland.data matches 1161..1196 run function survisland:modes/laser_game/update_sidebar/timer/33
+execute if score #remaining_time survisland.data matches 1197..1232 run function survisland:modes/laser_game/update_sidebar/timer/34
+
