@@ -38,11 +38,12 @@ execute if score #slot survisland.data matches 33 run item replace entity @s inv
 execute if score #slot survisland.data matches 34 run item replace entity @s inventory.25 with air
 execute if score #slot survisland.data matches 35 run item replace entity @s inventory.26 with air
 execute if score #slot survisland.data matches -106 run item replace entity @s weapon.offhand with air
-execute if score #slot survisland.data matches -103 run item replace entity @s armor.head with air
-execute if score #slot survisland.data matches -102 run item replace entity @s armor.chest with air
-execute if score #slot survisland.data matches -101 run item replace entity @s armor.legs with air
-execute if score #slot survisland.data matches -100 run item replace entity @s armor.feet with air
+execute if score #slot survisland.data matches 103 run item replace entity @s armor.head with air
+execute if score #slot survisland.data matches 102 run item replace entity @s armor.chest with air
+execute if score #slot survisland.data matches 101 run item replace entity @s armor.legs with air
+execute if score #slot survisland.data matches 100 run item replace entity @s armor.feet with air
 
+#tellraw @s [{"score":{"name":"#slot","objective":"survisland.data"}},{"text":" "},{"storage":"survisland:main","nbt":"Inventory[0].Slot"}]
 
 # Loop again
 data remove storage survisland:main Inventory[0]
