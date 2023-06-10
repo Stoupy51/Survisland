@@ -10,3 +10,6 @@ execute as @a at @s run function survisland:sounds/experience_orb.pickup
 # Remove alive tag
 tag @s remove survisland.alive
 
+# Clear arrows
+clear @s arrow
+
