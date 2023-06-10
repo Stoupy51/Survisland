@@ -1,8 +1,8 @@
 
 # Launch first round
 scoreboard players set #unride_points survisland.data 0
-tag @a[team=mOrenji] add survisland.alive
+tag @a[team=mMerge] add survisland.alive
 
 # Give everyone arrows
-give @a[team=mOrenji] arrow 512
+give @a[team=mMerge] arrow 512
 
