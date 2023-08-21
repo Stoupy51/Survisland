@@ -1,7 +1,7 @@
 
 scoreboard players set #compteur survisland.data 4
 
-execute unless data storage survisland:main compteur run data modify storage survisland:main compteur set value {decompte:3,sounds:{xp:1b,goat_horn:1b,wither:0b},title:'[{"text":"Epreuve d\'Immunité ","color":"aqua"},{"text":"#1","color":"light_purple"}]'}
+execute unless data storage survisland:main compteur run data modify storage survisland:main compteur set value {decompte:5,sounds:{xp:1b,goat_horn:1b,wither:0b},title:'[{"text":"Epreuve d\'Immunité ","color":"aqua"},{"text":"#1","color":"light_purple"}]'}
 
 title @a times 10 40 10
 
