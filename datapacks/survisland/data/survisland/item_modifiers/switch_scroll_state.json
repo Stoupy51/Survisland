@@ -1,7 +1,7 @@
 [
 	{
 		"function": "minecraft:set_nbt",
-		"tag": "{CustomModelData:2010003}",
+		"tag": "{CustomModelData:2010010}",
 		"conditions": [
 			{
 				"condition": "minecraft:entity_properties",
@@ -26,7 +26,7 @@
 				"predicate": {
 					"equipment": {
 						"mainhand": {
-							"nbt": "{CustomModelData:2010003}"
+							"nbt": "{CustomModelData:2010010}"
 						}
 					}
 				}
