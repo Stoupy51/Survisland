@@ -6,7 +6,7 @@ scoreboard players add #cache_s13_ticks survisland.data 1
 
 # Detection de mort
 execute as @a[scores={survisland.temp.deathCount=1..}] run function survisland:modes/cache_s13/death
-execute as @e[type=player,tag=survisland.dead] run function survisland:modes/cache_s13/death_teleport
+execute as @e[type=player,tag=survisland.dead] at @s run function survisland:modes/cache_s13/death_teleport
 
 # Heart beat
 execute as @a[tag=survisland.alive] at @s run function survisland:modes/cache_s13/heart_beat
