@@ -16,6 +16,10 @@ scoreboard players set #quake_ticks survisland.data 0
 scoreboard players set #remaining_time survisland.data 400
 scoreboard players set #process_end survisland.data 0
 
+data remove storage iris:data is_setup
+function iris:setup/load
+data merge storage iris:input {TargetEntities: true, MaxRecursionDepth: 256}
+
 schedule function survisland:modes/quake/tick 1t
 schedule function survisland:modes/quake/second 1s
 
