@@ -1,7 +1,7 @@
 
 function survisland:modes/quake/respawn
 
-playsound entity.player.hurt player @s
+execute at @s run playsound entity.player.hurt player @s
 execute as @a[tag=survisland.temp] at @s run playsound entity.arrow.hit_player player @s
 scoreboard players add @a[tag=survisland.temp] survisland.temp.points 1
 
