@@ -10,6 +10,10 @@ execute as @a run function survisland:player/check_marker
 # System pour les zones de gamemode adventure
 function survisland:adventure_zone/second
 
+# Clear everyone M4TOUW heads
+clear @a player_head{SkullOwner:{Name:"M4TOUW"}}
+clear @a player_head{SkullOwner:{Name:"M4TOUILLE"}}
+
 # Disable smart ore generation from SimplEnergy
 scoreboard players set _IS_ENABLED smart_ore_generation.data 0
 
