@@ -9,9 +9,14 @@
 #					- Sortie = bloc en dessous
 #
 
+# Stop execution if no changes in the containers
+execute store result score #count_1 survisland.data if data block ~ ~1 ~ Items[]
+execute store result score #count_2 survisland.data if data block ~ ~-1 ~ Items[]
+execute if score #count_1 survisland.data = #count_2 survisland.data run return 0
+
 # Copy the input to the output and count the number of books
 data modify block ~ ~-1 ~ Items set from block ~ ~1 ~ Items
-execute store result score #parchemin_count survisland.data run data get block ~ ~1 ~ Items
+execute store result score #parchemin_count survisland.data if data block ~ ~1 ~ Items[]
 
 ## Transform the books into parchemins (Could be done with a loop but I'm busy)
 # Slot 0
