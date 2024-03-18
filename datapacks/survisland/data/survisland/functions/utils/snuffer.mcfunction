@@ -9,6 +9,7 @@
 
 # Flambeau state
 item modify entity @s weapon.mainhand survisland:switch_flambeau_state
+item modify entity @s weapon.offhand survisland:switch_flambeau_state
 
 # Play sound fire extinguish
 playsound block.fire.extinguish master @a
