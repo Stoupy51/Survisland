@@ -15,15 +15,17 @@ scoreboard players operation #dest_y survisland.data -= #y survisland.data
 scoreboard players operation #dest_z survisland.data -= #z survisland.data
 
 # Copy offset to marker data
-data modify entity @s data.offset set value [0.0f, 0.0f, 0.0f]
-execute store result entity @s data.offset[0] float 1 run scoreboard players get #dest_x survisland.data
-execute store result entity @s data.offset[1] float 1 run scoreboard players get #dest_y survisland.data
-execute store result entity @s data.offset[2] float 1 run scoreboard players get #dest_z survisland.data
+execute store result entity @s data.offset_x float 1 run scoreboard players get #dest_x survisland.data
+execute store result entity @s data.offset_y float 1 run scoreboard players get #dest_y survisland.data
+execute store result entity @s data.offset_z float 1 run scoreboard players get #dest_z survisland.data
 
 # Copy duration
 data modify entity @s data.duration set from storage survisland:temp moving_structure.duration
 
+# Copy ID & set cooldown
+scoreboard players operation @s survisland.id = #next_id survisland.id
+scoreboard players set @s survisland.cooldown 0
+
 # Set state
 data modify entity @s data.state set value 0b
-scoreboard players set @s survisland.cooldown 0
 
