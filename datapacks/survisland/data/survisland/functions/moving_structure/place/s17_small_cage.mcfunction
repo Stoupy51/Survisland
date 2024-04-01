@@ -1,5 +1,5 @@
 
-## /function survisland:moving_structure/place/s16_small_cage {x:-280,y:134,z:104,duration:80}
+## /function survisland:moving_structure/place/s17_small_cage {x:-280,y:134,z:104,duration:80}
 scoreboard players add #next_id survisland.id 1
 
 # Temporary tag
