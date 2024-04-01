@@ -12,7 +12,7 @@ execute store result score #duration survisland.data run data get entity @s data
 scoreboard players set #multiplier survisland.data 10000
 scoreboard players operation #multiplier survisland.data *= #cooldown survisland.data
 scoreboard players operation #multiplier survisland.data /= #duration survisland.data
-execute if score #cooldown survisland.data matches 1 run scoreboard players set #multiplier survisland.data 0
+execute if score #cooldown survisland.data matches ..1 run scoreboard players set #multiplier survisland.data 0
 
 # If the structure is not returning to original position: reverse the progress
 execute if score #state survisland.data matches 1 run scoreboard players set #reverse survisland.data 10000
