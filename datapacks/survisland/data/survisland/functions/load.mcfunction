@@ -16,6 +16,7 @@ gamerule keepInventory true
 
 #define storage survisland:items
 #define storage survisland:main
+#define storage survisland:temp
 #define score_holder #success
 #define score_holder #valid
 #define score_holder #count

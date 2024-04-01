@@ -1,5 +1,7 @@
 
-# /function survisland:moving_structure/place/s16_small_cage {x:-280,y:134,z:104,duration:80}
+## /function survisland:moving_structure/place/s16_small_cage {x:-280,y:134,z:104,duration:80}
+scoreboard players add #next_id survisland.id 1
+
 # Temporary tag
 tag @e[type=block_display] add survisland.old
 
@@ -29,6 +31,7 @@ execute align xyz run summon block_display ~ ~3 ~ {block_state:{Name:"minecraft:
 execute align xyz run summon block_display ~ ~4 ~ {block_state:{Name:"minecraft:birch_slab"}}
 tag @e[type=block_display,tag=!survisland.old] add survisland.s16_small_cage
 tag @e[type=block_display,tag=!survisland.old] add survisland.moving_structure
+scoreboard players operation @e[type=block_display,tag=!survisland.old] survisland.id = #next_id survisland.id
 
 # Summon the controller marker
 $data modify storage survisland:temp moving_structure set value {Tags:["survisland.s16_small_cage"],destination:[$(x),$(y),$(z)],duration:$(duration)}
