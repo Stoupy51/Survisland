@@ -5,6 +5,7 @@ scoreboard objectives add survisland.id dummy
 scoreboard objectives add survisland.data dummy
 scoreboard objectives add survisland.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
 scoreboard objectives add survisland.deathCount deathCount
+scoreboard objectives add survisland.cooldown dummy
 
 scoreboard players set survisland load.status 1020
 scoreboard players add #keepInventory survisland.data 0
