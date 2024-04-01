@@ -13,11 +13,8 @@ execute if score #state survisland.data matches 0 run data modify entity @s data
 execute if score #state survisland.data matches 1 run data modify entity @s data.state set value 0b
 
 # Tag the players to move them
-data modify storage survisland:temp input set value {id:0,offset_x:0,offset_y:0,offset_z:0}
+data modify storage survisland:temp input set value {id:0}
 execute store result storage survisland:temp input.id int 1 run scoreboard players get @s survisland.id
-execute store result storage survisland:temp input.offset_x int 1 run data get entity @s data.offset_x
-execute store result storage survisland:temp input.offset_y int 1 run data get entity @s data.offset_y
-execute store result storage survisland:temp input.offset_z int 1 run data get entity @s data.offset_z
 function survisland:moving_structure/tag_players with storage survisland:temp input
 
 # Set cooldown
