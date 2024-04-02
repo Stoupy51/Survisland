@@ -19,8 +19,9 @@ execute store result entity @s data.offset_x float 1 run scoreboard players get 
 execute store result entity @s data.offset_y float 1 run scoreboard players get #dest_y survisland.data
 execute store result entity @s data.offset_z float 1 run scoreboard players get #dest_z survisland.data
 
-# Copy duration
+# Copy duration and is_auto
 data modify entity @s data.duration set from storage survisland:temp moving_structure.duration
+data modify entity @s data.is_auto set from storage survisland:temp moving_structure.is_auto
 
 # Copy ID & set cooldown
 scoreboard players operation @s survisland.id = #next_id survisland.id
