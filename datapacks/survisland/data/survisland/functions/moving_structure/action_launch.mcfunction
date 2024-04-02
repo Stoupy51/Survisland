@@ -1,5 +1,6 @@
 
 # Set offset to every block_display with an interpolation time
+execute store result score #state survisland.data run data get entity @s data.state
 data modify storage survisland:temp merge set value {interpolation_duration:100,start_interpolation:0,transformation:{translation:[0.0f,0.0f,0.0f]}}
 data modify storage survisland:temp merge.interpolation_duration set from entity @s data.duration
 execute if score #state survisland.data matches 0 run data modify storage survisland:temp merge.transformation.translation[0] set from entity @s data.offset_x
