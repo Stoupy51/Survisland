@@ -24,4 +24,4 @@ item modify entity @s weapon.mainhand survisland:switch_scroll_state
 
 # Animation
 schedule function survisland:parchemins/animation_display 4t replace
-
+return 1
