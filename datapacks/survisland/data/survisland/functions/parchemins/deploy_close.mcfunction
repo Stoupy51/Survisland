@@ -13,4 +13,5 @@ execute positioned ^ ^ ^.501 positioned ~ ~0.925 ~ run kill @e[type=text_display
 
 # Replace hand item Custom Model Data
 item modify entity @s weapon.mainhand survisland:switch_scroll_state
+return 1
 
