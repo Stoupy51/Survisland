@@ -1,0 +1,31 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:warped_fungus_on_a_stick",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_name": "{\"text\":\"Default vote\",\"italic\":false,\"color\":\"red\"}",
+								"minecraft:lore": [
+									"[{\"text\":\"Auteur : \",\"italic\":false,\"color\":\"gold\"},{\"text\":\"Stoupy51\",\"color\":\"yellow\"}]",
+									"{'text': 'Survisland', 'italic': true, 'color': 'blue'}"
+								],
+								"minecraft:custom_model_data": 2010001,
+								"minecraft:custom_data": {
+									"survisland": {"parchemin": true},
+									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

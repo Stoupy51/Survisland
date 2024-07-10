@@ -1,0 +1,31 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:warped_fungus_on_a_stick",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:lore": [
+									"{\"text\":\"[Seconde main pour l'équiper]\",\"italic\":false,\"color\":\"gray\"}",
+									"{'text': 'Survisland', 'italic': true, 'color': 'blue'}"
+								],
+								"minecraft:custom_model_data": 2010007,
+								"minecraft:item_name": "{'text': 'Pendent', 'italic': false, 'color': 'white'}",
+								"minecraft:custom_data": {
+									"survisland": {"pendent": true},
+									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

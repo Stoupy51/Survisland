@@ -1,0 +1,30 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:written_book",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_model_data": 2010014,
+								"minecraft:item_name": "{'text': 'Book Green Blue', 'italic': false, 'color': 'white'}",
+								"minecraft:lore": [
+									"{'text': 'Survisland', 'italic': true, 'color': 'blue'}"
+								],
+								"minecraft:custom_data": {
+									"survisland": {"book_green_blue": true},
+									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
