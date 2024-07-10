@@ -1,0 +1,155 @@
+{
+	"conseil1": {
+		"subtitle": "conseil1",
+		"sounds": ["survisland:conseil1"]
+	},
+	"conseil10": {
+		"subtitle": "conseil10",
+		"sounds": ["survisland:conseil10"]
+	},
+	"conseil11": {
+		"subtitle": "conseil11",
+		"sounds": ["survisland:conseil11"]
+	},
+	"conseil12": {
+		"subtitle": "conseil12",
+		"sounds": ["survisland:conseil12"]
+	},
+	"conseil13": {
+		"subtitle": "conseil13",
+		"sounds": ["survisland:conseil13"]
+	},
+	"conseil14": {
+		"subtitle": "conseil14",
+		"sounds": ["survisland:conseil14"]
+	},
+	"conseil15": {
+		"subtitle": "conseil15",
+		"sounds": ["survisland:conseil15"]
+	},
+	"conseil16": {
+		"subtitle": "conseil16",
+		"sounds": ["survisland:conseil16"]
+	},
+	"conseil17": {
+		"subtitle": "conseil17",
+		"sounds": ["survisland:conseil17"]
+	},
+	"conseil18": {
+		"subtitle": "conseil18",
+		"sounds": ["survisland:conseil18"]
+	},
+	"conseil19": {
+		"subtitle": "conseil19",
+		"sounds": ["survisland:conseil19"]
+	},
+	"conseil2": {
+		"subtitle": "conseil2",
+		"sounds": ["survisland:conseil2"]
+	},
+	"conseil20": {
+		"subtitle": "conseil20",
+		"sounds": ["survisland:conseil20"]
+	},
+	"conseil21": {
+		"subtitle": "conseil21",
+		"sounds": ["survisland:conseil21"]
+	},
+	"conseil22": {
+		"subtitle": "conseil22",
+		"sounds": ["survisland:conseil22"]
+	},
+	"conseil23": {
+		"subtitle": "conseil23",
+		"sounds": ["survisland:conseil23"]
+	},
+	"conseil24": {
+		"subtitle": "conseil24",
+		"sounds": ["survisland:conseil24"]
+	},
+	"conseil25": {
+		"subtitle": "conseil25",
+		"sounds": ["survisland:conseil25"]
+	},
+	"conseil26": {
+		"subtitle": "conseil26",
+		"sounds": ["survisland:conseil26"]
+	},
+	"conseil27": {
+		"subtitle": "conseil27",
+		"sounds": ["survisland:conseil27"]
+	},
+	"conseil28": {
+		"subtitle": "conseil28",
+		"sounds": ["survisland:conseil28"]
+	},
+	"conseil29": {
+		"subtitle": "conseil29",
+		"sounds": ["survisland:conseil29"]
+	},
+	"conseil3": {
+		"subtitle": "conseil3",
+		"sounds": ["survisland:conseil3"]
+	},
+	"conseil30": {
+		"subtitle": "conseil30",
+		"sounds": ["survisland:conseil30"]
+	},
+	"conseil31": {
+		"subtitle": "conseil31",
+		"sounds": ["survisland:conseil31"]
+	},
+	"conseil32": {
+		"subtitle": "conseil32",
+		"sounds": ["survisland:conseil32"]
+	},
+	"conseil33": {
+		"subtitle": "conseil33",
+		"sounds": ["survisland:conseil33"]
+	},
+	"conseil34": {
+		"subtitle": "conseil34",
+		"sounds": ["survisland:conseil34"]
+	},
+	"conseil35": {
+		"subtitle": "conseil35",
+		"sounds": ["survisland:conseil35"]
+	},
+	"conseil4": {
+		"subtitle": "conseil4",
+		"sounds": ["survisland:conseil4"]
+	},
+	"conseil5": {
+		"subtitle": "conseil5",
+		"sounds": ["survisland:conseil5"]
+	},
+	"conseil6": {
+		"subtitle": "conseil6",
+		"sounds": ["survisland:conseil6"]
+	},
+	"conseil7": {
+		"subtitle": "conseil7",
+		"sounds": ["survisland:conseil7"]
+	},
+	"conseil8": {
+		"subtitle": "conseil8",
+		"sounds": ["survisland:conseil8"]
+	},
+	"conseil9": {
+		"subtitle": "conseil9",
+		"sounds": ["survisland:conseil9"]
+	},
+	"fart": {
+		"subtitle": "fart",
+		"sounds": ["survisland:fart"]
+	},
+	"laser_gun": {
+		"subtitle": "laser_gun",
+		"sounds": ["survisland:laser_gun"]
+	},
+	"rompich": {
+		"subtitle": "rompich",
+		"sounds": ["survisland:rompich"]
+	}
+}
+

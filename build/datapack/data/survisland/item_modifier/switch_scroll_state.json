@@ -1,0 +1,45 @@
+[
+	{
+		"function": "minecraft:set_components",
+		"components": {
+			"minecraft:custom_model_data": 2010001
+		},
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"mainhand": {
+							"components": {
+								"minecraft:custom_model_data": 2010002
+							}
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_components",
+		"components": {
+			"minecraft:custom_model_data": 2010002
+		},
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"mainhand": {
+							"components": {
+								"minecraft:custom_model_data": 2010001
+							}
+						}
+					}
+				}
+			}
+		]
+	}
+]
+
