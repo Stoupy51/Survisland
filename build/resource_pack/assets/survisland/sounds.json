@@ -1,143 +1,143 @@
 {
-	"conseil1": {
-		"subtitle": "conseil1",
-		"sounds": ["survisland:conseil1"]
+	"01_charges_from_the_sky": {
+		"category": "music",
+		"sounds": [{"name": "survisland:01_charges_from_the_sky","stream": true}]
 	},
-	"conseil10": {
-		"subtitle": "conseil10",
-		"sounds": ["survisland:conseil10"]
+	"02_sv_david_vs_goliath": {
+		"category": "music",
+		"sounds": [{"name": "survisland:02_sv_david_vs_goliath","stream": true}]
 	},
-	"conseil11": {
-		"subtitle": "conseil11",
-		"sounds": ["survisland:conseil11"]
+	"03_crescent_battle": {
+		"category": "music",
+		"sounds": [{"name": "survisland:03_crescent_battle","stream": true}]
 	},
-	"conseil12": {
-		"subtitle": "conseil12",
-		"sounds": ["survisland:conseil12"]
+	"04_fade_into_darkness": {
+		"category": "music",
+		"sounds": [{"name": "survisland:04_fade_into_darkness","stream": true}]
 	},
-	"conseil13": {
-		"subtitle": "conseil13",
-		"sounds": ["survisland:conseil13"]
+	"05_extinction_report": {
+		"category": "music",
+		"sounds": [{"name": "survisland:05_extinction_report","stream": true}]
 	},
-	"conseil14": {
-		"subtitle": "conseil14",
-		"sounds": ["survisland:conseil14"]
+	"06_sv_cayagan": {
+		"category": "music",
+		"sounds": [{"name": "survisland:06_sv_cayagan","stream": true}]
 	},
-	"conseil15": {
-		"subtitle": "conseil15",
-		"sounds": ["survisland:conseil15"]
+	"07_sv_waw": {
+		"category": "music",
+		"sounds": [{"name": "survisland:07_sv_waw","stream": true}]
 	},
-	"conseil16": {
-		"subtitle": "conseil16",
-		"sounds": ["survisland:conseil16"]
+	"08_battle_of_the_ocean": {
+		"category": "music",
+		"sounds": [{"name": "survisland:08_battle_of_the_ocean","stream": true}]
 	},
-	"conseil17": {
-		"subtitle": "conseil17",
-		"sounds": ["survisland:conseil17"]
+	"09_challenger": {
+		"category": "music",
+		"sounds": [{"name": "survisland:09_challenger","stream": true}]
 	},
-	"conseil18": {
-		"subtitle": "conseil18",
-		"sounds": ["survisland:conseil18"]
+	"10_elite_voids": {
+		"category": "music",
+		"sounds": [{"name": "survisland:10_elite_voids","stream": true}]
 	},
-	"conseil19": {
-		"subtitle": "conseil19",
-		"sounds": ["survisland:conseil19"]
+	"11_live_to_see_tomorrow": {
+		"category": "music",
+		"sounds": [{"name": "survisland:11_live_to_see_tomorrow","stream": true}]
 	},
-	"conseil2": {
-		"subtitle": "conseil2",
-		"sounds": ["survisland:conseil2"]
+	"12_born_to_own": {
+		"category": "music",
+		"sounds": [{"name": "survisland:12_born_to_own","stream": true}]
 	},
-	"conseil20": {
-		"subtitle": "conseil20",
-		"sounds": ["survisland:conseil20"]
+	"13_sacrifice": {
+		"category": "music",
+		"sounds": [{"name": "survisland:13_sacrifice","stream": true}]
 	},
-	"conseil21": {
-		"subtitle": "conseil21",
-		"sounds": ["survisland:conseil21"]
+	"14_where_is_your_god_now": {
+		"category": "music",
+		"sounds": [{"name": "survisland:14_where_is_your_god_now","stream": true}]
 	},
-	"conseil22": {
-		"subtitle": "conseil22",
-		"sounds": ["survisland:conseil22"]
+	"15_the_ritual": {
+		"category": "music",
+		"sounds": [{"name": "survisland:15_the_ritual","stream": true}]
 	},
-	"conseil23": {
-		"subtitle": "conseil23",
-		"sounds": ["survisland:conseil23"]
+	"16_resolute": {
+		"category": "music",
+		"sounds": [{"name": "survisland:16_resolute","stream": true}]
 	},
-	"conseil24": {
-		"subtitle": "conseil24",
-		"sounds": ["survisland:conseil24"]
+	"17_ghosts_hosts": {
+		"category": "music",
+		"sounds": [{"name": "survisland:17_ghosts_hosts","stream": true}]
 	},
-	"conseil25": {
-		"subtitle": "conseil25",
-		"sounds": ["survisland:conseil25"]
+	"18_the_time_has_come": {
+		"category": "music",
+		"sounds": [{"name": "survisland:18_the_time_has_come","stream": true}]
 	},
-	"conseil26": {
-		"subtitle": "conseil26",
-		"sounds": ["survisland:conseil26"]
+	"19_in_the_heart_of_the_stars": {
+		"category": "music",
+		"sounds": [{"name": "survisland:19_in_the_heart_of_the_stars","stream": true}]
 	},
-	"conseil27": {
-		"subtitle": "conseil27",
-		"sounds": ["survisland:conseil27"]
+	"20_last_hope": {
+		"category": "music",
+		"sounds": [{"name": "survisland:20_last_hope","stream": true}]
 	},
-	"conseil28": {
-		"subtitle": "conseil28",
-		"sounds": ["survisland:conseil28"]
+	"21_au_sv_kepler": {
+		"category": "music",
+		"sounds": [{"name": "survisland:21_au_sv_kepler","stream": true}]
 	},
-	"conseil29": {
-		"subtitle": "conseil29",
-		"sounds": ["survisland:conseil29"]
+	"22_au_sv_war_of_the_world": {
+		"category": "music",
+		"sounds": [{"name": "survisland:22_au_sv_war_of_the_world","stream": true}]
 	},
-	"conseil3": {
-		"subtitle": "conseil3",
-		"sounds": ["survisland:conseil3"]
+	"23_apex_deity": {
+		"category": "music",
+		"sounds": [{"name": "survisland:23_apex_deity","stream": true}]
 	},
-	"conseil30": {
-		"subtitle": "conseil30",
-		"sounds": ["survisland:conseil30"]
+	"24_the_darkness_inside": {
+		"category": "music",
+		"sounds": [{"name": "survisland:24_the_darkness_inside","stream": true}]
 	},
-	"conseil31": {
-		"subtitle": "conseil31",
-		"sounds": ["survisland:conseil31"]
+	"25_fireborn": {
+		"category": "music",
+		"sounds": [{"name": "survisland:25_fireborn","stream": true}]
 	},
-	"conseil32": {
-		"subtitle": "conseil32",
-		"sounds": ["survisland:conseil32"]
+	"26_angie_battle": {
+		"category": "music",
+		"sounds": [{"name": "survisland:26_angie_battle","stream": true}]
 	},
-	"conseil33": {
-		"subtitle": "conseil33",
-		"sounds": ["survisland:conseil33"]
+	"27_among_our_dreams": {
+		"category": "music",
+		"sounds": [{"name": "survisland:27_among_our_dreams","stream": true}]
 	},
-	"conseil34": {
-		"subtitle": "conseil34",
-		"sounds": ["survisland:conseil34"]
+	"28_dynasty": {
+		"category": "music",
+		"sounds": [{"name": "survisland:28_dynasty","stream": true}]
 	},
-	"conseil35": {
-		"subtitle": "conseil35",
-		"sounds": ["survisland:conseil35"]
+	"29_hold_the_line": {
+		"category": "music",
+		"sounds": [{"name": "survisland:29_hold_the_line","stream": true}]
 	},
-	"conseil4": {
-		"subtitle": "conseil4",
-		"sounds": ["survisland:conseil4"]
+	"30_legends_of_the_past": {
+		"category": "music",
+		"sounds": [{"name": "survisland:30_legends_of_the_past","stream": true}]
 	},
-	"conseil5": {
-		"subtitle": "conseil5",
-		"sounds": ["survisland:conseil5"]
+	"31_carnival_row": {
+		"category": "music",
+		"sounds": [{"name": "survisland:31_carnival_row","stream": true}]
 	},
-	"conseil6": {
-		"subtitle": "conseil6",
-		"sounds": ["survisland:conseil6"]
+	"32_final_act": {
+		"category": "music",
+		"sounds": [{"name": "survisland:32_final_act","stream": true}]
 	},
-	"conseil7": {
-		"subtitle": "conseil7",
-		"sounds": ["survisland:conseil7"]
+	"33_path_to_glory": {
+		"category": "music",
+		"sounds": [{"name": "survisland:33_path_to_glory","stream": true}]
 	},
-	"conseil8": {
-		"subtitle": "conseil8",
-		"sounds": ["survisland:conseil8"]
+	"34_perfect_chaos": {
+		"category": "music",
+		"sounds": [{"name": "survisland:34_perfect_chaos","stream": true}]
 	},
-	"conseil9": {
-		"subtitle": "conseil9",
-		"sounds": ["survisland:conseil9"]
+	"35_we_are_vanguards": {
+		"category": "music",
+		"sounds": [{"name": "survisland:35_we_are_vanguards","stream": true}]
 	},
 	"fart": {
 		"subtitle": "fart",

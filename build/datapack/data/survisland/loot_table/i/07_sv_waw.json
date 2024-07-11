@@ -1,0 +1,36 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"survisland": {"07_sv_waw": true},
+									"smithed": {"dict": {"record": {"07_sv_waw": true}},"ignore": {"functionality": true,"crafting": true}}
+								},
+								"minecraft:item_name": "{'text':'Music Disc', 'italic': false}",
+								"minecraft:jukebox_playable": {
+									"song": "survisland:07_sv_waw",
+									"show_in_tooltip": true
+								},
+								"minecraft:max_stack_size": 1,
+								"minecraft:rarity": "rare",
+								"minecraft:custom_model_data": 2010031,
+								"minecraft:lore": [
+									"{'text': 'Survisland', 'italic': true, 'color': 'blue'}"
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

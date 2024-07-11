@@ -1,0 +1,36 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"survisland": {"25_fireborn": true},
+									"smithed": {"dict": {"record": {"25_fireborn": true}},"ignore": {"functionality": true,"crafting": true}}
+								},
+								"minecraft:item_name": "{'text':'Music Disc', 'italic': false}",
+								"minecraft:jukebox_playable": {
+									"song": "survisland:25_fireborn",
+									"show_in_tooltip": true
+								},
+								"minecraft:max_stack_size": 1,
+								"minecraft:rarity": "rare",
+								"minecraft:custom_model_data": 2010049,
+								"minecraft:lore": [
+									"{'text': 'Survisland', 'italic': true, 'color': 'blue'}"
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
