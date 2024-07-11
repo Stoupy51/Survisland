@@ -7,7 +7,7 @@
 import os
 import subprocess
 from multiprocessing import Pool
-COMPRESSION = "64k"
+COMPRESSION = "128k"
 
 def compress_file(args):
 	src, dst = args
@@ -20,6 +20,9 @@ def compress_file(args):
 		os.remove(src)
 		os.rename(dst, src)
 		print(f"Compressed file '{src}' from {previous_size} to {file_size} bytes")
+	else:
+		os.remove(dst)
+		print(f"New file '{src}' is bigger than the original ({previous_size} > {file_size})")
 
 if __name__ == "__main__":
 	py_path = os.path.dirname(os.path.abspath(__file__))
