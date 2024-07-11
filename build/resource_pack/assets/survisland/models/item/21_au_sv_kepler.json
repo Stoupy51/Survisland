@@ -1,0 +1,7 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "survisland:item/21_au_sv_kepler"
+	}
+}
+

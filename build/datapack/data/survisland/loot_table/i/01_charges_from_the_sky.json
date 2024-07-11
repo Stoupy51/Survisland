@@ -1,0 +1,36 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"survisland": {"01_charges_from_the_sky": true},
+									"smithed": {"dict": {"record": {"01_charges_from_the_sky": true}},"ignore": {"functionality": true,"crafting": true}}
+								},
+								"minecraft:item_name": "{'text':'Music Disc', 'italic': false}",
+								"minecraft:jukebox_playable": {
+									"song": "survisland:01_charges_from_the_sky",
+									"show_in_tooltip": true
+								},
+								"minecraft:max_stack_size": 1,
+								"minecraft:rarity": "rare",
+								"minecraft:custom_model_data": 2010025,
+								"minecraft:lore": [
+									"{'text': 'Survisland', 'italic': true, 'color': 'blue'}"
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
