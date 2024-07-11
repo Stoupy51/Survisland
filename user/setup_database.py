@@ -8,9 +8,6 @@ from .database.additions import main as make_database
 # Constants
 STARTING_CMD: int = 2010000	# Prefix for custom_model_data
 
-records: dict[str, tuple[str,float]] = {
-}
-
 # Main function should return a database
 def main(config: dict) -> dict[str, dict]:
 
@@ -18,6 +15,8 @@ def main(config: dict) -> dict[str, dict]:
 	database: dict[str, dict] = make_database(config)
 
 	# Generate custom disc records
+	songs: list[str] = [x for x in os.listdir(config["assets_folder"] + "/records")]
+	records: dict[str, str] = { file.replace(".ogg","").replace("-","_").replace(" ","_").replace("___","_").lower(): file for file in songs }
 	generate_custom_records(config, database, records)
 
 	# Final adjustments
