@@ -10,12 +10,12 @@ BUILD_FOLDER: str = f"{ROOT}/build"					# Folder where the final datapack and re
 ASSETS_FOLDER: str = f"{ROOT}/assets"				# Folder containing the all assets (textures, sounds, ...) for the datapack
 TEXTURES_FOLDER: str = f"{ASSETS_FOLDER}/textures"	# Folder containing the textures for the datapack
 LIBS_FOLDER: str = f"{ROOT}/libs"					# The libraries are copied to the build destination, and merged with the datapack using Weld
-BUILD_COPY_DESTINATIONS: tuple[str, str] = ("D:/latest_snapshot/world/datapacks", "D:/minecraft/snapshot/resourcepacks")	# Can be empty strings if you don't want to copy the generated files
+BUILD_COPY_DESTINATIONS: tuple[str, str] = ([], "D:/minecraft/snapshot/resourcepacks")	# Can be empty strings if you don't want to copy the generated files
 
 # Dev constants
 DATABASE_DEBUG: str = f"{ROOT}/database_debug.json"	# Dump of the database for debugging purposes
 CMD_CACHE: str = f"{ROOT}/cmd_cache.json"			# Cache of all items Custom Model Data
-MERGE_LIBS: bool = False								# Make new zip of merged libraries with the datapack and resource pack using Smithed Weld
+MERGE_LIBS: bool = True								# Make new zip of merged libraries with the datapack and resource pack using Smithed Weld
 
 
 # Datapack related constants
