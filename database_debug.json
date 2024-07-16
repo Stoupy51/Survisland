@@ -523,5 +523,25 @@
 		"rarity": "rare",
 		"custom_model_data": 2010059,
 		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+	},
+	"le_r": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"le_r": true},"smithed": {"dict": {"record": {"le_r": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": "{'text':'Music Disc', 'italic': false}",
+		"jukebox_playable": {"song": "survisland:le_r","show_in_tooltip": true},
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"custom_model_data": 2010060,
+		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+	},
+	"shazinho": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"shazinho": true},"smithed": {"dict": {"record": {"shazinho": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": "{'text':'Music Disc', 'italic': false}",
+		"jukebox_playable": {"song": "survisland:shazinho","show_in_tooltip": true},
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"custom_model_data": 2010061,
+		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
 	}
 }
