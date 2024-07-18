@@ -15,13 +15,10 @@ def main(config: dict) -> dict[str, dict]:
 	database: dict[str, dict] = make_database(config)
 
 	# Generate custom disc records
-	songs: list[str] = [x for x in os.listdir(config["assets_folder"] + "/records")]
-	records: dict[str, str] = { file.replace(".ogg","").replace("-","_").replace(" ","_").replace("___","_").lower(): file for file in songs }
-	generate_custom_records(config, database, records)
+	generate_custom_records(config, database, "auto")
 
 	# Final adjustments
 	deterministic_custom_model_data(config, database, STARTING_CMD)
-	clean_up_empty_recipes(database)
 	add_item_name_and_lore_if_missing(config, database)
 	add_private_custom_data_for_namespace(config, database)
 	add_smithed_ignore_vanilla_behaviours_convention(database)
