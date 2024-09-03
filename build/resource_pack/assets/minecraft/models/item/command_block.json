@@ -37,7 +37,9 @@
 		{ "predicate": { "custom_model_data": 2010058}, "model": "survisland:item/34_perfect_chaos" },
 		{ "predicate": { "custom_model_data": 2010059}, "model": "survisland:item/35_we_are_vanguards" },
 		{ "predicate": { "custom_model_data": 2010060}, "model": "survisland:item/le_r" },
-		{ "predicate": { "custom_model_data": 2010061}, "model": "survisland:item/shazinho" }
+		{ "predicate": { "custom_model_data": 2010061}, "model": "survisland:item/shazinho" },
+		{ "predicate": { "custom_model_data": 2010062}, "model": "survisland:item/maple_leaf" },
+		{ "predicate": { "custom_model_data": 2010063}, "model": "survisland:item/golden_leaf" }
 	]
 }
 
