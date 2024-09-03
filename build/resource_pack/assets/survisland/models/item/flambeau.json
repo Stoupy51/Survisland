@@ -1,5 +1,5 @@
 {
-	"parent": "minecraft:item/warped_fungus_on_a_stick",
+	"parent": "none",
 	"textures": {
 		"layer0": "survisland:item/flambeau"
 	},
