@@ -1,8 +1,8 @@
 {
+	"parent": "item/handheld",
 	"textures": {
 		"layer0": "survisland:item/pendent_held"
 	},
-	"parent": "item/handheld",
 	"display": {
 		"thirdperson_righthand": {
 			"scale": [

@@ -1,0 +1,30 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_name": "{\"text\":\"Feuille d'érable\",\"italic\":false,\"color\":\"gold\"}",
+								"minecraft:custom_model_data": 2010062,
+								"minecraft:lore": [
+									"{'text': 'Survisland', 'italic': true, 'color': 'blue'}"
+								],
+								"minecraft:custom_data": {
+									"survisland": {"maple_leaf": true},
+									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
