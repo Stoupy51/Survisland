@@ -29,6 +29,7 @@ def main(config: dict) -> dict[str, dict]:
 		"deployed_parchemin": {
 			"id": "minecraft:warped_fungus_on_a_stick",
 			OVERRIDE_MODEL: {
+				"parent": "none",
 				"textures": {
 					"layer0": "survisland:item/parchemin"
 				},
@@ -99,6 +100,7 @@ def main(config: dict) -> dict[str, dict]:
 				'[{"text":"du joueur le plus proche","italic":false,"color":"gray"}]'
 			],
 			OVERRIDE_MODEL: {
+				"parent": "none",
 				"elements": [
 					{
 						"from":[7,0,7],
@@ -221,6 +223,7 @@ def main(config: dict) -> dict[str, dict]:
 			"id": "minecraft:warped_fungus_on_a_stick",
 			"lore": ['{"text":"Gardez cette torche précieusement","italic":false,"color":"gray"}'],
 			OVERRIDE_MODEL: {
+				"parent": "none",
 				"elements": [
 					{
 						"from": [7, 0, 7],
@@ -547,7 +550,8 @@ def main(config: dict) -> dict[str, dict]:
 			"item_name": '{"text":"Feuille d\'or","italic":false,"color":"gold"}',
 		},
 		"temp_item": {
-			"id": "minecraft:stone"
+			"id": "minecraft:stone",
+			OVERRIDE_MODEL: {},
 		},
 	}
 
