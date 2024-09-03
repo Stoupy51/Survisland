@@ -538,6 +538,14 @@ def main(config: dict) -> dict[str, dict]:
 				}
 			}
 		},
+		"maple_leaf": {
+			"id": CUSTOM_ITEM_VANILLA,
+			"item_name": '{"text":"Feuille d\'érable","italic":false,"color":"gold"}',
+		},
+		"golden_leaf": {
+			"id": CUSTOM_ITEM_VANILLA,
+			"item_name": '{"text":"Feuille d\'or","italic":false,"color":"gold"}',
+		},
 		"temp_item": {
 			"id": "minecraft:stone"
 		},

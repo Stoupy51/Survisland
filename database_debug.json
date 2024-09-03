@@ -62,6 +62,20 @@
 		"item_name": "{'text': 'Pendent Held', 'italic': false, 'color': 'white'}",
 		"custom_data": {"survisland": {"pendent_held": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
+	"maple_leaf": {
+		"id": "minecraft:command_block",
+		"item_name": "{\"text\":\"Feuille d'érable\",\"italic\":false,\"color\":\"gold\"}",
+		"custom_model_data": 2010062,
+		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"custom_data": {"survisland": {"maple_leaf": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"golden_leaf": {
+		"id": "minecraft:command_block",
+		"item_name": "{\"text\":\"Feuille d'or\",\"italic\":false,\"color\":\"gold\"}",
+		"custom_model_data": 2010063,
+		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"custom_data": {"survisland": {"golden_leaf": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"temp_item": {
 		"id": "minecraft:stone",
 		"custom_model_data": 2010009,
