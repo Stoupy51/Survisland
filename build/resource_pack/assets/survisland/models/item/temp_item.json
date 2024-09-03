@@ -1,7 +1,2 @@
-{
-	"parent": "minecraft:item/stone",
-	"textures": {
-		"layer0": "survisland:item/temp_item"
-	}
-}
+{}
 
