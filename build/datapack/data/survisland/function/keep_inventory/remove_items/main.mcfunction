@@ -1,5 +1,5 @@
 
-#> survisland:keep_inventory/remove_items/
+#> survisland:keep_inventory/remove_items/main
 #
 # @within	survisland:keep_inventory/player_died
 #
