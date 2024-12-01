@@ -11,8 +11,7 @@ execute if score #second survisland.data matches 20.. run function survisland:v2
 execute if score #minute survisland.data matches 1200.. run function survisland:v2.1.0/minute
 
 # Custom Keep Inventory System
-execute as @e[type=marker,tag=survisland.keep_inventory] at @s run function survisland:keep_inventory/tick
-scoreboard players reset @a[scores={survisland.deathCount=1..}] survisland.deathCount
+execute as @a[scores={survisland.deathCount=1..}] at @s run function survisland:keep_inventory/player_died
 
 # Moving Structure
 execute as @e[type=marker,tag=survisland.moving_structure] at @s run function survisland:moving_structure/tick

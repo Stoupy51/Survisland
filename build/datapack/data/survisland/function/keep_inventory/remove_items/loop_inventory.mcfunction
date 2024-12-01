@@ -1,8 +1,8 @@
 
 #> survisland:keep_inventory/remove_items/loop_inventory
 #
-# @within	survisland:keep_inventory/remove_items/
-#			survisland:keep_inventory/remove_items/loop_inventory
+# @within	survisland:keep_inventory/remove_items/loop_inventory
+#			survisland:keep_inventory/remove_items/main
 #
 
 # Loop through all items in the chest

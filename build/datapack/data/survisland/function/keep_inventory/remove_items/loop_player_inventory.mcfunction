@@ -1,8 +1,8 @@
 
 #> survisland:keep_inventory/remove_items/loop_player_inventory
 #
-# @within	survisland:keep_inventory/remove_items/
-#			survisland:keep_inventory/remove_items/loop_player_inventory
+# @within	survisland:keep_inventory/remove_items/loop_player_inventory
+#			survisland:keep_inventory/remove_items/main
 #
 
 # Remove items that matches slot
