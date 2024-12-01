@@ -1,6 +1,6 @@
 {
 	"function": "minecraft:set_components",
 	"components": {
-		"minecraft:custom_model_data": 2011999
+		"minecraft:item_model": "survisland:black_letter"
 	}
 }
