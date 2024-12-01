@@ -29,5 +29,5 @@ data modify storage survisland:main Item.components."minecraft:item_name" set fr
 
 # Replace the book by a scroll
 data modify storage survisland:main Item.id set value "minecraft:warped_fungus_on_a_stick"
-data modify storage survisland:main Item.components."minecraft:custom_model_data" set value 2010001
+data modify storage survisland:main Item.components."minecraft:item_model" set value "survisland:parchemin"
 

@@ -6,15 +6,15 @@ schedule function survisland:modes/take_that_pig/second 1s replace
 ##Take that pig
 scoreboard players remove #remaining_time survisland.data 1
 execute if score #detect_end survisland.data matches 0 if score #remaining_time survisland.data matches 1.. run title @a actionbar [{"text":"Temps restant : ","color":"aqua"},{"score":{"name":"#remaining_time","objective":"survisland.data"},"color":"yellow"},{"text":" secondes"}]
-execute if score #detect_end survisland.data matches 0 if predicate survisland:chance/0.2 run summon pig -1220 64 -2806 {Tags:["survisland.to_take"],AbsorptionAmount:2048.0f,DeathLootTable:"none"}
-execute if score #detect_end survisland.data matches 0 if predicate survisland:chance/0.1 run summon cow -1220 64 -2806 {Tags:["survisland.to_take"],AbsorptionAmount:2048.0f,DeathLootTable:"none"}
-execute if score #detect_end survisland.data matches 0 if predicate survisland:chance/0.1 run summon horse -1220 64 -2806 {Tags:["survisland.to_take"],AbsorptionAmount:2048.0f,DeathLootTable:"none"}
-execute if score #detect_end survisland.data matches 0 if predicate survisland:chance/0.1 run summon chicken -1220 64 -2806 {Tags:["survisland.to_take"],AbsorptionAmount:2048.0f,DeathLootTable:"none"}
+execute if score #detect_end survisland.data matches 0 if predicate survisland:chance/0.2 run summon pig -1220 64 -2806 {Tags:["survisland.to_take"],AbsorptionAmount:2048.0f,DeathLootTable:"empty"}
+execute if score #detect_end survisland.data matches 0 if predicate survisland:chance/0.1 run summon cow -1220 64 -2806 {Tags:["survisland.to_take"],AbsorptionAmount:2048.0f,DeathLootTable:"empty"}
+execute if score #detect_end survisland.data matches 0 if predicate survisland:chance/0.1 run summon horse -1220 64 -2806 {Tags:["survisland.to_take"],AbsorptionAmount:2048.0f,DeathLootTable:"empty"}
+execute if score #detect_end survisland.data matches 0 if predicate survisland:chance/0.1 run summon chicken -1220 64 -2806 {Tags:["survisland.to_take"],AbsorptionAmount:2048.0f,DeathLootTable:"empty"}
 
 #Prank de spectateurs
 execute if score #detect_end survisland.data matches 0 if score #remaining_time survisland.data matches 60 as @a[gamemode=spectator,limit=2,sort=random,tag=!survisland.spec_used] run function survisland:modes/take_that_pig/summon_spectators
 execute if score #detect_end survisland.data matches 0 if score #remaining_time survisland.data matches 60 run tellraw @a ["\n",{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true},{"text":" Incroyable ! Deux spectateurs sont apparus, combien de points peuvent-ils donner ?!!!!!"}]
-execute if score #detect_end survisland.data matches 0 if score #remaining_time survisland.data matches 60 as @a at @s run playsound entity.wither.ambient ambient @s 
+execute if score #detect_end survisland.data matches 0 if score #remaining_time survisland.data matches 60 as @a at @s run playsound entity.wither.ambient ambient @s
 
 #Fin de la pêche
 execute if score #detect_end survisland.data matches 0 if score #remaining_time survisland.data matches 0 run title @a actionbar ""
@@ -41,7 +41,7 @@ execute if score #detect_end survisland.data matches 1 at @a[gamemode=adventure]
 execute if score #detect_end survisland.data matches 1 if score #good survisland.data matches 1 run fill -1221 55 -2805 -1219 55 -2807 air destroy
 execute if score #detect_end survisland.data matches 1 if score #good survisland.data matches 1 as @a[gamemode=spectator,limit=2,sort=random,tag=!survisland.spec_used] run function survisland:modes/take_that_pig/summon_spectators_killing
 execute if score #detect_end survisland.data matches 1 if score #good survisland.data matches 1 run tellraw @a ["\n",{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true},{"text":" Wtf, deux autres spectateurs sont apparus, zigouillez-les !"}]
-execute if score #detect_end survisland.data matches 1 if score #good survisland.data matches 1 as @a at @s run playsound entity.wither.ambient ambient @s 
+execute if score #detect_end survisland.data matches 1 if score #good survisland.data matches 1 as @a at @s run playsound entity.wither.ambient ambient @s
 
 #Fin de l'extermination
 execute if score #detect_end survisland.data matches 1 run scoreboard players set #good_2 survisland.data 0

@@ -13,9 +13,9 @@
 								"minecraft:item_name": "{\"text\":\"Default vote\",\"italic\":false,\"color\":\"red\"}",
 								"minecraft:lore": [
 									"[{\"text\":\"Auteur : \",\"italic\":false,\"color\":\"gold\"},{\"text\":\"Stoupy51\",\"color\":\"yellow\"}]",
-									"{'text': 'Survisland', 'italic': true, 'color': 'blue'}"
+									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"
 								],
-								"minecraft:custom_model_data": 2010001,
+								"minecraft:item_model": "survisland:parchemin",
 								"minecraft:custom_data": {
 									"survisland": {"parchemin": true},
 									"smithed": {"ignore": {"functionality": true,"crafting": true}}

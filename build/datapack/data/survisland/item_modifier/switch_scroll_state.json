@@ -2,7 +2,7 @@
 	{
 		"function": "minecraft:set_components",
 		"components": {
-			"minecraft:custom_model_data": 2010001
+			"minecraft:item_model": "survisland:parchemin"
 		},
 		"conditions": [
 			{
@@ -12,7 +12,7 @@
 					"equipment": {
 						"mainhand": {
 							"components": {
-								"minecraft:custom_model_data": 2010002
+								"minecraft:item_model": "survisland:deployed_parchemin"
 							}
 						}
 					}
@@ -23,7 +23,7 @@
 	{
 		"function": "minecraft:set_components",
 		"components": {
-			"minecraft:custom_model_data": 2010002
+			"minecraft:item_model": "survisland:deployed_parchemin"
 		},
 		"conditions": [
 			{
@@ -33,7 +33,7 @@
 					"equipment": {
 						"mainhand": {
 							"components": {
-								"minecraft:custom_model_data": 2010001
+								"minecraft:item_model": "survisland:parchemin"
 							}
 						}
 					}
