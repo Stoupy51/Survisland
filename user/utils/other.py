@@ -38,8 +38,7 @@ data modify storage {namespace}:main Survisland set value '[{{"text":"[","color"
 	# Tick function
 	write_to_file(f"{functions}/v{version}/tick.mcfunction", f"""
 # Custom Keep Inventory System
-execute as @e[type=marker,tag={namespace}.keep_inventory] at @s run function {namespace}:keep_inventory/tick
-scoreboard players reset @a[scores={{{namespace}.deathCount=1..}}] {namespace}.deathCount
+execute as @a[scores={{{namespace}.deathCount=1..}}] at @s run function {namespace}:keep_inventory/player_died
 
 # Moving Structure
 execute as @e[type=marker,tag={namespace}.moving_structure] at @s run function {namespace}:moving_structure/tick
