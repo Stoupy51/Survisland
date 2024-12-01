@@ -12,10 +12,10 @@
 							"components": {
 								"minecraft:lore": [
 									"{\"text\":\"[Seconde main pour l'équiper]\",\"italic\":false,\"color\":\"gray\"}",
-									"{'text': 'Survisland', 'italic': true, 'color': 'blue'}"
+									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"
 								],
-								"minecraft:custom_model_data": 2010006,
-								"minecraft:item_name": "{'text': 'Necklace', 'italic': false, 'color': 'white'}",
+								"minecraft:item_model": "survisland:necklace",
+								"minecraft:item_name": "{\"text\": \"Necklace\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:custom_data": {
 									"survisland": {"necklace": true},
 									"smithed": {"ignore": {"functionality": true,"crafting": true}}

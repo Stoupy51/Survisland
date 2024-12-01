@@ -2,7 +2,7 @@
 	{
 		"function": "minecraft:set_components",
 		"components": {
-			"minecraft:custom_model_data": 2010004
+			"minecraft:item_model": "survisland:flambeau"
 		},
 		"conditions": [
 			{
@@ -12,7 +12,7 @@
 					"equipment": {
 						"mainhand": {
 							"components": {
-								"minecraft:custom_model_data": 2010005
+								"minecraft:item_model": "survisland:flambeau_on"
 							}
 						}
 					}
@@ -23,7 +23,7 @@
 	{
 		"function": "minecraft:set_components",
 		"components": {
-			"minecraft:custom_model_data": 2010005
+			"minecraft:item_model": "survisland:flambeau_on"
 		},
 		"conditions": [
 			{
@@ -33,7 +33,7 @@
 					"equipment": {
 						"mainhand": {
 							"components": {
-								"minecraft:custom_model_data": 2010004
+								"minecraft:item_model": "survisland:flambeau"
 							}
 						}
 					}

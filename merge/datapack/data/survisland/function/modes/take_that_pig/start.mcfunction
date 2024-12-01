@@ -27,7 +27,7 @@ execute as @a[gamemode=!creative,gamemode=!spectator] at @s run function survisl
 fill -1219 58 -2805 -1221 61 -2807 birch_planks replace structure_void
 fill -1268 52 -2793 -1268 55 -2798 emerald_block replace air
 fill -1221 55 -2805 -1219 55 -2807 glass
-execute as @e[limit=8] run summon pig -1220 64 -2806 {Tags:["survisland.to_take"],AbsorptionAmount:2048.0f,DeathLootTable:"none"}
+execute as @e[limit=8] run summon pig -1220 64 -2806 {Tags:["survisland.to_take"],AbsorptionAmount:2048.0f,DeathLootTable:"empty"}
 team modify mMerge friendlyFire false
 tag Stoupy51 add survisland.spec_used
 execute as @a at @s run playsound item.goat_horn.sound.0 ambient @s

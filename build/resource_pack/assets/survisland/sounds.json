@@ -139,14 +139,6 @@
 		"category": "music",
 		"sounds": [{"name": "survisland:35_we_are_vanguards","stream": true}]
 	},
-	"le_r": {
-		"category": "music",
-		"sounds": [{"name": "survisland:le_r","stream": true}]
-	},
-	"shazinho": {
-		"category": "music",
-		"sounds": [{"name": "survisland:shazinho","stream": true}]
-	},
 	"fart": {
 		"subtitle": "fart",
 		"sounds": ["survisland:fart"]

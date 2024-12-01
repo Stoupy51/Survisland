@@ -6,7 +6,7 @@ gamemode adventure @a[tag=survisland.alive]
 # give @a[tag=survisland.alive] wooden_shovel{survisland:{pitch_creep:1b},Unbreakable:1b,display:{Name:'{"text":"À enfoncer avec précaution","color":"yellow","italic":false}'},Enchantments:[{id:"minecraft:knockback",lvl:5s}]}
 # give @a[tag=survisland.alive] bow{survisland:{pitch_creep:1b},Unbreakable:1b,display:{Name:'{"text":"M\'APPROCHE PAS !!!","color":"yellow","italic":false}'},Enchantments:[{id:"minecraft:infinity",lvl:10s},{id:"minecraft:punch",lvl:3s}]}
 give @a[tag=survisland.alive] arrow
-execute as @a[tag=survisland.alive] run attribute @s generic.attack_speed base set 2048.0
+execute as @a[tag=survisland.alive] run attribute @s attack_speed base set 2048.0
 
 
 

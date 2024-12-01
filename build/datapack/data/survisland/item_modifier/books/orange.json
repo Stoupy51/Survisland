@@ -1,7 +1,7 @@
 {
 	"function": "minecraft:set_components",
 	"components": {
-		"minecraft:custom_model_data": 2010015
+		"minecraft:item_model": "survisland:book_orange"
 	}
 }
 
