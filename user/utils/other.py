@@ -80,8 +80,8 @@ advancement revoke @s only {namespace}:right_click
 # Switch case
 tag @s add {namespace}.temp
 scoreboard players set #success {namespace}.data 0
-execute if score #success {namespace}.data matches 0 store success score #success {namespace}.data if data entity @s SelectedItem.components{{"minecraft:custom_model_data":{database['parchemin']['custom_model_data']}}} run function {namespace}:parchemins/deploy_open
-execute if score #success {namespace}.data matches 0 store success score #success {namespace}.data if data entity @s SelectedItem.components{{"minecraft:custom_model_data":{database['deployed_parchemin']['custom_model_data']}}} run function {namespace}:parchemins/deploy_close
+execute if score #success {namespace}.data matches 0 store success score #success {namespace}.data if data entity @s SelectedItem.components{{"minecraft:item_model":"{database['parchemin']['item_model']}"}} run function {namespace}:parchemins/deploy_open
+execute if score #success {namespace}.data matches 0 store success score #success {namespace}.data if data entity @s SelectedItem.components{{"minecraft:item_model":"{database['deployed_parchemin']['item_model']}"}} run function {namespace}:parchemins/deploy_close
 execute if score #success {namespace}.data matches 0 store success score #success {namespace}.data if data entity @s SelectedItem.components."minecraft:custom_data".{namespace}.snuffer positioned ^ ^ ^2 as @p[gamemode=!spectator,tag=!{namespace}.temp,distance=..3] at @s run function {namespace}:utils/snuffer
 execute if score #success {namespace}.data matches 0 store success score #success {namespace}.data if data entity @s Inventory[{{Slot:-106b}}].components."minecraft:custom_data".{namespace}.snuffer positioned ^ ^ ^2 as @p[gamemode=!spectator,distance=..3] at @s run function {namespace}:utils/snuffer
 
@@ -93,24 +93,24 @@ tag @s remove {namespace}.temp
 	# parchemins/_convert_to_scroll
 	parchemin: dict = database['parchemin']
 	p_id: str = parchemin['id']
-	p_cmd: int = parchemin['custom_model_data']
+	p_model: str = parchemin['item_model']
 	write_to_file(f"{functions}/parchemins/_convert_to_scroll.mcfunction", f"""
 # Replace the book by a scroll
 data modify storage {namespace}:main Item.id set value "{p_id}"
-data modify storage {namespace}:main Item.components."minecraft:custom_model_data" set value {p_cmd}
+data modify storage {namespace}:main Item.components."minecraft:item_model" set value "{p_model}"
 """)
 	
 	# advancements/inventory_changed
-	pendent_cmd: int = database['pendent']['custom_model_data']
-	pendent_held_cmd: int = database['pendent_held']['custom_model_data']
+	pendent_model: str = database['pendent']['item_model']
+	pendent_held_model: str = database['pendent_held']['item_model']
 	write_to_file(f"{functions}/advancements/inventory_changed.mcfunction", f"""
 # Advancement revoke
 advancement revoke @s only survisland:inventory_changed
 
 # If pendent in left or right hand, run switch function
 scoreboard players set #success {namespace}.data 0
-execute store success score #success {namespace}.data if data entity @s SelectedItem.components{{"minecraft:custom_model_data":{pendent_held_cmd}}} run function {namespace}:utils/pendent_switch
-execute if score #success {namespace}.data matches 0 if data entity @s Inventory[{{Slot:-106b}}].components{{"minecraft:custom_model_data":{pendent_cmd}}} run function {namespace}:utils/pendent_switch
+execute store success score #success {namespace}.data if data entity @s SelectedItem.components{{"minecraft:item_model":"{pendent_held_model}"}} run function {namespace}:utils/pendent_switch
+execute if score #success {namespace}.data matches 0 if data entity @s Inventory[{{Slot:-106b}}].components{{"minecraft:item_model":"{pendent_model}"}} run function {namespace}:utils/pendent_switch
 """)
 	
 	# utils/pendent_switch
@@ -118,16 +118,16 @@ execute if score #success {namespace}.data matches 0 if data entity @s Inventory
 # Copy du pendent dans un slot temporaire
 setblock 0 5 0 air
 setblock 0 5 0 barrel
-execute if data entity @s SelectedItem.components{{"minecraft:custom_model_data":{pendent_held_cmd}}} run item replace block 0 5 0 container.0 from entity @s weapon.mainhand
-execute if data entity @s Inventory[{{Slot:-106b}}].components{{"minecraft:custom_model_data":{pendent_cmd}}} run item replace block 0 5 0 container.0 from entity @s weapon.offhand
+execute if data entity @s SelectedItem.components{{"minecraft:item_model":"{pendent_held_model}"}} run item replace block 0 5 0 container.0 from entity @s weapon.mainhand
+execute if data entity @s Inventory[{{Slot:-106b}}].components{{"minecraft:item_model":"{pendent_model}"}} run item replace block 0 5 0 container.0 from entity @s weapon.offhand
 
 # Inversion du model data du pendent
-execute if data entity @s SelectedItem.components{{"minecraft:custom_model_data":{pendent_held_cmd}}} run data modify block 0 5 0 Items[0].components."minecraft:custom_model_data" set value {pendent_cmd}
-execute if data entity @s Inventory[{{Slot:-106b}}].components{{"minecraft:custom_model_data":{pendent_cmd}}} run data modify block 0 5 0 Items[0].components."minecraft:custom_model_data" set value {pendent_held_cmd}
+execute if data entity @s SelectedItem.components{{"minecraft:item_model":"{pendent_held_model}"}} run data modify block 0 5 0 Items[0].components."minecraft:item_model" set value "{pendent_model}"
+execute if data entity @s Inventory[{{Slot:-106b}}].components{{"minecraft:item_model":"{pendent_model}"}} run data modify block 0 5 0 Items[0].components."minecraft:item_model" set value "{pendent_held_model}"
 
 # Recopie du pendent dans la main gauche
-execute if data entity @s SelectedItem.components{{"minecraft:custom_model_data":{pendent_held_cmd}}} run item replace entity @s weapon.mainhand from block 0 5 0 container.0
-execute if data entity @s Inventory[{{Slot:-106b}}].components{{"minecraft:custom_model_data":{pendent_cmd}}} run item replace entity @s weapon.offhand from block 0 5 0 container.0
+execute if data entity @s SelectedItem.components{{"minecraft:item_model":"{pendent_held_model}"}} run item replace entity @s weapon.mainhand from block 0 5 0 container.0
+execute if data entity @s Inventory[{{Slot:-106b}}].components{{"minecraft:item_model":"{pendent_model}"}} run item replace entity @s weapon.offhand from block 0 5 0 container.0
 
 # Suppression du slot temporaire
 setblock 0 5 0 air

@@ -8,7 +8,7 @@ execute if score #process_end survisland.data matches 1 if score #detect_end sur
 execute if score #process_end survisland.data matches 1 if score #detect_end survisland.data matches 1 at @a run summon firework_rocket ~ ~1 ~ {LifeTime:30,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Flight:2,Explosions:[{Type:1,Flicker:1,Trail:1,Colors:[I;2666751]}]}}}}
 
 execute if score #process_end survisland.data matches 1 run schedule clear survisland:modes/pitch_creep/second
-execute if score #process_end survisland.data matches 1 as @a run attribute @s generic.attack_speed base set 4.0
+execute if score #process_end survisland.data matches 1 as @a run attribute @s attack_speed base set 4.0
 execute if score #process_end survisland.data matches 1 as @a at @s run playsound entity.wither.death ambient @s
 
 execute if score #process_end survisland.data matches 1 run effect give @a[gamemode=survival] saturation 20 255 true

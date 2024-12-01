@@ -1,192 +1,205 @@
 {
+	"icon": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:icon",
+		"item_name": "{\"text\": \"Icon\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"survisland": {"icon": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"laser_gun": {
 		"id": "minecraft:warped_fungus_on_a_stick",
-		"custom_model_data": 2010000,
-		"item_name": "{'text': 'Laser Gun', 'italic': false, 'color': 'white'}",
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"item_model": "survisland:laser_gun",
+		"item_name": "{\"text\": \"Laser Gun\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"survisland": {"laser_gun": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"parchemin": {
 		"id": "minecraft:warped_fungus_on_a_stick",
 		"item_name": "{\"text\":\"Default vote\",\"italic\":false,\"color\":\"red\"}",
-		"lore": ["[{\"text\":\"Auteur : \",\"italic\":false,\"color\":\"gold\"},{\"text\":\"Stoupy51\",\"color\":\"yellow\"}]","{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"lore": ["[{\"text\":\"Auteur : \",\"italic\":false,\"color\":\"gold\"},{\"text\":\"Stoupy51\",\"color\":\"yellow\"}]","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"override_model": {"parent": "item/handheld","display": {"thirdperson_righthand": {"scale": [0.5,0.5,0.5]},"thirdperson_lefthand": {"scale": [0.5,0.5,0.5]},"firstperson_righthand": {"scale": [0.5,0.5,0.5]},"firstperson_lefthand": {"scale": [0.5,0.5,0.5]},"ground": {"scale": [0.5,0.5,0.5]},"head": {"scale": [1.1,1.1,1.1]}}},
-		"custom_model_data": 2010001,
+		"item_model": "survisland:parchemin",
 		"custom_data": {"survisland": {"parchemin": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"deployed_parchemin": {
 		"id": "minecraft:warped_fungus_on_a_stick",
 		"override_model": {"parent": "none","textures": {"layer0": "survisland:item/parchemin"},"elements": [{"from": [1,2,7],"to": [3,14,9],"faces": {"north": {"uv": [9.96875,1.3125,11.96875,14.65625],"texture": "#layer0"},"east": {"uv": [9.96875,1.3125,11.96875,14.65625],"texture": "#layer0"},"south": {"uv": [9.96875,1.3125,11.96875,14.65625],"texture": "#layer0"},"west": {"uv": [9.96875,1.3125,11.96875,14.65625],"texture": "#layer0"},"up": {"uv": [8.875,1.25,9.375,1.375],"texture": "#layer0"},"down": {"uv": [8.875,1.25,9.375,1.375],"texture": "#layer0"}}},{"from": [13,2,7],"to": [15,14,9],"faces": {"north": {"uv": [9.96875,1.3125,11.96875,14.65625],"texture": "#layer0"},"east": {"uv": [9.96875,1.3125,11.96875,14.65625],"texture": "#layer0"},"south": {"uv": [9.96875,1.3125,11.96875,14.65625],"texture": "#layer0"},"west": {"uv": [9.96875,1.3125,11.96875,14.65625],"texture": "#layer0"},"up": {"uv": [8.875,1.25,9.375,1.375],"texture": "#layer0"},"down": {"uv": [8.875,1.25,9.375,1.375],"texture": "#layer0"}}},{"from": [0,2,8],"to": [16,14,8],"faces": {"north": {"uv": [0,0,16,16],"texture": "#layer0"},"east": {"uv": [16,16,16,16],"texture": "#layer0"},"south": {"uv": [0,0,16,16],"texture": "#layer0"},"west": {"uv": [16,16,16,16],"texture": "#layer0"},"up": {"uv": [16,16,16,16],"texture": "#layer0"},"down": {"uv": [16,16,16,16],"texture": "#layer0"}}}],"display": {"thirdperson_righthand": {"scale": [0.5,0.5,0.5]},"thirdperson_lefthand": {"scale": [0.5,0.5,0.5]},"firstperson_righthand": {"scale": [0.5,0.5,0.5]},"firstperson_lefthand": {"scale": [0.5,0.5,0.5]},"ground": {"scale": [0.5,0.5,0.5]},"head": {"scale": [1.1,1.1,1.1]}}},
-		"custom_model_data": 2010002,
-		"item_name": "{'text': 'Deployed Parchemin', 'italic': false, 'color': 'white'}",
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"item_model": "survisland:deployed_parchemin",
+		"item_name": "{\"text\": \"Deployed Parchemin\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"survisland": {"deployed_parchemin": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"snuffer": {
 		"id": "minecraft:warped_fungus_on_a_stick",
-		"lore": ["[{\"text\":\"Clic-droit pour éteindre la torche\",\"italic\":false,\"color\":\"gray\"}]","[{\"text\":\"du joueur le plus proche\",\"italic\":false,\"color\":\"gray\"}]","{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
-		"override_model": {"parent": "none","elements": [{"from": [7,0,7],"to": [9,7,9],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [8,9,10,16],"texture": "#layer0"},"east": {"uv": [10,9,12,16],"texture": "#layer0"},"south": {"uv": [14,9,16,16],"texture": "#layer0"},"west": {"uv": [12,9,14,16],"texture": "#layer0"},"up": {"uv": [6,12,8,14],"texture": "#layer0"},"down": {"uv": [6,14,8,16],"texture": "#layer0"}}},{"from": [6.5,6.75,6.5],"to": [14.5,8.75,9.5],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [0,14,8,16],"texture": "#layer0"},"east": {"uv": [7,12,11,14],"texture": "#layer0"},"south": {"uv": [8,14,16,16],"texture": "#layer0"},"west": {"uv": [7,12,11,14],"texture": "#layer0"},"up": {"uv": [0,4,9,8],"texture": "#layer0"},"down": {"uv": [0,0,9,4],"texture": "#layer0"}}},{"from": [6.75,8.75,6.75],"to": [14.25,9.5,9.25],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [0,15,8,16],"texture": "#layer0"},"east": {"uv": [0,14,8,15],"texture": "#layer0"},"south": {"uv": [8,15,16,16],"texture": "#layer0"},"west": {"uv": [8,14,16,15],"texture": "#layer0"},"up": {"uv": [0,0,9,4],"texture": "#layer0"},"down": {"uv": [0,4,9,8],"texture": "#layer0"}}},{"from": [9,5.75,7.25],"to": [9.5,7.5,8.75],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [6,13,7,16],"texture": "#layer0"},"east": {"uv": [9,13,12,16],"texture": "#layer0"},"south": {"uv": [7,13,8,16],"texture": "#layer0"},"west": {"uv": [13,13,16,16],"texture": "#layer0"},"up": {"uv": [10,8,11,5],"texture": "#layer0"},"down": {"uv": [9,8,10,5],"texture": "#layer0"}}},{"from": [12.25,5.75,8.75],"to": [14.25,7.5,9.25],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [8,13,12,16],"texture": "#layer0"},"east": {"uv": [7,13,8,16],"texture": "#layer0"},"south": {"uv": [12,13,16,16],"texture": "#layer0"},"west": {"uv": [4,13,5,16],"texture": "#layer0"},"up": {"uv": [10,12,13,13],"texture": "#layer0"},"down": {"uv": [13,12,16,13],"texture": "#layer0"}}},{"from": [12.25,5.75,6.75],"to": [14.25,7.5,7.25],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [8,13,12,16],"texture": "#layer0"},"east": {"uv": [7,13,8,16],"texture": "#layer0"},"south": {"uv": [12,13,16,16],"texture": "#layer0"},"west": {"uv": [4,13,5,16],"texture": "#layer0"},"up": {"uv": [10,12,13,13],"texture": "#layer0"},"down": {"uv": [13,12,16,13],"texture": "#layer0"}}},{"from": [11.75,5.75,6.75],"to": [12.25,7.5,9.25],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [4,13,5,16],"texture": "#layer0"},"east": {"uv": [6,13,11,16],"texture": "#layer0"},"south": {"uv": [5,13,6,16],"texture": "#layer0"},"west": {"uv": [11,13,16,16],"texture": "#layer0"},"up": {"uv": [10,8,11,5],"texture": "#layer0"},"down": {"uv": [9,8,10,5],"texture": "#layer0"}}},{"from": [13.75,5.75,7.25],"to": [14.25,7.5,8.75],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [6,13,7,16],"texture": "#layer0"},"east": {"uv": [9,13,12,16],"texture": "#layer0"},"south": {"uv": [7,13,8,16],"texture": "#layer0"},"west": {"uv": [13,13,16,16],"texture": "#layer0"},"up": {"uv": [10,8,11,5],"texture": "#layer0"},"down": {"uv": [9,8,10,5],"texture": "#layer0"}}}],"display": {"thirdperson_righthand": {"rotation": [0,90,25],"translation": [0,6.25,5]},"thirdperson_lefthand": {"rotation": [0,90,25],"translation": [0,6.25,5]},"firstperson_righthand": {"rotation": [0,90,0],"translation": [0,3.25,-1.25]},"firstperson_lefthand": {"rotation": [0,-90,0],"translation": [0,3.25,-1.25]},"ground": {"translation": [0,4,0]},"gui": {"rotation": [45,0,30],"translation": [-1.75,2.5,0],"scale": [1.5,1.5,1.5]},"head": {"translation": [0,14,0]},"fixed": {"translation": [0,4,0],"scale": [1.5,1.5,1.5]}},"groups": [0,1,2,3,{"name": "group","origin": [8,0,8],"color": 0,"nbt": "{}","armAnimationEnabled": false,"children": [4,5,6,7]}]},
-		"custom_model_data": 2010003,
-		"item_name": "{'text': 'Snuffer', 'italic': false, 'color': 'white'}",
+		"lore": ["[{\"text\":\"Clic-droit pour éteindre la torche\",\"italic\":false,\"color\":\"gray\"}]","[{\"text\":\"du joueur le plus proche\",\"italic\":false,\"color\":\"gray\"}]","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"override_model": {"parent": "none","elements": [{"from": [7,0,7],"to": [9,7,9],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [8,9,10,16],"texture": "#layer0"},"east": {"uv": [10,9,12,16],"texture": "#layer0"},"south": {"uv": [14,9,16,16],"texture": "#layer0"},"west": {"uv": [12,9,14,16],"texture": "#layer0"},"up": {"uv": [6,12,8,14],"texture": "#layer0"},"down": {"uv": [6,14,8,16],"texture": "#layer0"}}},{"from": [6.5,6.75,6.5],"to": [14.5,8.75,9.5],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [0,14,8,16],"texture": "#layer0"},"east": {"uv": [7,12,11,14],"texture": "#layer0"},"south": {"uv": [8,14,16,16],"texture": "#layer0"},"west": {"uv": [7,12,11,14],"texture": "#layer0"},"up": {"uv": [0,4,9,8],"texture": "#layer0"},"down": {"uv": [0,0,9,4],"texture": "#layer0"}}},{"from": [6.75,8.75,6.75],"to": [14.25,9.5,9.25],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [0,15,8,16],"texture": "#layer0"},"east": {"uv": [0,14,8,15],"texture": "#layer0"},"south": {"uv": [8,15,16,16],"texture": "#layer0"},"west": {"uv": [8,14,16,15],"texture": "#layer0"},"up": {"uv": [0,0,9,4],"texture": "#layer0"},"down": {"uv": [0,4,9,8],"texture": "#layer0"}}},{"from": [9,5.75,7.25],"to": [9.5,7.5,8.75],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [6,13,7,16],"texture": "#layer0"},"east": {"uv": [9,13,12,16],"texture": "#layer0"},"south": {"uv": [7,13,8,16],"texture": "#layer0"},"west": {"uv": [13,13,16,16],"texture": "#layer0"},"up": {"uv": [10,8,11,5],"texture": "#layer0"},"down": {"uv": [9,8,10,5],"texture": "#layer0"}}},{"from": [12.25,5.75,8.75],"to": [14.25,7.5,9.25],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [8,13,12,16],"texture": "#layer0"},"east": {"uv": [7,13,8,16],"texture": "#layer0"},"south": {"uv": [12,13,16,16],"texture": "#layer0"},"west": {"uv": [4,13,5,16],"texture": "#layer0"},"up": {"uv": [10,12,13,13],"texture": "#layer0"},"down": {"uv": [13,12,16,13],"texture": "#layer0"}}},{"from": [12.25,5.75,6.75],"to": [14.25,7.5,7.25],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [8,13,12,16],"texture": "#layer0"},"east": {"uv": [7,13,8,16],"texture": "#layer0"},"south": {"uv": [12,13,16,16],"texture": "#layer0"},"west": {"uv": [4,13,5,16],"texture": "#layer0"},"up": {"uv": [10,12,13,13],"texture": "#layer0"},"down": {"uv": [13,12,16,13],"texture": "#layer0"}}},{"from": [11.75,5.75,6.75],"to": [12.25,7.5,9.25],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [4,13,5,16],"texture": "#layer0"},"east": {"uv": [6,13,11,16],"texture": "#layer0"},"south": {"uv": [5,13,6,16],"texture": "#layer0"},"west": {"uv": [11,13,16,16],"texture": "#layer0"},"up": {"uv": [10,8,11,5],"texture": "#layer0"},"down": {"uv": [9,8,10,5],"texture": "#layer0"}}},{"from": [13.75,5.75,7.25],"to": [14.25,7.5,8.75],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [6,13,7,16],"texture": "#layer0"},"east": {"uv": [9,13,12,16],"texture": "#layer0"},"south": {"uv": [7,13,8,16],"texture": "#layer0"},"west": {"uv": [13,13,16,16],"texture": "#layer0"},"up": {"uv": [10,8,11,5],"texture": "#layer0"},"down": {"uv": [9,8,10,5],"texture": "#layer0"}}}],"display": {"thirdperson_righthand": {"rotation": [0,90,25],"translation": [0,6.25,5]},"thirdperson_lefthand": {"rotation": [0,-90,-25],"translation": [0,6.25,5]},"firstperson_righthand": {"rotation": [0,90,0],"translation": [0,3.25,-1.25]},"firstperson_lefthand": {"rotation": [0,-90,0],"translation": [0,3.25,-1.25]},"ground": {"translation": [0,4,0]},"gui": {"rotation": [45,0,30],"translation": [-1.75,2.5,0],"scale": [1.5,1.5,1.5]},"head": {"translation": [0,14,0]},"fixed": {"translation": [0,4,0],"scale": [1.5,1.5,1.5]}},"groups": [0,1,2,3,{"name": "group","origin": [8,0,8],"color": 0,"nbt": "{}","armAnimationEnabled": false,"children": [4,5,6,7]}]},
+		"item_model": "survisland:snuffer",
+		"item_name": "{\"text\": \"Snuffer\", \"italic\": false, \"color\": \"white\"}",
 		"custom_data": {"survisland": {"snuffer": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"flambeau": {
 		"id": "minecraft:warped_fungus_on_a_stick",
-		"lore": ["{\"text\":\"Gardez cette torche précieusement\",\"italic\":false,\"color\":\"gray\"}","{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"lore": ["{\"text\":\"Gardez cette torche précieusement\",\"italic\":false,\"color\":\"gray\"}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"override_model": {"parent": "none","elements": [{"from": [7,0,7],"to": [9,7,9],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [7,9,9,16],"texture": "#layer0"},"east": {"uv": [7,9,9,16],"texture": "#layer0"},"south": {"uv": [7,9,9,16],"texture": "#layer0"},"west": {"uv": [7,9,9,16],"texture": "#layer0"},"up": {"uv": [7,8,9,10],"texture": "#layer0"},"down": {"uv": [7,8,9,10],"texture": "#layer0"}}},{"from": [6.5,6.75,6.5],"to": [9.5,8.75,9.5],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [7,6,9,7],"rotation": 180,"texture": "#layer0"},"east": {"uv": [7,6,9,7],"rotation": 180,"texture": "#layer0"},"south": {"uv": [7,6,9,7],"rotation": 180,"texture": "#layer0"},"west": {"uv": [7,6,9,7],"rotation": 180,"texture": "#layer0"},"up": {"uv": [7,6,9,8],"texture": "#layer0"},"down": {"uv": [7,6,9,8],"texture": "#layer0"}}},{"from": [6.75,8.75,6.75],"to": [9.25,10.5,9.25],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [7,6,9,7],"texture": "#layer0"},"east": {"uv": [7,6,9,7],"texture": "#layer0"},"south": {"uv": [7,6,9,7],"texture": "#layer0"},"west": {"uv": [7,6,9,7],"texture": "#layer0"},"up": {"uv": [7,6,9,8],"texture": "#layer0"},"down": {"uv": [7,6,9,7],"texture": "#layer0"}}},{"from": [6,6.25,7.19],"to": [7,8.25,7.94],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [1,14,2,16],"texture": "#layer0"},"east": {"uv": [1,14,1.75,16],"texture": "#layer0"},"south": {"uv": [1,14,2,16],"texture": "#layer0"},"west": {"uv": [1,14,1.75,16],"texture": "#layer0"},"up": {"uv": [1,14,2,14.75],"texture": "#layer0"},"down": {"uv": [1,14,2,14.75],"texture": "#layer0"}}},{"from": [6,6.25,8.135],"to": [7,8.25,8.885],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [1,14,2,16],"texture": "#layer0"},"east": {"uv": [1,14,1.75,16],"texture": "#layer0"},"south": {"uv": [1,14,2,16],"texture": "#layer0"},"west": {"uv": [1,14,1.75,16],"texture": "#layer0"},"up": {"uv": [1,14,2,14.75],"texture": "#layer0"},"down": {"uv": [1,14,2,14.75],"texture": "#layer0"}}},{"from": [9,6.25,7.19],"to": [10,8.25,7.94],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [1,14,2,16],"texture": "#layer0"},"east": {"uv": [1,14,1.75,16],"texture": "#layer0"},"south": {"uv": [1,14,2,16],"texture": "#layer0"},"west": {"uv": [1,14,1.75,16],"texture": "#layer0"},"up": {"uv": [1,14,2,14.75],"texture": "#layer0"},"down": {"uv": [1,14,2,14.75],"texture": "#layer0"}}},{"from": [9,6.25,8.135],"to": [10,8.25,8.885],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [1,14,2,16],"texture": "#layer0"},"east": {"uv": [1,14,1.75,16],"texture": "#layer0"},"south": {"uv": [1,14,2,16],"texture": "#layer0"},"west": {"uv": [1,14,1.75,16],"texture": "#layer0"},"up": {"uv": [1,14,2,14.75],"texture": "#layer0"},"down": {"uv": [1,14,2,14.75],"texture": "#layer0"}}},{"from": [8.06,6.25,6],"to": [8.81,8.25,7],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [1,14,1.75,16],"texture": "#layer0"},"east": {"uv": [1,14,2,16],"texture": "#layer0"},"south": {"uv": [1,14,1.75,16],"texture": "#layer0"},"west": {"uv": [1,14,2,16],"texture": "#layer0"},"up": {"uv": [1,14,2,14.75],"rotation": 90,"texture": "#layer0"},"down": {"uv": [1,14,2,14.75],"rotation": 270,"texture": "#layer0"}}},{"from": [7.115,6.25,6],"to": [7.865,8.25,7],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [1,14,1.75,16],"texture": "#layer0"},"east": {"uv": [1,14,2,16],"texture": "#layer0"},"south": {"uv": [1,14,1.75,16],"texture": "#layer0"},"west": {"uv": [1,14,2,16],"texture": "#layer0"},"up": {"uv": [1,14,2,14.75],"rotation": 90,"texture": "#layer0"},"down": {"uv": [1,14,2,14.75],"rotation": 270,"texture": "#layer0"}}},{"from": [8.06,6.25,9],"to": [8.81,8.25,10],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [1,14,1.75,16],"texture": "#layer0"},"east": {"uv": [1,14,2,16],"texture": "#layer0"},"south": {"uv": [1,14,1.75,16],"texture": "#layer0"},"west": {"uv": [1,14,2,16],"texture": "#layer0"},"up": {"uv": [1,14,2,14.75],"rotation": 90,"texture": "#layer0"},"down": {"uv": [1,14,2,14.75],"rotation": 270,"texture": "#layer0"}}},{"from": [7.115,6.25,9],"to": [7.865,8.25,10],"rotation": {"angle": 0,"axis": "y","origin": [8,0,8]},"faces": {"north": {"uv": [1,14,1.75,16],"texture": "#layer0"},"east": {"uv": [1,14,2,16],"texture": "#layer0"},"south": {"uv": [1,14,1.75,16],"texture": "#layer0"},"west": {"uv": [1,14,2,16],"texture": "#layer0"},"up": {"uv": [1,14,2,14.75],"rotation": 90,"texture": "#layer0"},"down": {"uv": [1,14,2,14.75],"rotation": 270,"texture": "#layer0"}}}],"display": {"thirdperson_righthand": {"rotation": [0,90,25],"translation": [0,6.25,5]},"thirdperson_lefthand": {"rotation": [0,90,25],"translation": [0,6.25,5]},"firstperson_righthand": {"rotation": [0,90,0],"translation": [0,3.25,-1.25]},"firstperson_lefthand": {"rotation": [0,-90,0],"translation": [0,3.25,-1.25]},"ground": {"translation": [0,4,0]},"gui": {"rotation": [45,0,30],"translation": [-1.75,2.5,0],"scale": [1.5,1.5,1.5]},"head": {"translation": [0,14,0]},"fixed": {"translation": [0,4,0],"scale": [1.5,1.5,1.5]}},"groups": [0,1,2,{"name": "side","origin": [8,0,8],"color": 0,"nbt": "{}","armAnimationEnabled": false,"children": [3,4]},{"name": "side","origin": [8,0,8],"color": 0,"nbt": "{}","armAnimationEnabled": false,"children": [5,6]},{"name": "side","origin": [8,0,8],"color": 0,"nbt": "{}","armAnimationEnabled": false,"children": [7,8]},{"name": "side","origin": [8,0,8],"color": 0,"nbt": "{}","armAnimationEnabled": false,"children": [9,10]}]},
-		"custom_model_data": 2010004,
-		"item_name": "{'text': 'Flambeau', 'italic': false, 'color': 'white'}",
+		"item_model": "survisland:flambeau",
+		"item_name": "{\"text\": \"Flambeau\", \"italic\": false, \"color\": \"white\"}",
 		"custom_data": {"survisland": {"flambeau": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"necklace": {
 		"id": "minecraft:warped_fungus_on_a_stick",
-		"lore": ["{\"text\":\"[Seconde main pour l'équiper]\",\"italic\":false,\"color\":\"gray\"}","{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"lore": ["{\"text\":\"[Seconde main pour l'équiper]\",\"italic\":false,\"color\":\"gray\"}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"override_model": {"parent": "item/handheld","display": {"thirdperson_righthand": {"scale": [0.5,0.5,0.5]},"thirdperson_lefthand": {"rotation": [68,0,0],"translation": [-6,0.25,5.75],"scale": [0.66,0.66,0.66]},"firstperson_righthand": {"translation": [0,3,0],"scale": [0.5,0.5,0.5]},"firstperson_lefthand": {"translation": [0,3,0],"scale": [0.5,0.5,0.5]},"gui": {"translation": [0,0.5,0]},"head": {"translation": [0,-14.25,-5.75],"scale": [1.1,1.1,1.1]},"fixed": {"translation": [0,0.75,0],"scale": [1.25,1.25,1.25]}}},
-		"custom_model_data": 2010006,
-		"item_name": "{'text': 'Necklace', 'italic': false, 'color': 'white'}",
+		"item_model": "survisland:necklace",
+		"item_name": "{\"text\": \"Necklace\", \"italic\": false, \"color\": \"white\"}",
 		"custom_data": {"survisland": {"necklace": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"pendent": {
 		"id": "minecraft:warped_fungus_on_a_stick",
-		"lore": ["{\"text\":\"[Seconde main pour l'équiper]\",\"italic\":false,\"color\":\"gray\"}","{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"lore": ["{\"text\":\"[Seconde main pour l'équiper]\",\"italic\":false,\"color\":\"gray\"}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"override_model": {"parent": "item/handheld","display": {"thirdperson_righthand": {"translation": [-1.75,2,1.5],"scale": [0.5,0.5,0.5]},"thirdperson_lefthand": {"scale": [0,0,0]},"firstperson_righthand": {"translation": [0,3,0],"scale": [0.75,0.75,0.75]},"firstperson_lefthand": {"translation": [0,3,0],"scale": [0,0,0]},"gui": {"translation": [0,0.5,0]},"fixed": {"translation": [0,0.75,0],"scale": [1.25,1.25,1.25]}}},
-		"custom_model_data": 2010007,
-		"item_name": "{'text': 'Pendent', 'italic': false, 'color': 'white'}",
+		"item_model": "survisland:pendent",
+		"item_name": "{\"text\": \"Pendent\", \"italic\": false, \"color\": \"white\"}",
 		"custom_data": {"survisland": {"pendent": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"pendent_held": {
 		"id": "minecraft:warped_fungus_on_a_stick",
-		"lore": ["{\"text\":\"[Seconde main pour l'équiper]\",\"italic\":false,\"color\":\"gray\"}","{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"lore": ["{\"text\":\"[Seconde main pour l'équiper]\",\"italic\":false,\"color\":\"gray\"}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"override_model": {"parent": "item/handheld","display": {"thirdperson_righthand": {"scale": [0,0,0]},"thirdperson_lefthand": {"rotation": [68,0,0],"translation": [-5.75,0.5,6.5],"scale": [0.66,0.66,0.66]},"firstperson_righthand": {"translation": [0,3,0],"scale": [0,0,0]},"firstperson_lefthand": {"translation": [0,3,0],"scale": [0,0,0]},"head": {"translation": [0,-14.25,-5],"scale": [1.1,1.1,1.1]},"fixed": {"translation": [0,0.75,0],"scale": [1.25,1.25,1.25]}}},
-		"custom_model_data": 2010008,
-		"item_name": "{'text': 'Pendent Held', 'italic': false, 'color': 'white'}",
+		"item_model": "survisland:pendent_held",
+		"item_name": "{\"text\": \"Pendent Held\", \"italic\": false, \"color\": \"white\"}",
 		"custom_data": {"survisland": {"pendent_held": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"maple_leaf": {
 		"id": "minecraft:command_block",
 		"item_name": "{\"text\":\"Feuille d'érable\",\"italic\":false,\"color\":\"gold\"}",
-		"custom_model_data": 2010062,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"item_model": "survisland:maple_leaf",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"survisland": {"maple_leaf": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"golden_leaf": {
 		"id": "minecraft:command_block",
 		"item_name": "{\"text\":\"Feuille d'or\",\"italic\":false,\"color\":\"gold\"}",
-		"custom_model_data": 2010063,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"item_model": "survisland:golden_leaf",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"survisland": {"golden_leaf": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"temp_item": {
-		"id": "minecraft:stone",
-		"override_model": {},
-		"custom_model_data": 2010009,
-		"item_name": "{'text': 'Temp Item', 'italic': false, 'color': 'white'}",
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"id": "minecraft:command_block",
+		"item_model": "air",
+		"item_name": "{\"text\": \"Temp Item\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"survisland": {"temp_item": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"black_letter": {
+		"id": "minecraft:written_book",
+		"item_model": "survisland:black_letter",
+		"item_name": "{\"text\": \"Black Letter\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"survisland": {"black_letter": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"book_advanced": {
 		"id": "minecraft:written_book",
-		"custom_model_data": 2010010,
-		"item_name": "{'text': 'Book Advanced', 'italic': false, 'color': 'white'}",
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"item_model": "survisland:book_advanced",
+		"item_name": "{\"text\": \"Book Advanced\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"survisland": {"book_advanced": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"book_brown": {
 		"id": "minecraft:written_book",
-		"custom_model_data": 2010011,
-		"item_name": "{'text': 'Book Brown', 'italic': false, 'color': 'white'}",
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"item_model": "survisland:book_brown",
+		"item_name": "{\"text\": \"Book Brown\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"survisland": {"book_brown": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"book_bubulle": {
 		"id": "minecraft:written_book",
-		"custom_model_data": 2010012,
-		"item_name": "{'text': 'Book Bubulle', 'italic': false, 'color': 'white'}",
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"item_model": "survisland:book_bubulle",
+		"item_name": "{\"text\": \"Book Bubulle\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"survisland": {"book_bubulle": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"book_feather": {
 		"id": "minecraft:written_book",
-		"custom_model_data": 2010013,
-		"item_name": "{'text': 'Book Feather', 'italic': false, 'color': 'white'}",
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"item_model": "survisland:book_feather",
+		"item_name": "{\"text\": \"Book Feather\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"survisland": {"book_feather": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"book_green_blue": {
 		"id": "minecraft:written_book",
-		"custom_model_data": 2010014,
-		"item_name": "{'text': 'Book Green Blue', 'italic': false, 'color': 'white'}",
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"item_model": "survisland:book_green_blue",
+		"item_name": "{\"text\": \"Book Green Blue\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"survisland": {"book_green_blue": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"book_orange": {
 		"id": "minecraft:written_book",
-		"custom_model_data": 2010015,
-		"item_name": "{'text': 'Book Orange', 'italic': false, 'color': 'white'}",
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"item_model": "survisland:book_orange",
+		"item_name": "{\"text\": \"Book Orange\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"survisland": {"book_orange": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"book_pink": {
 		"id": "minecraft:written_book",
-		"custom_model_data": 2010016,
-		"item_name": "{'text': 'Book Pink', 'italic': false, 'color': 'white'}",
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"item_model": "survisland:book_pink",
+		"item_name": "{\"text\": \"Book Pink\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"survisland": {"book_pink": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"book_purple": {
 		"id": "minecraft:written_book",
-		"custom_model_data": 2010017,
-		"item_name": "{'text': 'Book Purple', 'italic': false, 'color': 'white'}",
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"item_model": "survisland:book_purple",
+		"item_name": "{\"text\": \"Book Purple\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"survisland": {"book_purple": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"book_red": {
 		"id": "minecraft:written_book",
-		"custom_model_data": 2010018,
-		"item_name": "{'text': 'Book Red', 'italic': false, 'color': 'white'}",
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"item_model": "survisland:book_red",
+		"item_name": "{\"text\": \"Book Red\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"survisland": {"book_red": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"book_turquoise": {
 		"id": "minecraft:written_book",
-		"custom_model_data": 2010019,
-		"item_name": "{'text': 'Book Turquoise', 'italic': false, 'color': 'white'}",
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"item_model": "survisland:book_turquoise",
+		"item_name": "{\"text\": \"Book Turquoise\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"survisland": {"book_turquoise": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"book_very_light_cyan": {
 		"id": "minecraft:written_book",
-		"custom_model_data": 2010020,
-		"item_name": "{'text': 'Book Very Light Cyan', 'italic': false, 'color': 'white'}",
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"item_model": "survisland:book_very_light_cyan",
+		"item_name": "{\"text\": \"Book Very Light Cyan\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"survisland": {"book_very_light_cyan": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"book_warden": {
 		"id": "minecraft:written_book",
-		"custom_model_data": 2010021,
-		"item_name": "{'text': 'Book Warden', 'italic': false, 'color': 'white'}",
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"item_model": "survisland:book_warden",
+		"item_name": "{\"text\": \"Book Warden\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"survisland": {"book_warden": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"book_white": {
 		"id": "minecraft:written_book",
-		"custom_model_data": 2010022,
-		"item_name": "{'text': 'Book White', 'italic': false, 'color': 'white'}",
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"item_model": "survisland:book_white",
+		"item_name": "{\"text\": \"Book White\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"survisland": {"book_white": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"book_white_blue": {
 		"id": "minecraft:written_book",
-		"custom_model_data": 2010023,
-		"item_name": "{'text': 'Book White Blue', 'italic': false, 'color': 'white'}",
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"item_model": "survisland:book_white_blue",
+		"item_name": "{\"text\": \"Book White Blue\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"survisland": {"book_white_blue": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"book_yellow": {
 		"id": "minecraft:written_book",
-		"custom_model_data": 2010024,
-		"item_name": "{'text': 'Book Yellow', 'italic': false, 'color': 'white'}",
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"],
+		"item_model": "survisland:book_yellow",
+		"item_name": "{\"text\": \"Book Yellow\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"survisland": {"book_yellow": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"01_charges_from_the_sky": {
@@ -196,8 +209,8 @@
 		"jukebox_playable": {"song": "survisland:01_charges_from_the_sky","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010025,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:01_charges_from_the_sky",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"02_sv_david_vs_goliath": {
 		"id": "minecraft:command_block",
@@ -206,8 +219,8 @@
 		"jukebox_playable": {"song": "survisland:02_sv_david_vs_goliath","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010026,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:02_sv_david_vs_goliath",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"03_crescent_battle": {
 		"id": "minecraft:command_block",
@@ -216,8 +229,8 @@
 		"jukebox_playable": {"song": "survisland:03_crescent_battle","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010027,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:03_crescent_battle",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"04_fade_into_darkness": {
 		"id": "minecraft:command_block",
@@ -226,8 +239,8 @@
 		"jukebox_playable": {"song": "survisland:04_fade_into_darkness","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010028,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:04_fade_into_darkness",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"05_extinction_report": {
 		"id": "minecraft:command_block",
@@ -236,8 +249,8 @@
 		"jukebox_playable": {"song": "survisland:05_extinction_report","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010029,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:05_extinction_report",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"06_sv_cayagan": {
 		"id": "minecraft:command_block",
@@ -246,8 +259,8 @@
 		"jukebox_playable": {"song": "survisland:06_sv_cayagan","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010030,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:06_sv_cayagan",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"07_sv_waw": {
 		"id": "minecraft:command_block",
@@ -256,8 +269,8 @@
 		"jukebox_playable": {"song": "survisland:07_sv_waw","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010031,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:07_sv_waw",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"08_battle_of_the_ocean": {
 		"id": "minecraft:command_block",
@@ -266,8 +279,8 @@
 		"jukebox_playable": {"song": "survisland:08_battle_of_the_ocean","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010032,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:08_battle_of_the_ocean",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"09_challenger": {
 		"id": "minecraft:command_block",
@@ -276,8 +289,8 @@
 		"jukebox_playable": {"song": "survisland:09_challenger","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010033,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:09_challenger",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"10_elite_voids": {
 		"id": "minecraft:command_block",
@@ -286,8 +299,8 @@
 		"jukebox_playable": {"song": "survisland:10_elite_voids","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010034,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:10_elite_voids",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"11_live_to_see_tomorrow": {
 		"id": "minecraft:command_block",
@@ -296,8 +309,8 @@
 		"jukebox_playable": {"song": "survisland:11_live_to_see_tomorrow","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010035,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:11_live_to_see_tomorrow",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"12_born_to_own": {
 		"id": "minecraft:command_block",
@@ -306,8 +319,8 @@
 		"jukebox_playable": {"song": "survisland:12_born_to_own","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010036,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:12_born_to_own",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"13_sacrifice": {
 		"id": "minecraft:command_block",
@@ -316,8 +329,8 @@
 		"jukebox_playable": {"song": "survisland:13_sacrifice","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010037,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:13_sacrifice",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"14_where_is_your_god_now": {
 		"id": "minecraft:command_block",
@@ -326,8 +339,8 @@
 		"jukebox_playable": {"song": "survisland:14_where_is_your_god_now","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010038,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:14_where_is_your_god_now",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"15_the_ritual": {
 		"id": "minecraft:command_block",
@@ -336,8 +349,8 @@
 		"jukebox_playable": {"song": "survisland:15_the_ritual","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010039,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:15_the_ritual",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"16_resolute": {
 		"id": "minecraft:command_block",
@@ -346,8 +359,8 @@
 		"jukebox_playable": {"song": "survisland:16_resolute","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010040,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:16_resolute",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"17_ghosts_hosts": {
 		"id": "minecraft:command_block",
@@ -356,8 +369,8 @@
 		"jukebox_playable": {"song": "survisland:17_ghosts_hosts","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010041,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:17_ghosts_hosts",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"18_the_time_has_come": {
 		"id": "minecraft:command_block",
@@ -366,8 +379,8 @@
 		"jukebox_playable": {"song": "survisland:18_the_time_has_come","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010042,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:18_the_time_has_come",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"19_in_the_heart_of_the_stars": {
 		"id": "minecraft:command_block",
@@ -376,8 +389,8 @@
 		"jukebox_playable": {"song": "survisland:19_in_the_heart_of_the_stars","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010043,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:19_in_the_heart_of_the_stars",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"20_last_hope": {
 		"id": "minecraft:command_block",
@@ -386,8 +399,8 @@
 		"jukebox_playable": {"song": "survisland:20_last_hope","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010044,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:20_last_hope",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"21_au_sv_kepler": {
 		"id": "minecraft:command_block",
@@ -396,8 +409,8 @@
 		"jukebox_playable": {"song": "survisland:21_au_sv_kepler","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010045,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:21_au_sv_kepler",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"22_au_sv_war_of_the_world": {
 		"id": "minecraft:command_block",
@@ -406,8 +419,8 @@
 		"jukebox_playable": {"song": "survisland:22_au_sv_war_of_the_world","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010046,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:22_au_sv_war_of_the_world",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"23_apex_deity": {
 		"id": "minecraft:command_block",
@@ -416,8 +429,8 @@
 		"jukebox_playable": {"song": "survisland:23_apex_deity","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010047,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:23_apex_deity",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"24_the_darkness_inside": {
 		"id": "minecraft:command_block",
@@ -426,8 +439,8 @@
 		"jukebox_playable": {"song": "survisland:24_the_darkness_inside","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010048,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:24_the_darkness_inside",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"25_fireborn": {
 		"id": "minecraft:command_block",
@@ -436,8 +449,8 @@
 		"jukebox_playable": {"song": "survisland:25_fireborn","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010049,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:25_fireborn",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"26_angie_battle": {
 		"id": "minecraft:command_block",
@@ -446,8 +459,8 @@
 		"jukebox_playable": {"song": "survisland:26_angie_battle","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010050,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:26_angie_battle",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"27_among_our_dreams": {
 		"id": "minecraft:command_block",
@@ -456,8 +469,8 @@
 		"jukebox_playable": {"song": "survisland:27_among_our_dreams","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010051,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:27_among_our_dreams",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"28_dynasty": {
 		"id": "minecraft:command_block",
@@ -466,8 +479,8 @@
 		"jukebox_playable": {"song": "survisland:28_dynasty","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010052,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:28_dynasty",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"29_hold_the_line": {
 		"id": "minecraft:command_block",
@@ -476,8 +489,8 @@
 		"jukebox_playable": {"song": "survisland:29_hold_the_line","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010053,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:29_hold_the_line",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"30_legends_of_the_past": {
 		"id": "minecraft:command_block",
@@ -486,8 +499,8 @@
 		"jukebox_playable": {"song": "survisland:30_legends_of_the_past","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010054,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:30_legends_of_the_past",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"31_carnival_row": {
 		"id": "minecraft:command_block",
@@ -496,8 +509,8 @@
 		"jukebox_playable": {"song": "survisland:31_carnival_row","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010055,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:31_carnival_row",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"32_final_act": {
 		"id": "minecraft:command_block",
@@ -506,8 +519,8 @@
 		"jukebox_playable": {"song": "survisland:32_final_act","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010056,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:32_final_act",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"33_path_to_glory": {
 		"id": "minecraft:command_block",
@@ -516,8 +529,8 @@
 		"jukebox_playable": {"song": "survisland:33_path_to_glory","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010057,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:33_path_to_glory",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"34_perfect_chaos": {
 		"id": "minecraft:command_block",
@@ -526,8 +539,8 @@
 		"jukebox_playable": {"song": "survisland:34_perfect_chaos","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010058,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:34_perfect_chaos",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"35_we_are_vanguards": {
 		"id": "minecraft:command_block",
@@ -536,27 +549,7 @@
 		"jukebox_playable": {"song": "survisland:35_we_are_vanguards","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"custom_model_data": 2010059,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
-	},
-	"le_r": {
-		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"le_r": true},"smithed": {"dict": {"record": {"le_r": true}},"ignore": {"functionality": true,"crafting": true}}},
-		"item_name": "{'text':'Music Disc', 'italic': false}",
-		"jukebox_playable": {"song": "survisland:le_r","show_in_tooltip": true},
-		"max_stack_size": 1,
-		"rarity": "rare",
-		"custom_model_data": 2010060,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
-	},
-	"shazinho": {
-		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"shazinho": true},"smithed": {"dict": {"record": {"shazinho": true}},"ignore": {"functionality": true,"crafting": true}}},
-		"item_name": "{'text':'Music Disc', 'italic': false}",
-		"jukebox_playable": {"song": "survisland:shazinho","show_in_tooltip": true},
-		"max_stack_size": 1,
-		"rarity": "rare",
-		"custom_model_data": 2010061,
-		"lore": ["{'text': 'Survisland', 'italic': true, 'color': 'blue'}"]
+		"item_model": "survisland:35_we_are_vanguards",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	}
 }

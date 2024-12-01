@@ -6,7 +6,7 @@ team modify mAkijan nametagVisibility hideForOwnTeam
 team modify mHainy friendlyFire true
 team modify mAkijan friendlyFire true
 
-execute as @a run attribute @s generic.attack_speed base set 4.0
+execute as @a run attribute @s attack_speed base set 4.0
 clear @a #survisland:layers
 
 team remove survisland.temp.sidebar.2

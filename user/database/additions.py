@@ -7,6 +7,8 @@ def main(config: dict) -> dict[str, dict]:
 
 	# Setup database
 	database: dict[str,dict] = {
+		"icon": {"id": CUSTOM_ITEM_VANILLA},
+
 		"laser_gun": {
 			"id": "minecraft:warped_fungus_on_a_stick",
 		},
@@ -209,7 +211,7 @@ def main(config: dict) -> dict[str, dict]:
 				],
 				"display":{
 					"thirdperson_righthand":{"rotation":[0,90,25],"translation":[0,6.25,5]},
-					"thirdperson_lefthand":{"rotation":[0,90,25],"translation":[0,6.25,5]},
+					"thirdperson_lefthand":{"rotation":[0,-90,-25],"translation":[0,6.25,5]},
 					"firstperson_righthand":{"rotation":[0,90,0],"translation":[0,3.25,-1.25]},
 					"firstperson_lefthand":{"rotation":[0,-90,0],"translation":[0,3.25,-1.25]},
 					"ground":{"translation":[0,4,0]},
@@ -550,8 +552,11 @@ def main(config: dict) -> dict[str, dict]:
 			"item_name": '{"text":"Feuille d\'or","italic":false,"color":"gold"}',
 		},
 		"temp_item": {
-			"id": "minecraft:stone",
-			OVERRIDE_MODEL: {},
+			"id": CUSTOM_ITEM_VANILLA,
+			"item_model": "air"
+		},
+		"black_letter": {
+			"id": "minecraft:written_book",
 		},
 	}
 
