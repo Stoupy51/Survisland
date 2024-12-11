@@ -11,6 +11,7 @@ def main(config: dict) -> dict[str, dict]:
 
 		"laser_gun": {
 			"id": "minecraft:warped_fungus_on_a_stick",
+			"max_stack_size": 64,
 		},
 		"parchemin": {
 			"id": "minecraft:warped_fungus_on_a_stick",
@@ -224,6 +225,7 @@ def main(config: dict) -> dict[str, dict]:
 		"flambeau": {
 			"id": "minecraft:warped_fungus_on_a_stick",
 			"lore": ['{"text":"Gardez cette torche précieusement","italic":false,"color":"gray"}'],
+			"max_stack_size": 64,
 			OVERRIDE_MODEL: {
 				"parent": "none",
 				"elements": [
@@ -446,6 +448,7 @@ def main(config: dict) -> dict[str, dict]:
 		"necklace": {
 			"id": "minecraft:warped_fungus_on_a_stick",
 			"lore": ['{"text":"[Seconde main pour l\'équiper]","italic":false,"color":"gray"}'],
+			"max_stack_size": 64,
 			OVERRIDE_MODEL: {
 				"parent": "item/handheld",
 				"display": {
@@ -482,6 +485,7 @@ def main(config: dict) -> dict[str, dict]:
 		"pendent": {
 			"id": "minecraft:warped_fungus_on_a_stick",
 			"lore": ['{"text":"[Seconde main pour l\'équiper]","italic":false,"color":"gray"}'],
+			"max_stack_size": 64,
 			OVERRIDE_MODEL: {
 				"parent": "item/handheld",
 				"display": {
@@ -513,6 +517,7 @@ def main(config: dict) -> dict[str, dict]:
 		"pendent_held": {
 			"id": "minecraft:warped_fungus_on_a_stick",
 			"lore": ['{"text":"[Seconde main pour l\'équiper]","italic":false,"color":"gray"}'],
+			"max_stack_size": 64,
 			OVERRIDE_MODEL: {
 				"parent": "item/handheld",
 				"display": {
@@ -546,10 +551,12 @@ def main(config: dict) -> dict[str, dict]:
 		"maple_leaf": {
 			"id": CUSTOM_ITEM_VANILLA,
 			"item_name": '{"text":"Feuille d\'érable","italic":false,"color":"gold"}',
+			"max_stack_size": 64,
 		},
 		"golden_leaf": {
 			"id": CUSTOM_ITEM_VANILLA,
 			"item_name": '{"text":"Feuille d\'or","italic":false,"color":"gold"}',
+			"max_stack_size": 64,
 		},
 		"temp_item": {
 			"id": CUSTOM_ITEM_VANILLA,
