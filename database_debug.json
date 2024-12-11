@@ -19,6 +19,7 @@
 		"item_name": "{\"text\":\"Default vote\",\"italic\":false,\"color\":\"red\"}",
 		"lore": ["[{\"text\":\"Auteur : \",\"italic\":false,\"color\":\"gold\"},{\"text\":\"Stoupy51\",\"color\":\"yellow\"}]","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"override_model": {"parent": "item/handheld","display": {"thirdperson_righthand": {"scale": [0.5,0.5,0.5]},"thirdperson_lefthand": {"scale": [0.5,0.5,0.5]},"firstperson_righthand": {"scale": [0.5,0.5,0.5]},"firstperson_lefthand": {"scale": [0.5,0.5,0.5]},"ground": {"scale": [0.5,0.5,0.5]},"head": {"scale": [1.1,1.1,1.1]}}},
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"survisland": {"parchemin": true}}}}]}],
 		"item_model": "survisland:parchemin",
 		"custom_data": {"survisland": {"parchemin": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
