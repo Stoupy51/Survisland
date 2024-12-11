@@ -4,6 +4,7 @@ from python_datapack.utils.database_helper import *
 
 # Main function should return a database
 def main(config: dict) -> dict[str, dict]:
+	namespace: str = config["namespace"]
 
 	# Setup database
 	database: dict[str,dict] = {
@@ -28,6 +29,7 @@ def main(config: dict) -> dict[str, dict]:
 					"head": { "scale": [1.1, 1.1, 1.1] },
 				},
 			},
+			RESULT_OF_CRAFTING: [{"type":"crafting_shapeless","result_count":1,"ingredients":[ingr_repr("parchemin", ns=namespace)] }]
 		},
 		"deployed_parchemin": {
 			"id": "minecraft:warped_fungus_on_a_stick",
