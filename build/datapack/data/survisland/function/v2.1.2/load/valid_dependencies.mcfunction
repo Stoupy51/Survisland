@@ -1,12 +1,12 @@
 
-#> survisland:v2.1.1/load/valid_dependencies
+#> survisland:v2.1.2/load/valid_dependencies
 #
-# @within	survisland:v2.1.1/load/secondary
-#			survisland:v2.1.1/load/valid_dependencies 1t replace
+# @within	survisland:v2.1.2/load/secondary
+#			survisland:v2.1.2/load/valid_dependencies 1t replace
 #
 
 # Waiting for a player to get the game version, but stop function if no player found
-execute unless entity @p run schedule function survisland:v2.1.1/load/valid_dependencies 1t replace
+execute unless entity @p run schedule function survisland:v2.1.2/load/valid_dependencies 1t replace
 execute unless entity @p run return 0
 execute store result score #game_version survisland.data run data get entity @p DataVersion
 
@@ -22,5 +22,5 @@ execute if score #dependency_error survisland.data matches 1 if score #smithed.c
 execute if score #dependency_error survisland.data matches 1 if score #smithed.crafter.major load.status matches 0 if score #smithed.crafter.minor load.status matches 6 unless score #smithed.crafter.patch load.status matches 2.. run tellraw @a {"text":"- [Smithed Crafter (v0.6.2+)]","color":"gold","clickEvent":{"action":"open_url","value":"https://wiki.smithed.dev/libraries/crafter/"}}
 
 # Load Survisland
-execute if score #game_version survisland.data matches 1.. if score #mcload_error survisland.data matches 0 if score #dependency_error survisland.data matches 0 run function survisland:v2.1.1/load/confirm_load
+execute if score #game_version survisland.data matches 1.. if score #mcload_error survisland.data matches 0 if score #dependency_error survisland.data matches 0 run function survisland:v2.1.2/load/confirm_load
 
