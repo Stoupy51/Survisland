@@ -11,11 +11,11 @@ def main(config: dict) -> dict[str, dict]:
 		"icon": {"id": CUSTOM_ITEM_VANILLA},
 
 		"laser_gun": {
-			"id": "minecraft:warped_fungus_on_a_stick",
+			"id": CUSTOM_ITEM_VANILLA,
 			"max_stack_size": 64,
 		},
 		"parchemin": {
-			"id": "minecraft:warped_fungus_on_a_stick",
+			"id": CUSTOM_ITEM_VANILLA,
 			"item_name": '{"text":"Default vote","italic":false,"color":"red"}',
 			"lore":['[{"text":"Auteur : ","italic":false,"color":"gold"},{"text":"Stoupy51","color":"yellow"}]'],
 			OVERRIDE_MODEL: {
@@ -32,7 +32,7 @@ def main(config: dict) -> dict[str, dict]:
 			RESULT_OF_CRAFTING: [{"type":"crafting_shapeless","result_count":1,"ingredients":[ingr_repr("parchemin", ns=namespace)] }]
 		},
 		"deployed_parchemin": {
-			"id": "minecraft:warped_fungus_on_a_stick",
+			"id": CUSTOM_ITEM_VANILLA,
 			OVERRIDE_MODEL: {
 				"parent": "none",
 				"textures": {
@@ -225,7 +225,7 @@ def main(config: dict) -> dict[str, dict]:
 			},
 		},
 		"flambeau": {
-			"id": "minecraft:warped_fungus_on_a_stick",
+			"id": CUSTOM_ITEM_VANILLA,
 			"lore": ['{"text":"Gardez cette torche précieusement","italic":false,"color":"gray"}'],
 			"max_stack_size": 64,
 			OVERRIDE_MODEL: {
@@ -448,7 +448,7 @@ def main(config: dict) -> dict[str, dict]:
 			}
 		},
 		"necklace": {
-			"id": "minecraft:warped_fungus_on_a_stick",
+			"id": CUSTOM_ITEM_VANILLA,
 			"lore": ['{"text":"[Seconde main pour l\'équiper]","italic":false,"color":"gray"}'],
 			"max_stack_size": 64,
 			OVERRIDE_MODEL: {
@@ -485,7 +485,7 @@ def main(config: dict) -> dict[str, dict]:
 			}
 		},
 		"pendent": {
-			"id": "minecraft:warped_fungus_on_a_stick",
+			"id": CUSTOM_ITEM_VANILLA,
 			"lore": ['{"text":"[Seconde main pour l\'équiper]","italic":false,"color":"gray"}'],
 			"max_stack_size": 64,
 			OVERRIDE_MODEL: {
@@ -517,7 +517,7 @@ def main(config: dict) -> dict[str, dict]:
 			}
 		},
 		"pendent_held": {
-			"id": "minecraft:warped_fungus_on_a_stick",
+			"id": CUSTOM_ITEM_VANILLA,
 			"lore": ['{"text":"[Seconde main pour l\'équiper]","italic":false,"color":"gray"}'],
 			"max_stack_size": 64,
 			OVERRIDE_MODEL: {
