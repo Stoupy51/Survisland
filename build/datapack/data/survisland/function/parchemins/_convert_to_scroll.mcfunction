@@ -24,10 +24,10 @@ data modify block ~ ~-2 ~ front_text.messages[1] set value '[{"nbt":"Item.compon
 # Copy the author in the lore and the page content in the name
 data modify storage survisland:main Item.components."minecraft:lore" set value []
 data modify storage survisland:main Item.components."minecraft:lore" append from block ~ ~-2 ~ front_text.messages[0]
-data modify storage survisland:main Item.components."minecraft:item_name" set from block ~ ~-2 ~ front_text.messages[1]
+data modify storage survisland:main Item.components."minecraft:custom_name" set from block ~ ~-2 ~ front_text.messages[1]
 
 
 # Replace the book by a scroll
-data modify storage survisland:main Item.id set value "minecraft:command_block"
+data modify storage survisland:main Item.id set value "minecraft:warped_fungus_on_a_stick"
 data modify storage survisland:main Item.components."minecraft:item_model" set value "survisland:parchemin"
 
