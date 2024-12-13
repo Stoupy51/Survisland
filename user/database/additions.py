@@ -15,7 +15,7 @@ def main(config: dict) -> dict[str, dict]:
 			"max_stack_size": 64,
 		},
 		"parchemin": {
-			"id": CUSTOM_ITEM_VANILLA,
+			"id": "minecraft:warped_fungus_on_a_stick",
 			"item_name": '{"text":"Default vote","italic":false,"color":"red"}',
 			"lore":['[{"text":"Auteur : ","italic":false,"color":"gold"},{"text":"Stoupy51","color":"yellow"}]'],
 			OVERRIDE_MODEL: {
@@ -32,7 +32,7 @@ def main(config: dict) -> dict[str, dict]:
 			RESULT_OF_CRAFTING: [{"type":"crafting_shapeless","result_count":1,"ingredients":[ingr_repr("parchemin", ns=namespace)] }]
 		},
 		"deployed_parchemin": {
-			"id": CUSTOM_ITEM_VANILLA,
+			"id": "minecraft:warped_fungus_on_a_stick",
 			OVERRIDE_MODEL: {
 				"parent": "none",
 				"textures": {
