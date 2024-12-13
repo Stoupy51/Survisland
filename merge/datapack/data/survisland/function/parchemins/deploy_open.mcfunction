@@ -9,7 +9,7 @@
 
 # Copy player's rotation and text in a storage
 data modify storage survisland:main Rotation set from entity @s Rotation
-data modify storage survisland:main ScrollTexts append from entity @s SelectedItem.components."minecraft:item_name"
+data modify storage survisland:main ScrollTexts append from entity @s SelectedItem.components."minecraft:custom_name"
 
 # Summon the item_display
 execute positioned ^ ^ ^.5 positioned ~ ~1 ~ run summon item_display ~ ~ ~ {Tags:["survisland.new"],brightness:{block:15,sky:15},transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],translation:[0.0f,0.0f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.0f, 1.0f, 1.0f]},interpolation_duration:0,start_interpolation:0}
