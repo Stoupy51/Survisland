@@ -150,6 +150,10 @@
 	"rompich": {
 		"subtitle": "rompich",
 		"sounds": ["survisland:rompich"]
+	},
+	"vine_boom": {
+		"subtitle": "vine_boom",
+		"sounds": ["survisland:vine_boom"]
 	}
 }
 
