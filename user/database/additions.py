@@ -570,9 +570,14 @@ def main(config: dict) -> dict[str, dict]:
 	}
 
 	# Add colored books
-	books: list[str] = [x.replace('.png','') for x in config['textures_files'] if "book_" in x]
+	books: list[str] = [x.replace(".png","") for x in config['textures_files'] if "book_" in x]
 	for book in books:
 		database[book] = {"id": "minecraft:written_book"}
+	
+	# Add edible logos
+	for logo in config['textures_files']:
+		if "logo_" in logo:
+			database[logo.replace(".png","")] = {"id": CUSTOM_ITEM_VANILLA, "consumable": {}, "food": {"nutrition": 4, "saturation": 2.4, "can_always_eat": True}}
 	
 	return database
 
