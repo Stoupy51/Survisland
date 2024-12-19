@@ -151,6 +151,10 @@
 		"subtitle": "rompich",
 		"sounds": ["survisland:rompich"]
 	},
+	"scary_screamer": {
+		"subtitle": "scary_screamer",
+		"sounds": ["survisland:scary_screamer"]
+	},
 	"vine_boom": {
 		"subtitle": "vine_boom",
 		"sounds": ["survisland:vine_boom"]

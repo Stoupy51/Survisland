@@ -1,0 +1,6 @@
+{
+	"providers": [
+		{"type": "bitmap","file": "survisland:font/shazinho.png","ascent": 80,"height": 160,"chars": ["S"]}
+	]
+}
+
