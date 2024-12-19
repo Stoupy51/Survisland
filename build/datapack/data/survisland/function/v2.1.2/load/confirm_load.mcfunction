@@ -1,7 +1,7 @@
 
 #> survisland:v2.1.2/load/confirm_load
 #
-# @within	survisland:v2.1.2/load/valid_dependencies
+# @within	survisland:v2.1.2/load/secondary
 #
 
 # Confirm load
