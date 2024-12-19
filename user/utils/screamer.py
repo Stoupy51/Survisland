@@ -31,7 +31,7 @@ title @s title {{"text":"{SCREAMER_TEXT}","font":"{namespace}:screamers"}}
 execute at @s run playsound {namespace}:vine_boom
 """)
 	write_to_function(config, f"{namespace}:utils/pas_touche_2", f"""
-title @s times 0 0 40
+title @s times 0 40 40
 title @s title {{"text":"{SCREAMER_TEXT}","font":"{namespace}:screamers"}}
 execute at @s run playsound {namespace}:scary_screamer
 """)
