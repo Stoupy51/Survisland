@@ -143,6 +143,10 @@
 		"subtitle": "fart",
 		"sounds": ["survisland:fart"]
 	},
+	"fart_reverb": {
+		"subtitle": "fart_reverb",
+		"sounds": ["survisland:fart_reverb"]
+	},
 	"laser_gun": {
 		"subtitle": "laser_gun",
 		"sounds": ["survisland:laser_gun"]
