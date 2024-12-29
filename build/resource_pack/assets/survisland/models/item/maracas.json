@@ -1,5 +1,5 @@
 {
-	"parent": "item/generated",
+	"parent": "minecraft:item/diamond_sword",
 	"textures": {
 		"0": "minecraft:block/oak_planks",
 		"1": "minecraft:block/red_concrete",
