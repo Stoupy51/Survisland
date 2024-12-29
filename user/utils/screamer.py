@@ -35,6 +35,11 @@ title @s times 0 40 40
 title @s title {{"text":"{SCREAMER_TEXT}","font":"{namespace}:screamers"}}
 execute at @s run playsound {namespace}:scary_screamer
 """)
+	write_to_function(config, f"{namespace}:utils/pas_touche_3", f"""
+title @s times 0 40 40
+title @s title {{"text":"{SCREAMER_TEXT}","font":"{namespace}:screamers"}}
+execute at @s run playsound {namespace}:fart_reverb
+""")
 
 	pass
 
