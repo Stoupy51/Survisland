@@ -14,6 +14,10 @@
 									"{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}",
 									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"
 								],
+								"minecraft:equippable": {
+									"slot": "head",
+									"equip_sound": {"sound_id": "survisland:maracas"}
+								},
 								"minecraft:item_model": "survisland:maracas",
 								"minecraft:item_name": "{\"text\": \"Maracas\", \"italic\": false, \"color\": \"white\"}",
 								"minecraft:custom_data": {
