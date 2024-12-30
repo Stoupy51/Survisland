@@ -151,6 +151,10 @@
 		"subtitle": "laser_gun",
 		"sounds": ["survisland:laser_gun"]
 	},
+	"maracas": {
+		"subtitle": "maracas",
+		"sounds": ["survisland:maracas"]
+	},
 	"rompich": {
 		"subtitle": "rompich",
 		"sounds": ["survisland:rompich"]
