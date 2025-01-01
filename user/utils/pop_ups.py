@@ -51,7 +51,7 @@ def main(config: dict) -> None:
 
 	# Write the rewards function that
 	tellraws: str = '\n'.join([
-		f'tellraw @a[advancements={{{cleaned}=true}}] [{{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true}},{{"text":" {label} {remaining_time} !","color":"aqua"}}]'
+		f'tellraw @s[advancements={{{cleaned}=true}}] [{{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true}},{{"text":" {label} {remaining_time} !","color":"aqua"}}]'
 		for cleaned, (label, remaining_time) in zip(all_paths, product(LABELS, TIMES))
 	])
 	write_to_function(config, f"{namespace}:advancements/pop_ups", f"""
