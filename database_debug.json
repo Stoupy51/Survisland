@@ -47,15 +47,6 @@
 		"item_name": "{\"text\": \"Flambeau\", \"italic\": false, \"color\": \"white\"}",
 		"custom_data": {"survisland": {"flambeau": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
-	"necklace": {
-		"id": "minecraft:command_block",
-		"lore": ["{\"text\":\"[Seconde main pour l'équiper]\",\"italic\":false,\"color\":\"gray\"}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
-		"max_stack_size": 64,
-		"override_model": {"parent": "item/handheld","display": {"thirdperson_righthand": {"scale": [0.5,0.5,0.5]},"thirdperson_lefthand": {"rotation": [68,0,0],"translation": [-6,0.25,5.75],"scale": [0.66,0.66,0.66]},"firstperson_righthand": {"translation": [0,3,0],"scale": [0.5,0.5,0.5]},"firstperson_lefthand": {"translation": [0,3,0],"scale": [0.5,0.5,0.5]},"gui": {"translation": [0,0.5,0]},"head": {"translation": [0,-14.25,-5.75],"scale": [1.1,1.1,1.1]},"fixed": {"translation": [0,0.75,0],"scale": [1.25,1.25,1.25]}}},
-		"item_model": "survisland:necklace",
-		"item_name": "{\"text\": \"Necklace\", \"italic\": false, \"color\": \"white\"}",
-		"custom_data": {"survisland": {"necklace": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-	},
 	"pendent": {
 		"id": "minecraft:command_block",
 		"lore": ["{\"text\":\"[Seconde main pour l'équiper]\",\"italic\":false,\"color\":\"gray\"}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -424,6 +415,24 @@
 		"item_name": "{\"text\": \"Logo S22\", \"italic\": false, \"color\": \"white\"}",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"survisland": {"logo_s22": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"necklace": {
+		"id": "minecraft:command_block",
+		"max_stack_size": 1,
+		"equippable": {"slot": "chest","asset_id": "survisland:necklace","damage_on_hurt": false},
+		"item_model": "survisland:necklace",
+		"item_name": "{\"text\": \"Necklace\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"survisland": {"necklace": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"cursed_necklace": {
+		"id": "minecraft:command_block",
+		"max_stack_size": 1,
+		"equippable": {"slot": "chest","asset_id": "survisland:cursed_necklace","damage_on_hurt": false},
+		"item_model": "survisland:cursed_necklace",
+		"item_name": "{\"text\": \"Cursed Necklace\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"survisland": {"cursed_necklace": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"01_charges_from_the_sky": {
 		"id": "minecraft:command_block",

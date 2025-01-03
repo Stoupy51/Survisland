@@ -446,43 +446,6 @@ def main(config: dict) -> dict[str, dict]:
 				]
 			}
 		},
-		"necklace": {
-			"id": CUSTOM_ITEM_VANILLA,
-			"lore": ['{"text":"[Seconde main pour l\'équiper]","italic":false,"color":"gray"}'],
-			"max_stack_size": 64,
-			OVERRIDE_MODEL: {
-				"parent": "item/handheld",
-				"display": {
-					"thirdperson_righthand": {
-						"scale": [0.5, 0.5, 0.5]
-					},
-					"thirdperson_lefthand": {
-						"rotation": [68, 0, 0],
-						"translation": [-6, 0.25, 5.75],
-						"scale": [0.66, 0.66, 0.66]
-					},
-					"firstperson_righthand": {
-						"translation": [0, 3, 0],
-						"scale": [0.5, 0.5, 0.5]
-					},
-					"firstperson_lefthand": {
-						"translation": [0, 3, 0],
-						"scale": [0.5, 0.5, 0.5]
-					},
-					"gui": {
-						"translation": [0, 0.5, 0]
-					},
-					"head": {
-						"translation": [0, -14.25, -5.75],
-						"scale": [1.1, 1.1, 1.1]
-					},
-					"fixed": {
-						"translation": [0, 0.75, 0],
-						"scale": [1.25, 1.25, 1.25]
-					}
-				}
-			}
-		},
 		"pendent": {
 			"id": CUSTOM_ITEM_VANILLA,
 			"lore": ['{"text":"[Seconde main pour l\'équiper]","italic":false,"color":"gray"}'],
