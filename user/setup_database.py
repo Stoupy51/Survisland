@@ -3,13 +3,15 @@
 from python_datapack.utils.database_helper import *
 
 # Imports
-from .database.additions import main as make_database
+from user.database.base import main as make_database
+from user.database.necklaces import main as make_necklaces
 
 # Main function should return a database
 def main(config: dict) -> dict[str, dict]:
 
-	# Apply database additions
+	# Apply database
 	database: dict[str, dict] = make_database(config)
+	make_necklaces(config, database)
 
 	# Generate custom disc records
 	generate_custom_records(config, database, "auto")
