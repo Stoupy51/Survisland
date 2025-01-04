@@ -1,6 +1,7 @@
 
 # Reset scoreboard
 scoreboard players reset @s survisland.deathCount
+execute if entity @s[gamemode=!survival,gamemode=!adventure] run return fail
 
 # Copy inventory into storage and remove items that are in the 0 1 0 chest
 data modify storage survisland:main Inventory set from entity @s Inventory
