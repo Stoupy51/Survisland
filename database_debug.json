@@ -218,6 +218,186 @@
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"survisland": {"book_yellow": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
+	"poisson_ange": {
+		"id": "minecraft:command_block",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"equippable": {"slot": "head","camera_overlay": "survisland:poisson_ange"},
+		"item_model": "survisland:poisson_ange",
+		"item_name": "{\"text\": \"Poisson Ange\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"poisson_ange": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_bar": {
+		"id": "minecraft:command_block",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"equippable": {"slot": "head","camera_overlay": "survisland:poisson_bar"},
+		"item_model": "survisland:poisson_bar",
+		"item_name": "{\"text\": \"Poisson Bar\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"poisson_bar": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_cabillaud": {
+		"id": "minecraft:command_block",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"equippable": {"slot": "head","camera_overlay": "survisland:poisson_cabillaud"},
+		"item_model": "survisland:poisson_cabillaud",
+		"item_name": "{\"text\": \"Poisson Cabillaud\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"poisson_cabillaud": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_capucin": {
+		"id": "minecraft:command_block",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"equippable": {"slot": "head","camera_overlay": "survisland:poisson_capucin"},
+		"item_model": "survisland:poisson_capucin",
+		"item_name": "{\"text\": \"Poisson Capucin\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"poisson_capucin": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_chirurgien": {
+		"id": "minecraft:command_block",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"equippable": {"slot": "head","camera_overlay": "survisland:poisson_chirurgien"},
+		"item_model": "survisland:poisson_chirurgien",
+		"item_name": "{\"text\": \"Poisson Chirurgien\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"poisson_chirurgien": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_dorade": {
+		"id": "minecraft:command_block",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"equippable": {"slot": "head","camera_overlay": "survisland:poisson_dorade"},
+		"item_model": "survisland:poisson_dorade",
+		"item_name": "{\"text\": \"Poisson Dorade\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"poisson_dorade": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_espadon": {
+		"id": "minecraft:command_block",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"equippable": {"slot": "head","camera_overlay": "survisland:poisson_espadon"},
+		"item_model": "survisland:poisson_espadon",
+		"item_name": "{\"text\": \"Poisson Espadon\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"poisson_espadon": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_fletan": {
+		"id": "minecraft:command_block",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"equippable": {"slot": "head","camera_overlay": "survisland:poisson_fletan"},
+		"item_model": "survisland:poisson_fletan",
+		"item_name": "{\"text\": \"Poisson Fletan\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"poisson_fletan": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_gobie": {
+		"id": "minecraft:command_block",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"equippable": {"slot": "head","camera_overlay": "survisland:poisson_gobie"},
+		"item_model": "survisland:poisson_gobie",
+		"item_name": "{\"text\": \"Poisson Gobie\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"poisson_gobie": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_lime": {
+		"id": "minecraft:command_block",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"equippable": {"slot": "head","camera_overlay": "survisland:poisson_lime"},
+		"item_model": "survisland:poisson_lime",
+		"item_name": "{\"text\": \"Poisson Lime\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"poisson_lime": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_maquereau": {
+		"id": "minecraft:command_block",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"equippable": {"slot": "head","camera_overlay": "survisland:poisson_maquereau"},
+		"item_model": "survisland:poisson_maquereau",
+		"item_name": "{\"text\": \"Poisson Maquereau\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"poisson_maquereau": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_pagre": {
+		"id": "minecraft:command_block",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"equippable": {"slot": "head","camera_overlay": "survisland:poisson_pagre"},
+		"item_model": "survisland:poisson_pagre",
+		"item_name": "{\"text\": \"Poisson Pagre\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"poisson_pagre": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_papillon": {
+		"id": "minecraft:command_block",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"equippable": {"slot": "head","camera_overlay": "survisland:poisson_papillon"},
+		"item_model": "survisland:poisson_papillon",
+		"item_name": "{\"text\": \"Poisson Papillon\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"poisson_papillon": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_perroquet": {
+		"id": "minecraft:command_block",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"equippable": {"slot": "head","camera_overlay": "survisland:poisson_perroquet"},
+		"item_model": "survisland:poisson_perroquet",
+		"item_name": "{\"text\": \"Poisson Perroquet\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"poisson_perroquet": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_rascasse": {
+		"id": "minecraft:command_block",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"equippable": {"slot": "head","camera_overlay": "survisland:poisson_rascasse"},
+		"item_model": "survisland:poisson_rascasse",
+		"item_name": "{\"text\": \"Poisson Rascasse\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"poisson_rascasse": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_sardine": {
+		"id": "minecraft:command_block",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"equippable": {"slot": "head","camera_overlay": "survisland:poisson_sardine"},
+		"item_model": "survisland:poisson_sardine",
+		"item_name": "{\"text\": \"Poisson Sardine\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"poisson_sardine": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_sole": {
+		"id": "minecraft:command_block",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"equippable": {"slot": "head","camera_overlay": "survisland:poisson_sole"},
+		"item_model": "survisland:poisson_sole",
+		"item_name": "{\"text\": \"Poisson Sole\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"poisson_sole": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_thon": {
+		"id": "minecraft:command_block",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"equippable": {"slot": "head","camera_overlay": "survisland:poisson_thon"},
+		"item_model": "survisland:poisson_thon",
+		"item_name": "{\"text\": \"Poisson Thon\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"poisson_thon": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"logo_s01": {
 		"id": "minecraft:command_block",
 		"consumable": {},
