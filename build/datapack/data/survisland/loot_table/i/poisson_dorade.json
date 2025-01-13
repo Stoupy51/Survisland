@@ -22,7 +22,7 @@
 								],
 								"minecraft:equippable": {
 									"slot": "head",
-									"camera_overlay": "survisland:poisson_dorade"
+									"camera_overlay": "survisland:item/poisson_dorade"
 								},
 								"minecraft:item_model": "survisland:poisson_dorade",
 								"minecraft:item_name": "{\"text\": \"Poisson Dorade\", \"italic\": false, \"color\": \"white\"}",

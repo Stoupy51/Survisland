@@ -22,7 +22,7 @@
 								],
 								"minecraft:equippable": {
 									"slot": "head",
-									"camera_overlay": "survisland:poisson_capucin"
+									"camera_overlay": "survisland:item/poisson_capucin"
 								},
 								"minecraft:item_model": "survisland:poisson_capucin",
 								"minecraft:item_name": "{\"text\": \"Poisson Capucin\", \"italic\": false, \"color\": \"white\"}",

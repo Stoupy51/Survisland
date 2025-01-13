@@ -22,7 +22,7 @@
 								],
 								"minecraft:equippable": {
 									"slot": "head",
-									"camera_overlay": "survisland:poisson_cabillaud"
+									"camera_overlay": "survisland:item/poisson_cabillaud"
 								},
 								"minecraft:item_model": "survisland:poisson_cabillaud",
 								"minecraft:item_name": "{\"text\": \"Poisson Cabillaud\", \"italic\": false, \"color\": \"white\"}",

@@ -22,7 +22,7 @@
 								],
 								"minecraft:equippable": {
 									"slot": "head",
-									"camera_overlay": "survisland:poisson_chirurgien"
+									"camera_overlay": "survisland:item/poisson_chirurgien"
 								},
 								"minecraft:item_model": "survisland:poisson_chirurgien",
 								"minecraft:item_name": "{\"text\": \"Poisson Chirurgien\", \"italic\": false, \"color\": \"white\"}",

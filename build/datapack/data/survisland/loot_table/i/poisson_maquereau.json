@@ -22,7 +22,7 @@
 								],
 								"minecraft:equippable": {
 									"slot": "head",
-									"camera_overlay": "survisland:poisson_maquereau"
+									"camera_overlay": "survisland:item/poisson_maquereau"
 								},
 								"minecraft:item_model": "survisland:poisson_maquereau",
 								"minecraft:item_name": "{\"text\": \"Poisson Maquereau\", \"italic\": false, \"color\": \"white\"}",

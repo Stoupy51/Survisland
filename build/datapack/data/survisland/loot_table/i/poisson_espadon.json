@@ -22,7 +22,7 @@
 								],
 								"minecraft:equippable": {
 									"slot": "head",
-									"camera_overlay": "survisland:poisson_espadon"
+									"camera_overlay": "survisland:item/poisson_espadon"
 								},
 								"minecraft:item_model": "survisland:poisson_espadon",
 								"minecraft:item_name": "{\"text\": \"Poisson Espadon\", \"italic\": false, \"color\": \"white\"}",

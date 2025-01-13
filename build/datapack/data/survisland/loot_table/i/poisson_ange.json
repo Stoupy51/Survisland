@@ -22,7 +22,7 @@
 								],
 								"minecraft:equippable": {
 									"slot": "head",
-									"camera_overlay": "survisland:poisson_ange"
+									"camera_overlay": "survisland:item/poisson_ange"
 								},
 								"minecraft:item_model": "survisland:poisson_ange",
 								"minecraft:item_name": "{\"text\": \"Poisson Ange\", \"italic\": false, \"color\": \"white\"}",
