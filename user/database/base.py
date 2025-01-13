@@ -547,6 +547,16 @@ def main(config: dict) -> dict[str, dict]:
 	books: list[str] = [x.replace(".png","") for x in config['textures_files'] if "book_" in x]
 	for book in books:
 		database[book] = {"id": "minecraft:written_book"}
+
+	# Add edible colored fishs
+	fishs: list[str] = [x.replace(".png","") for x in config['textures_files'] if "poisson_" in x]
+	for fish in fishs:
+		database[fish] = {
+			"id": CUSTOM_ITEM_VANILLA, "consumable": {},
+			"food": {"nutrition": 4, "saturation": 2.4, "can_always_eat": True},
+			"lore": ['{"text":"Made by M4TOUW","color":"gold","italic":false}'],
+			"equippable": {"slot": "head", "camera_overlay":f"{ns}:{fish}"}
+		}
 	
 	# Add edible logos
 	for logo in config['textures_files']:
