@@ -22,7 +22,7 @@
 								],
 								"minecraft:equippable": {
 									"slot": "head",
-									"camera_overlay": "survisland:poisson_pagre"
+									"camera_overlay": "survisland:item/poisson_pagre"
 								},
 								"minecraft:item_model": "survisland:poisson_pagre",
 								"minecraft:item_name": "{\"text\": \"Poisson Pagre\", \"italic\": false, \"color\": \"white\"}",

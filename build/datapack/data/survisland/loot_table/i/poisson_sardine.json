@@ -22,7 +22,7 @@
 								],
 								"minecraft:equippable": {
 									"slot": "head",
-									"camera_overlay": "survisland:poisson_sardine"
+									"camera_overlay": "survisland:item/poisson_sardine"
 								},
 								"minecraft:item_model": "survisland:poisson_sardine",
 								"minecraft:item_name": "{\"text\": \"Poisson Sardine\", \"italic\": false, \"color\": \"white\"}",

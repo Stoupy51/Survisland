@@ -22,7 +22,7 @@
 								],
 								"minecraft:equippable": {
 									"slot": "head",
-									"camera_overlay": "survisland:poisson_thon"
+									"camera_overlay": "survisland:item/poisson_thon"
 								},
 								"minecraft:item_model": "survisland:poisson_thon",
 								"minecraft:item_name": "{\"text\": \"Poisson Thon\", \"italic\": false, \"color\": \"white\"}",

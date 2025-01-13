@@ -22,7 +22,7 @@
 								],
 								"minecraft:equippable": {
 									"slot": "head",
-									"camera_overlay": "survisland:poisson_fletan"
+									"camera_overlay": "survisland:item/poisson_fletan"
 								},
 								"minecraft:item_model": "survisland:poisson_fletan",
 								"minecraft:item_name": "{\"text\": \"Poisson Fletan\", \"italic\": false, \"color\": \"white\"}",

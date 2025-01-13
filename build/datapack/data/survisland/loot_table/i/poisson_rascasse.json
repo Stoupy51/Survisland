@@ -22,7 +22,7 @@
 								],
 								"minecraft:equippable": {
 									"slot": "head",
-									"camera_overlay": "survisland:poisson_rascasse"
+									"camera_overlay": "survisland:item/poisson_rascasse"
 								},
 								"minecraft:item_model": "survisland:poisson_rascasse",
 								"minecraft:item_name": "{\"text\": \"Poisson Rascasse\", \"italic\": false, \"color\": \"white\"}",

@@ -22,7 +22,7 @@
 								],
 								"minecraft:equippable": {
 									"slot": "head",
-									"camera_overlay": "survisland:poisson_sole"
+									"camera_overlay": "survisland:item/poisson_sole"
 								},
 								"minecraft:item_model": "survisland:poisson_sole",
 								"minecraft:item_name": "{\"text\": \"Poisson Sole\", \"italic\": false, \"color\": \"white\"}",
