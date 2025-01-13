@@ -555,7 +555,7 @@ def main(config: dict) -> dict[str, dict]:
 			"id": CUSTOM_ITEM_VANILLA, "consumable": {},
 			"food": {"nutrition": 4, "saturation": 2.4, "can_always_eat": True},
 			"lore": ['{"text":"Made by M4TOUW","color":"gold","italic":false}'],
-			"equippable": {"slot": "head", "camera_overlay":f"{ns}:{fish}"}
+			"equippable": {"slot": "head", "camera_overlay":f"{ns}:item/{fish}"}
 		}
 	
 	# Add edible logos
