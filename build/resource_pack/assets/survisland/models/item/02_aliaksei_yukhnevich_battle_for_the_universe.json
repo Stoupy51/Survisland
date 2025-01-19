@@ -1,0 +1,7 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "survisland:item/02_aliaksei_yukhnevich_battle_for_the_universe"
+	}
+}
+

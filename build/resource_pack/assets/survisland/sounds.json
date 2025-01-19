@@ -3,9 +3,9 @@
 		"category": "music",
 		"sounds": [{"name": "survisland:01_charges_from_the_sky","stream": true}]
 	},
-	"02_sv_david_vs_goliath": {
+	"02_aliaksei_yukhnevich_battle_for_the_universe": {
 		"category": "music",
-		"sounds": [{"name": "survisland:02_sv_david_vs_goliath","stream": true}]
+		"sounds": [{"name": "survisland:02_aliaksei_yukhnevich_battle_for_the_universe","stream": true}]
 	},
 	"03_crescent_battle": {
 		"category": "music",
@@ -19,13 +19,13 @@
 		"category": "music",
 		"sounds": [{"name": "survisland:05_extinction_report","stream": true}]
 	},
-	"06_sv_cayagan": {
+	"06_colin_root_blackout": {
 		"category": "music",
-		"sounds": [{"name": "survisland:06_sv_cayagan","stream": true}]
+		"sounds": [{"name": "survisland:06_colin_root_blackout","stream": true}]
 	},
-	"07_sv_waw": {
+	"07_aliaksei_yukhnevich_deliverance": {
 		"category": "music",
-		"sounds": [{"name": "survisland:07_sv_waw","stream": true}]
+		"sounds": [{"name": "survisland:07_aliaksei_yukhnevich_deliverance","stream": true}]
 	},
 	"08_battle_of_the_ocean": {
 		"category": "music",
@@ -43,13 +43,13 @@
 		"category": "music",
 		"sounds": [{"name": "survisland:11_live_to_see_tomorrow","stream": true}]
 	},
-	"12_born_to_own": {
+	"12_ivan_shpilevsky_the_time": {
 		"category": "music",
-		"sounds": [{"name": "survisland:12_born_to_own","stream": true}]
+		"sounds": [{"name": "survisland:12_ivan_shpilevsky_the_time","stream": true}]
 	},
-	"13_sacrifice": {
+	"13_nick_froud_breaking_sky": {
 		"category": "music",
-		"sounds": [{"name": "survisland:13_sacrifice","stream": true}]
+		"sounds": [{"name": "survisland:13_nick_froud_breaking_sky","stream": true}]
 	},
 	"14_where_is_your_god_now": {
 		"category": "music",
@@ -67,9 +67,9 @@
 		"category": "music",
 		"sounds": [{"name": "survisland:17_ghosts_hosts","stream": true}]
 	},
-	"18_the_time_has_come": {
+	"18_ragesound_vortex": {
 		"category": "music",
-		"sounds": [{"name": "survisland:18_the_time_has_come","stream": true}]
+		"sounds": [{"name": "survisland:18_ragesound_vortex","stream": true}]
 	},
 	"19_in_the_heart_of_the_stars": {
 		"category": "music",
@@ -79,17 +79,17 @@
 		"category": "music",
 		"sounds": [{"name": "survisland:20_last_hope","stream": true}]
 	},
-	"21_au_sv_kepler": {
+	"21_timur_haisyn_brutal_fervour": {
 		"category": "music",
-		"sounds": [{"name": "survisland:21_au_sv_kepler","stream": true}]
+		"sounds": [{"name": "survisland:21_timur_haisyn_brutal_fervour","stream": true}]
 	},
 	"22_au_sv_war_of_the_world": {
 		"category": "music",
 		"sounds": [{"name": "survisland:22_au_sv_war_of_the_world","stream": true}]
 	},
-	"23_apex_deity": {
+	"23_victor_cooper_windwalker": {
 		"category": "music",
-		"sounds": [{"name": "survisland:23_apex_deity","stream": true}]
+		"sounds": [{"name": "survisland:23_victor_cooper_windwalker","stream": true}]
 	},
 	"24_the_darkness_inside": {
 		"category": "music",
@@ -115,9 +115,9 @@
 		"category": "music",
 		"sounds": [{"name": "survisland:29_hold_the_line","stream": true}]
 	},
-	"30_legends_of_the_past": {
+	"30_vitalii_suzdin_beyond_the_mind": {
 		"category": "music",
-		"sounds": [{"name": "survisland:30_legends_of_the_past","stream": true}]
+		"sounds": [{"name": "survisland:30_vitalii_suzdin_beyond_the_mind","stream": true}]
 	},
 	"31_carnival_row": {
 		"category": "music",
