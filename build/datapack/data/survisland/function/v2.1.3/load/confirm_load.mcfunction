@@ -118,14 +118,24 @@ data modify storage survisland:items all.33_path_to_glory set value {"id": "mine
 data modify storage survisland:items all.34_perfect_chaos set value {"id": "minecraft:command_block","count": 1,"components": {"item_model": "survisland:34_perfect_chaos","custom_data": {"survisland": {"34_perfect_chaos": true},"smithed": {"dict": {"record": {"34_perfect_chaos": true}},"ignore": {"functionality": true,"crafting": true}}},"item_name": "{'text':'Music Disc', 'italic': false}","jukebox_playable": {"song": "survisland:34_perfect_chaos","show_in_tooltip": true},"max_stack_size": 1,"rarity": "rare","lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]}}
 data modify storage survisland:items all.35_we_are_vanguards set value {"id": "minecraft:command_block","count": 1,"components": {"item_model": "survisland:35_we_are_vanguards","custom_data": {"survisland": {"35_we_are_vanguards": true},"smithed": {"dict": {"record": {"35_we_are_vanguards": true}},"ignore": {"functionality": true,"crafting": true}}},"item_name": "{'text':'Music Disc', 'italic': false}","jukebox_playable": {"song": "survisland:35_we_are_vanguards","show_in_tooltip": true},"max_stack_size": 1,"rarity": "rare","lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]}}
 
+# Add objectives
 scoreboard objectives add survisland.id dummy
 scoreboard objectives add survisland.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
 scoreboard objectives add survisland.deathCount deathCount
 scoreboard objectives add survisland.cooldown dummy
 
+# Add common teams
+team add survisland.no_collision
+team modify survisland.no_collision collisionRule never
+
+# Set constants
 function survisland:set_constants
+
+# Set gamerules
 gamerule keepInventory true
 scoreboard players set #keepInventory survisland.data 0
+
+# Set some storage and forceload
 data modify storage survisland:main ScrollTexts set value []
 forceload add 0 0
 
