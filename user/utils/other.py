@@ -6,55 +6,65 @@ from python_datapack.utils.io import *
 
 # Generates trivial things in the datapack
 def main(config: dict) -> None:
-	namespace: str = config["namespace"]
+	ns: str = config["namespace"]
 	version: str = config["version"]
 	database: dict[str, dict] = config['database']
-	functions: str = f"{config['build_datapack']}/data/{namespace}/function"
-	advancements: str = f"{config['build_datapack']}/data/{namespace}/advancement"
+	functions: str = f"{config['build_datapack']}/data/{ns}/function"
+	advancements: str = f"{config['build_datapack']}/data/{ns}/advancement"
 
 	# Add additional objectives and gamerules to the load function
-	write_to_file(f"{functions}/v{version}/load/confirm_load.mcfunction", f"""
-scoreboard objectives add {namespace}.id dummy
-scoreboard objectives add {namespace}.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
-scoreboard objectives add {namespace}.deathCount deathCount
-scoreboard objectives add {namespace}.cooldown dummy
+	write_to_load_file(config, f"""
+# Add objectives
+scoreboard objectives add {ns}.id dummy
+scoreboard objectives add {ns}.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
+scoreboard objectives add {ns}.deathCount deathCount
+scoreboard objectives add {ns}.cooldown dummy
 
-function {namespace}:set_constants
+# Add common teams
+team add {ns}.no_collision
+team modify {ns}.no_collision collisionRule never
+
+# Set constants
+function {ns}:set_constants
+
+# Set gamerules
 gamerule keepInventory true
-scoreboard players set #keepInventory {namespace}.data 0
-data modify storage {namespace}:main ScrollTexts set value []
+scoreboard players set #keepInventory {ns}.data 0
+
+# Set some storage and forceload
+data modify storage {ns}:main ScrollTexts set value []
 forceload add 0 0
 
 ## Storage for easy tellraws
-#tellraw @a ["\\n",{{"nbt":"Survisland","storage":"{namespace}:main","interpret":true}},{{"text":" Souhaitez tous la bienvenue à "}},{{"selector":"@s","color":"aqua"}},{{"text":" !\\nIl est le "}},{{"score":{{"name":"#next_id","objective":"{namespace}.data"}},"color":"aqua"}},{{"text":"ème joueur a rejoindre !"}}]
-data modify storage {namespace}:main SurvislandSpec set value '[{{"text":"[SurvislandSpec]","color":"gray"}}]'
-data modify storage {namespace}:main SurvislandWarning set value '[{{"text":"[SurvislandWarning]","color":"gold"}}]'
-data modify storage {namespace}:main SurvislandRatio set value '[{{"text":"[SurvislandRatio]","color":"green"}}]'
-data modify storage {namespace}:main SurvislandError set value '[{{"text":"[SurvislandError]","color":"red"}}]'
-data modify storage {namespace}:main SurvislandHelp set value '[{{"text":"[","color":"dark_aqua"}},{{"text":"SurvislandHelp","color":"aqua"}},{{"text":"]","color":"dark_aqua"}}]'
-data modify storage {namespace}:main Survisland set value '[{{"text":"[","color":"dark_aqua"}},{{"text":"Survisland","color":"aqua"}},{{"text":"]","color":"dark_aqua"}}]'
+#tellraw @a ["\\n",{{"nbt":"Survisland","storage":"{ns}:main","interpret":true}},{{"text":" Souhaitez tous la bienvenue à "}},{{"selector":"@s","color":"aqua"}},{{"text":" !\\nIl est le "}},{{"score":{{"name":"#next_id","objective":"{ns}.data"}},"color":"aqua"}},{{"text":"ème joueur a rejoindre !"}}]
+data modify storage {ns}:main SurvislandSpec set value '[{{"text":"[SurvislandSpec]","color":"gray"}}]'
+data modify storage {ns}:main SurvislandWarning set value '[{{"text":"[SurvislandWarning]","color":"gold"}}]'
+data modify storage {ns}:main SurvislandRatio set value '[{{"text":"[SurvislandRatio]","color":"green"}}]'
+data modify storage {ns}:main SurvislandError set value '[{{"text":"[SurvislandError]","color":"red"}}]'
+data modify storage {ns}:main SurvislandHelp set value '[{{"text":"[","color":"dark_aqua"}},{{"text":"SurvislandHelp","color":"aqua"}},{{"text":"]","color":"dark_aqua"}}]'
+data modify storage {ns}:main Survisland set value '[{{"text":"[","color":"dark_aqua"}},{{"text":"Survisland","color":"aqua"}},{{"text":"]","color":"dark_aqua"}}]'
 """)
 	
 	# Tick function
 	write_to_file(f"{functions}/v{version}/tick.mcfunction", f"""
 # Custom Keep Inventory System
-execute as @a[scores={{{namespace}.deathCount=1..}}] at @s run function {namespace}:keep_inventory/player_died
+execute as @a[scores={{{ns}.deathCount=1..}}] at @s run function {ns}:keep_inventory/player_died
 
 # Moving Structure
-execute as @e[type=marker,tag={namespace}.moving_structure] at @s run function {namespace}:moving_structure/tick
+execute as @e[type=marker,tag={ns}.moving_structure] at @s run function {ns}:moving_structure/tick
 
 # Fart (BECAUSE FARTS ARE FUNNY XDDDDD LOL)
-execute as @a[tag={namespace}.can_fart,tag=!{namespace}.farted,predicate={namespace}:is_sneaking] at @s run function {namespace}:utils/fart
-tag @a[tag={namespace}.farted,predicate=!{namespace}:is_sneaking] remove {namespace}.farted
+execute as @a[tag={ns}.can_fart,tag=!{ns}.farted,predicate={ns}:is_sneaking] at @s run function {ns}:utils/fart
+tag @a[tag={ns}.farted,predicate=!{ns}:is_sneaking] remove {ns}.farted
 """)
 	
 	# Second function
 	write_to_file(f"{functions}/v{version}/second.mcfunction", f"""
 # Check if their marker is still there
-execute as @a run function {namespace}:player/check_marker
+execute as @a run function {ns}:player/check_marker
 
 # System pour les zones de gamemode adventure
-function {namespace}:adventure_zone/second
+function {ns}:adventure_zone/second
 
 # Disable smart ore generation from SimplEnergy
 scoreboard players set _IS_ENABLED smart_ore_generation.data 0
@@ -63,30 +73,30 @@ scoreboard players set _IS_ENABLED smart_ore_generation.data 0
 	# Minute function
 	write_to_file(f"{functions}/v{version}/minute.mcfunction", f"""
 # Timer
-scoreboard players set #second {namespace}.data 0
+scoreboard players set #second {ns}.data 0
 
 # Check if their marker is still there
-kill @e[type=marker,tag={namespace}.keep_inventory]
+kill @e[type=marker,tag={ns}.keep_inventory]
 """)
 	
 	# Right click
-	json_content: dict = {"criteria":{"requirement":{"trigger":"minecraft:tick","conditions":{"player":[{"condition":"minecraft:entity_scores","entity":"this","scores":{f"{namespace}.right_click":{"min":1}}}]}}},"rewards":{"function":f"{namespace}:utils/right_click"}}
+	json_content: dict = {"criteria":{"requirement":{"trigger":"minecraft:tick","conditions":{"player":[{"condition":"minecraft:entity_scores","entity":"this","scores":{f"{ns}.right_click":{"min":1}}}]}}},"rewards":{"function":f"{ns}:utils/right_click"}}
 	write_to_file(f"{advancements}/right_click.json", super_json_dump(json_content, max_level = -1))
 	write_to_file(f"{functions}/utils/right_click.mcfunction", f"""
 # Advancement revoke
-advancement revoke @s only {namespace}:right_click
+advancement revoke @s only {ns}:right_click
 
 # Switch case
-tag @s add {namespace}.temp
-scoreboard players set #success {namespace}.data 0
-execute if score #success {namespace}.data matches 0 store success score #success {namespace}.data if data entity @s SelectedItem.components{{"minecraft:item_model":"{database['parchemin']['item_model']}"}} run function {namespace}:parchemins/deploy_open
-execute if score #success {namespace}.data matches 0 store success score #success {namespace}.data if data entity @s SelectedItem.components{{"minecraft:item_model":"{database['deployed_parchemin']['item_model']}"}} run function {namespace}:parchemins/deploy_close
-execute if score #success {namespace}.data matches 0 store success score #success {namespace}.data if data entity @s SelectedItem.components."minecraft:custom_data".{namespace}.snuffer positioned ^ ^ ^2 as @p[gamemode=!spectator,tag=!{namespace}.temp,distance=..3] at @s run function {namespace}:utils/snuffer
-execute if score #success {namespace}.data matches 0 store success score #success {namespace}.data if data entity @s Inventory[{{Slot:-106b}}].components."minecraft:custom_data".{namespace}.snuffer positioned ^ ^ ^2 as @p[gamemode=!spectator,distance=..3] at @s run function {namespace}:utils/snuffer
+tag @s add {ns}.temp
+scoreboard players set #success {ns}.data 0
+execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s SelectedItem.components{{"minecraft:item_model":"{database['parchemin']['item_model']}"}} run function {ns}:parchemins/deploy_open
+execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s SelectedItem.components{{"minecraft:item_model":"{database['deployed_parchemin']['item_model']}"}} run function {ns}:parchemins/deploy_close
+execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s SelectedItem.components."minecraft:custom_data".{ns}.snuffer positioned ^ ^ ^2 as @p[gamemode=!spectator,tag=!{ns}.temp,distance=..3] at @s run function {ns}:utils/snuffer
+execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s Inventory[{{Slot:-106b}}].components."minecraft:custom_data".{ns}.snuffer positioned ^ ^ ^2 as @p[gamemode=!spectator,distance=..3] at @s run function {ns}:utils/snuffer
 
 # Reset score and tag
-scoreboard players reset @s {namespace}.right_click
-tag @s remove {namespace}.temp
+scoreboard players reset @s {ns}.right_click
+tag @s remove {ns}.temp
 """)
 	
 	# parchemins/_convert_to_scroll
@@ -95,8 +105,8 @@ tag @s remove {namespace}.temp
 	p_model: str = parchemin['item_model']
 	write_to_file(f"{functions}/parchemins/_convert_to_scroll.mcfunction", f"""
 # Replace the book by a scroll
-data modify storage {namespace}:main Item.id set value "{p_id}"
-data modify storage {namespace}:main Item.components."minecraft:item_model" set value "{p_model}"
+data modify storage {ns}:main Item.id set value "{p_id}"
+data modify storage {ns}:main Item.components."minecraft:item_model" set value "{p_model}"
 """)
 	
 	# advancements/inventory_changed
@@ -107,9 +117,9 @@ data modify storage {namespace}:main Item.components."minecraft:item_model" set 
 advancement revoke @s only survisland:inventory_changed
 
 # If pendent in left or right hand, run switch function
-scoreboard players set #success {namespace}.data 0
-execute store success score #success {namespace}.data if data entity @s SelectedItem.components{{"minecraft:item_model":"{pendent_held_model}"}} run function {namespace}:utils/pendent_switch
-execute if score #success {namespace}.data matches 0 if data entity @s Inventory[{{Slot:-106b}}].components{{"minecraft:item_model":"{pendent_model}"}} run function {namespace}:utils/pendent_switch
+scoreboard players set #success {ns}.data 0
+execute store success score #success {ns}.data if data entity @s SelectedItem.components{{"minecraft:item_model":"{pendent_held_model}"}} run function {ns}:utils/pendent_switch
+execute if score #success {ns}.data matches 0 if data entity @s Inventory[{{Slot:-106b}}].components{{"minecraft:item_model":"{pendent_model}"}} run function {ns}:utils/pendent_switch
 """)
 	
 	# utils/pendent_switch
