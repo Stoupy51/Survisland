@@ -139,6 +139,10 @@
 		"category": "music",
 		"sounds": [{"name": "survisland:35_we_are_vanguards","stream": true}]
 	},
+	"rat_dance": {
+		"category": "music",
+		"sounds": [{"name": "survisland:rat_dance","stream": true}]
+	},
 	"fart": {
 		"subtitle": "fart",
 		"sounds": ["survisland:fart"]
