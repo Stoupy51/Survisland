@@ -1,7 +1,7 @@
 
 #> survisland:utils/compteur_schedule
 #
-# @within	survisland:_compteur
+# @within	survisland:_compteur 2t
 #			survisland:utils/compteur_schedule 1s
 #
 
