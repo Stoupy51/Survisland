@@ -3,7 +3,7 @@
 from python_datapack.utils.database_helper import *
 
 # Constants
-NECKLACES: list[str] = ["necklace", "cursed_necklace"]
+NECKLACES: list[str] = ["necklace", "cursed_necklace", "dinosaur_necklace"]
 
 # Main function should return a database
 def main(config: dict, database: dict[str, dict]) -> None:
