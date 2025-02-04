@@ -6,7 +6,7 @@ from python_datapack.utils.io import *
 
 # Constants
 LABELS: list[str] = ["Confort", "Immunité", "Conseil"]
-TIMES: list[str] = ["dans 30 minutes", "dans 10 minutes", "dans 5 minutes", "maintenant"]
+TIMES: list[str] = ["dans 30 minutes", "dans 25 minutes", "dans 20 minutes", "dans 15 minutes", "dans 10 minutes", "dans 5 minutes", "maintenant"]
 
 # Generates pop-ups
 def main(config: dict) -> None:
@@ -23,29 +23,29 @@ def main(config: dict) -> None:
 		all_paths.append(f"{namespace}:pop_ups/{cleaned}")
 
 		adv: dict = {
-	"display": {
-		"icon": {
-			"id": "minecraft:stone",
-			"components": {
-				"minecraft:item_model": "survisland:icon"
+			"display": {
+				"icon": {
+					"id": "minecraft:stone",
+					"components": {
+						"minecraft:item_model": "survisland:icon"
+					}
+				},
+				"title": {"text":f"{label} {remaining_time}","color":"aqua"},
+				"description": "",
+				"frame": "task",
+				"show_toast": True,
+				"announce_to_chat": False,
+				"hidden": True,
+			},
+			"criteria": {
+				"requirement": {
+					"trigger": "minecraft:impossible"
+				}
+			},
+			"rewards": {
+				"function": "survisland:advancements/pop_ups"
 			}
-		},
-		"title": {"text":f"{label} {remaining_time}","color":"aqua"},
-		"description": "",
-		"frame": "task",
-		"show_toast": True,
-		"announce_to_chat": False,
-		"hidden": True,
-	},
-	"criteria": {
-		"requirement": {
-			"trigger": "minecraft:impossible"
 		}
-	},
-	"rewards": {
-		"function": "survisland:advancements/pop_ups"
-	}
-}
 		# Write the advancement
 		write_to_file(advancement_path, super_json_dump(adv))
 
