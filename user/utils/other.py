@@ -110,8 +110,8 @@ data modify storage {ns}:main Item.components."minecraft:item_model" set value "
 """)
 	
 	# advancements/inventory_changed
-	pendent_model: str = database['pendent']['item_model']
-	pendent_held_model: str = database['pendent_held']['item_model']
+	pendent_model: str = database["pendent"]["item_model"]
+	pendent_held_model: str = database["pendent_held"]["item_model"]
 	write_to_file(f"{functions}/advancements/inventory_changed.mcfunction", f"""
 # Advancement revoke
 advancement revoke @s only survisland:inventory_changed
@@ -125,6 +125,10 @@ execute if score #success {ns}.data matches 0 if data entity @s Inventory[{{Slot
 scoreboard players set #success {ns}.data 0
 execute if score #success {ns}.data matches 0 if items entity @s container.* *[custom_data~{{"survisland":{{"pendent":true}}}}] run scoreboard players set #success {ns}.data 1
 execute if score #success {ns}.data matches 0 if items entity @s container.* *[custom_data~{{"survisland":{{"pendent_held":true}}}}] run scoreboard players set #success {ns}.data 1
+execute if score #success {ns}.data matches 0 if items entity @s player.cursor *[custom_data~{{"survisland":{{"pendent":true}}}}] run scoreboard players set #success {ns}.data 1
+execute if score #success {ns}.data matches 0 if items entity @s player.cursor *[custom_data~{{"survisland":{{"pendent_held":true}}}}] run scoreboard players set #success {ns}.data 1
+execute if score #success {ns}.data matches 0 if data entity @s Inventory[].components."minecraft:custom_data".survisland.pendent run scoreboard players set #success {ns}.data 1
+execute if score #success {ns}.data matches 0 if data entity @s Inventory[].components."minecraft:custom_data".survisland.pendent_held run scoreboard players set #success {ns}.data 1
 execute if score #success {ns}.data matches 1 unless entity @s[tag={ns}.has_idol] run tellraw @a[gamemode=!adventure,gamemode=!survival] ["\\n",{{"nbt":"SurvislandSpec","storage":"{ns}:main","interpret":true}},{{"text":" Le joueur "}},{{"selector":"@s","color":"aqua"}},{{"text":" vient de récupérer un idol dans son inventaire !"}}]
 execute if score #success {ns}.data matches 1 run tag @s add {ns}.has_idol
 execute if score #success {ns}.data matches 0 run tag @s remove {ns}.has_idol

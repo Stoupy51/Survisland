@@ -623,6 +623,15 @@
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"survisland": {"cursed_necklace": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
+	"dinosaur_necklace": {
+		"id": "minecraft:command_block",
+		"max_stack_size": 1,
+		"equippable": {"slot": "chest","asset_id": "survisland:dinosaur_necklace","damage_on_hurt": false},
+		"item_model": "survisland:dinosaur_necklace",
+		"item_name": "{\"text\": \"Dinosaur Necklace\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"survisland": {"dinosaur_necklace": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"01_charges_from_the_sky": {
 		"id": "minecraft:command_block",
 		"custom_data": {"survisland": {"01_charges_from_the_sky": true},"smithed": {"dict": {"record": {"01_charges_from_the_sky": true}},"ignore": {"functionality": true,"crafting": true}}},
@@ -971,6 +980,16 @@
 		"max_stack_size": 1,
 		"rarity": "rare",
 		"item_model": "survisland:35_we_are_vanguards",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
+	},
+	"rat_dance": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"rat_dance": true},"smithed": {"dict": {"record": {"rat_dance": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": "{'text':'Music Disc', 'italic': false}",
+		"jukebox_playable": {"song": "survisland:rat_dance","show_in_tooltip": true},
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:rat_dance",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	}
 }
