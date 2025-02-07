@@ -122,6 +122,35 @@
 		"item_name": "{\"text\": \"Mask Re2\", \"italic\": false, \"color\": \"white\"}",
 		"custom_data": {"survisland": {"mask_re2": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
+	"iron_bowl": {
+		"id": "minecraft:command_block",
+		"lore": ["{\"text\":\"Made by Emilou\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"item_model": "survisland:iron_bowl",
+		"item_name": "{\"text\": \"Iron Bowl\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"iron_bowl": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"rice": {
+		"id": "minecraft:command_block",
+		"lore": ["{\"text\":\"Made by Emilou\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"max_stack_size": 1,
+		"consumable": {"on_consume_effects": [{"type": "minecraft:apply_effects","effects": [{"duration": 100,"id": "minecraft:poison","show_icon": true}],"probability": 0.6}]},
+		"food": {"nutrition": 2,"saturation": 1.2},
+		"item_model": "survisland:rice",
+		"item_name": "{\"text\": \"Rice\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"rice": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"use_remainder": {"count": 1,"id": "minecraft:command_block","components": {"item_name": "{\"text\": \"Iron Bowl\", \"italic\": false, \"color\": \"white\"}","item_model": "survisland:iron_bowl","lore": ["{\"text\":\"Made by Emilou\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]}}
+	},
+	"cooked_rice": {
+		"id": "minecraft:command_block",
+		"lore": ["{\"text\":\"Made by Emilou\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"max_stack_size": 1,
+		"food": {"nutrition": 20,"saturation": 12},
+		"result_of_crafting": [{"type": "smelting","result_count": 1,"cookingtime": 200,"experience": 1.0,"group": "riz","category": "food","ingredient": {"components": {"minecraft:custom_data": {"survisland": {"rice": true}}}}}],
+		"item_model": "survisland:cooked_rice",
+		"item_name": "{\"text\": \"Cooked Rice\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"cooked_rice": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"use_remainder": {"count": 1,"id": "minecraft:command_block","components": {"item_name": "{\"text\": \"Iron Bowl\", \"italic\": false, \"color\": \"white\"}","item_model": "survisland:iron_bowl","lore": ["{\"text\":\"Made by Emilou\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]}}
+	},
 	"book_advanced": {
 		"id": "minecraft:written_book",
 		"item_model": "survisland:book_advanced",
@@ -642,16 +671,6 @@
 		"item_model": "survisland:01_charges_from_the_sky",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
-	"02_aliaksei_yukhnevich_battle_for_the_universe": {
-		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"02_aliaksei_yukhnevich_battle_for_the_universe": true},"smithed": {"dict": {"record": {"02_aliaksei_yukhnevich_battle_for_the_universe": true}},"ignore": {"functionality": true,"crafting": true}}},
-		"item_name": "{'text':'Music Disc', 'italic': false}",
-		"jukebox_playable": {"song": "survisland:02_aliaksei_yukhnevich_battle_for_the_universe","show_in_tooltip": true},
-		"max_stack_size": 1,
-		"rarity": "rare",
-		"item_model": "survisland:02_aliaksei_yukhnevich_battle_for_the_universe",
-		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
-	},
 	"03_crescent_battle": {
 		"id": "minecraft:command_block",
 		"custom_data": {"survisland": {"03_crescent_battle": true},"smithed": {"dict": {"record": {"03_crescent_battle": true}},"ignore": {"functionality": true,"crafting": true}}},
@@ -762,14 +781,14 @@
 		"item_model": "survisland:13_nick_froud_breaking_sky",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
-	"14_where_is_your_god_now": {
+	"14_es_close_combat_fredrik_ekstrom": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"14_where_is_your_god_now": true},"smithed": {"dict": {"record": {"14_where_is_your_god_now": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"14_es_close_combat_fredrik_ekstrom": true},"smithed": {"dict": {"record": {"14_es_close_combat_fredrik_ekstrom": true}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": "{'text':'Music Disc', 'italic': false}",
-		"jukebox_playable": {"song": "survisland:14_where_is_your_god_now","show_in_tooltip": true},
+		"jukebox_playable": {"song": "survisland:14_es_close_combat_fredrik_ekstrom","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"item_model": "survisland:14_where_is_your_god_now",
+		"item_model": "survisland:14_es_close_combat_fredrik_ekstrom",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"15_the_ritual": {
@@ -792,14 +811,14 @@
 		"item_model": "survisland:16_resolute",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
-	"17_ghosts_hosts": {
+	"17_es_nevertheless_she_persisted_bonnie_grace": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"17_ghosts_hosts": true},"smithed": {"dict": {"record": {"17_ghosts_hosts": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"17_es_nevertheless_she_persisted_bonnie_grace": true},"smithed": {"dict": {"record": {"17_es_nevertheless_she_persisted_bonnie_grace": true}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": "{'text':'Music Disc', 'italic': false}",
-		"jukebox_playable": {"song": "survisland:17_ghosts_hosts","show_in_tooltip": true},
+		"jukebox_playable": {"song": "survisland:17_es_nevertheless_she_persisted_bonnie_grace","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"item_model": "survisland:17_ghosts_hosts",
+		"item_model": "survisland:17_es_nevertheless_she_persisted_bonnie_grace",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"18_ragesound_vortex": {
@@ -822,6 +841,16 @@
 		"item_model": "survisland:19_in_the_heart_of_the_stars",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
+	"2_es_clash_bonnie_grace": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"2_es_clash_bonnie_grace": true},"smithed": {"dict": {"record": {"2_es_clash_bonnie_grace": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": "{'text':'Music Disc', 'italic': false}",
+		"jukebox_playable": {"song": "survisland:2_es_clash_bonnie_grace","show_in_tooltip": true},
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:2_es_clash_bonnie_grace",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
+	},
 	"20_last_hope": {
 		"id": "minecraft:command_block",
 		"custom_data": {"survisland": {"20_last_hope": true},"smithed": {"dict": {"record": {"20_last_hope": true}},"ignore": {"functionality": true,"crafting": true}}},
@@ -842,14 +871,14 @@
 		"item_model": "survisland:21_timur_haisyn_brutal_fervour",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
-	"22_au_sv_war_of_the_world": {
+	"22_es_our_last_stand_formantx": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"22_au_sv_war_of_the_world": true},"smithed": {"dict": {"record": {"22_au_sv_war_of_the_world": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"22_es_our_last_stand_formantx": true},"smithed": {"dict": {"record": {"22_es_our_last_stand_formantx": true}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": "{'text':'Music Disc', 'italic': false}",
-		"jukebox_playable": {"song": "survisland:22_au_sv_war_of_the_world","show_in_tooltip": true},
+		"jukebox_playable": {"song": "survisland:22_es_our_last_stand_formantx","show_in_tooltip": true},
 		"max_stack_size": 1,
 		"rarity": "rare",
-		"item_model": "survisland:22_au_sv_war_of_the_world",
+		"item_model": "survisland:22_es_our_last_stand_formantx",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"23_victor_cooper_windwalker": {
