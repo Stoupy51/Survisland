@@ -3,10 +3,6 @@
 		"category": "music",
 		"sounds": [{"name": "survisland:01_charges_from_the_sky","stream": true}]
 	},
-	"02_aliaksei_yukhnevich_battle_for_the_universe": {
-		"category": "music",
-		"sounds": [{"name": "survisland:02_aliaksei_yukhnevich_battle_for_the_universe","stream": true}]
-	},
 	"03_crescent_battle": {
 		"category": "music",
 		"sounds": [{"name": "survisland:03_crescent_battle","stream": true}]
@@ -51,9 +47,9 @@
 		"category": "music",
 		"sounds": [{"name": "survisland:13_nick_froud_breaking_sky","stream": true}]
 	},
-	"14_where_is_your_god_now": {
+	"14_es_close_combat_fredrik_ekstrom": {
 		"category": "music",
-		"sounds": [{"name": "survisland:14_where_is_your_god_now","stream": true}]
+		"sounds": [{"name": "survisland:14_es_close_combat_fredrik_ekstrom","stream": true}]
 	},
 	"15_the_ritual": {
 		"category": "music",
@@ -63,9 +59,9 @@
 		"category": "music",
 		"sounds": [{"name": "survisland:16_resolute","stream": true}]
 	},
-	"17_ghosts_hosts": {
+	"17_es_nevertheless_she_persisted_bonnie_grace": {
 		"category": "music",
-		"sounds": [{"name": "survisland:17_ghosts_hosts","stream": true}]
+		"sounds": [{"name": "survisland:17_es_nevertheless_she_persisted_bonnie_grace","stream": true}]
 	},
 	"18_ragesound_vortex": {
 		"category": "music",
@@ -75,6 +71,10 @@
 		"category": "music",
 		"sounds": [{"name": "survisland:19_in_the_heart_of_the_stars","stream": true}]
 	},
+	"2_es_clash_bonnie_grace": {
+		"category": "music",
+		"sounds": [{"name": "survisland:2_es_clash_bonnie_grace","stream": true}]
+	},
 	"20_last_hope": {
 		"category": "music",
 		"sounds": [{"name": "survisland:20_last_hope","stream": true}]
@@ -83,9 +83,9 @@
 		"category": "music",
 		"sounds": [{"name": "survisland:21_timur_haisyn_brutal_fervour","stream": true}]
 	},
-	"22_au_sv_war_of_the_world": {
+	"22_es_our_last_stand_formantx": {
 		"category": "music",
-		"sounds": [{"name": "survisland:22_au_sv_war_of_the_world","stream": true}]
+		"sounds": [{"name": "survisland:22_es_our_last_stand_formantx","stream": true}]
 	},
 	"23_victor_cooper_windwalker": {
 		"category": "music",
