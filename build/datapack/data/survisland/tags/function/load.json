@@ -1,5 +1,9 @@
 {
 	"values": [
+		{
+			"id": "#survisland:dependencies",
+			"required": false
+		},
 		"#survisland:enumerate",
 		"#survisland:resolve"
 	]

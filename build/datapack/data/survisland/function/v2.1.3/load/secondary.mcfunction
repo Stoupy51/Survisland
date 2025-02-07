@@ -8,6 +8,7 @@
 scoreboard objectives add survisland.data dummy
 tag Stoupy51 add convention.debug
 
-# Confirm load
-function survisland:v2.1.3/load/confirm_load
+# Check dependencies and wait for a player to connect (to get server version)
+function survisland:v2.1.3/load/check_dependencies
+function survisland:v2.1.3/load/valid_dependencies
 

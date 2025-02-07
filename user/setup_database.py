@@ -23,6 +23,19 @@ def main(config: dict) -> dict[str, dict]:
 	add_smithed_ignore_vanilla_behaviours_convention(database)
 	print()
 
+	# Remaining data
+	iron_bowl: dict = database["iron_bowl"]
+	for rice in ["rice", "cooked_rice"]:
+		database[rice]["use_remainder"] = {
+			"count": 1,
+			"id": CUSTOM_ITEM_VANILLA,
+			"components": {
+				"item_name": iron_bowl["item_name"],
+				"item_model": iron_bowl["item_model"],
+				"lore": iron_bowl["lore"]
+			}
+		}
+
 	# Return database
 	return database
 
