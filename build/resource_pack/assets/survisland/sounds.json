@@ -3,6 +3,10 @@
 		"category": "music",
 		"sounds": [{"name": "survisland:01_charges_from_the_sky","stream": true}]
 	},
+	"02_es_clash_bonnie_grace": {
+		"category": "music",
+		"sounds": [{"name": "survisland:02_es_clash_bonnie_grace","stream": true}]
+	},
 	"03_crescent_battle": {
 		"category": "music",
 		"sounds": [{"name": "survisland:03_crescent_battle","stream": true}]
@@ -70,10 +74,6 @@
 	"19_in_the_heart_of_the_stars": {
 		"category": "music",
 		"sounds": [{"name": "survisland:19_in_the_heart_of_the_stars","stream": true}]
-	},
-	"2_es_clash_bonnie_grace": {
-		"category": "music",
-		"sounds": [{"name": "survisland:2_es_clash_bonnie_grace","stream": true}]
 	},
 	"20_last_hope": {
 		"category": "music",
