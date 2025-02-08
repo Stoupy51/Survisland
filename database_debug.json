@@ -671,6 +671,16 @@
 		"item_model": "survisland:01_charges_from_the_sky",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
+	"02_es_clash_bonnie_grace": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"02_es_clash_bonnie_grace": true},"smithed": {"dict": {"record": {"02_es_clash_bonnie_grace": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": "{'text':'Music Disc', 'italic': false}",
+		"jukebox_playable": {"song": "survisland:02_es_clash_bonnie_grace","show_in_tooltip": true},
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:02_es_clash_bonnie_grace",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
+	},
 	"03_crescent_battle": {
 		"id": "minecraft:command_block",
 		"custom_data": {"survisland": {"03_crescent_battle": true},"smithed": {"dict": {"record": {"03_crescent_battle": true}},"ignore": {"functionality": true,"crafting": true}}},
@@ -839,16 +849,6 @@
 		"max_stack_size": 1,
 		"rarity": "rare",
 		"item_model": "survisland:19_in_the_heart_of_the_stars",
-		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
-	},
-	"2_es_clash_bonnie_grace": {
-		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"2_es_clash_bonnie_grace": true},"smithed": {"dict": {"record": {"2_es_clash_bonnie_grace": true}},"ignore": {"functionality": true,"crafting": true}}},
-		"item_name": "{'text':'Music Disc', 'italic': false}",
-		"jukebox_playable": {"song": "survisland:2_es_clash_bonnie_grace","show_in_tooltip": true},
-		"max_stack_size": 1,
-		"rarity": "rare",
-		"item_model": "survisland:2_es_clash_bonnie_grace",
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]
 	},
 	"20_last_hope": {
