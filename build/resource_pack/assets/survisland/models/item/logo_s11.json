@@ -1,5 +1,5 @@
 {
-	"parent": "item/generated",
+	"parent": "minecraft:item/apple",
 	"textures": {
 		"layer0": "survisland:item/logo_s11"
 	}

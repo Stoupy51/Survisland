@@ -5,7 +5,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:command_block",
+					"name": "minecraft:apple",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
