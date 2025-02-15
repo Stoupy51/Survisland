@@ -661,6 +661,138 @@
 		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"custom_data": {"survisland": {"dinosaur_necklace": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
+	"astral_powder": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:astral_powder",
+		"item_name": "{\"text\": \"Astral Powder\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"survisland": {"astral_powder": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"blood": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:blood",
+		"item_name": "{\"text\": \"Blood\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"survisland": {"blood": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"blue_star": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:blue_star",
+		"item_name": "{\"text\": \"Blue Star\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"survisland": {"blue_star": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"cyan_crystal": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:cyan_crystal",
+		"item_name": "{\"text\": \"Cyan Crystal\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"survisland": {"cyan_crystal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"diamond_meteorite": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:diamond_meteorite",
+		"item_name": "{\"text\": \"Diamond Meteorite\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"survisland": {"diamond_meteorite": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"emerald_meteorite": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:emerald_meteorite",
+		"item_name": "{\"text\": \"Emerald Meteorite\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"survisland": {"emerald_meteorite": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"green_crystal": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:green_crystal",
+		"item_name": "{\"text\": \"Green Crystal\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"survisland": {"green_crystal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"iron_meteorite": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:iron_meteorite",
+		"item_name": "{\"text\": \"Iron Meteorite\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"survisland": {"iron_meteorite": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"letter": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:letter",
+		"item_name": "{\"text\": \"Letter\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"survisland": {"letter": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"life_crystal": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:life_crystal",
+		"item_name": "{\"text\": \"Life Crystal\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"survisland": {"life_crystal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"lunar_compass": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:lunar_compass",
+		"item_name": "{\"text\": \"Lunar Compass\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"survisland": {"lunar_compass": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"purple_crystal": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:purple_crystal",
+		"item_name": "{\"text\": \"Purple Crystal\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"survisland": {"purple_crystal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"sandwich": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:sandwich",
+		"item_name": "{\"text\": \"Sandwich\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"survisland": {"sandwich": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"yellow_crystal": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:yellow_crystal",
+		"item_name": "{\"text\": \"Yellow Crystal\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"survisland": {"yellow_crystal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"zinc_meteorite": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:zinc_meteorite",
+		"item_name": "{\"text\": \"Zinc Meteorite\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"survisland": {"zinc_meteorite": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"gold_fish": {
+		"id": "minecraft:golden_apple",
+		"item_model": "survisland:gold_fish",
+		"item_name": "{\"text\": \"Gold Fish\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"survisland": {"gold_fish": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"horns": {
+		"id": "minecraft:command_block",
+		"max_stack_size": 1,
+		"equippable": {"slot": "head"},
+		"override_model": {"credit": "Made with Blockbench","textures": {"0": "survisland:item/horns","particle": "survisland:item/horns"},"elements": [{"from": [1,0,6],"to": [5,4,10],"rotation": {"angle": 22.5,"axis": "z","origin": [1,0,6]},"faces": {"north": {"uv": [12,0,13,1],"texture": "#0"},"east": {"uv": [12,0,13,1],"texture": "#0"},"south": {"uv": [12,0,13,1],"texture": "#0"},"west": {"uv": [12,0,13,1],"texture": "#0"},"up": {"uv": [12,0,13,1],"texture": "#0"},"down": {"uv": [12,0,13,1],"texture": "#0"}}},{"from": [0,4,6.5],"to": [3,7,9.5],"rotation": {"angle": 0,"axis": "z","origin": [0,4,7]},"faces": {"north": {"uv": [13,3,16,0],"texture": "#0"},"east": {"uv": [13,3,16,0],"texture": "#0"},"south": {"uv": [13,3,16,0],"texture": "#0"},"west": {"uv": [13,3,16,0],"texture": "#0"},"up": {"uv": [13,3,14,2],"texture": "#0"},"down": {"uv": [13,3,16,0],"texture": "#0"}}},{"from": [0,7,7],"to": [2,10,9],"rotation": {"angle": -22.5,"axis": "z","origin": [0,7,6]},"faces": {"north": {"uv": [11,7,13,4],"texture": "#0"},"east": {"uv": [11,7,13,4],"texture": "#0"},"south": {"uv": [11,7,13,4],"texture": "#0"},"west": {"uv": [11,7,13,4],"texture": "#0"},"up": {"uv": [11,7,12,6],"texture": "#0"},"down": {"uv": [11,7,13,4],"texture": "#0"}}},{"from": [1,9,7.1],"to": [2.5,12,8.9],"rotation": {"angle": -22.5,"axis": "z","origin": [1,9,6]},"faces": {"north": {"uv": [4,10,6,7],"texture": "#0"},"east": {"uv": [4,10,6,7],"texture": "#0"},"south": {"uv": [4,10,6,7],"texture": "#0"},"west": {"uv": [4,10,6,7],"texture": "#0"},"up": {"uv": [4,10,5,9],"texture": "#0"},"down": {"uv": [4,10,6,7],"texture": "#0"}}},{"from": [2,11,7.5],"to": [3,14,8.5],"rotation": {"angle": -22.5,"axis": "z","origin": [2,11,6]},"faces": {"north": {"uv": [5,13,6,10],"texture": "#0"},"east": {"uv": [5,13,6,10],"texture": "#0"},"south": {"uv": [5,13,6,10],"texture": "#0"},"west": {"uv": [5,13,6,10],"texture": "#0"},"up": {"uv": [5,13,6,12],"texture": "#0"},"down": {"uv": [5,13,6,10],"texture": "#0"}}},{"from": [3,13,7.6],"to": [3.8,15,8.4],"rotation": {"angle": 0,"axis": "z","origin": [3,13,6]},"faces": {"north": {"uv": [12,14,13,12],"texture": "#0"},"east": {"uv": [12,14,13,12],"texture": "#0"},"south": {"uv": [12,14,13,12],"texture": "#0"},"west": {"uv": [12,14,13,12],"texture": "#0"},"up": {"uv": [12,14,13,13],"texture": "#0"},"down": {"uv": [12,14,13,12],"texture": "#0"}}},{"from": [3,14.5,7.75],"to": [3.5,16.5,8.25],"rotation": {"angle": 22.5,"axis": "z","origin": [3,15,6]},"faces": {"north": {"uv": [3,16,4,14],"texture": "#0"},"east": {"uv": [3,16,4,14],"texture": "#0"},"south": {"uv": [3,16,4,14],"texture": "#0"},"west": {"uv": [3,16,4,14],"texture": "#0"},"up": {"uv": [3,16,4,15],"texture": "#0"},"down": {"uv": [3,16,4,14],"texture": "#0"}}},{"from": [11,0,6],"to": [15,4,10],"rotation": {"angle": -22.5,"axis": "z","origin": [15,0,6]},"faces": {"north": {"uv": [13,0,12,1],"texture": "#0"},"east": {"uv": [13,0,12,1],"texture": "#0"},"south": {"uv": [13,0,12,1],"texture": "#0"},"west": {"uv": [13,0,12,1],"texture": "#0"},"up": {"uv": [13,0,12,1],"texture": "#0"},"down": {"uv": [13,0,12,1],"texture": "#0"}}},{"from": [13,4,6.5],"to": [16,7,9.5],"rotation": {"angle": 0,"axis": "z","origin": [16,4,7]},"faces": {"north": {"uv": [16,3,13,0],"texture": "#0"},"east": {"uv": [16,3,13,0],"texture": "#0"},"south": {"uv": [16,3,13,0],"texture": "#0"},"west": {"uv": [16,3,13,0],"texture": "#0"},"up": {"uv": [14,3,13,2],"texture": "#0"},"down": {"uv": [16,3,13,0],"texture": "#0"}}},{"from": [14,7,7],"to": [16,10,9],"rotation": {"angle": 22.5,"axis": "z","origin": [16,7,6]},"faces": {"north": {"uv": [13,7,11,4],"texture": "#0"},"east": {"uv": [13,7,11,4],"texture": "#0"},"south": {"uv": [13,7,11,4],"texture": "#0"},"west": {"uv": [13,7,11,4],"texture": "#0"},"up": {"uv": [12,7,11,6],"texture": "#0"},"down": {"uv": [13,7,11,4],"texture": "#0"}}},{"from": [13.5,9,7.1],"to": [15,12,8.9],"rotation": {"angle": 22.5,"axis": "z","origin": [15,9,6]},"faces": {"north": {"uv": [6,10,4,7],"texture": "#0"},"east": {"uv": [6,10,4,7],"texture": "#0"},"south": {"uv": [6,10,4,7],"texture": "#0"},"west": {"uv": [6,10,4,7],"texture": "#0"},"up": {"uv": [5,10,4,9],"texture": "#0"},"down": {"uv": [6,10,4,7],"texture": "#0"}}},{"from": [13,11,7.5],"to": [14,14,8.5],"rotation": {"angle": 22.5,"axis": "z","origin": [14,11,6]},"faces": {"north": {"uv": [6,13,5,10],"texture": "#0"},"east": {"uv": [6,13,5,10],"texture": "#0"},"south": {"uv": [6,13,5,10],"texture": "#0"},"west": {"uv": [6,13,5,10],"texture": "#0"},"up": {"uv": [6,13,5,12],"texture": "#0"},"down": {"uv": [6,13,5,10],"texture": "#0"}}},{"from": [12.2,13,7.6],"to": [13,15,8.4],"rotation": {"angle": 0,"axis": "z","origin": [13,13,6]},"faces": {"north": {"uv": [13,14,12,12],"texture": "#0"},"east": {"uv": [13,14,12,12],"texture": "#0"},"south": {"uv": [13,14,12,12],"texture": "#0"},"west": {"uv": [13,14,12,12],"texture": "#0"},"up": {"uv": [13,14,12,13],"texture": "#0"},"down": {"uv": [13,14,12,12],"texture": "#0"}}},{"from": [12.5,14.5,7.75],"to": [13,16.5,8.25],"rotation": {"angle": -22.5,"axis": "z","origin": [13,15,6]},"faces": {"north": {"uv": [4,16,3,14],"texture": "#0"},"east": {"uv": [4,16,3,14],"texture": "#0"},"south": {"uv": [4,16,3,14],"texture": "#0"},"west": {"uv": [4,16,3,14],"texture": "#0"},"up": {"uv": [4,16,3,15],"texture": "#0"},"down": {"uv": [4,16,3,14],"texture": "#0"}}}],"display": {"thirdperson_righthand": {"translation": [-6,0,0]},"thirdperson_lefthand": {"translation": [-6,0,0]},"firstperson_righthand": {"rotation": [0,-45,0],"translation": [0,5,-4.75]},"firstperson_lefthand": {"rotation": [0,-45,0],"translation": [0,5,-4.75]},"gui": {"scale": [0.9,0.9,0.9]},"head": {"translation": [0,10,-2.5]}},"groups": [{"name": "horn","origin": [1,0,0],"color": 0,"children": [0,1,2,3,4,5,6]},{"name": "horn","origin": [15,0,0],"color": 0,"children": [7,8,9,10,11,12,13]}]},
+		"item_model": "survisland:horns",
+		"item_name": "{\"text\": \"Horns\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"survisland": {"horns": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"small_horns": {
+		"id": "minecraft:command_block",
+		"max_stack_size": 1,
+		"equippable": {"slot": "head"},
+		"override_model": {"credit": "Made with Blockbench","parent": "survisland:item/horns","textures": {"0": "survisland:item/horns","particle": "survisland:item/horns"},"display": {"head": {"translation": [0,10,-4],"scale": [0.75,0.75,0.75]}}},
+		"item_model": "survisland:small_horns",
+		"item_name": "{\"text\": \"Small Horns\", \"italic\": false, \"color\": \"white\"}",
+		"lore": ["[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"custom_data": {"survisland": {"small_horns": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"01_charges_from_the_sky": {
 		"id": "minecraft:command_block",
 		"custom_data": {"survisland": {"01_charges_from_the_sky": true},"smithed": {"dict": {"record": {"01_charges_from_the_sky": true}},"ignore": {"functionality": true,"crafting": true}}},
