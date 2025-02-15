@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:item/golden_apple",
+	"textures": {
+		"layer0": "survisland:item/gold_fish"
+	}
+}
+
