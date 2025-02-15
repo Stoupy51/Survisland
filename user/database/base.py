@@ -552,7 +552,7 @@ def main(config: dict) -> dict[str, dict]:
 			"lore": ['{"text":"Made by Emilou","color":"gold","italic":false}'],
 		},
 		"rice": {
-			"id": CUSTOM_ITEM_VANILLA,
+			"id": "minecraft:apple",
 			"lore": ['{"text":"Made by Emilou","color":"gold","italic":false}'],
 			"max_stack_size": 1,
 			"consumable": {
@@ -565,9 +565,10 @@ def main(config: dict) -> dict[str, dict]:
 			"food": {"nutrition": 2,"saturation": 1.2}
 		},
 		"cooked_rice": {
-			"id": CUSTOM_ITEM_VANILLA,
+			"id": "minecraft:apple",
 			"lore": ['{"text":"Made by Emilou","color":"gold","italic":false}'],
 			"max_stack_size": 1,
+			"consumable": {},
 			"food": {"nutrition": 20,"saturation": 12},
 			RESULT_OF_CRAFTING: [
 				{"type":"smelting","result_count":1,"cookingtime":200,"experience":1.0,"group":"riz","category":"food","ingredient":ingr_repr("rice", ns)},
@@ -584,7 +585,7 @@ def main(config: dict) -> dict[str, dict]:
 	fishs: list[str] = [x.replace(".png","") for x in config['textures_files'] if "poisson_" in x]
 	for fish in fishs:
 		database[fish] = {
-			"id": CUSTOM_ITEM_VANILLA, "consumable": {},
+			"id": "minecraft:apple", "consumable": {},
 			"food": {"nutrition": 4, "saturation": 2.4, "can_always_eat": True},
 			"lore": ['{"text":"Made by M4TOUW","color":"gold","italic":false}'],
 			"equippable": {"slot": "head", "camera_overlay":f"{ns}:item/{fish}"}
@@ -593,7 +594,7 @@ def main(config: dict) -> dict[str, dict]:
 	# Add edible logos
 	for logo in config['textures_files']:
 		if "logo_" in logo:
-			database[logo.replace(".png","")] = {"id": CUSTOM_ITEM_VANILLA, "consumable": {}, "food": {"nutrition": 4, "saturation": 2.4, "can_always_eat": True}}
+			database[logo.replace(".png","")] = {"id": "minecraft:apple", "consumable": {}, "food": {"nutrition": 4, "saturation": 2.4, "can_always_eat": True}}
 	
 	return database
 
