@@ -130,7 +130,7 @@
 		"custom_data": {"survisland": {"iron_bowl": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"rice": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"lore": ["{\"text\":\"Made by Emilou\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"max_stack_size": 1,
 		"consumable": {"on_consume_effects": [{"type": "minecraft:apply_effects","effects": [{"duration": 100,"id": "minecraft:poison","show_icon": true}],"probability": 0.6}]},
@@ -141,9 +141,10 @@
 		"use_remainder": {"count": 1,"id": "minecraft:command_block","components": {"item_name": "{\"text\": \"Iron Bowl\", \"italic\": false, \"color\": \"white\"}","item_model": "survisland:iron_bowl","lore": ["{\"text\":\"Made by Emilou\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]}}
 	},
 	"cooked_rice": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"lore": ["{\"text\":\"Made by Emilou\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"max_stack_size": 1,
+		"consumable": {},
 		"food": {"nutrition": 20,"saturation": 12},
 		"result_of_crafting": [{"type": "smelting","result_count": 1,"cookingtime": 200,"experience": 1.0,"group": "riz","category": "food","ingredient": {"components": {"minecraft:custom_data": {"survisland": {"rice": true}}}}}],
 		"item_model": "survisland:cooked_rice",
@@ -257,7 +258,7 @@
 		"custom_data": {"survisland": {"book_yellow": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_ange": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -267,7 +268,7 @@
 		"custom_data": {"survisland": {"poisson_ange": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_bar": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -277,7 +278,7 @@
 		"custom_data": {"survisland": {"poisson_bar": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_cabillaud": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -287,7 +288,7 @@
 		"custom_data": {"survisland": {"poisson_cabillaud": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_capucin": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -297,7 +298,7 @@
 		"custom_data": {"survisland": {"poisson_capucin": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_chirurgien": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -307,7 +308,7 @@
 		"custom_data": {"survisland": {"poisson_chirurgien": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_dorade": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -317,7 +318,7 @@
 		"custom_data": {"survisland": {"poisson_dorade": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_espadon": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -327,7 +328,7 @@
 		"custom_data": {"survisland": {"poisson_espadon": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_fletan": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -337,7 +338,7 @@
 		"custom_data": {"survisland": {"poisson_fletan": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_gobie": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -347,7 +348,7 @@
 		"custom_data": {"survisland": {"poisson_gobie": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_lime": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -357,7 +358,7 @@
 		"custom_data": {"survisland": {"poisson_lime": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_maquereau": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -367,7 +368,7 @@
 		"custom_data": {"survisland": {"poisson_maquereau": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_pagre": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -377,7 +378,7 @@
 		"custom_data": {"survisland": {"poisson_pagre": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_papillon": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -387,7 +388,7 @@
 		"custom_data": {"survisland": {"poisson_papillon": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_perroquet": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -397,7 +398,7 @@
 		"custom_data": {"survisland": {"poisson_perroquet": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_rascasse": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -407,7 +408,7 @@
 		"custom_data": {"survisland": {"poisson_rascasse": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_sardine": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -417,7 +418,7 @@
 		"custom_data": {"survisland": {"poisson_sardine": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_sole": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -427,7 +428,7 @@
 		"custom_data": {"survisland": {"poisson_sole": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_thon": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
@@ -437,7 +438,7 @@
 		"custom_data": {"survisland": {"poisson_thon": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"logo_s01": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"item_model": "survisland:logo_s01",
@@ -446,7 +447,7 @@
 		"custom_data": {"survisland": {"logo_s01": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"logo_s02": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"item_model": "survisland:logo_s02",
@@ -455,7 +456,7 @@
 		"custom_data": {"survisland": {"logo_s02": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"logo_s03": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"item_model": "survisland:logo_s03",
@@ -464,7 +465,7 @@
 		"custom_data": {"survisland": {"logo_s03": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"logo_s04": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"item_model": "survisland:logo_s04",
@@ -473,7 +474,7 @@
 		"custom_data": {"survisland": {"logo_s04": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"logo_s05": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"item_model": "survisland:logo_s05",
@@ -482,7 +483,7 @@
 		"custom_data": {"survisland": {"logo_s05": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"logo_s06": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"item_model": "survisland:logo_s06",
@@ -491,7 +492,7 @@
 		"custom_data": {"survisland": {"logo_s06": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"logo_s07": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"item_model": "survisland:logo_s07",
@@ -500,7 +501,7 @@
 		"custom_data": {"survisland": {"logo_s07": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"logo_s08": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"item_model": "survisland:logo_s08",
@@ -509,7 +510,7 @@
 		"custom_data": {"survisland": {"logo_s08": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"logo_s09": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"item_model": "survisland:logo_s09",
@@ -518,7 +519,7 @@
 		"custom_data": {"survisland": {"logo_s09": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"logo_s10": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"item_model": "survisland:logo_s10",
@@ -527,7 +528,7 @@
 		"custom_data": {"survisland": {"logo_s10": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"logo_s11": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"item_model": "survisland:logo_s11",
@@ -536,7 +537,7 @@
 		"custom_data": {"survisland": {"logo_s11": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"logo_s12": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"item_model": "survisland:logo_s12",
@@ -545,7 +546,7 @@
 		"custom_data": {"survisland": {"logo_s12": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"logo_s13": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"item_model": "survisland:logo_s13",
@@ -554,7 +555,7 @@
 		"custom_data": {"survisland": {"logo_s13": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"logo_s14": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"item_model": "survisland:logo_s14",
@@ -563,7 +564,7 @@
 		"custom_data": {"survisland": {"logo_s14": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"logo_s15": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"item_model": "survisland:logo_s15",
@@ -572,7 +573,7 @@
 		"custom_data": {"survisland": {"logo_s15": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"logo_s16": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"item_model": "survisland:logo_s16",
@@ -581,7 +582,7 @@
 		"custom_data": {"survisland": {"logo_s16": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"logo_s17": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"item_model": "survisland:logo_s17",
@@ -590,7 +591,7 @@
 		"custom_data": {"survisland": {"logo_s17": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"logo_s18": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"item_model": "survisland:logo_s18",
@@ -599,7 +600,7 @@
 		"custom_data": {"survisland": {"logo_s18": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"logo_s19": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"item_model": "survisland:logo_s19",
@@ -608,7 +609,7 @@
 		"custom_data": {"survisland": {"logo_s19": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"logo_s20": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"item_model": "survisland:logo_s20",
@@ -617,7 +618,7 @@
 		"custom_data": {"survisland": {"logo_s20": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"logo_s21": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"item_model": "survisland:logo_s21",
@@ -626,7 +627,7 @@
 		"custom_data": {"survisland": {"logo_s21": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"logo_s22": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"consumable": {},
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"item_model": "survisland:logo_s22",
