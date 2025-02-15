@@ -5,6 +5,7 @@ from python_datapack.utils.database_helper import *
 # Imports
 from user.database.base import main as make_database
 from user.database.necklaces import main as make_necklaces
+from user.database.tribe_civilization import main as make_tribe_civilization
 
 # Main function should return a database
 def main(config: dict) -> dict[str, dict]:
@@ -12,6 +13,7 @@ def main(config: dict) -> dict[str, dict]:
 	# Apply database
 	database: dict[str, dict] = make_database(config)
 	make_necklaces(config, database)
+	make_tribe_civilization(config, database)
 
 	# Generate custom disc records
 	generate_custom_records(config, database, "auto")
