@@ -2,7 +2,7 @@
 	"type": "minecraft:smoking",
 	"ingredient": "minecraft:bread",
 	"result": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:apple",
 		"count": 1,
 		"components": {
 			"minecraft:lore": [
