@@ -573,6 +573,16 @@ def main(config: dict) -> dict[str, dict]:
 			RESULT_OF_CRAFTING: [
 				{"type":"smelting","result_count":1,"cookingtime":200,"experience":1.0,"group":"riz","category":"food","ingredient":ingr_repr("rice", ns)},
 			]
+		},
+		"croissant": {
+			"id": CUSTOM_ITEM_VANILLA,
+			"lore": ['{"text":"Made by M4TOUW","color":"gold","italic":false}'],
+			"consumable": {},
+			"food": {"nutrition": 6,"saturation": 7},
+			RESULT_OF_CRAFTING: [
+				{"type":"smelting","result_count":1,"cookingtime":200,"experience":1.0,"group":"croissant","category":"food","ingredient":ingr_repr("minecraft:bread")},
+				{"type":"smoking","result_count":1,"cookingtime":100,"experience":1.0,"group":"croissant","category":"food","ingredient":ingr_repr("minecraft:bread")},
+			]
 		}
 	}
 
