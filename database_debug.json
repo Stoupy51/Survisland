@@ -152,6 +152,16 @@
 		"custom_data": {"survisland": {"cooked_rice": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"use_remainder": {"count": 1,"id": "minecraft:command_block","components": {"item_name": "{\"text\": \"Iron Bowl\", \"italic\": false, \"color\": \"white\"}","item_model": "survisland:iron_bowl","lore": ["{\"text\":\"Made by Emilou\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"]}}
 	},
+	"croissant": {
+		"id": "minecraft:command_block",
+		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"consumable": {},
+		"food": {"nutrition": 6,"saturation": 7},
+		"result_of_crafting": [{"type": "smelting","result_count": 1,"cookingtime": 200,"experience": 1.0,"group": "croissant","category": "food","ingredient": {"item": "minecraft:bread"}},{"type": "smoking","result_count": 1,"cookingtime": 100,"experience": 1.0,"group": "croissant","category": "food","ingredient": {"item": "minecraft:bread"}}],
+		"item_model": "survisland:croissant",
+		"item_name": "{\"text\": \"Croissant\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"croissant": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"book_advanced": {
 		"id": "minecraft:written_book",
 		"item_model": "survisland:book_advanced",
