@@ -7,6 +7,3 @@ execute as @a[distance=..100] at @s run playsound entity.experience_orb.pickup a
 # Give reward
 loot spawn ~2 ~-1 ~9 loot survisland:i/blue_star
 
-# Leave trial
-ride @s dismount
-
