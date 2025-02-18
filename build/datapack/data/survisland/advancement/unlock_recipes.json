@@ -1,0 +1,11 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed"
+		}
+	},
+	"rewards": {
+		"function": "survisland:advancements/unlock_recipes"
+	}
+}
+
