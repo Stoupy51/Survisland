@@ -562,7 +562,8 @@ def main(config: dict) -> dict[str, dict]:
 					"probability": 0.6
 				}]
 			},
-			"food": {"nutrition": 2,"saturation": 1.2}
+			"food": {"nutrition": 2,"saturation": 1.2},
+			"category": "food",
 		},
 		"cooked_rice": {
 			"id": "minecraft:apple",
@@ -592,7 +593,7 @@ def main(config: dict) -> dict[str, dict]:
 	# Add colored books
 	books: list[str] = [x.replace(".png","") for x in config['textures_files'] if "book_" in x]
 	for book in books:
-		database[book] = {"id": "minecraft:written_book", "category": "livre"}
+		database[book] = {"id": "minecraft:written_book", "category": "book"}
 
 	# Add edible colored fishs
 	fishs: list[str] = [x.replace(".png","") for x in config['textures_files'] if "poisson_" in x]
@@ -602,7 +603,7 @@ def main(config: dict) -> dict[str, dict]:
 			"food": {"nutrition": 4, "saturation": 2.4, "can_always_eat": True},
 			"lore": ['{"text":"Made by M4TOUW","color":"gold","italic":false}'],
 			"equippable": {"slot": "head", "camera_overlay":f"{ns}:item/{fish}"},
-			"category": "poisson",
+			"category": "fish",
 		}
 	
 	# Add edible logos

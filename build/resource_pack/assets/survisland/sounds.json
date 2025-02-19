@@ -167,6 +167,10 @@
 		"subtitle": "scary_screamer",
 		"sounds": ["survisland:scary_screamer"]
 	},
+	"taco_bell": {
+		"subtitle": "taco_bell",
+		"sounds": ["survisland:taco_bell"]
+	},
 	"vine_boom": {
 		"subtitle": "vine_boom",
 		"sounds": ["survisland:vine_boom"]
