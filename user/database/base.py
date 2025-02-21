@@ -587,6 +587,17 @@ def main(config: dict) -> dict[str, dict]:
 				{"type":"smelting","result_count":1,"cookingtime":200,"experience":1.0,"group":"croissant","category":"food","ingredient":ingr_repr("minecraft:bread")},
 				{"type":"smoking","result_count":1,"cookingtime":100,"experience":1.0,"group":"croissant","category":"food","ingredient":ingr_repr("minecraft:bread")},
 			]
+		},
+		"marcus_chicken": {
+			"id": "minecraft:apple",
+			"lore": ['{"text":"Made by Stoupy","color":"gold","italic":false}'],
+			"consumable": {},
+			"food": {"nutrition": 7,"saturation": 7.5},
+			"category": "food",
+			RESULT_OF_CRAFTING: [
+				{"type":"smelting","result_count":1,"cookingtime":200,"experience":1.0,"group":"chicken","category":"food","ingredient":ingr_repr("minecraft:cooked_chicken")},
+				{"type":"smoking","result_count":1,"cookingtime":100,"experience":1.0,"group":"chicken","category":"food","ingredient":ingr_repr("minecraft:cooked_chicken")},
+			]
 		}
 	}
 

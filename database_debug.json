@@ -165,6 +165,17 @@
 		"item_name": "{\"text\": \"Croissant\", \"italic\": false, \"color\": \"white\"}",
 		"custom_data": {"survisland": {"croissant": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
+	"marcus_chicken": {
+		"id": "minecraft:apple",
+		"lore": ["{\"text\":\"Made by Stoupy\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"consumable": {},
+		"food": {"nutrition": 7,"saturation": 7.5},
+		"category": "food",
+		"result_of_crafting": [{"type": "smelting","result_count": 1,"cookingtime": 200,"experience": 1.0,"group": "chicken","category": "food","ingredient": {"item": "minecraft:cooked_chicken"}},{"type": "smoking","result_count": 1,"cookingtime": 100,"experience": 1.0,"group": "chicken","category": "food","ingredient": {"item": "minecraft:cooked_chicken"}}],
+		"item_model": "survisland:marcus_chicken",
+		"item_name": "{\"text\": \"Marcus Chicken\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"marcus_chicken": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"book_advanced": {
 		"id": "minecraft:written_book",
 		"category": "book",
