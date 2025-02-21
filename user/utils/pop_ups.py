@@ -6,7 +6,7 @@ from python_datapack.utils.io import *
 
 # Constants
 LABELS: list[str] = ["Confort", "Immunité", "Conseil"]
-TIMES: list[str] = ["dans 30 minutes", "dans 25 minutes", "dans 20 minutes", "dans 15 minutes", "dans 10 minutes", "dans 5 minutes", "maintenant"]
+TIMES: list[str] = [f"dans {x} minutes" for x in range(5, 61, 5)] + ["maintenant"]
 
 # Generates pop-ups
 def main(config: dict) -> None:
