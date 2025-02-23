@@ -159,6 +159,10 @@
 		"subtitle": "maracas",
 		"sounds": ["survisland:maracas"]
 	},
+	"mingle_song": {
+		"subtitle": "mingle_song",
+		"sounds": ["survisland:mingle_song"]
+	},
 	"rompich": {
 		"subtitle": "rompich",
 		"sounds": ["survisland:rompich"]
