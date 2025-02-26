@@ -598,7 +598,21 @@ def main(config: dict) -> dict[str, dict]:
 				{"type":"smelting","result_count":1,"cookingtime":200,"experience":1.0,"group":"chicken","category":"food","ingredient":ingr_repr("minecraft:cooked_chicken")},
 				{"type":"smoking","result_count":1,"cookingtime":100,"experience":1.0,"group":"chicken","category":"food","ingredient":ingr_repr("minecraft:cooked_chicken")},
 			]
-		}
+		},
+		"donut": {
+			"id": "minecraft:apple",
+			"lore": ['{"text":"Made by M4TOUW","color":"gold","italic":false}'],
+			"consumable": {},
+			"food": {"nutrition": 5,"saturation": 6},
+			"category": "food",
+		},
+		"chocolate_eclair" : {
+			"id": "minecraft:apple",
+			"lore": ['{"text":"Made by M4TOUW","color":"gold","italic":false}'],
+			"consumable": {},
+			"food": {"nutrition": 5,"saturation": 6},
+			"category": "food",
+		},
 	}
 
 	# Add colored books

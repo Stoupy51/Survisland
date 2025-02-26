@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:item/apple",
+	"textures": {
+		"layer0": "survisland:item/chocolate_eclair"
+	}
+}
+
