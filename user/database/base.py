@@ -613,6 +613,13 @@ def main(config: dict) -> dict[str, dict]:
 			"food": {"nutrition": 5,"saturation": 6},
 			"category": "food",
 		},
+		"strawberry_pie" : {
+			"id": "minecraft:apple",
+			"lore": ['{"text":"Made by M4TOUW","color":"gold","italic":false}'],
+			"consumable": {},
+			"food": {"nutrition": 5,"saturation": 6},
+			"category": "food",
+		},
 	}
 
 	# Add colored books
