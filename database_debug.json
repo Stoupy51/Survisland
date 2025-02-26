@@ -176,6 +176,26 @@
 		"item_name": "{\"text\": \"Marcus Chicken\", \"italic\": false, \"color\": \"white\"}",
 		"custom_data": {"survisland": {"marcus_chicken": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
+	"donut": {
+		"id": "minecraft:apple",
+		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"consumable": {},
+		"food": {"nutrition": 5,"saturation": 6},
+		"category": "food",
+		"item_model": "survisland:donut",
+		"item_name": "{\"text\": \"Donut\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"donut": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"chocolate_eclair": {
+		"id": "minecraft:apple",
+		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"consumable": {},
+		"food": {"nutrition": 5,"saturation": 6},
+		"category": "food",
+		"item_model": "survisland:chocolate_eclair",
+		"item_name": "{\"text\": \"Chocolate Eclair\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"chocolate_eclair": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"book_advanced": {
 		"id": "minecraft:written_book",
 		"category": "book",
