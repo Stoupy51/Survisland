@@ -599,6 +599,13 @@ def main(config: dict) -> dict[str, dict]:
 				{"type":"smoking","result_count":1,"cookingtime":100,"experience":1.0,"group":"chicken","category":"food","ingredient":ingr_repr("minecraft:cooked_chicken")},
 			]
 		},
+		"chocolatine": {
+			"id": "minecraft:apple",
+			"lore": ['{"text":"Made by M4TOUW","color":"gold","italic":false}'],
+			"consumable": {},
+			"food": {"nutrition": 5,"saturation": 6},
+			"category": "food",
+		},
 		"donut": {
 			"id": "minecraft:apple",
 			"lore": ['{"text":"Made by M4TOUW","color":"gold","italic":false}'],

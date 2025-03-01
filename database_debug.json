@@ -176,6 +176,16 @@
 		"item_name": "{\"text\": \"Marcus Chicken\", \"italic\": false, \"color\": \"white\"}",
 		"custom_data": {"survisland": {"marcus_chicken": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
+	"chocolatine": {
+		"id": "minecraft:apple",
+		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"consumable": {},
+		"food": {"nutrition": 5,"saturation": 6},
+		"category": "food",
+		"item_model": "survisland:chocolatine",
+		"item_name": "{\"text\": \"Chocolatine\", \"italic\": false, \"color\": \"white\"}",
+		"custom_data": {"survisland": {"chocolatine": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"donut": {
 		"id": "minecraft:apple",
 		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
