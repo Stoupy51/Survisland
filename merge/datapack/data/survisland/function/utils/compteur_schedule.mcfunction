@@ -3,6 +3,7 @@
 scoreboard players remove #compteur survisland.data 1
 
 # Titles
+execute if score #compteur survisland.data matches 0 run title @a times 10 40 10
 execute if score #compteur survisland.data matches 0.. run title @a title {"nbt":"compteur.title","storage":"survisland:main","interpret": true}
 execute if score #compteur survisland.data matches 4.. run title @a subtitle [{"score":{"name":"#compteur","objective":"survisland.data"}},{"text":"..."}]
 execute if score #compteur survisland.data matches 3 run title @a subtitle {"text":"3...","color":"yellow"}
