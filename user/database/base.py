@@ -601,7 +601,7 @@ def main(config: dict) -> dict[str, dict]:
 		},
 		"chocolatine": {
 			"id": "minecraft:apple",
-			"lore": ['{"text":"Made by M4TOUW","color":"gold","italic":false}'],
+			"lore": ['{"text":"Made by Fhara","color":"gold","italic":false}'],
 			"consumable": {},
 			"food": {"nutrition": 5,"saturation": 6},
 			"category": "food",
