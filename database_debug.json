@@ -178,7 +178,7 @@
 	},
 	"chocolatine": {
 		"id": "minecraft:apple",
-		"lore": ["{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
+		"lore": ["{\"text\":\"Made by Fhara\",\"color\":\"gold\",\"italic\":false}","[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"],
 		"consumable": {},
 		"food": {"nutrition": 5,"saturation": 6},
 		"category": "food",

@@ -11,7 +11,7 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:lore": [
-									"{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}",
+									"{\"text\":\"Made by Fhara\",\"color\":\"gold\",\"italic\":false}",
 									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"
 								],
 								"minecraft:consumable": {},
