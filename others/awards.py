@@ -20,7 +20,7 @@ OUTPUT_FOLDER: str = f"{CURRENT_FOLDER}/output"
 # Chargement des données
 data: pd.DataFrame = pd.read_csv(CSV_FILE)
 colonnes: list[str] = data.columns.tolist()
-reponses_total: int = len(data.index)
+reponses_total: int = len(data)
 stp.info(f"Chargement des données terminé. {reponses_total} réponses trouvées.")
 """
 columns = [
@@ -41,8 +41,15 @@ reponses: list[str] = data[colonnes[1]].unique().tolist()
 # Calcul des pondérations (1 / nb_occurrences)
 poids: dict[str, float] = {}
 for reponse in reponses:
+	# Calcul du nombre d'occurrences
 	nb_occurrences: int = len(data[data[colonnes[1]] == reponse])
-	poids[reponse] = 1 / nb_occurrences
+	
+	# Calcul du diviseur (On force au maximum un ratio de 1/4)
+	# En gros, si par exemple Mathox a 100 réponses et Guill 1, le ratio sera de 1/4 au lieu de 1/100.
+	diviseur: float = max(1, (nb_occurrences / 4))
+	
+	# Calcul du poids
+	poids[reponse] = 1 / diviseur
 """ weights = {"Mathox": 0.4, "Guill": 0.01, "...": 0.8} """
 
 ## Génération d'un graphique interactif pour chaque question
