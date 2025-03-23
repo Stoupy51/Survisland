@@ -14,7 +14,7 @@ import plotly.express as px
 
 # Constantes
 CURRENT_FOLDER: str = stp.get_root_path(__file__)
-CSV_FILE: str = f"{CURRENT_FOLDER}/Awards S21 - Gardens Of The East (réponses) - Réponses au formulaire 1.csv"
+CSV_FILE: str = f"{CURRENT_FOLDER}/Réponses awards - Réponses au formulaire 1.csv"
 OUTPUT_FOLDER: str = f"{CURRENT_FOLDER}/output"
 
 # Chargement des données
