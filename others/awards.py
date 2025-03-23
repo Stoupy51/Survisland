@@ -14,7 +14,7 @@ import plotly.express as px
 
 # Constantes
 CURRENT_FOLDER: str = stp.get_root_path(__file__)
-CSV_FILE: str = f"{CURRENT_FOLDER}/form_s21.csv"
+CSV_FILE: str = f"{CURRENT_FOLDER}/Awards S21 - Gardens Of The East (réponses) - Réponses au formulaire 1.csv"
 OUTPUT_FOLDER: str = f"{CURRENT_FOLDER}/output"
 
 # Chargement des données
@@ -46,10 +46,13 @@ for reponse in reponses:
 	
 	# Calcul du diviseur (On force au maximum un ratio de 1/4)
 	# En gros, si par exemple Mathox a 100 réponses et Guill 1, le ratio sera de 1/4 au lieu de 1/100.
-	diviseur: float = max(1, (nb_occurrences / 4))
+	diviseur: float = max(1, (nb_occurrences / len(reponses)))
 	
 	# Calcul du poids
-	poids[reponse] = 1 / diviseur
+	if "survisland" in reponse.lower():
+		poids[reponse] = 1 / diviseur
+	else:
+		poids[reponse] = 1 / diviseur
 """ weights = {"Mathox": 0.4, "Guill": 0.01, "...": 0.8} """
 
 ## Génération d'un graphique interactif pour chaque question
@@ -70,7 +73,15 @@ def process_question(i: int) -> None:
 
 	# Filtrage des petites tranches (<3%) et regroupement en "Autre"
 	total_votes: float = sum(votes.values())
-	votes_filtres: dict[str, float] = {k: v for k, v in votes.items() if v/total_votes >= 0.03}
+	
+	# Tri des votes par valeur décroissante et sélection des 8 premiers dépassant 3%
+	votes_tries: list[tuple[str, float]] = sorted(votes.items(), key=lambda x: x[1], reverse=True)
+	votes_filtres: dict[str, float] = {}
+	for k, v in votes_tries[:8]:
+		if v/total_votes >= 0.03:
+			votes_filtres[k] = v
+	
+	# Regroupement des autres votes dans "Autre"
 	votes_autres: float = total_votes - sum(votes_filtres.values())
 	if votes_autres > 0:
 		votes_filtres["Autre"] = votes_autres
@@ -102,7 +113,7 @@ def process_question(i: int) -> None:
 		legend=dict(
 			orientation="h",
 			yanchor="bottom",
-			y=-0.2,
+			y=-0.3,
 			xanchor="center",
 			x=0.5
 		)
@@ -134,4 +145,22 @@ stp.multithreading(
 	max_workers=4,
 	verbose=1
 )
+
+# Calcul de la moyenne des notes de la saison (avant dernière colonne)
+last_column: str = colonnes[-2]
+notes: list[str] = data[last_column].tolist()	# ["10/20", "12/20", "14/20", ...]
+stp.whatisit(notes)
+
+# Extraction des numérateurs et dénominateurs avec poids
+numerators: list[float] = []
+for i, note in enumerate(notes):
+	if isinstance(note, str):
+		poids_individuel: float = poids[data[colonnes[1]].iloc[i]]
+		numerator: int = int(note.split("/")[0])
+		numerators.append(numerator * poids_individuel)
+
+# Calcul de la moyenne pondérée
+total_poids: float = sum(poids[data[colonnes[1]].iloc[i]] for i in range(len(data)) if isinstance(notes[i], str))
+moyenne: float = sum(numerators) / total_poids
+stp.info(f"Moyenne pondérée des notes de la saison: {moyenne:.2f}")
 
