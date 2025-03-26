@@ -11,7 +11,7 @@ execute store result score #xp_sound survisland.data run data get storage survis
 execute store result score #goat_horn_sound survisland.data run data get storage survisland:main compteur.sounds.goat_horn
 execute store result score #wither_sound survisland.data run data get storage survisland:main compteur.sounds.wither
 scoreboard players operation #max_compteur survisland.data = #compteur survisland.data
-scoreboard players add #compteur survisland.data 1
+scoreboard players add #compteur survisland.data 2
 
 
 schedule function survisland:utils/compteur_schedule 5t
