@@ -37,12 +37,12 @@ forceload add 0 0
 
 ## Storage for easy tellraws
 #tellraw @a ["\\n",{{"nbt":"Survisland","storage":"{ns}:main","interpret":true}},{{"text":" Souhaitez tous la bienvenue à "}},{{"selector":"@s","color":"aqua"}},{{"text":" !\\nIl est le "}},{{"score":{{"name":"#next_id","objective":"{ns}.data"}},"color":"aqua"}},{{"text":"ème joueur a rejoindre !"}}]
-data modify storage {ns}:main SurvislandSpec set value '[{{"text":"[SurvislandSpec]","color":"gray"}}]'
-data modify storage {ns}:main SurvislandWarning set value '[{{"text":"[Survisland]","color":"gold"}}]'
-data modify storage {ns}:main SurvislandRatio set value '[{{"text":"[SurvislandRatio]","color":"green"}}]'
-data modify storage {ns}:main SurvislandError set value '[{{"text":"[SurvislandError]","color":"red"}}]'
-data modify storage {ns}:main SurvislandHelp set value '[{{"text":"[","color":"dark_aqua"}},{{"text":"SurvislandHelp","color":"aqua"}},{{"text":"]","color":"dark_aqua"}}]'
-data modify storage {ns}:main Survisland set value '[{{"text":"[","color":"dark_aqua"}},{{"text":"Survisland","color":"aqua"}},{{"text":"]","color":"dark_aqua"}}]'
+data modify storage {ns}:main SurvislandSpec set value [{{"text":"[SurvislandSpec]","color":"gray"}}]
+data modify storage {ns}:main SurvislandWarning set value [{{"text":"[Survisland]","color":"gold"}}]
+data modify storage {ns}:main SurvislandRatio set value [{{"text":"[SurvislandRatio]","color":"green"}}]
+data modify storage {ns}:main SurvislandError set value [{{"text":"[SurvislandError]","color":"red"}}]
+data modify storage {ns}:main SurvislandHelp set value [{{"text":"[","color":"dark_aqua"}},{{"text":"SurvislandHelp","color":"aqua"}},{{"text":"]","color":"dark_aqua"}}]
+data modify storage {ns}:main Survisland set value [{{"text":"[","color":"dark_aqua"}},{{"text":"Survisland","color":"aqua"}},{{"text":"]","color":"dark_aqua"}}]
 """)
 	
 	# Tick function
