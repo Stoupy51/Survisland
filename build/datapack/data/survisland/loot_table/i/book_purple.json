@@ -11,9 +11,13 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "survisland:book_purple",
-								"minecraft:item_name": "{\"text\": \"Book Purple\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:item_name": {
+									"text": "Book Purple",
+									"italic": false,
+									"color": "white"
+								},
 								"minecraft:lore": [
-									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"
+									["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]
 								],
 								"minecraft:custom_data": {
 									"survisland": {"book_purple": true},

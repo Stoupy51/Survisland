@@ -11,8 +11,8 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:lore": [
-									"{\"text\":\"Made by M4TOUW\",\"color\":\"gold\",\"italic\":false}",
-									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"
+									{"text": "Made by M4TOUW","color": "gold","italic": false},
+									["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]
 								],
 								"minecraft:consumable": {},
 								"minecraft:food": {
@@ -20,7 +20,11 @@
 									"saturation": 6
 								},
 								"minecraft:item_model": "survisland:strawberry_pie",
-								"minecraft:item_name": "{\"text\": \"Strawberry Pie\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:item_name": {
+									"text": "Strawberry Pie",
+									"italic": false,
+									"color": "white"
+								},
 								"minecraft:custom_data": {
 									"survisland": {"strawberry_pie": true},
 									"smithed": {"ignore": {"functionality": true,"crafting": true}}

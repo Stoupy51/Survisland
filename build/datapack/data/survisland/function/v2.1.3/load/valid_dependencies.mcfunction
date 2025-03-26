@@ -12,13 +12,13 @@ execute store result score #game_version survisland.data run data get entity @p 
 
 # Check if the game version is supported
 scoreboard players set #mcload_error survisland.data 0
-execute unless score #game_version survisland.data matches 4082.. run scoreboard players set #mcload_error survisland.data 1
+execute unless score #game_version survisland.data matches 4321.. run scoreboard players set #mcload_error survisland.data 1
 
 # Decode errors
-execute if score #mcload_error survisland.data matches 1 run tellraw @a {"text":"Survisland Error: This version is made for Minecraft 1.21.4+.","color":"red"}
+execute if score #mcload_error survisland.data matches 1 run tellraw @a {"text":"Survisland Error: This version is made for Minecraft 1.21.5+.","color":"red"}
 execute if score #dependency_error survisland.data matches 1 run tellraw @a {"text":"Survisland Error: Libraries are missing\nplease download the right Survisland datapack\nor download each of these libraries one by one:","color":"red"}
-execute if score #dependency_error survisland.data matches 1 unless score #furnace_nbt_recipes.major load.status matches 1.. run tellraw @a {"text":"- [Furnace NBT Recipes (v1.9.0+)]","color":"gold","clickEvent":{"action":"open_url","value":"https://github.com/Stoupy51/FurnaceNbtRecipes"}}
-execute if score #dependency_error survisland.data matches 1 if score #furnace_nbt_recipes.major load.status matches 1 unless score #furnace_nbt_recipes.minor load.status matches 9.. run tellraw @a {"text":"- [Furnace NBT Recipes (v1.9.0+)]","color":"gold","clickEvent":{"action":"open_url","value":"https://github.com/Stoupy51/FurnaceNbtRecipes"}}
+execute if score #dependency_error survisland.data matches 1 unless score #furnace_nbt_recipes.major load.status matches 1.. run tellraw @a {"text":"- [Furnace NBT Recipes (v1.9.0+)]","color":"gold","click_event":{"action":"open_url","url":"https://github.com/Stoupy51/FurnaceNbtRecipes"}}
+execute if score #dependency_error survisland.data matches 1 if score #furnace_nbt_recipes.major load.status matches 1 unless score #furnace_nbt_recipes.minor load.status matches 9.. run tellraw @a {"text":"- [Furnace NBT Recipes (v1.9.0+)]","color":"gold","click_event":{"action":"open_url","url":"https://github.com/Stoupy51/FurnaceNbtRecipes"}}
 
 # Load Survisland
 execute if score #game_version survisland.data matches 1.. if score #mcload_error survisland.data matches 0 if score #dependency_error survisland.data matches 0 run function survisland:v2.1.3/load/confirm_load

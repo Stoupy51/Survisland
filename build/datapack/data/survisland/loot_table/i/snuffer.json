@@ -11,12 +11,16 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:lore": [
-									"[{\"text\":\"Clic-droit pour éteindre la torche\",\"italic\":false,\"color\":\"gray\"}]",
-									"[{\"text\":\"du joueur le plus proche\",\"italic\":false,\"color\":\"gray\"}]",
-									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"
+									{"text": "Clic-droit pour éteindre la torche","italic": false,"color": "gray"},
+									{"text": "du joueur le plus proche","italic": false,"color": "gray"},
+									["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]
 								],
 								"minecraft:item_model": "survisland:snuffer",
-								"minecraft:item_name": "{\"text\": \"Snuffer\", \"italic\": false, \"color\": \"white\"}",
+								"minecraft:item_name": {
+									"text": "Snuffer",
+									"italic": false,
+									"color": "white"
+								},
 								"minecraft:custom_data": {
 									"survisland": {"snuffer": true},
 									"smithed": {"ignore": {"functionality": true,"crafting": true}}
