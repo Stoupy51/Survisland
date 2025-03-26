@@ -1,5 +1,6 @@
 
 # Imports
+import stouputils as stp
 from python_datapack.utils.database_helper import *
 
 # Constants
@@ -29,5 +30,5 @@ def main(config: dict, database: dict[str, dict]) -> None:
 		# Write model
 		model_file: str = f"{config['build_resource_pack']}/assets/{ns}/equipment/{necklace}.json"
 		model_data: dict = {"layers": {"humanoid": [{"texture": f"{ns}:{necklace}_held"}]}}
-		write_to_file(model_file, super_json_dump(model_data))
+		write_file(model_file, stp.super_json_dump(model_data))
 
