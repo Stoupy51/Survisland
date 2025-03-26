@@ -1,7 +1,7 @@
 
 scoreboard players set #compteur survisland.data 4
 
-execute unless data storage survisland:main compteur run data modify storage survisland:main compteur set value {decompte:5,sounds:{xp:1b,goat_horn:1b,wither:0b},title:'[{"text":"Lancement de l\'épreuve ","color":"aqua"}]'}
+execute unless data storage survisland:main compteur run data modify storage survisland:main compteur set value {decompte:5,sounds:{xp:1b,goat_horn:1b,wither:0b},title:[{"text":"Lancement de l'épreuve ","color":"aqua"}]}
 
 title @a times 1 1 1
 title @a title ""
