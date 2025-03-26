@@ -1,7 +1,7 @@
 
 # Imports
+import stouputils as stp
 from python_datapack.constants import *
-from python_datapack.utils.print import *
 from python_datapack.utils.io import *
 
 # Generates trivial things in the datapack
@@ -13,7 +13,7 @@ def main(config: dict) -> None:
 	advancements: str = f"{config['build_datapack']}/data/{ns}/advancement"
 
 	# Add additional objectives and gamerules to the load function
-	write_to_load_file(config, f"""
+	write_load_file(config, f"""
 # Add objectives
 scoreboard objectives add {ns}.id dummy
 scoreboard objectives add {ns}.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
@@ -46,7 +46,7 @@ data modify storage {ns}:main Survisland set value '[{{"text":"[","color":"dark_
 """)
 	
 	# Tick function
-	write_to_file(f"{functions}/v{version}/tick.mcfunction", f"""
+	write_file(f"{functions}/v{version}/tick.mcfunction", f"""
 # Custom Keep Inventory System
 execute as @a[scores={{{ns}.deathCount=1..}}] at @s run function {ns}:keep_inventory/player_died
 
@@ -59,7 +59,7 @@ tag @a[tag={ns}.farted,predicate=!{ns}:is_sneaking] remove {ns}.farted
 """)
 	
 	# Second function
-	write_to_file(f"{functions}/v{version}/second.mcfunction", f"""
+	write_file(f"{functions}/v{version}/second.mcfunction", f"""
 # Check if their marker is still there
 execute as @a run function {ns}:player/check_marker
 
@@ -71,7 +71,7 @@ scoreboard players set _IS_ENABLED smart_ore_generation.data 0
 """)
 	
 	# Minute function
-	write_to_file(f"{functions}/v{version}/minute.mcfunction", f"""
+	write_file(f"{functions}/v{version}/minute.mcfunction", f"""
 # Timer
 scoreboard players set #second {ns}.data 0
 
@@ -81,8 +81,8 @@ kill @e[type=marker,tag={ns}.keep_inventory]
 	
 	# Right click
 	json_content: dict = {"criteria":{"requirement":{"trigger":"minecraft:tick","conditions":{"player":[{"condition":"minecraft:entity_scores","entity":"this","scores":{f"{ns}.right_click":{"min":1}}}]}}},"rewards":{"function":f"{ns}:utils/right_click"}}
-	write_to_file(f"{advancements}/right_click.json", super_json_dump(json_content, max_level = -1))
-	write_to_file(f"{functions}/utils/right_click.mcfunction", f"""
+	write_file(f"{advancements}/right_click.json", stp.super_json_dump(json_content, max_level = -1))
+	write_file(f"{functions}/utils/right_click.mcfunction", f"""
 # Advancement revoke
 advancement revoke @s only {ns}:right_click
 
@@ -103,7 +103,7 @@ tag @s remove {ns}.temp
 	parchemin: dict = database['parchemin']
 	p_id: str = parchemin['id']
 	p_model: str = parchemin['item_model']
-	write_to_file(f"{functions}/parchemins/_convert_to_scroll.mcfunction", f"""
+	write_file(f"{functions}/parchemins/_convert_to_scroll.mcfunction", f"""
 # Replace the book by a scroll
 data modify storage {ns}:main Item.id set value "{p_id}"
 data modify storage {ns}:main Item.components."minecraft:item_model" set value "{p_model}"
@@ -112,7 +112,7 @@ data modify storage {ns}:main Item.components."minecraft:item_model" set value "
 	# advancements/inventory_changed
 	pendent_model: str = database["pendent"]["item_model"]
 	pendent_held_model: str = database["pendent_held"]["item_model"]
-	write_to_file(f"{functions}/advancements/inventory_changed.mcfunction", f"""
+	write_file(f"{functions}/advancements/inventory_changed.mcfunction", f"""
 # Advancement revoke
 advancement revoke @s only survisland:inventory_changed
 
@@ -135,7 +135,7 @@ execute if score #success {ns}.data matches 0 run tag @s remove {ns}.has_idol
 """)
 	
 	# utils/pendent_switch
-	write_to_file(f"{functions}/utils/pendent_switch.mcfunction", f"""
+	write_file(f"{functions}/utils/pendent_switch.mcfunction", f"""
 # Copy du pendent dans un slot temporaire
 setblock 0 5 0 air
 setblock 0 5 0 barrel

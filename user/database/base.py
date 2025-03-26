@@ -16,8 +16,8 @@ def main(config: dict) -> dict[str, dict]:
 		},
 		"parchemin": {
 			"id": "minecraft:warped_fungus_on_a_stick",
-			"item_name": '{"text":"Default vote","italic":false,"color":"red"}',
-			"lore":['[{"text":"Auteur : ","italic":false,"color":"gold"},{"text":"Stoupy51","color":"yellow"}]'],
+			"item_name": {"text":"Default vote","italic":False,"color":"red"},
+			"lore":[{"text":"Auteur : ","italic":False,"color":"gold"},{"text":"Stoupy51","color":"yellow"}],
 			OVERRIDE_MODEL: {
 				"parent": "item/handheld",
 				"display": {
@@ -100,8 +100,8 @@ def main(config: dict) -> dict[str, dict]:
 		"snuffer": {
 			"id": "minecraft:warped_fungus_on_a_stick",
 			"lore": [
-				'[{"text":"Clic-droit pour éteindre la torche","italic":false,"color":"gray"}]',
-				'[{"text":"du joueur le plus proche","italic":false,"color":"gray"}]'
+				{"text":"Clic-droit pour éteindre la torche","italic":False,"color":"gray"},
+				{"text":"du joueur le plus proche","italic":False,"color":"gray"}
 			],
 			OVERRIDE_MODEL: {
 				"parent": "none",
@@ -225,7 +225,7 @@ def main(config: dict) -> dict[str, dict]:
 		},
 		"flambeau": {
 			"id": CUSTOM_ITEM_VANILLA,
-			"lore": ['{"text":"Gardez cette torche précieusement","italic":false,"color":"gray"}'],
+			"lore": [{"text":"Gardez cette torche précieusement","italic":False,"color":"gray"}],
 			"max_stack_size": 64,
 			OVERRIDE_MODEL: {
 				"parent": "none",
@@ -448,7 +448,7 @@ def main(config: dict) -> dict[str, dict]:
 		},
 		"pendent": {
 			"id": CUSTOM_ITEM_VANILLA,
-			"lore": ['{"text":"[Seconde main pour l\'équiper]","italic":false,"color":"gray"}'],
+			"lore": [{"text":"[Seconde main pour l'équiper]","italic":False,"color":"gray"}],
 			"max_stack_size": 64,
 			OVERRIDE_MODEL: {
 				"parent": "item/handheld",
@@ -480,7 +480,7 @@ def main(config: dict) -> dict[str, dict]:
 		},
 		"pendent_held": {
 			"id": CUSTOM_ITEM_VANILLA,
-			"lore": ['{"text":"[Seconde main pour l\'équiper]","italic":false,"color":"gray"}'],
+			"lore": [{"text":"[Seconde main pour l'équiper]","italic":False,"color":"gray"}],
 			"max_stack_size": 64,
 			OVERRIDE_MODEL: {
 				"parent": "item/handheld",
@@ -514,12 +514,12 @@ def main(config: dict) -> dict[str, dict]:
 		},
 		"maple_leaf": {
 			"id": CUSTOM_ITEM_VANILLA,
-			"item_name": '{"text":"Feuille d\'érable","italic":false,"color":"gold"}',
+			"item_name": {"text":"Feuille d'érable","italic":False,"color":"gold"},
 			"max_stack_size": 64,
 		},
 		"golden_leaf": {
 			"id": CUSTOM_ITEM_VANILLA,
-			"item_name": '{"text":"Feuille d\'or","italic":false,"color":"gold"}',
+			"item_name": {"text":"Feuille d'or","italic":False,"color":"gold"},
 			"max_stack_size": 64,
 		},
 		"temp_item": {
@@ -531,29 +531,29 @@ def main(config: dict) -> dict[str, dict]:
 		},
 		"maracas": {
 			"id": "minecraft:diamond_sword",
-			"lore": ['{"text":"Made by M4TOUW","color":"gold","italic":false}'],
+			"lore": [{"text":"Made by M4TOUW","color":"gold","italic":False}],
 			"equippable":{"slot":"chest","equip_sound":{"sound_id":"survisland:maracas"}},
 			OVERRIDE_MODEL: {"credit":"Made with Blockbench","textures":{"0":"minecraft:block/oak_planks","1":"minecraft:block/red_concrete","2":"minecraft:block/green_concrete","3":"minecraft:block/white_concrete","particle":"minecraft:block/oak_planks"},"elements":[{"from":[7,0,7],"to":[9,6,9],"rotation":{"angle":0,"axis":"y","origin":[6,1,7]},"faces":{"north":{"uv":[0,0,2,6],"texture":"#0"},"east":{"uv":[0,0,2,6],"texture":"#0"},"south":{"uv":[0,0,2,6],"texture":"#0"},"west":{"uv":[0,0,2,6],"texture":"#0"},"up":{"uv":[0,0,2,2],"texture":"#missing"},"down":{"uv":[0,0,2,2],"texture":"#0"}}},{"from":[6,9,6],"to":[10,10,10],"rotation":{"angle":0,"axis":"y","origin":[7,9,7]},"faces":{"north":{"uv":[0,0,4,1],"texture":"#1"},"east":{"uv":[0,0,4,1],"texture":"#1"},"south":{"uv":[0,0,4,1],"texture":"#1"},"west":{"uv":[0,0,4,1],"texture":"#1"},"up":{"uv":[0,0,4,4],"texture":"#1"},"down":{"uv":[0,0,4,4],"texture":"#missing"}}},{"from":[6,8,6],"to":[10,9,10],"rotation":{"angle":0,"axis":"y","origin":[7,8,7]},"faces":{"north":{"uv":[0,0,4,1],"texture":"#3"},"east":{"uv":[0,0,4,1],"texture":"#3"},"south":{"uv":[0,0,4,1],"texture":"#3"},"west":{"uv":[0,0,4,1],"texture":"#3"},"up":{"uv":[0,0,4,4],"texture":"#missing"},"down":{"uv":[0,0,4,4],"texture":"#missing"}}},{"from":[6,7,6],"to":[10,8,10],"rotation":{"angle":0,"axis":"y","origin":[7,7,7]},"faces":{"north":{"uv":[0,0,4,1],"texture":"#2"},"east":{"uv":[0,0,4,1],"texture":"#2"},"south":{"uv":[0,0,4,1],"texture":"#2"},"west":{"uv":[0,0,4,1],"texture":"#2"},"up":{"uv":[0,0,4,4],"texture":"#missing"},"down":{"uv":[0,0,4,4],"texture":"#missing"}}},{"from":[6,6,6],"to":[10,7,10],"rotation":{"angle":0,"axis":"y","origin":[7,6,7]},"faces":{"north":{"uv":[0,0,4,1],"texture":"#1"},"east":{"uv":[0,0,4,1],"texture":"#1"},"south":{"uv":[0,0,4,1],"texture":"#1"},"west":{"uv":[0,0,4,1],"texture":"#1"},"up":{"uv":[0,0,4,4],"texture":"#missing"},"down":{"uv":[0,0,4,4],"texture":"#1"}}}],"display":{"thirdperson_righthand":{"translation":[0.25,5,1.25]},"thirdperson_lefthand":{"translation":[0.25,5,1.25]},"firstperson_righthand":{"translation":[0.25,5,1.25]},"firstperson_lefthand":{"translation":[0.25,5,1.25]},"gui":{"translation":[0,2.5,0]},"head":{"rotation":[-90,0,0],"translation":[0.75,3.5,-3.25]}}}
 		},
 		"sombrero": {
 			"id": CUSTOM_ITEM_VANILLA,
-			"lore": ['{"text":"Made by Fhara","color":"gold","italic":false}'],
+			"lore": [{"text":"Made by Fhara","color":"gold","italic":False}],
 			"equippable":{"slot":"head"},
 			OVERRIDE_MODEL: {"credit":"Made with Blockbench","textures":{"0":f"{ns}:item/sombrero","particle":f"{ns}:item/sombrero"},"elements":[{"from":[13,1,2],"to":[15,2,14],"faces":{"north":{"uv":[0,4,2,5],"texture":"#0"},"east":{"uv":[0,0,12,1],"texture":"#0"},"south":{"uv":[0,4,2,5],"texture":"#0"},"west":{"uv":[0,2,10,3],"texture":"#0"},"up":{"uv":[0.5,4,2.5,16],"texture":"#0"},"down":{"uv":[0,4.5,2,15.5],"texture":"#0"}}},{"from":[1,1,2],"to":[3,2,14],"faces":{"north":{"uv":[0,4,2,5],"texture":"#0"},"east":{"uv":[0,2,10,3],"texture":"#0"},"south":{"uv":[0,4,2,5],"texture":"#0"},"west":{"uv":[0,0,12,1],"texture":"#0"},"up":{"uv":[2.5,4,0.5,16],"texture":"#0"},"down":{"uv":[2,4.5,0,15.5],"texture":"#0"}}},{"from":[3,1,13],"to":[13,2,15],"faces":{"north":{"uv":[0,2,10,3],"texture":"#0"},"east":{"uv":[0,4,2,5],"texture":"#0"},"south":{"uv":[1,0,11,1],"texture":"#0"},"west":{"uv":[0,4,2,5],"texture":"#0"},"up":{"uv":[0,3,10,1],"texture":"#0"},"down":{"uv":[0.5,1.5,9.5,3.5],"texture":"#0"}}},{"from":[3,1,1],"to":[13,2,3],"faces":{"north":{"uv":[1,0,11,1],"texture":"#0"},"east":{"uv":[0,4,2,5],"texture":"#0"},"south":{"uv":[0,2,10,3],"texture":"#0"},"west":{"uv":[0,4,2,5],"texture":"#0"},"up":{"uv":[0,1,10,3],"texture":"#0"},"down":{"uv":[0.5,3.5,9.5,1.5],"texture":"#0"}}},{"from":[12,0,3],"to":[13,1,13],"rotation":{"angle":0,"axis":"y","origin":[8,0,8]},"faces":{"north":{"uv":[15,15,16,16],"texture":"#0","tintindex":0},"east":{"uv":[5,15,15,16],"texture":"#0","tintindex":0},"south":{"uv":[21,15,22,16],"texture":"#0","tintindex":0},"west":{"uv":[6,14,16,15],"texture":"#0","tintindex":0},"up":{"uv":[16,14,15,6],"texture":"#0","tintindex":0},"down":{"uv":[6,4,5,14],"texture":"#0","tintindex":0}}},{"from":[3,0,3],"to":[4,1,13],"rotation":{"angle":0,"axis":"y","origin":[8,0,8]},"faces":{"north":{"uv":[15,15,16,16],"texture":"#0","tintindex":0},"east":{"uv":[6,14,16,15],"texture":"#0","tintindex":0},"south":{"uv":[21,15,22,16],"texture":"#0","tintindex":0},"west":{"uv":[5,15,15,16],"texture":"#0","tintindex":0},"up":{"uv":[15,14,16,6],"texture":"#0","tintindex":0},"down":{"uv":[5,3.5,6,13.5],"texture":"#0","tintindex":0}}},{"from":[4,0,3],"to":[12,1,4],"rotation":{"angle":0,"axis":"y","origin":[4,0,3]},"faces":{"north":{"uv":[6,15,14,16],"texture":"#0"},"east":{"uv":[15,15,16,16],"texture":"#0"},"south":{"uv":[7,7,15,8],"texture":"#0"},"west":{"uv":[15,15,16,16],"texture":"#0"},"up":{"uv":[6,16,14,15],"texture":"#0"},"down":{"uv":[7,15,15,14],"texture":"#0"}}},{"from":[4,0,12],"to":[12,1,13],"rotation":{"angle":0,"axis":"y","origin":[4,0,12]},"faces":{"north":{"uv":[7,14,15,15],"texture":"#0"},"east":{"uv":[15,15,16,16],"texture":"#0"},"south":{"uv":[6,15,14,16],"texture":"#0"},"west":{"uv":[15,15,16,16],"texture":"#0"},"up":{"uv":[6,15,14,16],"texture":"#0"},"down":{"uv":[7,14,15,15],"texture":"#0"}}},{"from":[4,1,4],"to":[12,3,12],"faces":{"north":{"uv":[7,5,15,7],"texture":"#0"},"east":{"uv":[7,5,15,7],"texture":"#0"},"south":{"uv":[7,5,15,7],"texture":"#0"},"west":{"uv":[7,5,15,7],"texture":"#0"},"up":{"uv":[7,7,15,15],"texture":"#0"},"down":{"uv":[7,7,15,15],"texture":"#0"}}},{"from":[5,3,5],"to":[11,4,11],"faces":{"north":{"uv":[10,4,16,5],"texture":"#0"},"east":{"uv":[10,4,16,5],"texture":"#0"},"south":{"uv":[10,4,16,5],"texture":"#0"},"west":{"uv":[10,4,16,5],"texture":"#0"},"up":{"uv":[8,8,14,14],"texture":"#0"},"down":{"uv":[8,8,14,14],"texture":"#0"}}},{"from":[6,4,6],"to":[10,6,10],"faces":{"north":{"uv":[3,13,7,15],"texture":"#0"},"east":{"uv":[3,13,7,15],"texture":"#0"},"south":{"uv":[3,13,7,15],"texture":"#0"},"west":{"uv":[3,13,7,15],"texture":"#0"},"up":{"uv":[3,9,7,13],"texture":"#0"},"down":{"uv":[3,9,7,13],"texture":"#0"}}},{"from":[7,4,5],"to":[9,6,11],"faces":{"north":{"uv":[14,0,16,2],"texture":"#0"},"east":{"uv":[10,2,16,4],"texture":"#0"},"south":{"uv":[14,0,16,2],"texture":"#0"},"west":{"uv":[10,2,16,4],"texture":"#0"},"up":{"uv":[5,7,7,13],"texture":"#0"},"down":{"uv":[7,14,5,8],"texture":"#0"}}},{"from":[5,4,7],"to":[11,6,9],"faces":{"north":{"uv":[10,2,16,4],"texture":"#0"},"east":{"uv":[14,0,16,2],"texture":"#0"},"south":{"uv":[10,2,16,4],"texture":"#0"},"west":{"uv":[14,0,16,2],"texture":"#0"},"up":{"uv":[2.5,7,5,9],"texture":"#0"},"down":{"uv":[10,2,16,4],"texture":"#0"}}},{"from":[7,6,6],"to":[9,7,10],"faces":{"north":{"uv":[12,0,14,1],"texture":"#0"},"east":{"uv":[10,1,14,2],"texture":"#0"},"south":{"uv":[12,0,14,1],"texture":"#0"},"west":{"uv":[10,1,14,2],"texture":"#0"},"up":{"uv":[5,5,7,9],"texture":"#0"},"down":{"uv":[5,5,7,9],"texture":"#0"}}},{"from":[6,6,7],"to":[10,7,9],"faces":{"north":{"uv":[10,1,14,2],"texture":"#0"},"east":{"uv":[12,0,14,1],"texture":"#0"},"south":{"uv":[10,1,14,2],"texture":"#0"},"west":{"uv":[12,0,14,1],"texture":"#0"},"up":{"uv":[2.5,7,6.5,9],"texture":"#0"},"down":{"uv":[12,2,16,4],"texture":"#0"}}}],"display":{"thirdperson_righthand":{"rotation":[-48,-12,-67],"translation":[7.25,4.75,-2.5],"scale":[-1,1,1]},"thirdperson_lefthand":{"rotation":[-48,-12,-67],"translation":[7.25,4.75,-2.5]},"firstperson_righthand":{"translation":[0,2.5,0]},"firstperson_lefthand":{"translation":[0,2.5,0]},"ground":{"translation":[0,4,0]},"gui":{"rotation":[25,15,0],"translation":[0,4.5,0],"scale":[0.9,0.9,0.9]},"head":{"translation":[0,17.5,0],"scale":[2.0,2.0,2.0]},"fixed":{"rotation":[-90,0,0],"translation":[0,0,-7]}},"groups":[{"name":"group","origin":[14,1,8],"color":0,"children":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]}]}
 		},
 		"mask_re2": {
 			"id": CUSTOM_ITEM_VANILLA,
-			"lore": ['{"text":"Made by Akwaden","color":"gold","italic":false}'],
+			"lore": [{"text":"Made by Akwaden","color":"gold","italic":False}],
 			"equippable": {"slot": "head"},
 			OVERRIDE_MODEL: {"credit":"Made with Blockbench","parent":"MaskRE2","textures":{"2":f"{ns}:item/mask_re2","particle":f"{ns}:item/mask_re2"},"elements":[{"from":[2,0,14],"to":[14,2,16],"rotation":{"angle":0,"axis":"y","origin":[8,0,22]},"faces":{"north":{"uv":[2,12,3,13],"texture":"#2"},"east":{"uv":[2,12,3,13],"texture":"#2"},"south":{"uv":[2,12,3,13],"texture":"#2"},"west":{"uv":[2,12,3,13],"texture":"#2"},"up":{"uv":[2,12,3,13],"texture":"#2"},"down":{"uv":[2,12,3,13],"texture":"#2"}}},{"from":[0,0,0],"to":[16,2,2],"rotation":{"angle":0,"axis":"y","origin":[8,0,8]},"faces":{"north":{"uv":[2,12,3,13],"texture":"#2"},"east":{"uv":[2,12,3,13],"texture":"#2"},"south":{"uv":[2,12,3,13],"texture":"#2"},"west":{"uv":[2,12,3,13],"texture":"#2"},"up":{"uv":[2,12,3,13],"texture":"#2"},"down":{"uv":[2,12,3,13],"texture":"#2"}}},{"from":[0,0,2],"to":[2,2,16],"rotation":{"angle":0,"axis":"y","origin":[8,0,8]},"faces":{"north":{"uv":[2,12,3,13],"texture":"#2"},"east":{"uv":[2,12,3,13],"texture":"#2"},"south":{"uv":[2,12,3,13],"texture":"#2"},"west":{"uv":[2,12,3,13],"texture":"#2"},"up":{"uv":[2,12,3,13],"texture":"#2"},"down":{"uv":[2,12,3,13],"texture":"#2"}}},{"from":[14,0,2],"to":[16,2,16],"rotation":{"angle":0,"axis":"y","origin":[22,0,8]},"faces":{"north":{"uv":[2,12,3,13],"texture":"#2"},"east":{"uv":[2,12,3,13],"texture":"#2"},"south":{"uv":[2,12,3,13],"texture":"#2"},"west":{"uv":[2,12,3,13],"texture":"#2"},"up":{"uv":[2,12,3,13],"texture":"#2"},"down":{"uv":[2,12,3,13],"texture":"#2"}}},{"from":[5,0,-2],"to":[11,5,2],"rotation":{"angle":0,"axis":"y","origin":[8,0,8]},"faces":{"north":{"uv":[3,2,5,3],"texture":"#2"},"east":{"uv":[7,12,9,13],"texture":"#2"},"south":{"uv":[2,12,3,13],"texture":"#2"},"west":{"uv":[7,12,9,13],"texture":"#2"},"up":{"uv":[7,12,9,13],"texture":"#2"},"down":{"uv":[7,12,9,13],"texture":"#2"}}},{"from":[3,0,-1],"to":[13,4,2],"rotation":{"angle":0,"axis":"y","origin":[8,0,8]},"faces":{"north":{"uv":[6,9,10,11],"texture":"#2"},"east":{"uv":[6,9,10,11],"texture":"#2"},"south":{"uv":[2,12,3,13],"texture":"#2"},"west":{"uv":[6,9,10,11],"texture":"#2"},"up":{"uv":[6,9,10,11],"texture":"#2"},"down":{"uv":[6,9,10,11],"texture":"#2"}}}],"display":{"thirdperson_righthand":{"translation":[0,0.75,-1.75],"scale":[0.38,0.38,0.4]},"thirdperson_lefthand":{"translation":[0,0.5,-1.75],"scale":[0.38,0.37,0.38]},"firstperson_righthand":{"translation":[0,6,0]},"firstperson_lefthand":{"translation":[0,6,0]},"ground":{"translation":[0,2.25,0],"scale":[0.38,0.38,0.38]},"gui":{"rotation":[45,45,0],"translation":[0,3.5,0],"scale":[0.7,0.7,0.7]},"head":{"translation":[0,1.25,0]},"fixed":{"rotation":[-90,0,0],"translation":[0,0,-7]}}}
 		},
 		"iron_bowl": {
 			"id": CUSTOM_ITEM_VANILLA,
-			"lore": ['{"text":"Made by Emilou","color":"gold","italic":false}'],
+			"lore": [{"text":"Made by Emilou","color":"gold","italic":False}],
 		},
 		"rice": {
 			"id": "minecraft:apple",
-			"lore": ['{"text":"Made by Emilou","color":"gold","italic":false}'],
+			"lore": [{"text":"Made by Emilou","color":"gold","italic":False}],
 			"max_stack_size": 1,
 			"consumable": {
 				"on_consume_effects": [{
@@ -567,7 +567,7 @@ def main(config: dict) -> dict[str, dict]:
 		},
 		"cooked_rice": {
 			"id": "minecraft:apple",
-			"lore": ['{"text":"Made by Emilou","color":"gold","italic":false}'],
+			"lore": [{"text":"Made by Emilou","color":"gold","italic":False}],
 			"max_stack_size": 1,
 			"consumable": {},
 			"food": {"nutrition": 20,"saturation": 12},
@@ -579,7 +579,7 @@ def main(config: dict) -> dict[str, dict]:
 		},
 		"croissant": {
 			"id": "minecraft:apple",
-			"lore": ['{"text":"Made by M4TOUW","color":"gold","italic":false}'],
+			"lore": [{"text":"Made by M4TOUW","color":"gold","italic":False}],
 			"consumable": {},
 			"food": {"nutrition": 6,"saturation": 7},
 			"category": "food",
@@ -590,7 +590,7 @@ def main(config: dict) -> dict[str, dict]:
 		},
 		"marcus_chicken": {
 			"id": "minecraft:apple",
-			"lore": ['{"text":"Made by Stoupy","color":"gold","italic":false}'],
+			"lore": [{"text":"Made by Stoupy","color":"gold","italic":False}],
 			"consumable": {},
 			"food": {"nutrition": 7,"saturation": 7.5},
 			"category": "food",
@@ -601,28 +601,28 @@ def main(config: dict) -> dict[str, dict]:
 		},
 		"chocolatine": {
 			"id": "minecraft:apple",
-			"lore": ['{"text":"Made by Fhara","color":"gold","italic":false}'],
+			"lore": [{"text":"Made by Fhara","color":"gold","italic":False}],
 			"consumable": {},
 			"food": {"nutrition": 5,"saturation": 6},
 			"category": "food",
 		},
 		"donut": {
 			"id": "minecraft:apple",
-			"lore": ['{"text":"Made by M4TOUW","color":"gold","italic":false}'],
+			"lore": [{"text":"Made by M4TOUW","color":"gold","italic":False}],
 			"consumable": {},
 			"food": {"nutrition": 5,"saturation": 6},
 			"category": "food",
 		},
 		"chocolate_eclair" : {
 			"id": "minecraft:apple",
-			"lore": ['{"text":"Made by M4TOUW","color":"gold","italic":false}'],
+			"lore": [{"text":"Made by M4TOUW","color":"gold","italic":False}],
 			"consumable": {},
 			"food": {"nutrition": 5,"saturation": 6},
 			"category": "food",
 		},
 		"strawberry_pie" : {
 			"id": "minecraft:apple",
-			"lore": ['{"text":"Made by M4TOUW","color":"gold","italic":false}'],
+			"lore": [{"text":"Made by M4TOUW","color":"gold","italic":False}],
 			"consumable": {},
 			"food": {"nutrition": 5,"saturation": 6},
 			"category": "food",
@@ -640,7 +640,7 @@ def main(config: dict) -> dict[str, dict]:
 		database[fish] = {
 			"id": "minecraft:apple", "consumable": {},
 			"food": {"nutrition": 4, "saturation": 2.4, "can_always_eat": True},
-			"lore": ['{"text":"Made by M4TOUW","color":"gold","italic":false}'],
+			"lore": [{"text":"Made by M4TOUW","color":"gold","italic":False}],
 			"equippable": {"slot": "head", "camera_overlay":f"{ns}:item/{fish}"},
 			"category": "fish",
 		}

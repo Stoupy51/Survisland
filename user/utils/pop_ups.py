@@ -1,7 +1,7 @@
 
 # Imports
+import stouputils as stp
 from python_datapack.constants import *
-from python_datapack.utils.print import *
 from python_datapack.utils.io import *
 
 # Constants
@@ -47,14 +47,14 @@ def main(config: dict) -> None:
 			}
 		}
 		# Write the advancement
-		write_to_file(advancement_path, super_json_dump(adv))
+		write_file(advancement_path, stp.super_json_dump(adv))
 
 	# Write the rewards function that
 	tellraws: str = '\n'.join([
 		f'tellraw @s[advancements={{{cleaned}=true}}] [{{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true}},{{"text":" {label} {remaining_time} !","color":"aqua"}}]'
 		for cleaned, (label, remaining_time) in zip(all_paths, product(LABELS, TIMES))
 	])
-	write_to_function(config, f"{namespace}:advancements/pop_ups", f"""
+	write_function(config, f"{namespace}:advancements/pop_ups", f"""
 # Revoke all pop-ups
 schedule function {namespace}:advancements/pop_ups_revoke 1s replace
 
@@ -68,7 +68,7 @@ playsound ui.toast.in
 playsound ui.toast.in
 """)
 	revokes: str = '\n'.join([f"advancement revoke @a only {path}" for path in all_paths])
-	write_to_function(config, f"{namespace}:advancements/pop_ups_revoke", revokes)
+	write_function(config, f"{namespace}:advancements/pop_ups_revoke", revokes)
 	
 
 
