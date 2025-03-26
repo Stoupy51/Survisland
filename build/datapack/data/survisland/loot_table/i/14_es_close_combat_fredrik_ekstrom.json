@@ -14,16 +14,16 @@
 									"survisland": {"14_es_close_combat_fredrik_ekstrom": true},
 									"smithed": {"dict": {"record": {"14_es_close_combat_fredrik_ekstrom": true}},"ignore": {"functionality": true,"crafting": true}}
 								},
-								"minecraft:item_name": "{'text':'Music Disc', 'italic': false}",
-								"minecraft:jukebox_playable": {
-									"song": "survisland:14_es_close_combat_fredrik_ekstrom",
-									"show_in_tooltip": true
+								"minecraft:item_name": {
+									"text": "Music Disc",
+									"italic": false
 								},
+								"minecraft:jukebox_playable": "survisland:14_es_close_combat_fredrik_ekstrom",
 								"minecraft:max_stack_size": 1,
 								"minecraft:rarity": "rare",
 								"minecraft:item_model": "survisland:14_es_close_combat_fredrik_ekstrom",
 								"minecraft:lore": [
-									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"
+									["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]
 								]
 							}
 						}

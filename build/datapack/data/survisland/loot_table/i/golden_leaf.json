@@ -10,11 +10,15 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
-								"minecraft:item_name": "{\"text\":\"Feuille d'or\",\"italic\":false,\"color\":\"gold\"}",
+								"minecraft:item_name": {
+									"text": "Feuille d'or",
+									"italic": false,
+									"color": "gold"
+								},
 								"minecraft:max_stack_size": 64,
 								"minecraft:item_model": "survisland:golden_leaf",
 								"minecraft:lore": [
-									"[\"\", {\"text\": \"I\", \"color\": \"white\", \"italic\": false, \"font\": \"survisland:icons\"}, {\"text\": \" Survisland\", \"italic\": true, \"color\": \"blue\"}]"
+									["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]
 								],
 								"minecraft:custom_data": {
 									"survisland": {"golden_leaf": true},
