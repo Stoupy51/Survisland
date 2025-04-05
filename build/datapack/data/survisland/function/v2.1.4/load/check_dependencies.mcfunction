@@ -1,7 +1,7 @@
 
-#> survisland:v2.1.3/load/check_dependencies
+#> survisland:v2.1.4/load/check_dependencies
 #
-# @within	survisland:v2.1.3/load/secondary
+# @within	survisland:v2.1.4/load/secondary
 #
 
 ## Check if Survisland is loadable (dependencies)
