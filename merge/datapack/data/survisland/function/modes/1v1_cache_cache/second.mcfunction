@@ -8,8 +8,8 @@ function survisland:modes/1v1_cache_cache/update_sidebar_points with storage sur
 function survisland:modes/1v1_cache_cache/update_sidebar_timer
 
 scoreboard players add #glowing survisland.data 1
-execute if score #glowing survisland.data matches 60.. run effect give @a[tag=survisland.alive] glowing 5 0 true
-execute if score #glowing survisland.data matches 60.. run effect give @a[tag=survisland.seeker] glowing 5 0 true
+execute if score #glowing survisland.data matches 60.. run effect give @a[tag=survisland.alive,tag=!survisland.no_glowing] glowing 5 0 true
+execute if score #glowing survisland.data matches 60.. run effect give @a[tag=survisland.seeker,tag=!survisland.no_glowing] glowing 5 0 true
 execute if score #glowing survisland.data matches 60.. as @a at @s run playsound entity.creeper.primed ambient @s
 execute if score #glowing survisland.data matches 60.. run scoreboard players set #glowing survisland.data 0
 

@@ -12,7 +12,7 @@ effect give @a[tag=survisland.seeker] speed 900 0 true
 
 tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Lancement de l'épreuve, restez bien cachés !"}]
 
-scoreboard objectives add survisland.temp.deathCount deathCount
+scoreboard objectives add survisland.temp.death_count deathCount
 scoreboard objectives add survisland.temp.sidebar dummy {"text":"Cache-Cache","color":"gold"}
 scoreboard objectives add survisland.temp.heart_beat dummy
 scoreboard objectives setdisplay sidebar survisland.temp.sidebar

@@ -5,7 +5,7 @@ schedule function survisland:modes/cache_cache/tick 1t replace
 scoreboard players add #cache_cache_ticks survisland.data 1
 
 #Detection de mort
-execute as @a[scores={survisland.temp.deathCount=1..}] run function survisland:modes/cache_cache/death
+execute as @a[scores={survisland.temp.death_count=1..}] run function survisland:modes/cache_cache/death
 execute as @e[type=player,tag=survisland.dead] run function survisland:modes/cache_cache/death_teleport
 
 #Heart beat
