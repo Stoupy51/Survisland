@@ -4,7 +4,7 @@
 tag @a remove survisland.alive
 tag @a[gamemode=!spectator,gamemode=!creative,tag=!survisland.seeker] add survisland.alive
 
-scoreboard objectives add survisland.temp.deathCount deathCount
+scoreboard objectives add survisland.temp.death_count deathCount
 scoreboard objectives add survisland.temp.sidebar dummy {"text":"Cache-Cache","color":"gold"}
 scoreboard objectives add survisland.temp.heart_beat dummy
 scoreboard objectives setdisplay sidebar survisland.temp.sidebar

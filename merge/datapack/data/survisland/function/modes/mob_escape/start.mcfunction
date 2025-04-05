@@ -6,7 +6,7 @@ tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":tru
 gamemode adventure @a[gamemode=survival]
 tag @a[gamemode=adventure] add survisland.alive
 
-scoreboard objectives add survisland.temp.deathCount deathCount
+scoreboard objectives add survisland.temp.death_count deathCount
 
 scoreboard players set #mob_escape_seconds survisland.data 0
 scoreboard players set #mob_escape_ticks survisland.data 0

@@ -4,8 +4,8 @@
 schedule function survisland:modes/mob_escape/tick 1t replace
 scoreboard players add #mob_escape_ticks survisland.data 1
 
-execute as @a[scores={survisland.temp.deathCount=1..}] run function survisland:modes/layers/death
-execute as @e[type=player,scores={survisland.temp.deathCount=1..}] run function survisland:modes/layers/death_tp
+execute as @a[scores={survisland.temp.death_count=1..}] run function survisland:modes/layers/death
+execute as @e[type=player,scores={survisland.temp.death_count=1..}] run function survisland:modes/layers/death_tp
 
 
 

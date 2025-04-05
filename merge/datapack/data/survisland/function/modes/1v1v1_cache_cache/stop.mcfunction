@@ -14,7 +14,7 @@ team remove survisland.temp.sidebar.4
 team remove survisland.temp.sidebar.3
 team remove survisland.temp.sidebar.2
 team remove survisland.temp.sidebar.1
-scoreboard objectives remove survisland.temp.deathCount
+scoreboard objectives remove survisland.temp.death_count
 scoreboard objectives remove survisland.temp.heart_beat
 scoreboard objectives remove survisland.temp.sidebar
 
