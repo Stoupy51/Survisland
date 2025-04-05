@@ -7,7 +7,7 @@ execute as @a run attribute @s attack_speed base set 4.0
 team remove survisland.temp.sidebar.3
 team remove survisland.temp.sidebar.2
 team remove survisland.temp.sidebar.1
-scoreboard objectives remove survisland.temp.deathCount
+scoreboard objectives remove survisland.temp.death_count
 scoreboard objectives remove survisland.temp.sidebar
 
 schedule clear survisland:modes/pitch_creep/tick

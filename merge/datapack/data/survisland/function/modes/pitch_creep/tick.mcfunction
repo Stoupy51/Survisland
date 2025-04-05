@@ -9,7 +9,7 @@ execute as @a[team=mTuarua,tag=survisland.alive,predicate=survisland:in_water] a
 execute as @a[team=mPeluang,tag=survisland.alive,predicate=survisland:in_water] at @s run tp @s ~-5 ~1 ~
 
 #Detection de mort
-execute as @a[scores={survisland.temp.deathCount=1..}] run function survisland:modes/pitch_creep/death
+execute as @a[scores={survisland.temp.death_count=1..}] run function survisland:modes/pitch_creep/death
 execute as @e[type=player,tag=survisland.dead] run function survisland:modes/pitch_creep/death_teleport
 
 #Comptage des entités restantes

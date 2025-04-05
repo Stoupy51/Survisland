@@ -13,7 +13,7 @@ team modify mAkijan friendlyFire false
 
 tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Lancement de la partie de Layers, exterminez l'équipe ennemie !"}]
 
-scoreboard objectives add survisland.temp.deathCount deathCount
+scoreboard objectives add survisland.temp.death_count deathCount
 scoreboard objectives add survisland.temp.sidebar dummy {"text":"Joueurs restants","color":"yellow"}
 scoreboard objectives setdisplay sidebar survisland.temp.sidebar
 
