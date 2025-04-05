@@ -1,7 +1,7 @@
 
-#> survisland:v2.1.4/minute
+#> survisland:v2.1.5/minute
 #
-# @within	survisland:v2.1.4/tick
+# @within	survisland:v2.1.5/tick
 #
 
 # Reset timer
