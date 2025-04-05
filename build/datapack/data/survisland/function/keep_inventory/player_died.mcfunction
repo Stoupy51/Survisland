@@ -1,7 +1,7 @@
 
 #> survisland:keep_inventory/player_died
 #
-# @within	survisland:v2.1.4/tick
+# @within	survisland:v2.1.5/tick
 #
 
 # Reset scoreboard

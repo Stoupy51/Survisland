@@ -1,7 +1,7 @@
 
-#> survisland:v2.1.4/load/confirm_load
+#> survisland:v2.1.5/load/confirm_load
 #
-# @within	survisland:v2.1.4/load/valid_dependencies
+# @within	survisland:v2.1.5/load/valid_dependencies
 #
 
 # Register the manual to the universal manual
@@ -10,7 +10,7 @@ data remove storage python_datapack:main universal_manual[{"name":"Survisland"}]
 data modify storage python_datapack:main universal_manual append value {"name":"Survisland","loot_table":"survisland:i/manual","hover":[{"text": ""}, {"text": "Survisland Manual\\n"}, {"text": "!!ဠ\\n\\n\\n\\n\\n\\n", "font": "survisland:manual", "color": "white"}, {"text": "Ratio gold", "color": "#505050"}]}
 
 # Confirm load
-tellraw @a[tag=convention.debug] {"text":"[Loaded Survisland v2.1.4]","color":"green"}
+tellraw @a[tag=convention.debug] {"text":"[Loaded Survisland v2.1.5]","color":"green"}
 scoreboard players set #survisland.loaded load.status 1
 
 # Items storage

@@ -1,12 +1,12 @@
 
-#> survisland:v2.1.4/load/valid_dependencies
+#> survisland:v2.1.5/load/valid_dependencies
 #
-# @within	survisland:v2.1.4/load/secondary
-#			survisland:v2.1.4/load/valid_dependencies 1t replace
+# @within	survisland:v2.1.5/load/secondary
+#			survisland:v2.1.5/load/valid_dependencies 1t replace
 #
 
 # Waiting for a player to get the game version, but stop function if no player found
-execute unless entity @p run schedule function survisland:v2.1.4/load/valid_dependencies 1t replace
+execute unless entity @p run schedule function survisland:v2.1.5/load/valid_dependencies 1t replace
 execute unless entity @p run return 0
 execute store result score #game_version survisland.data run data get entity @p DataVersion
 
@@ -21,5 +21,5 @@ execute if score #dependency_error survisland.data matches 1 unless score #furna
 execute if score #dependency_error survisland.data matches 1 if score #furnace_nbt_recipes.major load.status matches 1 unless score #furnace_nbt_recipes.minor load.status matches 9.. run tellraw @a {"text":"- [Furnace NBT Recipes (v1.9.0+)]","color":"gold","click_event":{"action":"open_url","url":"https://github.com/Stoupy51/FurnaceNbtRecipes"}}
 
 # Load Survisland
-execute if score #game_version survisland.data matches 1.. if score #mcload_error survisland.data matches 0 if score #dependency_error survisland.data matches 0 run function survisland:v2.1.4/load/confirm_load
+execute if score #game_version survisland.data matches 1.. if score #mcload_error survisland.data matches 0 if score #dependency_error survisland.data matches 0 run function survisland:v2.1.5/load/confirm_load
 

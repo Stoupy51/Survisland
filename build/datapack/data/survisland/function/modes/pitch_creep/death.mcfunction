@@ -4,7 +4,7 @@
 # @within	survisland:modes/pitch_creep/tick
 #
 
-scoreboard players reset @s survisland.temp.deathCount
+scoreboard players reset @s survisland.temp.death_count
 tag @s remove survisland.alive
 tag @s add survisland.dead
 
