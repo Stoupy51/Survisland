@@ -627,6 +627,12 @@ def main(config: dict) -> dict[str, dict]:
 			"food": {"nutrition": 5,"saturation": 6},
 			"category": "food",
 		},
+		"scalbar": {
+			"id": CUSTOM_ITEM_VANILLA,
+			"lore": [{"text":"Made by EvoRay","color":"gold","italic":False}],
+			"consumable": {},
+			"category": "misc",
+		}
 	}
 
 	# Add colored books
