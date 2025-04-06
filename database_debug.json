@@ -763,6 +763,26 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s22": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
+	"logo_s23": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s23",
+		"item_name": {"text": "Logo S23","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s23": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s24": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s24",
+		"item_name": {"text": "Logo S24","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s24": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"necklace": {
 		"id": "minecraft:command_block",
 		"max_stack_size": 1,
