@@ -200,10 +200,14 @@
 		{"text": "!\n","hover_event": {"action": "show_item","id": "apple","components": {"item_name": {"text": "Logo S20","italic": false,"color": "white"}}},"click_event": {"action": "change_page","page": 69}},
 		"\"",
 		{"text": "$肝","hover_event": {"action": "show_item","id": "apple","components": {"item_name": {"text": "Logo S21","italic": false,"color": "white"}}},"click_event": {"action": "change_page","page": 70}},
-		{"text": "$肟\n","hover_event": {"action": "show_item","id": "apple","components": {"item_name": {"text": "Logo S22","italic": false,"color": "white"}}},"click_event": {"action": "change_page","page": 71}},
+		{"text": "$肟","hover_event": {"action": "show_item","id": "apple","components": {"item_name": {"text": "Logo S22","italic": false,"color": "white"}}},"click_event": {"action": "change_page","page": 71}},
+		{"text": "$股","hover_event": {"action": "show_item","id": "apple","components": {"item_name": {"text": "Logo S23","italic": false,"color": "white"}}},"click_event": {"action": "change_page","page": 72}},
+		{"text": "$肣\n","hover_event": {"action": "show_item","id": "apple","components": {"item_name": {"text": "Logo S24","italic": false,"color": "white"}}},"click_event": {"action": "change_page","page": 73}},
 		"\"",
 		{"text": "!","hover_event": {"action": "show_item","id": "apple","components": {"item_name": {"text": "Logo S21","italic": false,"color": "white"}}},"click_event": {"action": "change_page","page": 70}},
-		{"text": "!\n","hover_event": {"action": "show_item","id": "apple","components": {"item_name": {"text": "Logo S22","italic": false,"color": "white"}}},"click_event": {"action": "change_page","page": 71}}
+		{"text": "!","hover_event": {"action": "show_item","id": "apple","components": {"item_name": {"text": "Logo S22","italic": false,"color": "white"}}},"click_event": {"action": "change_page","page": 71}},
+		{"text": "!","hover_event": {"action": "show_item","id": "apple","components": {"item_name": {"text": "Logo S23","italic": false,"color": "white"}}},"click_event": {"action": "change_page","page": 72}},
+		{"text": "!\n","hover_event": {"action": "show_item","id": "apple","components": {"item_name": {"text": "Logo S24","italic": false,"color": "white"}}},"click_event": {"action": "change_page","page": 73}}
 	],
 	[
 		{"text": "","font": "survisland:manual","color": "white"},
@@ -216,7 +220,7 @@
 		{"text": "  \n","hover_event": {"action": "show_item","id": "apple","components": {"lore": [{"text": "Made by Emilou","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"item_name": {"text": "Rice","italic": false,"color": "white"}}},"click_event": {"action": "change_page","page": 8}},
 		"!!",
 		{"text": "  \n\n","hover_event": {"action": "show_item","id": "apple","components": {"lore": [{"text": "Made by Emilou","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"item_name": {"text": "Rice","italic": false,"color": "white"}}},"click_event": {"action": "change_page","page": 8}},
-		{"text": "肤\n%##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "survisland:manual","color": "white"},"\"/\n","\"",{"text": "$耡"},"\n","\"",{"text": "1$"},"\n","\"\"\"\"1$1$",{"text": "$$耣"},"\n","\"\"\"\"1$1$",{"text": "1$"},"\n","\n\n"],{"text": "\n- x1 ","color": "gray"},{"text": "Rice","color": "gray"}]},"click_event": {"action": "change_page","page": 9}}
+		{"text": "肨\n%##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "survisland:manual","color": "white"},"\"/\n","\"",{"text": "$耡"},"\n","\"",{"text": "1$"},"\n","\"\"\"\"1$1$",{"text": "$$耣"},"\n","\"\"\"\"1$1$",{"text": "1$"},"\n","\n\n"],{"text": "\n- x1 ","color": "gray"},{"text": "Rice","color": "gray"}]},"click_event": {"action": "change_page","page": 9}}
 	],
 	[
 		{"text": "","font": "survisland:manual","color": "white"},
@@ -235,27 +239,27 @@
 		{"text": "","font": "survisland:manual","color": "white"},
 		{"text": "Croissant\n","font": "minecraft:default","color": "black","underlined": true},
 		"\"+\n\"",
-		{"text": "$肪\n","hover_event": {"action": "show_item","id": "minecraft:bread","components": {}}},
+		{"text": "$肮\n","hover_event": {"action": "show_item","id": "minecraft:bread","components": {}}},
 		"\"",
 		{"text": "1$\n","hover_event": {"action": "show_item","id": "minecraft:bread","components": {}}},
 		"\"\"\"\"1$1$",
 		{"text": "$$耥\n","hover_event": {"action": "show_item","id": "apple","components": {"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"item_name": {"text": "Croissant","italic": false,"color": "white"}}}},
 		"\"\"\"\"1$1$",
 		{"text": "1$\n\n\n\n","hover_event": {"action": "show_item","id": "apple","components": {"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"item_name": {"text": "Croissant","italic": false,"color": "white"}}}},
-		{"text": "'\n%##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "survisland:manual","color": "white"},"\"/\n","\"",{"text": "$肪"},"\n","\"",{"text": "1$"},"\n","\"\"\"\"1$1$",{"text": "$$耥"},"\n","\"\"\"\"1$1$",{"text": "1$"},"\n","\n\n"],{"text": "\n- x1 ","color": "gray"},{"text": "Bread","color": "gray"}]}}
+		{"text": "'\n%##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "survisland:manual","color": "white"},"\"/\n","\"",{"text": "$肮"},"\n","\"",{"text": "1$"},"\n","\"\"\"\"1$1$",{"text": "$$耥"},"\n","\"\"\"\"1$1$",{"text": "1$"},"\n","\n\n"],{"text": "\n- x1 ","color": "gray"},{"text": "Bread","color": "gray"}]}}
 	],
 	[
 		{"text": "","font": "survisland:manual","color": "white"},
 		{"text": "Marcus Chicken\n","font": "minecraft:default","color": "black","underlined": true},
 		"\"+\n\"",
-		{"text": "$肮\n","hover_event": {"action": "show_item","id": "minecraft:cooked_chicken","components": {}}},
+		{"text": "$育\n","hover_event": {"action": "show_item","id": "minecraft:cooked_chicken","components": {}}},
 		"\"",
 		{"text": "1$\n","hover_event": {"action": "show_item","id": "minecraft:cooked_chicken","components": {}}},
 		"\"\"\"\"1$1$",
 		{"text": "$$耧\n","hover_event": {"action": "show_item","id": "apple","components": {"lore": [{"text": "Made by Stoupy","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"item_name": {"text": "Marcus Chicken","italic": false,"color": "white"}}}},
 		"\"\"\"\"1$1$",
 		{"text": "1$\n\n\n\n","hover_event": {"action": "show_item","id": "apple","components": {"lore": [{"text": "Made by Stoupy","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"item_name": {"text": "Marcus Chicken","italic": false,"color": "white"}}}},
-		{"text": "'\n%##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "survisland:manual","color": "white"},"\"/\n","\"",{"text": "$肮"},"\n","\"",{"text": "1$"},"\n","\"\"\"\"1$1$",{"text": "$$耧"},"\n","\"\"\"\"1$1$",{"text": "1$"},"\n","\n\n"],{"text": "\n- x1 ","color": "gray"},{"text": "Cooked Chicken","color": "gray"}]}}
+		{"text": "'\n%##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "survisland:manual","color": "white"},"\"/\n","\"",{"text": "$育"},"\n","\"",{"text": "1$"},"\n","\"\"\"\"1$1$",{"text": "$$耧"},"\n","\"\"\"\"1$1$",{"text": "1$"},"\n","\n\n"],{"text": "\n- x1 ","color": "gray"},{"text": "Cooked Chicken","color": "gray"}]}}
 	],
 	[
 		{"text": "","font": "survisland:manual","color": "white"},
@@ -976,5 +980,29 @@
 		{"text": "  \n","hover_event": {"action": "show_item","id": "apple","components": {"item_name": {"text": "Logo S22","italic": false,"color": "white"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]}},"click_event": {"action": "change_page","page": 71}},
 		"!!",
 		{"text": "  \n","hover_event": {"action": "show_item","id": "apple","components": {"item_name": {"text": "Logo S22","italic": false,"color": "white"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]}},"click_event": {"action": "change_page","page": 71}}
+	],
+	[
+		{"text": "","font": "survisland:manual","color": "white"},
+		{"text": "Logo S23\n","font": "minecraft:default","color": "black","underlined": true},
+		"!!ၨ\n!!",
+		{"text": "  \n","hover_event": {"action": "show_item","id": "apple","components": {"item_name": {"text": "Logo S23","italic": false,"color": "white"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]}},"click_event": {"action": "change_page","page": 72}},
+		"!!",
+		{"text": "  \n","hover_event": {"action": "show_item","id": "apple","components": {"item_name": {"text": "Logo S23","italic": false,"color": "white"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]}},"click_event": {"action": "change_page","page": 72}},
+		"!!",
+		{"text": "  \n","hover_event": {"action": "show_item","id": "apple","components": {"item_name": {"text": "Logo S23","italic": false,"color": "white"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]}},"click_event": {"action": "change_page","page": 72}},
+		"!!",
+		{"text": "  \n","hover_event": {"action": "show_item","id": "apple","components": {"item_name": {"text": "Logo S23","italic": false,"color": "white"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]}},"click_event": {"action": "change_page","page": 72}}
+	],
+	[
+		{"text": "","font": "survisland:manual","color": "white"},
+		{"text": "Logo S24\n","font": "minecraft:default","color": "black","underlined": true},
+		"!!ၩ\n!!",
+		{"text": "  \n","hover_event": {"action": "show_item","id": "apple","components": {"item_name": {"text": "Logo S24","italic": false,"color": "white"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]}},"click_event": {"action": "change_page","page": 73}},
+		"!!",
+		{"text": "  \n","hover_event": {"action": "show_item","id": "apple","components": {"item_name": {"text": "Logo S24","italic": false,"color": "white"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]}},"click_event": {"action": "change_page","page": 73}},
+		"!!",
+		{"text": "  \n","hover_event": {"action": "show_item","id": "apple","components": {"item_name": {"text": "Logo S24","italic": false,"color": "white"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]}},"click_event": {"action": "change_page","page": 73}},
+		"!!",
+		{"text": "  \n","hover_event": {"action": "show_item","id": "apple","components": {"item_name": {"text": "Logo S24","italic": false,"color": "white"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]}},"click_event": {"action": "change_page","page": 73}}
 	]
 ]
