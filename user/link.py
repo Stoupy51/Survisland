@@ -1,6 +1,7 @@
 
 # Imports
 from python_datapack.constants import official_lib_used
+from python_datapack.dependencies.bookshelf import BOOKSHELF_MODULES
 from user.utils.other import main as generate_other_things
 from user.utils.item_modifiers import main as generate_books_modifiers
 from user.utils.pop_ups import main as generate_pop_ups
@@ -13,6 +14,7 @@ def main(config: dict) -> None:
 	generate_pop_ups(config)
 	generate_screamer(config)
 
-	# Force enable dump module from Bookshelf (https://docs.mcbookshelf.dev/en/latest/modules/dump.html)
-	official_lib_used("bs.dump")
-
+	# Force enable a all modules from Bookshelf (https://docs.mcbookshelf.dev/en/latest/modules/dump.html)
+	for module in BOOKSHELF_MODULES.keys():
+		official_lib_used(module)
+	
