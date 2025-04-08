@@ -1,7 +1,7 @@
 {
 	"values": [
 		{"id": "#furnace_nbt_recipes:load","required": false},
-		{"id": "#bs.dump:load","required": false}
+		{"id": "#bs.load:load","required": false}
 	]
 }
 
