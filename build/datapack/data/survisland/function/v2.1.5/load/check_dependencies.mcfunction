@@ -8,6 +8,6 @@
 scoreboard players set #dependency_error survisland.data 0
 execute if score #dependency_error survisland.data matches 0 unless score #furnace_nbt_recipes.major load.status matches 1.. run scoreboard players set #dependency_error survisland.data 1
 execute if score #dependency_error survisland.data matches 0 if score #furnace_nbt_recipes.major load.status matches 1 unless score #furnace_nbt_recipes.minor load.status matches 9.. run scoreboard players set #dependency_error survisland.data 1
-execute if score #dependency_error survisland.data matches 0 unless score #bs.dump.major load.status matches 3.. run scoreboard players set #dependency_error survisland.data 1
-execute if score #dependency_error survisland.data matches 0 if score #bs.dump.major load.status matches 3 unless score #bs.dump.minor load.status matches 0.. run scoreboard players set #dependency_error survisland.data 1
+execute if score #dependency_error survisland.data matches 0 unless score $bs.dump.major load.status matches 3.. run scoreboard players set #dependency_error survisland.data 1
+execute if score #dependency_error survisland.data matches 0 if score $bs.dump.major load.status matches 3 unless score $bs.dump.minor load.status matches 0.. run scoreboard players set #dependency_error survisland.data 1
 
