@@ -1,8 +1,9 @@
 
+# ruff: noqa: E501
 # Imports
 import stouputils as stp
-from python_datapack.constants import *
-from python_datapack.utils.io import *
+from python_datapack.utils.io import write_file, write_load_file
+
 
 # Generates trivial things in the datapack
 def main(config: dict) -> None:
@@ -44,7 +45,7 @@ data modify storage {ns}:main SurvislandError set value [{{"text":"[SurvislandEr
 data modify storage {ns}:main SurvislandHelp set value [{{"text":"[","color":"dark_aqua"}},{{"text":"SurvislandHelp","color":"aqua"}},{{"text":"]","color":"dark_aqua"}}]
 data modify storage {ns}:main Survisland set value [{{"text":"[","color":"dark_aqua"}},{{"text":"Survisland","color":"aqua"}},{{"text":"]","color":"dark_aqua"}}]
 """)
-	
+
 	# Tick function
 	write_file(f"{functions}/v{version}/tick.mcfunction", f"""
 # Custom Keep Inventory System
@@ -57,7 +58,7 @@ execute as @e[type=marker,tag={ns}.moving_structure] at @s run function {ns}:mov
 execute as @a[tag={ns}.can_fart,tag=!{ns}.farted,predicate={ns}:is_sneaking] at @s run function {ns}:utils/fart
 tag @a[tag={ns}.farted,predicate=!{ns}:is_sneaking] remove {ns}.farted
 """)
-	
+
 	# Second function
 	write_file(f"{functions}/v{version}/second.mcfunction", f"""
 # Check if their marker is still there
@@ -69,7 +70,7 @@ function {ns}:adventure_zone/second
 # Disable smart ore generation from SimplEnergy
 scoreboard players set _IS_ENABLED smart_ore_generation.data 0
 """)
-	
+
 	# Minute function
 	write_file(f"{functions}/v{version}/minute.mcfunction", f"""
 # Timer
@@ -78,7 +79,7 @@ scoreboard players set #second {ns}.data 0
 # Check if their marker is still there
 kill @e[type=marker,tag={ns}.keep_inventory]
 """)
-	
+
 	# Right click
 	json_content: dict = {"criteria":{"requirement":{"trigger":"minecraft:tick","conditions":{"player":[{"condition":"minecraft:entity_scores","entity":"this","scores":{f"{ns}.right_click":{"min":1}}}]}}},"rewards":{"function":f"{ns}:utils/right_click"}}
 	write_file(f"{advancements}/right_click.json", stp.super_json_dump(json_content, max_level = -1))
@@ -98,7 +99,7 @@ execute if score #success {ns}.data matches 0 store success score #success {ns}.
 scoreboard players reset @s {ns}.right_click
 tag @s remove {ns}.temp
 """)
-	
+
 	# parchemins/_convert_to_scroll
 	parchemin: dict = database['parchemin']
 	p_id: str = parchemin['id']
@@ -108,7 +109,7 @@ tag @s remove {ns}.temp
 data modify storage {ns}:main Item.id set value "{p_id}"
 data modify storage {ns}:main Item.components."minecraft:item_model" set value "{p_model}"
 """)
-	
+
 	# advancements/inventory_changed
 	pendent_model: str = database["pendent"]["item_model"]
 	pendent_held_model: str = database["pendent_held"]["item_model"]
@@ -129,11 +130,14 @@ execute if score #success {ns}.data matches 0 if items entity @s player.cursor *
 execute if score #success {ns}.data matches 0 if items entity @s player.cursor *[custom_data~{{"survisland":{{"pendent_held":true}}}}] run scoreboard players set #success {ns}.data 1
 execute if score #success {ns}.data matches 0 if data entity @s Inventory[].components."minecraft:custom_data".survisland.pendent run scoreboard players set #success {ns}.data 1
 execute if score #success {ns}.data matches 0 if data entity @s Inventory[].components."minecraft:custom_data".survisland.pendent_held run scoreboard players set #success {ns}.data 1
-execute if score #success {ns}.data matches 1 unless entity @s[tag={ns}.has_idol] run tellraw @a[gamemode=!adventure,gamemode=!survival] ["\\n",{{"nbt":"SurvislandSpec","storage":"{ns}:main","interpret":true}},{{"text":" Le joueur "}},{{"selector":"@s","color":"aqua"}},{{"text":" vient de récupérer un idol dans son inventaire !"}}]
+execute if score #success {ns}.data matches 1 unless entity @s[tag={ns}.has_idol] run tellraw @a[team=aMJ] ["\\n",{{"nbt":"SurvislandSpec","storage":"{ns}:main","interpret":true}},{{"text":" Le joueur "}},{{"selector":"@s","color":"aqua"}},{{"text":" vient de récupérer un idol dans son inventaire !"}}]
+execute if score #success {ns}.data matches 1 unless entity @s[tag={ns}.has_idol] run tellraw @a[team=aStaff] ["\\n",{{"nbt":"SurvislandSpec","storage":"{ns}:main","interpret":true}},{{"text":" Le joueur "}},{{"selector":"@s","color":"aqua"}},{{"text":" vient de récupérer un idol dans son inventaire !"}}]
+execute if score #success {ns}.data matches 1 unless entity @s[tag={ns}.has_idol] run tellraw @a[team=zSpec] ["\\n",{{"nbt":"SurvislandSpec","storage":"{ns}:main","interpret":true}},{{"text":" Le joueur "}},{{"selector":"@s","color":"aqua"}},{{"text":" vient de récupérer un idol dans son inventaire !"}}]
+execute if score #success {ns}.data matches 1 unless entity @s[tag={ns}.has_idol] run tellraw @a[team=zOut] ["\\n",{{"nbt":"SurvislandSpec","storage":"{ns}:main","interpret":true}},{{"text":" Le joueur "}},{{"selector":"@s","color":"aqua"}},{{"text":" vient de récupérer un idol dans son inventaire !"}}]
 execute if score #success {ns}.data matches 1 run tag @s add {ns}.has_idol
 execute if score #success {ns}.data matches 0 run tag @s remove {ns}.has_idol
 """)
-	
+
 	# utils/pendent_switch
 	write_file(f"{functions}/utils/pendent_switch.mcfunction", f"""
 # Copy du pendent dans un slot temporaire
