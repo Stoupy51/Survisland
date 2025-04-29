@@ -2,7 +2,7 @@
 #> survisland:player/first_join
 #
 # @within	advancement survisland:id_system
-#			survisland:player/check_marker
+#			survisland:player/check_id
 #
 
 # ID System

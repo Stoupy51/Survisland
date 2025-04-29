@@ -16,6 +16,9 @@ execute as @a[scores={survisland.deathCount=1..}] at @s run function survisland:
 # Moving Structure
 execute as @e[type=marker,tag=survisland.moving_structure] at @s run function survisland:moving_structure/tick
 
+# Cinematic
+execute if score #cinematic_entities survisland.data matches 1.. as @e[type=item_display,tag=survisland.cinematic] run function survisland:cinematic/entity_tick
+
 # Fart (BECAUSE FARTS ARE FUNNY XDDDDD LOL)
 execute as @a[tag=survisland.can_fart,tag=!survisland.farted,predicate=survisland:is_sneaking] at @s run function survisland:utils/fart
 tag @a[tag=survisland.farted,predicate=!survisland:is_sneaking] remove survisland.farted

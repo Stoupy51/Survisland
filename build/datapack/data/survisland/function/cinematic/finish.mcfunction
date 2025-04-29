@@ -1,7 +1,7 @@
 
 #> survisland:cinematic/finish
 #
-# @within	???
+# @within	survisland:cinematic/entity_tick
 #
 
 # Decrease the number of cinematic entities

@@ -7,8 +7,8 @@
 # Reset timer
 scoreboard players set #second survisland.data 0
 
-# Check if their marker is still there
-execute as @a run function survisland:player/check_marker
+# Given an ID to every player who hasn't one
+execute as @a run function survisland:player/check_id
 
 # System pour les zones de gamemode adventure
 function survisland:adventure_zone/second
