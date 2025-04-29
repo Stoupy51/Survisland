@@ -1,6 +1,7 @@
 
 # Imports
 import os
+
 ROOT: str = os.path.dirname(os.path.realpath(__file__)).replace("\\", "/")
 IGNORE_UNSET: bool = True
 
