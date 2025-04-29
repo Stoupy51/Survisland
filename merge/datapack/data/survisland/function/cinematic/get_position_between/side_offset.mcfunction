@@ -1,6 +1,6 @@
 
 # Go to the half position
-data modify entity @s Pos set from storage switch:temp half_position
+data modify entity @s Pos set from storage survisland:temp half_position
 
 # Look at the target position (because looking at half position is looking at the target position)
 execute positioned ~ ~ ~ facing entity @s feet positioned as @s run tp @s ~ ~ ~ ~ ~
@@ -13,7 +13,7 @@ execute if score #yaw_diff survisland.data matches ..0 at @s run tp @s ~ ~ ~ ~90
 $execute at @s run tp @s ^ ^ ^$(amount)
 
 # Remember the position
-data modify storage switch:temp half_position set from entity @s Pos
+data modify storage survisland:temp half_position set from entity @s Pos
 
 # Kill the entity
 kill @s[type=!player]
