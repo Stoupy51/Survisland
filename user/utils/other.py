@@ -54,6 +54,9 @@ execute as @a[scores={{{ns}.deathCount=1..}}] at @s run function {ns}:keep_inven
 # Moving Structure
 execute as @e[type=marker,tag={ns}.moving_structure] at @s run function {ns}:moving_structure/tick
 
+# Cinematic
+execute if score #cinematic_entities survisland.data matches 1.. as @e[type=item_display,tag=survisland.cinematic] run function survisland:cinematic/entity_tick
+
 # Fart (BECAUSE FARTS ARE FUNNY XDDDDD LOL)
 execute as @a[tag={ns}.can_fart,tag=!{ns}.farted,predicate={ns}:is_sneaking] at @s run function {ns}:utils/fart
 tag @a[tag={ns}.farted,predicate=!{ns}:is_sneaking] remove {ns}.farted
@@ -61,8 +64,8 @@ tag @a[tag={ns}.farted,predicate=!{ns}:is_sneaking] remove {ns}.farted
 
 	# Second function
 	write_file(f"{functions}/v{version}/second.mcfunction", f"""
-# Check if their marker is still there
-execute as @a run function {ns}:player/check_marker
+# Given an ID to every player who hasn't one
+execute as @a run function {ns}:player/check_id
 
 # System pour les zones de gamemode adventure
 function {ns}:adventure_zone/second
