@@ -225,6 +225,14 @@
 		"item_name": {"text": "Scalbar","italic": false,"color": "white"},
 		"custom_data": {"survisland": {"scalbar": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
+	"monocoin": {
+		"id": "minecraft:command_block",
+		"category": "misc",
+		"item_model": "survisland:monocoin",
+		"item_name": {"text": "Monocoin","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"monocoin": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"book_advanced": {
 		"id": "minecraft:written_book",
 		"category": "book",

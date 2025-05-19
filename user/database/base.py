@@ -632,6 +632,10 @@ def main(config: dict) -> dict[str, dict]:
 			"lore": [{"text":"Made by EvoRay","color":"gold","italic":False}],
 			"consumable": {},
 			"category": "misc",
+		},
+		"monocoin": {
+			"id": CUSTOM_ITEM_VANILLA,
+			"category": "misc",
 		}
 	}
 
