@@ -6,6 +6,6 @@ description = "Survisland [2.1.3] by Stoupy51"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "python-datapack==1.21.5.97",
+    "python-datapack==1.21.5.109",
 ]
 
