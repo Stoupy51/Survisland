@@ -1,0 +1,1302 @@
+{
+	"icon": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:icon",
+		"item_name": {"text": "Icon","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"icon": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"laser_gun": {
+		"id": "minecraft:command_block",
+		"max_stack_size": 64,
+		"item_model": "survisland:laser_gun",
+		"item_name": {"text": "Laser Gun","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"laser_gun": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"parchemin": {
+		"id": "minecraft:warped_fungus_on_a_stick",
+		"item_name": {"text": "Default vote","italic": false,"color": "red"},
+		"lore": [{"text": "Auteur : ","italic": false,"color": "gold"},{"text": "Stoupypy","color": "yellow"},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"item_model": "survisland:parchemin",
+		"custom_data": {"survisland": {"parchemin": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"deployed_parchemin": {
+		"id": "minecraft:warped_fungus_on_a_stick",
+		"item_model": "survisland:deployed_parchemin",
+		"item_name": {"text": "Deployed Parchemin","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"deployed_parchemin": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"snuffer": {
+		"id": "minecraft:warped_fungus_on_a_stick",
+		"lore": [{"text": "Clic-droit pour éteindre la torche","italic": false,"color": "gray"},{"text": "du joueur le plus proche","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"item_model": "survisland:snuffer",
+		"item_name": {"text": "Snuffer","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"snuffer": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"flambeau": {
+		"id": "minecraft:command_block",
+		"lore": [{"text": "Gardez cette torche précieusement","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"max_stack_size": 64,
+		"item_model": "survisland:flambeau",
+		"item_name": {"text": "Flambeau","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"flambeau": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"pendent": {
+		"id": "minecraft:command_block",
+		"lore": [{"text": "[Seconde main pour l'équiper]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"max_stack_size": 64,
+		"item_model": "survisland:pendent",
+		"item_name": {"text": "Pendent","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"pendent": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"pendent_held": {
+		"id": "minecraft:command_block",
+		"lore": [{"text": "[Seconde main pour l'équiper]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"max_stack_size": 64,
+		"item_model": "survisland:pendent_held",
+		"item_name": {"text": "Pendent Held","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"pendent_held": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"maple_leaf": {
+		"id": "minecraft:command_block",
+		"item_name": {"text": "Feuille d'érable","italic": false,"color": "gold"},
+		"max_stack_size": 64,
+		"item_model": "survisland:maple_leaf",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"maple_leaf": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"golden_leaf": {
+		"id": "minecraft:command_block",
+		"item_name": {"text": "Feuille d'or","italic": false,"color": "gold"},
+		"max_stack_size": 64,
+		"item_model": "survisland:golden_leaf",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"golden_leaf": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"temp_item": {
+		"id": "minecraft:command_block",
+		"item_model": "air",
+		"item_name": {"text": "Temp Item","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"temp_item": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"black_letter": {
+		"id": "minecraft:written_book",
+		"item_model": "survisland:black_letter",
+		"item_name": {"text": "Black Letter","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"black_letter": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"maracas": {
+		"id": "minecraft:diamond_sword",
+		"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"equippable": {"slot": "chest","equip_sound": {"sound_id": "survisland:maracas"}},
+		"item_model": "survisland:maracas",
+		"item_name": {"text": "Maracas","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"maracas": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"sombrero": {
+		"id": "minecraft:command_block",
+		"lore": [{"text": "Made by Fhara","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"equippable": {"slot": "head"},
+		"item_model": "survisland:sombrero",
+		"item_name": {"text": "Sombrero","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"sombrero": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"mask_re2": {
+		"id": "minecraft:command_block",
+		"lore": [{"text": "Made by Akwaden","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"equippable": {"slot": "head"},
+		"item_model": "survisland:mask_re2",
+		"item_name": {"text": "Mask Re2","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"mask_re2": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"iron_bowl": {
+		"id": "minecraft:command_block",
+		"lore": [{"text": "Made by Emilou","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"item_model": "survisland:iron_bowl",
+		"item_name": {"text": "Iron Bowl","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"iron_bowl": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"rice": {
+		"id": "minecraft:apple",
+		"lore": [{"text": "Made by Emilou","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"max_stack_size": 1,
+		"consumable": {"on_consume_effects": [{"type": "minecraft:apply_effects","effects": [{"duration": 100,"id": "minecraft:poison","show_icon": true}],"probability": 0.6}]},
+		"food": {"nutrition": 2,"saturation": 1.2},
+		"category": "food",
+		"item_model": "survisland:rice",
+		"item_name": {"text": "Rice","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"rice": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"use_remainder": {"count": 1,"id": "minecraft:command_block","components": {"item_name": {"text": "Iron Bowl","italic": false,"color": "white"},"item_model": "survisland:iron_bowl","lore": [{"text": "Made by Emilou","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]}}
+	},
+	"cooked_rice": {
+		"id": "minecraft:apple",
+		"lore": [{"text": "Made by Emilou","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"max_stack_size": 1,
+		"consumable": {},
+		"food": {"nutrition": 20,"saturation": 12},
+		"category": "food",
+		"result_of_crafting": [{"type": "smelting","result_count": 1,"cookingtime": 200,"experience": 1.0,"group": "riz","category": "food","ingredient": {"components": {"minecraft:custom_data": {"survisland": {"rice": true}}}}},{"type": "smoking","result_count": 1,"cookingtime": 100,"experience": 1.0,"group": "riz","category": "food","ingredient": {"components": {"minecraft:custom_data": {"survisland": {"rice": true}}}}}],
+		"item_model": "survisland:cooked_rice",
+		"item_name": {"text": "Cooked Rice","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"cooked_rice": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"use_remainder": {"count": 1,"id": "minecraft:command_block","components": {"item_name": {"text": "Iron Bowl","italic": false,"color": "white"},"item_model": "survisland:iron_bowl","lore": [{"text": "Made by Emilou","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]}}
+	},
+	"croissant": {
+		"id": "minecraft:apple",
+		"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"consumable": {},
+		"food": {"nutrition": 6,"saturation": 7},
+		"category": "food",
+		"result_of_crafting": [{"type": "smelting","result_count": 1,"cookingtime": 200,"experience": 1.0,"group": "croissant","category": "food","ingredient": {"item": "minecraft:bread"}},{"type": "smoking","result_count": 1,"cookingtime": 100,"experience": 1.0,"group": "croissant","category": "food","ingredient": {"item": "minecraft:bread"}}],
+		"item_model": "survisland:croissant",
+		"item_name": {"text": "Croissant","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"croissant": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"marcus_chicken": {
+		"id": "minecraft:apple",
+		"lore": [{"text": "Made by Stoupy","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"consumable": {},
+		"food": {"nutrition": 7,"saturation": 7.5},
+		"category": "food",
+		"result_of_crafting": [{"type": "smelting","result_count": 1,"cookingtime": 200,"experience": 1.0,"group": "chicken","category": "food","ingredient": {"item": "minecraft:cooked_chicken"}},{"type": "smoking","result_count": 1,"cookingtime": 100,"experience": 1.0,"group": "chicken","category": "food","ingredient": {"item": "minecraft:cooked_chicken"}}],
+		"item_model": "survisland:marcus_chicken",
+		"item_name": {"text": "Marcus Chicken","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"marcus_chicken": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"chocolatine": {
+		"id": "minecraft:apple",
+		"lore": [{"text": "Made by Fhara","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"consumable": {},
+		"food": {"nutrition": 5,"saturation": 6},
+		"category": "food",
+		"item_model": "survisland:chocolatine",
+		"item_name": {"text": "Chocolatine","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"chocolatine": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"donut": {
+		"id": "minecraft:apple",
+		"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"consumable": {},
+		"food": {"nutrition": 5,"saturation": 6},
+		"category": "food",
+		"item_model": "survisland:donut",
+		"item_name": {"text": "Donut","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"donut": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"chocolate_eclair": {
+		"id": "minecraft:apple",
+		"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"consumable": {},
+		"food": {"nutrition": 5,"saturation": 6},
+		"category": "food",
+		"item_model": "survisland:chocolate_eclair",
+		"item_name": {"text": "Chocolate Eclair","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"chocolate_eclair": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"strawberry_pie": {
+		"id": "minecraft:apple",
+		"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"consumable": {},
+		"food": {"nutrition": 5,"saturation": 6},
+		"category": "food",
+		"item_model": "survisland:strawberry_pie",
+		"item_name": {"text": "Strawberry Pie","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"strawberry_pie": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"scalbar": {
+		"id": "minecraft:command_block",
+		"lore": [{"text": "Made by EvoRay","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"consumable": {},
+		"category": "misc",
+		"item_model": "survisland:scalbar",
+		"item_name": {"text": "Scalbar","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"scalbar": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"monocoin": {
+		"id": "minecraft:command_block",
+		"category": "misc",
+		"item_model": "survisland:monocoin",
+		"item_name": {"text": "Monocoin","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"monocoin": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"book_advanced": {
+		"id": "minecraft:written_book",
+		"category": "book",
+		"item_model": "survisland:book_advanced",
+		"item_name": {"text": "Book Advanced","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"book_advanced": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"book_brown": {
+		"id": "minecraft:written_book",
+		"category": "book",
+		"item_model": "survisland:book_brown",
+		"item_name": {"text": "Book Brown","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"book_brown": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"book_bubulle": {
+		"id": "minecraft:written_book",
+		"category": "book",
+		"item_model": "survisland:book_bubulle",
+		"item_name": {"text": "Book Bubulle","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"book_bubulle": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"book_feather": {
+		"id": "minecraft:written_book",
+		"category": "book",
+		"item_model": "survisland:book_feather",
+		"item_name": {"text": "Book Feather","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"book_feather": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"book_green_blue": {
+		"id": "minecraft:written_book",
+		"category": "book",
+		"item_model": "survisland:book_green_blue",
+		"item_name": {"text": "Book Green Blue","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"book_green_blue": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"book_orange": {
+		"id": "minecraft:written_book",
+		"category": "book",
+		"item_model": "survisland:book_orange",
+		"item_name": {"text": "Book Orange","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"book_orange": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"book_pink": {
+		"id": "minecraft:written_book",
+		"category": "book",
+		"item_model": "survisland:book_pink",
+		"item_name": {"text": "Book Pink","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"book_pink": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"book_purple": {
+		"id": "minecraft:written_book",
+		"category": "book",
+		"item_model": "survisland:book_purple",
+		"item_name": {"text": "Book Purple","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"book_purple": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"book_red": {
+		"id": "minecraft:written_book",
+		"category": "book",
+		"item_model": "survisland:book_red",
+		"item_name": {"text": "Book Red","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"book_red": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"book_turquoise": {
+		"id": "minecraft:written_book",
+		"category": "book",
+		"item_model": "survisland:book_turquoise",
+		"item_name": {"text": "Book Turquoise","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"book_turquoise": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"book_very_light_cyan": {
+		"id": "minecraft:written_book",
+		"category": "book",
+		"item_model": "survisland:book_very_light_cyan",
+		"item_name": {"text": "Book Very Light Cyan","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"book_very_light_cyan": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"book_warden": {
+		"id": "minecraft:written_book",
+		"category": "book",
+		"item_model": "survisland:book_warden",
+		"item_name": {"text": "Book Warden","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"book_warden": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"book_white": {
+		"id": "minecraft:written_book",
+		"category": "book",
+		"item_model": "survisland:book_white",
+		"item_name": {"text": "Book White","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"book_white": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"book_white_blue": {
+		"id": "minecraft:written_book",
+		"category": "book",
+		"item_model": "survisland:book_white_blue",
+		"item_name": {"text": "Book White Blue","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"book_white_blue": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"book_yellow": {
+		"id": "minecraft:written_book",
+		"category": "book",
+		"item_model": "survisland:book_yellow",
+		"item_name": {"text": "Book Yellow","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"book_yellow": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_ange": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_ange"},
+		"category": "fish",
+		"item_model": "survisland:poisson_ange",
+		"item_name": {"text": "Poisson Ange","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"poisson_ange": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_bar": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_bar"},
+		"category": "fish",
+		"item_model": "survisland:poisson_bar",
+		"item_name": {"text": "Poisson Bar","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"poisson_bar": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_cabillaud": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_cabillaud"},
+		"category": "fish",
+		"item_model": "survisland:poisson_cabillaud",
+		"item_name": {"text": "Poisson Cabillaud","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"poisson_cabillaud": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_capucin": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_capucin"},
+		"category": "fish",
+		"item_model": "survisland:poisson_capucin",
+		"item_name": {"text": "Poisson Capucin","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"poisson_capucin": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_chirurgien": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_chirurgien"},
+		"category": "fish",
+		"item_model": "survisland:poisson_chirurgien",
+		"item_name": {"text": "Poisson Chirurgien","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"poisson_chirurgien": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_dorade": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_dorade"},
+		"category": "fish",
+		"item_model": "survisland:poisson_dorade",
+		"item_name": {"text": "Poisson Dorade","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"poisson_dorade": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_espadon": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_espadon"},
+		"category": "fish",
+		"item_model": "survisland:poisson_espadon",
+		"item_name": {"text": "Poisson Espadon","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"poisson_espadon": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_fletan": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_fletan"},
+		"category": "fish",
+		"item_model": "survisland:poisson_fletan",
+		"item_name": {"text": "Poisson Fletan","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"poisson_fletan": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_gobie": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_gobie"},
+		"category": "fish",
+		"item_model": "survisland:poisson_gobie",
+		"item_name": {"text": "Poisson Gobie","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"poisson_gobie": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_lime": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_lime"},
+		"category": "fish",
+		"item_model": "survisland:poisson_lime",
+		"item_name": {"text": "Poisson Lime","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"poisson_lime": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_maquereau": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_maquereau"},
+		"category": "fish",
+		"item_model": "survisland:poisson_maquereau",
+		"item_name": {"text": "Poisson Maquereau","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"poisson_maquereau": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_pagre": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_pagre"},
+		"category": "fish",
+		"item_model": "survisland:poisson_pagre",
+		"item_name": {"text": "Poisson Pagre","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"poisson_pagre": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_papillon": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_papillon"},
+		"category": "fish",
+		"item_model": "survisland:poisson_papillon",
+		"item_name": {"text": "Poisson Papillon","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"poisson_papillon": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_perroquet": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_perroquet"},
+		"category": "fish",
+		"item_model": "survisland:poisson_perroquet",
+		"item_name": {"text": "Poisson Perroquet","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"poisson_perroquet": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_rascasse": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_rascasse"},
+		"category": "fish",
+		"item_model": "survisland:poisson_rascasse",
+		"item_name": {"text": "Poisson Rascasse","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"poisson_rascasse": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_sardine": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_sardine"},
+		"category": "fish",
+		"item_model": "survisland:poisson_sardine",
+		"item_name": {"text": "Poisson Sardine","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"poisson_sardine": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_sole": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_sole"},
+		"category": "fish",
+		"item_model": "survisland:poisson_sole",
+		"item_name": {"text": "Poisson Sole","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"poisson_sole": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"poisson_thon": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_thon"},
+		"category": "fish",
+		"item_model": "survisland:poisson_thon",
+		"item_name": {"text": "Poisson Thon","italic": false,"color": "white"},
+		"custom_data": {"survisland": {"poisson_thon": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s01": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s01",
+		"item_name": {"text": "Logo S01","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s01": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s02": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s02",
+		"item_name": {"text": "Logo S02","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s02": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s03": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s03",
+		"item_name": {"text": "Logo S03","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s03": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s04": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s04",
+		"item_name": {"text": "Logo S04","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s04": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s05": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s05",
+		"item_name": {"text": "Logo S05","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s05": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s06": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s06",
+		"item_name": {"text": "Logo S06","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s06": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s07": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s07",
+		"item_name": {"text": "Logo S07","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s07": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s08": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s08",
+		"item_name": {"text": "Logo S08","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s08": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s09": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s09",
+		"item_name": {"text": "Logo S09","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s09": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s10": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s10",
+		"item_name": {"text": "Logo S10","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s10": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s11": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s11",
+		"item_name": {"text": "Logo S11","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s11": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s12": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s12",
+		"item_name": {"text": "Logo S12","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s12": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s13": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s13",
+		"item_name": {"text": "Logo S13","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s13": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s14": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s14",
+		"item_name": {"text": "Logo S14","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s14": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s15": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s15",
+		"item_name": {"text": "Logo S15","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s15": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s16": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s16",
+		"item_name": {"text": "Logo S16","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s16": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s17": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s17",
+		"item_name": {"text": "Logo S17","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s17": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s18": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s18",
+		"item_name": {"text": "Logo S18","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s18": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s19": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s19",
+		"item_name": {"text": "Logo S19","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s19": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s20": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s20",
+		"item_name": {"text": "Logo S20","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s20": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s21": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s21",
+		"item_name": {"text": "Logo S21","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s21": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s22": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s22",
+		"item_name": {"text": "Logo S22","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s22": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s23": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s23",
+		"item_name": {"text": "Logo S23","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s23": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"logo_s24": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+		"category": "logo",
+		"item_model": "survisland:logo_s24",
+		"item_name": {"text": "Logo S24","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"logo_s24": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"necklace": {
+		"id": "minecraft:command_block",
+		"max_stack_size": 1,
+		"equippable": {"slot": "chest","asset_id": "survisland:necklace","damage_on_hurt": false},
+		"item_model": "survisland:necklace",
+		"item_name": {"text": "Necklace","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"necklace": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"cursed_necklace": {
+		"id": "minecraft:command_block",
+		"max_stack_size": 1,
+		"equippable": {"slot": "chest","asset_id": "survisland:cursed_necklace","damage_on_hurt": false},
+		"item_model": "survisland:cursed_necklace",
+		"item_name": {"text": "Cursed Necklace","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"cursed_necklace": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"dinosaur_necklace": {
+		"id": "minecraft:command_block",
+		"max_stack_size": 1,
+		"equippable": {"slot": "chest","asset_id": "survisland:dinosaur_necklace","damage_on_hurt": false},
+		"item_model": "survisland:dinosaur_necklace",
+		"item_name": {"text": "Dinosaur Necklace","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"dinosaur_necklace": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"astral_powder": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:astral_powder",
+		"item_name": {"text": "Astral Powder","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"astral_powder": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"blood": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:blood",
+		"item_name": {"text": "Blood","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"blood": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"blue_star": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:blue_star",
+		"item_name": {"text": "Blue Star","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"blue_star": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"cyan_crystal": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:cyan_crystal",
+		"item_name": {"text": "Cyan Crystal","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"cyan_crystal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"diamond_meteorite": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:diamond_meteorite",
+		"item_name": {"text": "Diamond Meteorite","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"diamond_meteorite": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"emerald_meteorite": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:emerald_meteorite",
+		"item_name": {"text": "Emerald Meteorite","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"emerald_meteorite": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"green_crystal": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:green_crystal",
+		"item_name": {"text": "Green Crystal","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"green_crystal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"iron_meteorite": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:iron_meteorite",
+		"item_name": {"text": "Iron Meteorite","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"iron_meteorite": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"letter": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:letter",
+		"item_name": {"text": "Letter","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"letter": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"life_crystal": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:life_crystal",
+		"item_name": {"text": "Life Crystal","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"life_crystal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"lunar_compass": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:lunar_compass",
+		"item_name": {"text": "Lunar Compass","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"lunar_compass": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"purple_crystal": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:purple_crystal",
+		"item_name": {"text": "Purple Crystal","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"purple_crystal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"sandwich": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:sandwich",
+		"item_name": {"text": "Sandwich","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"sandwich": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"yellow_crystal": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:yellow_crystal",
+		"item_name": {"text": "Yellow Crystal","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"yellow_crystal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"zinc_meteorite": {
+		"id": "minecraft:command_block",
+		"item_model": "survisland:zinc_meteorite",
+		"item_name": {"text": "Zinc Meteorite","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"zinc_meteorite": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"gold_fish": {
+		"id": "minecraft:golden_apple",
+		"item_model": "survisland:gold_fish",
+		"item_name": {"text": "Gold Fish","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"gold_fish": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"horns": {
+		"id": "minecraft:command_block",
+		"max_stack_size": 1,
+		"equippable": {"slot": "head"},
+		"item_model": "survisland:horns",
+		"item_name": {"text": "Horns","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"horns": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"small_horns": {
+		"id": "minecraft:command_block",
+		"max_stack_size": 1,
+		"equippable": {"slot": "head"},
+		"item_model": "survisland:small_horns",
+		"item_name": {"text": "Small Horns","italic": false,"color": "white"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"small_horns": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"01_charges_from_the_sky": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"01_charges_from_the_sky": true},"smithed": {"dict": {"record": {"01_charges_from_the_sky": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:01_charges_from_the_sky",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:01_charges_from_the_sky",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"02_es_clash_bonnie_grace": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"02_es_clash_bonnie_grace": true},"smithed": {"dict": {"record": {"02_es_clash_bonnie_grace": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:02_es_clash_bonnie_grace",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:02_es_clash_bonnie_grace",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"03_crescent_battle": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"03_crescent_battle": true},"smithed": {"dict": {"record": {"03_crescent_battle": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:03_crescent_battle",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:03_crescent_battle",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"04_fade_into_darkness": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"04_fade_into_darkness": true},"smithed": {"dict": {"record": {"04_fade_into_darkness": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:04_fade_into_darkness",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:04_fade_into_darkness",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"05_extinction_report": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"05_extinction_report": true},"smithed": {"dict": {"record": {"05_extinction_report": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:05_extinction_report",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:05_extinction_report",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"06_colin_root_blackout": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"06_colin_root_blackout": true},"smithed": {"dict": {"record": {"06_colin_root_blackout": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:06_colin_root_blackout",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:06_colin_root_blackout",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"07_aliaksei_yukhnevich_deliverance": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"07_aliaksei_yukhnevich_deliverance": true},"smithed": {"dict": {"record": {"07_aliaksei_yukhnevich_deliverance": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:07_aliaksei_yukhnevich_deliverance",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:07_aliaksei_yukhnevich_deliverance",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"08_battle_of_the_ocean": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"08_battle_of_the_ocean": true},"smithed": {"dict": {"record": {"08_battle_of_the_ocean": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:08_battle_of_the_ocean",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:08_battle_of_the_ocean",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"09_challenger": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"09_challenger": true},"smithed": {"dict": {"record": {"09_challenger": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:09_challenger",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:09_challenger",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"10_elite_voids": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"10_elite_voids": true},"smithed": {"dict": {"record": {"10_elite_voids": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:10_elite_voids",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:10_elite_voids",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"11_live_to_see_tomorrow": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"11_live_to_see_tomorrow": true},"smithed": {"dict": {"record": {"11_live_to_see_tomorrow": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:11_live_to_see_tomorrow",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:11_live_to_see_tomorrow",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"12_ivan_shpilevsky_the_time": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"12_ivan_shpilevsky_the_time": true},"smithed": {"dict": {"record": {"12_ivan_shpilevsky_the_time": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:12_ivan_shpilevsky_the_time",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:12_ivan_shpilevsky_the_time",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"13_nick_froud_breaking_sky": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"13_nick_froud_breaking_sky": true},"smithed": {"dict": {"record": {"13_nick_froud_breaking_sky": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:13_nick_froud_breaking_sky",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:13_nick_froud_breaking_sky",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"14_es_close_combat_fredrik_ekstrom": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"14_es_close_combat_fredrik_ekstrom": true},"smithed": {"dict": {"record": {"14_es_close_combat_fredrik_ekstrom": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:14_es_close_combat_fredrik_ekstrom",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:14_es_close_combat_fredrik_ekstrom",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"15_the_ritual": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"15_the_ritual": true},"smithed": {"dict": {"record": {"15_the_ritual": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:15_the_ritual",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:15_the_ritual",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"16_resolute": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"16_resolute": true},"smithed": {"dict": {"record": {"16_resolute": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:16_resolute",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:16_resolute",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"17_es_nevertheless_she_persisted_bonnie_grace": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"17_es_nevertheless_she_persisted_bonnie_grace": true},"smithed": {"dict": {"record": {"17_es_nevertheless_she_persisted_bonnie_grace": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:17_es_nevertheless_she_persisted_bonnie_grace",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:17_es_nevertheless_she_persisted_bonnie_grace",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"18_ragesound_vortex": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"18_ragesound_vortex": true},"smithed": {"dict": {"record": {"18_ragesound_vortex": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:18_ragesound_vortex",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:18_ragesound_vortex",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"19_in_the_heart_of_the_stars": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"19_in_the_heart_of_the_stars": true},"smithed": {"dict": {"record": {"19_in_the_heart_of_the_stars": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:19_in_the_heart_of_the_stars",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:19_in_the_heart_of_the_stars",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"20_last_hope": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"20_last_hope": true},"smithed": {"dict": {"record": {"20_last_hope": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:20_last_hope",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:20_last_hope",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"21_timur_haisyn_brutal_fervour": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"21_timur_haisyn_brutal_fervour": true},"smithed": {"dict": {"record": {"21_timur_haisyn_brutal_fervour": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:21_timur_haisyn_brutal_fervour",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:21_timur_haisyn_brutal_fervour",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"22_es_our_last_stand_formantx": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"22_es_our_last_stand_formantx": true},"smithed": {"dict": {"record": {"22_es_our_last_stand_formantx": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:22_es_our_last_stand_formantx",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:22_es_our_last_stand_formantx",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"23_victor_cooper_windwalker": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"23_victor_cooper_windwalker": true},"smithed": {"dict": {"record": {"23_victor_cooper_windwalker": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:23_victor_cooper_windwalker",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:23_victor_cooper_windwalker",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"24_the_darkness_inside": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"24_the_darkness_inside": true},"smithed": {"dict": {"record": {"24_the_darkness_inside": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:24_the_darkness_inside",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:24_the_darkness_inside",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"25_fireborn": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"25_fireborn": true},"smithed": {"dict": {"record": {"25_fireborn": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:25_fireborn",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:25_fireborn",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"26_angie_battle": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"26_angie_battle": true},"smithed": {"dict": {"record": {"26_angie_battle": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:26_angie_battle",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:26_angie_battle",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"27_among_our_dreams": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"27_among_our_dreams": true},"smithed": {"dict": {"record": {"27_among_our_dreams": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:27_among_our_dreams",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:27_among_our_dreams",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"28_dynasty": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"28_dynasty": true},"smithed": {"dict": {"record": {"28_dynasty": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:28_dynasty",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:28_dynasty",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"29_hold_the_line": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"29_hold_the_line": true},"smithed": {"dict": {"record": {"29_hold_the_line": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:29_hold_the_line",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:29_hold_the_line",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"30_vitalii_suzdin_beyond_the_mind": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"30_vitalii_suzdin_beyond_the_mind": true},"smithed": {"dict": {"record": {"30_vitalii_suzdin_beyond_the_mind": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:30_vitalii_suzdin_beyond_the_mind",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:30_vitalii_suzdin_beyond_the_mind",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"31_carnival_row": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"31_carnival_row": true},"smithed": {"dict": {"record": {"31_carnival_row": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:31_carnival_row",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:31_carnival_row",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"32_final_act": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"32_final_act": true},"smithed": {"dict": {"record": {"32_final_act": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:32_final_act",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:32_final_act",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"33_path_to_glory": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"33_path_to_glory": true},"smithed": {"dict": {"record": {"33_path_to_glory": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:33_path_to_glory",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:33_path_to_glory",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"34_perfect_chaos": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"34_perfect_chaos": true},"smithed": {"dict": {"record": {"34_perfect_chaos": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:34_perfect_chaos",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:34_perfect_chaos",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"35_we_are_vanguards": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"35_we_are_vanguards": true},"smithed": {"dict": {"record": {"35_we_are_vanguards": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:35_we_are_vanguards",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:35_we_are_vanguards",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	},
+	"rat_dance": {
+		"id": "minecraft:command_block",
+		"custom_data": {"survisland": {"rat_dance": true},"smithed": {"dict": {"record": {"rat_dance": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"item_name": {"text": "Music Disc","italic": false},
+		"jukebox_playable": "survisland:rat_dance",
+		"max_stack_size": 1,
+		"rarity": "rare",
+		"item_model": "survisland:rat_dance",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+	}
+}

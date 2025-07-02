@@ -1,12 +1,13 @@
 
 # Imports
-from python_datapack.continuous_delivery import load_credentials, upload_to_github, upload_to_modrinth, upload_to_smithed, upload_to_pmc
+from stewbeet.continuous_delivery import load_credentials, upload_to_github
+
+from continuous_delivery.github_config import github_config
 
 # Get credentials
-credentials: dict[str, str] = load_credentials("~/python_datapack/credentials.yml")
+credentials: dict[str, str] = load_credentials("~/stewbeet/credentials.yml")
 
 ## Uploads
 # Upload to GitHub
-from continuous_delivery.github_config import github_config
 changelog: str = upload_to_github(credentials, github_config)
 

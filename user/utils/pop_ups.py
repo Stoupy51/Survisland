@@ -1,17 +1,14 @@
 
 # Imports
-import stouputils as stp
-from python_datapack.constants import *
-from python_datapack.utils.io import *
+from stewbeet import Advancement, Mem, set_json_encoder, write_function
 
 # Constants
 LABELS: list[str] = ["Confort", "Immunité", "Conseil"]
 TIMES: list[str] = [f"dans {x} minutes" for x in range(5, 61, 5)] + ["maintenant"]
 
 # Generates pop-ups
-def main(config: dict) -> None:
-	namespace: str = config["namespace"]
-	advancements: str = f"{config['build_datapack']}/data/{namespace}/advancement"
+def main() -> None:
+	ns: str = Mem.ctx.project_id
 	all_paths: list[str] = []
 
 	# Define the pop-ups
@@ -19,8 +16,7 @@ def main(config: dict) -> None:
 	for label, remaining_time in product(LABELS, TIMES):
 		cleaned: str = label.replace("é", "e") + "_" + remaining_time
 		cleaned = cleaned.lower().replace(" ", "_")
-		advancement_path: str = f"{advancements}/pop_ups/{cleaned}.json"
-		all_paths.append(f"{namespace}:pop_ups/{cleaned}")
+		all_paths.append(f"{ns}:pop_ups/{cleaned}")
 
 		adv: dict = {
 			"display": {
@@ -47,16 +43,16 @@ def main(config: dict) -> None:
 			}
 		}
 		# Write the advancement
-		write_file(advancement_path, stp.super_json_dump(adv))
+		Mem.ctx.data[ns].advancements[f"pop_ups/{cleaned}"] = set_json_encoder(Advancement(adv))
 
 	# Write the rewards function that
 	tellraws: str = '\n'.join([
 		f'tellraw @s[advancements={{{cleaned}=true}}] [{{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true}},{{"text":" {label} {remaining_time} !","color":"aqua"}}]'
-		for cleaned, (label, remaining_time) in zip(all_paths, product(LABELS, TIMES))
+		for cleaned, (label, remaining_time) in zip(all_paths, product(LABELS, TIMES), strict=False)
 	])
-	write_function(config, f"{namespace}:advancements/pop_ups", f"""
+	write_function(f"{ns}:advancements/pop_ups", f"""
 # Revoke all pop-ups
-schedule function {namespace}:advancements/pop_ups_revoke 1s replace
+schedule function {ns}:advancements/pop_ups_revoke 1s replace
 
 # Tellraw
 {tellraws}
@@ -68,7 +64,5 @@ playsound ui.toast.in
 playsound ui.toast.in
 """)
 	revokes: str = '\n'.join([f"advancement revoke @a only {path}" for path in all_paths])
-	write_function(config, f"{namespace}:advancements/pop_ups_revoke", revokes)
-	
-
+	write_function(f"{ns}:advancements/pop_ups_revoke", revokes)
 
