@@ -1,20 +1,15 @@
 
 # ruff: noqa: E501
 # Imports
-import stouputils as stp
-from python_datapack.utils.io import write_file, write_load_file
+from stewbeet import Advancement, Mem, set_json_encoder, write_function, write_load_file, write_tick_file, write_versioned_function
 
 
 # Generates trivial things in the datapack
-def main(config: dict) -> None:
-	ns: str = config["namespace"]
-	version: str = config["version"]
-	database: dict[str, dict] = config['database']
-	functions: str = f"{config['build_datapack']}/data/{ns}/function"
-	advancements: str = f"{config['build_datapack']}/data/{ns}/advancement"
+def main() -> None:
+	ns: str = Mem.ctx.project_id
 
 	# Add additional objectives and gamerules to the load function
-	write_load_file(config, f"""
+	write_load_file(f"""
 # Add objectives
 scoreboard objectives add {ns}.id dummy
 scoreboard objectives add {ns}.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
@@ -47,7 +42,7 @@ data modify storage {ns}:main Survisland set value [{{"text":"[","color":"dark_a
 """)
 
 	# Tick function
-	write_file(f"{functions}/v{version}/tick.mcfunction", f"""
+	write_tick_file(f"""
 # Custom Keep Inventory System
 execute as @a[scores={{{ns}.deathCount=1..}}] at @s run function {ns}:keep_inventory/player_died
 
@@ -63,7 +58,7 @@ tag @a[tag={ns}.farted,predicate=!{ns}:is_sneaking] remove {ns}.farted
 """)
 
 	# Second function
-	write_file(f"{functions}/v{version}/second.mcfunction", f"""
+	write_versioned_function("second", f"""
 # Given an ID to every player who hasn't one
 execute as @a run function {ns}:player/check_id
 
@@ -75,7 +70,7 @@ scoreboard players set _IS_ENABLED smart_ore_generation.data 0
 """)
 
 	# Minute function
-	write_file(f"{functions}/v{version}/minute.mcfunction", f"""
+	write_versioned_function("minute", f"""
 # Timer
 scoreboard players set #second {ns}.data 0
 
@@ -85,16 +80,16 @@ kill @e[type=marker,tag={ns}.keep_inventory]
 
 	# Right click
 	json_content: dict = {"criteria":{"requirement":{"trigger":"minecraft:tick","conditions":{"player":[{"condition":"minecraft:entity_scores","entity":"this","scores":{f"{ns}.right_click":{"min":1}}}]}}},"rewards":{"function":f"{ns}:utils/right_click"}}
-	write_file(f"{advancements}/right_click.json", stp.super_json_dump(json_content, max_level = -1))
-	write_file(f"{functions}/utils/right_click.mcfunction", f"""
+	Mem.ctx.data[ns].advancements["right_click"] = set_json_encoder(Advancement(json_content), max_level=-1)
+	write_function(f"{ns}:utils/right_click", f"""
 # Advancement revoke
 advancement revoke @s only {ns}:right_click
 
 # Switch case
 tag @s add {ns}.temp
 scoreboard players set #success {ns}.data 0
-execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s SelectedItem.components{{"minecraft:item_model":"{database['parchemin']['item_model']}"}} run function {ns}:parchemins/deploy_open
-execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s SelectedItem.components{{"minecraft:item_model":"{database['deployed_parchemin']['item_model']}"}} run function {ns}:parchemins/deploy_close
+execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s SelectedItem.components{{"minecraft:item_model":"{Mem.definitions['parchemin']['item_model']}"}} run function {ns}:parchemins/deploy_open
+execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s SelectedItem.components{{"minecraft:item_model":"{Mem.definitions['deployed_parchemin']['item_model']}"}} run function {ns}:parchemins/deploy_close
 execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s SelectedItem.components."minecraft:custom_data".{ns}.snuffer positioned ^ ^ ^2 as @p[gamemode=!spectator,tag=!{ns}.temp,distance=..3] at @s run function {ns}:utils/snuffer
 execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s Inventory[{{Slot:-106b}}].components."minecraft:custom_data".{ns}.snuffer positioned ^ ^ ^2 as @p[gamemode=!spectator,distance=..3] at @s run function {ns}:utils/snuffer
 
@@ -104,19 +99,19 @@ tag @s remove {ns}.temp
 """)
 
 	# parchemins/_convert_to_scroll
-	parchemin: dict = database['parchemin']
+	parchemin: dict = Mem.definitions['parchemin']
 	p_id: str = parchemin['id']
 	p_model: str = parchemin['item_model']
-	write_file(f"{functions}/parchemins/_convert_to_scroll.mcfunction", f"""
+	write_function(f"{ns}:parchemins/_convert_to_scroll", f"""
 # Replace the book by a scroll
 data modify storage {ns}:main Item.id set value "{p_id}"
 data modify storage {ns}:main Item.components."minecraft:item_model" set value "{p_model}"
 """)
 
 	# advancements/inventory_changed
-	pendent_model: str = database["pendent"]["item_model"]
-	pendent_held_model: str = database["pendent_held"]["item_model"]
-	write_file(f"{functions}/advancements/inventory_changed.mcfunction", f"""
+	pendent_model: str = Mem.definitions["pendent"]["item_model"]
+	pendent_held_model: str = Mem.definitions["pendent_held"]["item_model"]
+	write_function(f"{ns}:advancements/inventory_changed", f"""
 # Advancement revoke
 advancement revoke @s only survisland:inventory_changed
 
@@ -142,7 +137,7 @@ execute if score #success {ns}.data matches 0 run tag @s remove {ns}.has_idol
 """)
 
 	# utils/pendent_switch
-	write_file(f"{functions}/utils/pendent_switch.mcfunction", f"""
+	write_function(f"{ns}:utils/pendent_switch", f"""
 # Copy du pendent dans un slot temporaire
 setblock 0 5 0 air
 setblock 0 5 0 barrel
