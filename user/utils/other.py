@@ -91,7 +91,7 @@ scoreboard players set #success {ns}.data 0
 execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s SelectedItem.components{{"minecraft:item_model":"{Mem.definitions['parchemin']['item_model']}"}} run function {ns}:parchemins/deploy_open
 execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s SelectedItem.components{{"minecraft:item_model":"{Mem.definitions['deployed_parchemin']['item_model']}"}} run function {ns}:parchemins/deploy_close
 execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s SelectedItem.components."minecraft:custom_data".{ns}.snuffer positioned ^ ^ ^2 as @p[gamemode=!spectator,tag=!{ns}.temp,distance=..3] at @s run function {ns}:utils/snuffer
-execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s Inventory[{{Slot:-106b}}].components."minecraft:custom_data".{ns}.snuffer positioned ^ ^ ^2 as @p[gamemode=!spectator,distance=..3] at @s run function {ns}:utils/snuffer
+execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s equipment.offhand.components."minecraft:custom_data".{ns}.snuffer positioned ^ ^ ^2 as @p[gamemode=!spectator,distance=..3] at @s run function {ns}:utils/snuffer
 
 # Reset score and tag
 scoreboard players reset @s {ns}.right_click
@@ -118,7 +118,7 @@ advancement revoke @s only survisland:inventory_changed
 # If pendent in left or right hand, run switch function
 scoreboard players set #success {ns}.data 0
 execute store success score #success {ns}.data if data entity @s SelectedItem.components{{"minecraft:item_model":"{pendent_held_model}"}} run function {ns}:utils/pendent_switch
-execute if score #success {ns}.data matches 0 if data entity @s Inventory[{{Slot:-106b}}].components{{"minecraft:item_model":"{pendent_model}"}} run function {ns}:utils/pendent_switch
+execute if score #success {ns}.data matches 0 if data entity @s equipment.offhand.components{{"minecraft:item_model":"{pendent_model}"}} run function {ns}:utils/pendent_switch
 
 # If has idol in inventory for first time, tell spectators
 scoreboard players set #success {ns}.data 0
@@ -142,15 +142,15 @@ execute if score #success {ns}.data matches 0 run tag @s remove {ns}.has_idol
 setblock 0 5 0 air
 setblock 0 5 0 barrel
 execute if data entity @s SelectedItem.components{{"minecraft:item_model":"{pendent_held_model}"}} run item replace block 0 5 0 container.0 from entity @s weapon.mainhand
-execute if data entity @s Inventory[{{Slot:-106b}}].components{{"minecraft:item_model":"{pendent_model}"}} run item replace block 0 5 0 container.0 from entity @s weapon.offhand
+execute if data entity @s equipment.offhand.components{{"minecraft:item_model":"{pendent_model}"}} run item replace block 0 5 0 container.0 from entity @s weapon.offhand
 
 # Inversion du model data du pendent
 execute if data entity @s SelectedItem.components{{"minecraft:item_model":"{pendent_held_model}"}} run data modify block 0 5 0 Items[0].components."minecraft:item_model" set value "{pendent_model}"
-execute if data entity @s Inventory[{{Slot:-106b}}].components{{"minecraft:item_model":"{pendent_model}"}} run data modify block 0 5 0 Items[0].components."minecraft:item_model" set value "{pendent_held_model}"
+execute if data entity @s equipment.offhand.components{{"minecraft:item_model":"{pendent_model}"}} run data modify block 0 5 0 Items[0].components."minecraft:item_model" set value "{pendent_held_model}"
 
 # Recopie du pendent dans la main gauche
 execute if data entity @s SelectedItem.components{{"minecraft:item_model":"{pendent_held_model}"}} run item replace entity @s weapon.mainhand from block 0 5 0 container.0
-execute if data entity @s Inventory[{{Slot:-106b}}].components{{"minecraft:item_model":"{pendent_model}"}} run item replace entity @s weapon.offhand from block 0 5 0 container.0
+execute if data entity @s equipment.offhand.components{{"minecraft:item_model":"{pendent_model}"}} run item replace entity @s weapon.offhand from block 0 5 0 container.0
 
 # Suppression du slot temporaire
 setblock 0 5 0 air
