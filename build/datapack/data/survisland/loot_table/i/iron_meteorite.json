@@ -17,11 +17,19 @@
 									"color": "white"
 								},
 								"minecraft:lore": [
-									["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
+										{"text": " Survisland","italic": true,"color": "blue"}
+									]
 								],
 								"minecraft:custom_data": {
-									"survisland": {"iron_meteorite": true},
-									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+									"survisland": {
+										"iron_meteorite": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
 								}
 							}
 						}
@@ -31,4 +39,3 @@
 		}
 	]
 }
-

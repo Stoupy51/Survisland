@@ -41,7 +41,6 @@ execute if score #mPeluang_restants survisland.data matches 11 run team modify s
 execute if score #mTuarua_restants survisland.data matches 12 run team modify survisland.temp.sidebar.2 suffix [{"text":"uarua : ","color":"light_purple"},{"text":"12","color":"yellow"}]
 execute if score #mPeluang_restants survisland.data matches 12 run team modify survisland.temp.sidebar.1 suffix [{"text":"eluang : ","color":"aqua"},{"text":"12","color":"yellow"}]
 
-
 execute if score #creepers_restants survisland.data matches 0 run team modify survisland.temp.sidebar.3 suffix [{"text":"reepers : ","color":"green"},{"text":"0","color":"yellow"}]
 execute if score #creepers_restants survisland.data matches 1 run team modify survisland.temp.sidebar.3 suffix [{"text":"reepers : ","color":"green"},{"text":"1","color":"yellow"}]
 execute if score #creepers_restants survisland.data matches 2 run team modify survisland.temp.sidebar.3 suffix [{"text":"reepers : ","color":"green"},{"text":"2","color":"yellow"}]

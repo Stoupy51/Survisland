@@ -30,4 +30,3 @@ execute if score #detect_end survisland.data matches 0 if score #mTuarua_restant
 execute if score #detect_end survisland.data matches 0 run function survisland:modes/pitch_creep/update_sidebar
 execute if score #detect_end survisland.data matches 1.. run function survisland:modes/pitch_creep/process_end
 
-

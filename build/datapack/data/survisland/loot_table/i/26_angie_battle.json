@@ -11,8 +11,13 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:custom_data": {
-									"survisland": {"26_angie_battle": true},
-									"smithed": {"dict": {"record": {"26_angie_battle": true}},"ignore": {"functionality": true,"crafting": true}}
+									"survisland": {
+										"26_angie_battle": true
+									},
+									"smithed": {
+										"dict": {"record": {"26_angie_battle": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									}
 								},
 								"minecraft:item_name": {
 									"text": "Music Disc",
@@ -23,7 +28,11 @@
 								"minecraft:rarity": "rare",
 								"minecraft:item_model": "survisland:26_angie_battle",
 								"minecraft:lore": [
-									["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
+										{"text": " Survisland","italic": true,"color": "blue"}
+									]
 								]
 							}
 						}
@@ -33,4 +42,3 @@
 		}
 	]
 }
-

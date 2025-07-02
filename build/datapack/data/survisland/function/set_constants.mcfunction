@@ -10,7 +10,6 @@
 #    print('scoreboard players set #'+str(min)+' survisland.data '+str(min))
 #    min += 1
 
-
 scoreboard players set #negative_max survisland.data -2147483648
 scoreboard players set #-2147483648 survisland.data -2147483648
 scoreboard players set #-1000000000 survisland.data -1000000000

@@ -21,4 +21,3 @@ execute if block ~ ~-2 ~ light_gray_concrete run scoreboard players set @s survi
 execute if block ~ ~-2 ~ white_concrete run scoreboard players set @s survisland.temp.color 15
 execute if block ~ ~-2 ~ black_concrete run scoreboard players set @s survisland.temp.color 16
 
-

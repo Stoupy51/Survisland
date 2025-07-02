@@ -1,14 +1,12 @@
 
 # Imports
-import stouputils as stp
-from python_datapack.constants import *
-from python_datapack.utils.io import *
+from stewbeet import Font, Mem, Texture, set_json_encoder, write_function
+
 
 # Generates trivial things in the datapack
-def main(config: dict) -> None:
-	namespace: str = config["namespace"]
-	build_resource_pack: str = config["build_resource_pack"]
-	assets_folder: str = config["assets_folder"]
+def main() -> None:
+	ns: str = Mem.ctx.project_id
+	assets_folder: str = f"{Mem.ctx.directory}/assets"
 
 	# Constants
 	SCREAMER_SHAZ: str = "1"
@@ -17,33 +15,31 @@ def main(config: dict) -> None:
 	# Make a font
 	font_providers: dict[str, list[dict]] = {
 		"providers": [
-			{"type":"bitmap","file":f"{namespace}:font/shazinho.png","ascent":80,"height":160,"chars":[SCREAMER_SHAZ]},
-			{"type":"bitmap","file":f"{namespace}:font/stoupinou.png","ascent":80,"height":160,"chars":[SCREAMER_STOUP]},
+			{"type":"bitmap","file":f"{ns}:font/shazinho.png","ascent":80,"height":160,"chars":[SCREAMER_SHAZ]},
+			{"type":"bitmap","file":f"{ns}:font/stoupinou.png","ascent":80,"height":160,"chars":[SCREAMER_STOUP]},
 		]
 	}
-	write_file(f"{build_resource_pack}/assets/{namespace}/font/screamers.json", stp.super_json_dump(font_providers))
+	Mem.ctx.assets[ns].fonts["screamers"] = set_json_encoder(Font(font_providers))
 
 	# Copy textures
-	super_copy(f"{assets_folder}/shazinho.png", f"{build_resource_pack}/assets/{namespace}/textures/font/shazinho.png")
-	super_copy(f"{assets_folder}/stoupinou.png", f"{build_resource_pack}/assets/{namespace}/textures/font/stoupinou.png")
+	Mem.ctx.assets[ns].textures["font/shazinho"] = Texture(source_path=f"{assets_folder}/shazinho.png")
+	Mem.ctx.assets[ns].textures["font/stoupinou"] = Texture(source_path=f"{assets_folder}/stoupinou.png")
 
 	# Make a function to make the shazinho screamer
 	for text, name in [(SCREAMER_SHAZ, "shaz"), (SCREAMER_STOUP, "stoup")]:
-		write_function(config, f"{namespace}:utils/s/{name}_vine", f"""
+		write_function(f"{ns}:utils/s/{name}_vine", f"""
 title @s times 0 0 40
-title @s title {{"text":"{text}","font":"{namespace}:screamers"}}
-execute at @s run playsound {namespace}:vine_boom ambient
+title @s title {{"text":"{text}","font":"{ns}:screamers"}}
+execute at @s run playsound {ns}:vine_boom ambient
 """)
-		write_function(config, f"{namespace}:utils/s/{name}_scary", f"""
+		write_function(f"{ns}:utils/s/{name}_scary", f"""
 title @s times 0 40 40
-title @s title {{"text":"{text}","font":"{namespace}:screamers"}}
-execute at @s run playsound {namespace}:scary_screamer ambient
+title @s title {{"text":"{text}","font":"{ns}:screamers"}}
+execute at @s run playsound {ns}:scary_screamer ambient
 """)
-		write_function(config, f"{namespace}:utils/s/{name}_fart", f"""
+		write_function(f"{ns}:utils/s/{name}_fart", f"""
 title @s times 0 0 40
-title @s title {{"text":"{text}","font":"{namespace}:screamers"}}
-execute at @s run playsound {namespace}:fart_reverb ambient
+title @s title {{"text":"{text}","font":"{ns}:screamers"}}
+execute at @s run playsound {ns}:fart_reverb ambient
 """)
-
-	pass
 

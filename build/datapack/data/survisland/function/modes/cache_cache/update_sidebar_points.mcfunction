@@ -1,8 +1,8 @@
 
 #> survisland:modes/cache_cache/update_sidebar_points
 #
-# @within	survisland:modes/cache_cache/process_end
-#			survisland:modes/cache_cache/adv/add_points
+# @within	survisland:modes/cache_cache/adv/add_points
+#			survisland:modes/cache_cache/process_end
 #
 
 #i = 0

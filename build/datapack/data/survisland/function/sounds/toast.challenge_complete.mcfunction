@@ -1,9 +1,9 @@
 
 #> survisland:sounds/toast.challenge_complete
 #
-# @within	survisland:modes/1v1v1v1_cache_cache/process_end
+# @within	survisland:modes/1v1_cache_cache/process_end
 #			survisland:modes/1v1v1_cache_cache/process_end
-#			survisland:modes/1v1_cache_cache/process_end
+#			survisland:modes/1v1v1v1_cache_cache/process_end
 #			survisland:modes/brain_rooms/process_end
 #			survisland:modes/cache_s12/process_end
 #			survisland:modes/cache_s13/process_end

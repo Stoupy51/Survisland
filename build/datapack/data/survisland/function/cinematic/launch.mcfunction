@@ -43,7 +43,6 @@ data modify storage survisland:temp current_position set from entity @s Pos
 data modify storage survisland:temp current_rotation set from entity @s Rotation
 data modify storage survisland:temp target_rotation set from storage survisland:temp current_rotation
 
-
 ## Remember the additional arguments
 $data modify storage survisland:temp with set value $(with)
 execute unless data storage survisland:temp with.interpolation run data modify storage survisland:temp with.interpolation set value 1
@@ -51,7 +50,6 @@ execute store result score #cinematic_interpolation survisland.data run data get
 execute if data storage survisland:temp with.pitch if data storage survisland:temp with.yaw run function survisland:cinematic/get_rotation_arguments with storage survisland:temp with
 execute unless data storage survisland:temp with.go_side run data modify storage survisland:temp with.go_side set value 0
 execute unless data storage survisland:temp with.add_y run data modify storage survisland:temp with.add_y set value 20.0
-
 
 ## Summon the entity that will control the player
 execute summon item_display run function survisland:cinematic/setup_entity

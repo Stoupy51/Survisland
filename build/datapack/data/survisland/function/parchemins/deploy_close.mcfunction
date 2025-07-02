@@ -1,14 +1,11 @@
 
 #> survisland:parchemins/deploy_close
 #
-# @within	survisland:utils/right_click
+# @within	survisland:right_click/all
+#			survisland:utils/right_click
 #
-
-#> survisland:parchemins/deploy_close
-#
-# @within			survisland:right_click/all
 # @executed			as & at current player
-#
+# 
 # @description		Close the scroll by kill an item_display and a text_display (usually summoned by deploy_open)
 #
 

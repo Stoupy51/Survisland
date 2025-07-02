@@ -17,4 +17,3 @@ execute as @a[predicate=survisland:has_vehicle,nbt={SelectedItem:{tag:{survislan
 # Detect if a player in-game lost his vehicle
 execute as @a[gamemode=adventure,tag=survisland.alive,predicate=!survisland:has_vehicle,sort=random] run function survisland:modes/space_riding/lost_vehicle
 
-

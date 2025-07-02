@@ -14,7 +14,6 @@ give @a[tag=survisland.alive] arrow
 execute as @a[tag=survisland.alive] run attribute @s attack_speed base set 2048.0
 
 
-
 tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Lancement de la partie de Pitch Creep, anéantissez l'équipe ennemie !"}]
 
 scoreboard objectives add survisland.temp.death_count deathCount

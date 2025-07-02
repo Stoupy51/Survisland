@@ -45,7 +45,6 @@ execute if score #specs_restants survisland.data matches 10 run team modify surv
 execute if score #mAkijan_restants survisland.data matches 10 run team modify survisland.temp.sidebar.5 suffix [{"text":"eurs restants : ","color":"dark_aqua"},{"text":"10","color":"yellow"}]
 execute if score #mHainy_restants survisland.data matches 10 run team modify survisland.temp.sidebar.2 suffix [{"text":"urs restants : ","color":"green"},{"text":"10","color":"yellow"}]
 
-
 #i = 0
 #f = open("update_sidebar_timer.mcfunction", "a")
 #while i <= 900:

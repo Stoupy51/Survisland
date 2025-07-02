@@ -11,8 +11,16 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:lore": [
-									{"text": "Made by EvoRay","color": "gold","italic": false},
-									["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]
+									{
+										"text": "Made by EvoRay",
+										"color": "gold",
+										"italic": false
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
+										{"text": " Survisland","italic": true,"color": "blue"}
+									]
 								],
 								"minecraft:consumable": {},
 								"minecraft:item_model": "survisland:scalbar",
@@ -22,8 +30,12 @@
 									"color": "white"
 								},
 								"minecraft:custom_data": {
-									"survisland": {"scalbar": true},
-									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+									"survisland": {
+										"scalbar": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
 								}
 							}
 						}
@@ -33,4 +45,3 @@
 		}
 	]
 }
-

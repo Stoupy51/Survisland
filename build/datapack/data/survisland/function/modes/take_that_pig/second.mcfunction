@@ -34,11 +34,9 @@ execute if score #detect_end survisland.data matches 0 if score #remaining_time 
 execute if score #detect_end survisland.data matches 0 if score #remaining_time survisland.data matches 0 run scoreboard players set #detect_end survisland.data 1
 
 
-
 #####################################################################################################################################################################################################################################################################################################################
 #####################################################################################################################################################################################################################################################################################################################
 #####################################################################################################################################################################################################################################################################################################################
-
 
 
 ##Killing mobs
@@ -61,11 +59,9 @@ execute if score #detect_end survisland.data matches 1 if score #good_2 survisla
 execute if score #detect_end survisland.data matches 1 if score #good_2 survisland.data matches 1 run scoreboard players set #detect_end survisland.data 2
 
 
-
 #####################################################################################################################################################################################################################################################################################################################
 #####################################################################################################################################################################################################################################################################################################################
 #####################################################################################################################################################################################################################################################################################################################
-
 
 
 ##Parcours
@@ -73,6 +69,4 @@ execute if score #detect_end survisland.data matches 2 run title @a actionbar [{
 execute if score #detect_end survisland.data matches 2 as @a[gamemode=adventure,tag=!survisland.finished] at @s if block ~ ~-1 ~ gold_block run function survisland:modes/take_that_pig/parkour_end
 execute if score #detect_end survisland.data matches 2 if score #remaining_time survisland.data matches 0 run scoreboard players set #detect_end survisland.data 3
 execute if score #detect_end survisland.data matches 2 unless entity @a[gamemode=adventure,tag=!survisland.finished] run scoreboard players set #detect_end survisland.data 3
-
-
 

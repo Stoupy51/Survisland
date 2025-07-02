@@ -19,7 +19,6 @@ scoreboard players add @s survisland.data 1
 execute if score @s survisland.data matches 2.. run execute store result entity @s teleport_duration int 1 run scoreboard players get @s survisland.data
 scoreboard players remove @s survisland.data 2
 
-
 ## Stream Bezier
 # Prepare storages for Stream Bezier
 data modify storage survisland:temp initial_points set value {points:[],step:5}

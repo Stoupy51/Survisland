@@ -14,7 +14,6 @@ execute as @a[scores={survisland.temp.death_count=1..}] run function survisland:
 execute as @e[type=player,scores={survisland.temp.death_count=1..}] run function survisland:modes/layers/death_tp
 
 
-
 execute unless score #joueurs_restants survisland.data matches 0 store result score #joueurs_restants survisland.data if entity @a[tag=survisland.alive]
 
 execute if score #joueurs_restants survisland.data matches ..1 run function survisland:modes/mob_escape/process_end

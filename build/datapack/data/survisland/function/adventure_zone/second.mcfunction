@@ -1,17 +1,14 @@
 
 #> survisland:adventure_zone/second
 #
-# @within	survisland:v2.1.5/second
+# @within	survisland:second
+#			survisland:v2.1.5/second
 #
-
-#> survisland:adventure_zone/second
-#
-# @within			survisland:second
 # @executed			default context
-#
+# 
 # @description		Function executed every second to manage the adventure zone :
-#					- Change game mode to adventure when a player enter the zone
-#					- Change game mode to survival when a player leave the zone
+# 				- Change game mode to adventure when a player enter the zone
+# 				- Change game mode to survival when a player leave the zone
 #
 
 # Enter the adventure zone

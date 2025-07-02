@@ -16,14 +16,29 @@
 									"color": "red"
 								},
 								"minecraft:lore": [
-									{"text": "Auteur : ","italic": false,"color": "gold"},
-									{"text": "Stoupy51","color": "yellow"},
-									["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]
+									{
+										"text": "Auteur : ",
+										"italic": false,
+										"color": "gold"
+									},
+									{
+										"text": "Stoupypy",
+										"color": "yellow"
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
+										{"text": " Survisland","italic": true,"color": "blue"}
+									]
 								],
 								"minecraft:item_model": "survisland:parchemin",
 								"minecraft:custom_data": {
-									"survisland": {"parchemin": true},
-									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+									"survisland": {
+										"parchemin": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
 								}
 							}
 						}
@@ -33,4 +48,3 @@
 		}
 	]
 }
-

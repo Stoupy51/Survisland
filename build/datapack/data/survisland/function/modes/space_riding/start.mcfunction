@@ -6,7 +6,6 @@
 
 ##Fonction executée lors du lancement de la partie
 
-
 # Round 1 : phantoms
 # Round 2 : blazes
 # Round 3 : chicken
@@ -19,7 +18,6 @@
 
 # give @p player_head{survisland:{detect:{go_down:1b}},SkullOwner:{Id:[I;-1864701848,-334870135,-2029676573,613468765],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzI0MzE5MTFmNDE3OGI0ZDJiNDEzYWE3ZjVjNzhhZTQ0NDdmZTkyNDY5NDNjMzFkZjMxMTYzYzBlMDQzZTBkNiJ9fX0="}]}}}
 # give @p player_head{survisland:{detect:{go_up:1b}},SkullOwner:{Id:[I;733532205,-1048623952,-1224856685,128611050],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmNjYmY5ODgzZGQzNTlmZGYyMzg1YzkwYTQ1OWQ3Mzc3NjUzODJlYzQxMTdiMDQ4OTVhYzRkYzRiNjBmYyJ9fX0="}]}}}
-
 
 # Tellraw
 tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Préparation de l'épreuve..."}]

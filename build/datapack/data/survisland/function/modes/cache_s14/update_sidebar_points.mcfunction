@@ -1,9 +1,9 @@
 
 #> survisland:modes/cache_s14/update_sidebar_points
 #
-# @within	survisland:modes/cache_s14/process_end
+# @within	survisland:modes/cache_s14/adv/add_points
+#			survisland:modes/cache_s14/process_end
 #			survisland:modes/cache_s14/second
-#			survisland:modes/cache_s14/adv/add_points
 #
 
 execute if score #mPonogoro_points survisland.data matches -100 run team modify survisland.temp.sidebar.7 suffix [{"text":"Points : ","color":"light_purple"},{"text":"-100","color":"gray"}]

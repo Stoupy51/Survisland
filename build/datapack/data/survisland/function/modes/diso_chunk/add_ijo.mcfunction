@@ -4,7 +4,6 @@
 # @within	???
 #
 
-
 scoreboard players add #mIjo survisland.data 1
 execute if score #mIjo survisland.data matches ..5 as @a at @s run function survisland:sounds/player.level_up
 tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Progrès de l'équipe "},{"text":"Ijo","color":"dark_purple"},{"text":" : "},{"text":"[","color":"aqua"},{"score":{"name":"#mIjo","objective":"survisland.data"},"color":"yellow"},{"text":"/"},{"text":"6","color":"yellow"},{"text":"]","color":"aqua"}]

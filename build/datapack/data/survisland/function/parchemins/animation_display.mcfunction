@@ -1,14 +1,11 @@
 
 #> survisland:parchemins/animation_display
 #
-# @within	survisland:parchemins/deploy_open 4t replace
+# @within	survisland:parchemins/deploy_open
+#			survisland:parchemins/deploy_open 4t replace
 #
-
-#> survisland:parchemins/animation_display
-#
-# @within			survisland:parchemins/deploy_open
 # @executed			default context
-#
+# 
 # @description		Function scheduled 4 ticks after the deploy_open function is called.
 #
 

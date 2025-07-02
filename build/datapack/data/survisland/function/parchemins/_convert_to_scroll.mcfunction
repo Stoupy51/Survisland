@@ -3,15 +3,11 @@
 #
 # @within	survisland:parchemins/_convert_votes
 #
-
-#> survisland:parchemins/_convert_to_scroll
-#
-# @within			survisland:parchemins/_convert_votes
 # @executed			default context
-#
+# 
 # @input			storage survisland:main Item
 # @output			storage survisland:main Item
-#
+# 
 # @description		Convertit un vote (livre) en parchemin
 #
 
@@ -25,7 +21,6 @@ data modify block ~ ~-2 ~ front_text.messages[1] set value [{"nbt":"Item.compone
 data modify storage survisland:main Item.components."minecraft:lore" set value []
 data modify storage survisland:main Item.components."minecraft:lore" append from block ~ ~-2 ~ front_text.messages[0]
 data modify storage survisland:main Item.components."minecraft:custom_name" set from block ~ ~-2 ~ front_text.messages[1]
-
 
 # Replace the book by a scroll
 data modify storage survisland:main Item.id set value "minecraft:warped_fungus_on_a_stick"

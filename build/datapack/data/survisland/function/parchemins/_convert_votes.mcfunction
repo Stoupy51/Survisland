@@ -1,17 +1,13 @@
 
 #> survisland:parchemins/_convert_votes
 #
-# @within	???
+# @within	Nothing
 #
-
-#> survisland:parchemins/_convert_votes
-#
-# @within			Nothing
 # @executed			default context
-#
+# 
 # @description		Convertit les votes (livres) en parchemins
-#					- Entrée = bloc au dessus
-#					- Sortie = bloc en dessous
+# 				- Entrée = bloc au dessus
+# 				- Sortie = bloc en dessous
 #
 
 # Stop execution if no changes in the containers
@@ -159,7 +155,6 @@ execute if score #parchemin_count survisland.data matches 1.. run data modify st
 execute if score #parchemin_count survisland.data matches 1.. run function survisland:parchemins/_convert_to_scroll
 execute if score #parchemin_count survisland.data matches 1.. run data modify block ~ ~-1 ~ Items[26] set from storage survisland:main Item
 scoreboard players remove #parchemin_count survisland.data 1
-
 
 # Clear storage & sign
 data remove storage survisland:main Item

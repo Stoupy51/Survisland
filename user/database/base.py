@@ -1,13 +1,17 @@
 
+# ruff: noqa: E501
 # Imports
-from python_datapack.utils.database_helper import *
+import os
+
+from stewbeet import CUSTOM_ITEM_VANILLA, OVERRIDE_MODEL, RESULT_OF_CRAFTING, Mem, ingr_repr
+
 
 # Main function should return a database
-def main(config: dict) -> dict[str, dict]:
-	ns: str = config["namespace"]
+def main() -> None:
+	ns: str = Mem.ctx.project_id
 
 	# Setup database
-	database: dict[str,dict] = {
+	Mem.definitions = {
 		"icon": {"id": CUSTOM_ITEM_VANILLA},
 
 		"laser_gun": {
@@ -17,7 +21,7 @@ def main(config: dict) -> dict[str, dict]:
 		"parchemin": {
 			"id": "minecraft:warped_fungus_on_a_stick",
 			"item_name": {"text":"Default vote","italic":False,"color":"red"},
-			"lore":[{"text":"Auteur : ","italic":False,"color":"gold"},{"text":"Stoupy51","color":"yellow"}],
+			"lore":[{"text":"Auteur : ","italic":False,"color":"gold"},{"text":"Stoupypy","color":"yellow"}],
 			OVERRIDE_MODEL: {
 				"parent": "item/handheld",
 				"display": {
@@ -639,26 +643,29 @@ def main(config: dict) -> dict[str, dict]:
 		}
 	}
 
+	# Get textures
+	textures = os.listdir(Mem.ctx.meta.get("stewbeet", {}).get("textures_folder", ""))
+
 	# Add colored books
-	books: list[str] = [x.replace(".png","") for x in config['textures_files'] if "book_" in x]
+	books: list[str] = [x.replace(".png","") for x in textures if "book_" in x]
 	for book in books:
-		database[book] = {"id": "minecraft:written_book", "category": "book"}
+		Mem.definitions[book] = {"id": "minecraft:written_book", "category": "book"}
 
 	# Add edible colored fishs
-	fishs: list[str] = [x.replace(".png","") for x in config['textures_files'] if "poisson_" in x]
+	fishs: list[str] = [x.replace(".png","") for x in textures if "poisson_" in x]
 	for fish in fishs:
-		database[fish] = {
+		Mem.definitions[fish] = {
 			"id": "minecraft:apple", "consumable": {},
 			"food": {"nutrition": 4, "saturation": 2.4, "can_always_eat": True},
 			"lore": [{"text":"Made by M4TOUW","color":"gold","italic":False}],
 			"equippable": {"slot": "head", "camera_overlay":f"{ns}:item/{fish}"},
 			"category": "fish",
 		}
-	
+
 	# Add edible logos
-	for logo in config['textures_files']:
+	for logo in textures:
 		if "logo_" in logo:
-			database[logo.replace(".png","")] = {"id": "minecraft:apple", "consumable": {}, "food": {"nutrition": 4, "saturation": 2.4, "can_always_eat": True}, "category": "logo"}
-	
-	return database
+			Mem.definitions[logo.replace(".png","")] = {"id": "minecraft:apple", "consumable": {}, "food": {"nutrition": 4, "saturation": 2.4, "can_always_eat": True}, "category": "logo"}
+
+	return Mem.definitions
 

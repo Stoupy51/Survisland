@@ -3,12 +3,8 @@
 #
 # @within	survisland:adventure_zone/second
 #
-
-#> survisland:adventure_zone/enter
-#
-# @within			survisland:adventure_zone/second
 # @executed			as the player who entered the zone
-#
+# 
 # @description		Switches the player to adventure mode and tags them
 #
 

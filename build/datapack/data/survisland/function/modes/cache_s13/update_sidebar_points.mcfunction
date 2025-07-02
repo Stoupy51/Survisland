@@ -1,9 +1,9 @@
 
 #> survisland:modes/cache_s13/update_sidebar_points
 #
-# @within	survisland:modes/cache_s13/process_end
+# @within	survisland:modes/cache_s13/adv/add_points
+#			survisland:modes/cache_s13/process_end
 #			survisland:modes/cache_s13/second
-#			survisland:modes/cache_s13/adv/add_points
 #
 
 execute if score #mSambor_points survisland.data matches -100 run team modify survisland.temp.sidebar.4 suffix [{"text":"Points : ","color":"white"},{"text":"-100","color":"yellow"}]

@@ -28,4 +28,3 @@ execute if score #detect_end survisland.data matches 0 if score #remaining_time 
 execute if score #detect_end survisland.data matches 0 run function survisland:modes/cache_s12/update_sidebar_alives
 execute if score #detect_end survisland.data matches 1.. run function survisland:modes/cache_s12/process_end
 
-

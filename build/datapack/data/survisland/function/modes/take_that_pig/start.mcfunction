@@ -24,7 +24,6 @@ scoreboard players set #process_end survisland.data 0
 scoreboard players set #detect_end survisland.data 0
 scoreboard players set @a[gamemode=!creative,gamemode=!spectator] survisland.temp.sidebar 0
 
-
 ##Définition des couleurs selon la concrete sous le pied des joueurs
 execute as @a[gamemode=!creative,gamemode=!spectator] at @s run function survisland:modes/take_that_pig/define_color
 
@@ -36,7 +35,6 @@ execute as @e[limit=8] run summon pig -1220 64 -2806 {Tags:["survisland.to_take"
 team modify mMerge friendlyFire false
 tag Stoupy51 add survisland.spec_used
 execute as @a at @s run playsound item.goat_horn.sound.0 ambient @s
-
 
 schedule function survisland:modes/take_that_pig/tick 1t replace
 schedule function survisland:modes/take_that_pig/second 1s replace

@@ -62,7 +62,6 @@ setblock -1267 59 -2780 stone_button[face=wall,facing=north]
 setblock -1267 59 -2763 stone_button[face=wall,facing=north]
 setblock -1267 59 -2747 stone_button[face=wall,facing=north]
 
-
 tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Lancement de la partie de Confiance Aveugle, communiquez bien !"}]
 
 scoreboard objectives add survisland.temp.sidebar dummy {"text":"Boutons validés","color":"gray"}

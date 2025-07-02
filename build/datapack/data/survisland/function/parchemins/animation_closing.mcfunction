@@ -4,11 +4,6 @@
 # @within	survisland:parchemins/deploy_close
 #
 
-#> survisland:parchemins/animation_closing
-#
-# @within	survisland:parchemins/deploy_close
-#
-
 # Scale down
 data modify entity @s transformation.scale[0] set value 0.0f
 

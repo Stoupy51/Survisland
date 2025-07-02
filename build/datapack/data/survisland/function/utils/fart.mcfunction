@@ -1,14 +1,11 @@
 
 #> survisland:utils/fart
 #
-# @within	survisland:v2.1.5/tick
+# @within	survisland:tick
+#			survisland:v2.1.5/tick
 #
-
-#> survisland:utils/fart
-#
-# @within			survisland:tick
 # @executed			as & at the player who farted
-#
+# 
 # @description		Manage fart sound, particles, farted tag
 #
 

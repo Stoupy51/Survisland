@@ -11,8 +11,16 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:lore": [
-									{"text": "Made by Emilou","color": "gold","italic": false},
-									["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]
+									{
+										"text": "Made by Emilou",
+										"color": "gold",
+										"italic": false
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
+										{"text": " Survisland","italic": true,"color": "blue"}
+									]
 								],
 								"minecraft:max_stack_size": 1,
 								"minecraft:consumable": {},
@@ -27,13 +35,21 @@
 									"color": "white"
 								},
 								"minecraft:custom_data": {
-									"survisland": {"cooked_rice": true},
-									"smithed": {"ignore": {"functionality": true,"crafting": true}}
+									"survisland": {
+										"cooked_rice": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
 								},
 								"minecraft:use_remainder": {
 									"count": 1,
 									"id": "minecraft:command_block",
-									"components": {"item_name": {"text": "Iron Bowl","italic": false,"color": "white"},"item_model": "survisland:iron_bowl","lore": [{"text": "Made by Emilou","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]}
+									"components": {
+										"item_name": {"text": "Iron Bowl","italic": false,"color": "white"},
+										"item_model": "survisland:iron_bowl",
+										"lore": [{"text": "Made by Emilou","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]
+									}
 								}
 							}
 						}
@@ -43,4 +59,3 @@
 		}
 	]
 }
-

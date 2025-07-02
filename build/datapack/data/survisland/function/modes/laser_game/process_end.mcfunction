@@ -21,4 +21,3 @@ kill @e[tag=survisland.laser_game.base]
 
 #scoreboard objectives setdisplay sidebar survisland.temp.individual_points
 
-

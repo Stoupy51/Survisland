@@ -3,14 +3,10 @@
 #
 # @within	survisland:parchemins/animation_display
 #
-
-#> survisland:parchemins/animation_display_selected
-#
-# @within			survisland:parchemins/animation_display
 # @executed			as & at item_display or text_display
-#
+# 
 # @description		Function scheduled 4 ticks after the deploy_open function is called.
-#					Used to display the selected item or text.
+# 				Used to display the selected item or text.
 #
 
 # Item display : Setup texture and scale

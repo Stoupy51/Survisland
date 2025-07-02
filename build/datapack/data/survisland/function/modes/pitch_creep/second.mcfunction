@@ -14,4 +14,3 @@ execute if score #pitch_creep_seconds survisland.data matches 3 run summon creep
 execute if score #pitch_creep_seconds survisland.data matches 3 as @e[type=creeper,tag=survisland.new] run function survisland:modes/pitch_creep/creeper
 scoreboard players operation #pitch_creep_seconds survisland.data %= #3 survisland.data
 
-

@@ -1580,4 +1580,3 @@ execute if score #saison survisland.data matches 10 if score #intro survisland.d
 execute if score #saison survisland.data matches 10 if score #intro survisland.data matches 315 run particle dust{color:[255,0,255],scale:3} ~0.099 ~7.875 ~0.096 0.1 0.1 0.1 0 10 force @a[distance=0..]
 execute if score #saison survisland.data matches 10 if score #intro survisland.data matches 315 run particle dust{color:[255,255,0],scale:3} ~0.104 ~7.875 ~0.101 0.1 0.1 0.1 0 10 force @a[distance=0..]
 
-

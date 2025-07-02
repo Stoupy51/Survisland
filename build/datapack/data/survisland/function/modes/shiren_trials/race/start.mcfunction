@@ -12,4 +12,3 @@ function shopping_kart:kart/switch_model/summon_new_kart
 # Register start time
 scoreboard players set @s survisland.temp.race_start 0
 
-
