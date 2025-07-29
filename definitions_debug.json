@@ -224,6 +224,14 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"monocoin": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
+	"super_star": {
+		"id": "minecraft:command_block",
+		"category": "misc",
+		"item_model": "survisland:super_star",
+		"item_name": {"text": "Super Star"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"super_star": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"book_advanced": {
 		"id": "minecraft:written_book",
 		"category": "book",

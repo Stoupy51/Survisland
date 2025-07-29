@@ -640,6 +640,10 @@ def main() -> None:
 		"monocoin": {
 			"id": CUSTOM_ITEM_VANILLA,
 			"category": "misc",
+		},
+		"super_star": {
+			"id": CUSTOM_ITEM_VANILLA,
+			"category": "misc",
 		}
 	}
 
