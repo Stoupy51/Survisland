@@ -5,6 +5,6 @@
 		"sound_id": "survisland:35_we_are_vanguards"
 	},
 	"description": {
-		"text": "35 - We are Vanguards"
+		"translate": "survisland.35_we_are_vanguards"
 	}
 }

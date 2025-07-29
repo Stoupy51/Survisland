@@ -1,6 +1,8 @@
 
 #> survisland:parchemins/deploy_open
 #
+# @executed	as the player & at current position
+#
 # @within	survisland:right_click/all
 #			survisland:utils/right_click
 #

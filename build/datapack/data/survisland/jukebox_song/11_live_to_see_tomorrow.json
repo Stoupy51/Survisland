@@ -5,6 +5,6 @@
 		"sound_id": "survisland:11_live_to_see_tomorrow"
 	},
 	"description": {
-		"text": "11 - Live to See Tomorrow"
+		"translate": "survisland.11_live_to_see_tomorrow"
 	}
 }

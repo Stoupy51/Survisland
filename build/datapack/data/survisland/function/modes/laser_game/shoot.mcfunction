@@ -1,6 +1,8 @@
 
 #> survisland:modes/laser_game/shoot
 #
+# @executed	as @a[scores={survisland.right_click=1..},sort=random] & at @s
+#
 # @within	survisland:modes/laser_game/right_click
 #
 

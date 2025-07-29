@@ -1,7 +1,9 @@
 
 #> survisland:modes/skateboard/ride
 #
-# @within	survisland:modes/skateboard/tick
+# @executed	as @a[gamemode=!spectator,tag=!survisland.skateboard] & at @s & positioned ~ ~2 ~
+#
+# @within	survisland:modes/skateboard/tick [ as @a[gamemode=!spectator,tag=!survisland.skateboard] & at @s & positioned ~ ~2 ~ ]
 #
 
 tag @s add survisland.skateboard

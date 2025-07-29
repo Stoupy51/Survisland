@@ -1,6 +1,8 @@
 
 #> survisland:advancements/pop_ups_revoke
 #
+# @executed	as the player & at current position
+#
 # @within	survisland:advancements/pop_ups 1s replace
 #
 

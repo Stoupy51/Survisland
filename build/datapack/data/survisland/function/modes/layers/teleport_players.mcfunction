@@ -1,7 +1,9 @@
 
 #> survisland:modes/layers/teleport_players
 #
-# @within	survisland:modes/layers/tick
+# @executed	as @a[sort=random,team=!zStaff]
+#
+# @within	survisland:modes/layers/tick [ as @a[sort=random,team=!zStaff] ]
 #
 
 effect clear @s

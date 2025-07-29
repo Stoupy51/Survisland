@@ -1,6 +1,8 @@
 
 #> survisland:moving_structure/action_teleport
 #
+# @executed	at @s
+#
 # @within	survisland:moving_structure/action_movement with storage survisland:temp input
 #
 

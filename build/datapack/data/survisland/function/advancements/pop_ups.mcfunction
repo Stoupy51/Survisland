@@ -1,6 +1,8 @@
 
 #> survisland:advancements/pop_ups
 #
+# @executed	as the player & at current position
+#
 # @within	advancement survisland:pop_ups/confort_dans_5_minutes
 #			advancement survisland:pop_ups/confort_dans_10_minutes
 #			advancement survisland:pop_ups/confort_dans_15_minutes

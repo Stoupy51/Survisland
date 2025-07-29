@@ -1,6 +1,8 @@
 
 #> survisland:moving_structure/tag_players
 #
+# @executed	at @s
+#
 # @within	survisland:moving_structure/action_launch with storage survisland:temp input
 #
 

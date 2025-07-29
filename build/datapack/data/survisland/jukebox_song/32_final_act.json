@@ -5,6 +5,6 @@
 		"sound_id": "survisland:32_final_act"
 	},
 	"description": {
-		"text": "32 - Final act"
+		"translate": "survisland.32_final_act"
 	}
 }

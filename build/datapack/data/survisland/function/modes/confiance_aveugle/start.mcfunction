@@ -62,9 +62,9 @@ setblock -1267 59 -2780 stone_button[face=wall,facing=north]
 setblock -1267 59 -2763 stone_button[face=wall,facing=north]
 setblock -1267 59 -2747 stone_button[face=wall,facing=north]
 
-tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Lancement de la partie de Confiance Aveugle, communiquez bien !"}]
+tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"translate": "survisland.lancement_de_la_partie_de_confiance_aveugle_communiquez_bien"}]
 
-scoreboard objectives add survisland.temp.sidebar dummy {"text":"Boutons validés","color":"gray"}
+scoreboard objectives add survisland.temp.sidebar dummy {"translate": "survisland.boutons_valids","color":"gray"}
 scoreboard objectives setdisplay sidebar survisland.temp.sidebar
 
 scoreboard players set #conf_av_seconds survisland.data 0
@@ -78,9 +78,9 @@ scoreboard players set #detect_end survisland.data 0
 team add survisland.temp.sidebar.3
 team add survisland.temp.sidebar.2
 team add survisland.temp.sidebar.1
-team modify survisland.temp.sidebar.3 suffix [{"text":"embali : ","color":"yellow"},{"text":"0","color":"green"},{"text":"/","color":"gray"},{"text":"14","color":"green"}]
-team modify survisland.temp.sidebar.2 suffix [{"text":"uarua : ","color":"light_purple"},{"text":"0","color":"green"},{"text":"/","color":"gray"},{"text":"14","color":"green"}]
-team modify survisland.temp.sidebar.1 suffix [{"text":"eluang : ","color":"aqua"},{"text":"0","color":"green"},{"text":"/","color":"gray"},{"text":"14","color":"green"}]
+team modify survisland.temp.sidebar.3 suffix [{"translate": "survisland.embali","color":"yellow"},{"text":"0","color":"green"},{"text":"/","color":"gray"},{"text":"14","color":"green"}]
+team modify survisland.temp.sidebar.2 suffix [{"translate": "survisland.uarua","color":"light_purple"},{"text":"0","color":"green"},{"text":"/","color":"gray"},{"text":"14","color":"green"}]
+team modify survisland.temp.sidebar.1 suffix [{"translate": "survisland.eluang","color":"aqua"},{"text":"0","color":"green"},{"text":"/","color":"gray"},{"text":"14","color":"green"}]
 team modify survisland.temp.sidebar.3 color yellow
 team modify survisland.temp.sidebar.2 color light_purple
 team modify survisland.temp.sidebar.1 color aqua

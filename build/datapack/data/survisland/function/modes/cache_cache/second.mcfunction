@@ -17,5 +17,5 @@ execute if score #glowing survisland.data matches 90.. run effect give @a[tag=su
 execute if score #glowing survisland.data matches 90.. as @a at @s run playsound entity.creeper.primed ambient @s
 execute if score #glowing survisland.data matches 90.. run scoreboard players set #glowing survisland.data 0
 
-execute if score #cache_cache_seconds survisland.data matches 300 run tellraw @a ["",{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true},{"text":" Lancement de l'effet glowing periodique (1m30) !"}]
+execute if score #cache_cache_seconds survisland.data matches 300 run tellraw @a ["",{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true},{"translate": "survisland.lancement_de_leffet_glowing_periodique_1m30"}]
 

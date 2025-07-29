@@ -12,22 +12,20 @@
 							"components": {
 								"minecraft:lore": [
 									{
-										"text": "Made by EvoRay",
+										"translate": "survisland.made_by_evoray",
 										"color": "gold",
 										"italic": false
 									},
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
-										{"text": " Survisland","italic": true,"color": "blue"}
+										{"translate": "survisland","italic": true,"color": "blue"}
 									]
 								],
 								"minecraft:consumable": {},
 								"minecraft:item_model": "survisland:scalbar",
 								"minecraft:item_name": {
-									"text": "Scalbar",
-									"italic": false,
-									"color": "white"
+									"translate": "survisland.scalbar"
 								},
 								"minecraft:custom_data": {
 									"survisland": {

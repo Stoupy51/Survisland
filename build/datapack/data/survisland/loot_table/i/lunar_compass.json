@@ -12,15 +12,13 @@
 							"components": {
 								"minecraft:item_model": "survisland:lunar_compass",
 								"minecraft:item_name": {
-									"text": "Lunar Compass",
-									"italic": false,
-									"color": "white"
+									"translate": "survisland.lunar_compass"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
-										{"text": " Survisland","italic": true,"color": "blue"}
+										{"translate": "survisland","italic": true,"color": "blue"}
 									]
 								],
 								"minecraft:custom_data": {

@@ -1,7 +1,9 @@
 
 #> survisland:chair/compare_player
 #
-# @within	survisland:chair/interact_adv
+# @executed	as @e[type=interaction,distance=..50,predicate=!survisland:has_passenger,sort=nearest]
+#
+# @within	survisland:chair/interact_adv [ as @e[type=interaction,distance=..50,predicate=!survisland:has_passenger,sort=nearest] ]
 #
 
 # Stop if no interaction

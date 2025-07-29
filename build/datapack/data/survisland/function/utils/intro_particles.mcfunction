@@ -1,6 +1,8 @@
 
 #> survisland:utils/intro_particles
 #
+# @executed	at @s
+#
 # @within	survisland:utils/intro_loop
 #
 

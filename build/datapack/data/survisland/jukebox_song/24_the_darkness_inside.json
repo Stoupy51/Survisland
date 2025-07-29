@@ -5,6 +5,6 @@
 		"sound_id": "survisland:24_the_darkness_inside"
 	},
 	"description": {
-		"text": "24 - The Darkness Inside"
+		"translate": "survisland.24_the_darkness_inside"
 	}
 }

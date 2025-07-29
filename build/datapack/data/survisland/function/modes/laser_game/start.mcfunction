@@ -37,9 +37,9 @@ team join survisland.laser_game.red @a[team=mMayra]
 tag @a[team=survisland.laser_game.blue] add survisland.laser_game.blue
 tag @a[team=survisland.laser_game.red] add survisland.laser_game.red
 
-tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Lancement de la partie de Laser Game, tuez le plus d'ennemis possible !"}]
+tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"translate": "survisland.lancement_de_la_partie_de_laser_game_tuez_le_plus_dennemis_possi"}]
 
-scoreboard objectives add survisland.temp.individual_points dummy {"text":" Points Individuels ","color":"yellow"}
+scoreboard objectives add survisland.temp.individual_points dummy {"translate": "survisland.points_individuels","color":"yellow"}
 scoreboard objectives add survisland.temp.shield dummy
 scoreboard objectives add survisland.temp.cooldown dummy
 scoreboard objectives add survisland.temp.dead_cooldown dummy
@@ -57,9 +57,9 @@ scoreboard players set #base_reload survisland.data 47
 team add survisland.temp.sidebar.3
 team add survisland.temp.sidebar.2
 team add survisland.temp.sidebar.1
-team modify survisland.temp.sidebar.3 suffix [{"text":"Temps restant : "},{"text":"10","color":"yellow"},{"text":"m"},{"text":"00","color":"yellow"},{"text":"s"}]
-team modify survisland.temp.sidebar.2 suffix [{"text":"Équipe Bleue : ","color":"blue"},{"text":"0","color":"yellow"}]
-team modify survisland.temp.sidebar.1 suffix [{"text":"Équipe Rouge : ","color":"red"},{"text":"0","color":"yellow"}]
+team modify survisland.temp.sidebar.3 suffix [{"translate": "survisland.temps_restant"},{"text":"10","color":"yellow"},{"text":"m"},{"text":"00","color":"yellow"},{"text":"s"}]
+team modify survisland.temp.sidebar.2 suffix [{"translate": "survisland.quipe_bleue","color":"blue"},{"text":"0","color":"yellow"}]
+team modify survisland.temp.sidebar.1 suffix [{"translate": "survisland.quipe_rouge","color":"red"},{"text":"0","color":"yellow"}]
 team modify survisland.temp.sidebar.2 color blue
 team modify survisland.temp.sidebar.1 color red
 team join survisland.temp.sidebar.3 §3

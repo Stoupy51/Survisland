@@ -15,10 +15,10 @@ effect give @a[tag=survisland.seeker] strength 900 255 true
 effect give @a[tag=survisland.seeker] resistance 900 255 true
 effect give @a[tag=survisland.seeker] speed 900 0 true
 
-tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Lancement de l'épreuve, restez bien cachés !"}]
+tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"translate": "survisland.lancement_de_lpreuve_restez_bien_cachs"}]
 
 scoreboard objectives add survisland.temp.death_count deathCount
-scoreboard objectives add survisland.temp.sidebar dummy {"text":"Cache-Cache","color":"gold"}
+scoreboard objectives add survisland.temp.sidebar dummy {"translate": "survisland.cache_cache","color":"gold"}
 scoreboard objectives add survisland.temp.heart_beat dummy
 scoreboard objectives setdisplay sidebar survisland.temp.sidebar
 
@@ -42,13 +42,13 @@ team add survisland.temp.sidebar.4
 team add survisland.temp.sidebar.3
 team add survisland.temp.sidebar.2
 team add survisland.temp.sidebar.1
-team modify survisland.temp.sidebar.8 suffix [{"text":"emps restant : "},{"text":"15","color":"yellow"},{"text":"m"},{"text":"0","color":"yellow"},{"text":"s"}]
-team modify survisland.temp.sidebar.7 suffix [{"text":" restants : ","color":"gray"},{"text":"0","color":"yellow"}]
-team modify survisland.temp.sidebar.6 suffix [{"text":"ijan------","color":"dark_aqua"}]
-team modify survisland.temp.sidebar.5 suffix [{"text":"eurs restants : ","color":"dark_aqua"},{"text":"0","color":"yellow"}]
+team modify survisland.temp.sidebar.8 suffix [{"translate": "survisland.emps_restant"},{"text":"15","color":"yellow"},{"text":"m"},{"text":"0","color":"yellow"},{"text":"s"}]
+team modify survisland.temp.sidebar.7 suffix [{"translate": "survisland.restants","color":"gray"},{"text":"0","color":"yellow"}]
+team modify survisland.temp.sidebar.6 suffix [{"translate": "survisland.ijan","color":"dark_aqua"}]
+team modify survisland.temp.sidebar.5 suffix [{"translate": "survisland.eurs_restants","color":"dark_aqua"},{"text":"0","color":"yellow"}]
 team modify survisland.temp.sidebar.4 suffix [{"text":"s : ","color":"dark_aqua"},{"text":"0","color":"yellow"}]
-team modify survisland.temp.sidebar.3 suffix [{"text":"iny-------","color":"green"}]
-team modify survisland.temp.sidebar.2 suffix [{"text":"urs restants : ","color":"green"},{"text":"0","color":"yellow"}]
+team modify survisland.temp.sidebar.3 suffix [{"translate": "survisland.iny","color":"green"}]
+team modify survisland.temp.sidebar.2 suffix [{"translate": "survisland.urs_restants","color":"green"},{"text":"0","color":"yellow"}]
 team modify survisland.temp.sidebar.1 suffix [{"text":" : ","color":"green"},{"text":"0","color":"yellow"}]
 team modify survisland.temp.sidebar.8 color white
 team modify survisland.temp.sidebar.7 color gray

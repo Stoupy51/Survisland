@@ -5,6 +5,6 @@
 		"sound_id": "survisland:26_angie_battle"
 	},
 	"description": {
-		"text": "26 - Angie battle"
+		"translate": "survisland.26_angie_battle"
 	}
 }

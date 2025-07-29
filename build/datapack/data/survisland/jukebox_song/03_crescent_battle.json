@@ -5,6 +5,6 @@
 		"sound_id": "survisland:03_crescent_battle"
 	},
 	"description": {
-		"text": "03 - Crescent battle"
+		"translate": "survisland.03_crescent_battle"
 	}
 }

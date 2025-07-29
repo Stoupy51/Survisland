@@ -1,6 +1,8 @@
 
 #> survisland:utils/pendent_switch
 #
+# @executed	as the player & at current position
+#
 # @within	survisland:advancements/inventory_changed
 #
 

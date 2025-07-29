@@ -12,14 +12,14 @@
 							"components": {
 								"minecraft:lore": [
 									{
-										"text": "Made by Fhara",
+										"translate": "survisland.made_by_fhara",
 										"color": "gold",
 										"italic": false
 									},
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
-										{"text": " Survisland","italic": true,"color": "blue"}
+										{"translate": "survisland","italic": true,"color": "blue"}
 									]
 								],
 								"minecraft:equippable": {
@@ -27,9 +27,7 @@
 								},
 								"minecraft:item_model": "survisland:sombrero",
 								"minecraft:item_name": {
-									"text": "Sombrero",
-									"italic": false,
-									"color": "white"
+									"translate": "survisland.sombrero"
 								},
 								"minecraft:custom_data": {
 									"survisland": {

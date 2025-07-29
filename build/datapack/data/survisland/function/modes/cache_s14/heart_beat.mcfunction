@@ -1,7 +1,9 @@
 
 #> survisland:modes/cache_s14/heart_beat
 #
-# @within	survisland:modes/cache_s14/tick
+# @executed	as @a[tag=survisland.alive] & at @s
+#
+# @within	survisland:modes/cache_s14/tick [ as @a[tag=survisland.alive] & at @s ]
 #
 
 scoreboard players add @s survisland.temp.heart_beat 0

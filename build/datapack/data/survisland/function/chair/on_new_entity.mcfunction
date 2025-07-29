@@ -1,7 +1,9 @@
 
 #> survisland:chair/on_new_entity
 #
-# @within	survisland:chair/summon
+# @executed	align xyz & positioned ~.5 ~ ~.5
+#
+# @within	survisland:chair/summon [ align xyz & positioned ~.5 ~ ~.5 ]
 #
 
 # Add the chair tag

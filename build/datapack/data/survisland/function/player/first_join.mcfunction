@@ -1,6 +1,8 @@
 
 #> survisland:player/first_join
 #
+# @executed	as the player & at current position
+#
 # @within	advancement survisland:id_system
 #			survisland:player/check_id
 #

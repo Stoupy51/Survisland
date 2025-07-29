@@ -1,6 +1,8 @@
 
 #> survisland:keep_inventory/remove_items/main
 #
+# @executed	as @a[scores={survisland.deathCount=1..}] & at @s
+#
 # @within	survisland:keep_inventory/player_died
 #
 # @input storage survisland:main Inventory

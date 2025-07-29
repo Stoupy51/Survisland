@@ -7,7 +7,7 @@
 		"components": {
 			"minecraft:lore": [
 				{
-					"text": "Made by Emilou",
+					"translate": "survisland.made_by_emilou",
 					"color": "gold",
 					"italic": false
 				},
@@ -20,7 +20,7 @@
 						"font": "survisland:icons"
 					},
 					{
-						"text": " Survisland",
+						"translate": "survisland",
 						"italic": true,
 						"color": "blue"
 					}
@@ -34,9 +34,7 @@
 			},
 			"minecraft:item_model": "survisland:cooked_rice",
 			"minecraft:item_name": {
-				"text": "Cooked Rice",
-				"italic": false,
-				"color": "white"
+				"translate": "survisland.cooked_rice"
 			},
 			"minecraft:custom_data": {
 				"survisland": {
@@ -54,14 +52,12 @@
 				"id": "minecraft:command_block",
 				"components": {
 					"item_name": {
-						"text": "Iron Bowl",
-						"italic": false,
-						"color": "white"
+						"translate": "survisland.iron_bowl"
 					},
 					"item_model": "survisland:iron_bowl",
 					"lore": [
 						{
-							"text": "Made by Emilou",
+							"translate": "survisland.made_by_emilou",
 							"color": "gold",
 							"italic": false
 						},
@@ -74,7 +70,7 @@
 								"font": "survisland:icons"
 							},
 							{
-								"text": " Survisland",
+								"translate": "survisland",
 								"italic": true,
 								"color": "blue"
 							}

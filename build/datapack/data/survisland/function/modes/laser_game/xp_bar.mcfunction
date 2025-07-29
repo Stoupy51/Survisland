@@ -1,7 +1,9 @@
 
 #> survisland:modes/laser_game/xp_bar
 #
-# @within	survisland:modes/laser_game/tick
+# @executed	as @a
+#
+# @within	survisland:modes/laser_game/tick [ as @a ]
 #
 
 scoreboard players add @s survisland.temp.cooldown 0

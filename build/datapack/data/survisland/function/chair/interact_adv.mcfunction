@@ -1,6 +1,8 @@
 
 #> survisland:chair/interact_adv
 #
+# @executed	as the player & at current position
+#
 # @within	advancement survisland:chair
 #
 

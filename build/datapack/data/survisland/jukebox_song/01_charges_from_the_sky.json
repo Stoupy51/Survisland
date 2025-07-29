@@ -5,6 +5,6 @@
 		"sound_id": "survisland:01_charges_from_the_sky"
 	},
 	"description": {
-		"text": "01 - Charges From The Sky"
+		"translate": "survisland.01_charges_from_the_sky"
 	}
 }

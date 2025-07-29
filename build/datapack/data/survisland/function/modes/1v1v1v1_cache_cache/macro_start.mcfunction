@@ -10,7 +10,7 @@ tag @a remove survisland.alive
 tag @a[gamemode=!spectator,gamemode=!creative,tag=!survisland.seeker] add survisland.alive
 
 scoreboard objectives add survisland.temp.death_count deathCount
-scoreboard objectives add survisland.temp.sidebar dummy {"text":"Cache-Cache","color":"gold"}
+scoreboard objectives add survisland.temp.sidebar dummy {"translate": "survisland.cache_cache","color":"gold"}
 scoreboard objectives add survisland.temp.heart_beat dummy
 scoreboard objectives setdisplay sidebar survisland.temp.sidebar
 
@@ -44,20 +44,20 @@ team add survisland.temp.sidebar.4
 team add survisland.temp.sidebar.3
 team add survisland.temp.sidebar.2
 team add survisland.temp.sidebar.1
-team modify survisland.temp.sidebar.14 suffix [{"text":"Temps restant : "},{"text":"20","color":"gray"},{"text":"m"},{"text":"0","color":"gray"},{"text":"s"}]
-team modify survisland.temp.sidebar.13 suffix [{"text":"Specs restants : ","color":"gray"},{"text":"0","color":"white"}]
+team modify survisland.temp.sidebar.14 suffix [{"translate": "survisland.temps_restant"},{"text":"20","color":"gray"},{"text":"m"},{"text":"0","color":"gray"},{"text":"s"}]
+team modify survisland.temp.sidebar.13 suffix [{"translate": "survisland.specs_restants","color":"gray"},{"text":"0","color":"white"}]
 $team modify survisland.temp.sidebar.12 suffix [{"text":"------$(team4_name)------","color":"$(team4_color)"}]
-$team modify survisland.temp.sidebar.11 suffix [{"text":"Joueurs restants : ","color":"$(team4_color)"},{"text":"0","color":"yellow"}]
-team modify survisland.temp.sidebar.10 suffix [{"text":"Points : ","color":"white"},{"text":"0","color":"yellow"}]
+$team modify survisland.temp.sidebar.11 suffix [{"translate": "survisland.joueurs_restants","color":"$(team4_color)"},{"text":"0","color":"yellow"}]
+team modify survisland.temp.sidebar.10 suffix [{"translate": "survisland.points","color":"white"},{"text":"0","color":"yellow"}]
 $team modify survisland.temp.sidebar.9 suffix [{"text":"------$(team3_name)------","color":"$(team3_color)"}]
-$team modify survisland.temp.sidebar.8 suffix [{"text":"Joueurs restants : ","color":"$(team3_color)"},{"text":"0","color":"yellow"}]
-team modify survisland.temp.sidebar.7 suffix [{"text":"Points : ","color":"white"},{"text":"0","color":"yellow"}]
+$team modify survisland.temp.sidebar.8 suffix [{"translate": "survisland.joueurs_restants","color":"$(team3_color)"},{"text":"0","color":"yellow"}]
+team modify survisland.temp.sidebar.7 suffix [{"translate": "survisland.points","color":"white"},{"text":"0","color":"yellow"}]
 $team modify survisland.temp.sidebar.6 suffix [{"text":"------$(team2_name)------","color":"$(team2_color)"}]
-$team modify survisland.temp.sidebar.5 suffix [{"text":"Joueurs restants : ","color":"$(team2_color)"},{"text":"0","color":"yellow"}]
-team modify survisland.temp.sidebar.4 suffix [{"text":"Points : ","color":"white"},{"text":"0","color":"yellow"}]
+$team modify survisland.temp.sidebar.5 suffix [{"translate": "survisland.joueurs_restants","color":"$(team2_color)"},{"text":"0","color":"yellow"}]
+team modify survisland.temp.sidebar.4 suffix [{"translate": "survisland.points","color":"white"},{"text":"0","color":"yellow"}]
 $team modify survisland.temp.sidebar.3 suffix [{"text":"------$(team1_name)------","color":"$(team1_color)"}]
-$team modify survisland.temp.sidebar.2 suffix [{"text":"Joueurs restants : ","color":"$(team1_color)"},{"text":"0","color":"yellow"}]
-team modify survisland.temp.sidebar.1 suffix [{"text":"Points : ","color":"white"},{"text":"0","color":"yellow"}]
+$team modify survisland.temp.sidebar.2 suffix [{"translate": "survisland.joueurs_restants","color":"$(team1_color)"},{"text":"0","color":"yellow"}]
+team modify survisland.temp.sidebar.1 suffix [{"translate": "survisland.points","color":"white"},{"text":"0","color":"yellow"}]
 
 team join survisland.temp.sidebar.14 §d
 team join survisland.temp.sidebar.13 §c

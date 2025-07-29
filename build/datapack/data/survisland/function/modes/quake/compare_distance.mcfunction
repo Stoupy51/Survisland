@@ -1,7 +1,9 @@
 
 #> survisland:modes/quake/compare_distance
 #
-# @within	survisland:modes/quake/get_player_distance
+# @executed	as @a[team=mMerge,tag=!iris.target]
+#
+# @within	survisland:modes/quake/get_player_distance [ as @a[team=mMerge,tag=!iris.target] ]
 #
 
 ## Real :

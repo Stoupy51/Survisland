@@ -1,6 +1,8 @@
 
 #> survisland:modes/quake/respawn
 #
+# @executed	as @e[tag=...] & at @s
+#
 # @within	survisland:modes/quake/shooted_player
 #
 

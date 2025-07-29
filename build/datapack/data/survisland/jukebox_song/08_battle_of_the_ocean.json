@@ -5,6 +5,6 @@
 		"sound_id": "survisland:08_battle_of_the_ocean"
 	},
 	"description": {
-		"text": "08 - Battle of the Ocean"
+		"translate": "survisland.08_battle_of_the_ocean"
 	}
 }

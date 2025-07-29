@@ -1,7 +1,9 @@
 
 #> survisland:modes/cache_s16/death
 #
-# @within	survisland:modes/cache_s16/tick
+# @executed	as @a[scores={survisland.temp.death_count=1..}]
+#
+# @within	survisland:modes/cache_s16/tick [ as @a[scores={survisland.temp.death_count=1..}] ]
 #
 
 scoreboard players reset @s survisland.temp.death_count

@@ -1,8 +1,10 @@
 
 #> survisland:utils/fart
 #
+# @executed	at @s
+#
 # @within	survisland:tick
-#			survisland:v2.1.5/tick
+#			survisland:v2.1.5/tick [ at @s ]
 #
 # @executed			as & at the player who farted
 # 

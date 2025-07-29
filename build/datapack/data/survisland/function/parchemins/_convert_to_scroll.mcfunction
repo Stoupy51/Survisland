@@ -14,7 +14,7 @@
 # Setblock sign with the author and the page content
 setblock ~ ~-2 ~ air
 setblock ~ ~-2 ~ oak_sign
-data modify block ~ ~-2 ~ front_text.messages[0] set value [{"text":"Auteur : ","color":"gold","italic":false},{"nbt":"Item.components.\"minecraft:written_book_content\".author","storage":"survisland:main","interpret":false,"color":"yellow"}]
+data modify block ~ ~-2 ~ front_text.messages[0] set value [{"translate": "survisland.auteur","color":"gold","italic":false},{"nbt":"Item.components.\"minecraft:written_book_content\".author","storage":"survisland:main","interpret":false,"color":"yellow"}]
 data modify block ~ ~-2 ~ front_text.messages[1] set value [{"nbt":"Item.components.\"minecraft:written_book_content\".pages[0].raw","storage":"survisland:main","interpret":true,"color":"red","italic":false}]
 
 # Copy the author in the lore and the page content in the name

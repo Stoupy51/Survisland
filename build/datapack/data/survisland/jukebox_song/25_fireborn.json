@@ -5,6 +5,6 @@
 		"sound_id": "survisland:25_fireborn"
 	},
 	"description": {
-		"text": "25 - Fireborn"
+		"translate": "survisland.25_fireborn"
 	}
 }

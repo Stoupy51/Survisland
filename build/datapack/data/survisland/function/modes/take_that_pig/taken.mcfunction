@@ -1,7 +1,9 @@
 
 #> survisland:modes/take_that_pig/taken
 #
-# @within	survisland:modes/take_that_pig/tick
+# @executed	as @e[tag=survisland.to_take,predicate=survisland:on_concrete] & at @s
+#
+# @within	survisland:modes/take_that_pig/tick [ as @e[tag=survisland.to_take,predicate=survisland:on_concrete] & at @s ]
 #
 
 ##Ajout des points selon la couleur et le type :

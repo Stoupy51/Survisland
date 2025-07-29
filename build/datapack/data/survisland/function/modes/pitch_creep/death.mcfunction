@@ -1,7 +1,9 @@
 
 #> survisland:modes/pitch_creep/death
 #
-# @within	survisland:modes/pitch_creep/tick
+# @executed	as @a[scores={survisland.temp.death_count=1..}]
+#
+# @within	survisland:modes/pitch_creep/tick [ as @a[scores={survisland.temp.death_count=1..}] ]
 #
 
 scoreboard players reset @s survisland.temp.death_count

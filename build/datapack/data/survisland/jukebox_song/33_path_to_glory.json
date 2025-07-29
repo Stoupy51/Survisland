@@ -5,6 +5,6 @@
 		"sound_id": "survisland:33_path_to_glory"
 	},
 	"description": {
-		"text": "33 - Path to Glory"
+		"translate": "survisland.33_path_to_glory"
 	}
 }

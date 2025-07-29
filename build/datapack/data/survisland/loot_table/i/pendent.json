@@ -12,22 +12,20 @@
 							"components": {
 								"minecraft:lore": [
 									{
-										"text": "[Seconde main pour l'équiper]",
+										"translate": "survisland.seconde_main_pour_lquiper",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
-										{"text": " Survisland","italic": true,"color": "blue"}
+										{"translate": "survisland","italic": true,"color": "blue"}
 									]
 								],
 								"minecraft:max_stack_size": 64,
 								"minecraft:item_model": "survisland:pendent",
 								"minecraft:item_name": {
-									"text": "Pendent",
-									"italic": false,
-									"color": "white"
+									"translate": "survisland.pendent"
 								},
 								"minecraft:custom_data": {
 									"survisland": {

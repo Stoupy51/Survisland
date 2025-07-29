@@ -5,6 +5,6 @@
 		"sound_id": "survisland:rat_dance"
 	},
 	"description": {
-		"text": "Rat Dance"
+		"translate": "survisland.rat_dance"
 	}
 }

@@ -12,21 +12,19 @@
 							"components": {
 								"minecraft:lore": [
 									{
-										"text": "Made by Emilou",
+										"translate": "survisland.made_by_emilou",
 										"color": "gold",
 										"italic": false
 									},
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
-										{"text": " Survisland","italic": true,"color": "blue"}
+										{"translate": "survisland","italic": true,"color": "blue"}
 									]
 								],
 								"minecraft:item_model": "survisland:iron_bowl",
 								"minecraft:item_name": {
-									"text": "Iron Bowl",
-									"italic": false,
-									"color": "white"
+									"translate": "survisland.iron_bowl"
 								},
 								"minecraft:custom_data": {
 									"survisland": {

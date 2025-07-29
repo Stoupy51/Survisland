@@ -1,8 +1,11 @@
 
 #> survisland:utils/snuffer
 #
+# @executed	as @p[gamemode=!spectator,tag=!survisland.temp,distance=..3] & at @s
+#
 # @within	survisland:right_click/all
-#			survisland:utils/right_click
+#			survisland:utils/right_click [ as @p[gamemode=!spectator,tag=!survisland.temp,distance=..3] & at @s ]
+#			survisland:utils/right_click [ as @p[gamemode=!spectator,distance=..3] & at @s ]
 #
 # @executed			as & at player to change flambeau state
 # 

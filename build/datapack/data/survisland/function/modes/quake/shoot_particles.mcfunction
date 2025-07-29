@@ -1,8 +1,10 @@
 
 #> survisland:modes/quake/shoot_particles
 #
-# @within	survisland:modes/quake/shoot
-#			survisland:modes/quake/shoot_particles
+# @executed	as @e[tag=iris.ray] & at @s
+#
+# @within	survisland:modes/quake/shoot [ as @e[tag=iris.ray] & at @s ]
+#			survisland:modes/quake/shoot_particles [ at @s ]
 #
 
 tp @s ~ ~ ~ facing entity @p[tag=survisland.temp] eyes

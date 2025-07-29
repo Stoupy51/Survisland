@@ -8,5 +8,5 @@
 scoreboard players add @s survisland.temp.sidebar 3
 
 # Message to show player killed
-tellraw @a ["",{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true},{"text":" +3 points pour "},{"selector":"@s"},{"text":" pour avoir tué la monture d'un joueur !"}]
+tellraw @a ["",{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true},{"translate": "survisland.3_points_pour"},{"selector":"@s"},{"translate": "survisland.pour_avoir_tu_la_monture_dun_joueur"}]
 

@@ -1,12 +1,27 @@
 
 #> survisland:modes/confiance_aveugle/button_tuarua
 #
-# @within	survisland:modes/confiance_aveugle/tick
+# @executed	positioned -1205 60 -2782
+#
+# @within	survisland:modes/confiance_aveugle/tick [ positioned -1205 60 -2782 ]
+#			survisland:modes/confiance_aveugle/tick [ positioned -1205 60 -2766 ]
+#			survisland:modes/confiance_aveugle/tick [ positioned -1226 62 -2796 ]
+#			survisland:modes/confiance_aveugle/tick [ positioned -1226 62 -2780 ]
+#			survisland:modes/confiance_aveugle/tick [ positioned -1241 62 -2796 ]
+#			survisland:modes/confiance_aveugle/tick [ positioned -1241 62 -2780 ]
+#			survisland:modes/confiance_aveugle/tick [ positioned -1248 61 -2782 ]
+#			survisland:modes/confiance_aveugle/tick [ positioned -1248 61 -2766 ]
+#			survisland:modes/confiance_aveugle/tick [ positioned -1256 68 -2795 ]
+#			survisland:modes/confiance_aveugle/tick [ positioned -1256 68 -2779 ]
+#			survisland:modes/confiance_aveugle/tick [ positioned -1264 66 -2782 ]
+#			survisland:modes/confiance_aveugle/tick [ positioned -1264 66 -2766 ]
+#			survisland:modes/confiance_aveugle/tick [ positioned -1267 59 -2796 ]
+#			survisland:modes/confiance_aveugle/tick [ positioned -1267 59 -2780 ]
 #
 
 scoreboard players add #mTuarua_buttons survisland.data 1
 execute as @a at @s run playsound entity.experience_orb.pickup ambient @s
-tellraw @a ["",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Un bouton a été activé par l'équipe "},{"text":"Tuarua","color":"light_purple"}]
+tellraw @a ["",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"translate": "survisland.un_bouton_a_t_activ_par_lquipe"},{"translate": "survisland.tuarua","color":"light_purple"}]
 setblock ~ ~ ~ air
 
 execute if score #mTuarua_buttons survisland.data matches 2 run fill -1211 59 -2796 -1211 56 -2766 air replace oak_fence

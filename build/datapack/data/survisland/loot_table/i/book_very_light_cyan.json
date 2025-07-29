@@ -12,15 +12,13 @@
 							"components": {
 								"minecraft:item_model": "survisland:book_very_light_cyan",
 								"minecraft:item_name": {
-									"text": "Book Very Light Cyan",
-									"italic": false,
-									"color": "white"
+									"translate": "survisland.book_very_light_cyan"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
-										{"text": " Survisland","italic": true,"color": "blue"}
+										{"translate": "survisland","italic": true,"color": "blue"}
 									]
 								],
 								"minecraft:custom_data": {

@@ -1,7 +1,9 @@
 
 #> survisland:modes/quake/right_click
 #
-# @within	survisland:modes/quake/tick
+# @executed	as @a[scores={survisland.right_click=1..},sort=random] & at @s
+#
+# @within	survisland:modes/quake/tick [ as @a[scores={survisland.right_click=1..},sort=random] & at @s ]
 #
 
 scoreboard players reset @s survisland.right_click

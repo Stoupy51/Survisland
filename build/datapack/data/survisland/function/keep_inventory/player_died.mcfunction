@@ -1,7 +1,9 @@
 
 #> survisland:keep_inventory/player_died
 #
-# @within	survisland:v2.1.5/tick
+# @executed	as @a[scores={survisland.deathCount=1..}] & at @s
+#
+# @within	survisland:v2.1.5/tick [ as @a[scores={survisland.deathCount=1..}] & at @s ]
 #
 
 # Reset scoreboard

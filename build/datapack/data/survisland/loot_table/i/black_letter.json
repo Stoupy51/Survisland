@@ -12,15 +12,13 @@
 							"components": {
 								"minecraft:item_model": "survisland:black_letter",
 								"minecraft:item_name": {
-									"text": "Black Letter",
-									"italic": false,
-									"color": "white"
+									"translate": "survisland.black_letter"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
-										{"text": " Survisland","italic": true,"color": "blue"}
+										{"translate": "survisland","italic": true,"color": "blue"}
 									]
 								],
 								"minecraft:custom_data": {

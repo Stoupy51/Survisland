@@ -1,7 +1,9 @@
 
 #> survisland:modes/pitch_creep/creeper
 #
-# @within	survisland:modes/pitch_creep/second
+# @executed	as @e[type=creeper,tag=survisland.new]
+#
+# @within	survisland:modes/pitch_creep/second [ as @e[type=creeper,tag=survisland.new] ]
 #
 
 tag @s remove survisland.new

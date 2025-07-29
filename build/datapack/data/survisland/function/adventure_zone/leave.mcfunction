@@ -2,6 +2,7 @@
 #> survisland:adventure_zone/leave
 #
 # @within	survisland:adventure_zone/second
+#			survisland:adventure_zone/second [ at @s ]
 #
 # @executed			as the player who left the zone
 # 

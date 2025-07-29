@@ -1,7 +1,10 @@
 
 #> survisland:parchemins/animation_display_selected
 #
+# @executed	as the player & at current position
+#
 # @within	survisland:parchemins/animation_display
+#			survisland:parchemins/animation_display [ as @e[tag=survisland.scroll_animation] ]
 #
 # @executed			as & at item_display or text_display
 # 

@@ -5,6 +5,6 @@
 		"sound_id": "survisland:09_challenger"
 	},
 	"description": {
-		"text": "09 - Challenger"
+		"translate": "survisland.09_challenger"
 	}
 }

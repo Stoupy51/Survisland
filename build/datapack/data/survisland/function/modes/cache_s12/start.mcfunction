@@ -10,7 +10,7 @@ tag @a remove survisland.alive
 tag @a[gamemode=!spectator,gamemode=!creative,tag=!survisland.seeker] add survisland.alive
 
 scoreboard objectives add survisland.temp.death_count deathCount
-scoreboard objectives add survisland.temp.sidebar dummy {"text":"Cache-Cache","color":"gold"}
+scoreboard objectives add survisland.temp.sidebar dummy {"translate": "survisland.cache_cache","color":"gold"}
 scoreboard objectives add survisland.temp.heart_beat dummy
 scoreboard objectives setdisplay sidebar survisland.temp.sidebar
 
@@ -34,13 +34,13 @@ team add survisland.temp.sidebar.4
 team add survisland.temp.sidebar.3
 team add survisland.temp.sidebar.2
 team add survisland.temp.sidebar.1
-team modify survisland.temp.sidebar.8 suffix [{"text":"emps restant : "},{"text":"20","color":"gray"},{"text":"m"},{"text":"0","color":"gray"},{"text":"s"}]
-team modify survisland.temp.sidebar.7 suffix [{"text":" restants : ","color":"gray"},{"text":"0","color":"white"}]
-team modify survisland.temp.sidebar.6 suffix [{"text":"ning------","color":"yellow"}]
-team modify survisland.temp.sidebar.5 suffix [{"text":"eurs restants : ","color":"yellow"},{"text":"0","color":"gray"}]
+team modify survisland.temp.sidebar.8 suffix [{"translate": "survisland.emps_restant"},{"text":"20","color":"gray"},{"text":"m"},{"text":"0","color":"gray"},{"text":"s"}]
+team modify survisland.temp.sidebar.7 suffix [{"translate": "survisland.restants","color":"gray"},{"text":"0","color":"white"}]
+team modify survisland.temp.sidebar.6 suffix [{"translate": "survisland.ning","color":"yellow"}]
+team modify survisland.temp.sidebar.5 suffix [{"translate": "survisland.eurs_restants","color":"yellow"},{"text":"0","color":"gray"}]
 team modify survisland.temp.sidebar.4 suffix [{"text":"s : ","color":"yellow"},{"text":"0","color":"gray"}]
-team modify survisland.temp.sidebar.3 suffix [{"text":"yra------","color":"red"}]
-team modify survisland.temp.sidebar.2 suffix [{"text":"urs restants : ","color":"red"},{"text":"0","color":"gray"}]
+team modify survisland.temp.sidebar.3 suffix [{"translate": "survisland.yra","color":"red"}]
+team modify survisland.temp.sidebar.2 suffix [{"translate": "survisland.urs_restants","color":"red"},{"text":"0","color":"gray"}]
 team modify survisland.temp.sidebar.1 suffix [{"text":" : ","color":"red"},{"text":"0","color":"gray"}]
 team modify survisland.temp.sidebar.8 color white
 team modify survisland.temp.sidebar.7 color gray

@@ -11,7 +11,7 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_name": {
-									"text": "Feuille d'or",
+									"translate": "survisland.feuille_dor",
 									"italic": false,
 									"color": "gold"
 								},
@@ -21,7 +21,7 @@
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
-										{"text": " Survisland","italic": true,"color": "blue"}
+										{"translate": "survisland","italic": true,"color": "blue"}
 									]
 								],
 								"minecraft:custom_data": {

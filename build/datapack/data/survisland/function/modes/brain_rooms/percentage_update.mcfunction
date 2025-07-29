@@ -1,7 +1,9 @@
 
 #> survisland:modes/brain_rooms/percentage_update
 #
-# @within	survisland:modes/brain_rooms/update_sidebar
+# @executed	as @a[gamemode=adventure] & at @s
+#
+# @within	survisland:modes/brain_rooms/update_sidebar [ as @a[gamemode=adventure] & at @s ]
 #
 
 scoreboard players set #newPercentage survisland.data 0

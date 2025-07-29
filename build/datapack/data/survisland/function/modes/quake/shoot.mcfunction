@@ -1,6 +1,8 @@
 
 #> survisland:modes/quake/shoot
 #
+# @executed	as @a[scores={survisland.right_click=1..},sort=random] & at @s
+#
 # @within	survisland:modes/quake/right_click
 #
 

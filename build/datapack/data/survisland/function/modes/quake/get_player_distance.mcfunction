@@ -1,7 +1,9 @@
 
 #> survisland:modes/quake/get_player_distance
 #
-# @within	survisland:modes/quake/respawn
+# @executed	as @e[tag=survisland.quake_respawn] & at @s
+#
+# @within	survisland:modes/quake/respawn [ as @e[tag=survisland.quake_respawn] & at @s ]
 #
 
 # At every player that is not dead, calculate the minimal distance

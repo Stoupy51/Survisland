@@ -6,7 +6,7 @@
 
 ##Fonction executée lors du lancement de la partie
 
-tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Zééééééé parti !!!!"}]
+tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"translate": "survisland.z_parti"}]
 
 gamemode adventure @a[gamemode=survival]
 tag @a[gamemode=adventure] add survisland.alive

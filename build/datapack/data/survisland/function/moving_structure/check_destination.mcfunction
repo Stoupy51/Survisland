@@ -1,6 +1,8 @@
 
 #> survisland:moving_structure/check_destination
 #
+# @executed	at @s
+#
 # @within	survisland:moving_structure/tick with entity @s data
 #
 

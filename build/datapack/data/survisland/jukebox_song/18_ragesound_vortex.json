@@ -5,6 +5,6 @@
 		"sound_id": "survisland:18_ragesound_vortex"
 	},
 	"description": {
-		"text": "18 - RageSound - Vortex"
+		"translate": "survisland.18_ragesound_vortex"
 	}
 }

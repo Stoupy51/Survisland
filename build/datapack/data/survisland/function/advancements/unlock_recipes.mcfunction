@@ -1,6 +1,8 @@
 
 #> survisland:advancements/unlock_recipes
 #
+# @executed	as the player & at current position
+#
 # @within	advancement survisland:unlock_recipes
 #
 

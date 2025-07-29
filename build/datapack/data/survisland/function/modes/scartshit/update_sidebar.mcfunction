@@ -1,7 +1,9 @@
 
 #> survisland:modes/scartshit/update_sidebar
 #
-# @within	survisland:modes/scartshit/tick
+# @executed	as @a[gamemode=!spectator]
+#
+# @within	survisland:modes/scartshit/tick [ as @a[gamemode=!spectator] ]
 #
 
 scoreboard players set #newPercentage survisland.data 0

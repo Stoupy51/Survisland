@@ -1,9 +1,11 @@
 
 #> survisland:sounds/wither.death
 #
-# @within	survisland:modes/diso_chunk/add_bekou
-#			survisland:modes/diso_chunk/add_galia
-#			survisland:modes/diso_chunk/add_ijo
+# @executed	as @a & at @s
+#
+# @within	survisland:modes/diso_chunk/add_bekou [ as @a & at @s ]
+#			survisland:modes/diso_chunk/add_galia [ as @a & at @s ]
+#			survisland:modes/diso_chunk/add_ijo [ as @a & at @s ]
 #
 
 playsound entity.wither.death ambient @s ^ ^ ^5 2 1 1

@@ -1,8 +1,10 @@
 
 #> survisland:modes/laser_game/shoot_particles
 #
-# @within	survisland:modes/laser_game/shoot
-#			survisland:modes/laser_game/shoot_particles
+# @executed	as @e[tag=iris.ray] & at @s
+#
+# @within	survisland:modes/laser_game/shoot [ as @e[tag=iris.ray] & at @s ]
+#			survisland:modes/laser_game/shoot_particles [ at @s ]
 #
 
 tp @s ~ ~ ~ facing entity @p[tag=survisland.temp] eyes

@@ -12,26 +12,24 @@
 							"components": {
 								"minecraft:lore": [
 									{
-										"text": "Clic-droit pour éteindre la torche",
+										"translate": "survisland.clic_droit_pour_teindre_la_torche",
 										"italic": false,
 										"color": "gray"
 									},
 									{
-										"text": "du joueur le plus proche",
+										"translate": "survisland.du_joueur_le_plus_proche",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
-										{"text": " Survisland","italic": true,"color": "blue"}
+										{"translate": "survisland","italic": true,"color": "blue"}
 									]
 								],
 								"minecraft:item_model": "survisland:snuffer",
 								"minecraft:item_name": {
-									"text": "Snuffer",
-									"italic": false,
-									"color": "white"
+									"translate": "survisland.snuffer"
 								},
 								"minecraft:custom_data": {
 									"survisland": {

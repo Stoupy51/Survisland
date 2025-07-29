@@ -1,7 +1,9 @@
 
 #> survisland:modes/1v1v1_cache_cache/heart_beat
 #
-# @within	survisland:modes/1v1v1_cache_cache/macro_tick
+# @executed	as @a[tag=survisland.alive] & at @s
+#
+# @within	survisland:modes/1v1v1_cache_cache/macro_tick [ as @a[tag=survisland.alive] & at @s ]
 #
 
 scoreboard players add @s survisland.temp.heart_beat 0

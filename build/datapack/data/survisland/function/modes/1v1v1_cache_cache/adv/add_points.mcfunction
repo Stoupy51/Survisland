@@ -1,6 +1,8 @@
 
 #> survisland:modes/1v1v1_cache_cache/adv/add_points
 #
+# @executed	as the player & at current position
+#
 # @within	survisland:modes/1v1v1_cache_cache/adv/killed_player with storage survisland:main cache_cache_config
 #
 

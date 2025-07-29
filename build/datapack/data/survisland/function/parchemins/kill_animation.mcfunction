@@ -1,6 +1,8 @@
 
 #> survisland:parchemins/kill_animation
 #
+# @executed	as the player & at current position
+#
 # @within	survisland:parchemins/animation_closing 1t replace
 #			survisland:parchemins/kill_animation 1t replace
 #

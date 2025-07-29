@@ -6,14 +6,14 @@
 
 ##Fonction executée lors du lancement de la partie
 
-tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Zééééééé parti !!!! Ramenez-moi un maximum d'animaux !"}]
+tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"translate": "survisland.z_parti_ramenez_moi_un_maximum_danimaux"}]
 
 gamemode adventure @a[gamemode=survival]
 gamerule doImmediateRespawn true
 time set 6000
 
 scoreboard objectives add survisland.temp.color dummy
-scoreboard objectives add survisland.temp.sidebar dummy {"text":"Classement des scores","color":"yellow"}
+scoreboard objectives add survisland.temp.sidebar dummy {"translate": "survisland.classement_des_scores","color":"yellow"}
 scoreboard objectives setdisplay sidebar survisland.temp.sidebar
 
 scoreboard players set #game survisland.data 69

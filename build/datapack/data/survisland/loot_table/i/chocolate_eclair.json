@@ -12,14 +12,14 @@
 							"components": {
 								"minecraft:lore": [
 									{
-										"text": "Made by M4TOUW",
+										"translate": "survisland.made_by_m4touw",
 										"color": "gold",
 										"italic": false
 									},
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
-										{"text": " Survisland","italic": true,"color": "blue"}
+										{"translate": "survisland","italic": true,"color": "blue"}
 									]
 								],
 								"minecraft:consumable": {},
@@ -29,9 +29,7 @@
 								},
 								"minecraft:item_model": "survisland:chocolate_eclair",
 								"minecraft:item_name": {
-									"text": "Chocolate Eclair",
-									"italic": false,
-									"color": "white"
+									"translate": "survisland.chocolate_eclair"
 								},
 								"minecraft:custom_data": {
 									"survisland": {

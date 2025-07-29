@@ -5,6 +5,6 @@
 		"sound_id": "survisland:10_elite_voids"
 	},
 	"description": {
-		"text": "10 - Elite Voids"
+		"translate": "survisland.10_elite_voids"
 	}
 }

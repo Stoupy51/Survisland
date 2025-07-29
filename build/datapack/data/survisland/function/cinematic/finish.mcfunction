@@ -1,6 +1,8 @@
 
 #> survisland:cinematic/finish
 #
+# @executed	as @e[type=item_display,tag=survisland.cinematic]
+#
 # @within	survisland:cinematic/entity_tick
 #
 

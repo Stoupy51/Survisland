@@ -1,7 +1,9 @@
 
 #> survisland:moving_structure/tick
 #
-# @within	survisland:v2.1.5/tick
+# @executed	at @s
+#
+# @within	survisland:v2.1.5/tick [ at @s ]
 #
 
 # Launch movement

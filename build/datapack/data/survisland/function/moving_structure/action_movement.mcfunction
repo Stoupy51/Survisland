@@ -1,6 +1,8 @@
 
 #> survisland:moving_structure/action_movement
 #
+# @executed	at @s
+#
 # @within	survisland:moving_structure/tick
 #
 

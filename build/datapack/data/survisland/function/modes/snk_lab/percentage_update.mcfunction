@@ -1,7 +1,9 @@
 
 #> survisland:modes/snk_lab/percentage_update
 #
-# @within	survisland:modes/snk_lab/update_sidebar
+# @executed	as @a[gamemode=adventure] & at @s
+#
+# @within	survisland:modes/snk_lab/update_sidebar [ as @a[gamemode=adventure] & at @s ]
 #
 
 scoreboard players set #newPercentage survisland.data 0

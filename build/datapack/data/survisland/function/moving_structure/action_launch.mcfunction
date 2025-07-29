@@ -1,6 +1,8 @@
 
 #> survisland:moving_structure/action_launch
 #
+# @executed	at @s
+#
 # @within	survisland:moving_structure/launch_timer
 #
 

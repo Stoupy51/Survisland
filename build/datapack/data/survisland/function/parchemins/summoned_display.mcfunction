@@ -1,7 +1,10 @@
 
 #> survisland:parchemins/summoned_display
 #
+# @executed	as the player & at current position
+#
 # @within	survisland:parchemins/deploy_open
+#			survisland:parchemins/deploy_open [ as @n[tag=survisland.new] & at @s ]
 #
 # @executed			as & at current item_display or text_display
 # 

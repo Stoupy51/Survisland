@@ -1,6 +1,8 @@
 
 #> survisland:modes/cache_s14/adv/killed_player
 #
+# @executed	as the player & at current position
+#
 # @within	advancement survisland:cache_s14/killed_player
 #
 

@@ -1,7 +1,9 @@
 
 #> survisland:modes/laser_game/shooted_player_red
 #
-# @within	survisland:modes/laser_game/shoot
+# @executed	as @e[tag=...] & at @s
+#
+# @within	survisland:modes/laser_game/shoot [ as @e[tag=...] & at @s ]
 #
 
 function survisland:modes/laser_game/shooted_both

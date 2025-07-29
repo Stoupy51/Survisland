@@ -1,6 +1,8 @@
 
 #> survisland:utils/right_click
 #
+# @executed	as the player & at current position
+#
 # @within	advancement survisland:right_click
 #
 

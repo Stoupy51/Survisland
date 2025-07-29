@@ -1,6 +1,8 @@
 
 #> survisland:utils/xp_bar_at_s
 #
+# @executed	as @a
+#
 # @within	survisland:modes/laser_game/xp_bar
 #
 

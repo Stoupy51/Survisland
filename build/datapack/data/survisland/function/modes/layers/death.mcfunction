@@ -1,8 +1,10 @@
 
 #> survisland:modes/layers/death
 #
-# @within	survisland:modes/layers/tick
-#			survisland:modes/mob_escape/tick
+# @executed	as @e[type=player,scores={survisland.temp.death_count=1..}]
+#
+# @within	survisland:modes/layers/tick [ as @e[type=player,scores={survisland.temp.death_count=1..}] ]
+#			survisland:modes/mob_escape/tick [ as @a[scores={survisland.temp.death_count=1..}] ]
 #
 
 scoreboard players reset @s survisland.temp.death_count

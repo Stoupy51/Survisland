@@ -1,7 +1,11 @@
 
 #> survisland:parchemins/animation_closing
 #
+# @executed	as the player & at current position
+#
 # @within	survisland:parchemins/deploy_close
+#			survisland:parchemins/deploy_close [ positioned ^ ^ ^.5 & positioned ~ ~1 ~ & as @n[type=item_display,tag=survisland.deployed_scroll,scores={survisland.cooldown=0}] ]
+#			survisland:parchemins/deploy_close [ positioned ^ ^ ^.501 & positioned ~ ~0.925 ~ & as @n[type=text_display,tag=survisland.deployed_scroll,scores={survisland.cooldown=0}] ]
 #
 
 # Scale down

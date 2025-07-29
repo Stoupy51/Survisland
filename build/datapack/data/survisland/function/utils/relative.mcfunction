@@ -28,5 +28,5 @@ execute if score #state survisland.data matches 1 run data remove storage survis
 # First position
 data remove storage survisland:main relative_pos
 execute if score #state survisland.data matches 0 run data modify storage survisland:main relative_pos set from entity @s Pos
-execute if score #state survisland.data matches 0 run tellraw @s {"text":"Première position enregistrée.","color":"yellow"}
+execute if score #state survisland.data matches 0 run tellraw @s {"translate": "survisland.premire_position_enregistre","color":"yellow"}
 

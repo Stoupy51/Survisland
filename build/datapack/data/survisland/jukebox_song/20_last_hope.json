@@ -5,6 +5,6 @@
 		"sound_id": "survisland:20_last_hope"
 	},
 	"description": {
-		"text": "20 - Last Hope"
+		"translate": "survisland.20_last_hope"
 	}
 }

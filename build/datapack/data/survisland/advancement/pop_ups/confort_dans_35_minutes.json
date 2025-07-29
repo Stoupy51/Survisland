@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:stone","components": {"minecraft:item_model": "survisland:icon"}},
-		"title": {"text": "Confort dans 35 minutes","color": "aqua"},
+		"title": {"translate": "survisland.confort_dans_35_minutes","color": "aqua"},
 		"description": "",
 		"frame": "task",
 		"show_toast": true,

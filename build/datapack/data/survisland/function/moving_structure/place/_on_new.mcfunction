@@ -1,8 +1,10 @@
 
 #> survisland:moving_structure/place/_on_new
 #
-# @within	survisland:moving_structure/place/s17_medium_cage
-#			survisland:moving_structure/place/s17_small_cage
+# @executed	align xyz
+#
+# @within	survisland:moving_structure/place/s17_medium_cage [ align xyz ]
+#			survisland:moving_structure/place/s17_small_cage [ align xyz & positioned ~.5 ~ ~.5 ]
 #
 
 # Copy tags

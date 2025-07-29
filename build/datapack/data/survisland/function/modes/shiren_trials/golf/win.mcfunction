@@ -6,7 +6,7 @@
 
 # Finish trial
 setblock ~ ~ ~ minecraft:glowstone
-tellraw @a[distance=..100] ["",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Minigolf "},{"text":"terminé !","color":"red"}]
+tellraw @a[distance=..100] ["",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"translate": "survisland.minigolf"},{"translate": "survisland.termin","color":"red"}]
 execute as @a[distance=..100] at @s run playsound entity.experience_orb.pickup ambient @s
 
 # Give reward

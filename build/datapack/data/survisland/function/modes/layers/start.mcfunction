@@ -16,7 +16,7 @@ team modify mAkijan nametagVisibility never
 team modify mHainy friendlyFire false
 team modify mAkijan friendlyFire false
 
-tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Lancement de la partie de Layers, exterminez l'équipe ennemie !"}]
+tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"translate": "survisland.lancement_de_la_partie_de_layers_exterminez_lquipe_ennemie"}]
 
 scoreboard objectives add survisland.temp.death_count deathCount
 scoreboard objectives add survisland.temp.sidebar dummy {"text":"Joueurs restants","color":"yellow"}
@@ -30,8 +30,8 @@ scoreboard players set #process_end survisland.data 0
 
 team add survisland.temp.sidebar.2
 team add survisland.temp.sidebar.1
-team modify survisland.temp.sidebar.2 suffix [{"text":"kijan : ","color":"dark_aqua"},{"text":"0","color":"yellow"}]
-team modify survisland.temp.sidebar.1 suffix [{"text":"ainy : ","color":"green"},{"text":"0","color":"yellow"}]
+team modify survisland.temp.sidebar.2 suffix [{"translate": "survisland.kijan","color":"dark_aqua"},{"text":"0","color":"yellow"}]
+team modify survisland.temp.sidebar.1 suffix [{"translate": "survisland.ainy","color":"green"},{"text":"0","color":"yellow"}]
 team modify survisland.temp.sidebar.2 color dark_aqua
 team modify survisland.temp.sidebar.1 color green
 team join survisland.temp.sidebar.2 A

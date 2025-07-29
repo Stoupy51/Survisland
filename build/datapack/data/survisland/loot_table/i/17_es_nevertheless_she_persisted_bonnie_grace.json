@@ -20,7 +20,7 @@
 									}
 								},
 								"minecraft:item_name": {
-									"text": "Music Disc",
+									"translate": "survisland.music_disc",
 									"italic": false
 								},
 								"minecraft:jukebox_playable": "survisland:17_es_nevertheless_she_persisted_bonnie_grace",
@@ -31,7 +31,7 @@
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
-										{"text": " Survisland","italic": true,"color": "blue"}
+										{"translate": "survisland","italic": true,"color": "blue"}
 									]
 								]
 							}

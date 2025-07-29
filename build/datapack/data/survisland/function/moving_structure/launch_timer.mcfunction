@@ -1,6 +1,8 @@
 
 #> survisland:moving_structure/launch_timer
 #
+# @executed	at @s
+#
 # @within	survisland:moving_structure/check_destination
 #			survisland:moving_structure/tick
 #

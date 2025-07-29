@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:stone","components": {"minecraft:item_model": "survisland:icon"}},
-		"title": {"text": "Immunité dans 40 minutes","color": "aqua"},
+		"title": {"translate": "survisland.immunit_dans_40_minutes","color": "aqua"},
 		"description": "",
 		"frame": "task",
 		"show_toast": true,

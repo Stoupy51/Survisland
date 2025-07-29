@@ -5,6 +5,6 @@
 		"sound_id": "survisland:15_the_ritual"
 	},
 	"description": {
-		"text": "15 - The Ritual"
+		"translate": "survisland.15_the_ritual"
 	}
 }

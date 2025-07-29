@@ -1,7 +1,9 @@
 
 #> survisland:modes/pitch_creep/death_teleport
 #
-# @within	survisland:modes/pitch_creep/tick
+# @executed	as @e[type=player,tag=survisland.dead]
+#
+# @within	survisland:modes/pitch_creep/tick [ as @e[type=player,tag=survisland.dead] ]
 #
 
 tp @s -993 62 -2887

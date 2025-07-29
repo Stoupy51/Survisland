@@ -1,7 +1,9 @@
 
 #> survisland:modes/cache_s14/death_teleport
 #
-# @within	survisland:modes/cache_s14/tick
+# @executed	as @e[type=player,tag=survisland.dead] & at @s
+#
+# @within	survisland:modes/cache_s14/tick [ as @e[type=player,tag=survisland.dead] & at @s ]
 #
 
 tp @s @r[distance=1..]

@@ -1,7 +1,9 @@
 
 #> survisland:modes/take_that_pig/define_color
 #
-# @within	survisland:modes/take_that_pig/start
+# @executed	as @a[gamemode=!creative] & at @s
+#
+# @within	survisland:modes/take_that_pig/start [ as @a[gamemode=!creative] & at @s ]
 #
 
 execute if block ~ ~-2 ~ red_concrete run scoreboard players set @s survisland.temp.color 1

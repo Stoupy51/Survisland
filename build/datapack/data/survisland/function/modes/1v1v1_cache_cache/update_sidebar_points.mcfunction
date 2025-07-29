@@ -1,6 +1,8 @@
 
 #> survisland:modes/1v1v1_cache_cache/update_sidebar_points
 #
+# @executed	as the player & at current position
+#
 # @within	survisland:modes/1v1v1_cache_cache/adv/add_points with storage survisland:main cache_cache_config
 #			survisland:modes/1v1v1_cache_cache/process_end with storage survisland:main cache_cache_config
 #			survisland:modes/1v1v1_cache_cache/second with storage survisland:main cache_cache_config

@@ -1,6 +1,8 @@
 
 #> survisland:parchemins/animation_display
 #
+# @executed	as the player & at current position
+#
 # @within	survisland:parchemins/deploy_open
 #			survisland:parchemins/deploy_open 4t replace
 #

@@ -8,7 +8,7 @@
 scoreboard players set #is_empty survisland.data 1
 execute if score #is_empty survisland.data matches 1 if items entity @s weapon.offhand * run scoreboard players set #is_empty survisland.data 0
 execute if score #is_empty survisland.data matches 1 if items entity @s hotbar.8 * run scoreboard players set #is_empty survisland.data 0
-execute if score #is_empty survisland.data matches 0 run tellraw @s ["",{"text":"[RatioGolf]","color":"gold"},{"text":" Veuillez libérer votre seconde main et le dernier emplacement de votre barre d'inventaire avant de commencer le parcours de minigolf.","color":"yellow"}]
+execute if score #is_empty survisland.data matches 0 run tellraw @s ["",{"translate": "survisland.ratiogolf","color":"gold"},{"translate": "survisland.veuillez_librer_votre_seconde_main_et_le_dernier_emplacement_de_","color":"yellow"}]
 execute if score #is_empty survisland.data matches 0 run playsound entity.villager.no
 execute if score #is_empty survisland.data matches 0 run return 1
 

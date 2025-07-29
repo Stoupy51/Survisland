@@ -5,6 +5,6 @@
 		"sound_id": "survisland:23_victor_cooper_windwalker"
 	},
 	"description": {
-		"text": "23 - Victor Cooper - Windwalker"
+		"translate": "survisland.23_victor_cooper_windwalker"
 	}
 }

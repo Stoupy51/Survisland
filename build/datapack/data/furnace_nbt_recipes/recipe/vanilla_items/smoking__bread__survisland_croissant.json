@@ -7,7 +7,7 @@
 		"components": {
 			"minecraft:lore": [
 				{
-					"text": "Made by M4TOUW",
+					"translate": "survisland.made_by_m4touw",
 					"color": "gold",
 					"italic": false
 				},
@@ -20,7 +20,7 @@
 						"font": "survisland:icons"
 					},
 					{
-						"text": " Survisland",
+						"translate": "survisland",
 						"italic": true,
 						"color": "blue"
 					}
@@ -33,9 +33,7 @@
 			},
 			"minecraft:item_model": "survisland:croissant",
 			"minecraft:item_name": {
-				"text": "Croissant",
-				"italic": false,
-				"color": "white"
+				"translate": "survisland.croissant"
 			},
 			"minecraft:custom_data": {
 				"survisland": {

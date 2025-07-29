@@ -5,6 +5,6 @@
 		"sound_id": "survisland:16_resolute"
 	},
 	"description": {
-		"text": "16 - Resolute"
+		"translate": "survisland.16_resolute"
 	}
 }

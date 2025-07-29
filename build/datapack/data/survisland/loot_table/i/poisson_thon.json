@@ -18,14 +18,14 @@
 								},
 								"minecraft:lore": [
 									{
-										"text": "Made by M4TOUW",
+										"translate": "survisland.made_by_m4touw",
 										"color": "gold",
 										"italic": false
 									},
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
-										{"text": " Survisland","italic": true,"color": "blue"}
+										{"translate": "survisland","italic": true,"color": "blue"}
 									]
 								],
 								"minecraft:equippable": {
@@ -34,9 +34,7 @@
 								},
 								"minecraft:item_model": "survisland:poisson_thon",
 								"minecraft:item_name": {
-									"text": "Poisson Thon",
-									"italic": false,
-									"color": "white"
+									"translate": "survisland.poisson_thon"
 								},
 								"minecraft:custom_data": {
 									"survisland": {
