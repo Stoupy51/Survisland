@@ -15,7 +15,7 @@ execute if score #intro survisland.data matches 315 run summon firework_rocket ~
 
 execute if score #intro survisland.data matches 315 run title @a times 20 60 20
 execute if score #intro survisland.data matches 315 run title @a title ""
-execute if score #intro survisland.data matches 315 run title @a subtitle {"translate": "survisland.bonne_chance_vous_survivants","color":"gray"}
+execute if score #intro survisland.data matches 315 run title @a subtitle {"text":"Bonne chance à vous, survivants !","color":"gray"}
 execute if score #intro survisland.data matches 315 as @a at @s run function survisland:sounds/wither.spawn
 
 execute if score #intro survisland.data matches 315 run scoreboard players reset #intro survisland.data

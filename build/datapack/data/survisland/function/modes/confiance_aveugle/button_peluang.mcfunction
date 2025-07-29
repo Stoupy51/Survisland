@@ -21,7 +21,7 @@
 
 scoreboard players add #mPeluang_buttons survisland.data 1
 execute as @a at @s run playsound entity.experience_orb.pickup ambient @s
-tellraw @a ["",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"translate": "survisland.un_bouton_a_t_activ_par_lquipe"},{"translate": "survisland.peluang","color":"aqua"}]
+tellraw @a ["",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Un bouton a été activé par l'équipe "},{"text":"Peluang","color":"aqua"}]
 setblock ~ ~ ~ air
 
 execute if score #mPeluang_buttons survisland.data matches 2 run fill -1211 59 -2763 -1211 56 -2733 air replace oak_fence

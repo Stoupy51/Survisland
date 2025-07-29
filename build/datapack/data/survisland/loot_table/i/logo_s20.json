@@ -18,13 +18,13 @@
 								},
 								"minecraft:item_model": "survisland:logo_s20",
 								"minecraft:item_name": {
-									"translate": "survisland.logo_s20"
+									"text": "Logo S20"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
-										{"translate": "survisland","italic": true,"color": "blue"}
+										{"text": " Survisland","italic": true,"color": "blue"}
 									]
 								],
 								"minecraft:custom_data": {

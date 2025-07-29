@@ -20,7 +20,7 @@
 # give @p player_head{survisland:{detect:{go_up:1b}},SkullOwner:{Id:[I;733532205,-1048623952,-1224856685,128611050],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmNjYmY5ODgzZGQzNTlmZGYyMzg1YzkwYTQ1OWQ3Mzc3NjUzODJlYzQxMTdiMDQ4OTVhYzRkYzRiNjBmYyJ9fX0="}]}}}
 
 # Tellraw
-tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"translate": "survisland.prparation_de_lpreuve"}]
+tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Préparation de l'épreuve..."}]
 
 # Scoreboards
 scoreboard objectives add survisland.temp.sidebar dummy {"text":" Points ","color":"green"}

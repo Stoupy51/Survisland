@@ -6,8 +6,8 @@
 
 scoreboard players add #process_end survisland.data 1
 
-execute if score #process_end survisland.data matches 1 if score #detect_end survisland.data matches 1 run tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"translate": "survisland.fin_de_lpreuve_tous_les_joueurs_ont_t_trouvs"}]
-execute if score #process_end survisland.data matches 1 if score #detect_end survisland.data matches 2 run tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"translate": "survisland.fin_de_lpreuve_temps_coul"}]
+execute if score #process_end survisland.data matches 1 if score #detect_end survisland.data matches 1 run tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Fin de l'épreuve, tous les joueurs ont été trouvés !"}]
+execute if score #process_end survisland.data matches 1 if score #detect_end survisland.data matches 2 run tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Fin de l'épreuve, temps écoulé !"}]
 execute if score #process_end survisland.data matches 1 as @a[team=mPonogoro,tag=survisland.alive] run scoreboard players add #mPonogoro_points survisland.data 20
 execute if score #process_end survisland.data matches 1 as @a[team=mKecak,tag=survisland.alive] run scoreboard players add #mKecak_points survisland.data 20
 execute if score #process_end survisland.data matches 1 as @a[team=mSinaoh,tag=survisland.alive] run scoreboard players add #mSinaoh_points survisland.data 20

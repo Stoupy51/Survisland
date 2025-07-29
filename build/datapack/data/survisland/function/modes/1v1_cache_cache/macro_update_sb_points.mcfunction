@@ -6,6 +6,6 @@
 # @within	survisland:modes/1v1_cache_cache/update_sidebar_points with storage survisland:main cache_cache_config
 #
 
-$team modify survisland.temp.sidebar.4 suffix [{"translate": "survisland.points","color":"$(team1_color)"},{"text":"$(team1_points)","color":"yellow"}]
-$team modify survisland.temp.sidebar.1 suffix [{"translate": "survisland.points","color":"$(team2_color)"},{"text":"$(team2_points)","color":"yellow"}]
+$team modify survisland.temp.sidebar.4 suffix [{"text":"Points : ","color":"$(team1_color)"},{"text":"$(team1_points)","color":"yellow"}]
+$team modify survisland.temp.sidebar.1 suffix [{"text":"Points : ","color":"$(team2_color)"},{"text":"$(team2_points)","color":"yellow"}]
 

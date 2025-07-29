@@ -1,7 +1,7 @@
 
 #> survisland:set_constants
 #
-# @within	survisland:v2.1.5/load/confirm_load
+# @within	survisland:v2.1.6/load/confirm_load
 #
 
 #min=-100

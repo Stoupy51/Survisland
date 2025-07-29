@@ -12,6 +12,6 @@ gamemode adventure @s
 effect clear @s
 tp @s -1220 64 -2806
 
-title @s title {"translate": "survisland.reste_appuy_sur_jump","color":"gold"}
-title @s subtitle {"translate": "survisland.ne_bouge_pas_laisse_toi_prendre","color":"red"}
+title @s title {"text":"Reste appuyé sur Jump","color":"gold"}
+title @s subtitle {"text":"Ne bouge pas, laisse-toi prendre","color":"red"}
 

@@ -8,7 +8,7 @@ scoreboard players add #process_end survisland.data 1
 scoreboard players set #mob_escape_seconds survisland.data -1000
 
 execute if score #process_end survisland.data matches 1 run tp @e[tag=survisland.mob] 0 -10000 0
-execute if score #process_end survisland.data matches 1 run tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"translate": "survisland.fin_de_lpreuve_de_mob_escape_avec_une_victoire_de"},{"selector":"@a[tag=survisland.alive]"}]
+execute if score #process_end survisland.data matches 1 run tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Fin de l'épreuve de Mob Escape avec une victoire de "},{"selector":"@a[tag=survisland.alive]"}]
 execute if score #process_end survisland.data matches 1 run gamemode survival @a[team=mAkijan]
 execute if score #process_end survisland.data matches 1 run gamemode survival @a[team=mHainy]
 execute if score #process_end survisland.data matches 1 run gamemode survival @a[gamemode=adventure]

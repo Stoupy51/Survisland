@@ -15,8 +15,8 @@ execute as @a[tag=survisland.to_check] if score @s survisland.temp.sidebar = #be
 execute store result score #winners survisland.data if entity @a[tag=survisland.winner]
 
 ##End visual 
-execute if score #winners survisland.data matches 1 run tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"translate": "survisland.fin_de_lpreuve_avec_une_victoire_du_grand_joueur"},{"selector":"@a[tag=survisland.winner]"}]
-execute if score #winners survisland.data matches 2.. run tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"translate": "survisland.fin_de_lpreuve_avec_une_victoire_de_ah_merde_ya_galit_entre_ces_"},{"selector":"@a[tag=survisland.winner,sort=random]"}]
+execute if score #winners survisland.data matches 1 run tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Fin de l'épreuve avec une victoire du grand joueur : "},{"selector":"@a[tag=survisland.winner]"}]
+execute if score #winners survisland.data matches 2.. run tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Fin de l'épreuve avec une victoire de... Ah merde, y'a égalité entre ces grands joueurs : "},{"selector":"@a[tag=survisland.winner,sort=random]"}]
 execute at @a run summon firework_rocket ~ ~1 ~ {LifeTime:30,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Flight:2,Explosions:[{Type:1,Flicker:1,Trail:1,Colors:[I;1638655]}]}}}}
 execute as @a at @s run playsound entity.wither.death ambient @s
 gamemode survival @a[gamemode=adventure]

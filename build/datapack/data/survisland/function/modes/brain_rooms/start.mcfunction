@@ -8,9 +8,9 @@
 
 gamemode adventure @a[gamemode=survival]
 
-tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"translate": "survisland.lancement_de_lpreuve_bonne_chance"}]
+tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Lancement de l'épreuve, bonne chance !\n"}]
 
-scoreboard objectives add survisland.temp.sidebar dummy {"translate": "survisland.progressions","color":"white"}
+scoreboard objectives add survisland.temp.sidebar dummy {"text":" Progressions ","color":"white"}
 scoreboard objectives setdisplay sidebar survisland.temp.sidebar
 
 scoreboard players set #brain_rooms_seconds survisland.data 0
@@ -21,9 +21,9 @@ scoreboard players set #detect_end survisland.data 0
 team add survisland.temp.sidebar.3
 team add survisland.temp.sidebar.2
 team add survisland.temp.sidebar.1
-team modify survisland.temp.sidebar.3 suffix [{"translate": "survisland.quipe_bekou","color":"red"},{"text":"0","color":"aqua"},{"text":"%","color":"gray"}]
-team modify survisland.temp.sidebar.2 suffix [{"translate": "survisland.quipe_galia","color":"yellow"},{"text":"0","color":"aqua"},{"text":"%","color":"gray"}]
-team modify survisland.temp.sidebar.1 suffix [{"translate": "survisland.quipe_ijo","color":"dark_purple"},{"text":"0","color":"aqua"},{"text":"%","color":"gray"}]
+team modify survisland.temp.sidebar.3 suffix [{"text":"Équipe Bekou : ","color":"red"},{"text":"0","color":"aqua"},{"text":"%","color":"gray"}]
+team modify survisland.temp.sidebar.2 suffix [{"text":"Équipe Galia : ","color":"yellow"},{"text":"0","color":"aqua"},{"text":"%","color":"gray"}]
+team modify survisland.temp.sidebar.1 suffix [{"text":"Équipe Ijo : ","color":"dark_purple"},{"text":"0","color":"aqua"},{"text":"%","color":"gray"}]
 team modify survisland.temp.sidebar.3 color dark_aqua
 team modify survisland.temp.sidebar.2 color dark_aqua
 team modify survisland.temp.sidebar.1 color green

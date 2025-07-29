@@ -13,13 +13,13 @@
 								"minecraft:max_stack_size": 64,
 								"minecraft:item_model": "survisland:laser_gun",
 								"minecraft:item_name": {
-									"translate": "survisland.laser_gun"
+									"text": "Laser Gun"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
-										{"translate": "survisland","italic": true,"color": "blue"}
+										{"text": " Survisland","italic": true,"color": "blue"}
 									]
 								],
 								"minecraft:custom_data": {

@@ -21,7 +21,7 @@
 
 scoreboard players add #mTuarua_buttons survisland.data 1
 execute as @a at @s run playsound entity.experience_orb.pickup ambient @s
-tellraw @a ["",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"translate": "survisland.un_bouton_a_t_activ_par_lquipe"},{"translate": "survisland.tuarua","color":"light_purple"}]
+tellraw @a ["",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Un bouton a été activé par l'équipe "},{"text":"Tuarua","color":"light_purple"}]
 setblock ~ ~ ~ air
 
 execute if score #mTuarua_buttons survisland.data matches 2 run fill -1211 59 -2796 -1211 56 -2766 air replace oak_fence

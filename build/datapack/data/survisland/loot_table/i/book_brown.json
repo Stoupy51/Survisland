@@ -12,13 +12,13 @@
 							"components": {
 								"minecraft:item_model": "survisland:book_brown",
 								"minecraft:item_name": {
-									"translate": "survisland.book_brown"
+									"text": "Book Brown"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
-										{"translate": "survisland","italic": true,"color": "blue"}
+										{"text": " Survisland","italic": true,"color": "blue"}
 									]
 								],
 								"minecraft:custom_data": {

@@ -9,7 +9,7 @@
 		"components": {
 			"minecraft:lore": [
 				{
-					"translate": "survisland.made_by_stoupy",
+					"text": "Made by Stoupy",
 					"color": "gold",
 					"italic": false
 				},
@@ -22,7 +22,7 @@
 						"font": "survisland:icons"
 					},
 					{
-						"translate": "survisland",
+						"text": " Survisland",
 						"italic": true,
 						"color": "blue"
 					}
@@ -35,7 +35,7 @@
 			},
 			"minecraft:item_model": "survisland:marcus_chicken",
 			"minecraft:item_name": {
-				"translate": "survisland.marcus_chicken"
+				"text": "Marcus Chicken"
 			},
 			"minecraft:custom_data": {
 				"survisland": {

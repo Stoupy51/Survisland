@@ -12,14 +12,14 @@
 							"components": {
 								"minecraft:lore": [
 									{
-										"translate": "survisland.made_by_fhara",
+										"text": "Made by Fhara",
 										"color": "gold",
 										"italic": false
 									},
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
-										{"translate": "survisland","italic": true,"color": "blue"}
+										{"text": " Survisland","italic": true,"color": "blue"}
 									]
 								],
 								"minecraft:consumable": {},
@@ -29,7 +29,7 @@
 								},
 								"minecraft:item_model": "survisland:chocolatine",
 								"minecraft:item_name": {
-									"translate": "survisland.chocolatine"
+									"text": "Chocolatine"
 								},
 								"minecraft:custom_data": {
 									"survisland": {

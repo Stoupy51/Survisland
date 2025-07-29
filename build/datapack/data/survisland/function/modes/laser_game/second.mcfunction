@@ -14,7 +14,7 @@ execute if score #laser_game_seconds survisland.data matches 10 run summon item_
 
 # Base reload
 scoreboard players remove #base_reload survisland.data 1
-execute if score #base_reload survisland.data matches 0 run tellraw @a [{"translate": "survisland.la_base_de_bonus_vient_de_se_recharger","color":"yellow"}]
+execute if score #base_reload survisland.data matches 0 run tellraw @a [{"text":"La base de bonus vient de se recharger !","color":"yellow"}]
 execute if score #base_reload survisland.data matches 0 run setblock 136 73 116 iron_trapdoor[powered=true,open=true]
 execute if score #base_reload survisland.data matches 0 as @e[tag=survisland.laser_game.base] run data modify entity @s Item set value {id:"minecraft:experience_bottle",Count:1b}
 execute if score #base_reload survisland.data matches 1.. run setblock 136 73 116 dark_oak_trapdoor[powered=true,open=true]

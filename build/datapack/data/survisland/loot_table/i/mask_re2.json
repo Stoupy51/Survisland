@@ -12,14 +12,14 @@
 							"components": {
 								"minecraft:lore": [
 									{
-										"translate": "survisland.made_by_akwaden",
+										"text": "Made by Akwaden",
 										"color": "gold",
 										"italic": false
 									},
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
-										{"translate": "survisland","italic": true,"color": "blue"}
+										{"text": " Survisland","italic": true,"color": "blue"}
 									]
 								],
 								"minecraft:equippable": {
@@ -27,7 +27,7 @@
 								},
 								"minecraft:item_model": "survisland:mask_re2",
 								"minecraft:item_name": {
-									"translate": "survisland.mask_re2"
+									"text": "Mask Re2"
 								},
 								"minecraft:custom_data": {
 									"survisland": {

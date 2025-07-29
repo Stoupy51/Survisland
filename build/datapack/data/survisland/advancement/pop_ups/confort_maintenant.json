@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:stone","components": {"minecraft:item_model": "survisland:icon"}},
-		"title": {"translate": "survisland.confort_maintenant","color": "aqua"},
+		"title": {"text": "Confort maintenant","color": "aqua"},
 		"description": "",
 		"frame": "task",
 		"show_toast": true,

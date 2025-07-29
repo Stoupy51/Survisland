@@ -20,7 +20,7 @@
 									}
 								},
 								"minecraft:item_name": {
-									"translate": "survisland.music_disc",
+									"text": "Music Disc",
 									"italic": false
 								},
 								"minecraft:jukebox_playable": "survisland:12_ivan_shpilevsky_the_time",
@@ -31,7 +31,7 @@
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
-										{"translate": "survisland","italic": true,"color": "blue"}
+										{"text": " Survisland","italic": true,"color": "blue"}
 									]
 								]
 							}

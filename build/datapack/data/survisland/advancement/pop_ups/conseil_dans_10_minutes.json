@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:stone","components": {"minecraft:item_model": "survisland:icon"}},
-		"title": {"translate": "survisland.conseil_dans_10_minutes","color": "aqua"},
+		"title": {"text": "Conseil dans 10 minutes","color": "aqua"},
 		"description": "",
 		"frame": "task",
 		"show_toast": true,

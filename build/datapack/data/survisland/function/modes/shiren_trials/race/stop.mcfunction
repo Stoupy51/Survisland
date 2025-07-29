@@ -14,7 +14,7 @@ execute if score @s survisland.temp.race_start matches 2281.. run scoreboard pla
 execute if score @s survisland.temp.race_start matches 2281.. run scoreboard players operation #seconds survisland.temp.race_start = #total_seconds survisland.temp.race_start
 execute if score @s survisland.temp.race_start matches 2281.. run scoreboard players operation #minutes survisland.temp.race_start /= #60 survisland.data
 execute if score @s survisland.temp.race_start matches 2281.. run scoreboard players operation #seconds survisland.temp.race_start %= #60 survisland.data
-execute if score @s survisland.temp.race_start matches 2281.. run tellraw @s ["",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"translate": "survisland.temps_effectu_pas_assez_rapide"},{"score":{"name":"#minutes","objective":"survisland.temp.race_start"},"color":"red"},{"text":"m","color":"red"},{"score":{"name":"#seconds","objective":"survisland.temp.race_start"},"color":"red"},{"text":"s","color":"red"}]
+execute if score @s survisland.temp.race_start matches 2281.. run tellraw @s ["",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Temps effectué (pas assez rapide) : "},{"score":{"name":"#minutes","objective":"survisland.temp.race_start"},"color":"red"},{"text":"m","color":"red"},{"score":{"name":"#seconds","objective":"survisland.temp.race_start"},"color":"red"},{"text":"s","color":"red"}]
 
 # Leave trial
 ride @s dismount

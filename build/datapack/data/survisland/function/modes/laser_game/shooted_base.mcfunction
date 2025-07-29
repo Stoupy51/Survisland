@@ -9,8 +9,8 @@
 scoreboard players set #color survisland.data 0
 execute store success score #color survisland.data if entity @s[tag=survisland.laser_game.red]
 
-execute if score #color survisland.data matches 0 run tellraw @a[tag=survisland.laser_game.red] [{"selector":"@s"},{"translate": "survisland.a_tir_sur_la_base_de_bonus","color":"green"}]
-execute if score #color survisland.data matches 1 run tellraw @a[tag=survisland.laser_game.blue] [{"selector":"@s"},{"translate": "survisland.a_tir_sur_la_base_de_bonus","color":"green"}]
+execute if score #color survisland.data matches 0 run tellraw @a[tag=survisland.laser_game.red] [{"selector":"@s"},{"text":" a tiré sur la base de bonus !","color":"green"}]
+execute if score #color survisland.data matches 1 run tellraw @a[tag=survisland.laser_game.blue] [{"selector":"@s"},{"text":" a tiré sur la base de bonus !","color":"green"}]
 execute as @a at @s run playsound entity.player.levelup ambient @s
 
 scoreboard players set #modulo_rand survisland.data 6
@@ -18,12 +18,12 @@ function survisland:math/get_random/
 
 execute if score #color survisland.data matches 0 run tag @a[tag=!survisland.laser_game.red] add survisland.message
 execute if score #color survisland.data matches 1 run tag @a[tag=!survisland.laser_game.blue] add survisland.message
-execute if score #random survisland.data matches 0 run tellraw @a[tag=survisland.message] [{"selector":"@s"},{"translate": "survisland.a_tir_sur_la_base_de_bonus_et_obtient_un_bouclier_rsistant_5_tir","color":"green"}]
-execute if score #random survisland.data matches 1 run tellraw @a[tag=survisland.message] [{"selector":"@s"},{"translate": "survisland.a_tir_sur_la_base_de_bonus_et_obtient_une_mitraillette_pendant_1","color":"green"}]
-execute if score #random survisland.data matches 2 run tellraw @a[tag=survisland.message] [{"selector":"@s"},{"translate": "survisland.a_tir_sur_la_base_de_bonus_et_donne_un_effet_darkness_la_team_en","color":"green"}]
-execute if score #random survisland.data matches 3 run tellraw @a[tag=survisland.message] [{"selector":"@s"},{"translate": "survisland.a_tir_sur_la_base_de_bonus_et_donne_un_effet_glowing_la_team_enn","color":"green"}]
-execute if score #random survisland.data matches 4 run tellraw @a[tag=survisland.message] [{"selector":"@s"},{"translate": "survisland.a_tir_sur_la_base_de_bonus_et_obtient_un_changement_de_couleur_v","color":"green"}]
-execute if score #random survisland.data matches 5 run tellraw @a[tag=survisland.message] [{"selector":"@s"},{"translate": "survisland.a_tir_sur_la_base_de_bonus_et_donne_un_effet_speed_votre_quipe_p","color":"green"}]
+execute if score #random survisland.data matches 0 run tellraw @a[tag=survisland.message] [{"selector":"@s"},{"text":" a tiré sur la base de bonus et obtient un Bouclier résistant à 5 tirs [+20 points]","color":"green"}]
+execute if score #random survisland.data matches 1 run tellraw @a[tag=survisland.message] [{"selector":"@s"},{"text":" a tiré sur la base de bonus et obtient une Mitraillette pendant 15 secondes [+20 points]","color":"green"}]
+execute if score #random survisland.data matches 2 run tellraw @a[tag=survisland.message] [{"selector":"@s"},{"text":" a tiré sur la base de bonus et donne un Effet Darkness à la team ennemie [+20 points]","color":"green"}]
+execute if score #random survisland.data matches 3 run tellraw @a[tag=survisland.message] [{"selector":"@s"},{"text":" a tiré sur la base de bonus et donne un Effet Glowing à la team ennemie [+20 points]","color":"green"}]
+execute if score #random survisland.data matches 4 run tellraw @a[tag=survisland.message] [{"selector":"@s"},{"text":" a tiré sur la base de bonus et obtient un Changement de couleur visuellement pendant 30 secondes [+20 points]","color":"green"}]
+execute if score #random survisland.data matches 5 run tellraw @a[tag=survisland.message] [{"selector":"@s"},{"text":" a tiré sur la base de bonus et donne un Effet Speed à votre équipe pendant 15 secondes [+20 points]","color":"green"}]
 tag @a remove survisland.message
 
 execute if score #random survisland.data matches 0 run scoreboard players set @s survisland.temp.shield 5

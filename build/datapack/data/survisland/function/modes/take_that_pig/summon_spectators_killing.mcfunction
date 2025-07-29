@@ -13,5 +13,5 @@ effect clear @s
 tp @s -1252 54 -2795
 spawnpoint @s -1252 54 -2795
 
-title @s title {"translate": "survisland.essaie_de_rester_en_vie_x","color":"gold"}
+title @s title {"text":"Essaie de rester en vie x)","color":"gold"}
 

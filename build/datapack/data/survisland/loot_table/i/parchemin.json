@@ -11,24 +11,24 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_name": {
-									"translate": "survisland.default_vote",
+									"text": "Default vote",
 									"italic": false,
 									"color": "red"
 								},
 								"minecraft:lore": [
 									{
-										"translate": "survisland.auteur",
+										"text": "Auteur : ",
 										"italic": false,
 										"color": "gold"
 									},
 									{
-										"translate": "survisland.stoupypy",
+										"text": "Stoupypy",
 										"color": "yellow"
 									},
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
-										{"translate": "survisland","italic": true,"color": "blue"}
+										{"text": " Survisland","italic": true,"color": "blue"}
 									]
 								],
 								"minecraft:item_model": "survisland:parchemin",

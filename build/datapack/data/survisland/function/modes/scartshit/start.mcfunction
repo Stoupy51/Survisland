@@ -8,9 +8,9 @@
 
 tag @a remove survisland.winner
 
-tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"translate": "survisland.lancement_de_lpreuve_de_scartshit_bonne_chance"}]
+tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Lancement de l'épreuve de scartshit, bonne chance !"}]
 
-scoreboard objectives add survisland.temp.sidebar dummy {"translate": "survisland.progression_en","color":"yellow"}
+scoreboard objectives add survisland.temp.sidebar dummy {"text":"Progression en %","color":"yellow"}
 scoreboard objectives setdisplay sidebar survisland.temp.sidebar
 
 scoreboard players set #scartshit_seconds survisland.data 0

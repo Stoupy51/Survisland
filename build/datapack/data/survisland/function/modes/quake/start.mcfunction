@@ -9,7 +9,7 @@
 effect give @a[team=mMerge] speed 400 1 true
 effect give @a[team=mMerge] jump_boost 400 3 true
 
-tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"translate": "survisland.lancement_de_la_partie_de_quake_tuez_le_plus_dennemis_possible"}]
+tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Lancement de la partie de Quake, tuez le plus d'ennemis possible !"}]
 
 scoreboard objectives add survisland.temp.points dummy {"text":" Points ","color":"yellow"}
 scoreboard objectives add survisland.temp.cooldown dummy

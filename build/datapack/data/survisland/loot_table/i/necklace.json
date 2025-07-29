@@ -18,13 +18,13 @@
 								},
 								"minecraft:item_model": "survisland:necklace",
 								"minecraft:item_name": {
-									"translate": "survisland.necklace"
+									"text": "Necklace"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
-										{"translate": "survisland","italic": true,"color": "blue"}
+										{"text": " Survisland","italic": true,"color": "blue"}
 									]
 								],
 								"minecraft:custom_data": {

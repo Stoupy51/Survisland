@@ -12,13 +12,13 @@
 							"components": {
 								"minecraft:item_model": "survisland:monocoin",
 								"minecraft:item_name": {
-									"translate": "survisland.monocoin"
+									"text": "Monocoin"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
-										{"translate": "survisland","italic": true,"color": "blue"}
+										{"text": " Survisland","italic": true,"color": "blue"}
 									]
 								],
 								"minecraft:custom_data": {

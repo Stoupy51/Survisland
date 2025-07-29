@@ -12,14 +12,14 @@
 							"components": {
 								"minecraft:lore": [
 									{
-										"translate": "survisland.made_by_m4touw",
+										"text": "Made by M4TOUW",
 										"color": "gold",
 										"italic": false
 									},
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
-										{"translate": "survisland","italic": true,"color": "blue"}
+										{"text": " Survisland","italic": true,"color": "blue"}
 									]
 								],
 								"minecraft:consumable": {},
@@ -29,7 +29,7 @@
 								},
 								"minecraft:item_model": "survisland:strawberry_pie",
 								"minecraft:item_name": {
-									"translate": "survisland.strawberry_pie"
+									"text": "Strawberry Pie"
 								},
 								"minecraft:custom_data": {
 									"survisland": {

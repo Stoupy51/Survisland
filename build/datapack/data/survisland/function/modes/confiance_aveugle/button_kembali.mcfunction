@@ -21,7 +21,7 @@
 
 scoreboard players add #mKembali_buttons survisland.data 1
 execute as @a at @s run playsound entity.experience_orb.pickup ambient @s
-tellraw @a ["",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"translate": "survisland.un_bouton_a_t_activ_par_lquipe"},{"translate": "survisland.kembali","color":"yellow"}]
+tellraw @a ["",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Un bouton a été activé par l'équipe "},{"text":"Kembali","color":"yellow"}]
 setblock ~ ~ ~ air
 
 execute if score #mKembali_buttons survisland.data matches 2 run fill -1211 59 -2829 -1211 56 -2799 air replace oak_fence

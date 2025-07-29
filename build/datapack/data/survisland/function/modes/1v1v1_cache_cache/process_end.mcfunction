@@ -6,8 +6,8 @@
 
 scoreboard players add #process_end survisland.data 1
 
-execute if score #process_end survisland.data matches 1 if score #detect_end survisland.data matches 1 run tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"translate": "survisland.fin_de_lpreuve_tous_les_joueurs_ont_t_trouvs"}]
-execute if score #process_end survisland.data matches 1 if score #detect_end survisland.data matches 2 run tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"translate": "survisland.fin_de_lpreuve_temps_coul"}]
+execute if score #process_end survisland.data matches 1 if score #detect_end survisland.data matches 1 run tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Fin de l'épreuve, tous les joueurs ont été trouvés !"}]
+execute if score #process_end survisland.data matches 1 if score #detect_end survisland.data matches 2 run tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Fin de l'épreuve, temps écoulé !"}]
 $execute if score #process_end survisland.data matches 1 as @a[team=$(team1_id),tag=survisland.alive] run scoreboard players add #$(team1_id)_points survisland.data 20
 $execute if score #process_end survisland.data matches 1 as @a[team=$(team2_id),tag=survisland.alive] run scoreboard players add #$(team2_id)_points survisland.data 20
 $execute if score #process_end survisland.data matches 1 as @a[team=$(team3_id),tag=survisland.alive] run scoreboard players add #$(team3_id)_points survisland.data 20
@@ -16,7 +16,7 @@ $execute if score #process_end survisland.data matches 1 if score #$(team1_id)_p
 $execute if score #process_end survisland.data matches 1 if score #$(team1_id)_points survisland.data > #$(team2_id)_points survisland.data if score #$(team1_id)_points survisland.data > #$(team3_id)_points survisland.data run scoreboard players set #detect_end survisland.data 4
 $execute if score #process_end survisland.data matches 1 if score #$(team2_id)_points survisland.data > #$(team1_id)_points survisland.data if score #$(team2_id)_points survisland.data > #$(team3_id)_points survisland.data run scoreboard players set #detect_end survisland.data 5
 $execute if score #process_end survisland.data matches 1 if score #$(team3_id)_points survisland.data > #$(team1_id)_points survisland.data if score #$(team3_id)_points survisland.data > #$(team2_id)_points survisland.data run scoreboard players set #detect_end survisland.data 6
-execute if score #process_end survisland.data matches 1 if score #detect_end survisland.data matches 3 run tellraw @a ["",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"translate": "survisland.avec_une_victoire_de_wait_galit_des_points"}]
+execute if score #process_end survisland.data matches 1 if score #detect_end survisland.data matches 3 run tellraw @a ["",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Avec une victoire de....., wait....., égalité des points !"}]
 $execute if score #process_end survisland.data matches 1 if score #detect_end survisland.data matches 4 run tellraw @a ["",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Avec une victoire de l'équipe $(team1_name) : "},{"selector":"@a[team=$(team1_id),sort=random]"}]
 $execute if score #process_end survisland.data matches 1 if score #detect_end survisland.data matches 5 run tellraw @a ["",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Avec une victoire de l'équipe $(team2_name) : "},{"selector":"@a[team=$(team2_id),sort=random]"}]
 $execute if score #process_end survisland.data matches 1 if score #detect_end survisland.data matches 6 run tellraw @a ["",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Avec une victoire de l'équipe $(team3_name) : "},{"selector":"@a[team=$(team3_id),sort=random]"}]

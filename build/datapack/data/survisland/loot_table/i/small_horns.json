@@ -16,13 +16,13 @@
 								},
 								"minecraft:item_model": "survisland:small_horns",
 								"minecraft:item_name": {
-									"translate": "survisland.small_horns"
+									"text": "Small Horns"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
-										{"translate": "survisland","italic": true,"color": "blue"}
+										{"text": " Survisland","italic": true,"color": "blue"}
 									]
 								],
 								"minecraft:custom_data": {
