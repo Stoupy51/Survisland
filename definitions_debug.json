@@ -2,7 +2,7 @@
 	"icon": {
 		"id": "minecraft:command_block",
 		"item_model": "survisland:icon",
-		"item_name": {"text": "Icon","italic": false,"color": "white"},
+		"item_name": {"text": "Icon"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"icon": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -10,7 +10,7 @@
 		"id": "minecraft:command_block",
 		"max_stack_size": 64,
 		"item_model": "survisland:laser_gun",
-		"item_name": {"text": "Laser Gun","italic": false,"color": "white"},
+		"item_name": {"text": "Laser Gun"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"laser_gun": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -24,7 +24,7 @@
 	"deployed_parchemin": {
 		"id": "minecraft:warped_fungus_on_a_stick",
 		"item_model": "survisland:deployed_parchemin",
-		"item_name": {"text": "Deployed Parchemin","italic": false,"color": "white"},
+		"item_name": {"text": "Deployed Parchemin"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"deployed_parchemin": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -32,7 +32,7 @@
 		"id": "minecraft:warped_fungus_on_a_stick",
 		"lore": [{"text": "Clic-droit pour éteindre la torche","italic": false,"color": "gray"},{"text": "du joueur le plus proche","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"item_model": "survisland:snuffer",
-		"item_name": {"text": "Snuffer","italic": false,"color": "white"},
+		"item_name": {"text": "Snuffer"},
 		"custom_data": {"survisland": {"snuffer": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"flambeau": {
@@ -40,7 +40,7 @@
 		"lore": [{"text": "Gardez cette torche précieusement","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"max_stack_size": 64,
 		"item_model": "survisland:flambeau",
-		"item_name": {"text": "Flambeau","italic": false,"color": "white"},
+		"item_name": {"text": "Flambeau"},
 		"custom_data": {"survisland": {"flambeau": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"pendent": {
@@ -48,7 +48,7 @@
 		"lore": [{"text": "[Seconde main pour l'équiper]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"max_stack_size": 64,
 		"item_model": "survisland:pendent",
-		"item_name": {"text": "Pendent","italic": false,"color": "white"},
+		"item_name": {"text": "Pendent"},
 		"custom_data": {"survisland": {"pendent": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"pendent_held": {
@@ -56,7 +56,7 @@
 		"lore": [{"text": "[Seconde main pour l'équiper]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"max_stack_size": 64,
 		"item_model": "survisland:pendent_held",
-		"item_name": {"text": "Pendent Held","italic": false,"color": "white"},
+		"item_name": {"text": "Pendent Held"},
 		"custom_data": {"survisland": {"pendent_held": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"maple_leaf": {
@@ -78,14 +78,14 @@
 	"temp_item": {
 		"id": "minecraft:command_block",
 		"item_model": "air",
-		"item_name": {"text": "Temp Item","italic": false,"color": "white"},
+		"item_name": {"text": "Temp Item"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"temp_item": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"black_letter": {
 		"id": "minecraft:written_book",
 		"item_model": "survisland:black_letter",
-		"item_name": {"text": "Black Letter","italic": false,"color": "white"},
+		"item_name": {"text": "Black Letter"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"black_letter": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -94,7 +94,7 @@
 		"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"equippable": {"slot": "chest","equip_sound": {"sound_id": "survisland:maracas"}},
 		"item_model": "survisland:maracas",
-		"item_name": {"text": "Maracas","italic": false,"color": "white"},
+		"item_name": {"text": "Maracas"},
 		"custom_data": {"survisland": {"maracas": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"sombrero": {
@@ -102,7 +102,7 @@
 		"lore": [{"text": "Made by Fhara","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"equippable": {"slot": "head"},
 		"item_model": "survisland:sombrero",
-		"item_name": {"text": "Sombrero","italic": false,"color": "white"},
+		"item_name": {"text": "Sombrero"},
 		"custom_data": {"survisland": {"sombrero": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"mask_re2": {
@@ -110,14 +110,14 @@
 		"lore": [{"text": "Made by Akwaden","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"equippable": {"slot": "head"},
 		"item_model": "survisland:mask_re2",
-		"item_name": {"text": "Mask Re2","italic": false,"color": "white"},
+		"item_name": {"text": "Mask Re2"},
 		"custom_data": {"survisland": {"mask_re2": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"iron_bowl": {
 		"id": "minecraft:command_block",
 		"lore": [{"text": "Made by Emilou","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"item_model": "survisland:iron_bowl",
-		"item_name": {"text": "Iron Bowl","italic": false,"color": "white"},
+		"item_name": {"text": "Iron Bowl"},
 		"custom_data": {"survisland": {"iron_bowl": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"rice": {
@@ -128,9 +128,9 @@
 		"food": {"nutrition": 2,"saturation": 1.2},
 		"category": "food",
 		"item_model": "survisland:rice",
-		"item_name": {"text": "Rice","italic": false,"color": "white"},
+		"item_name": {"text": "Rice"},
 		"custom_data": {"survisland": {"rice": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
-		"use_remainder": {"count": 1,"id": "minecraft:command_block","components": {"item_name": {"text": "Iron Bowl","italic": false,"color": "white"},"item_model": "survisland:iron_bowl","lore": [{"text": "Made by Emilou","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]}}
+		"use_remainder": {"count": 1,"id": "minecraft:command_block","components": {"item_name": {"text": "Iron Bowl"},"item_model": "survisland:iron_bowl","lore": [{"text": "Made by Emilou","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]}}
 	},
 	"cooked_rice": {
 		"id": "minecraft:apple",
@@ -141,9 +141,9 @@
 		"category": "food",
 		"result_of_crafting": [{"type": "smelting","result_count": 1,"cookingtime": 200,"experience": 1.0,"group": "riz","category": "food","ingredient": {"components": {"minecraft:custom_data": {"survisland": {"rice": true}}}}},{"type": "smoking","result_count": 1,"cookingtime": 100,"experience": 1.0,"group": "riz","category": "food","ingredient": {"components": {"minecraft:custom_data": {"survisland": {"rice": true}}}}}],
 		"item_model": "survisland:cooked_rice",
-		"item_name": {"text": "Cooked Rice","italic": false,"color": "white"},
+		"item_name": {"text": "Cooked Rice"},
 		"custom_data": {"survisland": {"cooked_rice": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
-		"use_remainder": {"count": 1,"id": "minecraft:command_block","components": {"item_name": {"text": "Iron Bowl","italic": false,"color": "white"},"item_model": "survisland:iron_bowl","lore": [{"text": "Made by Emilou","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]}}
+		"use_remainder": {"count": 1,"id": "minecraft:command_block","components": {"item_name": {"text": "Iron Bowl"},"item_model": "survisland:iron_bowl","lore": [{"text": "Made by Emilou","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]}}
 	},
 	"croissant": {
 		"id": "minecraft:apple",
@@ -153,7 +153,7 @@
 		"category": "food",
 		"result_of_crafting": [{"type": "smelting","result_count": 1,"cookingtime": 200,"experience": 1.0,"group": "croissant","category": "food","ingredient": {"item": "minecraft:bread"}},{"type": "smoking","result_count": 1,"cookingtime": 100,"experience": 1.0,"group": "croissant","category": "food","ingredient": {"item": "minecraft:bread"}}],
 		"item_model": "survisland:croissant",
-		"item_name": {"text": "Croissant","italic": false,"color": "white"},
+		"item_name": {"text": "Croissant"},
 		"custom_data": {"survisland": {"croissant": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"marcus_chicken": {
@@ -164,7 +164,7 @@
 		"category": "food",
 		"result_of_crafting": [{"type": "smelting","result_count": 1,"cookingtime": 200,"experience": 1.0,"group": "chicken","category": "food","ingredient": {"item": "minecraft:cooked_chicken"}},{"type": "smoking","result_count": 1,"cookingtime": 100,"experience": 1.0,"group": "chicken","category": "food","ingredient": {"item": "minecraft:cooked_chicken"}}],
 		"item_model": "survisland:marcus_chicken",
-		"item_name": {"text": "Marcus Chicken","italic": false,"color": "white"},
+		"item_name": {"text": "Marcus Chicken"},
 		"custom_data": {"survisland": {"marcus_chicken": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"chocolatine": {
@@ -174,7 +174,7 @@
 		"food": {"nutrition": 5,"saturation": 6},
 		"category": "food",
 		"item_model": "survisland:chocolatine",
-		"item_name": {"text": "Chocolatine","italic": false,"color": "white"},
+		"item_name": {"text": "Chocolatine"},
 		"custom_data": {"survisland": {"chocolatine": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"donut": {
@@ -184,7 +184,7 @@
 		"food": {"nutrition": 5,"saturation": 6},
 		"category": "food",
 		"item_model": "survisland:donut",
-		"item_name": {"text": "Donut","italic": false,"color": "white"},
+		"item_name": {"text": "Donut"},
 		"custom_data": {"survisland": {"donut": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"chocolate_eclair": {
@@ -194,7 +194,7 @@
 		"food": {"nutrition": 5,"saturation": 6},
 		"category": "food",
 		"item_model": "survisland:chocolate_eclair",
-		"item_name": {"text": "Chocolate Eclair","italic": false,"color": "white"},
+		"item_name": {"text": "Chocolate Eclair"},
 		"custom_data": {"survisland": {"chocolate_eclair": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"strawberry_pie": {
@@ -204,7 +204,7 @@
 		"food": {"nutrition": 5,"saturation": 6},
 		"category": "food",
 		"item_model": "survisland:strawberry_pie",
-		"item_name": {"text": "Strawberry Pie","italic": false,"color": "white"},
+		"item_name": {"text": "Strawberry Pie"},
 		"custom_data": {"survisland": {"strawberry_pie": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"scalbar": {
@@ -213,14 +213,14 @@
 		"consumable": {},
 		"category": "misc",
 		"item_model": "survisland:scalbar",
-		"item_name": {"text": "Scalbar","italic": false,"color": "white"},
+		"item_name": {"text": "Scalbar"},
 		"custom_data": {"survisland": {"scalbar": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"monocoin": {
 		"id": "minecraft:command_block",
 		"category": "misc",
 		"item_model": "survisland:monocoin",
-		"item_name": {"text": "Monocoin","italic": false,"color": "white"},
+		"item_name": {"text": "Monocoin"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"monocoin": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -228,7 +228,7 @@
 		"id": "minecraft:written_book",
 		"category": "book",
 		"item_model": "survisland:book_advanced",
-		"item_name": {"text": "Book Advanced","italic": false,"color": "white"},
+		"item_name": {"text": "Book Advanced"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"book_advanced": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -236,7 +236,7 @@
 		"id": "minecraft:written_book",
 		"category": "book",
 		"item_model": "survisland:book_brown",
-		"item_name": {"text": "Book Brown","italic": false,"color": "white"},
+		"item_name": {"text": "Book Brown"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"book_brown": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -244,7 +244,7 @@
 		"id": "minecraft:written_book",
 		"category": "book",
 		"item_model": "survisland:book_bubulle",
-		"item_name": {"text": "Book Bubulle","italic": false,"color": "white"},
+		"item_name": {"text": "Book Bubulle"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"book_bubulle": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -252,7 +252,7 @@
 		"id": "minecraft:written_book",
 		"category": "book",
 		"item_model": "survisland:book_feather",
-		"item_name": {"text": "Book Feather","italic": false,"color": "white"},
+		"item_name": {"text": "Book Feather"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"book_feather": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -260,7 +260,7 @@
 		"id": "minecraft:written_book",
 		"category": "book",
 		"item_model": "survisland:book_green_blue",
-		"item_name": {"text": "Book Green Blue","italic": false,"color": "white"},
+		"item_name": {"text": "Book Green Blue"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"book_green_blue": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -268,7 +268,7 @@
 		"id": "minecraft:written_book",
 		"category": "book",
 		"item_model": "survisland:book_orange",
-		"item_name": {"text": "Book Orange","italic": false,"color": "white"},
+		"item_name": {"text": "Book Orange"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"book_orange": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -276,7 +276,7 @@
 		"id": "minecraft:written_book",
 		"category": "book",
 		"item_model": "survisland:book_pink",
-		"item_name": {"text": "Book Pink","italic": false,"color": "white"},
+		"item_name": {"text": "Book Pink"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"book_pink": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -284,7 +284,7 @@
 		"id": "minecraft:written_book",
 		"category": "book",
 		"item_model": "survisland:book_purple",
-		"item_name": {"text": "Book Purple","italic": false,"color": "white"},
+		"item_name": {"text": "Book Purple"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"book_purple": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -292,7 +292,7 @@
 		"id": "minecraft:written_book",
 		"category": "book",
 		"item_model": "survisland:book_red",
-		"item_name": {"text": "Book Red","italic": false,"color": "white"},
+		"item_name": {"text": "Book Red"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"book_red": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -300,7 +300,7 @@
 		"id": "minecraft:written_book",
 		"category": "book",
 		"item_model": "survisland:book_turquoise",
-		"item_name": {"text": "Book Turquoise","italic": false,"color": "white"},
+		"item_name": {"text": "Book Turquoise"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"book_turquoise": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -308,7 +308,7 @@
 		"id": "minecraft:written_book",
 		"category": "book",
 		"item_model": "survisland:book_very_light_cyan",
-		"item_name": {"text": "Book Very Light Cyan","italic": false,"color": "white"},
+		"item_name": {"text": "Book Very Light Cyan"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"book_very_light_cyan": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -316,7 +316,7 @@
 		"id": "minecraft:written_book",
 		"category": "book",
 		"item_model": "survisland:book_warden",
-		"item_name": {"text": "Book Warden","italic": false,"color": "white"},
+		"item_name": {"text": "Book Warden"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"book_warden": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -324,7 +324,7 @@
 		"id": "minecraft:written_book",
 		"category": "book",
 		"item_model": "survisland:book_white",
-		"item_name": {"text": "Book White","italic": false,"color": "white"},
+		"item_name": {"text": "Book White"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"book_white": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -332,7 +332,7 @@
 		"id": "minecraft:written_book",
 		"category": "book",
 		"item_model": "survisland:book_white_blue",
-		"item_name": {"text": "Book White Blue","italic": false,"color": "white"},
+		"item_name": {"text": "Book White Blue"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"book_white_blue": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -340,7 +340,7 @@
 		"id": "minecraft:written_book",
 		"category": "book",
 		"item_model": "survisland:book_yellow",
-		"item_name": {"text": "Book Yellow","italic": false,"color": "white"},
+		"item_name": {"text": "Book Yellow"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"book_yellow": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -352,7 +352,7 @@
 		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_ange"},
 		"category": "fish",
 		"item_model": "survisland:poisson_ange",
-		"item_name": {"text": "Poisson Ange","italic": false,"color": "white"},
+		"item_name": {"text": "Poisson Ange"},
 		"custom_data": {"survisland": {"poisson_ange": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_bar": {
@@ -363,7 +363,7 @@
 		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_bar"},
 		"category": "fish",
 		"item_model": "survisland:poisson_bar",
-		"item_name": {"text": "Poisson Bar","italic": false,"color": "white"},
+		"item_name": {"text": "Poisson Bar"},
 		"custom_data": {"survisland": {"poisson_bar": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_cabillaud": {
@@ -374,7 +374,7 @@
 		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_cabillaud"},
 		"category": "fish",
 		"item_model": "survisland:poisson_cabillaud",
-		"item_name": {"text": "Poisson Cabillaud","italic": false,"color": "white"},
+		"item_name": {"text": "Poisson Cabillaud"},
 		"custom_data": {"survisland": {"poisson_cabillaud": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_capucin": {
@@ -385,7 +385,7 @@
 		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_capucin"},
 		"category": "fish",
 		"item_model": "survisland:poisson_capucin",
-		"item_name": {"text": "Poisson Capucin","italic": false,"color": "white"},
+		"item_name": {"text": "Poisson Capucin"},
 		"custom_data": {"survisland": {"poisson_capucin": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_chirurgien": {
@@ -396,7 +396,7 @@
 		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_chirurgien"},
 		"category": "fish",
 		"item_model": "survisland:poisson_chirurgien",
-		"item_name": {"text": "Poisson Chirurgien","italic": false,"color": "white"},
+		"item_name": {"text": "Poisson Chirurgien"},
 		"custom_data": {"survisland": {"poisson_chirurgien": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_dorade": {
@@ -407,7 +407,7 @@
 		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_dorade"},
 		"category": "fish",
 		"item_model": "survisland:poisson_dorade",
-		"item_name": {"text": "Poisson Dorade","italic": false,"color": "white"},
+		"item_name": {"text": "Poisson Dorade"},
 		"custom_data": {"survisland": {"poisson_dorade": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_espadon": {
@@ -418,7 +418,7 @@
 		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_espadon"},
 		"category": "fish",
 		"item_model": "survisland:poisson_espadon",
-		"item_name": {"text": "Poisson Espadon","italic": false,"color": "white"},
+		"item_name": {"text": "Poisson Espadon"},
 		"custom_data": {"survisland": {"poisson_espadon": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_fletan": {
@@ -429,7 +429,7 @@
 		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_fletan"},
 		"category": "fish",
 		"item_model": "survisland:poisson_fletan",
-		"item_name": {"text": "Poisson Fletan","italic": false,"color": "white"},
+		"item_name": {"text": "Poisson Fletan"},
 		"custom_data": {"survisland": {"poisson_fletan": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_gobie": {
@@ -440,7 +440,7 @@
 		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_gobie"},
 		"category": "fish",
 		"item_model": "survisland:poisson_gobie",
-		"item_name": {"text": "Poisson Gobie","italic": false,"color": "white"},
+		"item_name": {"text": "Poisson Gobie"},
 		"custom_data": {"survisland": {"poisson_gobie": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_lime": {
@@ -451,7 +451,7 @@
 		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_lime"},
 		"category": "fish",
 		"item_model": "survisland:poisson_lime",
-		"item_name": {"text": "Poisson Lime","italic": false,"color": "white"},
+		"item_name": {"text": "Poisson Lime"},
 		"custom_data": {"survisland": {"poisson_lime": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_maquereau": {
@@ -462,7 +462,7 @@
 		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_maquereau"},
 		"category": "fish",
 		"item_model": "survisland:poisson_maquereau",
-		"item_name": {"text": "Poisson Maquereau","italic": false,"color": "white"},
+		"item_name": {"text": "Poisson Maquereau"},
 		"custom_data": {"survisland": {"poisson_maquereau": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_pagre": {
@@ -473,7 +473,7 @@
 		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_pagre"},
 		"category": "fish",
 		"item_model": "survisland:poisson_pagre",
-		"item_name": {"text": "Poisson Pagre","italic": false,"color": "white"},
+		"item_name": {"text": "Poisson Pagre"},
 		"custom_data": {"survisland": {"poisson_pagre": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_papillon": {
@@ -484,7 +484,7 @@
 		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_papillon"},
 		"category": "fish",
 		"item_model": "survisland:poisson_papillon",
-		"item_name": {"text": "Poisson Papillon","italic": false,"color": "white"},
+		"item_name": {"text": "Poisson Papillon"},
 		"custom_data": {"survisland": {"poisson_papillon": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_perroquet": {
@@ -495,7 +495,7 @@
 		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_perroquet"},
 		"category": "fish",
 		"item_model": "survisland:poisson_perroquet",
-		"item_name": {"text": "Poisson Perroquet","italic": false,"color": "white"},
+		"item_name": {"text": "Poisson Perroquet"},
 		"custom_data": {"survisland": {"poisson_perroquet": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_rascasse": {
@@ -506,7 +506,7 @@
 		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_rascasse"},
 		"category": "fish",
 		"item_model": "survisland:poisson_rascasse",
-		"item_name": {"text": "Poisson Rascasse","italic": false,"color": "white"},
+		"item_name": {"text": "Poisson Rascasse"},
 		"custom_data": {"survisland": {"poisson_rascasse": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_sardine": {
@@ -517,7 +517,7 @@
 		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_sardine"},
 		"category": "fish",
 		"item_model": "survisland:poisson_sardine",
-		"item_name": {"text": "Poisson Sardine","italic": false,"color": "white"},
+		"item_name": {"text": "Poisson Sardine"},
 		"custom_data": {"survisland": {"poisson_sardine": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_sole": {
@@ -528,7 +528,7 @@
 		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_sole"},
 		"category": "fish",
 		"item_model": "survisland:poisson_sole",
-		"item_name": {"text": "Poisson Sole","italic": false,"color": "white"},
+		"item_name": {"text": "Poisson Sole"},
 		"custom_data": {"survisland": {"poisson_sole": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"poisson_thon": {
@@ -539,7 +539,7 @@
 		"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_thon"},
 		"category": "fish",
 		"item_model": "survisland:poisson_thon",
-		"item_name": {"text": "Poisson Thon","italic": false,"color": "white"},
+		"item_name": {"text": "Poisson Thon"},
 		"custom_data": {"survisland": {"poisson_thon": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"logo_s01": {
@@ -548,7 +548,7 @@
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"category": "logo",
 		"item_model": "survisland:logo_s01",
-		"item_name": {"text": "Logo S01","italic": false,"color": "white"},
+		"item_name": {"text": "Logo S01"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s01": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -558,7 +558,7 @@
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"category": "logo",
 		"item_model": "survisland:logo_s02",
-		"item_name": {"text": "Logo S02","italic": false,"color": "white"},
+		"item_name": {"text": "Logo S02"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s02": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -568,7 +568,7 @@
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"category": "logo",
 		"item_model": "survisland:logo_s03",
-		"item_name": {"text": "Logo S03","italic": false,"color": "white"},
+		"item_name": {"text": "Logo S03"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s03": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -578,7 +578,7 @@
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"category": "logo",
 		"item_model": "survisland:logo_s04",
-		"item_name": {"text": "Logo S04","italic": false,"color": "white"},
+		"item_name": {"text": "Logo S04"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s04": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -588,7 +588,7 @@
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"category": "logo",
 		"item_model": "survisland:logo_s05",
-		"item_name": {"text": "Logo S05","italic": false,"color": "white"},
+		"item_name": {"text": "Logo S05"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s05": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -598,7 +598,7 @@
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"category": "logo",
 		"item_model": "survisland:logo_s06",
-		"item_name": {"text": "Logo S06","italic": false,"color": "white"},
+		"item_name": {"text": "Logo S06"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s06": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -608,7 +608,7 @@
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"category": "logo",
 		"item_model": "survisland:logo_s07",
-		"item_name": {"text": "Logo S07","italic": false,"color": "white"},
+		"item_name": {"text": "Logo S07"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s07": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -618,7 +618,7 @@
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"category": "logo",
 		"item_model": "survisland:logo_s08",
-		"item_name": {"text": "Logo S08","italic": false,"color": "white"},
+		"item_name": {"text": "Logo S08"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s08": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -628,7 +628,7 @@
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"category": "logo",
 		"item_model": "survisland:logo_s09",
-		"item_name": {"text": "Logo S09","italic": false,"color": "white"},
+		"item_name": {"text": "Logo S09"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s09": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -638,7 +638,7 @@
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"category": "logo",
 		"item_model": "survisland:logo_s10",
-		"item_name": {"text": "Logo S10","italic": false,"color": "white"},
+		"item_name": {"text": "Logo S10"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s10": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -648,7 +648,7 @@
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"category": "logo",
 		"item_model": "survisland:logo_s11",
-		"item_name": {"text": "Logo S11","italic": false,"color": "white"},
+		"item_name": {"text": "Logo S11"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s11": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -658,7 +658,7 @@
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"category": "logo",
 		"item_model": "survisland:logo_s12",
-		"item_name": {"text": "Logo S12","italic": false,"color": "white"},
+		"item_name": {"text": "Logo S12"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s12": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -668,7 +668,7 @@
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"category": "logo",
 		"item_model": "survisland:logo_s13",
-		"item_name": {"text": "Logo S13","italic": false,"color": "white"},
+		"item_name": {"text": "Logo S13"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s13": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -678,7 +678,7 @@
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"category": "logo",
 		"item_model": "survisland:logo_s14",
-		"item_name": {"text": "Logo S14","italic": false,"color": "white"},
+		"item_name": {"text": "Logo S14"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s14": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -688,7 +688,7 @@
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"category": "logo",
 		"item_model": "survisland:logo_s15",
-		"item_name": {"text": "Logo S15","italic": false,"color": "white"},
+		"item_name": {"text": "Logo S15"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s15": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -698,7 +698,7 @@
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"category": "logo",
 		"item_model": "survisland:logo_s16",
-		"item_name": {"text": "Logo S16","italic": false,"color": "white"},
+		"item_name": {"text": "Logo S16"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s16": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -708,7 +708,7 @@
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"category": "logo",
 		"item_model": "survisland:logo_s17",
-		"item_name": {"text": "Logo S17","italic": false,"color": "white"},
+		"item_name": {"text": "Logo S17"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s17": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -718,7 +718,7 @@
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"category": "logo",
 		"item_model": "survisland:logo_s18",
-		"item_name": {"text": "Logo S18","italic": false,"color": "white"},
+		"item_name": {"text": "Logo S18"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s18": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -728,7 +728,7 @@
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"category": "logo",
 		"item_model": "survisland:logo_s19",
-		"item_name": {"text": "Logo S19","italic": false,"color": "white"},
+		"item_name": {"text": "Logo S19"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s19": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -738,7 +738,7 @@
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"category": "logo",
 		"item_model": "survisland:logo_s20",
-		"item_name": {"text": "Logo S20","italic": false,"color": "white"},
+		"item_name": {"text": "Logo S20"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s20": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -748,7 +748,7 @@
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"category": "logo",
 		"item_model": "survisland:logo_s21",
-		"item_name": {"text": "Logo S21","italic": false,"color": "white"},
+		"item_name": {"text": "Logo S21"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s21": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -758,7 +758,7 @@
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"category": "logo",
 		"item_model": "survisland:logo_s22",
-		"item_name": {"text": "Logo S22","italic": false,"color": "white"},
+		"item_name": {"text": "Logo S22"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s22": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -768,7 +768,7 @@
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"category": "logo",
 		"item_model": "survisland:logo_s23",
-		"item_name": {"text": "Logo S23","italic": false,"color": "white"},
+		"item_name": {"text": "Logo S23"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s23": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -778,7 +778,7 @@
 		"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
 		"category": "logo",
 		"item_model": "survisland:logo_s24",
-		"item_name": {"text": "Logo S24","italic": false,"color": "white"},
+		"item_name": {"text": "Logo S24"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"logo_s24": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -787,7 +787,7 @@
 		"max_stack_size": 1,
 		"equippable": {"slot": "chest","asset_id": "survisland:necklace","damage_on_hurt": false},
 		"item_model": "survisland:necklace",
-		"item_name": {"text": "Necklace","italic": false,"color": "white"},
+		"item_name": {"text": "Necklace"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"necklace": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -796,7 +796,7 @@
 		"max_stack_size": 1,
 		"equippable": {"slot": "chest","asset_id": "survisland:cursed_necklace","damage_on_hurt": false},
 		"item_model": "survisland:cursed_necklace",
-		"item_name": {"text": "Cursed Necklace","italic": false,"color": "white"},
+		"item_name": {"text": "Cursed Necklace"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"cursed_necklace": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -805,119 +805,119 @@
 		"max_stack_size": 1,
 		"equippable": {"slot": "chest","asset_id": "survisland:dinosaur_necklace","damage_on_hurt": false},
 		"item_model": "survisland:dinosaur_necklace",
-		"item_name": {"text": "Dinosaur Necklace","italic": false,"color": "white"},
+		"item_name": {"text": "Dinosaur Necklace"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"dinosaur_necklace": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"astral_powder": {
 		"id": "minecraft:command_block",
 		"item_model": "survisland:astral_powder",
-		"item_name": {"text": "Astral Powder","italic": false,"color": "white"},
+		"item_name": {"text": "Astral Powder"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"astral_powder": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"blood": {
 		"id": "minecraft:command_block",
 		"item_model": "survisland:blood",
-		"item_name": {"text": "Blood","italic": false,"color": "white"},
+		"item_name": {"text": "Blood"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"blood": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"blue_star": {
 		"id": "minecraft:command_block",
 		"item_model": "survisland:blue_star",
-		"item_name": {"text": "Blue Star","italic": false,"color": "white"},
+		"item_name": {"text": "Blue Star"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"blue_star": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"cyan_crystal": {
 		"id": "minecraft:command_block",
 		"item_model": "survisland:cyan_crystal",
-		"item_name": {"text": "Cyan Crystal","italic": false,"color": "white"},
+		"item_name": {"text": "Cyan Crystal"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"cyan_crystal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"diamond_meteorite": {
 		"id": "minecraft:command_block",
 		"item_model": "survisland:diamond_meteorite",
-		"item_name": {"text": "Diamond Meteorite","italic": false,"color": "white"},
+		"item_name": {"text": "Diamond Meteorite"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"diamond_meteorite": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"emerald_meteorite": {
 		"id": "minecraft:command_block",
 		"item_model": "survisland:emerald_meteorite",
-		"item_name": {"text": "Emerald Meteorite","italic": false,"color": "white"},
+		"item_name": {"text": "Emerald Meteorite"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"emerald_meteorite": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"green_crystal": {
 		"id": "minecraft:command_block",
 		"item_model": "survisland:green_crystal",
-		"item_name": {"text": "Green Crystal","italic": false,"color": "white"},
+		"item_name": {"text": "Green Crystal"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"green_crystal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"iron_meteorite": {
 		"id": "minecraft:command_block",
 		"item_model": "survisland:iron_meteorite",
-		"item_name": {"text": "Iron Meteorite","italic": false,"color": "white"},
+		"item_name": {"text": "Iron Meteorite"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"iron_meteorite": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"letter": {
 		"id": "minecraft:command_block",
 		"item_model": "survisland:letter",
-		"item_name": {"text": "Letter","italic": false,"color": "white"},
+		"item_name": {"text": "Letter"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"letter": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"life_crystal": {
 		"id": "minecraft:command_block",
 		"item_model": "survisland:life_crystal",
-		"item_name": {"text": "Life Crystal","italic": false,"color": "white"},
+		"item_name": {"text": "Life Crystal"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"life_crystal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"lunar_compass": {
 		"id": "minecraft:command_block",
 		"item_model": "survisland:lunar_compass",
-		"item_name": {"text": "Lunar Compass","italic": false,"color": "white"},
+		"item_name": {"text": "Lunar Compass"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"lunar_compass": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"purple_crystal": {
 		"id": "minecraft:command_block",
 		"item_model": "survisland:purple_crystal",
-		"item_name": {"text": "Purple Crystal","italic": false,"color": "white"},
+		"item_name": {"text": "Purple Crystal"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"purple_crystal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"sandwich": {
 		"id": "minecraft:command_block",
 		"item_model": "survisland:sandwich",
-		"item_name": {"text": "Sandwich","italic": false,"color": "white"},
+		"item_name": {"text": "Sandwich"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"sandwich": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"yellow_crystal": {
 		"id": "minecraft:command_block",
 		"item_model": "survisland:yellow_crystal",
-		"item_name": {"text": "Yellow Crystal","italic": false,"color": "white"},
+		"item_name": {"text": "Yellow Crystal"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"yellow_crystal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"zinc_meteorite": {
 		"id": "minecraft:command_block",
 		"item_model": "survisland:zinc_meteorite",
-		"item_name": {"text": "Zinc Meteorite","italic": false,"color": "white"},
+		"item_name": {"text": "Zinc Meteorite"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"zinc_meteorite": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"gold_fish": {
 		"id": "minecraft:golden_apple",
 		"item_model": "survisland:gold_fish",
-		"item_name": {"text": "Gold Fish","italic": false,"color": "white"},
+		"item_name": {"text": "Gold Fish"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"gold_fish": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -926,7 +926,7 @@
 		"max_stack_size": 1,
 		"equippable": {"slot": "head"},
 		"item_model": "survisland:horns",
-		"item_name": {"text": "Horns","italic": false,"color": "white"},
+		"item_name": {"text": "Horns"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"horns": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -935,7 +935,7 @@
 		"max_stack_size": 1,
 		"equippable": {"slot": "head"},
 		"item_model": "survisland:small_horns",
-		"item_name": {"text": "Small Horns","italic": false,"color": "white"},
+		"item_name": {"text": "Small Horns"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"small_horns": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
