@@ -20,7 +20,7 @@ def main() -> None:
 		},
 		"parchemin": {
 			"id": "minecraft:warped_fungus_on_a_stick",
-			"item_name": {"text":"Default vote","italic":False,"color":"red"},
+			"custom_name": {"text":"Default vote","italic":False,"color":"red"},
 			"lore":[{"text":"Auteur : ","italic":False,"color":"gold"},{"text":"Stoupypy","color":"yellow"}],
 			OVERRIDE_MODEL: {
 				"parent": "item/handheld",
@@ -46,36 +46,36 @@ def main() -> None:
 						"from": [1, 2, 7],
 						"to": [3, 14, 9],
 						"faces": {
-							"north": {"uv": [9.96875, 1.3125, 11.96875, 14.65625], "texture": "#layer0"},
-							"east": {"uv": [9.96875, 1.3125, 11.96875, 14.65625], "texture": "#layer0"},
-							"south": {"uv": [9.96875, 1.3125, 11.96875, 14.65625], "texture": "#layer0"},
-							"west": {"uv": [9.96875, 1.3125, 11.96875, 14.65625], "texture": "#layer0"},
-							"up": {"uv": [8.875, 1.25, 9.375, 1.375], "texture": "#layer0"},
-							"down": {"uv": [8.875, 1.25, 9.375, 1.375], "texture": "#layer0"}
+							"north": {"uv": [9.96875, 1.3125, 11.96875, 14.65625], "texture": "#layer0", "tintindex": 0},
+							"east": {"uv": [9.96875, 1.3125, 11.96875, 14.65625], "texture": "#layer0", "tintindex": 0},
+							"south": {"uv": [9.96875, 1.3125, 11.96875, 14.65625], "texture": "#layer0", "tintindex": 0},
+							"west": {"uv": [9.96875, 1.3125, 11.96875, 14.65625], "texture": "#layer0", "tintindex": 0},
+							"up": {"uv": [8.875, 1.25, 9.375, 1.375], "texture": "#layer0", "tintindex": 0},
+							"down": {"uv": [8.875, 1.25, 9.375, 1.375], "texture": "#layer0", "tintindex": 0}
 						}
 					},
 					{
 						"from": [13, 2, 7],
 						"to": [15, 14, 9],
 						"faces": {
-							"north": {"uv": [9.96875, 1.3125, 11.96875, 14.65625], "texture": "#layer0"},
-							"east": {"uv": [9.96875, 1.3125, 11.96875, 14.65625], "texture": "#layer0"},
-							"south": {"uv": [9.96875, 1.3125, 11.96875, 14.65625], "texture": "#layer0"},
-							"west": {"uv": [9.96875, 1.3125, 11.96875, 14.65625], "texture": "#layer0"},
-							"up": {"uv": [8.875, 1.25, 9.375, 1.375], "texture": "#layer0"},
-							"down": {"uv": [8.875, 1.25, 9.375, 1.375], "texture": "#layer0"}
+							"north": {"uv": [9.96875, 1.3125, 11.96875, 14.65625], "texture": "#layer0", "tintindex": 0},
+							"east": {"uv": [9.96875, 1.3125, 11.96875, 14.65625], "texture": "#layer0", "tintindex": 0},
+							"south": {"uv": [9.96875, 1.3125, 11.96875, 14.65625], "texture": "#layer0", "tintindex": 0},
+							"west": {"uv": [9.96875, 1.3125, 11.96875, 14.65625], "texture": "#layer0", "tintindex": 0},
+							"up": {"uv": [8.875, 1.25, 9.375, 1.375], "texture": "#layer0", "tintindex": 0},
+							"down": {"uv": [8.875, 1.25, 9.375, 1.375], "texture": "#layer0", "tintindex": 0}
 						}
 					},
 					{
 						"from": [0, 2, 8],
 						"to": [16, 14, 8],
 						"faces": {
-							"north": {"uv": [0, 0, 16, 16], "texture": "#layer0"},
-							"east": {"uv": [16, 16, 16, 16], "texture": "#layer0"},
-							"south": {"uv": [0, 0, 16, 16], "texture": "#layer0"},
-							"west": {"uv": [16, 16, 16, 16], "texture": "#layer0"},
-							"up": {"uv": [16, 16, 16, 16], "texture": "#layer0"},
-							"down": {"uv": [16, 16, 16, 16], "texture": "#layer0"}
+							"north": {"uv": [0, 0, 16, 16], "texture": "#layer0", "tintindex": 0},
+							"east": {"uv": [16, 16, 16, 16], "texture": "#layer0", "tintindex": 0},
+							"south": {"uv": [0, 0, 16, 16], "texture": "#layer0", "tintindex": 0},
+							"west": {"uv": [16, 16, 16, 16], "texture": "#layer0", "tintindex": 0},
+							"up": {"uv": [16, 16, 16, 16], "texture": "#layer0", "tintindex": 0},
+							"down": {"uv": [16, 16, 16, 16], "texture": "#layer0", "tintindex": 0}
 						}
 					}
 				],

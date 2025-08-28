@@ -10,6 +10,9 @@
 # Copy rotation
 data modify entity @s Rotation[0] set from storage survisland:main Rotation[0]
 
+# Get item components
+execute if entity @s[type=item_display] run data modify entity @s item set from storage survisland:main Item
+
 # Add animation tag, add deployed_scroll tag, and remove tag 'new'
 scoreboard players set @s survisland.cooldown 0
 tag @s add survisland.scroll_animation
