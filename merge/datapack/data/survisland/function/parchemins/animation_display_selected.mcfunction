@@ -9,7 +9,6 @@
 #
 
 # Item display : Setup texture and scale
-loot replace entity @s[type=item_display] contents loot survisland:i/deployed_parchemin
 data modify entity @s[type=item_display] transformation.scale[0] set value 1.25f
 
 # Text display : Setup text and scale

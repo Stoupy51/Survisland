@@ -10,7 +10,7 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
-								"minecraft:item_name": {
+								"minecraft:custom_name": {
 									"text": "Default vote",
 									"italic": false,
 									"color": "red"
@@ -32,6 +32,9 @@
 									]
 								],
 								"minecraft:item_model": "survisland:parchemin",
+								"minecraft:item_name": {
+									"text": "Parchemin"
+								},
 								"minecraft:custom_data": {
 									"survisland": {
 										"parchemin": true

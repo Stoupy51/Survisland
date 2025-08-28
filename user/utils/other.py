@@ -1,7 +1,8 @@
 
 # ruff: noqa: E501
 # Imports
-from stewbeet import Advancement, Mem, set_json_encoder, write_function, write_load_file, write_tick_file, write_versioned_function
+from beet import ItemTag
+from stewbeet import Advancement, ItemModel, Mem, set_json_encoder, write_function, write_load_file, write_tick_file, write_versioned_function
 
 
 # Generates trivial things in the datapack
@@ -98,10 +99,15 @@ scoreboard players reset @s {ns}.right_click
 tag @s remove {ns}.temp
 """)
 
+	# Make parchemins tintables
+	Mem.ctx.data["minecraft"].item_tags["dyeable"] = set_json_encoder(ItemTag({"values":["minecraft:warped_fungus_on_a_stick"]}))
+	Mem.ctx.assets[ns].item_models["parchemin"] = set_json_encoder(ItemModel({"model":{"type":"minecraft:model","model":f"{ns}:item/parchemin","tints":[{"type":"minecraft:dye","default":[0.780,0.737,0.647]}]}}), max_level=3)
+	Mem.ctx.assets[ns].item_models["deployed_parchemin"] = set_json_encoder(ItemModel({"model":{"type":"minecraft:model","model":f"{ns}:item/deployed_parchemin","tints":[{"type":"minecraft:dye","default":[0.780,0.737,0.647]}]}}), max_level=3)
+
 	# parchemins/_convert_to_scroll
-	parchemin: dict = Mem.definitions['parchemin']
-	p_id: str = parchemin['id']
-	p_model: str = parchemin['item_model']
+	parchemin: dict = Mem.definitions["parchemin"]
+	p_id: str = parchemin["id"]
+	p_model: str = parchemin["item_model"]
 	write_function(f"{ns}:parchemins/_convert_to_scroll", f"""
 # Replace the book by a scroll
 data modify storage {ns}:main Item.id set value "{p_id}"
