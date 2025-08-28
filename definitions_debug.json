@@ -16,9 +16,10 @@
 	},
 	"parchemin": {
 		"id": "minecraft:warped_fungus_on_a_stick",
-		"item_name": {"text": "Default vote","italic": false,"color": "red"},
+		"custom_name": {"text": "Default vote","italic": false,"color": "red"},
 		"lore": [{"text": "Auteur : ","italic": false,"color": "gold"},{"text": "Stoupypy","color": "yellow"},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"item_model": "survisland:parchemin",
+		"item_name": {"text": "Parchemin"},
 		"custom_data": {"survisland": {"parchemin": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"deployed_parchemin": {
