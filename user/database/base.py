@@ -37,7 +37,6 @@ def main() -> None:
 		"deployed_parchemin": {
 			"id": "minecraft:warped_fungus_on_a_stick",
 			OVERRIDE_MODEL: {
-				"parent": "none",
 				"textures": {
 					"layer0": "survisland:item/parchemin"
 				},
@@ -108,7 +107,6 @@ def main() -> None:
 				{"text":"du joueur le plus proche","italic":False,"color":"gray"}
 			],
 			OVERRIDE_MODEL: {
-				"parent": "none",
 				"elements": [
 					{
 						"from":[7,0,7],
@@ -232,7 +230,6 @@ def main() -> None:
 			"lore": [{"text":"Gardez cette torche précieusement","italic":False,"color":"gray"}],
 			"max_stack_size": 64,
 			OVERRIDE_MODEL: {
-				"parent": "none",
 				"elements": [
 					{
 						"from": [7, 0, 7],
