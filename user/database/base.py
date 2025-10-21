@@ -641,6 +641,10 @@ def main() -> None:
 		"super_star": {
 			"id": CUSTOM_ITEM_VANILLA,
 			"category": "misc",
+		},
+		"red_coin": {
+			"id": CUSTOM_ITEM_VANILLA,
+			"category": "misc",
 		}
 	}
 
