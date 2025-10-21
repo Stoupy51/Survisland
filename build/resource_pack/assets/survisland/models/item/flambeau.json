@@ -1,5 +1,5 @@
 {
-	"parent": "none",
+	"parent": "item/generated",
 	"textures": {
 		"layer0": "survisland:item/flambeau"
 	},
