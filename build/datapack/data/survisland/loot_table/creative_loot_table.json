@@ -93,6 +93,8 @@
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/logo_s22"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/logo_s23"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/logo_s24"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/logo_s25"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/logo_s26"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/necklace"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/cursed_necklace"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/dinosaur_necklace"}]},
@@ -149,6 +151,7 @@
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/33_path_to_glory"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/34_perfect_chaos"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/35_we_are_vanguards"}]},
-		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/rat_dance"}]}
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/rat_dance"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/manual"}]}
 	]
 }

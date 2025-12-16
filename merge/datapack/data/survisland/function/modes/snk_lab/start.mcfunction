@@ -2,7 +2,7 @@
 ##Fonction executée lors du lancement de la partie
 
 gamemode adventure @a[gamemode=survival]
-gamerule fallDamage false
+gamerule fall_damage false
 
 tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Lancement de l'épreuve de SNK Lab, bonne chance !"}]
 

@@ -3,28 +3,30 @@
 	"title": [
 		"",
 		{
-			"sprite": "survisland:item/dialog_sprite/logo_s20",
+			"sprite": "survisland:item/dialog_sprite/logo_s19",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			]
+			],
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
-			"text": "Logo S20",
+			"text": "Logo S19",
 			"underlined": true
 		},
 		" ",
 		{
-			"sprite": "survisland:item/dialog_sprite/logo_s20",
+			"sprite": "survisland:item/dialog_sprite/logo_s19",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			]
+			],
+			"atlas": "minecraft:items"
 		}
 	],
 	"body": [
@@ -46,7 +48,7 @@
 			"contents": [
 				{"text": "","font": "survisland:manual","color": "white","shadow_color": [0,0,0,0]},
 				"ၰ\n",
-				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "apple","components": {"consumable": {},"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},"item_model": "survisland:logo_s20","item_name": {"text": "Logo S20"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"custom_data": {"survisland": {"logo_s20": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "survisland:manual/page_81"}},
+				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "apple","components": {"consumable": {},"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},"item_model": "survisland:logo_s19","item_name": {"text": "Logo S19"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"custom_data": {"survisland": {"logo_s19": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "survisland:manual/page_81"}},
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140

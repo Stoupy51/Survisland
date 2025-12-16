@@ -3,7 +3,7 @@
 #
 # @executed	as @a
 #
-# @within	survisland:v2.1.6/second [ as @a ]
+# @within	survisland:v2.2.0/second [ as @a ]
 #
 
 # If ID not >= 1, launch first join

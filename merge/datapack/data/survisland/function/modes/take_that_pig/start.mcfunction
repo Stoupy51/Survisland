@@ -4,7 +4,7 @@
 tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Zééééééé parti !!!! Ramenez-moi un maximum d'animaux !"}]
 
 gamemode adventure @a[gamemode=survival]
-gamerule doImmediateRespawn true
+gamerule immediate_respawn true
 time set 6000
 
 scoreboard objectives add survisland.temp.color dummy

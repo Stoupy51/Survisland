@@ -1,0 +1,57 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "survisland:item/dialog_sprite/logo_s24",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"text": "Logo S24",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "survisland:item/dialog_sprite/logo_s24",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "survisland:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "survisland:manual/page_85"},"hover_event": {"action": "show_text","value": [{"text": "Go to previous page"}," (85)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "survisland:manual/page_87"},"hover_event": {"action": "show_text","value": [{"text": "Go to next page"}," (87)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "survisland:manual/page_85"},"hover_event": {"action": "show_text","value": [{"text": "Go to previous page"}," (85)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "survisland:manual/page_87"},"hover_event": {"action": "show_text","value": [{"text": "Go to next page"}," (87)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "survisland:manual","color": "white","shadow_color": [0,0,0,0]},
+				"ၵ\n",
+				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "apple","components": {"consumable": {},"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},"item_model": "survisland:logo_s24","item_name": {"text": "Logo S24"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"custom_data": {"survisland": {"logo_s24": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "survisland:manual/page_86"}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

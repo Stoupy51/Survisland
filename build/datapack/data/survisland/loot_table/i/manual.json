@@ -1,0 +1,41 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:written_book",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_model": "survisland:manual",
+								"minecraft:item_name": "Survisland Manual",
+								"minecraft:enchantment_glint_override": false,
+								"minecraft:max_stack_size": 16,
+								"minecraft:lore": [
+									{
+										"text": "by Stoupy51",
+										"color": "gray",
+										"italic": false
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
+										{"text": " Survisland","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:custom_data": {
+									"survisland": {
+										"manual": true
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -3,28 +3,30 @@
 	"title": [
 		"",
 		{
-			"sprite": "survisland:item/dialog_sprite/book_turquoise",
+			"sprite": "survisland:item/dialog_sprite/book_red",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			]
+			],
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
-			"text": "Book Turquoise",
+			"text": "Book Red",
 			"underlined": true
 		},
 		" ",
 		{
-			"sprite": "survisland:item/dialog_sprite/book_turquoise",
+			"sprite": "survisland:item/dialog_sprite/book_red",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			]
+			],
+			"atlas": "minecraft:items"
 		}
 	],
 	"body": [
@@ -46,7 +48,7 @@
 			"contents": [
 				{"text": "","font": "survisland:manual","color": "white","shadow_color": [0,0,0,0]},
 				"၅\n",
-				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "written_book","components": {"item_model": "survisland:book_turquoise","item_name": {"text": "Book Turquoise"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"custom_data": {"survisland": {"book_turquoise": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "survisland:manual/page_38"}},
+				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "written_book","components": {"item_model": "survisland:book_red","item_name": {"text": "Book Red"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"custom_data": {"survisland": {"book_red": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "survisland:manual/page_38"}},
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140

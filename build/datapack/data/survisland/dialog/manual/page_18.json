@@ -3,28 +3,30 @@
 	"title": [
 		"",
 		{
-			"sprite": "survisland:item/dialog_sprite/monocoin",
+			"sprite": "survisland:item/dialog_sprite/scalbar",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			]
+			],
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
-			"text": "Monocoin",
+			"text": "Scalbar",
 			"underlined": true
 		},
 		" ",
 		{
-			"sprite": "survisland:item/dialog_sprite/monocoin",
+			"sprite": "survisland:item/dialog_sprite/scalbar",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			]
+			],
+			"atlas": "minecraft:items"
 		}
 	],
 	"body": [
@@ -46,7 +48,7 @@
 			"contents": [
 				{"text": "","font": "survisland:manual","color": "white","shadow_color": [0,0,0,0]},
 				"ေ\n",
-				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "survisland:monocoin","item_name": {"text": "Monocoin"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"custom_data": {"survisland": {"monocoin": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "survisland:manual/page_18"}},
+				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "command_block","components": {"lore": [{"text": "Made by EvoRay","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"consumable": {},"item_model": "survisland:scalbar","item_name": {"text": "Scalbar"},"custom_data": {"survisland": {"scalbar": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "survisland:manual/page_18"}},
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140

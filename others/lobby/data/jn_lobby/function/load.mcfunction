@@ -21,16 +21,16 @@ data modify storage jn_lobby:main JustNoob set value '[{"text":"[","color":"blac
 
 
 # Gamerules
-gamerule doImmediateRespawn true
-gamerule doTraderSpawning false
-gamerule doDaylightCycle true
-gamerule doWeatherCycle false
-gamerule keepInventory true
-gamerule doMobSpawning false
-gamerule mobGriefing false
-gamerule fallDamage false
-gamerule doInsomnia false
-gamerule spawnRadius 0
+gamerule immediate_respawn true
+gamerule spawn_wandering_traders false
+gamerule advance_time true
+gamerule advance_weather false
+gamerule keep_inventory true
+gamerule spawn_mobs false
+gamerule mob_griefing false
+gamerule fall_damage false
+gamerule spawn_phantoms false
+gamerule respawn_radius 0
 
 
 # Constants

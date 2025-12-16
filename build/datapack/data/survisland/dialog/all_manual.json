@@ -2,11 +2,11 @@
 	"type": "minecraft:dialog_list",
 	"title": [
 		"",
-		{"sprite": "survisland:item/dialog_sprite/pack_icon","shadow_color": [0,0,0,0]},
+		{"sprite": "survisland:item/dialog_sprite/pack_icon","shadow_color": [0,0,0,0],"atlas": "minecraft:items"},
 		" ",
 		{"text": "Survisland Manual","underlined": true},
 		" ",
-		{"sprite": "survisland:item/dialog_sprite/pack_icon","shadow_color": [0,0,0,0]}
+		{"sprite": "survisland:item/dialog_sprite/pack_icon","shadow_color": [0,0,0,0],"atlas": "minecraft:items"}
 	],
 	"dialogs": [
 		"survisland:manual/page_1",
@@ -93,7 +93,10 @@
 		"survisland:manual/page_82",
 		"survisland:manual/page_83",
 		"survisland:manual/page_84",
-		"survisland:manual/page_85"
+		"survisland:manual/page_85",
+		"survisland:manual/page_86",
+		"survisland:manual/page_87",
+		"survisland:manual/page_88"
 	],
 	"exit_action": {
 		"label": {"translate": "gui.back"},
