@@ -89,4 +89,6 @@ meta:
             cache_pages: false
             json_dump_path: "manual_cache/content.json"
             first_page_text: [{"text":"Ratio gold", "color":"#505050"}]
+            showcase_image: 3
+            use_dialog: 2 # 0 = no, 1 = yes, 2 = yes and no book
 
