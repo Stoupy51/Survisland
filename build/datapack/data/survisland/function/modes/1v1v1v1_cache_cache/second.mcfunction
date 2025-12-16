@@ -1,8 +1,8 @@
 
 #> survisland:modes/1v1v1v1_cache_cache/second
 #
-# @within	survisland:modes/1v1v1v1_cache_cache/macro_start 20t replace
-#			survisland:modes/1v1v1v1_cache_cache/second 20t replace
+# @within	survisland:modes/1v1v1v1_cache_cache/macro_start 20t replace [ scheduled ]
+#			survisland:modes/1v1v1v1_cache_cache/second 20t replace [ scheduled ]
 #
 
 ##Fonction executée toutes les secondes lorsque le mode de jeu est activé

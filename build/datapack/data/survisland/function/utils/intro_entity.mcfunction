@@ -1,7 +1,7 @@
 
 #> survisland:utils/intro_entity
 #
-# @within	survisland:utils/intro_entity 1t
+# @within	survisland:utils/intro_entity 1t [ scheduled ]
 #			survisland:utils/intro_start
 #
 

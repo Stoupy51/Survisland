@@ -15,7 +15,7 @@
 										"25_fireborn": true
 									},
 									"smithed": {
-										"dict": {"record": {"25_fireborn": true}},
+										"dict": {"record": {"25_fireborn": true,"item_name": "25 - Fireborn"},"jukebox_song": {"comparator_output": 0,"length_in_seconds": 225,"sound_event": {"sound_id": "survisland:25_fireborn"},"description": {"text": "25 - Fireborn"}}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

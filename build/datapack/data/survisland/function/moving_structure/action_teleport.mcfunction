@@ -5,6 +5,11 @@
 #
 # @within	survisland:moving_structure/action_movement with storage survisland:temp input
 #
+# @args		id (int)
+#			x (unknown)
+#			y (unknown)
+#			z (unknown)
+#
 
 # Move to the new position
 $tp @s ~$(x) ~$(y) ~$(z)

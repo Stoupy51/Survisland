@@ -15,7 +15,7 @@
 										"24_the_darkness_inside": true
 									},
 									"smithed": {
-										"dict": {"record": {"24_the_darkness_inside": true}},
+										"dict": {"record": {"24_the_darkness_inside": true,"item_name": "24 - The Darkness Inside"},"jukebox_song": {"comparator_output": 1,"length_in_seconds": 162,"sound_event": {"sound_id": "survisland:24_the_darkness_inside"},"description": {"text": "24 - The Darkness Inside"}}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

@@ -15,7 +15,7 @@
 										"18_ragesound_vortex": true
 									},
 									"smithed": {
-										"dict": {"record": {"18_ragesound_vortex": true}},
+										"dict": {"record": {"18_ragesound_vortex": true,"item_name": "18 - RageSound - Vortex"},"jukebox_song": {"comparator_output": 5,"length_in_seconds": 150,"sound_event": {"sound_id": "survisland:18_ragesound_vortex"},"description": {"text": "18 - RageSound - Vortex"}}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

@@ -15,7 +15,7 @@
 										"07_aliaksei_yukhnevich_deliverance": true
 									},
 									"smithed": {
-										"dict": {"record": {"07_aliaksei_yukhnevich_deliverance": true}},
+										"dict": {"record": {"07_aliaksei_yukhnevich_deliverance": true,"item_name": "07 - Aliaksei Yukhnevich - Deliverance"},"jukebox_song": {"comparator_output": 3,"length_in_seconds": 148,"sound_event": {"sound_id": "survisland:07_aliaksei_yukhnevich_deliverance"},"description": {"text": "07 - Aliaksei Yukhnevich - Deliverance"}}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

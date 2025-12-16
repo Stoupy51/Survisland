@@ -1,7 +1,15 @@
 {
 	"pack": {
 		"pack_format": 81,
-		"description": "Survisland [2.1.6] by Stoupy51"
+		"description": "Survisland [2.1.6] by Stoupy51",
+		"min_format": [
+			88,
+			0
+		],
+		"max_format": [
+			88,
+			0
+		]
 	},
 	"id": "survisland"
 }

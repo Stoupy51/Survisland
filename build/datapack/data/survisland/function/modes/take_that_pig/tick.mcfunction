@@ -1,8 +1,8 @@
 
 #> survisland:modes/take_that_pig/tick
 #
-# @within	survisland:modes/take_that_pig/start 1t replace
-#			survisland:modes/take_that_pig/tick 1t replace
+# @within	survisland:modes/take_that_pig/start 1t replace [ scheduled ]
+#			survisland:modes/take_that_pig/tick 1t replace [ scheduled ]
 #
 
 ##Fonction executée tous les ticks lorsque le mode de jeu est activé

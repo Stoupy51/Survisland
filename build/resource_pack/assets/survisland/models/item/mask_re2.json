@@ -1,5 +1,5 @@
 {
-	"parent": "MaskRE2",
+	"parent": "item/generated",
 	"textures": {
 		"2": "survisland:item/mask_re2",
 		"particle": "survisland:item/mask_re2"

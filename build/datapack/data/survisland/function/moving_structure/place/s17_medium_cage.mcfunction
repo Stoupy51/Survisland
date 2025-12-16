@@ -3,6 +3,12 @@
 #
 # @within	survisland:moving_structure/place/s17_medium_cage {x:-300,y:154,z:168,duration:80,is_auto:0}
 #
+# @args		x (int)
+#			y (int)
+#			z (int)
+#			duration (int)
+#			is_auto (int)
+#
 
 ## /execute positioned -299 146 133 run function survisland:moving_structure/place/s17_medium_cage {x:-300,y:154,z:168,duration:80,is_auto:0}
 scoreboard players add #next_id survisland.id 1

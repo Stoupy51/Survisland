@@ -28,6 +28,14 @@
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/monocoin"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/super_star"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/red_coin"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/card_1"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/card_2"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/card_3"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/card_4"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/card_5"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/card_6"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/card_7"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/card_8"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/book_advanced"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/book_brown"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/book_bubulle"}]},
@@ -141,7 +149,6 @@
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/33_path_to_glory"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/34_perfect_chaos"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/35_we_are_vanguards"}]},
-		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/rat_dance"}]},
-		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/manual"}]}
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/rat_dance"}]}
 	]
 }

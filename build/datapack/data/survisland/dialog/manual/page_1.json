@@ -1,0 +1,32 @@
+{
+	"type": "minecraft:notice",
+	"title": {
+		"text": "Survisland Manual",
+		"underlined": true
+	},
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "survisland:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "survisland:manual/page_1"},"hover_event": {"action": "show_text","value": [{"text": "Go to previous page"}," (1)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "survisland:manual/page_2"},"hover_event": {"action": "show_text","value": [{"text": "Go to next page"}," (2)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "survisland:manual/page_1"},"hover_event": {"action": "show_text","value": [{"text": "Go to previous page"}," (1)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "survisland:manual/page_2"},"hover_event": {"action": "show_text","value": [{"text": "Go to next page"}," (2)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "survisland:manual","color": "white","shadow_color": [0,0,0,0]},
+				{"text": "ဠ\n\n\n\n\n\n","font": "survisland:manual","color": "white"},
+				[{"text": "","font": "minecraft:default","color": "black"},{"text": "Ratio gold","color": "#505050"}],
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

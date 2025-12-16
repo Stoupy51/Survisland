@@ -15,7 +15,7 @@
 										"27_among_our_dreams": true
 									},
 									"smithed": {
-										"dict": {"record": {"27_among_our_dreams": true}},
+										"dict": {"record": {"27_among_our_dreams": true,"item_name": "27 - Among our Dreams"},"jukebox_song": {"comparator_output": 9,"length_in_seconds": 250,"sound_event": {"sound_id": "survisland:27_among_our_dreams"},"description": {"text": "27 - Among our Dreams"}}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

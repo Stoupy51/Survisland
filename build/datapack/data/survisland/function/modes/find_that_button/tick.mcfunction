@@ -1,8 +1,8 @@
 
 #> survisland:modes/find_that_button/tick
 #
-# @within	survisland:modes/find_that_button/start 1t replace
-#			survisland:modes/find_that_button/tick 1t replace
+# @within	survisland:modes/find_that_button/start 1t replace [ scheduled ]
+#			survisland:modes/find_that_button/tick 1t replace [ scheduled ]
 #
 
 ##Fonction executée tous les ticks lorsque le mode de jeu est activé

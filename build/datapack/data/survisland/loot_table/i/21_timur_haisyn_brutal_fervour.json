@@ -15,7 +15,7 @@
 										"21_timur_haisyn_brutal_fervour": true
 									},
 									"smithed": {
-										"dict": {"record": {"21_timur_haisyn_brutal_fervour": true}},
+										"dict": {"record": {"21_timur_haisyn_brutal_fervour": true,"item_name": "21 - Timur Haisyn - Brutal Fervour"},"jukebox_song": {"comparator_output": 0,"length_in_seconds": 161,"sound_event": {"sound_id": "survisland:21_timur_haisyn_brutal_fervour"},"description": {"text": "21 - Timur Haisyn - Brutal Fervour"}}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

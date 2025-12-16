@@ -15,7 +15,7 @@
 										"28_dynasty": true
 									},
 									"smithed": {
-										"dict": {"record": {"28_dynasty": true}},
+										"dict": {"record": {"28_dynasty": true,"item_name": "28 - Dynasty"},"jukebox_song": {"comparator_output": 10,"length_in_seconds": 171,"sound_event": {"sound_id": "survisland:28_dynasty"},"description": {"text": "28 - Dynasty"}}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

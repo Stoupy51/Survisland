@@ -4,6 +4,9 @@
 # @within	survisland:parchemins/_convert_votes
 #			survisland:parchemins/macro_convert_votes {text_color:"$(text_color)", dyed_color:$(dyed_color)}
 #
+# @args		text_color (string)
+#			dyed_color (list)
+#
 # @executed			default context
 # 
 # @input			storage survisland:main Item

@@ -3,6 +3,12 @@
 #
 # @within	survisland:moving_structure/place/s17_small_cage {x:-280,y:134,z:104,duration:80,is_auto:1}
 #
+# @args		x (int)
+#			y (int)
+#			z (int)
+#			duration (int)
+#			is_auto (int)
+#
 
 ## /function survisland:moving_structure/place/s17_small_cage {x:-280,y:134,z:104,duration:80,is_auto:1}
 scoreboard players add #next_id survisland.id 1

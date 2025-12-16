@@ -15,7 +15,7 @@
 										"06_colin_root_blackout": true
 									},
 									"smithed": {
-										"dict": {"record": {"06_colin_root_blackout": true}},
+										"dict": {"record": {"06_colin_root_blackout": true,"item_name": "06 - Colin Root - Blackout"},"jukebox_song": {"comparator_output": 10,"length_in_seconds": 91,"sound_event": {"sound_id": "survisland:06_colin_root_blackout"},"description": {"text": "06 - Colin Root - Blackout"}}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

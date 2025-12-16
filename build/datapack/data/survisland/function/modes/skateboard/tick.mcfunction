@@ -1,8 +1,8 @@
 
 #> survisland:modes/skateboard/tick
 #
-# @within	survisland:modes/shiren_trials/start 1t replace
-#			survisland:modes/skateboard/tick 1t replace
+# @within	survisland:modes/shiren_trials/start 1t replace [ scheduled ]
+#			survisland:modes/skateboard/tick 1t replace [ scheduled ]
 #
 
 schedule function survisland:modes/skateboard/tick 1t replace

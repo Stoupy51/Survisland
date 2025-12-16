@@ -1,8 +1,8 @@
 
 #> survisland:modes/cache_s12/second
 #
-# @within	survisland:modes/cache_s12/second 20t replace
-#			survisland:modes/cache_s12/start 20t replace
+# @within	survisland:modes/cache_s12/second 20t replace [ scheduled ]
+#			survisland:modes/cache_s12/start 20t replace [ scheduled ]
 #
 
 ##Fonction executée toutes les secondes lorsque le mode de jeu est activé

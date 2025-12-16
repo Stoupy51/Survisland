@@ -1,8 +1,8 @@
 
 #> survisland:modes/scartshit/tick
 #
-# @within	survisland:modes/scartshit/start 1t replace
-#			survisland:modes/scartshit/tick 1t replace
+# @within	survisland:modes/scartshit/start 1t replace [ scheduled ]
+#			survisland:modes/scartshit/tick 1t replace [ scheduled ]
 #
 
 ##Fonction executée tous les ticks lorsque le mode de jeu est activé

@@ -1,8 +1,8 @@
 
 #> survisland:modes/laser_game/second
 #
-# @within	survisland:modes/laser_game/second 1s
-#			survisland:modes/laser_game/start 1s
+# @within	survisland:modes/laser_game/second 1s [ scheduled ]
+#			survisland:modes/laser_game/start 1s [ scheduled ]
 #
 
 ## Fonction executée toutes les secondes lorsque le mode de jeu est activé

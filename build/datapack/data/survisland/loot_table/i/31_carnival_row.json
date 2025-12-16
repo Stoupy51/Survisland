@@ -15,7 +15,7 @@
 										"31_carnival_row": true
 									},
 									"smithed": {
-										"dict": {"record": {"31_carnival_row": true}},
+										"dict": {"record": {"31_carnival_row": true,"item_name": "31 - Carnival Row"},"jukebox_song": {"comparator_output": 15,"length_in_seconds": 112,"sound_event": {"sound_id": "survisland:31_carnival_row"},"description": {"text": "31 - Carnival Row"}}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

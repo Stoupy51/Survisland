@@ -241,6 +241,70 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"custom_data": {"survisland": {"red_coin": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
+	"card_1": {
+		"id": "minecraft:command_block",
+		"category": "misc",
+		"lore": [{"text": "Made by Canfav","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"item_model": "survisland:card_1",
+		"item_name": {"text": "Card 1"},
+		"custom_data": {"survisland": {"card_1": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"card_2": {
+		"id": "minecraft:command_block",
+		"category": "misc",
+		"lore": [{"text": "Made by Canfav","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"item_model": "survisland:card_2",
+		"item_name": {"text": "Card 2"},
+		"custom_data": {"survisland": {"card_2": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"card_3": {
+		"id": "minecraft:command_block",
+		"category": "misc",
+		"lore": [{"text": "Made by Canfav","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"item_model": "survisland:card_3",
+		"item_name": {"text": "Card 3"},
+		"custom_data": {"survisland": {"card_3": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"card_4": {
+		"id": "minecraft:command_block",
+		"category": "misc",
+		"lore": [{"text": "Made by Canfav","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"item_model": "survisland:card_4",
+		"item_name": {"text": "Card 4"},
+		"custom_data": {"survisland": {"card_4": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"card_5": {
+		"id": "minecraft:command_block",
+		"category": "misc",
+		"lore": [{"text": "Made by Canfav","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"item_model": "survisland:card_5",
+		"item_name": {"text": "Card 5"},
+		"custom_data": {"survisland": {"card_5": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"card_6": {
+		"id": "minecraft:command_block",
+		"category": "misc",
+		"lore": [{"text": "Made by Canfav","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"item_model": "survisland:card_6",
+		"item_name": {"text": "Card 6"},
+		"custom_data": {"survisland": {"card_6": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"card_7": {
+		"id": "minecraft:command_block",
+		"category": "misc",
+		"lore": [{"text": "Made by Canfav","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"item_model": "survisland:card_7",
+		"item_name": {"text": "Card 7"},
+		"custom_data": {"survisland": {"card_7": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"card_8": {
+		"id": "minecraft:command_block",
+		"category": "misc",
+		"lore": [{"text": "Made by Canfav","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"item_model": "survisland:card_8",
+		"item_name": {"text": "Card 8"},
+		"custom_data": {"survisland": {"card_8": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"book_advanced": {
 		"id": "minecraft:written_book",
 		"category": "book",
@@ -958,7 +1022,7 @@
 	},
 	"01_charges_from_the_sky": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"01_charges_from_the_sky": true},"smithed": {"dict": {"record": {"01_charges_from_the_sky": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"01_charges_from_the_sky": true},"smithed": {"dict": {"record": {"01_charges_from_the_sky": true,"item_name": "01 - Charges From The Sky"},"jukebox_song": {"comparator_output": 8,"length_in_seconds": 137,"sound_event": {"sound_id": "survisland:01_charges_from_the_sky"},"description": {"text": "01 - Charges From The Sky"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:01_charges_from_the_sky",
 		"max_stack_size": 1,
@@ -968,7 +1032,7 @@
 	},
 	"02_es_clash_bonnie_grace": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"02_es_clash_bonnie_grace": true},"smithed": {"dict": {"record": {"02_es_clash_bonnie_grace": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"02_es_clash_bonnie_grace": true},"smithed": {"dict": {"record": {"02_es_clash_bonnie_grace": true,"item_name": "02 - ES - Clash - Bonnie Grace"},"jukebox_song": {"comparator_output": 10,"length_in_seconds": 123,"sound_event": {"sound_id": "survisland:02_es_clash_bonnie_grace"},"description": {"text": "02 - ES - Clash - Bonnie Grace"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:02_es_clash_bonnie_grace",
 		"max_stack_size": 1,
@@ -978,7 +1042,7 @@
 	},
 	"03_crescent_battle": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"03_crescent_battle": true},"smithed": {"dict": {"record": {"03_crescent_battle": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"03_crescent_battle": true},"smithed": {"dict": {"record": {"03_crescent_battle": true,"item_name": "03 - Crescent battle"},"jukebox_song": {"comparator_output": 0,"length_in_seconds": 145,"sound_event": {"sound_id": "survisland:03_crescent_battle"},"description": {"text": "03 - Crescent battle"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:03_crescent_battle",
 		"max_stack_size": 1,
@@ -988,7 +1052,7 @@
 	},
 	"04_fade_into_darkness": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"04_fade_into_darkness": true},"smithed": {"dict": {"record": {"04_fade_into_darkness": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"04_fade_into_darkness": true},"smithed": {"dict": {"record": {"04_fade_into_darkness": true,"item_name": "04 - Fade into Darkness"},"jukebox_song": {"comparator_output": 2,"length_in_seconds": 147,"sound_event": {"sound_id": "survisland:04_fade_into_darkness"},"description": {"text": "04 - Fade into Darkness"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:04_fade_into_darkness",
 		"max_stack_size": 1,
@@ -998,7 +1062,7 @@
 	},
 	"05_extinction_report": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"05_extinction_report": true},"smithed": {"dict": {"record": {"05_extinction_report": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"05_extinction_report": true},"smithed": {"dict": {"record": {"05_extinction_report": true,"item_name": "05 - Extinction report"},"jukebox_song": {"comparator_output": 13,"length_in_seconds": 126,"sound_event": {"sound_id": "survisland:05_extinction_report"},"description": {"text": "05 - Extinction report"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:05_extinction_report",
 		"max_stack_size": 1,
@@ -1008,7 +1072,7 @@
 	},
 	"06_colin_root_blackout": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"06_colin_root_blackout": true},"smithed": {"dict": {"record": {"06_colin_root_blackout": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"06_colin_root_blackout": true},"smithed": {"dict": {"record": {"06_colin_root_blackout": true,"item_name": "06 - Colin Root - Blackout"},"jukebox_song": {"comparator_output": 10,"length_in_seconds": 91,"sound_event": {"sound_id": "survisland:06_colin_root_blackout"},"description": {"text": "06 - Colin Root - Blackout"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:06_colin_root_blackout",
 		"max_stack_size": 1,
@@ -1018,7 +1082,7 @@
 	},
 	"07_aliaksei_yukhnevich_deliverance": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"07_aliaksei_yukhnevich_deliverance": true},"smithed": {"dict": {"record": {"07_aliaksei_yukhnevich_deliverance": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"07_aliaksei_yukhnevich_deliverance": true},"smithed": {"dict": {"record": {"07_aliaksei_yukhnevich_deliverance": true,"item_name": "07 - Aliaksei Yukhnevich - Deliverance"},"jukebox_song": {"comparator_output": 3,"length_in_seconds": 148,"sound_event": {"sound_id": "survisland:07_aliaksei_yukhnevich_deliverance"},"description": {"text": "07 - Aliaksei Yukhnevich - Deliverance"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:07_aliaksei_yukhnevich_deliverance",
 		"max_stack_size": 1,
@@ -1028,7 +1092,7 @@
 	},
 	"08_battle_of_the_ocean": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"08_battle_of_the_ocean": true},"smithed": {"dict": {"record": {"08_battle_of_the_ocean": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"08_battle_of_the_ocean": true},"smithed": {"dict": {"record": {"08_battle_of_the_ocean": true,"item_name": "08 - Battle of the Ocean"},"jukebox_song": {"comparator_output": 15,"length_in_seconds": 176,"sound_event": {"sound_id": "survisland:08_battle_of_the_ocean"},"description": {"text": "08 - Battle of the Ocean"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:08_battle_of_the_ocean",
 		"max_stack_size": 1,
@@ -1038,7 +1102,7 @@
 	},
 	"09_challenger": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"09_challenger": true},"smithed": {"dict": {"record": {"09_challenger": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"09_challenger": true},"smithed": {"dict": {"record": {"09_challenger": true,"item_name": "09 - Challenger"},"jukebox_song": {"comparator_output": 15,"length_in_seconds": 224,"sound_event": {"sound_id": "survisland:09_challenger"},"description": {"text": "09 - Challenger"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:09_challenger",
 		"max_stack_size": 1,
@@ -1048,7 +1112,7 @@
 	},
 	"10_elite_voids": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"10_elite_voids": true},"smithed": {"dict": {"record": {"10_elite_voids": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"10_elite_voids": true},"smithed": {"dict": {"record": {"10_elite_voids": true,"item_name": "10 - Elite Voids"},"jukebox_song": {"comparator_output": 7,"length_in_seconds": 168,"sound_event": {"sound_id": "survisland:10_elite_voids"},"description": {"text": "10 - Elite Voids"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:10_elite_voids",
 		"max_stack_size": 1,
@@ -1058,7 +1122,7 @@
 	},
 	"11_live_to_see_tomorrow": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"11_live_to_see_tomorrow": true},"smithed": {"dict": {"record": {"11_live_to_see_tomorrow": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"11_live_to_see_tomorrow": true},"smithed": {"dict": {"record": {"11_live_to_see_tomorrow": true,"item_name": "11 - Live to See Tomorrow"},"jukebox_song": {"comparator_output": 13,"length_in_seconds": 190,"sound_event": {"sound_id": "survisland:11_live_to_see_tomorrow"},"description": {"text": "11 - Live to See Tomorrow"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:11_live_to_see_tomorrow",
 		"max_stack_size": 1,
@@ -1068,7 +1132,7 @@
 	},
 	"12_ivan_shpilevsky_the_time": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"12_ivan_shpilevsky_the_time": true},"smithed": {"dict": {"record": {"12_ivan_shpilevsky_the_time": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"12_ivan_shpilevsky_the_time": true},"smithed": {"dict": {"record": {"12_ivan_shpilevsky_the_time": true,"item_name": "12 - Ivan Shpilevsky - The Time"},"jukebox_song": {"comparator_output": 8,"length_in_seconds": 137,"sound_event": {"sound_id": "survisland:12_ivan_shpilevsky_the_time"},"description": {"text": "12 - Ivan Shpilevsky - The Time"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:12_ivan_shpilevsky_the_time",
 		"max_stack_size": 1,
@@ -1078,7 +1142,7 @@
 	},
 	"13_nick_froud_breaking_sky": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"13_nick_froud_breaking_sky": true},"smithed": {"dict": {"record": {"13_nick_froud_breaking_sky": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"13_nick_froud_breaking_sky": true},"smithed": {"dict": {"record": {"13_nick_froud_breaking_sky": true,"item_name": "13 - Nick Froud - Breaking Sky"},"jukebox_song": {"comparator_output": 2,"length_in_seconds": 131,"sound_event": {"sound_id": "survisland:13_nick_froud_breaking_sky"},"description": {"text": "13 - Nick Froud - Breaking Sky"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:13_nick_froud_breaking_sky",
 		"max_stack_size": 1,
@@ -1088,7 +1152,7 @@
 	},
 	"14_es_close_combat_fredrik_ekstrom": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"14_es_close_combat_fredrik_ekstrom": true},"smithed": {"dict": {"record": {"14_es_close_combat_fredrik_ekstrom": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"14_es_close_combat_fredrik_ekstrom": true},"smithed": {"dict": {"record": {"14_es_close_combat_fredrik_ekstrom": true,"item_name": "14 - ES - Close Combat - Fredrik Ekstrom"},"jukebox_song": {"comparator_output": 13,"length_in_seconds": 126,"sound_event": {"sound_id": "survisland:14_es_close_combat_fredrik_ekstrom"},"description": {"text": "14 - ES - Close Combat - Fredrik Ekstrom"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:14_es_close_combat_fredrik_ekstrom",
 		"max_stack_size": 1,
@@ -1098,7 +1162,7 @@
 	},
 	"15_the_ritual": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"15_the_ritual": true},"smithed": {"dict": {"record": {"15_the_ritual": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"15_the_ritual": true},"smithed": {"dict": {"record": {"15_the_ritual": true,"item_name": "15 - The Ritual"},"jukebox_song": {"comparator_output": 8,"length_in_seconds": 121,"sound_event": {"sound_id": "survisland:15_the_ritual"},"description": {"text": "15 - The Ritual"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:15_the_ritual",
 		"max_stack_size": 1,
@@ -1108,7 +1172,7 @@
 	},
 	"16_resolute": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"16_resolute": true},"smithed": {"dict": {"record": {"16_resolute": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"16_resolute": true},"smithed": {"dict": {"record": {"16_resolute": true,"item_name": "16 - Resolute"},"jukebox_song": {"comparator_output": 13,"length_in_seconds": 126,"sound_event": {"sound_id": "survisland:16_resolute"},"description": {"text": "16 - Resolute"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:16_resolute",
 		"max_stack_size": 1,
@@ -1118,7 +1182,7 @@
 	},
 	"17_es_nevertheless_she_persisted_bonnie_grace": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"17_es_nevertheless_she_persisted_bonnie_grace": true},"smithed": {"dict": {"record": {"17_es_nevertheless_she_persisted_bonnie_grace": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"17_es_nevertheless_she_persisted_bonnie_grace": true},"smithed": {"dict": {"record": {"17_es_nevertheless_she_persisted_bonnie_grace": true,"item_name": "17 - ES - Nevertheless She Persisted - Bonnie Grace"},"jukebox_song": {"comparator_output": 11,"length_in_seconds": 124,"sound_event": {"sound_id": "survisland:17_es_nevertheless_she_persisted_bonnie_grace"},"description": {"text": "17 - ES - Nevertheless She Persisted - Bonnie Grace"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:17_es_nevertheless_she_persisted_bonnie_grace",
 		"max_stack_size": 1,
@@ -1128,7 +1192,7 @@
 	},
 	"18_ragesound_vortex": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"18_ragesound_vortex": true},"smithed": {"dict": {"record": {"18_ragesound_vortex": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"18_ragesound_vortex": true},"smithed": {"dict": {"record": {"18_ragesound_vortex": true,"item_name": "18 - RageSound - Vortex"},"jukebox_song": {"comparator_output": 5,"length_in_seconds": 150,"sound_event": {"sound_id": "survisland:18_ragesound_vortex"},"description": {"text": "18 - RageSound - Vortex"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:18_ragesound_vortex",
 		"max_stack_size": 1,
@@ -1138,7 +1202,7 @@
 	},
 	"19_in_the_heart_of_the_stars": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"19_in_the_heart_of_the_stars": true},"smithed": {"dict": {"record": {"19_in_the_heart_of_the_stars": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"19_in_the_heart_of_the_stars": true},"smithed": {"dict": {"record": {"19_in_the_heart_of_the_stars": true,"item_name": "19 - In the Heart of the Stars"},"jukebox_song": {"comparator_output": 4,"length_in_seconds": 293,"sound_event": {"sound_id": "survisland:19_in_the_heart_of_the_stars"},"description": {"text": "19 - In the Heart of the Stars"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:19_in_the_heart_of_the_stars",
 		"max_stack_size": 1,
@@ -1148,7 +1212,7 @@
 	},
 	"20_last_hope": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"20_last_hope": true},"smithed": {"dict": {"record": {"20_last_hope": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"20_last_hope": true},"smithed": {"dict": {"record": {"20_last_hope": true,"item_name": "20 - Last Hope"},"jukebox_song": {"comparator_output": 1,"length_in_seconds": 226,"sound_event": {"sound_id": "survisland:20_last_hope"},"description": {"text": "20 - Last Hope"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:20_last_hope",
 		"max_stack_size": 1,
@@ -1158,7 +1222,7 @@
 	},
 	"21_timur_haisyn_brutal_fervour": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"21_timur_haisyn_brutal_fervour": true},"smithed": {"dict": {"record": {"21_timur_haisyn_brutal_fervour": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"21_timur_haisyn_brutal_fervour": true},"smithed": {"dict": {"record": {"21_timur_haisyn_brutal_fervour": true,"item_name": "21 - Timur Haisyn - Brutal Fervour"},"jukebox_song": {"comparator_output": 0,"length_in_seconds": 161,"sound_event": {"sound_id": "survisland:21_timur_haisyn_brutal_fervour"},"description": {"text": "21 - Timur Haisyn - Brutal Fervour"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:21_timur_haisyn_brutal_fervour",
 		"max_stack_size": 1,
@@ -1168,7 +1232,7 @@
 	},
 	"22_es_our_last_stand_formantx": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"22_es_our_last_stand_formantx": true},"smithed": {"dict": {"record": {"22_es_our_last_stand_formantx": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"22_es_our_last_stand_formantx": true},"smithed": {"dict": {"record": {"22_es_our_last_stand_formantx": true,"item_name": "22 - ES - Our Last Stand - FormantX"},"jukebox_song": {"comparator_output": 11,"length_in_seconds": 172,"sound_event": {"sound_id": "survisland:22_es_our_last_stand_formantx"},"description": {"text": "22 - ES - Our Last Stand - FormantX"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:22_es_our_last_stand_formantx",
 		"max_stack_size": 1,
@@ -1178,7 +1242,7 @@
 	},
 	"23_victor_cooper_windwalker": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"23_victor_cooper_windwalker": true},"smithed": {"dict": {"record": {"23_victor_cooper_windwalker": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"23_victor_cooper_windwalker": true},"smithed": {"dict": {"record": {"23_victor_cooper_windwalker": true,"item_name": "23 - Victor Cooper - Windwalker"},"jukebox_song": {"comparator_output": 0,"length_in_seconds": 129,"sound_event": {"sound_id": "survisland:23_victor_cooper_windwalker"},"description": {"text": "23 - Victor Cooper - Windwalker"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:23_victor_cooper_windwalker",
 		"max_stack_size": 1,
@@ -1188,7 +1252,7 @@
 	},
 	"24_the_darkness_inside": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"24_the_darkness_inside": true},"smithed": {"dict": {"record": {"24_the_darkness_inside": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"24_the_darkness_inside": true},"smithed": {"dict": {"record": {"24_the_darkness_inside": true,"item_name": "24 - The Darkness Inside"},"jukebox_song": {"comparator_output": 1,"length_in_seconds": 162,"sound_event": {"sound_id": "survisland:24_the_darkness_inside"},"description": {"text": "24 - The Darkness Inside"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:24_the_darkness_inside",
 		"max_stack_size": 1,
@@ -1198,7 +1262,7 @@
 	},
 	"25_fireborn": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"25_fireborn": true},"smithed": {"dict": {"record": {"25_fireborn": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"25_fireborn": true},"smithed": {"dict": {"record": {"25_fireborn": true,"item_name": "25 - Fireborn"},"jukebox_song": {"comparator_output": 0,"length_in_seconds": 225,"sound_event": {"sound_id": "survisland:25_fireborn"},"description": {"text": "25 - Fireborn"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:25_fireborn",
 		"max_stack_size": 1,
@@ -1208,7 +1272,7 @@
 	},
 	"26_angie_battle": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"26_angie_battle": true},"smithed": {"dict": {"record": {"26_angie_battle": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"26_angie_battle": true},"smithed": {"dict": {"record": {"26_angie_battle": true,"item_name": "26 - Angie battle"},"jukebox_song": {"comparator_output": 6,"length_in_seconds": 199,"sound_event": {"sound_id": "survisland:26_angie_battle"},"description": {"text": "26 - Angie battle"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:26_angie_battle",
 		"max_stack_size": 1,
@@ -1218,7 +1282,7 @@
 	},
 	"27_among_our_dreams": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"27_among_our_dreams": true},"smithed": {"dict": {"record": {"27_among_our_dreams": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"27_among_our_dreams": true},"smithed": {"dict": {"record": {"27_among_our_dreams": true,"item_name": "27 - Among our Dreams"},"jukebox_song": {"comparator_output": 9,"length_in_seconds": 250,"sound_event": {"sound_id": "survisland:27_among_our_dreams"},"description": {"text": "27 - Among our Dreams"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:27_among_our_dreams",
 		"max_stack_size": 1,
@@ -1228,7 +1292,7 @@
 	},
 	"28_dynasty": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"28_dynasty": true},"smithed": {"dict": {"record": {"28_dynasty": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"28_dynasty": true},"smithed": {"dict": {"record": {"28_dynasty": true,"item_name": "28 - Dynasty"},"jukebox_song": {"comparator_output": 10,"length_in_seconds": 171,"sound_event": {"sound_id": "survisland:28_dynasty"},"description": {"text": "28 - Dynasty"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:28_dynasty",
 		"max_stack_size": 1,
@@ -1238,7 +1302,7 @@
 	},
 	"29_hold_the_line": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"29_hold_the_line": true},"smithed": {"dict": {"record": {"29_hold_the_line": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"29_hold_the_line": true},"smithed": {"dict": {"record": {"29_hold_the_line": true,"item_name": "29 - Hold the Line"},"jukebox_song": {"comparator_output": 2,"length_in_seconds": 131,"sound_event": {"sound_id": "survisland:29_hold_the_line"},"description": {"text": "29 - Hold the Line"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:29_hold_the_line",
 		"max_stack_size": 1,
@@ -1248,7 +1312,7 @@
 	},
 	"30_vitalii_suzdin_beyond_the_mind": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"30_vitalii_suzdin_beyond_the_mind": true},"smithed": {"dict": {"record": {"30_vitalii_suzdin_beyond_the_mind": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"30_vitalii_suzdin_beyond_the_mind": true},"smithed": {"dict": {"record": {"30_vitalii_suzdin_beyond_the_mind": true,"item_name": "30 - Vitalii Suzdin - Beyond the Mind"},"jukebox_song": {"comparator_output": 9,"length_in_seconds": 122,"sound_event": {"sound_id": "survisland:30_vitalii_suzdin_beyond_the_mind"},"description": {"text": "30 - Vitalii Suzdin - Beyond the Mind"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:30_vitalii_suzdin_beyond_the_mind",
 		"max_stack_size": 1,
@@ -1258,7 +1322,7 @@
 	},
 	"31_carnival_row": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"31_carnival_row": true},"smithed": {"dict": {"record": {"31_carnival_row": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"31_carnival_row": true},"smithed": {"dict": {"record": {"31_carnival_row": true,"item_name": "31 - Carnival Row"},"jukebox_song": {"comparator_output": 15,"length_in_seconds": 112,"sound_event": {"sound_id": "survisland:31_carnival_row"},"description": {"text": "31 - Carnival Row"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:31_carnival_row",
 		"max_stack_size": 1,
@@ -1268,7 +1332,7 @@
 	},
 	"32_final_act": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"32_final_act": true},"smithed": {"dict": {"record": {"32_final_act": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"32_final_act": true},"smithed": {"dict": {"record": {"32_final_act": true,"item_name": "32 - Final act"},"jukebox_song": {"comparator_output": 8,"length_in_seconds": 121,"sound_event": {"sound_id": "survisland:32_final_act"},"description": {"text": "32 - Final act"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:32_final_act",
 		"max_stack_size": 1,
@@ -1278,7 +1342,7 @@
 	},
 	"33_path_to_glory": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"33_path_to_glory": true},"smithed": {"dict": {"record": {"33_path_to_glory": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"33_path_to_glory": true},"smithed": {"dict": {"record": {"33_path_to_glory": true,"item_name": "33 - Path to Glory"},"jukebox_song": {"comparator_output": 2,"length_in_seconds": 179,"sound_event": {"sound_id": "survisland:33_path_to_glory"},"description": {"text": "33 - Path to Glory"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:33_path_to_glory",
 		"max_stack_size": 1,
@@ -1288,7 +1352,7 @@
 	},
 	"34_perfect_chaos": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"34_perfect_chaos": true},"smithed": {"dict": {"record": {"34_perfect_chaos": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"34_perfect_chaos": true},"smithed": {"dict": {"record": {"34_perfect_chaos": true,"item_name": "34 - Perfect Chaos"},"jukebox_song": {"comparator_output": 11,"length_in_seconds": 92,"sound_event": {"sound_id": "survisland:34_perfect_chaos"},"description": {"text": "34 - Perfect Chaos"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:34_perfect_chaos",
 		"max_stack_size": 1,
@@ -1298,7 +1362,7 @@
 	},
 	"35_we_are_vanguards": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"35_we_are_vanguards": true},"smithed": {"dict": {"record": {"35_we_are_vanguards": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"35_we_are_vanguards": true},"smithed": {"dict": {"record": {"35_we_are_vanguards": true,"item_name": "35 - We are Vanguards"},"jukebox_song": {"comparator_output": 2,"length_in_seconds": 211,"sound_event": {"sound_id": "survisland:35_we_are_vanguards"},"description": {"text": "35 - We are Vanguards"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:35_we_are_vanguards",
 		"max_stack_size": 1,
@@ -1308,7 +1372,7 @@
 	},
 	"rat_dance": {
 		"id": "minecraft:command_block",
-		"custom_data": {"survisland": {"rat_dance": true},"smithed": {"dict": {"record": {"rat_dance": true}},"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"survisland": {"rat_dance": true},"smithed": {"dict": {"record": {"rat_dance": true,"item_name": "Rat Dance"},"jukebox_song": {"comparator_output": 6,"length_in_seconds": 151,"sound_event": {"sound_id": "survisland:rat_dance"},"description": {"text": "Rat Dance"}}},"ignore": {"functionality": true,"crafting": true}}},
 		"item_name": {"text": "Music Disc","italic": false},
 		"jukebox_playable": "survisland:rat_dance",
 		"max_stack_size": 1,

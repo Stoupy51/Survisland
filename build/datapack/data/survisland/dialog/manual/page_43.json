@@ -1,0 +1,55 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "survisland:item/dialog_sprite/book_yellow",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		" ",
+		{
+			"text": "Book Yellow",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "survisland:item/dialog_sprite/book_yellow",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "survisland:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "survisland:manual/page_42"},"hover_event": {"action": "show_text","value": [{"text": "Go to previous page"}," (42)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "survisland:manual/page_44"},"hover_event": {"action": "show_text","value": [{"text": "Go to next page"}," (44)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "survisland:manual/page_42"},"hover_event": {"action": "show_text","value": [{"text": "Go to previous page"}," (42)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "survisland:manual/page_44"},"hover_event": {"action": "show_text","value": [{"text": "Go to next page"}," (44)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "survisland:manual","color": "white","shadow_color": [0,0,0,0]},
+				"၊\n",
+				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "written_book","components": {"item_model": "survisland:book_yellow","item_name": {"text": "Book Yellow"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"custom_data": {"survisland": {"book_yellow": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "survisland:manual/page_43"}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

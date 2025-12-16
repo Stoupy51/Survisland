@@ -1,8 +1,8 @@
 
 #> survisland:modes/mob_escape/second
 #
-# @within	survisland:modes/mob_escape/second 1s replace
-#			survisland:modes/mob_escape/start 1s replace
+# @within	survisland:modes/mob_escape/second 1s replace [ scheduled ]
+#			survisland:modes/mob_escape/start 1s replace [ scheduled ]
 #
 
 schedule function survisland:modes/mob_escape/second 1s replace

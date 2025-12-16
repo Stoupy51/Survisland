@@ -1,8 +1,8 @@
 
 #> survisland:modes/snk_lab/tick
 #
-# @within	survisland:modes/snk_lab/start 1t replace
-#			survisland:modes/snk_lab/tick 1t replace
+# @within	survisland:modes/snk_lab/start 1t replace [ scheduled ]
+#			survisland:modes/snk_lab/tick 1t replace [ scheduled ]
 #
 
 ##Fonction executée tous les ticks lorsque le mode de jeu est activé

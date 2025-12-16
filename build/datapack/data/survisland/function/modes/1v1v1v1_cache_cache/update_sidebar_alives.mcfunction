@@ -3,6 +3,16 @@
 #
 # @within	survisland:modes/1v1v1v1_cache_cache/macro_tick with storage survisland:main cache_cache_config
 #
+# @args		specs_remaining (unknown)
+#			team4_color (unknown)
+#			team4_remaining (unknown)
+#			team3_color (unknown)
+#			team3_remaining (unknown)
+#			team2_color (unknown)
+#			team2_remaining (unknown)
+#			team1_color (unknown)
+#			team1_remaining (unknown)
+#
 
 $team modify survisland.temp.sidebar.13 suffix [{"text":"Specs restants : ","color":"gray"},{"text":"$(specs_remaining)","color":"white"}]
 $team modify survisland.temp.sidebar.11 suffix [{"text":"Joueurs restants : ","color":"$(team4_color)"},{"text":"$(team4_remaining)","color":"yellow"}]

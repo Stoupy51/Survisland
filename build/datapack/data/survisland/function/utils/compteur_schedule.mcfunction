@@ -1,8 +1,8 @@
 
 #> survisland:utils/compteur_schedule
 #
-# @within	survisland:_compteur 5t
-#			survisland:utils/compteur_schedule 1s
+# @within	survisland:_compteur 5t [ scheduled ]
+#			survisland:utils/compteur_schedule 1s [ scheduled ]
 #
 
 # Remove score

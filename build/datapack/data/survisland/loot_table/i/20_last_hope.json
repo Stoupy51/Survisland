@@ -15,7 +15,7 @@
 										"20_last_hope": true
 									},
 									"smithed": {
-										"dict": {"record": {"20_last_hope": true}},
+										"dict": {"record": {"20_last_hope": true,"item_name": "20 - Last Hope"},"jukebox_song": {"comparator_output": 1,"length_in_seconds": 226,"sound_event": {"sound_id": "survisland:20_last_hope"},"description": {"text": "20 - Last Hope"}}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

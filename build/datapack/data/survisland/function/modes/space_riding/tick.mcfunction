@@ -1,8 +1,8 @@
 
 #> survisland:modes/space_riding/tick
 #
-# @within	survisland:modes/space_riding/start 1t replace
-#			survisland:modes/space_riding/tick 1t replace
+# @within	survisland:modes/space_riding/start 1t replace [ scheduled ]
+#			survisland:modes/space_riding/tick 1t replace [ scheduled ]
 #
 
 ##Fonction executée tous les ticks lorsque le mode de jeu est activé

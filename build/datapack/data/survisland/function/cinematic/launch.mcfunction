@@ -3,6 +3,12 @@
 #
 # @within	survisland:cinematic/launch {x:19.5,y:82.5,z:23.5,time:60,with:{yaw:30,pitch:-15,go_side:1,add_y:20.0,particle:1,interpolation:1}}
 #
+# @args		x (double)
+#			y (double)
+#			z (double)
+#			time (int)
+#			with (compound)
+#
 
 ## /execute as @s positioned 0 69 0 rotated -55 10 run function survisland:cinematic/launch {x:19.5,y:82.5,z:23.5,time:60,with:{yaw:30,pitch:-15,go_side:1,add_y:20.0,particle:1,interpolation:1}}
 # Arguments:

@@ -1,8 +1,8 @@
 
 #> survisland:modes/layers/tick
 #
-# @within	survisland:modes/layers/start 1t replace
-#			survisland:modes/layers/tick 1t replace
+# @within	survisland:modes/layers/start 1t replace [ scheduled ]
+#			survisland:modes/layers/tick 1t replace [ scheduled ]
 #
 
 ##Fonction executée tous les ticks lorsque le mode de jeu est activé

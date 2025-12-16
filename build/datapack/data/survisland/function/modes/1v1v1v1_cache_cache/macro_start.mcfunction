@@ -3,6 +3,19 @@
 #
 # @within	survisland:modes/1v1v1v1_cache_cache/start with storage survisland:main cache_cache_config
 #
+# @args		team1_id (string)
+#			team2_id (string)
+#			team3_id (string)
+#			team3_name (string)
+#			team3_color (string)
+#			team2_name (string)
+#			team2_color (string)
+#			team1_name (string)
+#			team1_color (string)
+#			team4_id (unknown)
+#			team4_name (unknown)
+#			team4_color (unknown)
+#
 
 ##Fonction executée lors du lancement de la partie
 

@@ -3,6 +3,9 @@
 #
 # @within	survisland:modes/1v1_cache_cache/tick with storage survisland:main cache_cache_config
 #
+# @args		team1_id (string)
+#			team2_id (string)
+#
 
 ##Fonction executée tous les ticks lorsque le mode de jeu est activé
 

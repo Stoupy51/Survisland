@@ -1,8 +1,8 @@
 
 #> survisland:modes/quake/tick
 #
-# @within	survisland:modes/quake/start 1t
-#			survisland:modes/quake/tick 1t
+# @within	survisland:modes/quake/start 1t [ scheduled ]
+#			survisland:modes/quake/tick 1t [ scheduled ]
 #
 
 ## Fonction executée tous les ticks lorsque le mode de jeu est activé

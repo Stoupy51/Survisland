@@ -1,9 +1,7 @@
 
 #> survisland:advancements/pop_ups_revoke
 #
-# @executed	as the player & at current position
-#
-# @within	survisland:advancements/pop_ups 1s replace
+# @within	survisland:advancements/pop_ups 1s replace [ scheduled ]
 #
 
 advancement revoke @a only survisland:pop_ups/confort_dans_5_minutes

@@ -3,6 +3,13 @@
 #
 # @within	survisland:modes/1v1v1_cache_cache/macro_tick with storage survisland:main cache_cache_config
 #
+# @args		team1_id (unknown)
+#			team2_id (unknown)
+#			team3_id (unknown)
+#			team1_name (unknown)
+#			team2_name (unknown)
+#			team3_name (unknown)
+#
 
 scoreboard players add #process_end survisland.data 1
 

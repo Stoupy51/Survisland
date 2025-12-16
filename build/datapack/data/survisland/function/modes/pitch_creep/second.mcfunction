@@ -1,8 +1,8 @@
 
 #> survisland:modes/pitch_creep/second
 #
-# @within	survisland:modes/pitch_creep/second 20t replace
-#			survisland:modes/pitch_creep/start 20t replace
+# @within	survisland:modes/pitch_creep/second 20t replace [ scheduled ]
+#			survisland:modes/pitch_creep/start 20t replace [ scheduled ]
 #
 
 ##Fonction executée toutes les secondes lorsque le mode de jeu est activé

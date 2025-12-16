@@ -1,8 +1,8 @@
 
 #> survisland:modes/confiance_aveugle/tick
 #
-# @within	survisland:modes/confiance_aveugle/start 1t replace
-#			survisland:modes/confiance_aveugle/tick 1t replace
+# @within	survisland:modes/confiance_aveugle/start 1t replace [ scheduled ]
+#			survisland:modes/confiance_aveugle/tick 1t replace [ scheduled ]
 #
 
 ##Fonction executée tous les ticks lorsque le mode de jeu est activé

@@ -15,7 +15,7 @@
 										"19_in_the_heart_of_the_stars": true
 									},
 									"smithed": {
-										"dict": {"record": {"19_in_the_heart_of_the_stars": true}},
+										"dict": {"record": {"19_in_the_heart_of_the_stars": true,"item_name": "19 - In the Heart of the Stars"},"jukebox_song": {"comparator_output": 4,"length_in_seconds": 293,"sound_event": {"sound_id": "survisland:19_in_the_heart_of_the_stars"},"description": {"text": "19 - In the Heart of the Stars"}}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

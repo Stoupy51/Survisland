@@ -15,7 +15,7 @@
 										"13_nick_froud_breaking_sky": true
 									},
 									"smithed": {
-										"dict": {"record": {"13_nick_froud_breaking_sky": true}},
+										"dict": {"record": {"13_nick_froud_breaking_sky": true,"item_name": "13 - Nick Froud - Breaking Sky"},"jukebox_song": {"comparator_output": 2,"length_in_seconds": 131,"sound_event": {"sound_id": "survisland:13_nick_froud_breaking_sky"},"description": {"text": "13 - Nick Froud - Breaking Sky"}}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

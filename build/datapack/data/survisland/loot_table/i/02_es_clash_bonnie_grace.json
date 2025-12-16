@@ -15,7 +15,7 @@
 										"02_es_clash_bonnie_grace": true
 									},
 									"smithed": {
-										"dict": {"record": {"02_es_clash_bonnie_grace": true}},
+										"dict": {"record": {"02_es_clash_bonnie_grace": true,"item_name": "02 - ES - Clash - Bonnie Grace"},"jukebox_song": {"comparator_output": 10,"length_in_seconds": 123,"sound_event": {"sound_id": "survisland:02_es_clash_bonnie_grace"},"description": {"text": "02 - ES - Clash - Bonnie Grace"}}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

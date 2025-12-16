@@ -15,7 +15,7 @@
 										"35_we_are_vanguards": true
 									},
 									"smithed": {
-										"dict": {"record": {"35_we_are_vanguards": true}},
+										"dict": {"record": {"35_we_are_vanguards": true,"item_name": "35 - We are Vanguards"},"jukebox_song": {"comparator_output": 2,"length_in_seconds": 211,"sound_event": {"sound_id": "survisland:35_we_are_vanguards"},"description": {"text": "35 - We are Vanguards"}}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

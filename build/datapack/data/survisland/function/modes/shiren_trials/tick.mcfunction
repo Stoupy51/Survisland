@@ -1,8 +1,8 @@
 
 #> survisland:modes/shiren_trials/tick
 #
-# @within	survisland:modes/shiren_trials/start 1t replace
-#			survisland:modes/shiren_trials/tick 1t replace
+# @within	survisland:modes/shiren_trials/start 1t replace [ scheduled ]
+#			survisland:modes/shiren_trials/tick 1t replace [ scheduled ]
 #
 
 # Loop again

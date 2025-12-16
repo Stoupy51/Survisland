@@ -1,8 +1,8 @@
 
 #> survisland:modes/laser_game/tick
 #
-# @within	survisland:modes/laser_game/start 1t
-#			survisland:modes/laser_game/tick 1t
+# @within	survisland:modes/laser_game/start 1t [ scheduled ]
+#			survisland:modes/laser_game/tick 1t [ scheduled ]
 #
 
 ## Fonction executée tous les ticks lorsque le mode de jeu est activé

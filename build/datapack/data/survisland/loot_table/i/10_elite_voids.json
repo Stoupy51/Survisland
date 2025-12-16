@@ -15,7 +15,7 @@
 										"10_elite_voids": true
 									},
 									"smithed": {
-										"dict": {"record": {"10_elite_voids": true}},
+										"dict": {"record": {"10_elite_voids": true,"item_name": "10 - Elite Voids"},"jukebox_song": {"comparator_output": 7,"length_in_seconds": 168,"sound_event": {"sound_id": "survisland:10_elite_voids"},"description": {"text": "10 - Elite Voids"}}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

@@ -4,6 +4,9 @@
 # @within	Nothing
 #			survisland:parchemins/_convert_votes {text_color:"red", dyed_color:[0.780, 0.737, 0.647]}
 #
+# @args		text_color (string)
+#			dyed_color (list)
+#
 # @executed			default context
 # 
 # @description		Convertit les votes (livres) en parchemins

@@ -1,0 +1,75 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "survisland:item/dialog_sprite/heavy_workbench",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		" ",
+		{
+			"text": "Heavy Workbench",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "survisland:item/dialog_sprite/heavy_workbench",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "survisland:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "survisland:manual/page_1"},"hover_event": {"action": "show_text","value": [{"text": "Go to previous page"}," (1)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "survisland:manual/page_3"},"hover_event": {"action": "show_text","value": [{"text": "Go to next page"}," (3)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "survisland:manual/page_1"},"hover_event": {"action": "show_text","value": [{"text": "Go to previous page"}," (1)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "survisland:manual/page_3"},"hover_event": {"action": "show_text","value": [{"text": "Go to next page"}," (3)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "survisland:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"",
+				{"text": "$脕$脕$脕","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
+				"  \n\"",
+				{"text": "U$U$U$","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
+				"  \n\"",
+				{"text": "$脕","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
+				{"text": "$脖","hover_event": {"action": "show_item","id": "minecraft:crafting_table","components": {}}},
+				{"text": "$脕","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
+				"\"\"",
+				{"text": "$$脔","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": "Heavy Workbench","item_model": "survisland:heavy_workbench"}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:crafting_table","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": "Heavy Workbench","item_model": "survisland:heavy_workbench"}}},
+				"#$\n\"",
+				{"text": "$脗$脗$脗","hover_event": {"action": "show_item","id": "minecraft:smooth_stone","components": {}}},
+				"  \n\"",
+				{"text": "U$U$U$","hover_event": {"action": "show_item","id": "minecraft:smooth_stone","components": {}}},
+				"  \n",
+				[{"text": "\nEvery recipe that uses custom items ","font": "minecraft:default","color": "black"},{"text": "must","color": "red","underlined": true}," be crafted using the Heavy Workbench."],
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

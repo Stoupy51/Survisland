@@ -15,7 +15,7 @@
 										"08_battle_of_the_ocean": true
 									},
 									"smithed": {
-										"dict": {"record": {"08_battle_of_the_ocean": true}},
+										"dict": {"record": {"08_battle_of_the_ocean": true,"item_name": "08 - Battle of the Ocean"},"jukebox_song": {"comparator_output": 15,"length_in_seconds": 176,"sound_event": {"sound_id": "survisland:08_battle_of_the_ocean"},"description": {"text": "08 - Battle of the Ocean"}}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

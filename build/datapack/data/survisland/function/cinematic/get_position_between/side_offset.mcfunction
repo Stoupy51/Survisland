@@ -3,6 +3,8 @@
 #
 # @within	survisland:cinematic/get_position_between/main with storage survisland:temp forward
 #
+# @args		amount (unknown)
+#
 
 # Go to the half position
 data modify entity @s Pos set from storage survisland:temp half_position

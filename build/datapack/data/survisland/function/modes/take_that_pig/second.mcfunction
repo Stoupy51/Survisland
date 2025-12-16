@@ -1,8 +1,8 @@
 
 #> survisland:modes/take_that_pig/second
 #
-# @within	survisland:modes/take_that_pig/second 1s replace
-#			survisland:modes/take_that_pig/start 1s replace
+# @within	survisland:modes/take_that_pig/second 1s replace [ scheduled ]
+#			survisland:modes/take_that_pig/start 1s replace [ scheduled ]
 #
 
 ##Fonction executée toutes les secondes lorsque le mode de jeu est activé

@@ -1,8 +1,8 @@
 
 #> survisland:modes/pitch_creep/tick
 #
-# @within	survisland:modes/pitch_creep/start 1t replace
-#			survisland:modes/pitch_creep/tick 1t replace
+# @within	survisland:modes/pitch_creep/start 1t replace [ scheduled ]
+#			survisland:modes/pitch_creep/tick 1t replace [ scheduled ]
 #
 
 ##Fonction executée tous les ticks lorsque le mode de jeu est activé

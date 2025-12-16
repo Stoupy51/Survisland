@@ -1,8 +1,8 @@
 
 #> survisland:modes/mob_escape/tick
 #
-# @within	survisland:modes/mob_escape/start 1t replace
-#			survisland:modes/mob_escape/tick 1t replace
+# @within	survisland:modes/mob_escape/start 1t replace [ scheduled ]
+#			survisland:modes/mob_escape/tick 1t replace [ scheduled ]
 #
 
 ##Fonction executée tous les ticks lorsque le mode de jeu est activé

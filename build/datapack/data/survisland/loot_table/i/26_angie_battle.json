@@ -15,7 +15,7 @@
 										"26_angie_battle": true
 									},
 									"smithed": {
-										"dict": {"record": {"26_angie_battle": true}},
+										"dict": {"record": {"26_angie_battle": true,"item_name": "26 - Angie battle"},"jukebox_song": {"comparator_output": 6,"length_in_seconds": 199,"sound_event": {"sound_id": "survisland:26_angie_battle"},"description": {"text": "26 - Angie battle"}}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

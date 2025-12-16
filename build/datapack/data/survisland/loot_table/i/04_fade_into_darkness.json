@@ -15,7 +15,7 @@
 										"04_fade_into_darkness": true
 									},
 									"smithed": {
-										"dict": {"record": {"04_fade_into_darkness": true}},
+										"dict": {"record": {"04_fade_into_darkness": true,"item_name": "04 - Fade into Darkness"},"jukebox_song": {"comparator_output": 2,"length_in_seconds": 147,"sound_event": {"sound_id": "survisland:04_fade_into_darkness"},"description": {"text": "04 - Fade into Darkness"}}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

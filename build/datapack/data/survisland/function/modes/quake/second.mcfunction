@@ -1,8 +1,8 @@
 
 #> survisland:modes/quake/second
 #
-# @within	survisland:modes/quake/second 1s
-#			survisland:modes/quake/start 1s
+# @within	survisland:modes/quake/second 1s [ scheduled ]
+#			survisland:modes/quake/start 1s [ scheduled ]
 #
 
 ## Fonction executée toutes les secondes lorsque le mode de jeu est activé

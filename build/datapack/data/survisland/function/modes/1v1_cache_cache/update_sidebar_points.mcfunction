@@ -7,6 +7,9 @@
 #			survisland:modes/1v1_cache_cache/process_end with storage survisland:main cache_cache_config
 #			survisland:modes/1v1_cache_cache/second with storage survisland:main cache_cache_config
 #
+# @args		team1_id (unknown)
+#			team2_id (unknown)
+#
 
 $execute store result storage survisland:main cache_cache_config.team1_points int 1 run scoreboard players get #$(team1_id)_points survisland.data
 $execute store result storage survisland:main cache_cache_config.team2_points int 1 run scoreboard players get #$(team2_id)_points survisland.data

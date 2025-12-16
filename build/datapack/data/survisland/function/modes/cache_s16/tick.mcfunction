@@ -1,8 +1,8 @@
 
 #> survisland:modes/cache_s16/tick
 #
-# @within	survisland:modes/cache_s16/start 1t replace
-#			survisland:modes/cache_s16/tick 1t replace
+# @within	survisland:modes/cache_s16/start 1t replace [ scheduled ]
+#			survisland:modes/cache_s16/tick 1t replace [ scheduled ]
 #
 
 ##Fonction executée tous les ticks lorsque le mode de jeu est activé

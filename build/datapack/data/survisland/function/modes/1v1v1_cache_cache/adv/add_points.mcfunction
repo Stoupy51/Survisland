@@ -5,6 +5,10 @@
 #
 # @within	survisland:modes/1v1v1_cache_cache/adv/killed_player with storage survisland:main cache_cache_config
 #
+# @args		team1_id (unknown)
+#			team2_id (unknown)
+#			team3_id (unknown)
+#
 
 $execute if entity @s[team=$(team1_id)] run scoreboard players add #$(team1_id)_points survisland.data 10
 $execute if entity @s[team=$(team2_id)] run scoreboard players add #$(team2_id)_points survisland.data 10

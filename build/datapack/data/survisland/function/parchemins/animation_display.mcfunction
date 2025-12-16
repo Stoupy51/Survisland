@@ -4,7 +4,7 @@
 # @executed	as the player & at current position
 #
 # @within	survisland:parchemins/deploy_open
-#			survisland:parchemins/deploy_open 4t replace
+#			survisland:parchemins/deploy_open 4t replace [ scheduled ]
 #
 # @executed			default context
 # 

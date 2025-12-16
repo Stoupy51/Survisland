@@ -1,8 +1,8 @@
 
 #> survisland:modes/brain_rooms/tick
 #
-# @within	survisland:modes/brain_rooms/start 1t replace
-#			survisland:modes/brain_rooms/tick 1t replace
+# @within	survisland:modes/brain_rooms/start 1t replace [ scheduled ]
+#			survisland:modes/brain_rooms/tick 1t replace [ scheduled ]
 #
 
 ##Fonction executée tous les ticks lorsque le mode de jeu est activé

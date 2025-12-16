@@ -15,7 +15,7 @@
 										"33_path_to_glory": true
 									},
 									"smithed": {
-										"dict": {"record": {"33_path_to_glory": true}},
+										"dict": {"record": {"33_path_to_glory": true,"item_name": "33 - Path to Glory"},"jukebox_song": {"comparator_output": 2,"length_in_seconds": 179,"sound_event": {"sound_id": "survisland:33_path_to_glory"},"description": {"text": "33 - Path to Glory"}}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

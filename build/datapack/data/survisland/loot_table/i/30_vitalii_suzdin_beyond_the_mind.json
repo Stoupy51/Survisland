@@ -15,7 +15,7 @@
 										"30_vitalii_suzdin_beyond_the_mind": true
 									},
 									"smithed": {
-										"dict": {"record": {"30_vitalii_suzdin_beyond_the_mind": true}},
+										"dict": {"record": {"30_vitalii_suzdin_beyond_the_mind": true,"item_name": "30 - Vitalii Suzdin - Beyond the Mind"},"jukebox_song": {"comparator_output": 9,"length_in_seconds": 122,"sound_event": {"sound_id": "survisland:30_vitalii_suzdin_beyond_the_mind"},"description": {"text": "30 - Vitalii Suzdin - Beyond the Mind"}}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

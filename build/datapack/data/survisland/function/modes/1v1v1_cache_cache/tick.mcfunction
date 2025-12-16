@@ -1,8 +1,8 @@
 
 #> survisland:modes/1v1v1_cache_cache/tick
 #
-# @within	survisland:modes/1v1v1_cache_cache/macro_start 1t replace
-#			survisland:modes/1v1v1_cache_cache/macro_tick 1t replace
+# @within	survisland:modes/1v1v1_cache_cache/macro_start 1t replace [ scheduled ]
+#			survisland:modes/1v1v1_cache_cache/macro_tick 1t replace [ scheduled ]
 #
 
 # Config example:
