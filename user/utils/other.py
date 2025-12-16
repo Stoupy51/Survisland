@@ -25,7 +25,7 @@ team modify {ns}.no_collision collisionRule never
 function {ns}:set_constants
 
 # Set gamerules
-gamerule keepInventory true
+gamerule keep_inventory true
 scoreboard players set #keepInventory {ns}.data 0
 
 # Set some storage and forceload

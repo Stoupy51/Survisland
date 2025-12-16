@@ -3,8 +3,8 @@
 id: "survisland"
 name: "Survisland"
 author: "Stoupy51"
-version: "2.1.6"
-minecraft: "1.21.8"
+version: "2.2.0"
+minecraft: "1.21.11"
 
 # Some directories
 directory: "."
@@ -90,5 +90,5 @@ meta:
             json_dump_path: "manual_cache/content.json"
             first_page_text: [{"text":"Ratio gold", "color":"#505050"}]
             showcase_image: 3
-            use_dialog: 2 # 0 = no, 1 = yes, 2 = yes and no book
+            use_dialog: 1 # 0 = no, 1 = yes, 2 = yes and no book
 
