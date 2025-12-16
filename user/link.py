@@ -21,3 +21,6 @@ def beet_default(ctx: Context) -> None:
 	for module in BOOKSHELF_MODULES.keys():
 		official_lib_used(module)
 
+	# Delete quick actions (manual)
+	del Mem.ctx.data["minecraft"].dialogs_tags["quick_actions"]
+
