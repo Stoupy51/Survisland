@@ -645,7 +645,11 @@ def main() -> None:
 		"red_coin": {
 			"id": CUSTOM_ITEM_VANILLA,
 			"category": "misc",
-		}
+		},
+		**{
+			f"card_{i}": {"id": CUSTOM_ITEM_VANILLA, "category": "misc", "lore": [{"text":"Made by Canfav","color":"gold","italic":False}]}
+			for i in range(1, 9)	# Card 1 to 8 inclusive
+		},
 	}
 
 	# Get textures
