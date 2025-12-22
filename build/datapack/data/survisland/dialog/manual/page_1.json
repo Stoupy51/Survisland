@@ -22,7 +22,7 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "","font": "survisland:manual","color": "white","shadow_color": [0,0,0,0]},
-				{"text": "ဠ\n\n\n\n\n\n","font": "survisland:manual","color": "white"},
+				{"text": "\u1020\n\n\n\n\n\n","font": "survisland:manual","color": "white"},
 				[{"text": "","font": "minecraft:default","color": "black"},{"text": "Ratio gold","color": "#505050"}],
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],

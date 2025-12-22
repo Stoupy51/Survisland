@@ -12,7 +12,7 @@
 							"components": {
 								"minecraft:lore": [
 									{
-										"text": "Clic-droit pour éteindre la torche",
+										"text": "Clic-droit pour \u00e9teindre la torche",
 										"italic": false,
 										"color": "gray"
 									},

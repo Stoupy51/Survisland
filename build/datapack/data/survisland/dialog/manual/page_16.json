@@ -47,7 +47,7 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "","font": "survisland:manual","color": "white","shadow_color": [0,0,0,0]},
-				"ု\n",
+				"\u102f\n",
 				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "apple","components": {"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"consumable": {},"food": {"nutrition": 5,"saturation": 6},"item_model": "survisland:chocolate_eclair","item_name": {"text": "Chocolate Eclair"},"custom_data": {"survisland": {"chocolate_eclair": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "survisland:manual/page_16"}},
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],

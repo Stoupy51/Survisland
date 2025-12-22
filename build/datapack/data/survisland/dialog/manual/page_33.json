@@ -3,7 +3,7 @@
 	"title": [
 		"",
 		{
-			"sprite": "survisland:item/dialog_sprite/book_feather",
+			"sprite": "survisland:item/dialog_sprite/water_gun",
 			"shadow_color": [
 				0,
 				0,
@@ -14,12 +14,12 @@
 		},
 		" ",
 		{
-			"text": "Book Feather",
+			"text": "Water Gun",
 			"underlined": true
 		},
 		" ",
 		{
-			"sprite": "survisland:item/dialog_sprite/book_feather",
+			"sprite": "survisland:item/dialog_sprite/water_gun",
 			"shadow_color": [
 				0,
 				0,
@@ -47,8 +47,8 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "","font": "survisland:manual","color": "white","shadow_color": [0,0,0,0]},
-				"၀\n",
-				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "written_book","components": {"item_model": "survisland:book_feather","item_name": {"text": "Book Feather"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"custom_data": {"survisland": {"book_feather": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "survisland:manual/page_33"}},
+				"\u1040\n",
+				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "survisland:water_gun","item_name": {"text": "Water Gun"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"custom_data": {"survisland": {"water_gun": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "survisland:manual/page_33"}},
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140

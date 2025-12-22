@@ -1,11 +1,11 @@
 {
 	"parent": "item/generated",
 	"textures": {
-		"0": "minecraft:block/oak_planks",
-		"1": "minecraft:block/red_concrete",
-		"2": "minecraft:block/green_concrete",
-		"3": "minecraft:block/white_concrete",
-		"particle": "minecraft:block/oak_planks"
+		"0": "survisland:atlas/oak_planks",
+		"1": "survisland:atlas/red_concrete",
+		"2": "survisland:atlas/green_concrete",
+		"3": "survisland:atlas/white_concrete",
+		"particle": "survisland:atlas/oak_planks"
 	},
 	"credit": "Made with Blockbench",
 	"elements": [

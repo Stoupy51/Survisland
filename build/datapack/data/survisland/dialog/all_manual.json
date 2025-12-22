@@ -96,7 +96,12 @@
 		"survisland:manual/page_85",
 		"survisland:manual/page_86",
 		"survisland:manual/page_87",
-		"survisland:manual/page_88"
+		"survisland:manual/page_88",
+		"survisland:manual/page_89",
+		"survisland:manual/page_90",
+		"survisland:manual/page_91",
+		"survisland:manual/page_92",
+		"survisland:manual/page_93"
 	],
 	"exit_action": {
 		"label": {"translate": "gui.back"},

@@ -31,14 +31,14 @@
 	},
 	"snuffer": {
 		"id": "minecraft:warped_fungus_on_a_stick",
-		"lore": [{"text": "Clic-droit pour éteindre la torche","italic": false,"color": "gray"},{"text": "du joueur le plus proche","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"lore": [{"text": "Clic-droit pour \u00e9teindre la torche","italic": false,"color": "gray"},{"text": "du joueur le plus proche","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"item_model": "survisland:snuffer",
 		"item_name": {"text": "Snuffer"},
 		"custom_data": {"survisland": {"snuffer": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"flambeau": {
 		"id": "minecraft:command_block",
-		"lore": [{"text": "Gardez cette torche précieusement","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"lore": [{"text": "Gardez cette torche pr\u00e9cieusement","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"max_stack_size": 64,
 		"item_model": "survisland:flambeau",
 		"item_name": {"text": "Flambeau"},
@@ -46,7 +46,7 @@
 	},
 	"pendent": {
 		"id": "minecraft:command_block",
-		"lore": [{"text": "[Seconde main pour l'équiper]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"lore": [{"text": "[Seconde main pour l'\u00e9quiper]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"max_stack_size": 64,
 		"item_model": "survisland:pendent",
 		"item_name": {"text": "Pendent"},
@@ -54,7 +54,7 @@
 	},
 	"pendent_held": {
 		"id": "minecraft:command_block",
-		"lore": [{"text": "[Seconde main pour l'équiper]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"lore": [{"text": "[Seconde main pour l'\u00e9quiper]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 		"max_stack_size": 64,
 		"item_model": "survisland:pendent_held",
 		"item_name": {"text": "Pendent Held"},
@@ -62,7 +62,7 @@
 	},
 	"maple_leaf": {
 		"id": "minecraft:command_block",
-		"item_name": {"text": "Feuille d'érable","italic": false,"color": "gold"},
+		"item_name": {"text": "Feuille d'\u00e9rable","italic": false,"color": "gold"},
 		"max_stack_size": 64,
 		"item_model": "survisland:maple_leaf",
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
@@ -304,6 +304,46 @@
 		"item_model": "survisland:card_8",
 		"item_name": {"text": "Card 8"},
 		"custom_data": {"survisland": {"card_8": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"gland": {
+		"id": "minecraft:command_block",
+		"category": "misc",
+		"item_model": "survisland:gland",
+		"item_name": {"text": "Gland"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"gland": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"ice_stone": {
+		"id": "minecraft:command_block",
+		"category": "misc",
+		"item_model": "survisland:ice_stone",
+		"item_name": {"text": "Ice Stone"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"ice_stone": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"papillon": {
+		"id": "minecraft:command_block",
+		"category": "misc",
+		"item_model": "survisland:papillon",
+		"item_name": {"text": "Papillon"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"papillon": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"water_gun": {
+		"id": "minecraft:command_block",
+		"category": "misc",
+		"item_model": "survisland:water_gun",
+		"item_name": {"text": "Water Gun"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"water_gun": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"pass_du_bureau_de_giovanni": {
+		"id": "minecraft:command_block",
+		"category": "misc",
+		"item_model": "survisland:pass_du_bureau_de_giovanni",
+		"item_name": {"text": "Pass Du Bureau De Giovanni"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+		"custom_data": {"survisland": {"pass_du_bureau_de_giovanni": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"book_advanced": {
 		"id": "minecraft:written_book",

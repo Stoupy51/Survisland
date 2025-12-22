@@ -3,7 +3,7 @@
 	"title": [
 		"",
 		{
-			"sprite": "survisland:item/dialog_sprite/poisson_rascasse",
+			"sprite": "survisland:item/dialog_sprite/poisson_lime",
 			"shadow_color": [
 				0,
 				0,
@@ -14,12 +14,12 @@
 		},
 		" ",
 		{
-			"text": "Poisson Rascasse",
+			"text": "Poisson Lime",
 			"underlined": true
 		},
 		" ",
 		{
-			"sprite": "survisland:item/dialog_sprite/poisson_rascasse",
+			"sprite": "survisland:item/dialog_sprite/poisson_lime",
 			"shadow_color": [
 				0,
 				0,
@@ -47,8 +47,8 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "","font": "survisland:manual","color": "white","shadow_color": [0,0,0,0]},
-				"ၚ\n",
-				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "apple","components": {"consumable": {},"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_rascasse"},"item_model": "survisland:poisson_rascasse","item_name": {"text": "Poisson Rascasse"},"custom_data": {"survisland": {"poisson_rascasse": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "survisland:manual/page_59"}},
+				"\u105a\n",
+				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "apple","components": {"consumable": {},"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},"lore": [{"text": "Made by M4TOUW","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"equippable": {"slot": "head","camera_overlay": "survisland:item/poisson_lime"},"item_model": "survisland:poisson_lime","item_name": {"text": "Poisson Lime"},"custom_data": {"survisland": {"poisson_lime": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "survisland:manual/page_59"}},
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
