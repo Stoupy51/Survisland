@@ -650,6 +650,26 @@ def main() -> None:
 			f"card_{i}": {"id": CUSTOM_ITEM_VANILLA, "category": "misc", "lore": [{"text":"Made by Canfav","color":"gold","italic":False}]}
 			for i in range(1, 9)	# Card 1 to 8 inclusive
 		},
+		"gland": {
+			"id": CUSTOM_ITEM_VANILLA,
+			"category": "misc",
+		},
+		"ice_stone": {
+			"id": CUSTOM_ITEM_VANILLA,
+			"category": "misc",
+		},
+		"papillon": {
+			"id": CUSTOM_ITEM_VANILLA,
+			"category": "misc",
+		},
+		"water_gun": {
+			"id": CUSTOM_ITEM_VANILLA,
+			"category": "misc",
+		},
+		"pass_du_bureau_de_giovanni": {
+			"id": CUSTOM_ITEM_VANILLA,
+			"category": "misc",
+		},
 	}
 
 	# Get textures
