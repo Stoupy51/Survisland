@@ -1,7 +1,7 @@
 
 # ruff: noqa: E501
 # Imports
-from stewbeet import CUSTOM_ITEM_VANILLA, OVERRIDE_MODEL, Mem
+from stewbeet import CUSTOM_ITEM_VANILLA, OVERRIDE_MODEL, JsonDict, Mem
 
 # Constants
 TRIBE_CIVILIZATION_ITEMS: list[str] = [
@@ -24,7 +24,7 @@ def main() -> None:
 
 	# Add horns
 	horn_texture: str = f"{ns}:item/horns"
-	horn_textures: dict = {"0": horn_texture, "particle": horn_texture}
+	horn_textures: JsonDict = {"0": horn_texture, "particle": horn_texture}
 
 	Mem.definitions["horns"] = {
 		"id": CUSTOM_ITEM_VANILLA,

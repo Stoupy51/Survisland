@@ -10,8 +10,6 @@ from user.utils.screamer import main as generate_screamer
 
 # Main function is run just before making finalyzing the build process (zip, headers, lang, ...)
 def beet_default(ctx: Context) -> None:
-	if Mem.ctx is None:
-		Mem.ctx = ctx
 	generate_other_things()
 	generate_books_modifiers()
 	generate_pop_ups()

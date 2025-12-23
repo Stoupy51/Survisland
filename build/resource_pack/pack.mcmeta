@@ -1,7 +1,7 @@
 {
 	"pack": {
 		"pack_format": 75,
-		"description": "Survisland [2.2.0] by Stoupy51",
+		"description": "Survisland [2.3.0] by Stoupy51",
 		"min_format": [
 			75,
 			0
@@ -14,8 +14,8 @@
 	"id": "survisland",
 	"overlays": {
 		"entries": [
-			{"directory": "before_format_73","formats": [0,72],"min_format": [69,0],"max_format": [69,0]},
-			{"directory": "format_73_plus","formats": [73,1000],"min_format": [69,0],"max_format": [69,0]}
+			{"formats": [0,72],"directory": "before_format_73","min_format": 0,"max_format": 72},
+			{"formats": [73,1000],"directory": "format_73_plus","min_format": 73,"max_format": 1000}
 		]
 	}
 }

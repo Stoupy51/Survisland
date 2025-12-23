@@ -3,7 +3,7 @@
 	"title": [
 		"",
 		{
-			"sprite": "survisland:item/dialog_sprite/card_8",
+			"sprite": "survisland:item/dialog_sprite/gland",
 			"shadow_color": [
 				0,
 				0,
@@ -14,12 +14,12 @@
 		},
 		" ",
 		{
-			"text": "Card 8",
+			"text": "Gland",
 			"underlined": true
 		},
 		" ",
 		{
-			"sprite": "survisland:item/dialog_sprite/card_8",
+			"sprite": "survisland:item/dialog_sprite/gland",
 			"shadow_color": [
 				0,
 				0,
@@ -47,8 +47,8 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "","font": "survisland:manual","color": "white","shadow_color": [0,0,0,0]},
-				"\u103c\n",
-				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "command_block","components": {"lore": [{"text": "Made by Canfav","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"item_model": "survisland:card_8","item_name": {"text": "Card 8"},"custom_data": {"survisland": {"card_8": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "survisland:manual/page_29"}},
+				"ွ\n",
+				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "survisland:gland","item_name": {"text": "Gland"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"custom_data": {"survisland": {"gland": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "survisland:manual/page_29"}},
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140

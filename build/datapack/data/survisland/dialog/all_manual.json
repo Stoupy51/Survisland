@@ -100,8 +100,7 @@
 		"survisland:manual/page_89",
 		"survisland:manual/page_90",
 		"survisland:manual/page_91",
-		"survisland:manual/page_92",
-		"survisland:manual/page_93"
+		"survisland:manual/page_92"
 	],
 	"exit_action": {
 		"label": {"translate": "gui.back"},

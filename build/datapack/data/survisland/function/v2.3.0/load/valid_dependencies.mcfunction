@@ -1,12 +1,12 @@
 
-#> survisland:v2.2.0/load/valid_dependencies
+#> survisland:v2.3.0/load/valid_dependencies
 #
-# @within	survisland:v2.2.0/load/secondary
-#			survisland:v2.2.0/load/valid_dependencies 1t replace [ scheduled ]
+# @within	survisland:v2.3.0/load/secondary
+#			survisland:v2.3.0/load/valid_dependencies 1t replace [ scheduled ]
 #
 
 # Waiting for a player to get the game version, but stop function if no player found
-execute unless entity @p run schedule function survisland:v2.2.0/load/valid_dependencies 1t replace
+execute unless entity @p run schedule function survisland:v2.3.0/load/valid_dependencies 1t replace
 execute unless entity @p run return 0
 execute store result score #game_version survisland.data run data get entity @p DataVersion
 
@@ -17,9 +17,6 @@ execute unless score #game_version survisland.data matches 4669.. run scoreboard
 # Decode errors
 execute if score #mcload_error survisland.data matches 1 run tellraw @a {"text":"Survisland Error: This version is made for Minecraft 1.21.11+.","color":"red"}
 execute if score #dependency_error survisland.data matches 1 run tellraw @a {"text":"Survisland Error: Libraries are missing\nplease download the right Survisland datapack\nor download each of these libraries one by one:","color":"red"}
-execute if score #dependency_error survisland.data matches 1 unless score #smithed.crafter.major load.status matches 0.. run tellraw @a {"text":"- [Smithed Crafter (v0.7.1+)]","color":"gold","click_event":{"action":"open_url","url":"https://wiki.smithed.dev/libraries/crafter/"}}
-execute if score #dependency_error survisland.data matches 1 if score #smithed.crafter.major load.status matches 0 unless score #smithed.crafter.minor load.status matches 7.. run tellraw @a {"text":"- [Smithed Crafter (v0.7.1+)]","color":"gold","click_event":{"action":"open_url","url":"https://wiki.smithed.dev/libraries/crafter/"}}
-execute if score #dependency_error survisland.data matches 1 if score #smithed.crafter.major load.status matches 0 if score #smithed.crafter.minor load.status matches 7 unless score #smithed.crafter.patch load.status matches 1.. run tellraw @a {"text":"- [Smithed Crafter (v0.7.1+)]","color":"gold","click_event":{"action":"open_url","url":"https://wiki.smithed.dev/libraries/crafter/"}}
 execute if score #dependency_error survisland.data matches 1 unless score #furnace_nbt_recipes.major load.status matches 1.. run tellraw @a {"text":"- [Furnace NBT Recipes (v1.10.1+)]","color":"gold","click_event":{"action":"open_url","url":"https://github.com/Stoupy51/FurnaceNbtRecipes"}}
 execute if score #dependency_error survisland.data matches 1 if score #furnace_nbt_recipes.major load.status matches 1 unless score #furnace_nbt_recipes.minor load.status matches 10.. run tellraw @a {"text":"- [Furnace NBT Recipes (v1.10.1+)]","color":"gold","click_event":{"action":"open_url","url":"https://github.com/Stoupy51/FurnaceNbtRecipes"}}
 execute if score #dependency_error survisland.data matches 1 if score #furnace_nbt_recipes.major load.status matches 1 if score #furnace_nbt_recipes.minor load.status matches 10 unless score #furnace_nbt_recipes.patch load.status matches 1.. run tellraw @a {"text":"- [Furnace NBT Recipes (v1.10.1+)]","color":"gold","click_event":{"action":"open_url","url":"https://github.com/Stoupy51/FurnaceNbtRecipes"}}
@@ -77,5 +74,5 @@ execute if score #dependency_error survisland.data matches 1 unless score $bs.xp
 execute if score #dependency_error survisland.data matches 1 if score $bs.xp.major load.status matches 3 unless score $bs.xp.minor load.status matches 2.. run tellraw @a {"text":"- [Bookshelf Xp (v3.2.0+)]","color":"gold","click_event":{"action":"open_url","url":"https://github.com/mcbookshelf/bookshelf/releases"}}
 
 # Load Survisland
-execute if score #game_version survisland.data matches 1.. if score #mcload_error survisland.data matches 0 if score #dependency_error survisland.data matches 0 run function survisland:v2.2.0/load/confirm_load
+execute if score #game_version survisland.data matches 1.. if score #mcload_error survisland.data matches 0 if score #dependency_error survisland.data matches 0 run function survisland:v2.3.0/load/confirm_load
 

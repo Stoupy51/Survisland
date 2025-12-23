@@ -1,14 +1,11 @@
 
-#> survisland:v2.2.0/load/check_dependencies
+#> survisland:v2.3.0/load/check_dependencies
 #
-# @within	survisland:v2.2.0/load/secondary
+# @within	survisland:v2.3.0/load/secondary
 #
 
 ## Check if Survisland is loadable (dependencies)
 scoreboard players set #dependency_error survisland.data 0
-execute if score #dependency_error survisland.data matches 0 unless score #smithed.crafter.major load.status matches 0.. run scoreboard players set #dependency_error survisland.data 1
-execute if score #dependency_error survisland.data matches 0 if score #smithed.crafter.major load.status matches 0 unless score #smithed.crafter.minor load.status matches 7.. run scoreboard players set #dependency_error survisland.data 1
-execute if score #dependency_error survisland.data matches 0 if score #smithed.crafter.major load.status matches 0 if score #smithed.crafter.minor load.status matches 7 unless score #smithed.crafter.patch load.status matches 1.. run scoreboard players set #dependency_error survisland.data 1
 execute if score #dependency_error survisland.data matches 0 unless score #furnace_nbt_recipes.major load.status matches 1.. run scoreboard players set #dependency_error survisland.data 1
 execute if score #dependency_error survisland.data matches 0 if score #furnace_nbt_recipes.major load.status matches 1 unless score #furnace_nbt_recipes.minor load.status matches 10.. run scoreboard players set #dependency_error survisland.data 1
 execute if score #dependency_error survisland.data matches 0 if score #furnace_nbt_recipes.major load.status matches 1 if score #furnace_nbt_recipes.minor load.status matches 10 unless score #furnace_nbt_recipes.patch load.status matches 1.. run scoreboard players set #dependency_error survisland.data 1

@@ -1,9 +1,34 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"text": "Logo #2",
-		"underlined": true
-	},
+	"title": [
+		"",
+		{
+			"sprite": "survisland:item/dialog_sprite/rice",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"text": "Rice",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "survisland:item/dialog_sprite/rice",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",
@@ -22,12 +47,10 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "","font": "survisland:manual","color": "white","shadow_color": [0,0,0,0]},
-				"\"\u1028\n\"",
-				{"text": "$\u80c7","hover_event": {"action": "show_item","id": "apple","components": {"consumable": {},"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},"item_model": "survisland:logo_s26","item_name": {"text": "Logo S26"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"custom_data": {"survisland": {"logo_s26": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "survisland:manual/page_93"}},
-				"#\n\"",
-				{"text": "!","hover_event": {"action": "show_item","id": "apple","components": {"consumable": {},"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},"item_model": "survisland:logo_s26","item_name": {"text": "Logo S26"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"custom_data": {"survisland": {"logo_s26": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "survisland:manual/page_93"}},
-				"#\n",
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				"ဩ\n",
+				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "apple","components": {"lore": [{"text": "Made by Emilou","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"max_stack_size": 1,"consumable": {"on_consume_effects": [{"type": "minecraft:apply_effects","effects": [{"duration": 100,"id": "minecraft:poison","show_icon": true}],"probability": 0.6}]},"food": {"nutrition": 2,"saturation": 1.2},"item_model": "survisland:rice","item_name": {"text": "Rice"},"custom_data": {"survisland": {"rice": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},"use_remainder": {"count": 1,"id": "minecraft:command_block","components": {"item_name": {"text": "Iron Bowl"},"item_model": "survisland:iron_bowl","lore": [{"text": "Made by Emilou","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]]}}}},"click_event": {"action": "show_dialog","dialog": "survisland:manual/page_9"}},
+				{"text": "背\n0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "survisland:manual","color": "white"},"\"G\n","\"",{"text": "$耡"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$耣"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"text": "\nSmelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"text": "Rice","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "survisland:manual/page_10"}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

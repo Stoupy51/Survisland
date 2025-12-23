@@ -11,7 +11,7 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_name": {
-									"text": "Feuille d'\u00e9rable",
+									"text": "Feuille d'érable",
 									"italic": false,
 									"color": "gold"
 								},

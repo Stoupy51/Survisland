@@ -3,7 +3,7 @@
 	"title": [
 		"",
 		{
-			"sprite": "survisland:item/dialog_sprite/marcus_chicken",
+			"sprite": "survisland:item/dialog_sprite/chocolatine",
 			"shadow_color": [
 				0,
 				0,
@@ -14,12 +14,12 @@
 		},
 		" ",
 		{
-			"text": "Marcus Chicken",
+			"text": "Chocolatine",
 			"underlined": true
 		},
 		" ",
 		{
-			"sprite": "survisland:item/dialog_sprite/marcus_chicken",
+			"sprite": "survisland:item/dialog_sprite/chocolatine",
 			"shadow_color": [
 				0,
 				0,
@@ -47,17 +47,9 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "","font": "survisland:manual","color": "white","shadow_color": [0,0,0,0]},
-				"\"$7\n\"",
-				{"text": "$\u80d6\n","hover_event": {"action": "show_item","id": "minecraft:cooked_chicken","components": {}}},
-				"\"",
-				{"text": "U$\n","hover_event": {"action": "show_item","id": "minecraft:cooked_chicken","components": {}}},
-				"\"\"\"\"U$U$",
-				{"text": "$$\u8027","hover_event": {"action": "show_item","id": "apple","components": {"lore": [{"text": "Made by Stoupy","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"consumable": {},"food": {"nutrition": 7,"saturation": 7.5},"item_model": "survisland:marcus_chicken","item_name": {"text": "Marcus Chicken"},"custom_data": {"survisland": {"marcus_chicken": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
-				"#$\n\"\"\"\"U$U$",
-				{"text": "U$","hover_event": {"action": "show_item","id": "apple","components": {"lore": [{"text": "Made by Stoupy","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"consumable": {},"food": {"nutrition": 7,"saturation": 7.5},"item_model": "survisland:marcus_chicken","item_name": {"text": "Marcus Chicken"},"custom_data": {"survisland": {"marcus_chicken": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
-				"#$\n\n\n\n",
-				{"text": "2\n0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "survisland:manual","color": "white"},"\"G\n","\"",{"text": "$\u80d6"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$\u8027"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"text": "\nSmelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"text": "Cooked Chicken","color": "gray"}]}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				"ိ\n",
+				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "apple","components": {"lore": [{"text": "Made by Fhara","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"consumable": {},"food": {"nutrition": 5,"saturation": 6},"item_model": "survisland:chocolatine","item_name": {"text": "Chocolatine"},"custom_data": {"survisland": {"chocolatine": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "survisland:manual/page_13"}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

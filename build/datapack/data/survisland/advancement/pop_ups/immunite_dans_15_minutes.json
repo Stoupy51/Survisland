@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": {"id": "minecraft:stone","components": {"minecraft:item_model": "survisland:icon"}},
-		"title": {"text": "Immunit\u00e9 dans 15 minutes","color": "aqua"},
+		"title": {"text": "Immunité dans 15 minutes","color": "aqua"},
 		"description": "",
 		"frame": "task",
 		"show_toast": true,
