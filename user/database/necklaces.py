@@ -1,6 +1,6 @@
 
 # Imports
-from stewbeet import CUSTOM_ITEM_VANILLA, Equipment, Mem, Texture, set_json_encoder
+from stewbeet import CUSTOM_ITEM_VANILLA, Equipment, JsonDict, Mem, Texture, set_json_encoder
 
 # Constants
 NECKLACES: list[str] = ["necklace", "cursed_necklace", "dinosaur_necklace"]
@@ -27,6 +27,6 @@ def main() -> None:
 		Mem.ctx.assets[ns].textures[f"entity/equipment/humanoid/{necklace}_held"] = Texture(source_path=source)
 
 		# Write model
-		model_data: dict = {"layers": {"humanoid": [{"texture": f"{ns}:{necklace}_held"}]}}
+		model_data: JsonDict = {"layers": {"humanoid": [{"texture": f"{ns}:{necklace}_held"}]}}
 		Mem.ctx.assets[ns].equipments[necklace] = set_json_encoder(Equipment(model_data))
 

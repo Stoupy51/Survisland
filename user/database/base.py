@@ -3,11 +3,11 @@
 # Imports
 import os
 
-from stewbeet import CUSTOM_ITEM_VANILLA, OVERRIDE_MODEL, RESULT_OF_CRAFTING, Mem, ingr_repr
+from stewbeet import CUSTOM_ITEM_VANILLA, OVERRIDE_MODEL, RESULT_OF_CRAFTING, JsonDict, Mem, ingr_repr
 
 
 # Main function should return a database
-def main() -> None:
+def main() -> dict[str, JsonDict]:
 	ns: str = Mem.ctx.project_id
 
 	# Setup database
@@ -673,7 +673,7 @@ def main() -> None:
 	}
 
 	# Get textures
-	textures = os.listdir(Mem.ctx.meta.get("stewbeet", {}).get("textures_folder", ""))
+	textures: list[str] = os.listdir(str(Mem.ctx.meta.get("stewbeet", {}).get("textures_folder", "")))
 
 	# Add colored books
 	books: list[str] = [x.replace(".png","") for x in textures if "book_" in x]

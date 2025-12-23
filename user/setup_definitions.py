@@ -3,6 +3,7 @@
 from stewbeet import (
 	CUSTOM_ITEM_VANILLA,
 	Context,
+	JsonDict,
 	Mem,
 	add_item_model_component,
 	add_item_name_and_lore_if_missing,
@@ -19,8 +20,6 @@ from user.database.tribe_civilization import main as make_tribe_civilization
 
 # Main function should return a database
 def beet_default(ctx: Context) -> None:
-	if Mem.ctx is None:
-		Mem.ctx = ctx
 
 	# Apply database
 	make_database()
@@ -37,7 +36,7 @@ def beet_default(ctx: Context) -> None:
 	add_smithed_ignore_vanilla_behaviours_convention()
 
 	# Remaining data
-	iron_bowl: dict = Mem.definitions["iron_bowl"]
+	iron_bowl: JsonDict = Mem.definitions["iron_bowl"]
 	for rice in ["rice", "cooked_rice"]:
 		Mem.definitions[rice]["use_remainder"] = {
 			"count": 1,
