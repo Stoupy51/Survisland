@@ -20,5 +20,6 @@ def beet_default(ctx: Context) -> None:
 		official_lib_used(module)
 
 	# Delete quick actions (manual)
-	del Mem.ctx.data["minecraft"].dialogs_tags["quick_actions"]
+	if Mem.ctx.data["minecraft"].dialogs_tags.get("quick_actions"):
+		del Mem.ctx.data["minecraft"].dialogs_tags["quick_actions"]
 
