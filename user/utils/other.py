@@ -1,8 +1,9 @@
 
 # ruff: noqa: E501
 # Imports
+import stouputils as stp
 from beet import ItemTag
-from stewbeet import Advancement, ItemModel, Mem, set_json_encoder, write_function, write_load_file, write_tick_file, write_versioned_function
+from stewbeet import Advancement, Item, ItemModel, JsonDict, Mem, set_json_encoder, write_function, write_load_file, write_tick_file, write_versioned_function
 
 
 # Generates trivial things in the datapack
@@ -80,7 +81,7 @@ kill @e[type=marker,tag={ns}.keep_inventory]
 """)
 
 	# Right click
-	json_content: dict = {"criteria":{"requirement":{"trigger":"minecraft:tick","conditions":{"player":[{"condition":"minecraft:entity_scores","entity":"this","scores":{f"{ns}.right_click":{"min":1}}}]}}},"rewards":{"function":f"{ns}:utils/right_click"}}
+	json_content: JsonDict = {"criteria":{"requirement":{"trigger":"minecraft:tick","conditions":{"player":[{"condition":"minecraft:entity_scores","entity":"this","scores":{f"{ns}.right_click":{"min":1}}}]}}},"rewards":{"function":f"{ns}:utils/right_click"}}
 	Mem.ctx.data[ns].advancements["right_click"] = set_json_encoder(Advancement(json_content), max_level=-1)
 	write_function(f"{ns}:utils/right_click", f"""
 # Advancement revoke
@@ -99,15 +100,17 @@ scoreboard players reset @s {ns}.right_click
 tag @s remove {ns}.temp
 """)
 
-	# Make parchemins tintables
-	Mem.ctx.data["minecraft"].item_tags["dyeable"] = set_json_encoder(ItemTag({"values":["minecraft:warped_fungus_on_a_stick"]}))
+	# Make parchemins, and dragon_necklace tintables
+	parchemin = Item.from_id("parchemin")
+	dragon_necklace = Item.from_id("dragon_necklace")
+	Mem.ctx.data["minecraft"].item_tags["dyeable"] = set_json_encoder(ItemTag({"values":stp.unique_list([parchemin.base_item, dragon_necklace.base_item])}))
 	Mem.ctx.assets[ns].item_models["parchemin"] = set_json_encoder(ItemModel({"model":{"type":"minecraft:model","model":f"{ns}:item/parchemin","tints":[{"type":"minecraft:dye","default":[0.780,0.737,0.647]}]}}), max_level=3)
 	Mem.ctx.assets[ns].item_models["deployed_parchemin"] = set_json_encoder(ItemModel({"model":{"type":"minecraft:model","model":f"{ns}:item/deployed_parchemin","tints":[{"type":"minecraft:dye","default":[0.780,0.737,0.647]}]}}), max_level=3)
+	Mem.ctx.assets[ns].item_models["dragon_necklace"] = set_json_encoder(ItemModel({"model":{"type":"minecraft:model","model":f"{ns}:item/dragon_necklace","tints":[{"type":"minecraft:dye","default":[1.0,1.0,1.0]}]}}), max_level=3)
 
 	# parchemins/_convert_to_scroll
-	parchemin: dict = Mem.definitions["parchemin"]
-	p_id: str = parchemin["id"]
-	p_model: str = parchemin["item_model"]
+	p_id: str = parchemin.base_item
+	p_model: str = parchemin.components["item_model"]
 	write_function(f"{ns}:parchemins/_convert_to_scroll", f"""
 # Replace the book by a scroll
 data modify storage {ns}:main Item.id set value "{p_id}"
