@@ -1,0 +1,45 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:lore": [
+									{
+										"text": "Made by EvoRay",
+										"color": "gold",
+										"italic": false
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
+										{"text": " Survisland","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:consumable": {},
+								"minecraft:item_model": "survisland:scalbar",
+								"minecraft:item_name": {
+									"text": "Scalbar"
+								},
+								"minecraft:custom_data": {
+									"survisland": {
+										"scalbar": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

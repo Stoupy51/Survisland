@@ -1,0 +1,44 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"survisland": {
+										"11_live_to_see_tomorrow": true
+									},
+									"smithed": {
+										"dict": {"record": {"11_live_to_see_tomorrow": true,"item_name": "11 - Live to See Tomorrow"},"jukebox_song": {"comparator_output": 13,"length_in_seconds": 190,"sound_event": {"sound_id": "survisland:11_live_to_see_tomorrow"},"description": {"text": "11 - Live to See Tomorrow"}}},
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:item_name": {
+									"text": "Music Disc",
+									"italic": false
+								},
+								"minecraft:jukebox_playable": "survisland:11_live_to_see_tomorrow",
+								"minecraft:max_stack_size": 1,
+								"minecraft:rarity": "rare",
+								"minecraft:item_model": "survisland:11_live_to_see_tomorrow",
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
+										{"text": " Survisland","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

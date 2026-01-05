@@ -1,0 +1,8 @@
+{
+	"sources": [
+		{"type": "minecraft:single","resource": "minecraft:block/green_concrete","sprite": "survisland:atlas/green_concrete"},
+		{"type": "minecraft:single","resource": "minecraft:block/oak_planks","sprite": "survisland:atlas/oak_planks"},
+		{"type": "minecraft:single","resource": "minecraft:block/red_concrete","sprite": "survisland:atlas/red_concrete"},
+		{"type": "minecraft:single","resource": "minecraft:block/white_concrete","sprite": "survisland:atlas/white_concrete"}
+	]
+}

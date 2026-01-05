@@ -1,0 +1,6 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "survisland:item/19_in_the_heart_of_the_stars"
+	}
+}

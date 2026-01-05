@@ -1,0 +1,49 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:warped_fungus_on_a_stick",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:lore": [
+									{
+										"text": "Clic-droit pour éteindre la torche",
+										"italic": false,
+										"color": "gray"
+									},
+									{
+										"text": "du joueur le plus proche",
+										"italic": false,
+										"color": "gray"
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
+										{"text": " Survisland","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:item_model": "survisland:snuffer",
+								"minecraft:item_name": {
+									"text": "Snuffer"
+								},
+								"minecraft:custom_data": {
+									"survisland": {
+										"snuffer": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

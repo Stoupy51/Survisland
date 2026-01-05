@@ -1,0 +1,6 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "survisland:item/14_es_close_combat_fredrik_ekstrom"
+	}
+}

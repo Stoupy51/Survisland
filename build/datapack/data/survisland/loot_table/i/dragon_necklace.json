@@ -1,0 +1,45 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:max_stack_size": 1,
+								"minecraft:equippable": {
+									"slot": "chest",
+									"asset_id": "survisland:dragon_necklace",
+									"damage_on_hurt": false
+								},
+								"minecraft:item_model": "survisland:dragon_necklace",
+								"minecraft:item_name": {
+									"text": "Dragon Necklace"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
+										{"text": " Survisland","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:custom_data": {
+									"survisland": {
+										"dragon_necklace": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

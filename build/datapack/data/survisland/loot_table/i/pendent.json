@@ -1,0 +1,45 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:lore": [
+									{
+										"text": "[Seconde main pour l'équiper]",
+										"italic": false,
+										"color": "gray"
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
+										{"text": " Survisland","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:max_stack_size": 64,
+								"minecraft:item_model": "survisland:pendent",
+								"minecraft:item_name": {
+									"text": "Pendent"
+								},
+								"minecraft:custom_data": {
+									"survisland": {
+										"pendent": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

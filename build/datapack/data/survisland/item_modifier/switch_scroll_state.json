@@ -1,0 +1,44 @@
+[
+	{
+		"function": "minecraft:set_components",
+		"components": {
+			"minecraft:item_model": "survisland:parchemin"
+		},
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"mainhand": {
+							"components": {
+								"minecraft:item_model": "survisland:deployed_parchemin"
+							}
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_components",
+		"components": {
+			"minecraft:item_model": "survisland:deployed_parchemin"
+		},
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"mainhand": {
+							"components": {
+								"minecraft:item_model": "survisland:parchemin"
+							}
+						}
+					}
+				}
+			}
+		]
+	}
+]

@@ -1,0 +1,54 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:apple",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:consumable": {},
+								"minecraft:food": {
+									"nutrition": 4,
+									"saturation": 2.4,
+									"can_always_eat": true
+								},
+								"minecraft:lore": [
+									{
+										"text": "Made by M4TOUW",
+										"color": "gold",
+										"italic": false
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
+										{"text": " Survisland","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:equippable": {
+									"slot": "head",
+									"camera_overlay": "survisland:item/poisson_thon"
+								},
+								"minecraft:item_model": "survisland:poisson_thon",
+								"minecraft:item_name": {
+									"text": "Poisson Thon"
+								},
+								"minecraft:custom_data": {
+									"survisland": {
+										"poisson_thon": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,44 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"survisland": {
+										"27_among_our_dreams": true
+									},
+									"smithed": {
+										"dict": {"record": {"27_among_our_dreams": true,"item_name": "27 - Among our Dreams"},"jukebox_song": {"comparator_output": 9,"length_in_seconds": 250,"sound_event": {"sound_id": "survisland:27_among_our_dreams"},"description": {"text": "27 - Among our Dreams"}}},
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:item_name": {
+									"text": "Music Disc",
+									"italic": false
+								},
+								"minecraft:jukebox_playable": "survisland:27_among_our_dreams",
+								"minecraft:max_stack_size": 1,
+								"minecraft:rarity": "rare",
+								"minecraft:item_model": "survisland:27_among_our_dreams",
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
+										{"text": " Survisland","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

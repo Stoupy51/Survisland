@@ -1,0 +1,44 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"survisland": {
+										"24_the_darkness_inside": true
+									},
+									"smithed": {
+										"dict": {"record": {"24_the_darkness_inside": true,"item_name": "24 - The Darkness Inside"},"jukebox_song": {"comparator_output": 1,"length_in_seconds": 162,"sound_event": {"sound_id": "survisland:24_the_darkness_inside"},"description": {"text": "24 - The Darkness Inside"}}},
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:item_name": {
+									"text": "Music Disc",
+									"italic": false
+								},
+								"minecraft:jukebox_playable": "survisland:24_the_darkness_inside",
+								"minecraft:max_stack_size": 1,
+								"minecraft:rarity": "rare",
+								"minecraft:item_model": "survisland:24_the_darkness_inside",
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
+										{"text": " Survisland","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

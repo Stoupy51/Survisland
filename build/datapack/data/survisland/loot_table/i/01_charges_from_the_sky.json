@@ -1,0 +1,44 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"survisland": {
+										"01_charges_from_the_sky": true
+									},
+									"smithed": {
+										"dict": {"record": {"01_charges_from_the_sky": true,"item_name": "01 - Charges From The Sky"},"jukebox_song": {"comparator_output": 8,"length_in_seconds": 137,"sound_event": {"sound_id": "survisland:01_charges_from_the_sky"},"description": {"text": "01 - Charges From The Sky"}}},
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:item_name": {
+									"text": "Music Disc",
+									"italic": false
+								},
+								"minecraft:jukebox_playable": "survisland:01_charges_from_the_sky",
+								"minecraft:max_stack_size": 1,
+								"minecraft:rarity": "rare",
+								"minecraft:item_model": "survisland:01_charges_from_the_sky",
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
+										{"text": " Survisland","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

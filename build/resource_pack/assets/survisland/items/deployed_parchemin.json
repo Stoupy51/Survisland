@@ -1,0 +1,9 @@
+{
+	"model": {
+		"type": "minecraft:model",
+		"model": "survisland:item/deployed_parchemin",
+		"tints": [
+			{"type": "minecraft:dye","default": [0.78,0.737,0.647]}
+		]
+	}
+}

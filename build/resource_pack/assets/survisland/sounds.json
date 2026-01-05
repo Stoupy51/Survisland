@@ -1,0 +1,182 @@
+{
+	"01_charges_from_the_sky": {
+		"subtitle": "01_charges_from_the_sky",
+		"sounds": [{"name": "survisland:01_charges_from_the_sky","stream": true}]
+	},
+	"02_es_clash_bonnie_grace": {
+		"subtitle": "02_es_clash_bonnie_grace",
+		"sounds": [{"name": "survisland:02_es_clash_bonnie_grace","stream": true}]
+	},
+	"03_crescent_battle": {
+		"subtitle": "03_crescent_battle",
+		"sounds": [{"name": "survisland:03_crescent_battle","stream": true}]
+	},
+	"04_fade_into_darkness": {
+		"subtitle": "04_fade_into_darkness",
+		"sounds": [{"name": "survisland:04_fade_into_darkness","stream": true}]
+	},
+	"05_extinction_report": {
+		"subtitle": "05_extinction_report",
+		"sounds": [{"name": "survisland:05_extinction_report","stream": true}]
+	},
+	"06_colin_root_blackout": {
+		"subtitle": "06_colin_root_blackout",
+		"sounds": [{"name": "survisland:06_colin_root_blackout","stream": true}]
+	},
+	"07_aliaksei_yukhnevich_deliverance": {
+		"subtitle": "07_aliaksei_yukhnevich_deliverance",
+		"sounds": [{"name": "survisland:07_aliaksei_yukhnevich_deliverance","stream": true}]
+	},
+	"08_battle_of_the_ocean": {
+		"subtitle": "08_battle_of_the_ocean",
+		"sounds": [{"name": "survisland:08_battle_of_the_ocean","stream": true}]
+	},
+	"09_challenger": {
+		"subtitle": "09_challenger",
+		"sounds": [{"name": "survisland:09_challenger","stream": true}]
+	},
+	"10_elite_voids": {
+		"subtitle": "10_elite_voids",
+		"sounds": [{"name": "survisland:10_elite_voids","stream": true}]
+	},
+	"11_live_to_see_tomorrow": {
+		"subtitle": "11_live_to_see_tomorrow",
+		"sounds": [{"name": "survisland:11_live_to_see_tomorrow","stream": true}]
+	},
+	"12_ivan_shpilevsky_the_time": {
+		"subtitle": "12_ivan_shpilevsky_the_time",
+		"sounds": [{"name": "survisland:12_ivan_shpilevsky_the_time","stream": true}]
+	},
+	"13_nick_froud_breaking_sky": {
+		"subtitle": "13_nick_froud_breaking_sky",
+		"sounds": [{"name": "survisland:13_nick_froud_breaking_sky","stream": true}]
+	},
+	"14_es_close_combat_fredrik_ekstrom": {
+		"subtitle": "14_es_close_combat_fredrik_ekstrom",
+		"sounds": [{"name": "survisland:14_es_close_combat_fredrik_ekstrom","stream": true}]
+	},
+	"15_the_ritual": {
+		"subtitle": "15_the_ritual",
+		"sounds": [{"name": "survisland:15_the_ritual","stream": true}]
+	},
+	"16_resolute": {
+		"subtitle": "16_resolute",
+		"sounds": [{"name": "survisland:16_resolute","stream": true}]
+	},
+	"17_es_nevertheless_she_persisted_bonnie_grace": {
+		"subtitle": "17_es_nevertheless_she_persisted_bonnie_grace",
+		"sounds": [{"name": "survisland:17_es_nevertheless_she_persisted_bonnie_grace","stream": true}]
+	},
+	"18_ragesound_vortex": {
+		"subtitle": "18_ragesound_vortex",
+		"sounds": [{"name": "survisland:18_ragesound_vortex","stream": true}]
+	},
+	"19_in_the_heart_of_the_stars": {
+		"subtitle": "19_in_the_heart_of_the_stars",
+		"sounds": [{"name": "survisland:19_in_the_heart_of_the_stars","stream": true}]
+	},
+	"20_last_hope": {
+		"subtitle": "20_last_hope",
+		"sounds": [{"name": "survisland:20_last_hope","stream": true}]
+	},
+	"21_timur_haisyn_brutal_fervour": {
+		"subtitle": "21_timur_haisyn_brutal_fervour",
+		"sounds": [{"name": "survisland:21_timur_haisyn_brutal_fervour","stream": true}]
+	},
+	"22_es_our_last_stand_formantx": {
+		"subtitle": "22_es_our_last_stand_formantx",
+		"sounds": [{"name": "survisland:22_es_our_last_stand_formantx","stream": true}]
+	},
+	"23_victor_cooper_windwalker": {
+		"subtitle": "23_victor_cooper_windwalker",
+		"sounds": [{"name": "survisland:23_victor_cooper_windwalker","stream": true}]
+	},
+	"24_the_darkness_inside": {
+		"subtitle": "24_the_darkness_inside",
+		"sounds": [{"name": "survisland:24_the_darkness_inside","stream": true}]
+	},
+	"25_fireborn": {
+		"subtitle": "25_fireborn",
+		"sounds": [{"name": "survisland:25_fireborn","stream": true}]
+	},
+	"26_angie_battle": {
+		"subtitle": "26_angie_battle",
+		"sounds": [{"name": "survisland:26_angie_battle","stream": true}]
+	},
+	"27_among_our_dreams": {
+		"subtitle": "27_among_our_dreams",
+		"sounds": [{"name": "survisland:27_among_our_dreams","stream": true}]
+	},
+	"28_dynasty": {
+		"subtitle": "28_dynasty",
+		"sounds": [{"name": "survisland:28_dynasty","stream": true}]
+	},
+	"29_hold_the_line": {
+		"subtitle": "29_hold_the_line",
+		"sounds": [{"name": "survisland:29_hold_the_line","stream": true}]
+	},
+	"30_vitalii_suzdin_beyond_the_mind": {
+		"subtitle": "30_vitalii_suzdin_beyond_the_mind",
+		"sounds": [{"name": "survisland:30_vitalii_suzdin_beyond_the_mind","stream": true}]
+	},
+	"31_carnival_row": {
+		"subtitle": "31_carnival_row",
+		"sounds": [{"name": "survisland:31_carnival_row","stream": true}]
+	},
+	"32_final_act": {
+		"subtitle": "32_final_act",
+		"sounds": [{"name": "survisland:32_final_act","stream": true}]
+	},
+	"33_path_to_glory": {
+		"subtitle": "33_path_to_glory",
+		"sounds": [{"name": "survisland:33_path_to_glory","stream": true}]
+	},
+	"34_perfect_chaos": {
+		"subtitle": "34_perfect_chaos",
+		"sounds": [{"name": "survisland:34_perfect_chaos","stream": true}]
+	},
+	"35_we_are_vanguards": {
+		"subtitle": "35_we_are_vanguards",
+		"sounds": [{"name": "survisland:35_we_are_vanguards","stream": true}]
+	},
+	"rat_dance": {
+		"subtitle": "rat_dance",
+		"sounds": [{"name": "survisland:rat_dance","stream": true}]
+	},
+	"fart": {
+		"subtitle": "fart",
+		"sounds": ["survisland:fart"]
+	},
+	"fart_reverb": {
+		"subtitle": "fart_reverb",
+		"sounds": ["survisland:fart_reverb"]
+	},
+	"laser_gun": {
+		"subtitle": "laser_gun",
+		"sounds": ["survisland:laser_gun"]
+	},
+	"maracas": {
+		"subtitle": "maracas",
+		"sounds": ["survisland:maracas"]
+	},
+	"mingle_song": {
+		"subtitle": "mingle_song",
+		"sounds": ["survisland:mingle_song"]
+	},
+	"rompich": {
+		"subtitle": "rompich",
+		"sounds": ["survisland:rompich"]
+	},
+	"scary_screamer": {
+		"subtitle": "scary_screamer",
+		"sounds": ["survisland:scary_screamer"]
+	},
+	"taco_bell": {
+		"subtitle": "taco_bell",
+		"sounds": ["survisland:taco_bell"]
+	},
+	"vine_boom": {
+		"subtitle": "vine_boom",
+		"sounds": ["survisland:vine_boom"]
+	}
+}

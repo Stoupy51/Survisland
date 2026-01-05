@@ -1,0 +1,248 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"2": "survisland:item/mask_re2",
+		"particle": "survisland:item/mask_re2"
+	},
+	"credit": "Made with Blockbench",
+	"elements": [
+		{
+			"from": [
+				2,
+				0,
+				14
+			],
+			"to": [
+				14,
+				2,
+				16
+			],
+			"rotation": {
+				"angle": 0,
+				"axis": "y",
+				"origin": [8,0,22]
+			},
+			"faces": {
+				"north": {"uv": [2,12,3,13],"texture": "#2"},
+				"east": {"uv": [2,12,3,13],"texture": "#2"},
+				"south": {"uv": [2,12,3,13],"texture": "#2"},
+				"west": {"uv": [2,12,3,13],"texture": "#2"},
+				"up": {"uv": [2,12,3,13],"texture": "#2"},
+				"down": {"uv": [2,12,3,13],"texture": "#2"}
+			}
+		},
+		{
+			"from": [
+				0,
+				0,
+				0
+			],
+			"to": [
+				16,
+				2,
+				2
+			],
+			"rotation": {
+				"angle": 0,
+				"axis": "y",
+				"origin": [8,0,8]
+			},
+			"faces": {
+				"north": {"uv": [2,12,3,13],"texture": "#2"},
+				"east": {"uv": [2,12,3,13],"texture": "#2"},
+				"south": {"uv": [2,12,3,13],"texture": "#2"},
+				"west": {"uv": [2,12,3,13],"texture": "#2"},
+				"up": {"uv": [2,12,3,13],"texture": "#2"},
+				"down": {"uv": [2,12,3,13],"texture": "#2"}
+			}
+		},
+		{
+			"from": [
+				0,
+				0,
+				2
+			],
+			"to": [
+				2,
+				2,
+				16
+			],
+			"rotation": {
+				"angle": 0,
+				"axis": "y",
+				"origin": [8,0,8]
+			},
+			"faces": {
+				"north": {"uv": [2,12,3,13],"texture": "#2"},
+				"east": {"uv": [2,12,3,13],"texture": "#2"},
+				"south": {"uv": [2,12,3,13],"texture": "#2"},
+				"west": {"uv": [2,12,3,13],"texture": "#2"},
+				"up": {"uv": [2,12,3,13],"texture": "#2"},
+				"down": {"uv": [2,12,3,13],"texture": "#2"}
+			}
+		},
+		{
+			"from": [
+				14,
+				0,
+				2
+			],
+			"to": [
+				16,
+				2,
+				16
+			],
+			"rotation": {
+				"angle": 0,
+				"axis": "y",
+				"origin": [22,0,8]
+			},
+			"faces": {
+				"north": {"uv": [2,12,3,13],"texture": "#2"},
+				"east": {"uv": [2,12,3,13],"texture": "#2"},
+				"south": {"uv": [2,12,3,13],"texture": "#2"},
+				"west": {"uv": [2,12,3,13],"texture": "#2"},
+				"up": {"uv": [2,12,3,13],"texture": "#2"},
+				"down": {"uv": [2,12,3,13],"texture": "#2"}
+			}
+		},
+		{
+			"from": [
+				5,
+				0,
+				-2
+			],
+			"to": [
+				11,
+				5,
+				2
+			],
+			"rotation": {
+				"angle": 0,
+				"axis": "y",
+				"origin": [8,0,8]
+			},
+			"faces": {
+				"north": {"uv": [3,2,5,3],"texture": "#2"},
+				"east": {"uv": [7,12,9,13],"texture": "#2"},
+				"south": {"uv": [2,12,3,13],"texture": "#2"},
+				"west": {"uv": [7,12,9,13],"texture": "#2"},
+				"up": {"uv": [7,12,9,13],"texture": "#2"},
+				"down": {"uv": [7,12,9,13],"texture": "#2"}
+			}
+		},
+		{
+			"from": [
+				3,
+				0,
+				-1
+			],
+			"to": [
+				13,
+				4,
+				2
+			],
+			"rotation": {
+				"angle": 0,
+				"axis": "y",
+				"origin": [8,0,8]
+			},
+			"faces": {
+				"north": {"uv": [6,9,10,11],"texture": "#2"},
+				"east": {"uv": [6,9,10,11],"texture": "#2"},
+				"south": {"uv": [2,12,3,13],"texture": "#2"},
+				"west": {"uv": [6,9,10,11],"texture": "#2"},
+				"up": {"uv": [6,9,10,11],"texture": "#2"},
+				"down": {"uv": [6,9,10,11],"texture": "#2"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [
+				0,
+				0.75,
+				-1.75
+			],
+			"scale": [
+				0.38,
+				0.38,
+				0.4
+			]
+		},
+		"thirdperson_lefthand": {
+			"translation": [
+				0,
+				0.5,
+				-1.75
+			],
+			"scale": [
+				0.38,
+				0.37,
+				0.38
+			]
+		},
+		"firstperson_righthand": {
+			"translation": [
+				0,
+				6,
+				0
+			]
+		},
+		"firstperson_lefthand": {
+			"translation": [
+				0,
+				6,
+				0
+			]
+		},
+		"ground": {
+			"translation": [
+				0,
+				2.25,
+				0
+			],
+			"scale": [
+				0.38,
+				0.38,
+				0.38
+			]
+		},
+		"gui": {
+			"rotation": [
+				45,
+				45,
+				0
+			],
+			"translation": [
+				0,
+				3.5,
+				0
+			],
+			"scale": [
+				0.7,
+				0.7,
+				0.7
+			]
+		},
+		"head": {
+			"translation": [
+				0,
+				1.25,
+				0
+			]
+		},
+		"fixed": {
+			"rotation": [
+				-90,
+				0,
+				0
+			],
+			"translation": [
+				0,
+				0,
+				-7
+			]
+		}
+	}
+}

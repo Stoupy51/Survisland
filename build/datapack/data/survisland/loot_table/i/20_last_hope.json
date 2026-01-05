@@ -1,0 +1,44 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"survisland": {
+										"20_last_hope": true
+									},
+									"smithed": {
+										"dict": {"record": {"20_last_hope": true,"item_name": "20 - Last Hope"},"jukebox_song": {"comparator_output": 1,"length_in_seconds": 226,"sound_event": {"sound_id": "survisland:20_last_hope"},"description": {"text": "20 - Last Hope"}}},
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:item_name": {
+									"text": "Music Disc",
+									"italic": false
+								},
+								"minecraft:jukebox_playable": "survisland:20_last_hope",
+								"minecraft:max_stack_size": 1,
+								"minecraft:rarity": "rare",
+								"minecraft:item_model": "survisland:20_last_hope",
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
+										{"text": " Survisland","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

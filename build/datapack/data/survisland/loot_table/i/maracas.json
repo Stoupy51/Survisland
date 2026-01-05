@@ -1,0 +1,50 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:diamond_sword",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:lore": [
+									{
+										"text": "Made by M4TOUW",
+										"color": "gold",
+										"italic": false
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
+										{"text": " Survisland","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:equippable": {
+									"slot": "chest",
+									"equip_sound": {
+										"sound_id": "survisland:maracas"
+									}
+								},
+								"minecraft:item_model": "survisland:maracas",
+								"minecraft:item_name": {
+									"text": "Maracas"
+								},
+								"minecraft:custom_data": {
+									"survisland": {
+										"maracas": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

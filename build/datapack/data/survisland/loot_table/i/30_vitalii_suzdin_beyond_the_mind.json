@@ -1,0 +1,44 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"survisland": {
+										"30_vitalii_suzdin_beyond_the_mind": true
+									},
+									"smithed": {
+										"dict": {"record": {"30_vitalii_suzdin_beyond_the_mind": true,"item_name": "30 - Vitalii Suzdin - Beyond the Mind"},"jukebox_song": {"comparator_output": 9,"length_in_seconds": 122,"sound_event": {"sound_id": "survisland:30_vitalii_suzdin_beyond_the_mind"},"description": {"text": "30 - Vitalii Suzdin - Beyond the Mind"}}},
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:item_name": {
+									"text": "Music Disc",
+									"italic": false
+								},
+								"minecraft:jukebox_playable": "survisland:30_vitalii_suzdin_beyond_the_mind",
+								"minecraft:max_stack_size": 1,
+								"minecraft:rarity": "rare",
+								"minecraft:item_model": "survisland:30_vitalii_suzdin_beyond_the_mind",
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
+										{"text": " Survisland","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
