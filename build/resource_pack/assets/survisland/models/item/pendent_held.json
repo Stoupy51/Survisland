@@ -1,0 +1,80 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "survisland:item/pendent_held"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"scale": [
+				0,
+				0,
+				0
+			]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [
+				68,
+				0,
+				0
+			],
+			"translation": [
+				-5.75,
+				0.5,
+				6.5
+			],
+			"scale": [
+				0.66,
+				0.66,
+				0.66
+			]
+		},
+		"firstperson_righthand": {
+			"translation": [
+				0,
+				3,
+				0
+			],
+			"scale": [
+				0,
+				0,
+				0
+			]
+		},
+		"firstperson_lefthand": {
+			"translation": [
+				0,
+				3,
+				0
+			],
+			"scale": [
+				0,
+				0,
+				0
+			]
+		},
+		"head": {
+			"translation": [
+				0,
+				-14.25,
+				-5
+			],
+			"scale": [
+				1.1,
+				1.1,
+				1.1
+			]
+		},
+		"fixed": {
+			"translation": [
+				0,
+				0.75,
+				0
+			],
+			"scale": [
+				1.25,
+				1.25,
+				1.25
+			]
+		}
+	}
+}

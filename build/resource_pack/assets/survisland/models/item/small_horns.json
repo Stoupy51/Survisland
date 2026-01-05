@@ -1,0 +1,22 @@
+{
+	"parent": "survisland:item/horns",
+	"textures": {
+		"0": "survisland:item/horns",
+		"particle": "survisland:item/horns"
+	},
+	"credit": "Made with Blockbench",
+	"display": {
+		"head": {
+			"translation": [
+				0,
+				10,
+				-4
+			],
+			"scale": [
+				0.75,
+				0.75,
+				0.75
+			]
+		}
+	}
+}

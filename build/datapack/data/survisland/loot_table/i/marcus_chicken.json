@@ -1,0 +1,49 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:apple",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:lore": [
+									{
+										"text": "Made by Stoupy",
+										"color": "gold",
+										"italic": false
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
+										{"text": " Survisland","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:consumable": {},
+								"minecraft:food": {
+									"nutrition": 7,
+									"saturation": 7.5
+								},
+								"minecraft:item_model": "survisland:marcus_chicken",
+								"minecraft:item_name": {
+									"text": "Marcus Chicken"
+								},
+								"minecraft:custom_data": {
+									"survisland": {
+										"marcus_chicken": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

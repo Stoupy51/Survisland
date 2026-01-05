@@ -1,0 +1,50 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "survisland:item/parchemin"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"scale": [
+				0.5,
+				0.5,
+				0.5
+			]
+		},
+		"thirdperson_lefthand": {
+			"scale": [
+				0.5,
+				0.5,
+				0.5
+			]
+		},
+		"firstperson_righthand": {
+			"scale": [
+				0.5,
+				0.5,
+				0.5
+			]
+		},
+		"firstperson_lefthand": {
+			"scale": [
+				0.5,
+				0.5,
+				0.5
+			]
+		},
+		"ground": {
+			"scale": [
+				0.5,
+				0.5,
+				0.5
+			]
+		},
+		"head": {
+			"scale": [
+				1.1,
+				1.1,
+				1.1
+			]
+		}
+	}
+}

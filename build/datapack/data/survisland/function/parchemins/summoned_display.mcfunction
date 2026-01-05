@@ -1,0 +1,25 @@
+
+#> survisland:parchemins/summoned_display
+#
+# @executed	as the player & at current position
+#
+# @within	survisland:parchemins/deploy_open
+#			survisland:parchemins/deploy_open [ as @n[tag=survisland.new] & at @s ]
+#
+# @executed			as & at current item_display or text_display
+# 
+# @description		Setup additional data for summoned item_display or text_display
+#
+
+# Copy rotation
+data modify entity @s Rotation[0] set from storage survisland:main Rotation[0]
+
+# Get item components
+execute if entity @s[type=item_display] run data modify entity @s item set from storage survisland:main Item
+
+# Add animation tag, add deployed_scroll tag, and remove tag 'new'
+scoreboard players set @s survisland.cooldown 0
+tag @s add survisland.scroll_animation
+tag @s add survisland.deployed_scroll
+tag @s remove survisland.new
+
