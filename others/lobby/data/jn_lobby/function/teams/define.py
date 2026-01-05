@@ -132,6 +132,8 @@ teams = [
 	("S24", "#712b99", 20, "dark_purple"),
 	("S25", "#f5b47e", 20, "gold"),
 	("S26", "#7d85ee", 18, "blue"),
+	("S27", "#a7fff5", 21, "aqua"),
+	("S28", "#f9ec8b", 21, "yellow"),
 ]
 create_teams_file(teams)
 
