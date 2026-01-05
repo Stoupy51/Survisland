@@ -1957,6 +1957,48 @@
 			"smithed": {"ignore": {"functionality": true,"crafting": true}}
 		}
 	},
+	"logo_s27": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {
+			"nutrition": 4,
+			"saturation": 2.4,
+			"can_always_eat": true
+		},
+		"category": "logo",
+		"item_model": "survisland:logo_s27",
+		"item_name": {
+			"text": "Logo S27"
+		},
+		"lore": [
+			["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]
+		],
+		"custom_data": {
+			"survisland": {"logo_s27": true},
+			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+		}
+	},
+	"logo_s28": {
+		"id": "minecraft:apple",
+		"consumable": {},
+		"food": {
+			"nutrition": 4,
+			"saturation": 2.4,
+			"can_always_eat": true
+		},
+		"category": "logo",
+		"item_model": "survisland:logo_s28",
+		"item_name": {
+			"text": "Logo S28"
+		},
+		"lore": [
+			["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]
+		],
+		"custom_data": {
+			"survisland": {"logo_s28": true},
+			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+		}
+	},
 	"necklace": {
 		"id": "minecraft:command_block",
 		"max_stack_size": 1,

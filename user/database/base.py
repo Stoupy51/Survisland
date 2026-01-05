@@ -3,7 +3,7 @@
 # Imports
 import os
 
-from stewbeet import CUSTOM_ITEM_VANILLA, OVERRIDE_MODEL, RESULT_OF_CRAFTING, JsonDict, Mem, ingr_repr
+from stewbeet import CUSTOM_ITEM_VANILLA, OVERRIDE_MODEL, RESULT_OF_CRAFTING, JsonDict, Mem, Ingr
 
 
 # Main function should return a database
@@ -574,8 +574,8 @@ def main() -> dict[str, JsonDict]:
 			"food": {"nutrition": 20,"saturation": 12},
 			"category": "food",
 			RESULT_OF_CRAFTING: [
-				{"type":"smelting","result_count":1,"cookingtime":200,"experience":1.0,"group":"riz","category":"food","ingredient":ingr_repr("rice", ns)},
-				{"type":"smoking","result_count":1,"cookingtime":100,"experience":1.0,"group":"riz","category":"food","ingredient":ingr_repr("rice", ns)},
+				{"type":"smelting","result_count":1,"cookingtime":200,"experience":1.0,"group":"riz","category":"food","ingredient":Ingr("rice", ns)},
+				{"type":"smoking","result_count":1,"cookingtime":100,"experience":1.0,"group":"riz","category":"food","ingredient":Ingr("rice", ns)},
 			]
 		},
 		"croissant": {
@@ -585,8 +585,8 @@ def main() -> dict[str, JsonDict]:
 			"food": {"nutrition": 6,"saturation": 7},
 			"category": "food",
 			RESULT_OF_CRAFTING: [
-				{"type":"smelting","result_count":1,"cookingtime":200,"experience":1.0,"group":"croissant","category":"food","ingredient":ingr_repr("minecraft:bread")},
-				{"type":"smoking","result_count":1,"cookingtime":100,"experience":1.0,"group":"croissant","category":"food","ingredient":ingr_repr("minecraft:bread")},
+				{"type":"smelting","result_count":1,"cookingtime":200,"experience":1.0,"group":"croissant","category":"food","ingredient":Ingr("minecraft:bread")},
+				{"type":"smoking","result_count":1,"cookingtime":100,"experience":1.0,"group":"croissant","category":"food","ingredient":Ingr("minecraft:bread")},
 			]
 		},
 		"marcus_chicken": {
@@ -596,8 +596,8 @@ def main() -> dict[str, JsonDict]:
 			"food": {"nutrition": 7,"saturation": 7.5},
 			"category": "food",
 			RESULT_OF_CRAFTING: [
-				{"type":"smelting","result_count":1,"cookingtime":200,"experience":1.0,"group":"chicken","category":"food","ingredient":ingr_repr("minecraft:cooked_chicken")},
-				{"type":"smoking","result_count":1,"cookingtime":100,"experience":1.0,"group":"chicken","category":"food","ingredient":ingr_repr("minecraft:cooked_chicken")},
+				{"type":"smelting","result_count":1,"cookingtime":200,"experience":1.0,"group":"chicken","category":"food","ingredient":Ingr("minecraft:cooked_chicken")},
+				{"type":"smoking","result_count":1,"cookingtime":100,"experience":1.0,"group":"chicken","category":"food","ingredient":Ingr("minecraft:cooked_chicken")},
 			]
 		},
 		"chocolatine": {
