@@ -107,6 +107,7 @@ tag @s remove {ns}.temp
 	Mem.ctx.assets[ns].item_models["parchemin"] = set_json_encoder(ItemModel({"model":{"type":"minecraft:model","model":f"{ns}:item/parchemin","tints":[{"type":"minecraft:dye","default":[0.780,0.737,0.647]}]}}), max_level=3)
 	Mem.ctx.assets[ns].item_models["deployed_parchemin"] = set_json_encoder(ItemModel({"model":{"type":"minecraft:model","model":f"{ns}:item/deployed_parchemin","tints":[{"type":"minecraft:dye","default":[0.780,0.737,0.647]}]}}), max_level=3)
 	Mem.ctx.assets[ns].item_models["dragon_necklace"] = set_json_encoder(ItemModel({"model":{"type":"minecraft:model","model":f"{ns}:item/dragon_necklace","tints":[{"type":"minecraft:dye","default":[1.0,1.0,1.0]}]}}), max_level=3)
+	Mem.ctx.assets[ns].item_models["dragon_flower_necklace"] = set_json_encoder(ItemModel({"model":{"type":"minecraft:model","model":f"{ns}:item/dragon_flower_necklace","tints":[{"type":"minecraft:dye","default":[1.0,1.0,1.0]}]}}), max_level=3)
 
 	# parchemins/_convert_to_scroll
 	p_id: str = parchemin.base_item

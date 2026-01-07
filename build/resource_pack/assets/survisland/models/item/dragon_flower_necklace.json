@@ -1,0 +1,7 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "survisland:item/dragon_flower_necklace",
+		"layer1": "survisland:item/dragon_flower_necklace_overlay"
+	}
+}

@@ -3,7 +3,7 @@
 # Imports
 import os
 
-from stewbeet import CUSTOM_ITEM_VANILLA, OVERRIDE_MODEL, RESULT_OF_CRAFTING, JsonDict, Mem, Ingr
+from stewbeet import CUSTOM_ITEM_VANILLA, OVERRIDE_MODEL, RESULT_OF_CRAFTING, Ingr, JsonDict, Mem
 
 
 # Main function should return a database
@@ -587,17 +587,6 @@ def main() -> dict[str, JsonDict]:
 			RESULT_OF_CRAFTING: [
 				{"type":"smelting","result_count":1,"cookingtime":200,"experience":1.0,"group":"croissant","category":"food","ingredient":Ingr("minecraft:bread")},
 				{"type":"smoking","result_count":1,"cookingtime":100,"experience":1.0,"group":"croissant","category":"food","ingredient":Ingr("minecraft:bread")},
-			]
-		},
-		"marcus_chicken": {
-			"id": "minecraft:apple",
-			"lore": [{"text":"Made by Stoupy","color":"gold","italic":False}],
-			"consumable": {},
-			"food": {"nutrition": 7,"saturation": 7.5},
-			"category": "food",
-			RESULT_OF_CRAFTING: [
-				{"type":"smelting","result_count":1,"cookingtime":200,"experience":1.0,"group":"chicken","category":"food","ingredient":Ingr("minecraft:cooked_chicken")},
-				{"type":"smoking","result_count":1,"cookingtime":100,"experience":1.0,"group":"chicken","category":"food","ingredient":Ingr("minecraft:cooked_chicken")},
 			]
 		},
 		"chocolatine": {

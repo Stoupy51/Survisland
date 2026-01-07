@@ -5,35 +5,31 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:apple",
+					"name": "minecraft:command_block",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:max_stack_size": 1,
+								"minecraft:equippable": {
+									"slot": "chest",
+									"asset_id": "survisland:dragon_flower_necklace",
+									"damage_on_hurt": false
+								},
+								"minecraft:item_model": "survisland:dragon_flower_necklace",
+								"minecraft:item_name": {
+									"text": "Dragon Flower Necklace"
+								},
 								"minecraft:lore": [
-									{
-										"text": "Made by Stoupy",
-										"color": "gold",
-										"italic": false
-									},
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
 										{"text": " Survisland","italic": true,"color": "blue"}
 									]
 								],
-								"minecraft:consumable": {},
-								"minecraft:food": {
-									"nutrition": 7,
-									"saturation": 7.5
-								},
-								"minecraft:item_model": "survisland:marcus_chicken",
-								"minecraft:item_name": {
-									"text": "Marcus Chicken"
-								},
 								"minecraft:custom_data": {
 									"survisland": {
-										"marcus_chicken": true
+										"dragon_flower_necklace": true
 									},
 									"smithed": {
 										"ignore": {"functionality": true,"crafting": true}

@@ -344,31 +344,6 @@
 			"smithed": {"ignore": {"functionality": true,"crafting": true}}
 		}
 	},
-	"marcus_chicken": {
-		"id": "minecraft:apple",
-		"lore": [
-			{"text": "Made by Stoupy","color": "gold","italic": false},
-			["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]
-		],
-		"consumable": {},
-		"food": {
-			"nutrition": 7,
-			"saturation": 7.5
-		},
-		"category": "food",
-		"result_of_crafting": [
-			{"type": "smelting","result_count": 1,"cookingtime": 200,"experience": 1.0,"group": "chicken","category": "food","ingredient": {"item": "minecraft:cooked_chicken"}},
-			{"type": "smoking","result_count": 1,"cookingtime": 100,"experience": 1.0,"group": "chicken","category": "food","ingredient": {"item": "minecraft:cooked_chicken"}}
-		],
-		"item_model": "survisland:marcus_chicken",
-		"item_name": {
-			"text": "Marcus Chicken"
-		},
-		"custom_data": {
-			"survisland": {"marcus_chicken": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
-		}
-	},
 	"chocolatine": {
 		"id": "minecraft:apple",
 		"lore": [
@@ -2076,6 +2051,26 @@
 		],
 		"custom_data": {
 			"survisland": {"dragon_necklace": true},
+			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+		}
+	},
+	"dragon_flower_necklace": {
+		"id": "minecraft:command_block",
+		"max_stack_size": 1,
+		"equippable": {
+			"slot": "chest",
+			"asset_id": "survisland:dragon_flower_necklace",
+			"damage_on_hurt": false
+		},
+		"item_model": "survisland:dragon_flower_necklace",
+		"item_name": {
+			"text": "Dragon Flower Necklace"
+		},
+		"lore": [
+			["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]
+		],
+		"custom_data": {
+			"survisland": {"dragon_flower_necklace": true},
 			"smithed": {"ignore": {"functionality": true,"crafting": true}}
 		}
 	},
