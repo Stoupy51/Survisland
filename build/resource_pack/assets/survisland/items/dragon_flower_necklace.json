@@ -1,0 +1,9 @@
+{
+	"model": {
+		"type": "minecraft:model",
+		"model": "survisland:item/dragon_flower_necklace",
+		"tints": [
+			{"type": "minecraft:dye","default": [1.0,1.0,1.0]}
+		]
+	}
+}

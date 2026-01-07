@@ -3,7 +3,7 @@
 from stewbeet import CUSTOM_ITEM_VANILLA, OVERRIDE_MODEL, Equipment, JsonDict, Mem, Texture, set_json_encoder
 
 # Constants
-NECKLACES: list[str] = ["necklace", "cursed_necklace", "dinosaur_necklace", "dragon_necklace"]
+NECKLACES: list[str] = ["necklace", "cursed_necklace", "dinosaur_necklace", "dragon_necklace", "dragon_flower_necklace"]
 
 # Main function
 def main() -> None:
@@ -21,7 +21,7 @@ def main() -> None:
 				"damage_on_hurt": False
 			}
 		}
-		if necklace == "dragon_necklace":
+		if necklace.startswith("dragon_"):
 			Mem.definitions[necklace][OVERRIDE_MODEL] = {
 				"parent": "item/generated",
 				"textures": {
@@ -33,21 +33,21 @@ def main() -> None:
 		# Copy texture in the humanoid equipment folder
 		source: str = f"{textures_folder}/{necklace}_held.png"
 		Mem.ctx.assets[ns].textures[f"entity/equipment/humanoid/{necklace}_held"] = Texture(source_path=source)
-		if necklace == "dragon_necklace":
+		if necklace.startswith("dragon_"):
 			source_overlay: str = f"{textures_folder}/{necklace}_held_overlay.png"
 			Mem.ctx.assets[ns].textures[f"entity/equipment/humanoid/{necklace}_held_overlay"] = Texture(source_path=source_overlay)
 
 		# Write model
-		if necklace != "dragon_necklace":
+		if not necklace.startswith("dragon_"):
 			model_data: JsonDict = {"layers": {"humanoid": [{"texture": f"{ns}:{necklace}_held"}]}}
 		else:
 			model_data = {
 				"layers": {
 					"humanoid": [
+						{"texture": f"{ns}:{necklace}_held_overlay"},
 						{"texture": f"{ns}:{necklace}_held", "dyeable": {"color_when_undyed": [1.0,1.0,1.0]}},
-						{"texture": f"{ns}:{necklace}_held_overlay"}
 					]
 				}
 			}
-		Mem.ctx.assets[ns].equipments[necklace] = set_json_encoder(Equipment(model_data))
+		Mem.ctx.assets[ns].equipments[necklace] = set_json_encoder(Equipment(model_data), max_level=3)
 

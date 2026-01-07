@@ -6,5 +6,4 @@
 
 execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input{"components": {"minecraft:custom_data": {"survisland": {"rice": true}}}} run loot replace block ~ ~ ~ container.3 loot survisland:i/cooked_rice
 execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input{"item": "minecraft:bread"} run loot replace block ~ ~ ~ container.3 loot survisland:i/croissant
-execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input{"item": "minecraft:cooked_chicken"} run loot replace block ~ ~ ~ container.3 loot survisland:i/marcus_chicken
 
