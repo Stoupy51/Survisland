@@ -1,11 +1,11 @@
 
-#> survisland:v2.4.0/load/confirm_load
+#> survisland:v2.4.1/load/confirm_load
 #
-# @within	survisland:v2.4.0/load/valid_dependencies
+# @within	survisland:v2.4.1/load/valid_dependencies
 #
 
 # Confirm load
-tellraw @a[tag=convention.debug] {"text":"[Loaded Survisland v2.4.0]","color":"green"}
+tellraw @a[tag=convention.debug] {"text":"[Loaded Survisland v2.4.1]","color":"green"}
 scoreboard players set #survisland.loaded load.status 1
 
 # Items storage
