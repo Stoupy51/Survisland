@@ -1,10 +1,8 @@
 
 # Import database helper
 from stewbeet import (
-	CUSTOM_ITEM_VANILLA,
 	Context,
-	JsonDict,
-	Mem,
+	Item,
 	add_item_model_component,
 	add_item_name_and_lore_if_missing,
 	add_private_custom_data_for_namespace,
@@ -36,15 +34,15 @@ def beet_default(ctx: Context) -> None:
 	add_smithed_ignore_vanilla_behaviours_convention()
 
 	# Remaining data
-	iron_bowl: JsonDict = Mem.definitions["iron_bowl"]
+	iron_bowl = Item.from_id("iron_bowl")
 	for rice in ["rice", "cooked_rice"]:
-		Mem.definitions[rice]["use_remainder"] = {
+		Item.from_id(rice).components["use_remainder"] = {
 			"count": 1,
-			"id": CUSTOM_ITEM_VANILLA,
+			"id": iron_bowl.base_item,
 			"components": {
-				"item_name": iron_bowl["item_name"],
-				"item_model": iron_bowl["item_model"],
-				"lore": iron_bowl["lore"]
+				"item_name": iron_bowl.components["item_name"],
+				"item_model": iron_bowl.components["item_model"],
+				"lore": iron_bowl.components["lore"]
 			}
 		}
 
