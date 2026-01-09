@@ -1,6 +1,6 @@
 
 # Imports
-from stewbeet import CUSTOM_ITEM_VANILLA, OVERRIDE_MODEL, Equipment, JsonDict, Mem, Texture, set_json_encoder
+from stewbeet import Equipment, Item, JsonDict, Mem, Texture, set_json_encoder
 
 # Constants
 NECKLACES: list[str] = ["necklace", "cursed_necklace", "dinosaur_necklace", "dragon_necklace", "dragon_flower_necklace"]
@@ -12,17 +12,19 @@ def main() -> None:
 
 	# Add each necklace
 	for necklace in NECKLACES:
-		Mem.definitions[necklace] = {
-			"id": CUSTOM_ITEM_VANILLA,
-			"max_stack_size": 1,
-			"equippable": {
-				"slot": "chest",
-				"asset_id": f"{ns}:{necklace}",
-				"damage_on_hurt": False
+		obj = Item(
+			id=necklace,
+			components={
+				"max_stack_size": 1,
+				"equippable": {
+					"slot": "chest",
+					"asset_id": f"{ns}:{necklace}",
+					"damage_on_hurt": False
+				}
 			}
-		}
+		)
 		if necklace.startswith("dragon_"):
-			Mem.definitions[necklace][OVERRIDE_MODEL] = {
+			obj.override_model = {
 				"parent": "item/generated",
 				"textures": {
 					"layer0": f"{ns}:item/{necklace}",

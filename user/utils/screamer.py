@@ -1,6 +1,6 @@
 
 # Imports
-from stewbeet import Font, Mem, Texture, set_json_encoder, write_function
+from stewbeet import Font, JsonDict, Mem, Texture, set_json_encoder, write_function
 
 
 # Generates trivial things in the datapack
@@ -13,7 +13,7 @@ def main() -> None:
 	SCREAMER_STOUP: str = "2"
 
 	# Make a font
-	font_providers: dict[str, list[dict]] = {
+	font_providers: dict[str, list[JsonDict]] = {
 		"providers": [
 			{"type":"bitmap","file":f"{ns}:font/shazinho.png","ascent":80,"height":160,"chars":[SCREAMER_SHAZ]},
 			{"type":"bitmap","file":f"{ns}:font/stoupinou.png","ascent":80,"height":160,"chars":[SCREAMER_STOUP]},

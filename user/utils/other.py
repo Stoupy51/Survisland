@@ -83,6 +83,10 @@ kill @e[type=marker,tag={ns}.keep_inventory]
 	# Right click
 	json_content: JsonDict = {"criteria":{"requirement":{"trigger":"minecraft:tick","conditions":{"player":[{"condition":"minecraft:entity_scores","entity":"this","scores":{f"{ns}.right_click":{"min":1}}}]}}},"rewards":{"function":f"{ns}:utils/right_click"}}
 	Mem.ctx.data[ns].advancements["right_click"] = set_json_encoder(Advancement(json_content), max_level=-1)
+	parchemin = Item.from_id("parchemin")
+	deployed_parchemin = Item.from_id("deployed_parchemin")
+	parchemin_item_model: str = parchemin.components["item_model"]
+	deployed_item_model: str = deployed_parchemin.components["item_model"]
 	write_function(f"{ns}:utils/right_click", f"""
 # Advancement revoke
 advancement revoke @s only {ns}:right_click
@@ -90,8 +94,8 @@ advancement revoke @s only {ns}:right_click
 # Switch case
 tag @s add {ns}.temp
 scoreboard players set #success {ns}.data 0
-execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s SelectedItem.components{{"minecraft:item_model":"{Mem.definitions['parchemin']['item_model']}"}} run function {ns}:parchemins/deploy_open
-execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s SelectedItem.components{{"minecraft:item_model":"{Mem.definitions['deployed_parchemin']['item_model']}"}} run function {ns}:parchemins/deploy_close
+execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s SelectedItem.components{{"minecraft:item_model":"{parchemin_item_model}"}} run function {ns}:parchemins/deploy_open
+execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s SelectedItem.components{{"minecraft:item_model":"{deployed_item_model}"}} run function {ns}:parchemins/deploy_close
 execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s SelectedItem.components."minecraft:custom_data".{ns}.snuffer positioned ^ ^ ^2 as @p[gamemode=!spectator,tag=!{ns}.temp,distance=..3] at @s run function {ns}:utils/snuffer
 execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s equipment.offhand.components."minecraft:custom_data".{ns}.snuffer positioned ^ ^ ^2 as @p[gamemode=!spectator,distance=..3] at @s run function {ns}:utils/snuffer
 
@@ -101,7 +105,6 @@ tag @s remove {ns}.temp
 """)
 
 	# Make parchemins, and dragon_necklace tintables
-	parchemin = Item.from_id("parchemin")
 	dragon_necklace = Item.from_id("dragon_necklace")
 	Mem.ctx.data["minecraft"].item_tags["dyeable"] = set_json_encoder(ItemTag({"values":stp.unique_list([parchemin.base_item, dragon_necklace.base_item])}))
 	Mem.ctx.assets[ns].item_models["parchemin"] = set_json_encoder(ItemModel({"model":{"type":"minecraft:model","model":f"{ns}:item/parchemin","tints":[{"type":"minecraft:dye","default":[0.780,0.737,0.647]}]}}), max_level=3)
@@ -119,8 +122,10 @@ data modify storage {ns}:main Item.components."minecraft:item_model" set value "
 """)
 
 	# advancements/inventory_changed
-	pendent_model: str = Mem.definitions["pendent"]["item_model"]
-	pendent_held_model: str = Mem.definitions["pendent_held"]["item_model"]
+	pendent = Item.from_id("pendent")
+	pendent_held = Item.from_id("pendent_held")
+	pendent_model: str = pendent.components["item_model"]
+	pendent_held_model: str = pendent_held.components["item_model"]
 	write_function(f"{ns}:advancements/inventory_changed", f"""
 # Advancement revoke
 advancement revoke @s only survisland:inventory_changed
