@@ -11,7 +11,7 @@ def main() -> None:
 	ns: str = Mem.ctx.project_id
 
 	# Setup database - Items now auto-register in Mem.definitions
-	Item(id="icon", base_item=CUSTOM_ITEM_VANILLA)
+	Item(id="icon")
 
 	Item(
 		id="laser_gun",
@@ -693,9 +693,9 @@ def main() -> None:
 		}
 	)
 
-	Item(id="monocoin", base_item=CUSTOM_ITEM_VANILLA, manual_category="misc")
-	Item(id="super_star", base_item=CUSTOM_ITEM_VANILLA, manual_category="misc")
-	Item(id="red_coin", base_item=CUSTOM_ITEM_VANILLA, manual_category="misc")
+	Item(id="monocoin", manual_category="misc")
+	Item(id="super_star", manual_category="misc")
+	Item(id="red_coin", manual_category="misc")
 
 	# Cards 1 to 8
 	for i in range(1, 9):
@@ -706,11 +706,12 @@ def main() -> None:
 			components={"lore": [{"text":"Made by Canfav","color":"gold","italic":False}]}
 		)
 
-	Item(id="gland", base_item=CUSTOM_ITEM_VANILLA, manual_category="misc")
-	Item(id="ice_stone", base_item=CUSTOM_ITEM_VANILLA, manual_category="misc")
-	Item(id="papillon", base_item=CUSTOM_ITEM_VANILLA, manual_category="misc")
-	Item(id="water_gun", base_item=CUSTOM_ITEM_VANILLA, manual_category="misc")
-	Item(id="pass_du_bureau_de_giovanni", base_item=CUSTOM_ITEM_VANILLA, manual_category="misc")
+	Item(id="gland", manual_category="misc")
+	Item(id="ice_stone", manual_category="misc")
+	Item(id="papillon", manual_category="misc")
+	Item(id="water_gun", manual_category="misc")
+	Item(id="pass_du_bureau_de_giovanni", manual_category="misc")
+	Item(id="filet_a_papillons", manual_category="misc")
 
 	# Get textures
 	textures: list[str] = os.listdir(str(Mem.ctx.meta.get("stewbeet", {}).get("textures_folder", "")))
