@@ -1,6 +1,6 @@
 
 # Imports
-from stewbeet import Advancement, Mem, set_json_encoder, write_function
+from stewbeet import Advancement, JsonDict, Mem, set_json_encoder, write_function
 
 # Constants
 LABELS: list[str] = ["Confort", "Immunité", "Conseil"]
@@ -18,7 +18,7 @@ def main() -> None:
 		cleaned = cleaned.lower().replace(" ", "_")
 		all_paths.append(f"{ns}:pop_ups/{cleaned}")
 
-		adv: dict = {
+		adv: JsonDict = {
 			"display": {
 				"icon": {
 					"id": "minecraft:stone",
