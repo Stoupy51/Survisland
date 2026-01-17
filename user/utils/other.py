@@ -137,18 +137,26 @@ execute if score #success {ns}.data matches 0 if data entity @s equipment.offhan
 
 # If has idol in inventory for first time, tell spectators
 scoreboard players set #success {ns}.data 0
-execute if score #success {ns}.data matches 0 if items entity @s container.* *[custom_data~{{"survisland":{{"pendent":true}}}}] run scoreboard players set #success {ns}.data 1
-execute if score #success {ns}.data matches 0 if items entity @s container.* *[custom_data~{{"survisland":{{"pendent_held":true}}}}] run scoreboard players set #success {ns}.data 1
-execute if score #success {ns}.data matches 0 if items entity @s player.cursor *[custom_data~{{"survisland":{{"pendent":true}}}}] run scoreboard players set #success {ns}.data 1
-execute if score #success {ns}.data matches 0 if items entity @s player.cursor *[custom_data~{{"survisland":{{"pendent_held":true}}}}] run scoreboard players set #success {ns}.data 1
-execute if score #success {ns}.data matches 0 if data entity @s Inventory[].components."minecraft:custom_data".survisland.pendent run scoreboard players set #success {ns}.data 1
-execute if score #success {ns}.data matches 0 if data entity @s Inventory[].components."minecraft:custom_data".survisland.pendent_held run scoreboard players set #success {ns}.data 1
+execute if score #success {ns}.data matches 0 store success score #success {ns}.data run function {ns}:utils/has_item {{"item":"pendent"}}
+execute if score #success {ns}.data matches 0 store success score #success {ns}.data run function {ns}:utils/has_item {{"item":"pendent_held"}}
+execute if score #success {ns}.data matches 0 store success score #success {ns}.data run function {ns}:utils/has_item {{"item":"dragon_necklace"}}
+execute if score #success {ns}.data matches 0 store success score #success {ns}.data run function {ns}:utils/has_item {{"item":"dragon_flower_necklace"}}
 execute if score #success {ns}.data matches 1 unless entity @s[tag={ns}.has_idol] run tellraw @a[team=aMJ] ["\\n",{{"nbt":"SurvislandSpec","storage":"{ns}:main","interpret":true}},{{"text":" Le joueur "}},{{"selector":"@s","color":"aqua"}},{{"text":" vient de récupérer un idol dans son inventaire !"}}]
 execute if score #success {ns}.data matches 1 unless entity @s[tag={ns}.has_idol] run tellraw @a[team=aStaff] ["\\n",{{"nbt":"SurvislandSpec","storage":"{ns}:main","interpret":true}},{{"text":" Le joueur "}},{{"selector":"@s","color":"aqua"}},{{"text":" vient de récupérer un idol dans son inventaire !"}}]
 execute if score #success {ns}.data matches 1 unless entity @s[tag={ns}.has_idol] run tellraw @a[team=zSpec] ["\\n",{{"nbt":"SurvislandSpec","storage":"{ns}:main","interpret":true}},{{"text":" Le joueur "}},{{"selector":"@s","color":"aqua"}},{{"text":" vient de récupérer un idol dans son inventaire !"}}]
 execute if score #success {ns}.data matches 1 unless entity @s[tag={ns}.has_idol] run tellraw @a[team=zOut] ["\\n",{{"nbt":"SurvislandSpec","storage":"{ns}:main","interpret":true}},{{"text":" Le joueur "}},{{"selector":"@s","color":"aqua"}},{{"text":" vient de récupérer un idol dans son inventaire !"}}]
 execute if score #success {ns}.data matches 1 run tag @s add {ns}.has_idol
 execute if score #success {ns}.data matches 0 run tag @s remove {ns}.has_idol
+""")
+	slots: str = "\n".join([
+		f"""$execute if items entity @s {slot} *[custom_data~{{{ns}:{{"$(item)":true}}}}] run return 1"""
+		for slot in ["container.*", "player.cursor", "armor.*", "weapon.*", "enderchest.*", "player.crafting.*"]
+	])
+	write_function(f"{ns}:utils/has_item", f"""
+# Check if player has item in inventory
+{slots}
+$execute if data entity @s Inventory[].components."minecraft:custom_data".survisland.$(item) run return 1
+return fail
 """)
 
 	# utils/pendent_switch

@@ -16,12 +16,10 @@ execute if score #success survisland.data matches 0 if data entity @s equipment.
 
 # If has idol in inventory for first time, tell spectators
 scoreboard players set #success survisland.data 0
-execute if score #success survisland.data matches 0 if items entity @s container.* *[custom_data~{"survisland":{"pendent":true}}] run scoreboard players set #success survisland.data 1
-execute if score #success survisland.data matches 0 if items entity @s container.* *[custom_data~{"survisland":{"pendent_held":true}}] run scoreboard players set #success survisland.data 1
-execute if score #success survisland.data matches 0 if items entity @s player.cursor *[custom_data~{"survisland":{"pendent":true}}] run scoreboard players set #success survisland.data 1
-execute if score #success survisland.data matches 0 if items entity @s player.cursor *[custom_data~{"survisland":{"pendent_held":true}}] run scoreboard players set #success survisland.data 1
-execute if score #success survisland.data matches 0 if data entity @s Inventory[].components."minecraft:custom_data".survisland.pendent run scoreboard players set #success survisland.data 1
-execute if score #success survisland.data matches 0 if data entity @s Inventory[].components."minecraft:custom_data".survisland.pendent_held run scoreboard players set #success survisland.data 1
+execute if score #success survisland.data matches 0 store success score #success survisland.data run function survisland:utils/has_item {"item":"pendent"}
+execute if score #success survisland.data matches 0 store success score #success survisland.data run function survisland:utils/has_item {"item":"pendent_held"}
+execute if score #success survisland.data matches 0 store success score #success survisland.data run function survisland:utils/has_item {"item":"dragon_necklace"}
+execute if score #success survisland.data matches 0 store success score #success survisland.data run function survisland:utils/has_item {"item":"dragon_flower_necklace"}
 execute if score #success survisland.data matches 1 unless entity @s[tag=survisland.has_idol] run tellraw @a[team=aMJ] ["\n",{"nbt":"SurvislandSpec","storage":"survisland:main","interpret":true},{"text":" Le joueur "},{"selector":"@s","color":"aqua"},{"text":" vient de récupérer un idol dans son inventaire !"}]
 execute if score #success survisland.data matches 1 unless entity @s[tag=survisland.has_idol] run tellraw @a[team=aStaff] ["\n",{"nbt":"SurvislandSpec","storage":"survisland:main","interpret":true},{"text":" Le joueur "},{"selector":"@s","color":"aqua"},{"text":" vient de récupérer un idol dans son inventaire !"}]
 execute if score #success survisland.data matches 1 unless entity @s[tag=survisland.has_idol] run tellraw @a[team=zSpec] ["\n",{"nbt":"SurvislandSpec","storage":"survisland:main","interpret":true},{"text":" Le joueur "},{"selector":"@s","color":"aqua"},{"text":" vient de récupérer un idol dans son inventaire !"}]
