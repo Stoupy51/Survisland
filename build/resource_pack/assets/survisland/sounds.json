@@ -159,10 +159,6 @@
 		"subtitle": "maracas",
 		"sounds": ["survisland:maracas"]
 	},
-	"mingle_song": {
-		"subtitle": "mingle_song",
-		"sounds": ["survisland:mingle_song"]
-	},
 	"rompich": {
 		"subtitle": "rompich",
 		"sounds": ["survisland:rompich"]
@@ -174,6 +170,38 @@
 	"taco_bell": {
 		"subtitle": "taco_bell",
 		"sounds": ["survisland:taco_bell"]
+	},
+	"tchoutchou/01_bonus": {
+		"subtitle": "tchoutchou/01_bonus",
+		"sounds": ["survisland:tchoutchou/01_bonus"]
+	},
+	"tchoutchou/01_transition": {
+		"subtitle": "tchoutchou/01_transition",
+		"sounds": ["survisland:tchoutchou/01_transition"]
+	},
+	"tchoutchou/02_bonus": {
+		"subtitle": "tchoutchou/02_bonus",
+		"sounds": ["survisland:tchoutchou/02_bonus"]
+	},
+	"tchoutchou/02_transition": {
+		"subtitle": "tchoutchou/02_transition",
+		"sounds": ["survisland:tchoutchou/02_transition"]
+	},
+	"tchoutchou/03_bonus": {
+		"subtitle": "tchoutchou/03_bonus",
+		"sounds": ["survisland:tchoutchou/03_bonus"]
+	},
+	"tchoutchou/03_transition": {
+		"subtitle": "tchoutchou/03_transition",
+		"sounds": ["survisland:tchoutchou/03_transition"]
+	},
+	"tchoutchou/04_transition": {
+		"subtitle": "tchoutchou/04_transition",
+		"sounds": ["survisland:tchoutchou/04_transition"]
+	},
+	"tchoutchou/double_elim": {
+		"subtitle": "tchoutchou/double_elim",
+		"sounds": ["survisland:tchoutchou/double_elim"]
 	},
 	"vine_boom": {
 		"subtitle": "vine_boom",
