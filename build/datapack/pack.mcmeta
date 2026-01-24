@@ -11,5 +11,10 @@
 			0
 		]
 	},
-	"id": "survisland"
+	"id": "survisland",
+	"filter": {
+		"block": [
+			{"namespace": "minecraft","path": "recipe/composter"}
+		]
+	}
 }

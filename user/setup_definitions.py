@@ -13,6 +13,7 @@ from stewbeet import (
 # Imports
 from user.database.base import main as make_database
 from user.database.necklaces import main as make_necklaces
+from user.database.tchoutchou import main as make_tchoutchou
 from user.database.tribe_civilization import main as make_tribe_civilization
 
 
@@ -23,6 +24,7 @@ def beet_default(ctx: Context) -> None:
 	make_database()
 	make_necklaces()
 	make_tribe_civilization()
+	make_tchoutchou()
 
 	# Generate custom disc records
 	generate_custom_records("auto")
