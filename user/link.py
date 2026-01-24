@@ -23,3 +23,10 @@ def beet_default(ctx: Context) -> None:
 	if Mem.ctx.data["minecraft"].dialogs_tags.get("quick_actions"):
 		del Mem.ctx.data["minecraft"].dialogs_tags["quick_actions"]
 
+	# Prevent some crafts
+	Mem.ctx.data.mcmeta.data["filter"] = {
+		"block": [
+			{"namespace": "minecraft","path": "recipe/composter"}
+		]
+	}
+

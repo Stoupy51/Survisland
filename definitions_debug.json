@@ -1619,6 +1619,61 @@
 			"custom_data": {"survisland": {"small_horns": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 		}
 	},
+	"chest_wagon": {
+		"id": "chest_wagon",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:chest_wagon",
+			"item_name": {"text": "Chest Wagon"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"chest_wagon": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"craft_wagon_empty": {
+		"id": "craft_wagon_empty",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:craft_wagon_empty",
+			"item_name": {"text": "Craft Wagon Empty"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"craft_wagon_empty": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"craft_wagon_full": {
+		"id": "craft_wagon_full",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:craft_wagon_full",
+			"item_name": {"text": "Craft Wagon Full"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"craft_wagon_full": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"locomotive_fast": {
+		"id": "locomotive_fast",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:locomotive_fast",
+			"item_name": {"text": "Locomotive Fast"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"locomotive_fast": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"locomotive_slow": {
+		"id": "locomotive_slow",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:locomotive_slow",
+			"item_name": {"text": "Locomotive Slow"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"locomotive_slow": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
 	"01_charges_from_the_sky": {
 		"id": "01_charges_from_the_sky",
 		"base_item": "minecraft:command_block",

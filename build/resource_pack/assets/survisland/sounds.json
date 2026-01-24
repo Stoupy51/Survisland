@@ -199,6 +199,10 @@
 		"subtitle": "tchoutchou/04_transition",
 		"sounds": ["survisland:tchoutchou/04_transition"]
 	},
+	"tchoutchou/call": {
+		"subtitle": "tchoutchou/call",
+		"sounds": ["survisland:tchoutchou/call"]
+	},
 	"tchoutchou/double_elim": {
 		"subtitle": "tchoutchou/double_elim",
 		"sounds": ["survisland:tchoutchou/double_elim"]
