@@ -697,8 +697,8 @@ def main() -> None:
 	Item(id="super_star", manual_category="misc")
 	Item(id="red_coin", manual_category="misc")
 
-	# Cards 1 to 8
-	for i in range(1, 9):
+	# Cards 0 to 8
+	for i in range(0, 9):
 		Item(
 			id=f"card_{i}",
 			base_item=CUSTOM_ITEM_VANILLA,
