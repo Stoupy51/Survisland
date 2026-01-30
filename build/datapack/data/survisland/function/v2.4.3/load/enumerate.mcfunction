@@ -1,5 +1,5 @@
 
-#> survisland:v2.4.2/load/enumerate
+#> survisland:v2.4.3/load/enumerate
 #
 # @within	#survisland:enumerate
 #
@@ -11,5 +11,5 @@ execute unless score #survisland.major load.status matches 2.. run scoreboard pl
 execute if score #survisland.major load.status matches 2 unless score #survisland.minor load.status matches 4.. run scoreboard players set #survisland.minor load.status 4
 
 # If current patch is too low, set it to the current patch (only if major and minor are correct)
-execute if score #survisland.major load.status matches 2 if score #survisland.minor load.status matches 4 unless score #survisland.patch load.status matches 2.. run scoreboard players set #survisland.patch load.status 2
+execute if score #survisland.major load.status matches 2 if score #survisland.minor load.status matches 4 unless score #survisland.patch load.status matches 3.. run scoreboard players set #survisland.patch load.status 3
 

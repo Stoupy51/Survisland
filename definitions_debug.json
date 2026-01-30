@@ -342,6 +342,18 @@
 			"custom_data": {"survisland": {"red_coin": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 		}
 	},
+	"card_0": {
+		"id": "card_0",
+		"base_item": "minecraft:command_block",
+		"manual_category": "misc",
+		"recipes": [],
+		"components": {
+			"lore": [{"text": "Made by Canfav","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"item_model": "survisland:card_0",
+			"item_name": {"text": "Card 0"},
+			"custom_data": {"survisland": {"card_0": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
 	"card_1": {
 		"id": "card_1",
 		"base_item": "minecraft:command_block",

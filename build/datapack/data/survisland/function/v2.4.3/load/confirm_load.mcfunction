@@ -1,11 +1,11 @@
 
-#> survisland:v2.4.2/load/confirm_load
+#> survisland:v2.4.3/load/confirm_load
 #
-# @within	survisland:v2.4.2/load/valid_dependencies
+# @within	survisland:v2.4.3/load/valid_dependencies
 #
 
 # Confirm load
-tellraw @a[tag=convention.debug] {"text":"[Loaded Survisland v2.4.2]","color":"green"}
+tellraw @a[tag=convention.debug] {"text":"[Loaded Survisland v2.4.3]","color":"green"}
 scoreboard players set #survisland.loaded load.status 1
 
 # Items storage
@@ -37,6 +37,7 @@ data modify storage survisland:items all.scalbar set value {"id": "minecraft:com
 data modify storage survisland:items all.monocoin set value {"id": "minecraft:command_block","count": 1,"components": {"minecraft:item_model": "survisland:monocoin","minecraft:item_name": {"text": "Monocoin"},"minecraft:lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"minecraft:custom_data": {"survisland": {"monocoin": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}
 data modify storage survisland:items all.super_star set value {"id": "minecraft:command_block","count": 1,"components": {"minecraft:item_model": "survisland:super_star","minecraft:item_name": {"text": "Super Star"},"minecraft:lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"minecraft:custom_data": {"survisland": {"super_star": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}
 data modify storage survisland:items all.red_coin set value {"id": "minecraft:command_block","count": 1,"components": {"minecraft:item_model": "survisland:red_coin","minecraft:item_name": {"text": "Red Coin"},"minecraft:lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"minecraft:custom_data": {"survisland": {"red_coin": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}
+data modify storage survisland:items all.card_0 set value {"id": "minecraft:command_block","count": 1,"components": {"minecraft:item_model": "survisland:card_0","minecraft:lore": [{"text": "Made by Canfav","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"minecraft:item_name": {"text": "Card 0"},"minecraft:custom_data": {"survisland": {"card_0": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}
 data modify storage survisland:items all.card_1 set value {"id": "minecraft:command_block","count": 1,"components": {"minecraft:item_model": "survisland:card_1","minecraft:lore": [{"text": "Made by Canfav","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"minecraft:item_name": {"text": "Card 1"},"minecraft:custom_data": {"survisland": {"card_1": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}
 data modify storage survisland:items all.card_2 set value {"id": "minecraft:command_block","count": 1,"components": {"minecraft:item_model": "survisland:card_2","minecraft:lore": [{"text": "Made by Canfav","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"minecraft:item_name": {"text": "Card 2"},"minecraft:custom_data": {"survisland": {"card_2": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}
 data modify storage survisland:items all.card_3 set value {"id": "minecraft:command_block","count": 1,"components": {"minecraft:item_model": "survisland:card_3","minecraft:lore": [{"text": "Made by Canfav","color": "gold","italic": false},["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],"minecraft:item_name": {"text": "Card 3"},"minecraft:custom_data": {"survisland": {"card_3": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}

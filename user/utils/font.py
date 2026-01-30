@@ -43,3 +43,15 @@ title @s title {{"text":"{text}","font":"{ns}:screamers"}}
 execute at @s run playsound {ns}:fart_reverb ambient
 """)
 
+	# Font casino & copy textures
+	Mem.ctx.assets[ns].fonts["casino"] = set_json_encoder(Font({
+		"providers": [
+			{"type":"bitmap","file":f"{ns}:font/casino/777.png","ascent":32,"height":8,"chars":["A"]},
+			{"type":"bitmap","file":f"{ns}:font/casino/fail.png","ascent":32,"height":8,"chars":["B"]},
+			{"type":"bitmap","file":f"{ns}:font/casino/jackpot.png","ascent":32,"height":8,"chars":["C"]},
+			{"type":"bitmap","file":f"{ns}:font/casino/perdu.png","ascent":32,"height":8,"chars":["D"]}
+		]
+	}))
+	for img in ["777", "fail", "jackpot", "perdu"]:
+		Mem.ctx.assets[ns].textures[f"font/casino/{img}"] = Texture(source_path=f"{assets_folder}/textures/casino/{img}.png")
+
