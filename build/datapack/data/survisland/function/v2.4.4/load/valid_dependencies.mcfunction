@@ -1,12 +1,12 @@
 
-#> survisland:v2.4.3/load/valid_dependencies
+#> survisland:v2.4.4/load/valid_dependencies
 #
-# @within	survisland:v2.4.3/load/secondary
-#			survisland:v2.4.3/load/valid_dependencies 1t replace [ scheduled ]
+# @within	survisland:v2.4.4/load/secondary
+#			survisland:v2.4.4/load/valid_dependencies 1t replace [ scheduled ]
 #
 
 # Waiting for a player to get the game version, but stop function if no player found
-execute unless entity @p run schedule function survisland:v2.4.3/load/valid_dependencies 1t replace
+execute unless entity @p run schedule function survisland:v2.4.4/load/valid_dependencies 1t replace
 execute unless entity @p run return 0
 execute store result score #game_version survisland.data run data get entity @p DataVersion
 
@@ -100,5 +100,5 @@ execute if score #dependency_error survisland.data matches 1 if score $bs.xp.maj
 execute if score #dependency_error survisland.data matches 1 if score $bs.xp.major load.status matches 3 if score $bs.xp.minor load.status matches 2 unless score $bs.xp.patch load.status matches 2.. run tellraw @a {"text":"- [Bookshelf Xp (v3.2.2+)]","color":"gold","click_event":{"action":"open_url","url":"https://github.com/mcbookshelf/bookshelf/releases"}}
 
 # Load Survisland
-execute if score #game_version survisland.data matches 1.. if score #mcload_error survisland.data matches 0 if score #dependency_error survisland.data matches 0 run function survisland:v2.4.3/load/confirm_load
+execute if score #game_version survisland.data matches 1.. if score #mcload_error survisland.data matches 0 if score #dependency_error survisland.data matches 0 run function survisland:v2.4.4/load/confirm_load
 

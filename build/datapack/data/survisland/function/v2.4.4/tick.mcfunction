@@ -1,14 +1,14 @@
 
-#> survisland:v2.4.3/tick
+#> survisland:v2.4.4/tick
 #
-# @within	survisland:v2.4.3/load/tick_verification
+# @within	survisland:v2.4.4/load/tick_verification
 #
 
 # Timers
 scoreboard players add #second survisland.data 1
 scoreboard players add #minute survisland.data 1
-execute if score #second survisland.data matches 20.. run function survisland:v2.4.3/second
-execute if score #minute survisland.data matches 1200.. run function survisland:v2.4.3/minute
+execute if score #second survisland.data matches 20.. run function survisland:v2.4.4/second
+execute if score #minute survisland.data matches 1200.. run function survisland:v2.4.4/minute
 
 # Custom Keep Inventory System
 execute as @a[scores={survisland.deathCount=1..}] at @s run function survisland:keep_inventory/player_died
