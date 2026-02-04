@@ -522,6 +522,105 @@
 			"custom_data": {"survisland": {"filet_a_papillons": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 		}
 	},
+	"heart_key": {
+		"id": "heart_key",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:heart_key",
+			"item_name": {"text": "Heart Key"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"heart_key": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"arc_cupidon": {
+		"id": "arc_cupidon",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:arc_cupidon",
+			"item_name": {"text": "Arc Cupidon"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"arc_cupidon": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"bougie": {
+		"id": "bougie",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:bougie",
+			"item_name": {"text": "Bougie"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"bougie": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"bouquet": {
+		"id": "bouquet",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:bouquet",
+			"item_name": {"text": "Bouquet"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"bouquet": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"cadeau": {
+		"id": "cadeau",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:cadeau",
+			"item_name": {"text": "Cadeau"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"cadeau": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"coeur": {
+		"id": "coeur",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:coeur",
+			"item_name": {"text": "Coeur"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"coeur": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"coeur_fleche": {
+		"id": "coeur_fleche",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:coeur_fleche",
+			"item_name": {"text": "Coeur Fleche"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"coeur_fleche": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"enveloppe": {
+		"id": "enveloppe",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:enveloppe",
+			"item_name": {"text": "Enveloppe"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"enveloppe": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"gateau_fraise": {
+		"id": "gateau_fraise",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:gateau_fraise",
+			"item_name": {"text": "Gateau Fraise"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"gateau_fraise": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
 	"book_advanced": {
 		"id": "book_advanced",
 		"base_item": "minecraft:written_book",

@@ -716,6 +716,10 @@ def main() -> None:
 	# Get textures
 	textures: list[str] = os.listdir(str(Mem.ctx.meta.get("stewbeet", {}).get("textures_folder", "")))
 
+	# Add sudokucraft items
+	for item in ["heart_key", "arc_cupidon", "bougie", "bouquet", "cadeau", "coeur", "coeur_fleche", "enveloppe", "gateau_fraise"]:
+		Item(id=item)
+
 	# Add colored books
 	books: list[str] = [x.replace(".png","") for x in textures if "book_" in x]
 	for book in books:
