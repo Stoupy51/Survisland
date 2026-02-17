@@ -27,6 +27,7 @@
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/monocoin"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/super_star"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/red_coin"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/piece_sos"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/card_0"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/card_1"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/card_2"}]},
