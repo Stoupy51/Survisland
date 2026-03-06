@@ -55,3 +55,15 @@ execute at @s run playsound {ns}:fart_reverb ambient
 	for img in ["777", "fail", "jackpot", "perdu"]:
 		Mem.ctx.assets[ns].textures[f"font/casino/{img}"] = Texture(source_path=f"{assets_folder}/textures/casino/{img}.png")
 
+	# Black & White background
+	from PIL import Image
+	for color in ["black", "white"]:
+		img = Image.new("RGBA", (8, 8), (0, 0, 0, 255) if color == "black" else (255, 255, 255, 255))
+		Mem.ctx.assets[ns].textures[f"font/{color}"] = Texture(img)
+	Mem.ctx.assets[ns].fonts["black_and_white"] = set_json_encoder(Font({
+		"providers": [
+			{"type":"bitmap","file":f"{ns}:font/black.png","ascent":4000,"height":8000,"chars":["A"]},
+			{"type":"bitmap","file":f"{ns}:font/white.png","ascent":4000,"height":8000,"chars":["B"]},
+		]
+	}))
+
