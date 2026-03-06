@@ -1475,6 +1475,94 @@
 			"custom_data": {"survisland": {"logo_s28": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 		}
 	},
+	"smolder_aurora": {
+		"id": "smolder_aurora",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:smolder_aurora",
+			"item_name": {"text": "Smolder Aurora"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"smolder_aurora": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"smolder_blackhole": {
+		"id": "smolder_blackhole",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:smolder_blackhole",
+			"item_name": {"text": "Smolder Blackhole"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"smolder_blackhole": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"smolder_cobwebs": {
+		"id": "smolder_cobwebs",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:smolder_cobwebs",
+			"item_name": {"text": "Smolder Cobwebs"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"smolder_cobwebs": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"smolder_crazy": {
+		"id": "smolder_crazy",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:smolder_crazy",
+			"item_name": {"text": "Smolder Crazy"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"smolder_crazy": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"smolder_ocean": {
+		"id": "smolder_ocean",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:smolder_ocean",
+			"item_name": {"text": "Smolder Ocean"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"smolder_ocean": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"smolder_stars": {
+		"id": "smolder_stars",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:smolder_stars",
+			"item_name": {"text": "Smolder Stars"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"smolder_stars": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"smolder_sunset": {
+		"id": "smolder_sunset",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:smolder_sunset",
+			"item_name": {"text": "Smolder Sunset"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"smolder_sunset": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"smolder_tunnelcable": {
+		"id": "smolder_tunnelcable",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:smolder_tunnelcable",
+			"item_name": {"text": "Smolder Tunnelcable"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"smolder_tunnelcable": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
 	"necklace": {
 		"id": "necklace",
 		"base_item": "minecraft:command_block",

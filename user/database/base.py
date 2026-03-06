@@ -715,7 +715,8 @@ def main() -> None:
 	Item(id="filet_a_papillons", manual_category="misc")
 
 	# Get textures
-	textures: list[str] = os.listdir(str(Mem.ctx.meta.get("stewbeet", {}).get("textures_folder", "")))
+	textures_folder = str(Mem.ctx.meta.get("stewbeet", {}).get("textures_folder", ""))
+	textures: list[str] = os.listdir(textures_folder)
 
 	# Add sudokucraft items
 	for item in ["heart_key", "arc_cupidon", "bougie", "bouquet", "cadeau", "coeur", "coeur_fleche", "enveloppe", "gateau_fraise"]:
@@ -753,4 +754,8 @@ def main() -> None:
 					"food": {"nutrition": 4, "saturation": 2.4, "can_always_eat": True}
 				}
 			)
+
+	# Add smolder shader textures
+	for item in [x.replace(".png","") for x in os.listdir(f"{textures_folder}/smolder") if "smolder_" in x]:
+		Item(id=item, override_model={"parent":"minecraft:block/cube_all"})
 

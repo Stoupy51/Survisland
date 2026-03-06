@@ -1,0 +1,6 @@
+{
+	"providers": [
+		{"type": "bitmap","file": "survisland:font/black.png","ascent": 4000,"height": 8000,"chars": ["A"]},
+		{"type": "bitmap","file": "survisland:font/white.png","ascent": 4000,"height": 8000,"chars": ["B"]}
+	]
+}
