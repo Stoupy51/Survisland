@@ -1,7 +1,65 @@
 #version 330
 
-#moj_import <minecraft:light.glsl>
-#moj_import <minecraft:fog.glsl>
+#define MINECRAFT_LIGHT_POWER   (0.6)
+#define MINECRAFT_AMBIENT_LIGHT (0.4)
+
+layout(std140) uniform Lighting {
+    vec3 Light0_Direction;
+    vec3 Light1_Direction;
+};
+
+vec2 minecraft_compute_light(vec3 lightDir0, vec3 lightDir1, vec3 normal) {
+    return vec2(dot(lightDir0, normal), dot(lightDir1, normal));
+}
+
+vec4 minecraft_mix_light_separate(vec2 light, vec4 color) {
+    vec2 lightValue = max(vec2(0.0), light);
+    float lightAccum = min(1.0, (lightValue.x + lightValue.y) * MINECRAFT_LIGHT_POWER + MINECRAFT_AMBIENT_LIGHT);
+    return vec4(color.rgb * lightAccum, color.a);
+}
+
+vec4 minecraft_mix_light(vec3 lightDir0, vec3 lightDir1, vec3 normal, vec4 color) {
+    vec2 light = minecraft_compute_light(lightDir0, lightDir1, normal);
+    return minecraft_mix_light_separate(light, color);
+}
+
+layout(std140) uniform Fog {
+    vec4 FogColor;
+    float FogEnvironmentalStart;
+    float FogEnvironmentalEnd;
+    float FogRenderDistanceStart;
+    float FogRenderDistanceEnd;
+    float FogSkyEnd;
+    float FogCloudsEnd;
+};
+
+float linear_fog_value(float vertexDistance, float fogStart, float fogEnd) {
+    if (vertexDistance <= fogStart) {
+        return 0.0;
+    } else if (vertexDistance >= fogEnd) {
+        return 1.0;
+    }
+    return (vertexDistance - fogStart) / (fogEnd - fogStart);
+}
+
+float total_fog_value(float sphericalVertexDistance, float cylindricalVertexDistance, float environmentalStart, float environmantalEnd, float renderDistanceStart, float renderDistanceEnd) {
+    return max(linear_fog_value(sphericalVertexDistance, environmentalStart, environmantalEnd), linear_fog_value(cylindricalVertexDistance, renderDistanceStart, renderDistanceEnd));
+}
+
+vec4 apply_fog(vec4 inColor, float sphericalVertexDistance, float cylindricalVertexDistance, float environmentalStart, float environmantalEnd, float renderDistanceStart, float renderDistanceEnd, vec4 fogColor) {
+    float fogValue = total_fog_value(sphericalVertexDistance, cylindricalVertexDistance, environmentalStart, environmantalEnd, renderDistanceStart, renderDistanceEnd);
+    return vec4(mix(inColor.rgb, fogColor.rgb, fogValue * fogColor.a), inColor.a);
+}
+
+float fog_spherical_distance(vec3 pos) {
+    return length(pos);
+}
+
+float fog_cylindrical_distance(vec3 pos) {
+    float distXZ = length(pos.xz);
+    float distY = abs(pos.y);
+    return max(distXZ, distY);
+}
 #moj_import <minecraft:dynamictransforms.glsl>
 #moj_import <minecraft:projection.glsl>
 #moj_import <minecraft:globals.glsl>
