@@ -207,6 +207,18 @@
 		"subtitle": "tchoutchou/double_elim",
 		"sounds": ["survisland:tchoutchou/double_elim"]
 	},
+	"tr_athletic_theme": {
+		"subtitle": "tr_athletic_theme",
+		"sounds": ["survisland:tr_athletic_theme"]
+	},
+	"tr_bowser_castle": {
+		"subtitle": "tr_bowser_castle",
+		"sounds": ["survisland:tr_bowser_castle"]
+	},
+	"tr_star_festival": {
+		"subtitle": "tr_star_festival",
+		"sounds": ["survisland:tr_star_festival"]
+	},
 	"vine_boom": {
 		"subtitle": "vine_boom",
 		"sounds": ["survisland:vine_boom"]
