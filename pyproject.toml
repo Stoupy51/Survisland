@@ -1,0 +1,13 @@
+[project]
+name = "survisland"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "smithed",
+    "stewbeet>=3.0.5",
+]
+
+[tool.uv.sources]
+smithed = { git = "https://github.com/Stoupy51/smithed-python.git" }

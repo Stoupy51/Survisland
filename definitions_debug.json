@@ -1475,6 +1475,138 @@
 			"custom_data": {"survisland": {"logo_s28": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 		}
 	},
+	"blockguessr_1": {
+		"id": "blockguessr_1",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_1",
+			"item_name": {"text": "Blockguessr 1"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"blockguessr_1": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"blockguessr_10": {
+		"id": "blockguessr_10",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_10",
+			"item_name": {"text": "Blockguessr 10"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"blockguessr_10": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"blockguessr_11": {
+		"id": "blockguessr_11",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_11",
+			"item_name": {"text": "Blockguessr 11"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"blockguessr_11": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"blockguessr_12": {
+		"id": "blockguessr_12",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_12",
+			"item_name": {"text": "Blockguessr 12"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"blockguessr_12": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"blockguessr_2": {
+		"id": "blockguessr_2",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_2",
+			"item_name": {"text": "Blockguessr 2"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"blockguessr_2": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"blockguessr_3": {
+		"id": "blockguessr_3",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_3",
+			"item_name": {"text": "Blockguessr 3"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"blockguessr_3": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"blockguessr_4": {
+		"id": "blockguessr_4",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_4",
+			"item_name": {"text": "Blockguessr 4"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"blockguessr_4": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"blockguessr_5": {
+		"id": "blockguessr_5",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_5",
+			"item_name": {"text": "Blockguessr 5"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"blockguessr_5": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"blockguessr_6": {
+		"id": "blockguessr_6",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_6",
+			"item_name": {"text": "Blockguessr 6"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"blockguessr_6": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"blockguessr_7": {
+		"id": "blockguessr_7",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_7",
+			"item_name": {"text": "Blockguessr 7"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"blockguessr_7": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"blockguessr_8": {
+		"id": "blockguessr_8",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_8",
+			"item_name": {"text": "Blockguessr 8"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"blockguessr_8": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
+	"blockguessr_9": {
+		"id": "blockguessr_9",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_9",
+			"item_name": {"text": "Blockguessr 9"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"blockguessr_9": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
 	"smolder_aurora": {
 		"id": "smolder_aurora",
 		"base_item": "minecraft:command_block",

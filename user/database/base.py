@@ -3,10 +3,12 @@
 # Imports
 import os
 
+import stouputils as stp
 from stewbeet import CUSTOM_ITEM_VANILLA, Ingr, Item, Mem, SmeltingRecipe, SmokingRecipe
 
 
 # Main function should return a database
+@stp.measure_time(message="Base database loaded")
 def main() -> None:
 	ns: str = Mem.ctx.project_id
 
@@ -754,6 +756,15 @@ def main() -> None:
 					"food": {"nutrition": 4, "saturation": 2.4, "can_always_eat": True}
 				}
 			)
+
+	# Add blockguessr items
+	for item in [x for x in os.listdir(f"{textures_folder}/blockguessr") if "blockguessr_" in x]:
+		no_extension = os.path.splitext(item)[0]
+		from PIL import Image
+		img = Image.open(f"{textures_folder}/blockguessr/{item}")
+		x_on_y = img.width / img.height
+		displays = ("thirdperson_righthand", "thirdperson_lefthand", "firstperson_righthand", "firstperson_lefthand", "ground", "gui", "head", "fixed", "on_shelf")
+		Item(id=no_extension, override_model={"display": {x: {"scale": [1.69*x_on_y, 1.69, 1.69]} for x in displays}})
 
 	# Add smolder shader textures
 	for item in [x.replace(".png","") for x in os.listdir(f"{textures_folder}/smolder") if "smolder_" in x]:
