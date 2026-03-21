@@ -759,6 +759,9 @@ def main() -> None:
 
 	# Add blockguessr items
 	for item in [x for x in os.listdir(f"{textures_folder}/blockguessr") if "blockguessr_" in x]:
+		if "_map" in item:
+			Item(id="blockguessr_map", base_item="minecraft:carrot_on_a_stick", override_model={"parent":"item/generated"})
+			continue
 		no_extension = os.path.splitext(item)[0]
 		from PIL import Image
 		img = Image.open(f"{textures_folder}/blockguessr/{item}")

@@ -1607,6 +1607,17 @@
 			"custom_data": {"survisland": {"blockguessr_9": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 		}
 	},
+	"blockguessr_map": {
+		"id": "blockguessr_map",
+		"base_item": "minecraft:carrot_on_a_stick",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_map",
+			"item_name": {"text": "Blockguessr Map"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"blockguessr_map": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		}
+	},
 	"smolder_aurora": {
 		"id": "smolder_aurora",
 		"base_item": "minecraft:command_block",
