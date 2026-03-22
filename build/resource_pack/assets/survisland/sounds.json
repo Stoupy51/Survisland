@@ -143,6 +143,10 @@
 		"subtitle": "rat_dance",
 		"sounds": [{"name": "survisland:rat_dance","stream": true}]
 	},
+	"artytris": {
+		"subtitle": "artytris",
+		"sounds": ["survisland:artytris"]
+	},
 	"fart": {
 		"subtitle": "fart",
 		"sounds": ["survisland:fart"]
