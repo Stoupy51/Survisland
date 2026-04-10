@@ -3,7 +3,7 @@
 from stewbeet import Equipment, Item, JsonDict, Mem, Texture, set_json_encoder
 
 # Constants
-NECKLACES: list[str] = ["necklace", "cursed_necklace", "dinosaur_necklace", "dragon_necklace", "dragon_flower_necklace"]
+NECKLACES: list[str] = ["necklace", "cursed_necklace", "dinosaur_necklace"]
 
 # Main function
 def main() -> None:

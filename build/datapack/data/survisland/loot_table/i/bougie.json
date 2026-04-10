@@ -26,6 +26,8 @@
 										"bougie": true
 									},
 									"smithed": {
+										"id": "survisland:bougie",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

@@ -29,6 +29,8 @@
 										"maple_leaf": true
 									},
 									"smithed": {
+										"id": "survisland:maple_leaf",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

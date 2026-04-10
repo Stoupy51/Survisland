@@ -26,6 +26,8 @@
 										"book_advanced": true
 									},
 									"smithed": {
+										"id": "survisland:book_advanced",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

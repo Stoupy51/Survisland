@@ -26,6 +26,8 @@
 										"chest_wagon": true
 									},
 									"smithed": {
+										"id": "survisland:chest_wagon",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

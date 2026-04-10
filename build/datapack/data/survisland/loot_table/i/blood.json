@@ -26,6 +26,8 @@
 										"blood": true
 									},
 									"smithed": {
+										"id": "survisland:blood",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

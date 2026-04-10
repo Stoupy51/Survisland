@@ -32,6 +32,8 @@
 										"flambeau": true
 									},
 									"smithed": {
+										"id": "survisland:flambeau",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

@@ -26,6 +26,8 @@
 										"red_coin": true
 									},
 									"smithed": {
+										"id": "survisland:red_coin",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

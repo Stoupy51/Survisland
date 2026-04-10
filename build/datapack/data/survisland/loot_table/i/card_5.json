@@ -31,6 +31,8 @@
 										"card_5": true
 									},
 									"smithed": {
+										"id": "survisland:card_5",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

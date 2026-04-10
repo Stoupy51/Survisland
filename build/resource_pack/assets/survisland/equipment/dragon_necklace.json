@@ -1,8 +1,0 @@
-{
-	"layers": {
-		"humanoid": [
-			{"texture": "survisland:dragon_necklace_held_overlay"},
-			{"texture": "survisland:dragon_necklace_held","dyeable": {"color_when_undyed": [1.0,1.0,1.0]}}
-		]
-	}
-}

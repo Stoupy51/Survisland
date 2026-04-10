@@ -26,6 +26,8 @@
 										"book_very_light_cyan": true
 									},
 									"smithed": {
+										"id": "survisland:book_very_light_cyan",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

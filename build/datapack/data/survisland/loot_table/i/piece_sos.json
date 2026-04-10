@@ -28,6 +28,8 @@
 										"piece_sos": true
 									},
 									"smithed": {
+										"id": "survisland:piece_sos",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

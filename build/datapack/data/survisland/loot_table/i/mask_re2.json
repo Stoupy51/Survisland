@@ -34,6 +34,8 @@
 										"mask_re2": true
 									},
 									"smithed": {
+										"id": "survisland:mask_re2",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

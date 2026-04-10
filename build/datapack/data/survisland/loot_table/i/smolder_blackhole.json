@@ -26,6 +26,8 @@
 										"smolder_blackhole": true
 									},
 									"smithed": {
+										"id": "survisland:smolder_blackhole",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

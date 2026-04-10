@@ -26,6 +26,8 @@
 										"book_warden": true
 									},
 									"smithed": {
+										"id": "survisland:book_warden",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}
