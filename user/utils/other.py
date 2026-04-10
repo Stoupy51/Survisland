@@ -104,13 +104,10 @@ scoreboard players reset @s {ns}.right_click
 tag @s remove {ns}.temp
 """)
 
-	# Make parchemins, and dragon_necklace tintables
-	dragon_necklace = Item.from_id("dragon_necklace")
-	Mem.ctx.data["minecraft"].item_tags["dyeable"] = set_json_encoder(ItemTag({"values":stp.unique_list([parchemin.base_item, dragon_necklace.base_item])}))
+	# Make parchemins tintables
+	Mem.ctx.data["minecraft"].item_tags["dyeable"] = set_json_encoder(ItemTag({"values":stp.unique_list([parchemin.base_item])}))
 	Mem.ctx.assets[ns].item_models["parchemin"] = set_json_encoder(ItemModel({"model":{"type":"minecraft:model","model":f"{ns}:item/parchemin","tints":[{"type":"minecraft:dye","default":[0.780,0.737,0.647]}]}}), max_level=3)
 	Mem.ctx.assets[ns].item_models["deployed_parchemin"] = set_json_encoder(ItemModel({"model":{"type":"minecraft:model","model":f"{ns}:item/deployed_parchemin","tints":[{"type":"minecraft:dye","default":[0.780,0.737,0.647]}]}}), max_level=3)
-	Mem.ctx.assets[ns].item_models["dragon_necklace"] = set_json_encoder(ItemModel({"model":{"type":"minecraft:model","model":f"{ns}:item/dragon_necklace","tints":[{"type":"minecraft:dye","default":[1.0,1.0,1.0]}]}}), max_level=3)
-	Mem.ctx.assets[ns].item_models["dragon_flower_necklace"] = set_json_encoder(ItemModel({"model":{"type":"minecraft:model","model":f"{ns}:item/dragon_flower_necklace","tints":[{"type":"minecraft:dye","default":[1.0,1.0,1.0]}]}}), max_level=3)
 
 	# parchemins/_convert_to_scroll
 	p_id: str = parchemin.base_item
@@ -139,8 +136,6 @@ execute if score #success {ns}.data matches 0 if data entity @s equipment.offhan
 scoreboard players set #success {ns}.data 0
 execute if score #success {ns}.data matches 0 store success score #success {ns}.data run function {ns}:utils/has_item {{"item":"pendent"}}
 execute if score #success {ns}.data matches 0 store success score #success {ns}.data run function {ns}:utils/has_item {{"item":"pendent_held"}}
-execute if score #success {ns}.data matches 0 store success score #success {ns}.data run function {ns}:utils/has_item {{"item":"dragon_necklace"}}
-execute if score #success {ns}.data matches 0 store success score #success {ns}.data run function {ns}:utils/has_item {{"item":"dragon_flower_necklace"}}
 execute if score #success {ns}.data matches 1 unless entity @s[tag={ns}.has_idol] run tellraw @a[team=aMJ] ["\\n",{{"nbt":"SurvislandSpec","storage":"{ns}:main","interpret":true}},{{"text":" Le joueur "}},{{"selector":"@s","color":"aqua"}},{{"text":" vient de récupérer un idol dans son inventaire !"}}]
 execute if score #success {ns}.data matches 1 unless entity @s[tag={ns}.has_idol] run tellraw @a[team=aStaff] ["\\n",{{"nbt":"SurvislandSpec","storage":"{ns}:main","interpret":true}},{{"text":" Le joueur "}},{{"selector":"@s","color":"aqua"}},{{"text":" vient de récupérer un idol dans son inventaire !"}}]
 execute if score #success {ns}.data matches 1 unless entity @s[tag={ns}.has_idol] run tellraw @a[team=zSpec] ["\\n",{{"nbt":"SurvislandSpec","storage":"{ns}:main","interpret":true}},{{"text":" Le joueur "}},{{"selector":"@s","color":"aqua"}},{{"text":" vient de récupérer un idol dans son inventaire !"}}]

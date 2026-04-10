@@ -686,15 +686,6 @@ def main() -> None:
 		}
 	)
 
-	Item(
-		id="scalbar",
-		manual_category="misc",
-		components={
-			"lore": [{"text":"Made by EvoRay","color":"gold","italic":False}],
-			"consumable": {}
-		}
-	)
-
 	Item(id="monocoin", manual_category="misc")
 	Item(id="super_star", manual_category="misc")
 	Item(id="red_coin", manual_category="misc")
@@ -710,8 +701,6 @@ def main() -> None:
 		)
 
 	Item(id="gland", manual_category="misc")
-	Item(id="ice_stone", manual_category="misc")
-	Item(id="papillon", manual_category="misc")
 	Item(id="water_gun", manual_category="misc")
 	Item(id="pass_du_bureau_de_giovanni", manual_category="misc")
 	Item(id="filet_a_papillons", manual_category="misc")

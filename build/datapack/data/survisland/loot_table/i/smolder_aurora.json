@@ -26,6 +26,8 @@
 										"smolder_aurora": true
 									},
 									"smithed": {
+										"id": "survisland:smolder_aurora",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

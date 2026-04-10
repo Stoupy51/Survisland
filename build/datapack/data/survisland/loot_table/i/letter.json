@@ -26,6 +26,8 @@
 										"letter": true
 									},
 									"smithed": {
+										"id": "survisland:letter",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

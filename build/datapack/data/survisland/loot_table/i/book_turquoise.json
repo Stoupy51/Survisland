@@ -26,6 +26,8 @@
 										"book_turquoise": true
 									},
 									"smithed": {
+										"id": "survisland:book_turquoise",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

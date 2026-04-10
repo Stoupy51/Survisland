@@ -29,6 +29,8 @@
 										"golden_leaf": true
 									},
 									"smithed": {
+										"id": "survisland:golden_leaf",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

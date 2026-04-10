@@ -26,6 +26,8 @@
 										"diamond_meteorite": true
 									},
 									"smithed": {
+										"id": "survisland:diamond_meteorite",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

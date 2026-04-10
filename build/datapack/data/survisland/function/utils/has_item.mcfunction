@@ -5,8 +5,6 @@
 #
 # @within	survisland:advancements/inventory_changed {"item":"pendent"}
 #			survisland:advancements/inventory_changed {"item":"pendent_held"}
-#			survisland:advancements/inventory_changed {"item":"dragon_necklace"}
-#			survisland:advancements/inventory_changed {"item":"dragon_flower_necklace"}
 #
 # @args		item (string)
 #

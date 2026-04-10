@@ -26,6 +26,8 @@
 										"temp_item": true
 									},
 									"smithed": {
+										"id": "survisland:temp_item",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

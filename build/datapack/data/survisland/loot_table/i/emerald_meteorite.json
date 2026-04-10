@@ -26,6 +26,8 @@
 										"emerald_meteorite": true
 									},
 									"smithed": {
+										"id": "survisland:emerald_meteorite",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

@@ -26,6 +26,8 @@
 										"gold_fish": true
 									},
 									"smithed": {
+										"id": "survisland:gold_fish",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}
