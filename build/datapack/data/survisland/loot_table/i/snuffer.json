@@ -36,8 +36,6 @@
 										"snuffer": true
 									},
 									"smithed": {
-										"id": "survisland:snuffer",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

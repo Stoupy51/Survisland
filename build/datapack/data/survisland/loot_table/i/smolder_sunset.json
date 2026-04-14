@@ -26,8 +26,6 @@
 										"smolder_sunset": true
 									},
 									"smithed": {
-										"id": "survisland:smolder_sunset",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

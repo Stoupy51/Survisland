@@ -26,8 +26,6 @@
 										"bouquet": true
 									},
 									"smithed": {
-										"id": "survisland:bouquet",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

@@ -32,8 +32,6 @@
 										"pendent_held": true
 									},
 									"smithed": {
-										"id": "survisland:pendent_held",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

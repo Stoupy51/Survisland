@@ -26,8 +26,6 @@
 										"filet_a_papillons": true
 									},
 									"smithed": {
-										"id": "survisland:filet_a_papillons",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

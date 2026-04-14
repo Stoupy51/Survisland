@@ -26,8 +26,6 @@
 										"monocoin": true
 									},
 									"smithed": {
-										"id": "survisland:monocoin",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

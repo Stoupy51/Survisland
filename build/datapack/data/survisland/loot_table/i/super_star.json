@@ -26,8 +26,6 @@
 										"super_star": true
 									},
 									"smithed": {
-										"id": "survisland:super_star",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

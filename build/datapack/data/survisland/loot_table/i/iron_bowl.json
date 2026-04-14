@@ -31,8 +31,6 @@
 										"iron_bowl": true
 									},
 									"smithed": {
-										"id": "survisland:iron_bowl",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

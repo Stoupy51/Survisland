@@ -21,6 +21,15 @@ def main() -> None:
 	)
 
 	Item(
+		id="coord_stick",
+		base_item="minecraft:warped_fungus_on_a_stick",
+		components={
+			"item_model": "minecraft:stick",
+			"enchantment_glint_override": True,
+		}
+	)
+
+	Item(
 		id="parchemin",
 		base_item="minecraft:warped_fungus_on_a_stick",
 		components={
@@ -707,19 +716,19 @@ def main() -> None:
 
 	# Get textures
 	textures_folder = str(Mem.ctx.meta.get("stewbeet", {}).get("textures_folder", ""))
-	textures: list[str] = os.listdir(textures_folder)
+	textures: list[str] = [os.path.splitext(file)[0] for _, _, files in os.walk(textures_folder) for file in files if file.endswith(".png")]
 
 	# Add sudokucraft items
 	for item in ["heart_key", "arc_cupidon", "bougie", "bouquet", "cadeau", "coeur", "coeur_fleche", "enveloppe", "gateau_fraise"]:
 		Item(id=item)
 
 	# Add colored books
-	books: list[str] = [x.replace(".png","") for x in textures if "book_" in x]
+	books: list[str] = [x for x in textures if "book_" in x]
 	for book in books:
 		Item(id=book, base_item="minecraft:written_book", manual_category="book")
 
 	# Add edible colored fishs
-	fishs: list[str] = [x.replace(".png","") for x in textures if "poisson_" in x]
+	fishs: list[str] = [x for x in textures if "poisson_" in x]
 	for fish in fishs:
 		Item(
 			id=fish,
@@ -737,7 +746,7 @@ def main() -> None:
 	for logo in textures:
 		if "logo_" in logo:
 			Item(
-				id=logo.replace(".png",""),
+				id=logo,
 				base_item="minecraft:apple",
 				manual_category="logo",
 				components={
@@ -747,7 +756,7 @@ def main() -> None:
 			)
 
 	# Add blockguessr items
-	for item in [x for x in os.listdir(f"{textures_folder}/blockguessr") if "blockguessr_" in x]:
+	for item in [x for x in textures if "blockguessr_" in x]:
 		if "_map" in item:
 			Item(id="blockguessr_map", base_item="minecraft:carrot_on_a_stick", override_model={"parent":"item/generated"})
 			continue
@@ -759,6 +768,6 @@ def main() -> None:
 		Item(id=no_extension, override_model={"display": {x: {"scale": [1.69*x_on_y, 1.69, 1.69]} for x in displays}})
 
 	# Add smolder shader textures
-	for item in [x.replace(".png","") for x in os.listdir(f"{textures_folder}/smolder") if "smolder_" in x]:
+	for item in [x for x in textures if "smolder_" in x]:
 		Item(id=item, override_model={"parent":"minecraft:block/cube_all"})
 

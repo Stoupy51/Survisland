@@ -26,8 +26,6 @@
 										"purple_crystal": true
 									},
 									"smithed": {
-										"id": "survisland:purple_crystal",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

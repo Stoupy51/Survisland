@@ -16,8 +16,6 @@
 									},
 									"smithed": {
 										"dict": {"record": {"rat_dance": true,"item_name": "Rat Dance"},"jukebox_song": {"comparator_output": 6,"length_in_seconds": 151,"sound_event": {"sound_id": "survisland:rat_dance"},"description": {"text": "Rat Dance"}}},
-										"id": "survisland:rat_dance",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

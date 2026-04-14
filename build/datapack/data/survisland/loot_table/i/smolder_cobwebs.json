@@ -26,8 +26,6 @@
 										"smolder_cobwebs": true
 									},
 									"smithed": {
-										"id": "survisland:smolder_cobwebs",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

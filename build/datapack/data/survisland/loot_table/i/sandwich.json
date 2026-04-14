@@ -26,8 +26,6 @@
 										"sandwich": true
 									},
 									"smithed": {
-										"id": "survisland:sandwich",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

@@ -26,8 +26,6 @@
 										"gland": true
 									},
 									"smithed": {
-										"id": "survisland:gland",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

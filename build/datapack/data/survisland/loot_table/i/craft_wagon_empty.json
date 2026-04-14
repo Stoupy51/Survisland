@@ -26,8 +26,6 @@
 										"craft_wagon_empty": true
 									},
 									"smithed": {
-										"id": "survisland:craft_wagon_empty",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

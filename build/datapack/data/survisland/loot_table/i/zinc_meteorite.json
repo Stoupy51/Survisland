@@ -26,8 +26,6 @@
 										"zinc_meteorite": true
 									},
 									"smithed": {
-										"id": "survisland:zinc_meteorite",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

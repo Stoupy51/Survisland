@@ -26,8 +26,6 @@
 										"book_orange": true
 									},
 									"smithed": {
-										"id": "survisland:book_orange",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

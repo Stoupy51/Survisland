@@ -36,8 +36,6 @@
 										"donut": true
 									},
 									"smithed": {
-										"id": "survisland:donut",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

@@ -26,8 +26,6 @@
 										"locomotive_slow": true
 									},
 									"smithed": {
-										"id": "survisland:locomotive_slow",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}
