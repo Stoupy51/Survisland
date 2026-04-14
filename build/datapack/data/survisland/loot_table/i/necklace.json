@@ -32,8 +32,6 @@
 										"necklace": true
 									},
 									"smithed": {
-										"id": "survisland:necklace",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

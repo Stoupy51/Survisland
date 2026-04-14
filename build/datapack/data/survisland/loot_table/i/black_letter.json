@@ -26,8 +26,6 @@
 										"black_letter": true
 									},
 									"smithed": {
-										"id": "survisland:black_letter",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

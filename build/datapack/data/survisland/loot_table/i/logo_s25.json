@@ -32,8 +32,6 @@
 										"logo_s25": true
 									},
 									"smithed": {
-										"id": "survisland:logo_s25",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

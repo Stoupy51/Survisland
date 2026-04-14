@@ -26,8 +26,6 @@
 										"icon": true
 									},
 									"smithed": {
-										"id": "survisland:icon",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

@@ -40,8 +40,6 @@
 										"parchemin": true
 									},
 									"smithed": {
-										"id": "survisland:parchemin",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

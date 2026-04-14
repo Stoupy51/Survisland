@@ -26,8 +26,6 @@
 										"blockguessr_map": true
 									},
 									"smithed": {
-										"id": "survisland:blockguessr_map",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

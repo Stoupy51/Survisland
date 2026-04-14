@@ -34,8 +34,6 @@
 										"sombrero": true
 									},
 									"smithed": {
-										"id": "survisland:sombrero",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

@@ -42,8 +42,6 @@
 					"croissant": true
 				},
 				"smithed": {
-					"id": "survisland:croissant",
-					"origin": "survisland",
 					"ignore": {
 						"functionality": true,
 						"crafting": true

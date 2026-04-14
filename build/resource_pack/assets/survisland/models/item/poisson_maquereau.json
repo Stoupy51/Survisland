@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/apple",
+	"textures": {
+		"layer0": "survisland:item/poisson_maquereau"
+	}
+}

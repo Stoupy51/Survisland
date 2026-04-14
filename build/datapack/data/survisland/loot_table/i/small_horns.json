@@ -30,8 +30,6 @@
 										"small_horns": true
 									},
 									"smithed": {
-										"id": "survisland:small_horns",
-										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}
