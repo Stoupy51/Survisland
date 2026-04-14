@@ -1,9 +1,6 @@
 
 #> survisland:utils/snuffer
 #
-# @within			survisland:right_click/all
-# @executed			as & at player to change flambeau state
-#
 # @description		Change flambeau state, playsound, and particles
 #
 

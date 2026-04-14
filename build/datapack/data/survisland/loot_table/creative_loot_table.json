@@ -2,6 +2,7 @@
 	"pools": [
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/icon"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/laser_gun"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/coord_stick"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/parchemin"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/deployed_parchemin"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/snuffer"}]},

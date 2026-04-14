@@ -1,9 +1,6 @@
 
 #> survisland:parchemins/deploy_open
 #
-# @within			survisland:right_click/all
-# @executed			as & at current player
-#
 # @description		Open the scroll by summoning an item_display and a text_display
 #
 
