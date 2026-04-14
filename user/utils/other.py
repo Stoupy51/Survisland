@@ -98,10 +98,18 @@ execute if score #success {ns}.data matches 0 store success score #success {ns}.
 execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s SelectedItem.components{{"minecraft:item_model":"{deployed_item_model}"}} run function {ns}:parchemins/deploy_close
 execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s SelectedItem.components."minecraft:custom_data".{ns}.snuffer positioned ^ ^ ^2 as @p[gamemode=!spectator,tag=!{ns}.temp,distance=..3] at @s run function {ns}:utils/snuffer
 execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s equipment.offhand.components."minecraft:custom_data".{ns}.snuffer positioned ^ ^ ^2 as @p[gamemode=!spectator,distance=..3] at @s run function {ns}:utils/snuffer
+execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s SelectedItem.components."minecraft:custom_data".{ns}.coord_stick run function {ns}:utils/coord_stick
+execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s equipment.offhand.components."minecraft:custom_data".{ns}.coord_stick run function {ns}:utils/coord_stick
 
 # Reset score and tag
 scoreboard players reset @s {ns}.right_click
 tag @s remove {ns}.temp
+""")
+
+	# Coord stick
+	write_function(f"{ns}:utils/coord_stick", f"""
+# Run relative function on the block in front of the player
+function #bs.view:at_aimed_block {{run:"function {ns}:utils/relative",with:{{}}}}
 """)
 
 	# Make parchemins tintables
