@@ -41,6 +41,8 @@
 										"poisson_thon": true
 									},
 									"smithed": {
+										"id": "survisland:poisson_thon",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

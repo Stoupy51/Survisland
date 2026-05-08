@@ -26,6 +26,8 @@
 										"cyan_crystal": true
 									},
 									"smithed": {
+										"id": "survisland:cyan_crystal",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

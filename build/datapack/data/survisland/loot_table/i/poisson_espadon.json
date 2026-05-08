@@ -41,6 +41,8 @@
 										"poisson_espadon": true
 									},
 									"smithed": {
+										"id": "survisland:poisson_espadon",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

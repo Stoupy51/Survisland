@@ -1,7 +1,9 @@
 
 #> survisland:utils/relative
 #
-# @within	???
+# @executed	as the player & at current position
+#
+# @within	survisland:utils/coord_stick {run:"function survisland:utils/relative",with:{}}
 #
 
 # State

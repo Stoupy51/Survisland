@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/painting",
+	"textures": {
+		"layer0": "survisland:item/mariage_painting"
+	}
+}

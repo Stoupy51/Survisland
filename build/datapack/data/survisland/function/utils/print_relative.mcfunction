@@ -1,6 +1,8 @@
 
 #> survisland:utils/print_relative
 #
+# @executed	as the player & at current position
+#
 # @within	survisland:utils/relative with storage survisland:main positioned
 #
 # @args		x (int)

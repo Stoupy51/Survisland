@@ -26,6 +26,8 @@
 										"enveloppe": true
 									},
 									"smithed": {
+										"id": "survisland:enveloppe",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

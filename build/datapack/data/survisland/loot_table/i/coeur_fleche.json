@@ -26,6 +26,8 @@
 										"coeur_fleche": true
 									},
 									"smithed": {
+										"id": "survisland:coeur_fleche",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

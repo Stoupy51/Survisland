@@ -26,6 +26,8 @@
 										"book_brown": true
 									},
 									"smithed": {
+										"id": "survisland:book_brown",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

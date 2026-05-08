@@ -41,6 +41,8 @@
 										"poisson_cabillaud": true
 									},
 									"smithed": {
+										"id": "survisland:poisson_cabillaud",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

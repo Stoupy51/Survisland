@@ -41,6 +41,8 @@
 										"poisson_maquereau": true
 									},
 									"smithed": {
+										"id": "survisland:poisson_maquereau",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

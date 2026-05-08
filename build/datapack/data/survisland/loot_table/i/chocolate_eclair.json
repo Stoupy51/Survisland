@@ -36,6 +36,8 @@
 										"chocolate_eclair": true
 									},
 									"smithed": {
+										"id": "survisland:chocolate_eclair",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

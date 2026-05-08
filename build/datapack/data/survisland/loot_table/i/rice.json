@@ -41,6 +41,8 @@
 										"rice": true
 									},
 									"smithed": {
+										"id": "survisland:rice",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

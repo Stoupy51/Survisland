@@ -27,6 +27,8 @@
 										"coord_stick": true
 									},
 									"smithed": {
+										"id": "survisland:coord_stick",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

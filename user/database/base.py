@@ -4,7 +4,7 @@
 import os
 
 import stouputils as stp
-from stewbeet import CUSTOM_ITEM_VANILLA, Ingr, Item, Mem, SmeltingRecipe, SmokingRecipe
+from stewbeet import Ingr, Item, Mem, Painting, PaintingData, SmeltingRecipe, SmokingRecipe
 
 
 # Main function should return a database
@@ -704,7 +704,6 @@ def main() -> None:
 	for i in range(0, 9):
 		Item(
 			id=f"card_{i}",
-			base_item=CUSTOM_ITEM_VANILLA,
 			manual_category="misc",
 			components={"lore": [{"text":"Made by Canfav","color":"gold","italic":False}]}
 		)
@@ -770,4 +769,12 @@ def main() -> None:
 	# Add smolder shader textures
 	for item in [x for x in textures if "smolder_" in x]:
 		Item(id=item, override_model={"parent":"minecraft:block/cube_all"})
+
+	# Add painting
+	for item in ("mariage_painting", "knights_painting"):
+		Painting(id=item, painting_data=PaintingData(
+			author={"text":"Tata_Mymy","color":"yellow"},
+			width=4,
+			height=4
+		))
 

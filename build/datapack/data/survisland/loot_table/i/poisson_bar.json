@@ -41,6 +41,8 @@
 										"poisson_bar": true
 									},
 									"smithed": {
+										"id": "survisland:poisson_bar",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

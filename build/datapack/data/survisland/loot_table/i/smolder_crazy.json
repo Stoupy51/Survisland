@@ -26,6 +26,8 @@
 										"smolder_crazy": true
 									},
 									"smithed": {
+										"id": "survisland:smolder_crazy",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

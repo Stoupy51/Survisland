@@ -41,6 +41,8 @@
 					"cooked_rice": true
 				},
 				"smithed": {
+					"id": "survisland:cooked_rice",
+					"origin": "survisland",
 					"ignore": {
 						"functionality": true,
 						"crafting": true

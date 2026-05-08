@@ -26,6 +26,8 @@
 										"smolder_tunnelcable": true
 									},
 									"smithed": {
+										"id": "survisland:smolder_tunnelcable",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

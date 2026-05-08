@@ -36,6 +36,8 @@
 										"chocolatine": true
 									},
 									"smithed": {
+										"id": "survisland:chocolatine",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

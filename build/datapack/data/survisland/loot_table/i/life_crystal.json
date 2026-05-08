@@ -26,6 +26,8 @@
 										"life_crystal": true
 									},
 									"smithed": {
+										"id": "survisland:life_crystal",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

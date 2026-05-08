@@ -26,6 +26,8 @@
 										"lunar_compass": true
 									},
 									"smithed": {
+										"id": "survisland:lunar_compass",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

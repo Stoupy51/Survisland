@@ -26,6 +26,8 @@
 										"blue_star": true
 									},
 									"smithed": {
+										"id": "survisland:blue_star",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

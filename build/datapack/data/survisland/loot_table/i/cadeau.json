@@ -26,6 +26,8 @@
 										"cadeau": true
 									},
 									"smithed": {
+										"id": "survisland:cadeau",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

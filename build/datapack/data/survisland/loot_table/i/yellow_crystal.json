@@ -26,6 +26,8 @@
 										"yellow_crystal": true
 									},
 									"smithed": {
+										"id": "survisland:yellow_crystal",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

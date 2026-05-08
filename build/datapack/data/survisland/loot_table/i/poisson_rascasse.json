@@ -41,6 +41,8 @@
 										"poisson_rascasse": true
 									},
 									"smithed": {
+										"id": "survisland:poisson_rascasse",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

@@ -26,6 +26,8 @@
 										"pass_du_bureau_de_giovanni": true
 									},
 									"smithed": {
+										"id": "survisland:pass_du_bureau_de_giovanni",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}
