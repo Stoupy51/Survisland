@@ -26,6 +26,8 @@
 										"smolder_stars": true
 									},
 									"smithed": {
+										"id": "survisland:smolder_stars",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

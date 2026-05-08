@@ -41,6 +41,8 @@
 										"poisson_pagre": true
 									},
 									"smithed": {
+										"id": "survisland:poisson_pagre",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

@@ -27,6 +27,8 @@
 										"laser_gun": true
 									},
 									"smithed": {
+										"id": "survisland:laser_gun",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

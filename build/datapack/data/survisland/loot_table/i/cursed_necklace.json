@@ -32,6 +32,8 @@
 										"cursed_necklace": true
 									},
 									"smithed": {
+										"id": "survisland:cursed_necklace",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

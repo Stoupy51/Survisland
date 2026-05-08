@@ -26,6 +26,8 @@
 										"arc_cupidon": true
 									},
 									"smithed": {
+										"id": "survisland:arc_cupidon",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

@@ -26,6 +26,8 @@
 										"book_green_blue": true
 									},
 									"smithed": {
+										"id": "survisland:book_green_blue",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

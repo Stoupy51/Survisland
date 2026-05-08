@@ -26,6 +26,8 @@
 										"astral_powder": true
 									},
 									"smithed": {
+										"id": "survisland:astral_powder",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

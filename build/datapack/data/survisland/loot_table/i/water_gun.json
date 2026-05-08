@@ -26,6 +26,8 @@
 										"water_gun": true
 									},
 									"smithed": {
+										"id": "survisland:water_gun",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

@@ -26,6 +26,8 @@
 										"gateau_fraise": true
 									},
 									"smithed": {
+										"id": "survisland:gateau_fraise",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

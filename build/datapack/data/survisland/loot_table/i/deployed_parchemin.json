@@ -26,6 +26,8 @@
 										"deployed_parchemin": true
 									},
 									"smithed": {
+										"id": "survisland:deployed_parchemin",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

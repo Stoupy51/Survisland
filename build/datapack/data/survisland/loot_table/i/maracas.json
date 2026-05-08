@@ -37,6 +37,8 @@
 										"maracas": true
 									},
 									"smithed": {
+										"id": "survisland:maracas",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

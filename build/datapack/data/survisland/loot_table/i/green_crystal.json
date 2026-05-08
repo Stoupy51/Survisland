@@ -26,6 +26,8 @@
 										"green_crystal": true
 									},
 									"smithed": {
+										"id": "survisland:green_crystal",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

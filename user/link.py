@@ -1,11 +1,12 @@
 
 # Imports
-from stewbeet import BOOKSHELF_MODULES, Context, Mem, official_lib_used
+from stewbeet import Context, Mem, official_lib_used
+from stewbeet.dependencies import OFFICIAL_LIBS
 
+from user.utils.font import main as generate_screamer
 from user.utils.item_modifiers import main as generate_books_modifiers
 from user.utils.other import main as generate_other_things
 from user.utils.pop_ups import main as generate_pop_ups
-from user.utils.font import main as generate_screamer
 
 
 # Main function is run just before making finalyzing the build process (zip, headers, lang, ...)
@@ -16,8 +17,9 @@ def beet_default(ctx: Context) -> None:
 	generate_screamer()
 
 	# Force enable a all modules from Bookshelf (https://docs.mcbookshelf.dev/en/latest/modules/dump.html)
-	for module in BOOKSHELF_MODULES.keys():
-		official_lib_used(module)
+	for module in OFFICIAL_LIBS.keys():
+		if module.startswith("bs."):
+			official_lib_used(module)
 
 	# Delete quick actions (manual)
 	if Mem.ctx.data["minecraft"].dialogs_tags.get("quick_actions"):

@@ -36,6 +36,8 @@
 										"strawberry_pie": true
 									},
 									"smithed": {
+										"id": "survisland:strawberry_pie",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

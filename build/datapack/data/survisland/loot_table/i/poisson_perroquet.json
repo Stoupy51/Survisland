@@ -41,6 +41,8 @@
 										"poisson_perroquet": true
 									},
 									"smithed": {
+										"id": "survisland:poisson_perroquet",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

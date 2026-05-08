@@ -32,6 +32,8 @@
 										"pendent": true
 									},
 									"smithed": {
+										"id": "survisland:pendent",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

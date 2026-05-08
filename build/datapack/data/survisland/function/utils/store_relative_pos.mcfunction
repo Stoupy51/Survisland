@@ -1,6 +1,8 @@
 
 #> survisland:utils/store_relative_pos
 #
+# @executed	as the player & at current position
+#
 # @within	survisland:utils/relative
 #
 

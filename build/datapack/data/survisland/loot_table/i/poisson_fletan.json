@@ -41,6 +41,8 @@
 										"poisson_fletan": true
 									},
 									"smithed": {
+										"id": "survisland:poisson_fletan",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}

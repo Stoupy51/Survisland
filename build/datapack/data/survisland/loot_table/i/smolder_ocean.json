@@ -26,6 +26,8 @@
 										"smolder_ocean": true
 									},
 									"smithed": {
+										"id": "survisland:smolder_ocean",
+										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								}
