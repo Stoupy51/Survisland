@@ -145,7 +145,7 @@
 	},
 	"artytris": {
 		"subtitle": "artytris",
-		"sounds": ["survisland:artytris"]
+		"sounds": [{"name": "survisland:artytris","stream": true}]
 	},
 	"fart": {
 		"subtitle": "fart",
@@ -177,31 +177,31 @@
 	},
 	"tchoutchou/01_bonus": {
 		"subtitle": "tchoutchou/01_bonus",
-		"sounds": ["survisland:tchoutchou/01_bonus"]
+		"sounds": [{"name": "survisland:tchoutchou/01_bonus","stream": true}]
 	},
 	"tchoutchou/01_transition": {
 		"subtitle": "tchoutchou/01_transition",
-		"sounds": ["survisland:tchoutchou/01_transition"]
+		"sounds": [{"name": "survisland:tchoutchou/01_transition","stream": true}]
 	},
 	"tchoutchou/02_bonus": {
 		"subtitle": "tchoutchou/02_bonus",
-		"sounds": ["survisland:tchoutchou/02_bonus"]
+		"sounds": [{"name": "survisland:tchoutchou/02_bonus","stream": true}]
 	},
 	"tchoutchou/02_transition": {
 		"subtitle": "tchoutchou/02_transition",
-		"sounds": ["survisland:tchoutchou/02_transition"]
+		"sounds": [{"name": "survisland:tchoutchou/02_transition","stream": true}]
 	},
 	"tchoutchou/03_bonus": {
 		"subtitle": "tchoutchou/03_bonus",
-		"sounds": ["survisland:tchoutchou/03_bonus"]
+		"sounds": [{"name": "survisland:tchoutchou/03_bonus","stream": true}]
 	},
 	"tchoutchou/03_transition": {
 		"subtitle": "tchoutchou/03_transition",
-		"sounds": ["survisland:tchoutchou/03_transition"]
+		"sounds": [{"name": "survisland:tchoutchou/03_transition","stream": true}]
 	},
 	"tchoutchou/04_transition": {
 		"subtitle": "tchoutchou/04_transition",
-		"sounds": ["survisland:tchoutchou/04_transition"]
+		"sounds": [{"name": "survisland:tchoutchou/04_transition","stream": true}]
 	},
 	"tchoutchou/call": {
 		"subtitle": "tchoutchou/call",
@@ -209,7 +209,7 @@
 	},
 	"tchoutchou/double_elim": {
 		"subtitle": "tchoutchou/double_elim",
-		"sounds": ["survisland:tchoutchou/double_elim"]
+		"sounds": [{"name": "survisland:tchoutchou/double_elim","stream": true}]
 	},
 	"vine_boom": {
 		"subtitle": "vine_boom",
