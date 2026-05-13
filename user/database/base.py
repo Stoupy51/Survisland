@@ -4,7 +4,7 @@
 import os
 
 import stouputils as stp
-from stewbeet import Ingr, Item, Mem, Painting, PaintingData, SmeltingRecipe, SmokingRecipe
+from stewbeet import Ingr, Item, JsonDict, Mem, Painting, PaintingData, SmeltingRecipe, SmokingRecipe
 
 
 # Main function should return a database
@@ -759,12 +759,19 @@ def main() -> None:
 		if "_map" in item:
 			Item(id="blockguessr_map", base_item="minecraft:carrot_on_a_stick", override_model={"parent":"item/generated"})
 			continue
+
+	# Add SCP items
+	for item in [x for x in textures if "scp_" in x]:
 		no_extension = os.path.splitext(item)[0]
 		from PIL import Image
-		img = Image.open(f"{textures_folder}/blockguessr/{item}")
+		img = Image.open(f"{textures_folder}/scp/{item}.png")
 		x_on_y = img.width / img.height
 		displays = ("thirdperson_righthand", "thirdperson_lefthand", "firstperson_righthand", "firstperson_lefthand", "ground", "gui", "head", "fixed", "on_shelf")
-		Item(id=no_extension, override_model={"display": {x: {"scale": [1.69*x_on_y, 1.69, 1.69]} for x in displays}})
+		override_model: JsonDict = {"display": {x: {"scale": [0.5*x_on_y, 0.5, 0.5]} for x in displays}}
+		override_model["display"]["firstperson_righthand"] = {"scale": [0, 0, 0]}
+		override_model["display"]["firstperson_lefthand"] = {"scale": [0, 0, 0]}
+		Item(id=no_extension, override_model=override_model)
+
 
 	# Add smolder shader textures
 	for item in [x for x in textures if "smolder_" in x]:
