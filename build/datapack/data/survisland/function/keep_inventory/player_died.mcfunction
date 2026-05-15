@@ -3,7 +3,7 @@
 #
 # @executed	as @a[scores={survisland.deathCount=1..}] & at @s
 #
-# @within	survisland:v2.4.5/tick [ as @a[scores={survisland.deathCount=1..}] & at @s ]
+# @within	survisland:v2.4.6/tick [ as @a[scores={survisland.deathCount=1..}] & at @s ]
 #
 
 # Reset scoreboard
