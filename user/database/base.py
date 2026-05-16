@@ -699,6 +699,7 @@ def main() -> None:
 	Item(id="super_star", manual_category="misc")
 	Item(id="red_coin", manual_category="misc")
 	Item(id="piece_sos", manual_category="misc", components={"item_name": {"text":"Pièce SOS","color":"light_purple","italic":False}})
+	Item(id="grimoire", manual_category="misc")
 
 	# Cards 0 to 8
 	for i in range(0, 9):
