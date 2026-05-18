@@ -77,9 +77,9 @@ meta:
         # Optional list of destination paths where generated files will be copied
         build_copy_destinations:
             # Paths to copy the datapack(s) to
-            datapack: ["D:/latest_snapshot/world/datapacks"]
+            datapack: ["./datapack_shortcut"]   # cmd /c mklink /d "datapack_shortcut" "D:\latest_snapshot\world\datapacks"
             # Paths to copy the resource pack(s) to
-            resource_pack: ["D:/minecraft/snapshot/resourcepacks"]
+            resource_pack: ["./resource_pack_shortcut"]   # cmd /c mklink /d "resource_pack_shortcut" "D:\minecraft\snapshot\resourcepacks"
 
         # Configuration for in-game manual
         manual:
