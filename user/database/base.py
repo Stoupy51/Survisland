@@ -767,8 +767,9 @@ def main() -> None:
 		Item(id=item, override_model={"parent":"minecraft:block/cube_all"})
 
 	# Add painting
-	for item in ("mariage_painting", "knights_painting"):
+	for item in ("mariage_painting", "knights_painting", "koko_painting", "fusoya_painting", "hamelin_painting"):
 		Painting(id=item, painting_data=PaintingData(
+			texture=f"painting/{item}",
 			author={"text":"Tata_Mymy","color":"yellow"},
 			width=4,
 			height=4

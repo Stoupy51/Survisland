@@ -1,0 +1,42 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:painting",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:painting/variant": "survisland:hamelin_painting",
+								"minecraft:item_model": "survisland:hamelin_painting",
+								"minecraft:item_name": {
+									"text": "Hamelin Painting"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
+										{"text": " Survisland","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:custom_data": {
+									"survisland": {
+										"hamelin_painting": true
+									},
+									"smithed": {
+										"id": "survisland:hamelin_painting",
+										"origin": "survisland",
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

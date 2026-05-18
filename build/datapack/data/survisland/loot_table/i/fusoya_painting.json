@@ -1,0 +1,42 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:painting",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:painting/variant": "survisland:fusoya_painting",
+								"minecraft:item_model": "survisland:fusoya_painting",
+								"minecraft:item_name": {
+									"text": "Fusoya Painting"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
+										{"text": " Survisland","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:custom_data": {
+									"survisland": {
+										"fusoya_painting": true
+									},
+									"smithed": {
+										"id": "survisland:fusoya_painting",
+										"origin": "survisland",
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
