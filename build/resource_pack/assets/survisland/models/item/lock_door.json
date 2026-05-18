@@ -6,65 +6,16 @@
 	"display": {
 		"thirdperson_righthand": {
 			"scale": [
-				1,
-				1,
-				1
+				0,
+				0,
+				0
 			]
 		},
 		"thirdperson_lefthand": {
 			"scale": [
-				1,
-				1,
-				1
-			]
-		},
-		"firstperson_righthand": {
-			"scale": [
 				0,
 				0,
 				0
-			]
-		},
-		"firstperson_lefthand": {
-			"scale": [
-				0,
-				0,
-				0
-			]
-		},
-		"ground": {
-			"scale": [
-				1,
-				1,
-				1
-			]
-		},
-		"gui": {
-			"scale": [
-				1,
-				1,
-				1
-			]
-		},
-		"head": {
-			"scale": [
-				1,
-				1,
-				1
-			]
-		},
-		"fixed": {
-			"scale": [
-				1,
-				1,
-				1
-			]
-		},
-		"on_shelf": {
-			"scale": [
-				1,
-				1,
-				1
 			]
 		}
 	}
