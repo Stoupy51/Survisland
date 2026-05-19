@@ -28,6 +28,25 @@ def main() -> None:
         override_model["display"]["firstperson_lefthand"] = {"scale": [0, 0, 0]}
         Item(id=no_extension, override_model=override_model)
 
+    # Add Key Card
+    Item(id="id_card_1", manual_category="misc")
+    Item(id="id_card_2", manual_category="misc")
+    Item(id="id_card_3", manual_category="misc")
+    Item(id="id_card_4", manual_category="misc")
+
+    # Add Plates
+    Item(id="scp_008_plate", manual_category="misc")
+    Item(id="scp_049_plate", manual_category="misc")
+    Item(id="scp_096_plate", manual_category="misc")
+    Item(id="scp_105_plate", manual_category="misc")
+    Item(id="scp_106_plate", manual_category="misc")
+    Item(id="scp_173_plate", manual_category="misc")
+    Item(id="scp_330_plate", manual_category="misc")
+    Item(id="scp_939_plate", manual_category="misc")
+    Item(id="scp_966_plate", manual_category="misc")
+    Item(id="scp_999_plate", manual_category="misc")
+    Item(id="scp_1048_plate", manual_category="misc")
+
     # Add lock door item (no visible in third person)
     override_model: JsonDict = {"display": {x: {"scale": [0, 0, 0]} for x in ("thirdperson_righthand", "thirdperson_lefthand")}}
     Item(id="lock_door", base_item="minecraft:carrot_on_a_stick", manual_category="misc", override_model=override_model)
