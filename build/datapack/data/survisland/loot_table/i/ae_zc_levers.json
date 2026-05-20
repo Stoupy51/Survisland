@@ -1,0 +1,45 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:equippable": {
+									"slot": "mainhand",
+									"camera_overlay": "survisland:item/ae_zc_levers"
+								},
+								"minecraft:item_model": "survisland:ae_zc_levers",
+								"minecraft:item_name": {
+									"text": "Ae Zc Levers"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "survisland:icons"},
+										{"text": " Survisland","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:custom_data": {
+									"survisland": {
+										"ae_zc_levers": true
+									},
+									"smithed": {
+										"id": "survisland:ae_zc_levers",
+										"origin": "survisland",
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

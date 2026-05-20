@@ -3,7 +3,7 @@
 import os
 
 import stouputils as stp
-from stewbeet import Item, JsonDict, Mem
+from stewbeet import Item, JsonDict, Mem, Painting, PaintingData
 
 # Constants
 DISPLAYS: tuple[str, ...] = ("thirdperson_righthand", "thirdperson_lefthand", "firstperson_righthand", "firstperson_lefthand", "ground", "gui", "head", "fixed", "on_shelf")
@@ -18,15 +18,44 @@ def main() -> None:
     #textures: list[str] = [os.path.splitext(file)[0] for _, _, files in os.walk(textures_folder) for file in files if file.endswith(".png")]
 
     # Add SCP items
-    for item in ("scp_173",):
-        no_extension = os.path.splitext(item)[0]
+    for item in ("scp_173", "ae_106_1", "ae_106_2", "ae_106_dpt", "ae_173_doc", "ae_classd", "ae_zc_levers",):
         from PIL import Image
         img = Image.open(f"{textures_folder}/ae/{item}.png")
         x_on_y = img.width / img.height
         override_model: JsonDict = {"display": {x: {"scale": [0.5*x_on_y, 0.5, 0.5]} for x in DISPLAYS}}
         override_model["display"]["firstperson_righthand"] = {"scale": [0, 0, 0]}
         override_model["display"]["firstperson_lefthand"] = {"scale": [0, 0, 0]}
-        Item(id=no_extension, override_model=override_model)
+        Item(id=item, override_model=override_model, components={"equippable": {"slot":"mainhand","camera_overlay": f"{ns}:item/{item}"}})
+
+    Item(id="ae_black_screen", base_item="minecraft:carved_pumpkin", override_model={"parent":"item/generated"})
+
+    # Add Key Card
+    Item(id="id_card_1", manual_category="misc")
+    Item(id="id_card_2", manual_category="misc")
+    Item(id="id_card_3", manual_category="misc")
+    Item(id="id_card_4", manual_category="misc")
+
+    # Add Plates
+    Item(id="scp_008_plate", manual_category="misc")
+    Item(id="scp_049_plate", manual_category="misc")
+    Item(id="scp_096_plate", manual_category="misc")
+    Item(id="scp_105_plate", manual_category="misc")
+    Item(id="scp_106_plate", manual_category="misc")
+    Item(id="scp_173_plate", manual_category="misc")
+    Item(id="scp_330_plate", manual_category="misc")
+    Item(id="scp_939_plate", manual_category="misc")
+    Item(id="scp_966_plate", manual_category="misc")
+    Item(id="scp_999_plate", manual_category="misc")
+    Item(id="scp_1048_plate", manual_category="misc")
+
+    # Add painting
+    for item in ("ae_lockdown_cp_off", "ae_lockdown_cp_online"):
+        Painting(id=item, painting_data=PaintingData(
+            texture=f"painting/{item}",
+            author={"text":"Chifu","color":"yellow"},
+            width=3,
+            height=2
+        ))
 
     # Add lock door item (no visible in third person)
     override_model: JsonDict = {"display": {x: {"scale": [0, 0, 0]} for x in ("thirdperson_righthand", "thirdperson_lefthand")}}

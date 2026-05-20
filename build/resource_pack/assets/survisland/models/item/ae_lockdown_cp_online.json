@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/painting",
+	"textures": {
+		"layer0": "survisland:item/ae_lockdown_cp_online"
+	}
+}
