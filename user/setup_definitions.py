@@ -8,6 +8,8 @@ from stewbeet import (
 	add_private_custom_data_for_namespace,
 	add_smithed_ignore_vanilla_behaviours_convention,
 	generate_custom_records,
+	export_all_definitions_to_json,
+	Mem
 )
 
 # Imports
@@ -50,3 +52,4 @@ def beet_default(ctx: Context) -> None:
 			}
 		}
 
+	export_all_definitions_to_json(f"{Mem.ctx.directory}/definitions_debug.json", Mem.definitions)

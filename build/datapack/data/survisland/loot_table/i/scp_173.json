@@ -10,6 +10,10 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:equippable": {
+									"slot": "mainhand",
+									"camera_overlay": "survisland:item/scp_173"
+								},
 								"minecraft:item_model": "survisland:scp_173",
 								"minecraft:item_name": {
 									"text": "Scp 173"
