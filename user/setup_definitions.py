@@ -12,12 +12,20 @@ from stewbeet import (
 	generate_custom_records,
 )
 
+from user.database.accessories import main as make_accessories
 from user.database.aube_ecarlate import main as make_aube_ecarlate
+from user.database.cosmetics import main as make_cosmetics
+from user.database.food import main as make_food
+from user.database.generated import main as make_generated
+from user.database.misc_items import main as make_misc_items
+from user.database.nature import main as make_nature
+from user.database.necklaces import main as make_necklaces
 
 # Imports
-from user.database.base import main as make_database
-from user.database.necklaces import main as make_necklaces
+from user.database.scrolls import main as make_database
+from user.database.sudokucraft import main as make_sudokucraft
 from user.database.tchoutchou import main as make_tchoutchou
+from user.database.torches import main as make_torches
 from user.database.tribe_civilization import main as make_tribe_civilization
 
 
@@ -27,6 +35,14 @@ def beet_default(ctx: Context) -> None:
 	# Apply database
 	make_database()
 	make_aube_ecarlate()
+	make_accessories()
+	make_cosmetics()
+	make_food()
+	make_generated()
+	make_misc_items()
+	make_nature()
+	make_sudokucraft()
+	make_torches()
 	make_necklaces()
 	make_tribe_civilization()
 	make_tchoutchou()
@@ -54,3 +70,4 @@ def beet_default(ctx: Context) -> None:
 		}
 
 	export_all_definitions_to_json(f"{Mem.ctx.directory}/definitions_debug.json", Mem.definitions)
+
