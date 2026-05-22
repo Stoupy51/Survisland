@@ -3,18 +3,19 @@
 from stewbeet import (
 	Context,
 	Item,
+	Mem,
 	add_item_model_component,
 	add_item_name_and_lore_if_missing,
 	add_private_custom_data_for_namespace,
 	add_smithed_ignore_vanilla_behaviours_convention,
-	generate_custom_records,
 	export_all_definitions_to_json,
-	Mem
+	generate_custom_records,
 )
+
+from user.database.aube_ecarlate import main as make_aube_ecarlate
 
 # Imports
 from user.database.base import main as make_database
-from user.database.aube_ecarlate import main as make_aube_ecarlate
 from user.database.necklaces import main as make_necklaces
 from user.database.tchoutchou import main as make_tchoutchou
 from user.database.tribe_civilization import main as make_tribe_civilization

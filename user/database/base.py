@@ -4,7 +4,7 @@
 import os
 
 import stouputils as stp
-from stewbeet import Ingr, Item, JsonDict, Mem, Painting, PaintingData, SmeltingRecipe, SmokingRecipe
+from stewbeet import Ingr, Item, Mem, Painting, PaintingData, SmeltingRecipe, SmokingRecipe
 
 
 # Main function should return a database

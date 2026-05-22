@@ -14,6 +14,9 @@ scoreboard objectives add survisland.id dummy
 scoreboard objectives add survisland.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
 scoreboard objectives add survisland.deathCount deathCount
 scoreboard objectives add survisland.cooldown dummy
+scoreboard objectives add survisland.relative.x dummy
+scoreboard objectives add survisland.relative.y dummy
+scoreboard objectives add survisland.relative.z dummy
 
 # Add common teams
 team add survisland.no_collision
