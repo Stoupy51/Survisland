@@ -8,15 +8,15 @@
 
 # State
 scoreboard players set #state survisland.data 0
-execute if data storage survisland:main relative_pos run scoreboard players set #state survisland.data 1
+execute if entity @s[tag=survisland.relative] run scoreboard players set #state survisland.data 1
 
 # Particles
 execute align xyz run particle firework ~.5 ~.5 ~.5 0.4 0.4 0.4 0.01 100 force @a[distance=..20]
 
 # Second position
-execute if score #state survisland.data matches 1 store result score #origin_x survisland.data run data get storage survisland:main relative_pos[0]
-execute if score #state survisland.data matches 1 store result score #origin_y survisland.data run data get storage survisland:main relative_pos[1]
-execute if score #state survisland.data matches 1 store result score #origin_z survisland.data run data get storage survisland:main relative_pos[2]
+execute if score #state survisland.data matches 1 run scoreboard players operation #origin_x survisland.data = @s survisland.relative.x
+execute if score #state survisland.data matches 1 run scoreboard players operation #origin_y survisland.data = @s survisland.relative.y
+execute if score #state survisland.data matches 1 run scoreboard players operation #origin_z survisland.data = @s survisland.relative.z
 execute if score #state survisland.data matches 1 summon marker run function survisland:utils/store_relative_pos
 execute if score #state survisland.data matches 1 run scoreboard players operation #dest_x survisland.data -= #origin_x survisland.data
 execute if score #state survisland.data matches 1 run scoreboard players operation #dest_y survisland.data -= #origin_y survisland.data
@@ -27,9 +27,13 @@ execute if score #state survisland.data matches 1 store result storage survislan
 execute if score #state survisland.data matches 1 store result storage survisland:main positioned.z int 1 run scoreboard players get #dest_z survisland.data
 execute if score #state survisland.data matches 1 run function survisland:utils/print_relative with storage survisland:main positioned
 execute if score #state survisland.data matches 1 run data remove storage survisland:main positioned
+execute if score #state survisland.data matches 1 run tag @s remove survisland.relative
 
 # First position
-data remove storage survisland:main relative_pos
 execute if score #state survisland.data matches 0 summon marker run function survisland:utils/store_relative_pos
+execute if score #state survisland.data matches 0 run scoreboard players operation @s survisland.relative.x = #dest_x survisland.data
+execute if score #state survisland.data matches 0 run scoreboard players operation @s survisland.relative.y = #dest_y survisland.data
+execute if score #state survisland.data matches 0 run scoreboard players operation @s survisland.relative.z = #dest_z survisland.data
+execute if score #state survisland.data matches 0 run tag @s add survisland.relative
 execute if score #state survisland.data matches 0 run tellraw @s {"text":"Première position enregistrée.","color":"yellow"}
 

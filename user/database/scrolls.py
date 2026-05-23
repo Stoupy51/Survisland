@@ -1,0 +1,84 @@
+
+# Imports
+from stewbeet import Item
+
+
+# Main function
+def main() -> None:
+
+	Item(
+		id="parchemin",
+		base_item="minecraft:warped_fungus_on_a_stick",
+		components={
+			"custom_name": {"text":"Default vote","italic":False,"color":"red"},
+			"lore":[{"text":"Auteur : ","italic":False,"color":"gold"},{"text":"Stoupypy","color":"yellow"}]
+		},
+		override_model={
+			"parent": "item/handheld",
+			"display": {
+				"thirdperson_righthand": { "scale": [0.5, 0.5, 0.5] },
+				"thirdperson_lefthand": { "scale": [0.5, 0.5, 0.5] },
+				"firstperson_righthand": { "scale": [0.5, 0.5, 0.5] },
+				"firstperson_lefthand": { "scale": [0.5, 0.5, 0.5] },
+				"ground": { "scale": [0.5, 0.5, 0.5] },
+				"head": { "scale": [1.1, 1.1, 1.1] },
+			},
+		}
+	)
+
+	Item(
+		id="deployed_parchemin",
+		base_item="minecraft:warped_fungus_on_a_stick",
+		override_model={
+			"textures": {
+				"layer0": "survisland:item/parchemin"
+			},
+			"elements": [
+				{
+					"from": [1, 2, 7],
+					"to": [3, 14, 9],
+					"faces": {
+						"north": {"uv": [9.96875, 1.3125, 11.96875, 14.65625], "texture": "#layer0", "tintindex": 0},
+						"east": {"uv": [9.96875, 1.3125, 11.96875, 14.65625], "texture": "#layer0", "tintindex": 0},
+						"south": {"uv": [9.96875, 1.3125, 11.96875, 14.65625], "texture": "#layer0", "tintindex": 0},
+						"west": {"uv": [9.96875, 1.3125, 11.96875, 14.65625], "texture": "#layer0", "tintindex": 0},
+						"up": {"uv": [8.875, 1.25, 9.375, 1.375], "texture": "#layer0", "tintindex": 0},
+						"down": {"uv": [8.875, 1.25, 9.375, 1.375], "texture": "#layer0", "tintindex": 0}
+					}
+				},
+				{
+					"from": [13, 2, 7],
+					"to": [15, 14, 9],
+					"faces": {
+						"north": {"uv": [9.96875, 1.3125, 11.96875, 14.65625], "texture": "#layer0", "tintindex": 0},
+						"east": {"uv": [9.96875, 1.3125, 11.96875, 14.65625], "texture": "#layer0", "tintindex": 0},
+						"south": {"uv": [9.96875, 1.3125, 11.96875, 14.65625], "texture": "#layer0", "tintindex": 0},
+						"west": {"uv": [9.96875, 1.3125, 11.96875, 14.65625], "texture": "#layer0", "tintindex": 0},
+						"up": {"uv": [8.875, 1.25, 9.375, 1.375], "texture": "#layer0", "tintindex": 0},
+						"down": {"uv": [8.875, 1.25, 9.375, 1.375], "texture": "#layer0", "tintindex": 0}
+					}
+				},
+				{
+					"from": [0, 2, 8],
+					"to": [16, 14, 8],
+					"faces": {
+						"north": {"uv": [0, 0, 16, 16], "texture": "#layer0", "tintindex": 0},
+						"east": {"uv": [16, 16, 16, 16], "texture": "#layer0", "tintindex": 0},
+						"south": {"uv": [0, 0, 16, 16], "texture": "#layer0", "tintindex": 0},
+						"west": {"uv": [16, 16, 16, 16], "texture": "#layer0", "tintindex": 0},
+						"up": {"uv": [16, 16, 16, 16], "texture": "#layer0", "tintindex": 0},
+						"down": {"uv": [16, 16, 16, 16], "texture": "#layer0", "tintindex": 0}
+					}
+				}
+			],
+			"display": {
+				"thirdperson_righthand": { "scale": [0.5, 0.5, 0.5] },
+				"thirdperson_lefthand": { "scale": [0.5, 0.5, 0.5] },
+				"firstperson_righthand": { "scale": [0.5, 0.5, 0.5] },
+				"firstperson_lefthand": { "scale": [0.5, 0.5, 0.5] },
+				"ground": { "scale": [0.5, 0.5, 0.5] },
+				"head": { "scale": [1.1, 1.1, 1.1] }
+			}
+		}
+	)
+

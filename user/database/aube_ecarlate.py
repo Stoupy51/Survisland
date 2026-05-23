@@ -1,6 +1,5 @@
 
 # Imports
-import os
 
 import stouputils as stp
 from stewbeet import Item, JsonDict, Mem, Painting, PaintingData
