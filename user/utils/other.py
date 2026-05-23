@@ -17,6 +17,9 @@ scoreboard objectives add {ns}.id dummy
 scoreboard objectives add {ns}.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
 scoreboard objectives add {ns}.deathCount deathCount
 scoreboard objectives add {ns}.cooldown dummy
+scoreboard objectives add {ns}.relative.x dummy
+scoreboard objectives add {ns}.relative.y dummy
+scoreboard objectives add {ns}.relative.z dummy
 
 # Add common teams
 team add {ns}.no_collision

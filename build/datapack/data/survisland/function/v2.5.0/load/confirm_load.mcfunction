@@ -1,19 +1,22 @@
 
-#> survisland:v2.4.6/load/confirm_load
+#> survisland:v2.5.0/load/confirm_load
 #
-# @within	survisland:v2.4.6/load/valid_dependencies
+# @within	survisland:v2.5.0/load/valid_dependencies
 #
 
 # Confirm load
-tellraw @a[tag=convention.debug] {"text":"[Loaded Survisland v2.4.6]","color":"green"}
+tellraw @a[tag=convention.debug] {"text":"[Loaded Survisland v2.5.0]","color":"green"}
 scoreboard players set #survisland.loaded load.status 1
-function survisland:v2.4.6/load/set_items_storage
+function survisland:v2.5.0/load/set_items_storage
 
 # Add objectives
 scoreboard objectives add survisland.id dummy
 scoreboard objectives add survisland.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
 scoreboard objectives add survisland.deathCount deathCount
 scoreboard objectives add survisland.cooldown dummy
+scoreboard objectives add survisland.relative.x dummy
+scoreboard objectives add survisland.relative.y dummy
+scoreboard objectives add survisland.relative.z dummy
 
 # Add common teams
 team add survisland.no_collision
