@@ -58,6 +58,11 @@ pipeline:
 
 # Generic dict which holds extra information usable by plugins
 meta:
+    # Survisland specific data to disable/enable features
+    survisland:
+        modules:
+            aube_ecarlate: True
+
     # Model resolver configuration for caching models
     model_resolver:
         use_cache: true
@@ -67,7 +72,10 @@ meta:
         # Directory containing all project textures
         textures_folder: "assets/textures"
         # Directory containing all custom sounds
-        sounds_folder: "assets/sounds"
+        sounds:
+            folder: "assets/sounds"
+            # Optional: glob patterns to exclude from processing
+            exclude_patterns: []
         # Directory containing all jukebox records
         records_folder: "assets/records"
         # Directory containing libraries that will be copied to the build destination, and merged using Smithed Weld if enabled.
