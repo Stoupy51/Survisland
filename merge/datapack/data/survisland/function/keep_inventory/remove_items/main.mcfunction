@@ -14,10 +14,12 @@
 ##     else
 ##          add the item to the new inventory
 
-# Copy chest items
-data modify storage survisland:main newInventory set value []
+# Copy all chest items to storage
+data modify storage survisland:main AllChests set value []
+execute positioned 0 1 0 run function survisland:keep_inventory/get_chest_items
 
 # Loop through all items in the inventory
+data modify storage survisland:main newInventory set value []
 execute if data storage survisland:main Inventory[0] run function survisland:keep_inventory/remove_items/loop_inventory
 
 # Remove every items of player inventory that is in the new inventory
