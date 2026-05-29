@@ -6,7 +6,7 @@
 #
 
 # Loop through all items in the chest
-data modify storage survisland:main Chest set from block 0 1 0 Items
+data modify storage survisland:main Chest set from storage survisland:main AllChests
 scoreboard players set #not_in_chest survisland.data 1
 execute if data storage survisland:main Chest[0] run function survisland:keep_inventory/remove_items/loop_chest
 execute if score #not_in_chest survisland.data matches 1 run data modify storage survisland:main newInventory append from storage survisland:main Inventory[0]
