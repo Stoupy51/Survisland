@@ -13,7 +13,7 @@ from stewbeet import (
 )
 
 from user.database.accessories import main as make_accessories
-from user.database.aube_ecarlate import main as make_aube_ecarlate
+from user.database.modules.aube_ecarlate import main as make_aube_ecarlate
 from user.database.cosmetics import main as make_cosmetics
 from user.database.food import main as make_food
 from user.database.generated import main as make_generated
@@ -34,7 +34,6 @@ def beet_default(ctx: Context) -> None:
 
 	# Apply database
 	make_database()
-	make_aube_ecarlate()
 	make_accessories()
 	make_cosmetics()
 	make_food()
@@ -46,6 +45,7 @@ def beet_default(ctx: Context) -> None:
 	make_necklaces()
 	make_tribe_civilization()
 	make_tchoutchou()
+	make_aube_ecarlate()
 
 	# Generate custom disc records
 	generate_custom_records("auto")

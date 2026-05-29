@@ -6,8 +6,9 @@ readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "smithed",
-    "stewbeet==3.2.8",
+    "stewbeet>=3.3.0",
 ]
 
 [tool.uv.sources]
 smithed = { git = "https://github.com/Stoupy51/smithed-python.git" }
+

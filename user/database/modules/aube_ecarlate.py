@@ -1,6 +1,5 @@
 
 # Imports
-
 import stouputils as stp
 from stewbeet import Item, JsonDict, Mem, Painting, PaintingData
 
@@ -11,6 +10,11 @@ DISPLAYS: tuple[str, ...] = ("thirdperson_righthand", "thirdperson_lefthand", "f
 def main() -> None:
     ns: str = Mem.ctx.project_id
     models_folder: str = f"{Mem.ctx.directory}/assets/models/ae"
+
+    # If disabled in config, skip loading this module
+    if not Mem.ctx.meta["survisland"].get("modules", {}).get("aube_ecarlate", False):
+        Mem.ctx.meta["stewbeet"]["sounds"]["exclude_patterns"].append("ae/*")
+        return
 
     # Get textures
     textures_folder = str(Mem.ctx.meta.get("stewbeet", {}).get("textures_folder", ""))

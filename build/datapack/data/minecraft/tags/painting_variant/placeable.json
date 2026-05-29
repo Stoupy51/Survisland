@@ -1,11 +1,11 @@
 {
 	"values": [
-		"survisland:ae_lockdown_cp_off",
-		"survisland:ae_lockdown_cp_online",
 		"survisland:mariage_painting",
 		"survisland:knights_painting",
 		"survisland:koko_painting",
 		"survisland:fusoya_painting",
-		"survisland:hamelin_painting"
+		"survisland:hamelin_painting",
+		"survisland:ae_lockdown_cp_off",
+		"survisland:ae_lockdown_cp_online"
 	]
 }
