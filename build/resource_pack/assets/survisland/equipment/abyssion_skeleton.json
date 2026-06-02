@@ -1,0 +1,6 @@
+{
+	"layers": {
+		"humanoid": [{"texture": "survisland:abyssion_skeleton"}],
+		"humanoid_leggings": [{"texture": "survisland:abyssion_skeleton"}]
+	}
+}
