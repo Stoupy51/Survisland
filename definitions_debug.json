@@ -2533,6 +2533,98 @@
 		},
 		"skip_gives": false
 	},
+	"abyssion_crown": {
+		"id": "abyssion_crown",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"max_stack_size": 1,
+			"equippable": {"slot": "head"},
+			"item_model": "survisland:abyssion_crown",
+			"item_name": {"text": "Abyssion Crown"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"abyssion_crown": true},"smithed": {"id": "survisland:abyssion_crown","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"scythe": {
+		"id": "scythe",
+		"base_item": "minecraft:netherite_sword",
+		"recipes": [],
+		"components": {
+			"max_damage": 2026,
+			"item_model": "survisland:scythe",
+			"item_name": {"text": "Scythe"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"scythe": true},"smithed": {"id": "survisland:scythe","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"abyssion_chestplate": {
+		"id": "abyssion_chestplate",
+		"base_item": "minecraft:netherite_chestplate",
+		"recipes": [],
+		"components": {
+			"equippable": {"slot": "chest","asset_id": "survisland:abyssion_armor"},
+			"item_model": "minecraft:netherite_chestplate",
+			"item_name": {"text": "Abyssion Chestplate"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"abyssion_chestplate": true},"smithed": {"id": "survisland:abyssion_chestplate","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"abyssion_skeleton_helmet": {
+		"id": "abyssion_skeleton_helmet",
+		"base_item": "minecraft:chainmail_helmet",
+		"recipes": [],
+		"components": {
+			"equippable": {"slot": "head","asset_id": "survisland:abyssion_skeleton"},
+			"item_model": "minecraft:chainmail_helmet",
+			"item_name": {"text": "Abyssion Skeleton Helmet"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"abyssion_skeleton_helmet": true},"smithed": {"id": "survisland:abyssion_skeleton_helmet","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"abyssion_skeleton_chestplate": {
+		"id": "abyssion_skeleton_chestplate",
+		"base_item": "minecraft:chainmail_chestplate",
+		"recipes": [],
+		"components": {
+			"equippable": {"slot": "chest","asset_id": "survisland:abyssion_skeleton"},
+			"item_model": "minecraft:chainmail_chestplate",
+			"item_name": {"text": "Abyssion Skeleton Chestplate"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"abyssion_skeleton_chestplate": true},"smithed": {"id": "survisland:abyssion_skeleton_chestplate","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"abyssion_skeleton_leggings": {
+		"id": "abyssion_skeleton_leggings",
+		"base_item": "minecraft:chainmail_leggings",
+		"recipes": [],
+		"components": {
+			"equippable": {"slot": "legs","asset_id": "survisland:abyssion_skeleton"},
+			"item_model": "minecraft:chainmail_leggings",
+			"item_name": {"text": "Abyssion Skeleton Leggings"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"abyssion_skeleton_leggings": true},"smithed": {"id": "survisland:abyssion_skeleton_leggings","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"abyssion_skeleton_boots": {
+		"id": "abyssion_skeleton_boots",
+		"base_item": "minecraft:chainmail_boots",
+		"recipes": [],
+		"components": {
+			"equippable": {"slot": "feet","asset_id": "survisland:abyssion_skeleton"},
+			"item_model": "minecraft:chainmail_boots",
+			"item_name": {"text": "Abyssion Skeleton Boots"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"abyssion_skeleton_boots": true},"smithed": {"id": "survisland:abyssion_skeleton_boots","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
 	"01_charges_from_the_sky": {
 		"id": "01_charges_from_the_sky",
 		"base_item": "minecraft:command_block",

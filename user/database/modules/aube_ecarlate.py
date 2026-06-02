@@ -12,8 +12,10 @@ def main() -> None:
     models_folder: str = f"{Mem.ctx.directory}/assets/models/ae"
 
     # If disabled in config, skip loading this module
-    if not Mem.ctx.meta["survisland"].get("modules", {}).get("aube_ecarlate", False):
+    meta: JsonDict = Mem.ctx.meta["survisland"].get("modules", {}).get("aube_ecarlate", {})
+    if not meta.get("sounds", False):
         Mem.ctx.meta["stewbeet"]["sounds"]["exclude_patterns"].append("ae/*")
+    if not meta.get("items", False):
         return
 
     # Get textures
