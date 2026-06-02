@@ -61,7 +61,8 @@ meta:
     # Survisland specific data to disable/enable features
     survisland:
         modules:
-            aube_ecarlate: True
+            aube_ecarlate: {"sounds": True, "items": True}
+            abyssion_wrath: {"sounds": True, "items": True}
 
     # Model resolver configuration for caching models
     model_resolver:
