@@ -2134,6 +2134,30 @@
 		},
 		"skip_gives": false
 	},
+	"ae_button": {
+		"id": "ae_button",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:ae_button",
+			"item_name": {"text": "Ae Button"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"ae_button": true},"smithed": {"id": "survisland:ae_button","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"ae_button_pressed": {
+		"id": "ae_button_pressed",
+		"base_item": "minecraft:command_block",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:ae_button_pressed",
+			"item_name": {"text": "Ae Button Pressed"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"ae_button_pressed": true},"smithed": {"id": "survisland:ae_button_pressed","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
 	"abyssion_crown": {
 		"id": "abyssion_crown",
 		"base_item": "minecraft:command_block",

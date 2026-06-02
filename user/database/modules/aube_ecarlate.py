@@ -11,6 +11,13 @@ def main() -> None:
     ns: str = Mem.ctx.project_id
     models_folder: str = f"{Mem.ctx.directory}/assets/models/ae"
 
+    # Always add the buttons even if the module is disabled in config
+    for button in ("button", "button_pressed"):
+        model: JsonDict = stp.json_load(f"{models_folder}/{button}.json")
+        for k in model["textures"].keys():
+            model["textures"][k] = f"{ns}:item/ae_button"
+        Item(id=f"ae_{button}", override_model=model)
+
     # If disabled in config, skip loading this module
     meta: JsonDict = Mem.ctx.meta["survisland"].get("modules", {}).get("aube_ecarlate", {})
     if not meta.get("sounds", False):
@@ -67,13 +74,6 @@ def main() -> None:
     Item(id="lock_door", base_item="minecraft:carrot_on_a_stick", manual_category="misc", override_model=override_model)
 
     # Add 3d models for items
-    ## Button
-    for button in ("button", "button_pressed"):
-        model: JsonDict = stp.json_load(f"{models_folder}/{button}.json")
-        for k in model["textures"].keys():
-            model["textures"][k] = f"{ns}:item/ae_button"
-        Item(id=f"ae_{button}", override_model=model)
-
     ## Card pass
     for state in ("closed", "open"):
         model: JsonDict = stp.json_load(f"{models_folder}/card_pass_{state}.json")
