@@ -195,6 +195,10 @@
 		"subtitle": "artytris",
 		"sounds": [{"name": "survisland:artytris","stream": true}]
 	},
+	"exil_f11_manche": {
+		"subtitle": "exil_f11_manche",
+		"sounds": ["survisland:exil_f11_manche"]
+	},
 	"fart": {
 		"subtitle": "fart",
 		"sounds": ["survisland:fart"]
