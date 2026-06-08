@@ -1,10 +1,17 @@
 
 # Imports
-from stewbeet import Item
+from stewbeet import Item, JsonDict, Mem
 
 
 # Main function
 def main() -> None:
+
+	# If disabled in config, skip loading this module
+	meta: JsonDict = Mem.ctx.meta["survisland"].get("modules", {}).get("lefortdesrats", {})
+	if not meta.get("sounds", False):
+		Mem.ctx.meta["stewbeet"]["sounds"]["exclude_patterns"].append("lefortdesrats/*")
+	if not meta.get("items", False):
+		return
 
 	Item(id="signe_cheval", base_item="minecraft:light_blue_dye")
 	Item(id="signe_chien", base_item="minecraft:yellow_dye")

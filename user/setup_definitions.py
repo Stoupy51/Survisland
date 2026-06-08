@@ -19,11 +19,11 @@ from user.database.generated import main as make_generated
 from user.database.misc_items import main as make_misc_items
 from user.database.modules.abyssion_wrath import main as make_abyssion_wrath
 from user.database.modules.aube_ecarlate import main as make_aube_ecarlate
+from user.database.modules.lefortdesrats import main as make_lefortdesrats
 from user.database.nature import main as make_nature
 from user.database.necklaces import main as make_necklaces
 
 # Imports
-from user.database.lefortdesrats import main as make_lefortdesrats
 from user.database.scrolls import main as make_database
 from user.database.sudokucraft import main as make_sudokucraft
 from user.database.tchoutchou import main as make_tchoutchou

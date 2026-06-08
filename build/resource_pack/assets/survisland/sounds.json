@@ -211,9 +211,9 @@
 		"subtitle": "laser_gun",
 		"sounds": ["survisland:laser_gun"]
 	},
-	"lefortdesrats": {
-		"subtitle": "lefortdesrats",
-		"sounds": [{"name": "survisland:lefortdesrats","stream": true}]
+	"lefortdesrats/lfdr_main_theme": {
+		"subtitle": "lefortdesrats/lfdr_main_theme",
+		"sounds": [{"name": "survisland:lefortdesrats/lfdr_main_theme","stream": true}]
 	},
 	"maracas": {
 		"subtitle": "maracas",

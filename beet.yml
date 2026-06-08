@@ -63,6 +63,7 @@ meta:
         modules:
             aube_ecarlate: {"sounds": False, "items": False}
             abyssion_wrath: {"sounds": True, "items": True}
+            lefortdesrats: {"sounds": True, "items": True}
 
     # Model resolver configuration for caching models
     model_resolver:
