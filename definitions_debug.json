@@ -2250,6 +2250,150 @@
 		},
 		"skip_gives": false
 	},
+	"signe_cheval": {
+		"id": "signe_cheval",
+		"base_item": "minecraft:light_blue_dye",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:signe_cheval",
+			"item_name": {"text": "Signe Cheval"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"signe_cheval": true},"smithed": {"id": "survisland:signe_cheval","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"signe_chien": {
+		"id": "signe_chien",
+		"base_item": "minecraft:yellow_dye",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:signe_chien",
+			"item_name": {"text": "Signe Chien"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"signe_chien": true},"smithed": {"id": "survisland:signe_chien","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"signe_cochon": {
+		"id": "signe_cochon",
+		"base_item": "minecraft:pink_dye",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:signe_cochon",
+			"item_name": {"text": "Signe Cochon"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"signe_cochon": true},"smithed": {"id": "survisland:signe_cochon","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"signe_coq": {
+		"id": "signe_coq",
+		"base_item": "minecraft:orange_dye",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:signe_coq",
+			"item_name": {"text": "Signe Coq"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"signe_coq": true},"smithed": {"id": "survisland:signe_coq","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"signe_dragon": {
+		"id": "signe_dragon",
+		"base_item": "minecraft:red_dye",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:signe_dragon",
+			"item_name": {"text": "Signe Dragon"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"signe_dragon": true},"smithed": {"id": "survisland:signe_dragon","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"signe_lapin": {
+		"id": "signe_lapin",
+		"base_item": "minecraft:purple_dye",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:signe_lapin",
+			"item_name": {"text": "Signe Lapin"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"signe_lapin": true},"smithed": {"id": "survisland:signe_lapin","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"signe_mouton": {
+		"id": "signe_mouton",
+		"base_item": "minecraft:cyan_dye",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:signe_mouton",
+			"item_name": {"text": "Signe Mouton"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"signe_mouton": true},"smithed": {"id": "survisland:signe_mouton","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"signe_rat": {
+		"id": "signe_rat",
+		"base_item": "minecraft:gray_dye",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:signe_rat",
+			"item_name": {"text": "Signe Rat"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"signe_rat": true},"smithed": {"id": "survisland:signe_rat","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"signe_serpent": {
+		"id": "signe_serpent",
+		"base_item": "minecraft:green_dye",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:signe_serpent",
+			"item_name": {"text": "Signe Serpent"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"signe_serpent": true},"smithed": {"id": "survisland:signe_serpent","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"signe_singe": {
+		"id": "signe_singe",
+		"base_item": "minecraft:brown_dye",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:signe_singe",
+			"item_name": {"text": "Signe Singe"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"signe_singe": true},"smithed": {"id": "survisland:signe_singe","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"signe_taureau": {
+		"id": "signe_taureau",
+		"base_item": "minecraft:blue_dye",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:signe_taureau",
+			"item_name": {"text": "Signe Taureau"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"signe_taureau": true},"smithed": {"id": "survisland:signe_taureau","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"signe_tigre": {
+		"id": "signe_tigre",
+		"base_item": "minecraft:white_dye",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:signe_tigre",
+			"item_name": {"text": "Signe Tigre"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"signe_tigre": true},"smithed": {"id": "survisland:signe_tigre","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
 	"01_charges_from_the_sky": {
 		"id": "01_charges_from_the_sky",
 		"base_item": "minecraft:command_block",

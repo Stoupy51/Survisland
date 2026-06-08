@@ -211,6 +211,10 @@
 		"subtitle": "laser_gun",
 		"sounds": ["survisland:laser_gun"]
 	},
+	"lefortdesrats": {
+		"subtitle": "lefortdesrats",
+		"sounds": [{"name": "survisland:lefortdesrats","stream": true}]
+	},
 	"maracas": {
 		"subtitle": "maracas",
 		"sounds": ["survisland:maracas"]

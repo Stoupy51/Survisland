@@ -23,6 +23,7 @@ from user.database.nature import main as make_nature
 from user.database.necklaces import main as make_necklaces
 
 # Imports
+from user.database.lefortdesrats import main as make_lefortdesrats
 from user.database.scrolls import main as make_database
 from user.database.sudokucraft import main as make_sudokucraft
 from user.database.tchoutchou import main as make_tchoutchou
@@ -48,6 +49,7 @@ def beet_default(ctx: Context) -> None:
 	make_tchoutchou()
 	make_aube_ecarlate()
 	make_abyssion_wrath()
+	make_lefortdesrats()
 
 	# Generate custom disc records
 	generate_custom_records("auto")

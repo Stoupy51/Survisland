@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/orange_dye",
+	"textures": {
+		"layer0": "survisland:item/signe_coq"
+	}
+}
