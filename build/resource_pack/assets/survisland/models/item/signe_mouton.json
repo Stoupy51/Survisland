@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/cyan_dye",
+	"textures": {
+		"layer0": "survisland:item/signe_mouton"
+	}
+}
