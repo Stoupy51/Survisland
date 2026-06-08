@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/gray_dye",
+	"textures": {
+		"layer0": "survisland:item/signe_rat"
+	}
+}

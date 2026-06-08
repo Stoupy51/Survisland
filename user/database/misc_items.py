@@ -38,4 +38,3 @@ def main() -> None:
 	Item(id="water_gun", manual_category="misc")
 	Item(id="pass_du_bureau_de_giovanni", manual_category="misc")
 	Item(id="filet_a_papillons", manual_category="misc")
-

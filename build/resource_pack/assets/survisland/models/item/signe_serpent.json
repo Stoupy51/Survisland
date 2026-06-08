@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/green_dye",
+	"textures": {
+		"layer0": "survisland:item/signe_serpent"
+	}
+}
