@@ -1432,19 +1432,6 @@
 		},
 		"skip_gives": false
 	},
-	"super_star": {
-		"id": "super_star",
-		"base_item": "minecraft:command_block",
-		"manual_category": "misc",
-		"recipes": [],
-		"components": {
-			"item_model": "survisland:super_star",
-			"item_name": {"text": "Super Star"},
-			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
-			"custom_data": {"survisland": {"super_star": true},"smithed": {"id": "survisland:super_star","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
-		},
-		"skip_gives": false
-	},
 	"red_coin": {
 		"id": "red_coin",
 		"base_item": "minecraft:command_block",
@@ -1468,6 +1455,32 @@
 			"item_model": "survisland:piece_sos",
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
 			"custom_data": {"survisland": {"piece_sos": true},"smithed": {"id": "survisland:piece_sos","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"jester_token": {
+		"id": "jester_token",
+		"base_item": "minecraft:command_block",
+		"manual_category": "misc",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:jester_token",
+			"item_name": {"text": "Jester Token"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"jester_token": true},"smithed": {"id": "survisland:jester_token","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"super_star": {
+		"id": "super_star",
+		"base_item": "minecraft:command_block",
+		"manual_category": "misc",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:super_star",
+			"item_name": {"text": "Super Star"},
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "survisland:icons"},{"text": " Survisland","italic": true,"color": "blue"}]],
+			"custom_data": {"survisland": {"super_star": true},"smithed": {"id": "survisland:super_star","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
 		},
 		"skip_gives": false
 	},

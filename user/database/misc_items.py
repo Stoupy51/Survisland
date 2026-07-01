@@ -21,9 +21,10 @@ def main() -> None:
 	Item(id="black_letter", base_item="minecraft:written_book")
 
 	Item(id="monocoin", manual_category="misc")
-	Item(id="super_star", manual_category="misc")
 	Item(id="red_coin", manual_category="misc")
 	Item(id="piece_sos", manual_category="misc", components={"item_name": {"text":"Pièce SOS","color":"light_purple","italic":False}})
+	Item(id="jester_token", manual_category="misc")
+	Item(id="super_star", manual_category="misc")
 	Item(id="grimoire", manual_category="misc")
 
 	# Cards 0 to 8
