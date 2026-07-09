@@ -1,7 +1,7 @@
 
-#> survisland:v2.5.1/load/set_items_storage
+#> survisland:v2.6.0/load/set_items_storage
 #
-# @within	survisland:v2.5.1/load/confirm_load
+# @within	survisland:v2.6.0/load/confirm_load
 #
 
 # Items storage
