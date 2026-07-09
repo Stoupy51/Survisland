@@ -1,70 +1,19 @@
-#version 150
+#version 330
 
-layout(std140) uniform Globals {
-    ivec3 _;
-
-    vec3 c;
-    vec2 ScreenSize;
-    float GlintAlpha;
-    float GameTime;
-    int d;
-    int e;
-};
-
-layout(std140) uniform Fog {
-    vec4 FogColor;
-    float u;
-    float v;
-    float A;
-    float B;
-    float C;
-    float D;
-};
-
-float E(float vertexDistance, float F, float G) {
-    if (vertexDistance <= F) {
-        return 0.;
-    } else if (vertexDistance >= G) {
-        return 1.;
-    }
-    return (vertexDistance - F) / (G - F);
-}
-
-float H(float I, float J, float K, float L, float M, float N) {
-    return max(E(I, K, L), E(J, M, N));
-}
-
-vec4 O(vec4 P, float I, float J, float K, float L, float M, float N, vec4 Q) {
-    float R = H(I, J, K, L, M, N);
-    return vec4(mix(P.rgb, Q.rgb, R * Q.a), P.a);
-}
-
-float S(vec3 T) {
-    return length(T);
-}
-
-float U(vec3 T) {
-    float V = length(T.xz);
-    float W = abs(T.y);
-    return max(V, W);
-}
-
-layout(std140) uniform DynamicTransforms {
-    mat4 ModelViewMat;
-    vec4 ColorModulator;
-    vec3 ModelOffset;
-    mat4 TextureMat;
-};
+#moj_import <minecraft:fog.glsl>
+#moj_import <minecraft:dynamictransforms.glsl>
+#moj_import <minecraft:globals.glsl>
 
 uniform sampler2D Sampler0;
 
-in float vertexDistance;
+in float sphericalVertexDistance;
+in float cylindricalVertexDistance;
 in vec4 vertexColor;
+in vec4 lightMapColor;
 in vec2 texCoord0;
-in vec2 texCoord1;
-in vec3 a_;
-out vec4 fragColor;
 in vec3 c_;
+
+out vec4 fragColor;
 
 const float f_ = 3.1415926536;
 const float g_ = f_ * 2.;
@@ -97,7 +46,7 @@ vec4 r_(vec3 s_, float t_) {
 
 vec4 x_() {
     vec3 y_ = normalize(c_);
-    vec3 z_ = h_ * (GameTime * j_);
+    vec3 z_ = h_ * (fract(GameTime) * j_);
     vec3 A_ = z_;
     float B_ = dot(h_, y_);
     float C_ = dot(h_, A_);
@@ -129,7 +78,7 @@ vec4 x_() {
     vec3 M_ = normalize(cross(K_, L_));
     vec3 N_ = cross(K_, M_);
     vec3 O_ = vec3(dot(J_, M_), dot(J_, N_), dot(J_, K_));
-    vec4 l = r_(O_, GameTime * 320.);
+    vec4 l = r_(O_, fract(GameTime) * 320.);
     vec3 P_ = h_ * dot(J_, h_);
     vec3 normal = normalize(J_ - P_);
     float Q_ = 1. - max(0., dot(normal, -y_));
@@ -146,108 +95,6 @@ vec4 x_() {
     vec4 Y_ = mix(X_, l, l.a);
     Y_.a = 1;
     return Y_;
-}
-
-const float Z_ = 1.1;
-const float _a = 10.03;
-const float ca = .5;
-const float da = .3;
-const float ea = .2;
-const float fa = 8.;
-const float ha = .5;
-const vec3 ia = vec3(.2, .4, .6);
-const vec3 ja = vec3(.4, .7, 1.);
-const mat2 ka = mat2(1.6, 1.2, -1.2, 1.6);
-
-vec2 la(vec2 p) {
-    p = vec2(dot(p, vec2(127.1, 311.7)), dot(p, vec2(269.5, 183.3)));
-    return -1. + 2. * fract(sin(p) * 43758.54531);
-}
-
-float ma(in vec2 p) {
-    const float na = .366025404;
-    const float oa = .211324865;
-    vec2 w_ = floor(p + (p.x + p.y) * na);
-    vec2 a = p - w_ + (w_.x + w_.y) * oa;
-    vec2 u_ = (a.x > a.y) ? vec2(1., 0.) : vec2(0., 1.);
-    vec2 b = a - u_ + oa;
-    vec2 D_ = a - 1. + 2. * oa;
-    vec3 E_ = max(.5 - vec3(dot(a, a), dot(b, b), dot(D_, D_)), 0.);
-    vec3 pa = E_ * E_ * E_ * E_ * vec3(dot(a, la(w_ + 0.)), dot(b, la(w_ + u_)), dot(D_, la(w_ + 1.)));
-    return dot(pa, vec3(70.));
-}
-
-float qa(vec2 pa) {
-    float sa = 0., ta = .1;
-    for (int w_ = 0; w_ < 7; w_++) {
-        sa += ma(pa) * ta;
-        pa = ka * pa;
-        ta *= .4;
-    }
-    return sa;
-}
-
-vec3 ua(vec3 va) {
-    vec2 wa = va.xz / (abs(va.y) + .2);
-    wa *= .3;
-    float t_ = GameTime * _a;
-    float q = qa(wa * Z_ * .5);
-    float r = 0.;
-    vec2 xa = wa * Z_;
-    xa -= q - t_;
-    float ya = .8;
-    for (int w_ = 0; w_ < 6; w_++) {
-        r += abs(ya * ma(xa));
-        xa = ka * xa + t_;
-        ya *= .7;
-    }
-    float za = 0.;
-    xa = wa * Z_;
-    xa -= q - t_;
-    ya = .7;
-    for (int w_ = 0; w_ < 6; w_++) {
-        za += ya * ma(xa);
-        xa = ka * xa + t_;
-        ya *= .6;
-    }
-    za *= r + za;
-    float D_ = 0.;
-    t_ = GameTime * _a * 2.;
-    xa = wa * Z_ * 2.;
-    xa -= q - t_;
-    ya = .4;
-    for (int w_ = 0; w_ < 5; w_++) {
-        D_ += ya * ma(xa);
-        xa = ka * xa + t_;
-        ya *= .6;
-    }
-    float Aa = 0.;
-    t_ = GameTime * _a * 3.;
-    xa = wa * Z_ * 3.;
-    xa -= q - t_;
-    ya = .4;
-    for (int w_ = 0; w_ < 5; w_++) {
-        Aa += abs(ya * ma(xa));
-        xa = ka * xa + t_;
-        ya *= .6;
-    }
-    D_ += Aa;
-    float Ba = va.y * .5 + .5;
-    vec3 Ca = mix(ja, ia, Ba);
-    vec3 Da = vec3(1.1, 1.1, .9) * clamp((ca + da * D_), 0., 1.);
-    za = ea + fa * za * r;
-    float Ea = smoothstep(.15, .5, va.y);
-    za *= Ea;
-    D_ *= Ea;
-    Aa *= Ea;
-    vec3 Fa = mix(Ca, clamp(ha * Ca + Da, 0., 1.), clamp(za + D_, 0., 1.));
-    return Fa;
-}
-
-vec4 Ga() {
-    vec3 Ha = normalize(a_);
-    vec3 Ga = ua(Ha);
-    return vec4(Ga, 1.);
 }
 
 vec3 Ia;
@@ -305,10 +152,10 @@ vec2 Ka(vec3 T, vec3 y_, float t_) {
 }
 
 vec4 Ta() {
-    float t = GameTime * 300.125;
+    float t = fract(GameTime) * 300.125;
     vec3 Ua = vec3(0.);
     vec3 y_ = normalize(c_);
-    vec3 T = vec3(0., 0., 4.5 - GameTime * 2e2);
+    vec3 T = vec3(0., 0., 4.5 - fract(GameTime) * 2e2);
     E_ = vec3(0.);
     vec2 Va = Ka(T, y_, t);
     if (Va.y <= 50.0) {
@@ -332,13 +179,13 @@ float Wa(vec3 p, float t_) {
 
 vec4 Ya() {
     vec3 Za = normalize(c_);
-    vec3 z_ = vec3(0., 0., -2. * GameTime * 4e3);
+    vec3 z_ = vec3(0., 0., -2. * fract(GameTime) * 4e3);
     float _b = 0.;
     float cb = 0.;
     vec4 db = vec4(0.);
     for (int w_ = 0; w_ < 100; w_++) {
         vec3 p = z_ + Za * _b;
-        cb = Wa(p, GameTime);
+        cb = Wa(p, fract(GameTime));
         _b += .01 + abs(cb) * .8;
         db += 1. / (abs(cb) + 1e-3);
         if (_b > 50.) {
@@ -349,36 +196,6 @@ vec4 Ya() {
     eb /= length(Za.xy);
     eb = tanh(eb);
     return vec4(eb.rrr, eb.r);
-}
-
-vec4 fb() {
-    float t_ = GameTime * 1400;
-    float _b = 0.;
-    float cb = 0.;
-    vec4 db = vec4(0.);
-    vec3 Za = normalize(c_);
-    for (int w_ = 0; w_ < 200; w_++) {
-        vec3 p = Za * _b;
-        p.z += 9.;
-        vec3 hb = normalize(cos(vec3(0, 1, 0) + t_ - .4 * cb));
-        vec3 ib = hb * dot(hb, p) - cross(hb, p);
-        vec3 jb = ib;
-        float kb;
-        for (kb = 1.; kb++ < 6.;) {
-            jb += cos(jb * kb + t_).yzx / kb;
-        }
-        cb = length(jb);
-        float lb = .1 * (abs(sin(cb - t_)) + abs(jb.y) / kb);
-        _b += lb;
-        if (lb > 0.) {
-            db += (cos(cb / .6 + vec4(0, 1, 2, 0)) + 1.1) / lb;
-        }
-        if (_b > 25.) {
-            break;
-        }
-    }
-    vec4 eb = tanh(db * db / 2e7);
-    return vec4(eb.rgb, 1.);
 }
 
 #define mb(x) fract(sin(x) * 43758.5453123)
@@ -411,7 +228,7 @@ vec3 ub(vec3 p, vec3 vb, float t) {
 
 vec4 wb() {
     vec3 Ua = vec3(0.);
-    float t_ = GameTime * 500;
+    float t_ = fract(GameTime) * 500;
     vec3 xb = vec3(0., 0., -1. + t_ * 5.);
     vec3 yb = vec3(0., 0., 0. + t_ * 5.);
     xb += sb(xb);
@@ -450,201 +267,6 @@ vec4 wb() {
     }
     Ua = mix(Ua, vec3(.9, .9, 1.1), 1. - exp(-.01 * g * g * g));
     return vec4(Ua, 1.);
-}
-
-vec3 Jb(vec3 x) {
-    return x - floor(x * (1. / 289.)) * 289.;
-}
-
-vec4 Jb(vec4 x) {
-    return x - floor(x * (1. / 289.)) * 289.;
-}
-
-vec4 Kb(vec4 x) {
-    return Jb(((x * 34.) + 1.) * x);
-}
-
-vec4 Lb(vec4 r) {
-    return 1.792842914 - .853734721 * r;
-}
-
-float Mb(vec3 Nb) {
-    const vec2 Ob = vec2(1. / 6., 1. / 3.);
-    const vec4 Pb = vec4(0., .5, 1., 2.);
-    vec3 w_ = floor(Nb + dot(Nb, Ob.yyy));
-    vec3 Qb = Nb - w_ + dot(w_, Ob.xxx);
-    vec3 g = step(Qb.yzx, Qb.xyz);
-    vec3 Rb = 1. - g;
-    vec3 Sb = min(g.xyz, Rb.zxy);
-    vec3 Tb = max(g.xyz, Rb.zxy);
-    vec3 Ub = Qb - Sb + Ob.xxx;
-    vec3 Vb = Qb - Tb + Ob.yyy;
-    vec3 Wb = Qb - Pb.yyy;
-    w_ = Jb(w_);
-    vec4 p = Kb(Kb(Kb(w_.z + vec4(0., Sb.z, Tb.z, 1.)) + w_.y + vec4(0., Sb.y, Tb.y, 1.)) + w_.x + vec4(0., Sb.x, Tb.x, 1.));
-    float Xb = 0.142857142857;
-    vec3 Yb = Xb * Pb.wyz - Pb.xzx;
-    vec4 Eb = p - 49. * floor(p * Yb.z * Yb.z);
-    vec4 Zb = floor(Eb * Yb.z);
-    vec4 _c = floor(Eb - 7. * Zb);
-    vec4 x = Zb * Yb.x + Yb.yyyy;
-    vec4 y = _c * Yb.x + Yb.yyyy;
-    vec4 E_ = 1. - abs(x) - abs(y);
-    vec4 ac = vec4(x.xy, y.xy);
-    vec4 bc = vec4(x.zw, y.zw);
-    vec4 cc = floor(ac) * 2. + 1.;
-    vec4 dc = floor(bc) * 2. + 1.;
-    vec4 ec = -step(E_, vec4(0.));
-    vec4 fc = ac.xzyw + cc.xzyw * ec.xxyy;
-    vec4 gc = bc.xzyw + dc.xzyw * ec.zzww;
-    vec3 hc = vec3(fc.xy, E_.x);
-    vec3 ic = vec3(fc.zw, E_.y);
-    vec3 jc = vec3(gc.xy, E_.z);
-    vec3 kc = vec3(gc.zw, E_.w);
-    vec4 lc = Lb(vec4(dot(hc, hc), dot(ic, ic), dot(jc, jc), dot(kc, kc)));
-    hc *= lc.x;
-    ic *= lc.y;
-    jc *= lc.z;
-    kc *= lc.w;
-    vec4 ka = max(.6 - vec4(dot(Qb, Qb), dot(Ub, Ub), dot(Vb, Vb), dot(Wb, Wb)), 0.);
-    ka = ka * ka;
-    return 42. * dot(ka * ka, vec4(dot(hc, Qb), dot(ic, Ub), dot(jc, Vb), dot(kc, Wb)));
-}
-
-float mc(in vec3 p) {
-    vec3 q = p - vec3(0., .1, 1.) * GameTime;
-    float za;
-    za = .5 * Mb(q);
-    q *= 2.02;
-    za += .25 * Mb(q);
-    q *= 2.03;
-    za += .125 * Mb(q);
-    q *= 2.01;
-    za += .0625 * Mb(q);
-    q *= 2.02;
-    za += .03125 * Mb(q);
-    return clamp(1.5 - p.y - 2. + 1.75 * za, 0., 1.);
-}
-
-float nc(in vec3 p) {
-    vec3 q = p - vec3(0., .1, 1.) * GameTime;
-    float za;
-    za = .5 * Mb(q);
-    q *= 2.02;
-    za += .25 * Mb(q);
-    q *= 2.03;
-    za += .125 * Mb(q);
-    q *= 2.01;
-    za += .0625 * Mb(q);
-    return clamp(1.5 - p.y - 2. + 1.75 * za, 0., 1.);
-}
-
-float oc(in vec3 p) {
-    vec3 q = p - vec3(0., .1, 1.) * GameTime;
-    float za;
-    za = .5 * Mb(q);
-    q *= 2.02;
-    za += .25 * Mb(q);
-    q *= 2.03;
-    za += .125 * Mb(q);
-    return clamp(1.5 - p.y - 2. + 1.75 * za, 0., 1.);
-}
-
-float pc(in vec3 p) {
-    vec3 q = p - vec3(0., .1, 1.) * GameTime;
-    float za;
-    za = .5 * Mb(q);
-    q *= 2.02;
-    za += .25 * Mb(q);
-    return clamp(1.5 - p.y - 2. + 1.75 * za, 0., 1.);
-}
-
-const vec3 qc = vec3(-.7071, 0., -.7071);
-
-vec4 rc(in vec3 xb, in vec3 Bb, in vec3 sc) {
-    vec4 tc = vec4(0.);
-    float t = 0.;
-    for (int w_ = 0; w_ < 40; w_++) {
-        vec3 T = xb + t * Bb;
-        if (T.y < -3. || T.y > 2. || tc.a > .99) break;
-        float uc = mc(T);
-        if (uc > .01) {
-            float vc = clamp((uc - mc(T + .3 * qc)) / .6, 0., 1.);
-            vec3 wc = vec3(1., .6, .3) * vc + vec3(.91, .98, 1.05);
-            vec4 Ua = vec4(mix(vec3(1., .95, .8), vec3(.25, .3, .35), uc), uc);
-            Ua.xyz *= wc;
-            Ua.xyz = mix(Ua.xyz, sc, 1. - exp(-3e-3 * t * t));
-            Ua.w *= .4;
-            Ua.rgb *= Ua.a;
-            tc += Ua * (1. - tc.a);
-        }
-        t += max(.06, .05 * t);
-    }
-    for (int w_ = 0; w_ < 40; w_++) {
-        vec3 T = xb + t * Bb;
-        if (T.y < -3. || T.y > 2. || tc.a > .99) break;
-        float uc = nc(T);
-        if (uc > .01) {
-            float vc = clamp((uc - nc(T + .3 * qc)) / .6, 0., 1.);
-            vec3 wc = vec3(1., .6, .3) * vc + vec3(.91, .98, 1.05);
-            vec4 Ua = vec4(mix(vec3(1., .95, .8), vec3(.25, .3, .35), uc), uc);
-            Ua.xyz *= wc;
-            Ua.xyz = mix(Ua.xyz, sc, 1. - exp(-3e-3 * t * t));
-            Ua.w *= .4;
-            Ua.rgb *= Ua.a;
-            tc += Ua * (1. - tc.a);
-        }
-        t += max(.06, .05 * t);
-    }
-    for (int w_ = 0; w_ < 30; w_++) {
-        vec3 T = xb + t * Bb;
-        if (T.y < -3. || T.y > 2. || tc.a > .99) break;
-        float uc = oc(T);
-        if (uc > .01) {
-            float vc = clamp((uc - oc(T + .3 * qc)) / .6, 0., 1.);
-            vec3 wc = vec3(1., .6, .3) * vc + vec3(.91, .98, 1.05);
-            vec4 Ua = vec4(mix(vec3(1., .95, .8), vec3(.25, .3, .35), uc), uc);
-            Ua.xyz *= wc;
-            Ua.xyz = mix(Ua.xyz, sc, 1. - exp(-3e-3 * t * t));
-            Ua.w *= .4;
-            Ua.rgb *= Ua.a;
-            tc += Ua * (1. - tc.a);
-        }
-        t += max(.06, .05 * t);
-    }
-    for (int w_ = 0; w_ < 30; w_++) {
-        vec3 T = xb + t * Bb;
-        if (T.y < -3. || T.y > 2. || tc.a > .99) break;
-        float uc = pc(T);
-        if (uc > .01) {
-            float vc = clamp((uc - pc(T + .3 * qc)) / .6, 0., 1.);
-            vec3 wc = vec3(1., .6, .3) * vc + vec3(.91, .98, 1.05);
-            vec4 Ua = vec4(mix(vec3(1., .95, .8), vec3(.25, .3, .35), uc), uc);
-            Ua.xyz *= wc;
-            Ua.xyz = mix(Ua.xyz, sc, 1. - exp(-3e-3 * t * t));
-            Ua.w *= .4;
-            Ua.rgb *= Ua.a;
-            tc += Ua * (1. - tc.a);
-        }
-        t += max(.06, .05 * t);
-    }
-    return clamp(tc, 0., 1.);
-}
-
-vec4 xc(in vec3 xb, in vec3 Bb) {
-    float yc = clamp(dot(qc, Bb), 0., 1.);
-    vec3 Ua = vec3(.6, .71, .75) - Bb.y * .2 * vec3(1., .5, 1.) + .15 * .5;
-    Ua += .2 * vec3(1., .6, .1) * pow(yc, 8.);
-    vec4 qb = rc(xb, Bb, Ua);
-    Ua = Ua * (1. - qb.w) + qb.xyz;
-    Ua += vec3(.2, .08, .04) * pow(yc, 3.);
-    return vec4(Ua, 1.);
-}
-
-vec4 zc() {
-    vec3 xb = vec3(0., 0., 1. * GameTime * 2e2);
-    vec3 Bb = normalize(c_);
-    return xc(xb, Bb);
 }
 
 const float Ac = .38;
@@ -740,7 +362,7 @@ vec3 pd(vec3 l) {
 }
 
 vec4 sd() {
-    float t_ = GameTime * 400;
+    float t_ = fract(GameTime) * 400;
     vec3 td = normalize(c_);
     vec3 qc = dd(0.);
     if (td.y >= 0.) {
@@ -768,7 +390,7 @@ vec4 sd() {
 }
 
 vec4 Gd() {
-    float t_ = GameTime * 2000;
+    float t_ = fract(GameTime) * 2000;
     float z = 0.;
     float v_ = 0.;
     float s = 0.;
@@ -817,7 +439,7 @@ float Nd(in vec2 p, float Od) {
     vec2 Rd = p;
     for (float w_ = 0.; w_ < 5.; w_++) {
         vec2 Sd = Ld(Rd * 1.85) * .75;
-        Sd *= Jd(GameTime * Od);
+        Sd *= Jd(fract(GameTime) * Od);
         p -= Sd / Pd;
         Rd *= 1.3;
         Pd *= .45;
@@ -864,7 +486,7 @@ vec4 Zd() {
 
 vec4 be() {
     vec3 y_ = normalize(vec3(c_.xy, c_.z / 0.800));
-    float t_ = GameTime * 0.110;
+    float t_ = fract(GameTime) * 0.110;
     float ce = t_ * .2;
     float de = t_ * .1;
     mat2 ee = mat2(cos(ce), sin(ce), -sin(ce), cos(ce));
@@ -919,9 +541,15 @@ void main() {
     je(249) { fragColor = wb(); return; }
     je(248) { fragColor = Gd(); return; }
     je(247) { fragColor = be(); return; }
+#ifdef ALPHA_CUTOUT
+    if (l.a < ALPHA_CUTOUT) {
+        discard;
+    }
+#else
     if (l.a < .02) {
         discard;
     }
-    fragColor = l;
+#endif
+    l *= lightMapColor;
+    fragColor = apply_fog(l, sphericalVertexDistance, cylindricalVertexDistance, FogEnvironmentalStart, FogEnvironmentalEnd, FogRenderDistanceStart, FogRenderDistanceEnd, FogColor);
 }
-
