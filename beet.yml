@@ -94,7 +94,7 @@ meta:
         # Automagically checks for dependencies and their minimum required versions at runtime.
         load_dependencies: {
             "golf_ball": {"name":"GolfBall", "url":"https://github.com/Stoupy51/GolfBall","source":"modrinth", "modrinth_slug":"golf_ball"},
-            "shopping_kart": {"name":"ShoppingKart", "url":"https://github.com/Stoupy51/ShoppingKart","source":"smithed", "smithed_id":"shopping-kart", "has_resource_pack": True},
+            "shopping_kart": {"name":"ShoppingKart", "url":"https://github.com/Stoupy51/ShoppingKart","source":"modrinth", "modrinth_slug":"shopping_kart", "has_resource_pack": True},
         }
 
         # Configuration for in-game manual
