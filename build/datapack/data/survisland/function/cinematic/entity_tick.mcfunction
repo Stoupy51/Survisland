@@ -3,7 +3,7 @@
 #
 # @executed	as @e[type=item_display,tag=survisland.cinematic]
 #
-# @within	survisland:v2.5.1/tick [ as @e[type=item_display,tag=survisland.cinematic] ]
+# @within	survisland:v2.6.0/tick [ as @e[type=item_display,tag=survisland.cinematic] ]
 #
 
 # Make sure the player is spectating the entity

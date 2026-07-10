@@ -2,7 +2,7 @@
 # ruff: noqa: E501
 # Imports
 import stouputils as stp
-from beet import ItemTag
+from beet import ItemTag, Recipe
 from stewbeet import Advancement, Item, ItemModel, JsonDict, Mem, set_json_encoder, write_function, write_load_file, write_tick_file, write_versioned_function
 
 
@@ -115,10 +115,21 @@ tag @s remove {ns}.temp
 function #bs.view:at_aimed_block {{run:"function {ns}:utils/relative",with:{{}}}}
 """)
 
-	# Make parchemins tintables
-	Mem.ctx.data["minecraft"].item_tags["dyeable"] = set_json_encoder(ItemTag({"values":stp.unique_list([parchemin.base_item])}))
+	# Make parchemins & cushions tintables
+	# (26.1 removed #minecraft:dyeable: dyeing is now a per-item "minecraft:crafting_dye" recipe, and cauldron washing is the #minecraft:cauldron_can_remove_dye tag)
+	cushion = Item.from_id("cushion")
+	dyeable_bases: list[str] = stp.unique_list([parchemin.base_item, cushion.base_item])
+	for base_item in dyeable_bases:
+		Mem.ctx.data[ns].recipes[f"dye_{base_item.split(':')[-1]}"] = set_json_encoder(Recipe({
+			"type": "minecraft:crafting_dye",
+			"dye": "#minecraft:dyes",
+			"target": base_item,
+			"result": {"id": base_item}
+		}))
+	Mem.ctx.data["minecraft"].item_tags["cauldron_can_remove_dye"] = set_json_encoder(ItemTag({"values":dyeable_bases}))
 	Mem.ctx.assets[ns].item_models["parchemin"] = set_json_encoder(ItemModel({"model":{"type":"minecraft:model","model":f"{ns}:item/parchemin","tints":[{"type":"minecraft:dye","default":[0.780,0.737,0.647]}]}}), max_level=3)
 	Mem.ctx.assets[ns].item_models["deployed_parchemin"] = set_json_encoder(ItemModel({"model":{"type":"minecraft:model","model":f"{ns}:item/deployed_parchemin","tints":[{"type":"minecraft:dye","default":[0.780,0.737,0.647]}]}}), max_level=3)
+	Mem.ctx.assets[ns].item_models["cushion"] = set_json_encoder(ItemModel({"model":{"type":"minecraft:model","model":f"{ns}:item/cushion","tints":[{"type":"minecraft:dye","default":[1.0,1.0,1.0]}]}}), max_level=3)
 
 	# parchemins/_convert_to_scroll
 	p_id: str = parchemin.base_item

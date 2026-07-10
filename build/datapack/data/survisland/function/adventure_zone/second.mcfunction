@@ -2,7 +2,7 @@
 #> survisland:adventure_zone/second
 #
 # @within	survisland:second
-#			survisland:v2.5.1/second
+#			survisland:v2.6.0/second
 #
 # @executed			default context
 # 
