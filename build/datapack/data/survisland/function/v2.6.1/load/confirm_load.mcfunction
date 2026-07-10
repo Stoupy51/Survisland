@@ -1,13 +1,13 @@
 
-#> survisland:v2.6.0/load/confirm_load
+#> survisland:v2.6.1/load/confirm_load
 #
-# @within	survisland:v2.6.0/load/valid_dependencies
+# @within	survisland:v2.6.1/load/valid_dependencies
 #
 
 # Confirm load
-tellraw @a[tag=convention.debug] {"text":"[Loaded Survisland v2.6.0]","color":"green"}
+tellraw @a[tag=convention.debug] {"text":"[Loaded Survisland v2.6.1]","color":"green"}
 scoreboard players set #survisland.loaded load.status 1
-function survisland:v2.6.0/load/set_items_storage
+function survisland:v2.6.1/load/set_items_storage
 
 # Add objectives
 scoreboard objectives add survisland.id dummy

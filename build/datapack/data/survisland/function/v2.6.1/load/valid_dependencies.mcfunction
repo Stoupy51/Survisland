@@ -1,12 +1,12 @@
 
-#> survisland:v2.6.0/load/valid_dependencies
+#> survisland:v2.6.1/load/valid_dependencies
 #
-# @within	survisland:v2.6.0/load/secondary
-#			survisland:v2.6.0/load/valid_dependencies 1t replace [ scheduled ]
+# @within	survisland:v2.6.1/load/secondary
+#			survisland:v2.6.1/load/valid_dependencies 1t replace [ scheduled ]
 #
 
 # Waiting for a player to get the game version, but stop function if no player found
-execute unless entity @p run return run schedule function survisland:v2.6.0/load/valid_dependencies 1t replace
+execute unless entity @p run return run schedule function survisland:v2.6.1/load/valid_dependencies 1t replace
 execute store result score #game_version survisland.data run data get entity @p DataVersion
 
 # Check if the game version is supported
@@ -84,5 +84,5 @@ execute if score #dependency_error survisland.data matches 1 if score #shopping_
 execute if score #dependency_error survisland.data matches 1 if score #shopping_kart.major load.status matches 1 if score #shopping_kart.minor load.status matches 4 unless score #shopping_kart.patch load.status matches 1.. run tellraw @a {"text":"- [ShoppingKart (v1.4.1+)]","color":"gold","click_event":{"action":"open_url","url":"https://github.com/Stoupy51/ShoppingKart"}}
 
 # Load Survisland
-execute if score #game_version survisland.data matches 1.. if score #mcload_error survisland.data matches 0 if score #dependency_error survisland.data matches 0 run function survisland:v2.6.0/load/confirm_load
+execute if score #game_version survisland.data matches 1.. if score #mcload_error survisland.data matches 0 if score #dependency_error survisland.data matches 0 run function survisland:v2.6.1/load/confirm_load
 
