@@ -18,7 +18,7 @@ def beet_default(ctx: Context) -> None:
 
 	# Force enable a all modules from Bookshelf (https://docs.mcbookshelf.dev/en/latest/modules/dump.html)
 	for module in OFFICIAL_LIBS.keys():
-		if module.startswith("bs."):
+		if module.startswith("bs.") or module.startswith("smithed."):
 			official_lib_used(module)
 
 	# Delete quick actions (manual)
