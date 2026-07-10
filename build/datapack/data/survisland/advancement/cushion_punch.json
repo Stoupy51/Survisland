@@ -1,0 +1,23 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"player": {
+					"type_specific/player": {
+						"gamemode": [
+							"creative"
+						]
+					}
+				},
+				"entity": {
+					"entity_type": "minecraft:interaction",
+					"nbt": "{Tags:[\"survisland.cushion\"]}"
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "survisland:cushion/punch_adv"
+	}
+}

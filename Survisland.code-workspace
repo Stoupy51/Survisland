@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../StoupGun/minecraft_source_code"
+		},
+		{
+			"path": "../StewBeet"
 		}
 	],
 	"settings": {
