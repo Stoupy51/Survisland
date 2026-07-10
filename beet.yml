@@ -3,8 +3,8 @@
 id: "survisland"
 name: "Survisland"
 author: "Stoupy51"
-version: "2.5.1"
-minecraft: "1.21.11"
+version: "2.6.0"
+minecraft: "26.2"
 
 # Some directories
 directory: "."
@@ -90,6 +90,12 @@ meta:
             datapack: ["./datapack_shortcut"]   # cmd /c mklink /d "datapack_shortcut" "D:\latest_snapshot\world\datapacks"
             # Paths to copy the resource pack(s) to
             resource_pack: ["./resource_pack_shortcut"]   # cmd /c mklink /d "resource_pack_shortcut" "D:\minecraft\snapshot\resourcepacks"
+
+        # Automagically checks for dependencies and their minimum required versions at runtime.
+        load_dependencies: {
+            "golf_ball": {"name":"GolfBall", "url":"https://github.com/Stoupy51/GolfBall","source":"modrinth", "modrinth_slug":"golf_ball"},
+            "shopping_kart": {"name":"ShoppingKart", "url":"https://github.com/Stoupy51/ShoppingKart","source":"smithed", "smithed_id":"shopping-kart", "has_resource_pack": True},
+        }
 
         # Configuration for in-game manual
         manual:

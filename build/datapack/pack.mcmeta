@@ -1,9 +1,9 @@
 {
 	"pack": {
-		"pack_format": 94,
-		"description": "Survisland [2.5.1] by Stoupy51",
+		"pack_format": 107,
+		"description": "Survisland [2.6.0] by Stoupy51",
 		"min_format": [
-			94,
+			107,
 			1
 		],
 		"max_format": [

@@ -3,7 +3,7 @@
 #
 # @executed	at @s
 #
-# @within	survisland:v2.5.1/tick [ at @s ]
+# @within	survisland:v2.6.0/tick [ at @s ]
 #
 
 # Launch movement
