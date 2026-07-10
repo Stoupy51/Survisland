@@ -1,9 +1,14 @@
 {
 	"model": {
-		"type": "minecraft:model",
-		"model": "survisland:item/cushion",
-		"tints": [
-			{"type": "minecraft:dye","default": [1.0,1.0,1.0]}
-		]
+		"type": "minecraft:select",
+		"cases": [
+			{"model": {"type": "minecraft:model","model": "survisland:item/cushion","tints": [{"type": "minecraft:dye","default": [1.0,1.0,1.0]}]},"when": ["none","fixed"]}
+		],
+		"fallback": {
+			"type": "minecraft:model",
+			"model": "survisland:item/cushion_in_hand",
+			"tints": [{"type": "minecraft:dye","default": [1.0,1.0,1.0]}]
+		},
+		"property": "minecraft:display_context"
 	}
 }

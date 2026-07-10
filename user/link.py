@@ -3,6 +3,7 @@
 from stewbeet import Context, Mem, official_lib_used
 from stewbeet.dependencies import OFFICIAL_LIBS
 
+from user.utils.cushion_placement import main as generate_cushion_placement
 from user.utils.dyeable_items import main as generate_dyeable_items
 from user.utils.font import main as generate_screamer
 from user.utils.item_modifiers import main as generate_books_modifiers
@@ -19,6 +20,7 @@ def beet_default(ctx: Context) -> None:
 	generate_scheduled_functions()
 	generate_right_click()
 	generate_dyeable_items()
+	generate_cushion_placement()
 	generate_parchemins()
 	generate_pendent()
 	generate_url()
