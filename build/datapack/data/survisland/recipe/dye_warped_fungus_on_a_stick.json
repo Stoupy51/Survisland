@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:crafting_dye",
+	"dye": "#minecraft:dyes",
+	"target": "minecraft:warped_fungus_on_a_stick",
+	"result": {
+		"id": "minecraft:warped_fungus_on_a_stick"
+	}
+}
