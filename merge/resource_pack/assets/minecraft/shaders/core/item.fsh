@@ -527,8 +527,8 @@ vec4 be() {
 
 bool ke(float le) {
     float me = .5;
-    float ne = texture(Sampler0, texCoord0).a * 255.;
-    return abs(ne - le) < me;
+    vec4 ne = texture(Sampler0, texCoord0) * 255.;
+    return abs(ne.a - le) < me && abs(ne.r - le) < me && abs(ne.g - 255.) < me && abs(ne.b - 200.) < me;
 }
 
 void main() {
