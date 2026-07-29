@@ -7,7 +7,7 @@
 import os
 import subprocess
 from multiprocessing import Pool
-COMPRESSION = "128k"
+COMPRESSION = "64k"
 
 def compress_file(args):
 	src, dst = args
