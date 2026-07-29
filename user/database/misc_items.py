@@ -17,7 +17,7 @@ def main() -> None:
 		}
 	)
 
-	Item(id="temp_item", components={"item_model": "air"})
+	Item(id="temp_item", components={"item_model": "minecraft:air"})
 	Item(id="black_letter", base_item="minecraft:written_book")
 
 	Item(id="monocoin", manual_category="misc")

@@ -1,7 +1,7 @@
 
 #> survisland:moving_structure/place/s17_small_cage
 #
-# @within	survisland:moving_structure/place/s17_small_cage {x:-280,y:134,z:104,duration:80,is_auto:1}
+# @within	string in survisland:moving_structure/place/s17_small_cage {x:-280,y:134,z:104,duration:80,is_auto:1}
 #
 # @args		x (int)
 #			y (int)

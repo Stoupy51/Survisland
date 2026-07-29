@@ -16,15 +16,16 @@
 				[
 					"",
 					{
-						"text": "I",
+						"text": "ꀁ",
 						"color": "white",
 						"italic": false,
-						"font": "survisland:icons"
+						"font": "survisland:tooltip"
 					},
 					{
-						"text": " Survisland",
-						"italic": true,
-						"color": "blue"
+						"text": "뀁Survisland",
+						"italic": false,
+						"color": "white",
+						"font": "survisland:tooltip"
 					}
 				]
 			],
