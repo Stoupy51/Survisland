@@ -14,15 +14,16 @@
 				[
 					"",
 					{
-						"text": "I",
+						"text": "ꀁ",
 						"color": "white",
 						"italic": false,
-						"font": "survisland:icons"
+						"font": "survisland:tooltip"
 					},
 					{
-						"text": " Survisland",
-						"italic": true,
-						"color": "blue"
+						"text": "뀁Survisland",
+						"italic": false,
+						"color": "white",
+						"font": "survisland:tooltip"
 					}
 				]
 			],
@@ -51,7 +52,7 @@
 			},
 			"minecraft:use_remainder": {
 				"count": 1,
-				"id": "minecraft:command_block",
+				"id": "minecraft:recovery_compass",
 				"components": {
 					"item_name": {
 						"text": "Iron Bowl"
@@ -66,15 +67,16 @@
 						[
 							"",
 							{
-								"text": "I",
+								"text": "ꀁ",
 								"color": "white",
 								"italic": false,
-								"font": "survisland:icons"
+								"font": "survisland:tooltip"
 							},
 							{
-								"text": " Survisland",
-								"italic": true,
-								"color": "blue"
+								"text": "뀁Survisland",
+								"italic": false,
+								"color": "white",
+								"font": "survisland:tooltip"
 							}
 						]
 					]
