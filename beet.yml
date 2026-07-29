@@ -3,7 +3,7 @@
 id: "survisland"
 name: "Survisland"
 author: "Stoupy51"
-version: "2.6.1"
+version: "2.7.0"
 minecraft: "26.2"
 
 # Some directories
@@ -49,6 +49,7 @@ pipeline:
     - "stewbeet.plugins.finalyze.dependencies"
     # - "stewbeet.plugins.finalyze.check_unused_textures"
     - "stewbeet.plugins.finalyze.last_final.silent"
+    - "stewbeet.plugins.auto.scoreboard_constants.silent"
     # - "stewbeet.plugins.auto.lang_file"
     - "stewbeet.plugins.auto.headers.silent"
     - "stewbeet.plugins.archive"
