@@ -3,6 +3,7 @@
 from stewbeet import Context, Mem, official_lib_used
 from stewbeet.dependencies import OFFICIAL_LIBS
 
+from user.modes.all_together import main as generate_all_together
 from user.utils.cushion_placement import main as generate_cushion_placement
 from user.utils.dyeable_items import main as generate_dyeable_items
 from user.utils.font import main as generate_screamer
@@ -27,6 +28,7 @@ def beet_default(ctx: Context) -> None:
 	generate_books_modifiers()
 	generate_pop_ups()
 	generate_screamer()
+	generate_all_together()
 
 	# Force enable a all modules from Bookshelf (https://docs.mcbookshelf.dev/en/latest/modules/dump.html)
 	for module in OFFICIAL_LIBS.keys():
