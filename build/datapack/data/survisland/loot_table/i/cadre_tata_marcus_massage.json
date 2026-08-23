@@ -1,0 +1,42 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:painting",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:painting/variant": "survisland:cadre_tata_marcus_massage",
+								"minecraft:item_model": "survisland:cadre_tata_marcus_massage",
+								"minecraft:item_name": {
+									"text": "Cadre Tata Marcus Massage"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},
+										{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}
+									]
+								],
+								"minecraft:custom_data": {
+									"survisland": {
+										"cadre_tata_marcus_massage": true
+									},
+									"smithed": {
+										"id": "survisland:cadre_tata_marcus_massage",
+										"origin": "survisland",
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
