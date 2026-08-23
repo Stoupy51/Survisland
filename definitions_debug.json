@@ -1373,6 +1373,246 @@
 			"height": 4
 		}
 	},
+	"cadre_m4_puni": {
+		"id": "cadre_m4_puni",
+		"base_item": "minecraft:painting",
+		"recipes": [],
+		"components": {
+			"painting/variant": "survisland:cadre_m4_puni",
+			"item_model": "survisland:cadre_m4_puni",
+			"item_name": {"text": "Cadre M4 Puni"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"cadre_m4_puni": true},"smithed": {"id": "survisland:cadre_m4_puni","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false,
+		"painting_data": {
+			"texture": "painting/cadre_m4_puni",
+			"author": {"text": "Tata_Mymy","color": "yellow"},
+			"title": {"text": "Cadre M4 Puni"},
+			"width": 4,
+			"height": 4
+		}
+	},
+	"cadre_photo_artyu": {
+		"id": "cadre_photo_artyu",
+		"base_item": "minecraft:painting",
+		"recipes": [],
+		"components": {
+			"painting/variant": "survisland:cadre_photo_artyu",
+			"item_model": "survisland:cadre_photo_artyu",
+			"item_name": {"text": "Cadre Photo Artyu"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"cadre_photo_artyu": true},"smithed": {"id": "survisland:cadre_photo_artyu","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false,
+		"painting_data": {
+			"texture": "painting/cadre_photo_artyu",
+			"author": {"text": "Tata_Mymy","color": "yellow"},
+			"title": {"text": "Cadre Photo Artyu"},
+			"width": 4,
+			"height": 4
+		}
+	},
+	"cadre_photo_banga": {
+		"id": "cadre_photo_banga",
+		"base_item": "minecraft:painting",
+		"recipes": [],
+		"components": {
+			"painting/variant": "survisland:cadre_photo_banga",
+			"item_model": "survisland:cadre_photo_banga",
+			"item_name": {"text": "Cadre Photo Banga"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"cadre_photo_banga": true},"smithed": {"id": "survisland:cadre_photo_banga","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false,
+		"painting_data": {
+			"texture": "painting/cadre_photo_banga",
+			"author": {"text": "Tata_Mymy","color": "yellow"},
+			"title": {"text": "Cadre Photo Banga"},
+			"width": 4,
+			"height": 4
+		}
+	},
+	"cadre_photo_leon": {
+		"id": "cadre_photo_leon",
+		"base_item": "minecraft:painting",
+		"recipes": [],
+		"components": {
+			"painting/variant": "survisland:cadre_photo_leon",
+			"item_model": "survisland:cadre_photo_leon",
+			"item_name": {"text": "Cadre Photo Leon"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"cadre_photo_leon": true},"smithed": {"id": "survisland:cadre_photo_leon","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false,
+		"painting_data": {
+			"texture": "painting/cadre_photo_leon",
+			"author": {"text": "Tata_Mymy","color": "yellow"},
+			"title": {"text": "Cadre Photo Leon"},
+			"width": 4,
+			"height": 4
+		}
+	},
+	"cadre_photo_mega": {
+		"id": "cadre_photo_mega",
+		"base_item": "minecraft:painting",
+		"recipes": [],
+		"components": {
+			"painting/variant": "survisland:cadre_photo_mega",
+			"item_model": "survisland:cadre_photo_mega",
+			"item_name": {"text": "Cadre Photo Mega"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"cadre_photo_mega": true},"smithed": {"id": "survisland:cadre_photo_mega","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false,
+		"painting_data": {
+			"texture": "painting/cadre_photo_mega",
+			"author": {"text": "Tata_Mymy","color": "yellow"},
+			"title": {"text": "Cadre Photo Mega"},
+			"width": 4,
+			"height": 4
+		}
+	},
+	"cadre_photo_ona": {
+		"id": "cadre_photo_ona",
+		"base_item": "minecraft:painting",
+		"recipes": [],
+		"components": {
+			"painting/variant": "survisland:cadre_photo_ona",
+			"item_model": "survisland:cadre_photo_ona",
+			"item_name": {"text": "Cadre Photo Ona"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"cadre_photo_ona": true},"smithed": {"id": "survisland:cadre_photo_ona","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false,
+		"painting_data": {
+			"texture": "painting/cadre_photo_ona",
+			"author": {"text": "Tata_Mymy","color": "yellow"},
+			"title": {"text": "Cadre Photo Ona"},
+			"width": 4,
+			"height": 4
+		}
+	},
+	"cadre_photo_rox": {
+		"id": "cadre_photo_rox",
+		"base_item": "minecraft:painting",
+		"recipes": [],
+		"components": {
+			"painting/variant": "survisland:cadre_photo_rox",
+			"item_model": "survisland:cadre_photo_rox",
+			"item_name": {"text": "Cadre Photo Rox"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"cadre_photo_rox": true},"smithed": {"id": "survisland:cadre_photo_rox","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false,
+		"painting_data": {
+			"texture": "painting/cadre_photo_rox",
+			"author": {"text": "Tata_Mymy","color": "yellow"},
+			"title": {"text": "Cadre Photo Rox"},
+			"width": 4,
+			"height": 4
+		}
+	},
+	"cadre_tata_cookie": {
+		"id": "cadre_tata_cookie",
+		"base_item": "minecraft:painting",
+		"recipes": [],
+		"components": {
+			"painting/variant": "survisland:cadre_tata_cookie",
+			"item_model": "survisland:cadre_tata_cookie",
+			"item_name": {"text": "Cadre Tata Cookie"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"cadre_tata_cookie": true},"smithed": {"id": "survisland:cadre_tata_cookie","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false,
+		"painting_data": {
+			"texture": "painting/cadre_tata_cookie",
+			"author": {"text": "Tata_Mymy","color": "yellow"},
+			"title": {"text": "Cadre Tata Cookie"},
+			"width": 4,
+			"height": 4
+		}
+	},
+	"cadre_tata_marcus_massage": {
+		"id": "cadre_tata_marcus_massage",
+		"base_item": "minecraft:painting",
+		"recipes": [],
+		"components": {
+			"painting/variant": "survisland:cadre_tata_marcus_massage",
+			"item_model": "survisland:cadre_tata_marcus_massage",
+			"item_name": {"text": "Cadre Tata Marcus Massage"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"cadre_tata_marcus_massage": true},"smithed": {"id": "survisland:cadre_tata_marcus_massage","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false,
+		"painting_data": {
+			"texture": "painting/cadre_tata_marcus_massage",
+			"author": {"text": "Tata_Mymy","color": "yellow"},
+			"title": {"text": "Cadre Tata Marcus Massage"},
+			"width": 4,
+			"height": 4
+		}
+	},
+	"cadre_tata_marcus": {
+		"id": "cadre_tata_marcus",
+		"base_item": "minecraft:painting",
+		"recipes": [],
+		"components": {
+			"painting/variant": "survisland:cadre_tata_marcus",
+			"item_model": "survisland:cadre_tata_marcus",
+			"item_name": {"text": "Cadre Tata Marcus"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"cadre_tata_marcus": true},"smithed": {"id": "survisland:cadre_tata_marcus","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false,
+		"painting_data": {
+			"texture": "painting/cadre_tata_marcus",
+			"author": {"text": "Tata_Mymy","color": "yellow"},
+			"title": {"text": "Cadre Tata Marcus"},
+			"width": 4,
+			"height": 4
+		}
+	},
+	"cadre_tata_saut": {
+		"id": "cadre_tata_saut",
+		"base_item": "minecraft:painting",
+		"recipes": [],
+		"components": {
+			"painting/variant": "survisland:cadre_tata_saut",
+			"item_model": "survisland:cadre_tata_saut",
+			"item_name": {"text": "Cadre Tata Saut"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"cadre_tata_saut": true},"smithed": {"id": "survisland:cadre_tata_saut","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false,
+		"painting_data": {
+			"texture": "painting/cadre_tata_saut",
+			"author": {"text": "Tata_Mymy","color": "yellow"},
+			"title": {"text": "Cadre Tata Saut"},
+			"width": 4,
+			"height": 4
+		}
+	},
+	"cadre_tata_tue": {
+		"id": "cadre_tata_tue",
+		"base_item": "minecraft:painting",
+		"recipes": [],
+		"components": {
+			"painting/variant": "survisland:cadre_tata_tue",
+			"item_model": "survisland:cadre_tata_tue",
+			"item_name": {"text": "Cadre Tata Tue"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"cadre_tata_tue": true},"smithed": {"id": "survisland:cadre_tata_tue","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false,
+		"painting_data": {
+			"texture": "painting/cadre_tata_tue",
+			"author": {"text": "Tata_Mymy","color": "yellow"},
+			"title": {"text": "Cadre Tata Tue"},
+			"width": 4,
+			"height": 4
+		}
+	},
 	"icon": {
 		"id": "icon",
 		"base_item": "minecraft:recovery_compass",
