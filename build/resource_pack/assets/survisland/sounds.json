@@ -1,22 +1,22 @@
 {
 	"01_es_clash_bonnie_grace": {
-		"subtitle": "01_es_clash_bonnie_grace",
+		"subtitle": "01 Es Clash Bonnie Grace",
 		"sounds": [{"name": "survisland:01_es_clash_bonnie_grace","stream": true}]
 	},
 	"02_es_close_combat_fredrik_ekstrom": {
-		"subtitle": "02_es_close_combat_fredrik_ekstrom",
+		"subtitle": "02 Es Close Combat Fredrik Ekstrom",
 		"sounds": [{"name": "survisland:02_es_close_combat_fredrik_ekstrom","stream": true}]
 	},
 	"03_es_nevertheless_she_persisted_bonnie_grace": {
-		"subtitle": "03_es_nevertheless_she_persisted_bonnie_grace",
+		"subtitle": "03 Es Nevertheless She Persisted Bonnie Grace",
 		"sounds": [{"name": "survisland:03_es_nevertheless_she_persisted_bonnie_grace","stream": true}]
 	},
 	"04_es_our_last_stand_formantx": {
-		"subtitle": "04_es_our_last_stand_formantx",
+		"subtitle": "04 Es Our Last Stand Formantx",
 		"sounds": [{"name": "survisland:04_es_our_last_stand_formantx","stream": true}]
 	},
 	"rat_dance": {
-		"subtitle": "rat_dance",
+		"subtitle": "Rat Dance",
 		"sounds": [{"name": "survisland:rat_dance","stream": true}]
 	},
 	"abyssion_wrath/abyssion_boucle": {

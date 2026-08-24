@@ -7,14 +7,16 @@
 ## Check if Survisland is loadable (dependencies)
 scoreboard players set #dependency_error survisland.data 0
 execute if score #dependency_error survisland.data matches 0 unless score #smithed.custom_block.major load.status matches 0.. run scoreboard players set #dependency_error survisland.data 1
-execute if score #dependency_error survisland.data matches 0 if score #smithed.custom_block.major load.status matches 0 unless score #smithed.custom_block.minor load.status matches 11.. run scoreboard players set #dependency_error survisland.data 1
+execute if score #dependency_error survisland.data matches 0 if score #smithed.custom_block.major load.status matches 0 unless score #smithed.custom_block.minor load.status matches 10.. run scoreboard players set #dependency_error survisland.data 1
 execute if score #dependency_error survisland.data matches 0 unless score #smithed.crafter.major load.status matches 0.. run scoreboard players set #dependency_error survisland.data 1
-execute if score #dependency_error survisland.data matches 0 if score #smithed.crafter.major load.status matches 0 unless score #smithed.crafter.minor load.status matches 11.. run scoreboard players set #dependency_error survisland.data 1
+execute if score #dependency_error survisland.data matches 0 if score #smithed.crafter.major load.status matches 0 unless score #smithed.crafter.minor load.status matches 10.. run scoreboard players set #dependency_error survisland.data 1
 execute if score #dependency_error survisland.data matches 0 unless score #smithed.actionbar.major load.status matches 0.. run scoreboard players set #dependency_error survisland.data 1
-execute if score #dependency_error survisland.data matches 0 if score #smithed.actionbar.major load.status matches 0 unless score #smithed.actionbar.minor load.status matches 8.. run scoreboard players set #dependency_error survisland.data 1
+execute if score #dependency_error survisland.data matches 0 if score #smithed.actionbar.major load.status matches 0 unless score #smithed.actionbar.minor load.status matches 7.. run scoreboard players set #dependency_error survisland.data 1
 execute if score #dependency_error survisland.data matches 0 unless score #furnace_nbt_recipes.major load.status matches 1.. run scoreboard players set #dependency_error survisland.data 1
 execute if score #dependency_error survisland.data matches 0 if score #furnace_nbt_recipes.major load.status matches 1 unless score #furnace_nbt_recipes.minor load.status matches 10.. run scoreboard players set #dependency_error survisland.data 1
 execute if score #dependency_error survisland.data matches 0 if score #furnace_nbt_recipes.major load.status matches 1 if score #furnace_nbt_recipes.minor load.status matches 10 unless score #furnace_nbt_recipes.patch load.status matches 1.. run scoreboard players set #dependency_error survisland.data 1
+execute if score #dependency_error survisland.data matches 0 unless score #cinemalya.major load.status matches 1.. run scoreboard players set #dependency_error survisland.data 1
+execute if score #dependency_error survisland.data matches 0 if score #cinemalya.major load.status matches 1 unless score #cinemalya.minor load.status matches 0.. run scoreboard players set #dependency_error survisland.data 1
 execute if score #dependency_error survisland.data matches 0 unless score $bs.bitwise.major load.status matches 4.. run scoreboard players set #dependency_error survisland.data 1
 execute if score #dependency_error survisland.data matches 0 if score $bs.bitwise.major load.status matches 4 unless score $bs.bitwise.minor load.status matches 1.. run scoreboard players set #dependency_error survisland.data 1
 execute if score #dependency_error survisland.data matches 0 unless score $bs.block.major load.status matches 4.. run scoreboard players set #dependency_error survisland.data 1

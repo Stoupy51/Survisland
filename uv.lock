@@ -368,15 +368,6 @@ wheels = [
 ]
 
 [[package]]
-name = "fsspec"
-version = "2026.7.0"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/00/78/f34251dadb8f3921264a1d9b8946f5e542014ee2614b285261b4e40e6775/fsspec-2026.7.0.tar.gz", hash = "sha256:c803c40f4cf860b49dea58ee3e1c33cb9c790520e233537e1340049f89b82a88", size = 317040, upload-time = "2026-07-28T16:34:51.052Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/fd/3c/6a2bf344106328fd04963664a60b9bb6496fc25df8e962fcdc1367285fb9/fsspec-2026.7.0-py3-none-any.whl", hash = "sha256:b57ddbafedfaef7018c1ecab32aa200a9d7ca26b77965f64e48b70061249d279", size = 206583, upload-time = "2026-07-28T16:34:49.538Z" },
-]
-
-[[package]]
 name = "hiredis"
 version = "3.4.1"
 source = { registry = "https://pypi.org/simple" }
@@ -980,12 +971,11 @@ dependencies = [
 
 [[package]]
 name = "stewbeet"
-version = "3.6.2"
+version = "3.6.5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beet" },
     { name = "bolt" },
-    { name = "fsspec" },
     { name = "mecha" },
     { name = "model-resolver" },
     { name = "mutagen" },
@@ -994,14 +984,14 @@ dependencies = [
     { name = "smithed" },
     { name = "stouputils" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/44/ce/ad0cc48553fb077d39b958f0671adbc9b84c6d45ad6b0def772b36c2ad0a/stewbeet-3.6.2.tar.gz", hash = "sha256:6948f5bfa8890b976166d5e923c17f8868e982c65962329d48aa2dff3cfbe908", size = 702736, upload-time = "2026-08-12T12:49:56.164Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/64/d2/53a216809b673851a34299a100b7f59c1d0e8c8ea467cfc283a5dad7258d/stewbeet-3.6.5.tar.gz", hash = "sha256:a48366a0441e3f687d96280e2b452d7c66ecace2b285502b6bb69415bd8e9e10", size = 713484, upload-time = "2026-08-23T16:36:09.805Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/08/4c/d2dd3a5e5745dc2c7e9dc4d244f31ed072056044f64c21c46ce522242536/stewbeet-3.6.2-py3-none-any.whl", hash = "sha256:84016fc587d377784a5c727a2736c796731571418e06f2810e0ed5b37ec801d8", size = 857323, upload-time = "2026-08-12T12:49:53.651Z" },
+    { url = "https://files.pythonhosted.org/packages/55/3a/3d894627d9bfdc936944c989b0bafadc0c061f5987897a03155e551f10f0/stewbeet-3.6.5-py3-none-any.whl", hash = "sha256:7c37a6ef6640225e59c548c0f8d9fa6604e6d7d185a5a160a9b01848018ad525", size = 867513, upload-time = "2026-08-23T16:36:06.874Z" },
 ]
 
 [[package]]
 name = "stouputils"
-version = "26.0.3"
+version = "26.2.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "argcomplete" },
@@ -1015,9 +1005,9 @@ dependencies = [
     { name = "setproctitle" },
     { name = "tqdm" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/a5/a0/6e4dc8f52f423b707fc6c76ef58a795cbaf3d241f05d434a73d8fd471c24/stouputils-26.0.3.tar.gz", hash = "sha256:ca5dcbc4f80d70ad5372c15a0476b6a61710b8e6b15bb802ee8bd3509d97bd45", size = 183305, upload-time = "2026-08-07T08:40:12.786Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/b1/d0/761925bf937b8848a1da7e279816e2982966c3250ad451f40b47e8205ad3/stouputils-26.2.0.tar.gz", hash = "sha256:361b67c03c819cc0198e5ab65cd8e2c14bfc5d2f876db20363809557f8bf9230", size = 169031, upload-time = "2026-08-17T09:48:56.645Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/92/7d/c39742f437263e41d87aed89256812ef5fa0c2225d1130597ae6cc1a089c/stouputils-26.0.3-py3-none-any.whl", hash = "sha256:e23cb198f6b312ac3aae8f456c70dc49b63be0e2e307bc413652fc9bdb7ff583", size = 315550, upload-time = "2026-08-07T08:40:11.261Z" },
+    { url = "https://files.pythonhosted.org/packages/4a/e8/e7cabea6aa51054c87b4f12f8c8905d5bb7ea31cc4e6752bf1b90101ae53/stouputils-26.2.0-py3-none-any.whl", hash = "sha256:a8270e4ea2a686697ac2225b3bd79681d6b7da1b3a6f34a54cf8ccc89d3ecc94", size = 234676, upload-time = "2026-08-17T09:48:55.345Z" },
 ]
 
 [[package]]
@@ -1032,7 +1022,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "smithed", git = "https://github.com/Stoupy51/smithed-python.git" },
-    { name = "stewbeet", specifier = ">=3.6.2" },
+    { name = "stewbeet", specifier = ">=3.6.5" },
 ]
 
 [[package]]
