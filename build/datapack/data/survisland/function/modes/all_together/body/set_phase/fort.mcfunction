@@ -3,15 +3,11 @@
 #
 # @executed	at @s
 #
-# @within	survisland:modes/all_together/body/apply_phase
-#			survisland:modes/all_together/set_phase/fort [ at @s ]
+# @within	survisland:modes/all_together/set_phase/fort [ at @s ]
 #			survisland:modes/all_together/here/set_phase/fort [ at @s ]
 #
 
-# Remember which part this group is running and how sprinting is triggered
-scoreboard players set @s survisland.all_together.phase 3
-scoreboard players set @s survisland.all_together.sprint 0
-
-# Single scan of the group: every player is dealt its own command set
-execute as @a[tag=survisland.all_together,distance=..50] run function survisland:modes/all_together/body/deal/fort
+# Idempotent, so the command block of the part can keep firing on the group standing on it
+execute if score @s survisland.all_together.phase matches 2 run return 0
+function survisland:modes/all_together/body/enter_phase/fort
 

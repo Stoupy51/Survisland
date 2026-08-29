@@ -1,9 +1,9 @@
 
 #> survisland:modes/all_together/body/new
 #
-# @executed	at @a[tag=survisland.all_together,scores={survisland.all_together=1},distance=..50]
+# @executed	at @a[tag=survisland.all_together.new,scores={survisland.all_together=1},limit=1]
 #
-# @within	survisland:modes/all_together/start [ at @a[tag=survisland.all_together,scores={survisland.all_together=1},distance=..50] ]
+# @within	survisland:modes/all_together/start [ at @a[tag=survisland.all_together.new,scores={survisland.all_together=1},limit=1] ]
 #
 
 # Identity and state of this body

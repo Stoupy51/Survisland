@@ -8,6 +8,6 @@
 #
 
 scoreboard players add @s survisland.all_together.phase 1
-execute if score @s survisland.all_together.phase matches 5.. run scoreboard players set @s survisland.all_together.phase 0
+execute if score @s survisland.all_together.phase matches 3.. run scoreboard players set @s survisland.all_together.phase 0
 function survisland:modes/all_together/body/apply_phase
 

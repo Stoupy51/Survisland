@@ -1,9 +1,9 @@
 
 #> survisland:modes/all_together/body/read_player
 #
-# @executed	at @s & as @a[tag=survisland.all_together,distance=..50]
+# @executed	at @s & as @a[tag=survisland.all_together,distance=..3]
 #
-# @within	survisland:modes/all_together/body/tick [ at @s & as @a[tag=survisland.all_together,distance=..50] ]
+# @within	survisland:modes/all_together/body/tick [ at @s & as @a[tag=survisland.all_together,distance=..3] ]
 #
 
 # Stick this sensor on the mannequin eyes, and lock its view on the mannequin aim

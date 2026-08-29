@@ -2,7 +2,7 @@
 """ Generation of the per tick control loop and of the phase switching functions.
 
 Every function under body/ runs as and at one mannequin: it is the anchor of its group, it carries the
-state of its part in its own scores, and its four players are the ones within GROUP_RADIUS blocks.
+state of its part in its own scores, and its players are the ones glued to it within GROUP_RADIUS blocks.
 Any number of groups can therefore run at the same time without knowing anything about each other.
 The tick itself is generic: it only knows action tags, so changing part only redistributes those tags.
 
@@ -15,7 +15,7 @@ import json
 
 from stewbeet import Mem, write_function
 
-from .phases import ACTIONS, CRAWL_KEY, EYE_OFFSET, GROUP_RADIUS, JUMP_VELOCITY, MODE, PHASES, Phase, actions_of_slot
+from .phases import ACTIONS, CRAWL_KEY, EYE_OFFSET, GROUP_RADIUS, GROUP_SIZE, JUMP_VELOCITY, MODE, PHASES, TRIGGER_RADIUS, Phase, actions_of_slot
 
 # Constants
 INPUTS: tuple[str, ...] = ("forward", "backward", "left", "right", "jump", "sneak", "sprint", "crawl")
@@ -48,6 +48,8 @@ def generate_tick() -> None:
 	ns: str = Mem.ctx.project_id
 
 	write_function(f"{ns}:modes/{MODE}/tick", f"""
+# The loop dies with the last group, and any start brings it back
+execute unless entity @e[type=mannequin,tag={ns}.{MODE}.body,limit=1] run return 0
 schedule function {ns}:modes/{MODE}/tick 1t replace
 
 # Every group is driven from the point of view of its own mannequin (position and rotation)
@@ -63,7 +65,7 @@ def generate_body_tick() -> None:
 
 	write_function(f"{ns}:modes/{MODE}/body/tick", f"""
 # Copy the rotation of the head holder, before the player pass forces it back on everyone
-execute rotated as @a[tag={tag}.look,distance=..{GROUP_RADIUS},limit=1] run rotate @s ~ ~
+execute rotated as @a[tag={tag}.look,distance=..{GROUP_RADIUS},sort=nearest,limit=1] run rotate @s ~ ~
 
 # Forget the inputs of the previous tick
 {reset_inputs}
@@ -133,7 +135,7 @@ def phase_help_message(phase: Phase) -> str:
 		True
 	"""
 	components: list[dict[str, str]] = [{"text": "\n"}]
-	for slot in (1, 2, 3, 4):
+	for slot in range(1, GROUP_SIZE + 1):
 		actions: str = " / ".join(action.display for action in actions_of_slot(phase, slot)) or "Rien du tout"
 		components.append({"text": f"Joueur {slot} : ", "color": "yellow"})
 		components.append({"text": f"{actions}\n", "color": "white"})
@@ -147,6 +149,12 @@ def generate_phase_functions() -> None:
 
 	for index, phase in enumerate(PHASES):
 		write_function(f"{ns}:modes/{MODE}/body/set_phase/{phase.id}", f"""
+# Idempotent, so the command block of the part can keep firing on the group standing on it
+execute if score @s {tag}.phase matches {index} run return 0
+function {ns}:modes/{MODE}/body/enter_phase/{phase.id}
+""")
+
+		write_function(f"{ns}:modes/{MODE}/body/enter_phase/{phase.id}", f"""
 # Remember which part this group is running and how sprinting is triggered
 scoreboard players set @s {tag}.phase {index}
 scoreboard players set @s {tag}.sprint {int(phase.sprint_when_all_forward)}
@@ -182,10 +190,11 @@ playsound block.note_block.pling master @s
 """)
 
 	apply_phase: str = "\n".join(
-		f"execute if score @s {tag}.phase matches {index} run return run function {ns}:modes/{MODE}/body/set_phase/{phase.id}"
+		f"execute if score @s {tag}.phase matches {index} run return run function {ns}:modes/{MODE}/body/enter_phase/{phase.id}"
 		for index, phase in enumerate(PHASES)
 	)
 	write_function(f"{ns}:modes/{MODE}/body/apply_phase", f"""
+# Deal the current command set again, even when the group is already in that part
 {apply_phase}
 """)
 
@@ -198,7 +207,7 @@ function {ns}:modes/{MODE}/body/apply_phase
 	write_function(f"{ns}:modes/{MODE}/body/shuffle_slots", f"""
 # Everyone of this group moves to the next slot, then the current command set is dealt again
 scoreboard players add @a[tag={tag},distance=..{GROUP_RADIUS}] {tag} 1
-scoreboard players set @a[tag={tag},distance=..{GROUP_RADIUS},scores={{{tag}=5..}}] {tag} 1
+scoreboard players set @a[tag={tag},distance=..{GROUP_RADIUS},scores={{{tag}={GROUP_SIZE + 1}..}}] {tag} 1
 function {ns}:modes/{MODE}/body/apply_phase
 """)
 
@@ -216,6 +225,6 @@ execute as @e[type=mannequin,tag={ns}.{MODE}.body] at @s run function {ns}:modes
 """)
 		write_function(f"{ns}:modes/{MODE}/here/{name}", f"""
 # Only the group whose mannequin is the nearest one
-execute as @n[type=mannequin,tag={ns}.{MODE}.body,distance=..{GROUP_RADIUS}] at @s run function {ns}:modes/{MODE}/{called}
+execute as @n[type=mannequin,tag={ns}.{MODE}.body,distance=..{TRIGGER_RADIUS}] at @s run function {ns}:modes/{MODE}/{called}
 """)
 

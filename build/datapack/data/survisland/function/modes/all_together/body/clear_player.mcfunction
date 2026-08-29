@@ -1,10 +1,9 @@
 
 #> survisland:modes/all_together/body/clear_player
 #
-# @executed	as @a[tag=survisland.all_together,distance=..50]
+# @executed	as @a[tag=survisland.all_together,distance=..3]
 #
 # @within	survisland:modes/all_together/body/release_player
-#			survisland:modes/all_together/body/clear_group [ as @a[distance=..50] ]
 #
 
 tag @s remove survisland.all_together.forward

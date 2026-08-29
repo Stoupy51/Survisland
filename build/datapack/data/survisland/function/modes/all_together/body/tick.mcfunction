@@ -7,7 +7,7 @@
 #
 
 # Copy the rotation of the head holder, before the player pass forces it back on everyone
-execute rotated as @a[tag=survisland.all_together.look,distance=..50,limit=1] run rotate @s ~ ~
+execute rotated as @a[tag=survisland.all_together.look,distance=..3,sort=nearest,limit=1] run rotate @s ~ ~
 
 # Forget the inputs of the previous tick
 scoreboard players set #all_together_in_forward survisland.data 0
@@ -21,7 +21,7 @@ scoreboard players set #all_together_in_crawl survisland.data 0
 scoreboard players set #all_together_in_holders survisland.data 0
 
 # Single scan of the group: every sensor reports its inputs and gets stuck on the mannequin eyes
-execute at @s as @a[tag=survisland.all_together,distance=..50] run function survisland:modes/all_together/body/read_player
+execute at @s as @a[tag=survisland.all_together,distance=..3] run function survisland:modes/all_together/body/read_player
 
 # Pose: 0 standing, 1 crouching, 2 lying down
 scoreboard players set #all_together_pose survisland.data 0

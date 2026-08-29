@@ -14,10 +14,22 @@ MODE: str = "all_together"
 INPUT_KEYS: tuple[str, ...] = ("forward", "backward", "left", "right", "jump", "sneak", "sprint")
 """ The seven keys readable through a 26.2 input predicate (see InputPredicate.java). """
 
-GROUP_RADIUS: int = 50
-""" Radius around a mannequin holding its own four players.
-Teams are always more than 150 blocks apart, so this radius groups them without ever needing to know how many there are.
+GROUP_SIZE: int = 4
+""" Number of slots of a group, so the number of players sharing one mannequin. """
+
+GROUP_RADIUS: int = 3
+""" Radius around a mannequin holding its own players.
+They are snapped on its eyes the moment they are enrolled and again every tick, so they never leave it and
+two groups would have to stand inside each other to get mixed up.
 """
+
+TRIGGER_RADIUS: int = 5
+""" Radius of the command blocks driving a group.
+The start block enrolls the free players standing on it, the others act on the nearest mannequin.
+"""
+
+START_PLAYERS: int = 4
+""" Free players needed within TRIGGER_RADIUS for a start block to form a group, lower it to test with fewer people. """
 
 CRAWL_KEY: str = "sprint"
 """ Key read on the "crawl" holder to lay the mannequin down, since no vanilla key exists for it.
@@ -84,17 +96,14 @@ ACTIONS: list[Action] = [
 ]
 """ Every action, in the order used to build the help message. """
 
-ALL: tuple[int, ...] = (1, 2, 3, 4)
-""" Shorthand for the parts where everybody controls everything. """
-
 PHASES: list[Phase] = [
-	Phase(id="prologue",  display="Prologue - Laboratoire", bindings={"forward": ALL, "backward": ALL, "left": ALL, "right": ALL, "jump": ALL, "sneak": ALL, "sprint": ALL, "look": ALL, "click": ALL}),
-	Phase(id="clairiere", display="Partie 1 - Clairière",   bindings={"forward": (1,), "backward": (1,), "click": (2,), "jump": (3,), "left": (3,), "right": (3,), "look": (4,)}),
-	Phase(id="riviere",   display="Partie 2 - Rivière",     bindings={"look": (1,), "forward": (2, 4), "jump": (3,), "backward": (3,)}, sprint_when_all_forward=True),
-	Phase(id="fort",      display="Partie 3 - Fort",        bindings={"click": (1,), "backward": (1,), "jump": (2,), "look": (2,), "sprint": (3,), "left": (3,), "right": (3,), "forward": (4,), "sneak": (4,), "crawl": (4,)}),
-	Phase(id="donjon",    display="Partie 4 - Donjon",      bindings={"forward": ALL, "backward": ALL, "left": ALL, "right": ALL, "jump": ALL, "sneak": ALL, "sprint": ALL, "look": ALL, "click": ALL}),
+	Phase(id="clairiere", display="Partie 1 - Clairière", bindings={"forward": (1,), "backward": (1,), "click": (2,), "jump": (3,), "left": (3,), "right": (3,), "look": (4,)}),
+	Phase(id="riviere",   display="Partie 2 - Rivière",   bindings={"look": (1,), "forward": (2, 4), "jump": (3,), "backward": (3,)}, sprint_when_all_forward=True),
+	Phase(id="fort",      display="Partie 3 - Fort",      bindings={"click": (1,), "backward": (1,), "jump": (2,), "look": (2,), "sprint": (3,), "left": (3,), "right": (3,), "forward": (4,), "sneak": (4,), "crawl": (4,)}),
 ]
-""" The five parts of the game design document, in play order. """
+""" The three parts where the mannequin is shared, in play order.
+Before the first one and after the last one the players own their body, so there is no phase for those.
+"""
 
 
 # Functions
@@ -108,9 +117,9 @@ def actions_of_slot(phase: Phase, slot: int) -> list[Action]:
 		list[Action]: The actions held by that slot
 
 	Examples:
-		>>> [action.name for action in actions_of_slot(PHASES[1], 1)]
+		>>> [action.name for action in actions_of_slot(PHASES[0], 1)]
 		['forward', 'backward']
-		>>> [action.name for action in actions_of_slot(PHASES[1], 4)]
+		>>> [action.name for action in actions_of_slot(PHASES[0], 4)]
 		['look']
 	"""
 	return [action for action in ACTIONS if slot in phase.bindings.get(action.name, ())]
