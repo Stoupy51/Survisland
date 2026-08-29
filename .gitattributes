@@ -1,5 +1,0 @@
-build/Survisland_resource_pack.zip filter=lfs diff=lfs merge=lfs -text
-build/Survisland_resource_pack_with_libs.zip filter=lfs diff=lfs merge=lfs -text
-
-*.zip !text !filter !merge !diff
-* !text !filter !merge !diff
