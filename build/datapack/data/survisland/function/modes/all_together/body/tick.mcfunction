@@ -23,7 +23,8 @@ scoreboard players set #all_together_in_sprint survisland.data 0
 scoreboard players set #all_together_in_crawl survisland.data 0
 scoreboard players set #all_together_crew survisland.data 0
 execute on passengers run function survisland:modes/all_together/body/read_player
-execute rotated as @s anchored eyes positioned ^ ^ ^0.6 as @e[type=item_display,tag=survisland.all_together.seat,distance=..3] if score @s survisland.all_together.group = #all_together_group survisland.data run function survisland:modes/all_together/body/seat_tick
+execute store success score #all_together_seat survisland.data rotated as @s anchored eyes positioned ^ ^ ^0.6 as @e[type=item_display,tag=survisland.all_together.seat,distance=..3] if score @s survisland.all_together.group = #all_together_group survisland.data run function survisland:modes/all_together/body/seat_tick
+execute if score #all_together_seat survisland.data matches 0 run function survisland:modes/all_together/body/find_seat
 
 # Vanilla reads shift as a dismount, so whoever fell off is put back on and read right away
 execute unless score #all_together_crew survisland.data matches 4 run function survisland:modes/all_together/body/remount

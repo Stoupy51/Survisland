@@ -20,8 +20,8 @@ GROUP_SIZE: int = 4
 """ Number of slots of a group, so the number of players sharing one mannequin. """
 
 GROUP_RADIUS: int = 16
-""" Radius around a mannequin holding its own players.
-They ride it, so they only leave it by pressing shift and are put back on the tick after.
+""" Radius searched first when a rider has to be put back on its vehicle.
+A player who fell off is normally right there, and the whole world is searched only when that fails.
 """
 
 TRIGGER_RADIUS: int = 3
@@ -30,7 +30,9 @@ The start block enrolls the free players standing on it, the others act on the n
 """
 
 SEAT_RADIUS: int = 3
-""" Radius searched around a mannequin for the item display carrying its click holder. """
+""" Radius searched around a mannequin for the item display carrying its click holder.
+Out of range means the mannequin was teleported without its seat, and the seat is then searched everywhere.
+"""
 
 START_PLAYERS: int = 4
 """ Free players needed within TRIGGER_RADIUS for a start block to form a group, lower it to test with fewer people. """

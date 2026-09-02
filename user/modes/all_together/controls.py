@@ -86,7 +86,8 @@ execute on passengers if entity @s[tag={tag}.look] rotated as @s on vehicle run 
 {reset_inputs}
 scoreboard players set #{MODE}_crew {ns}.data 0
 execute on passengers run function {ns}:modes/{MODE}/body/read_player
-execute rotated as @s anchored eyes positioned ^ ^ ^{CLICK_OFFSET} as @e[type=item_display,tag={tag}.seat,distance=..{SEAT_RADIUS}] if score @s {tag}.group = #{MODE}_group {ns}.data run function {ns}:modes/{MODE}/body/seat_tick
+execute store success score #{MODE}_seat {ns}.data rotated as @s anchored eyes positioned ^ ^ ^{CLICK_OFFSET} as @e[type=item_display,tag={tag}.seat,distance=..{SEAT_RADIUS}] if score @s {tag}.group = #{MODE}_group {ns}.data run function {ns}:modes/{MODE}/body/seat_tick
+execute if score #{MODE}_seat {ns}.data matches 0 run function {ns}:modes/{MODE}/body/find_seat
 
 # Vanilla reads shift as a dismount, so whoever fell off is put back on and read right away
 execute unless score #{MODE}_crew {ns}.data matches {GROUP_SIZE} run function {ns}:modes/{MODE}/body/remount
@@ -148,6 +149,15 @@ execute anchored feet positioned as @s positioned ^ ^ ^8 rotated as @s positione
 tp @s ~ ~ ~
 execute on passengers run function {ns}:modes/{MODE}/body/read_player
 execute on passengers run function {ns}:modes/{MODE}/body/aim
+
+# Tells the caller the seat was found, whether or not it carries anyone
+return 1
+""")
+
+	write_function(f"{ns}:modes/{MODE}/body/find_seat", f"""
+# A teleport carries the mannequin and its passengers but never its seat, so the seat is brought back by hand
+execute store success score #{MODE}_seat {ns}.data as @e[type=item_display,tag={tag}.seat] if score @s {tag}.group = #{MODE}_group {ns}.data run function {ns}:modes/{MODE}/body/seat_tick
+execute if score #{MODE}_seat {ns}.data matches 0 summon minecraft:item_display run function {ns}:modes/{MODE}/body/new_seat
 """)
 
 	read_inputs: str = "\n".join(
@@ -164,6 +174,9 @@ scoreboard players add #{MODE}_crew {ns}.data 1
 	write_function(f"{ns}:modes/{MODE}/body/remount", f"""
 # The only pass still scanning the players, and it only runs while someone is off its vehicle
 execute as @a[tag={tag},distance=..{GROUP_RADIUS}] if score @s {tag}.group = #{MODE}_group {ns}.data run function {ns}:modes/{MODE}/body/mount_player
+
+# Still short, so someone was left behind by a teleport: the whole player list is searched this time
+execute if score #{MODE}_crew {ns}.data matches ..{GROUP_SIZE - 1} as @a[tag={tag}] if score @s {tag}.group = #{MODE}_group {ns}.data run function {ns}:modes/{MODE}/body/mount_player
 """)
 
 	write_function(f"{ns}:modes/{MODE}/body/mount_player", f"""

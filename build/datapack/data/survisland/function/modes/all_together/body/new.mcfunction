@@ -10,6 +10,7 @@
 tag @s add survisland.all_together.body
 data merge entity @s {immovable:0b,hide_description:1b,Invulnerable:1b,profile:"GoldVision98"}
 scoreboard players operation @s survisland.all_together.group = #all_together_group_counter survisland.data
+scoreboard players operation #all_together_group survisland.data = @s survisland.all_together.group
 scoreboard players set @s survisland.all_together.phase 0
 scoreboard players set @s survisland.all_together.pose 0
 scoreboard players set @s survisland.all_together.sprint 0

@@ -4,6 +4,7 @@
 # @executed	as @a[tag=survisland.all_together,distance=..16]
 #
 # @within	survisland:modes/all_together/body/remount [ as @a[tag=survisland.all_together,distance=..16] ]
+#			survisland:modes/all_together/body/remount [ as @a[tag=survisland.all_together] ]
 #
 
 execute on vehicle run return 0

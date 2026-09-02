@@ -12,3 +12,6 @@
 # The only pass still scanning the players, and it only runs while someone is off its vehicle
 execute as @a[tag=survisland.all_together,distance=..16] if score @s survisland.all_together.group = #all_together_group survisland.data run function survisland:modes/all_together/body/mount_player
 
+# Still short, so someone was left behind by a teleport: the whole player list is searched this time
+execute if score #all_together_crew survisland.data matches ..3 as @a[tag=survisland.all_together] if score @s survisland.all_together.group = #all_together_group survisland.data run function survisland:modes/all_together/body/mount_player
+

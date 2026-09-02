@@ -162,6 +162,7 @@ schedule function {ns}:modes/{MODE}/tick 1t replace
 tag @s add {tag}.body
 data merge entity @s {{immovable:0b,hide_description:1b,Invulnerable:1b{profile}}}
 scoreboard players operation @s {tag}.group = #{MODE}_group_counter {ns}.data
+scoreboard players operation #{MODE}_group {ns}.data = @s {tag}.group
 scoreboard players set @s {tag}.phase 0
 scoreboard players set @s {tag}.pose 0
 scoreboard players set @s {tag}.sprint 0
@@ -175,7 +176,7 @@ execute at @s run function {ns}:modes/{MODE}/body/setup_sensors
 
 	write_function(f"{ns}:modes/{MODE}/body/new_seat", f"""
 tag @s add {tag}.seat
-scoreboard players operation @s {tag}.group = #{MODE}_group_counter {ns}.data
+scoreboard players operation @s {tag}.group = #{MODE}_group {ns}.data
 """)
 
 	write_function(f"{ns}:modes/{MODE}/body/setup_sensors", f"""
