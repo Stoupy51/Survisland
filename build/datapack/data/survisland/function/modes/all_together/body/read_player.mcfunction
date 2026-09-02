@@ -1,13 +1,10 @@
 
 #> survisland:modes/all_together/body/read_player
 #
-# @executed	at @s & as @a[tag=survisland.all_together,distance=..3]
+# @executed	as @a[tag=survisland.all_together]
 #
-# @within	survisland:modes/all_together/body/tick [ at @s & as @a[tag=survisland.all_together,distance=..3] ]
+# @within	survisland:modes/all_together/body/tick [ as @a[tag=survisland.all_together] ]
 #
-
-# Stick this sensor on the mannequin eyes, and lock its view on the mannequin aim
-tp @s ~ ~1.519 ~ ~ ~
 
 # Report the keys it is holding down (crawl has no vanilla key, it is read on CRAWL_KEY)
 execute if entity @s[tag=survisland.all_together.forward,predicate=survisland:input/forward] run scoreboard players add #all_together_in_forward survisland.data 1

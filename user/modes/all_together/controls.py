@@ -15,7 +15,7 @@ import json
 
 from stewbeet import Mem, write_function
 
-from .phases import ACTIONS, CRAWL_KEY, EYE_OFFSET, GROUP_RADIUS, GROUP_SIZE, JUMP_VELOCITY, MODE, PHASES, TRIGGER_RADIUS, Phase, actions_of_slot
+from .phases import ACTIONS, CRAWL_KEY, EYE_OFFSET, GROUP_SIZE, JUMP_VELOCITY, MODE, PHASES, TRIGGER_RADIUS, Phase, actions_of_slot
 
 # Constants
 INPUTS: tuple[str, ...] = ("forward", "backward", "left", "right", "jump", "sneak", "sprint", "crawl")
@@ -63,16 +63,29 @@ def generate_body_tick() -> None:
 	tag: str = f"{ns}.{MODE}"
 	reset_inputs: str = "\n".join(f"scoreboard players set #{MODE}_in_{name} {ns}.data 0" for name in INPUTS)
 
+	write_function(f"{ns}:modes/{MODE}/body/look_tick", f"""
+# Put the mouse controller at the mannequin head without changing its rotation
+tp @s ~ ~{EYE_OFFSET} ~
+
+# Copy the controller rotation into the mannequin
+data modify entity @n[type=mannequin,tag={tag}.body] Rotation set from entity @s Rotation
+
+# Teleport every players to the mouse controller
+tp @a[tag={tag},distance=..{TRIGGER_RADIUS},tag=!{tag}.look] @s
+
+# Put the click holder just in front of the mannequin for block and entity interaction
+execute at @s as @a[tag={tag}.click,distance=..{TRIGGER_RADIUS}] run tp @s ^ ^ ^1.0
+""")
+
 	write_function(f"{ns}:modes/{MODE}/body/tick", f"""
-# Copy the rotation of the head holder, before the player pass forces it back on everyone
-execute rotated as @a[tag={tag}.look,distance=..{GROUP_RADIUS},sort=nearest,limit=1] run rotate @s ~ ~
+execute as @a[tag={tag}.look] if score @s {tag}.group = @n[type=mannequin,tag={tag}.body] {tag}.group run function {ns}:modes/{MODE}/body/look_tick
 
 # Forget the inputs of the previous tick
 {reset_inputs}
 scoreboard players set #{MODE}_in_holders {ns}.data 0
 
 # Single scan of the group: every sensor reports its inputs and gets stuck on the mannequin eyes
-execute at @s as @a[tag={tag},distance=..{GROUP_RADIUS}] run function {ns}:modes/{MODE}/body/read_player
+execute as @a[tag={tag}] if score @s {tag}.group = @n[type=mannequin,tag={tag}.body] {tag}.group run function {ns}:modes/{MODE}/body/read_player
 
 # Pose: 0 standing, 1 crouching, 2 lying down
 scoreboard players set #{MODE}_pose {ns}.data 0
@@ -106,9 +119,6 @@ function #bs.move:set_motion {{scale:0.001}}
 		for name in INPUTS
 	)
 	write_function(f"{ns}:modes/{MODE}/body/read_player", f"""
-# Stick this sensor on the mannequin eyes, and lock its view on the mannequin aim
-tp @s ~ ~{EYE_OFFSET} ~ ~ ~
-
 # Report the keys it is holding down (crawl has no vanilla key, it is read on CRAWL_KEY)
 {read_inputs}
 execute if entity @s[tag={tag}.forward] run scoreboard players add #{MODE}_in_holders {ns}.data 1
@@ -160,7 +170,8 @@ scoreboard players set @s {tag}.phase {index}
 scoreboard players set @s {tag}.sprint {int(phase.sprint_when_all_forward)}
 
 # Single scan of the group: every player is dealt its own command set
-execute as @a[tag={tag},distance=..{GROUP_RADIUS}] run function {ns}:modes/{MODE}/body/deal/{phase.id}
+execute as @a[tag={tag}] if score @s {tag}.group = @n[type=mannequin,tag={tag}.body] {tag}.group run function {ns}:modes/{MODE}/body/deal/{phase.id}
+execute as @a[tag={tag}.look] if score @s {tag}.group = @n[type=mannequin,tag={tag}.body] {tag}.group run data modify entity @n[type=mannequin,tag={tag}.body] profile set from entity @s profile
 """)
 
 		clear_tags: str = "\n".join(f"tag @s remove {tag}.{action.name}" for action in ACTIONS)
@@ -206,8 +217,8 @@ function {ns}:modes/{MODE}/body/apply_phase
 
 	write_function(f"{ns}:modes/{MODE}/body/shuffle_slots", f"""
 # Everyone of this group moves to the next slot, then the current command set is dealt again
-scoreboard players add @a[tag={tag},distance=..{GROUP_RADIUS}] {tag} 1
-scoreboard players set @a[tag={tag},distance=..{GROUP_RADIUS},scores={{{tag}={GROUP_SIZE + 1}..}}] {tag} 1
+execute as @a[tag={tag}] if score @s {tag}.group = @n[type=mannequin,tag={tag}.body] {tag}.group run scoreboard players add @s {tag} 1
+execute as @a[tag={tag},scores={{{tag}={GROUP_SIZE + 1}..}}] if score @s {tag}.group = @n[type=mannequin,tag={tag}.body] {tag}.group run scoreboard players set @s {tag} 1
 function {ns}:modes/{MODE}/body/apply_phase
 """)
 

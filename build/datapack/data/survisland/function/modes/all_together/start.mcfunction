@@ -4,8 +4,9 @@
 # @within	???
 #
 
-# Objectives of the mode, the last three are carried by the mannequins themselves
+# Objectives of the mode, the last four are carried by the mannequins themselves
 scoreboard objectives add survisland.all_together dummy
+scoreboard objectives add survisland.all_together.group dummy
 scoreboard objectives add survisland.all_together.phase dummy
 scoreboard objectives add survisland.all_together.pose dummy
 scoreboard objectives add survisland.all_together.sprint dummy
@@ -15,6 +16,7 @@ scoreboard players set #all_together_speed_walk survisland.data 216
 scoreboard players set #all_together_speed_sprint survisland.data 280
 scoreboard players set #all_together_speed_back survisland.data 130
 scoreboard players set #all_together_speed_sneak survisland.data 65
+scoreboard players add #all_together_group_counter survisland.data 1
 
 # Nothing happens until enough free players stand here, so a group already playing is never disturbed
 execute store result score #all_together_free survisland.data if entity @a[distance=..5,tag=!survisland.all_together,gamemode=!creative,gamemode=!spectator]

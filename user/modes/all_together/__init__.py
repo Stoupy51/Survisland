@@ -39,7 +39,6 @@ from .phases import (
 	ACTIONS,
 	BACK_SPEED,
 	EYE_OFFSET,
-	GROUP_RADIUS,
 	GROUP_SIZE,
 	INPUT_KEYS,
 	MANNEQUIN_PROFILE,
@@ -65,7 +64,7 @@ def state_objectives() -> list[str]:
 		True
 	"""
 	ns: str = Mem.ctx.project_id
-	return [f"{ns}.{MODE}"] + [f"{ns}.{MODE}.{name}" for name in ("phase", "pose", "sprint")]
+	return [f"{ns}.{MODE}"] + [f"{ns}.{MODE}.{name}" for name in ("group", "phase", "pose", "sprint")]
 
 
 def generate_player_helpers() -> None:
@@ -73,7 +72,7 @@ def generate_player_helpers() -> None:
 	ns: str = Mem.ctx.project_id
 	tag: str = f"{ns}.{MODE}"
 	clear_tags: str = "\n".join(f"tag @s remove {tag}.{action.name}" for action in ACTIONS)
-	resets: dict[str, str] = dict.fromkeys(("scale", "gravity", "fall_damage_multiplier", "entity_interaction_range", "block_interaction_range"), "reset")
+	resets: dict[str, str] = dict.fromkeys(("scale", "gravity", "fall_damage_multiplier", "camera_distance", "entity_interaction_range", "block_interaction_range"), "reset")
 
 	write_function(f"{ns}:modes/{MODE}/body/clear_player", f"""
 {clear_tags}
@@ -82,7 +81,7 @@ tag @s remove {tag}
 
 	write_function(f"{ns}:modes/{MODE}/body/release_player", f"""
 # Give this player its own body back
-gamemode survival @s
+gamemode adventure @s
 effect clear @s minecraft:invisibility
 effect clear @s minecraft:resistance
 {attribute_lines(resets)}
@@ -98,6 +97,7 @@ effect give @s minecraft:resistance infinite 255 true
 attribute @s minecraft:scale base set 0.0625
 attribute @s minecraft:gravity base set 0
 attribute @s minecraft:fall_damage_multiplier base set 0
+attribute @s minecraft:camera_distance base set 24
 
 # Snap it on the eyes of its mannequin right away, it never leaves them afterwards
 tp @s ~ ~{EYE_OFFSET} ~
@@ -122,7 +122,7 @@ def generate_start() -> None:
 	profile: str = f',profile:"{MANNEQUIN_PROFILE}"' if MANNEQUIN_PROFILE else ""
 
 	write_function(f"{ns}:modes/{MODE}/start", f"""
-# Objectives of the mode, the last three are carried by the mannequins themselves
+# Objectives of the mode, the last four are carried by the mannequins themselves
 {objectives}
 
 # Speeds shared by every group, in thousandths of a block per tick
@@ -130,6 +130,7 @@ scoreboard players set #{MODE}_speed_walk {ns}.data {WALK_SPEED}
 scoreboard players set #{MODE}_speed_sprint {ns}.data {SPRINT_SPEED}
 scoreboard players set #{MODE}_speed_back {ns}.data {BACK_SPEED}
 scoreboard players set #{MODE}_speed_sneak {ns}.data {SNEAK_SPEED}
+scoreboard players add #{MODE}_group_counter {ns}.data 1
 
 # Nothing happens until enough free players stand here, so a group already playing is never disturbed
 execute store result score #{MODE}_free {ns}.data if entity @a[{free_player}]
@@ -150,6 +151,7 @@ schedule function {ns}:modes/{MODE}/tick 1t replace
 # Identity and state of this body
 tag @s add {tag}.body
 data merge entity @s {{immovable:0b,hide_description:1b,Invulnerable:1b{profile}}}
+scoreboard players operation @s {tag}.group = #{MODE}_group_counter {ns}.data
 scoreboard players set @s {tag}.phase 0
 scoreboard players set @s {tag}.pose 0
 
@@ -158,6 +160,7 @@ execute at @s run function {ns}:modes/{MODE}/body/setup_sensors
 
 	write_function(f"{ns}:modes/{MODE}/body/setup_sensors", f"""
 # The freshly enrolled players are still scattered around the start block, so they are taken by tag
+scoreboard players operation @a[tag={tag}.new] {tag}.group = @s {tag}.group
 execute as @a[tag={tag}.new] run function {ns}:modes/{MODE}/body/setup_player
 
 function {ns}:modes/{MODE}/body/enter_phase/{PHASES[0].id}
@@ -179,7 +182,7 @@ def generate_stop() -> None:
 
 	write_function(f"{ns}:modes/{MODE}/body/stop", f"""
 # Single scan of the group: every player is released, tags included
-execute as @a[tag={tag},distance=..{GROUP_RADIUS}] run function {ns}:modes/{MODE}/body/release_player
+execute as @a[tag={tag}] if score @s {tag}.group = @e[type=mannequin,tag={tag}.body,limit=1,sort=nearest] {tag}.group run function {ns}:modes/{MODE}/body/release_player
 kill @s
 """)
 

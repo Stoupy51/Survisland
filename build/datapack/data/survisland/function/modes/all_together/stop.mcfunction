@@ -12,6 +12,7 @@ kill @e[type=mannequin,tag=survisland.all_together.body]
 execute as @a[tag=survisland.all_together] run function survisland:modes/all_together/body/release_player
 
 scoreboard objectives remove survisland.all_together
+scoreboard objectives remove survisland.all_together.group
 scoreboard objectives remove survisland.all_together.phase
 scoreboard objectives remove survisland.all_together.pose
 scoreboard objectives remove survisland.all_together.sprint

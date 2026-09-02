@@ -17,13 +17,13 @@ INPUT_KEYS: tuple[str, ...] = ("forward", "backward", "left", "right", "jump", "
 GROUP_SIZE: int = 4
 """ Number of slots of a group, so the number of players sharing one mannequin. """
 
-GROUP_RADIUS: int = 3
+GROUP_RADIUS: int = 16
 """ Radius around a mannequin holding its own players.
 They are snapped on its eyes the moment they are enrolled and again every tick, so they never leave it and
 two groups would have to stand inside each other to get mixed up.
 """
 
-TRIGGER_RADIUS: int = 5
+TRIGGER_RADIUS: int = 3
 """ Radius of the command blocks driving a group.
 The start block enrolls the free players standing on it, the others act on the nearest mannequin.
 """
@@ -36,7 +36,7 @@ CRAWL_KEY: str = "sprint"
 It stays free in the Fort part because the sprint action belongs to another player there.
 """
 
-MANNEQUIN_PROFILE: str = ""
+MANNEQUIN_PROFILE: str = "GoldVision98"
 """ Player name giving its skin to the mannequin, empty to keep the default skin. """
 
 WALK_SPEED: int = 216

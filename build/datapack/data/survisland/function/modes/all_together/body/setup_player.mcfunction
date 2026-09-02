@@ -13,6 +13,7 @@ effect give @s minecraft:resistance infinite 255 true
 attribute @s minecraft:scale base set 0.0625
 attribute @s minecraft:gravity base set 0
 attribute @s minecraft:fall_damage_multiplier base set 0
+attribute @s minecraft:camera_distance base set 24
 
 # Snap it on the eyes of its mannequin right away, it never leaves them afterwards
 tp @s ~ ~1.519 ~

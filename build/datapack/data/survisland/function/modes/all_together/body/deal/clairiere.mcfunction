@@ -1,9 +1,9 @@
 
 #> survisland:modes/all_together/body/deal/clairiere
 #
-# @executed	as @a[tag=survisland.all_together,distance=..3]
+# @executed	as @a[tag=survisland.all_together]
 #
-# @within	survisland:modes/all_together/body/enter_phase/clairiere [ as @a[tag=survisland.all_together,distance=..3] ]
+# @within	survisland:modes/all_together/body/enter_phase/clairiere [ as @a[tag=survisland.all_together] ]
 #
 
 # Clear the previous command set
