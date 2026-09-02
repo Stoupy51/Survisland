@@ -1,7 +1,7 @@
 
 #> survisland:modes/all_together/body/clear_player
 #
-# @executed	as @a[tag=survisland.all_together]
+# @executed	as @a[tag=survisland.all_together,distance=..16]
 #
 # @within	survisland:modes/all_together/body/release_player
 #

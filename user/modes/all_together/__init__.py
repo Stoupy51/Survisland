@@ -1,13 +1,15 @@
 
 """ Mode "All Together" : quatre joueurs se partagent les commandes d'un seul mannequin.
 
-Chaque joueur est invisible et collé aux yeux du mannequin.
+Chaque joueur est invisible et monté sur la tête du mannequin, sauf celui qui clique, assis sur un item display
+invisible juste devant son visage pour avoir le monde à portée de main.
+Tout le monde sauf le joueur "look" a sa rotation forcée sur la sienne, donc le groupe voit la même chose.
 Le mannequin est l'ancre de son groupe : il porte l'état de sa partie dans ses propres scores et ses
-joueurs sont ceux collés à lui, donc plusieurs groupes peuvent faire le parcours en même temps sans se voir.
+joueurs sont ceux qui le chevauchent, donc plusieurs groupes peuvent faire le parcours en même temps sans se voir.
 
 # Le parcours, en command blocks
 Tout se repère par rapport au point d'exécution, donc depuis un command block c'est le bloc lui même qui
-sert de repère. Chaque fonction ne touche que les gens à moins de TRIGGER_RADIUS (5) blocs, et toutes sont
+sert de repère. Chaque fonction ne touche que les gens à moins de TRIGGER_RADIUS (3) blocs, et toutes sont
 faites pour être posées dans un command block répétitif : elles ne font rien quand il n'y a personne à prendre.
 
 	/function survisland:modes/all_together/start                    départ, groupe les joueurs libres qui passent ici
@@ -17,7 +19,7 @@ faites pour être posées dans un command block répétitif : elles ne font rien
 Le start ne démarre que s'il trouve au moins START_PLAYERS joueurs libres (ni creative, ni spectator, ni déjà
 en jeu) : un groupe déjà lancé n'est jamais cassé par un autre groupe qui démarre juste à côté.
 Les quatre plus proches sont pris dans l'ordre de leur distance (le plus proche devient le Joueur 1),
-leur mannequin est invoqué sur ce Joueur 1 et ils sont aussitôt collés dessus.
+leur mannequin est invoqué sur ce Joueur 1 et ils sont aussitôt montés dessus.
 
 # Les commandes d'admin
 Les fonctions "here/" existent aussi sans le préfixe, pour agir sur tous les groupes d'un coup :
@@ -34,11 +36,17 @@ les vitesses et la touche utilisée pour allonger le mannequin.
 # Imports
 from stewbeet import JsonDict, Mem, Predicate, set_json_encoder, write_function
 
-from .controls import attribute_lines, generate_body_tick, generate_dispatchers, generate_phase_functions, generate_tick
+from .controls import (
+	attribute_lines,
+	generate_body_tick,
+	generate_dispatchers,
+	generate_phase_functions,
+	generate_tick,
+)
 from .phases import (
 	ACTIONS,
 	BACK_SPEED,
-	EYE_OFFSET,
+	GROUP_RADIUS,
 	GROUP_SIZE,
 	INPUT_KEYS,
 	MANNEQUIN_PROFILE,
@@ -57,14 +65,13 @@ def state_objectives() -> list[str]:
 	""" List the objectives holding the state of a group, all of them carried by its own mannequin
 
 	Returns:
-		list[str]: The objective names, the first one being the player slot objective
+		The objective names, the first one being the player slot objective
 
-	Examples:
-		>>> state_objectives()[0].endswith("all_together")
-		True
+	>>> state_objectives()[0].endswith("all_together")
+	True
 	"""
 	ns: str = Mem.ctx.project_id
-	return [f"{ns}.{MODE}"] + [f"{ns}.{MODE}.{name}" for name in ("group", "phase", "pose", "sprint")]
+	return [f"{ns}.{MODE}"] + [f"{ns}.{MODE}.{name}" for name in ("group", "phase", "pose", "sprint", "moving")]
 
 
 def generate_player_helpers() -> None:
@@ -72,7 +79,7 @@ def generate_player_helpers() -> None:
 	ns: str = Mem.ctx.project_id
 	tag: str = f"{ns}.{MODE}"
 	clear_tags: str = "\n".join(f"tag @s remove {tag}.{action.name}" for action in ACTIONS)
-	resets: dict[str, str] = dict.fromkeys(("scale", "gravity", "fall_damage_multiplier", "camera_distance", "entity_interaction_range", "block_interaction_range"), "reset")
+	resets: dict[str, str] = dict.fromkeys(("scale", "gravity", "fall_damage_multiplier", "camera_distance", "entity_interaction_range", "block_interaction_range", "block_break_speed"), "reset")
 
 	write_function(f"{ns}:modes/{MODE}/body/clear_player", f"""
 {clear_tags}
@@ -81,6 +88,7 @@ tag @s remove {tag}
 
 	write_function(f"{ns}:modes/{MODE}/body/release_player", f"""
 # Give this player its own body back
+execute if predicate {ns}:riding run ride @s dismount
 gamemode adventure @s
 effect clear @s minecraft:invisibility
 effect clear @s minecraft:resistance
@@ -99,30 +107,32 @@ attribute @s minecraft:gravity base set 0
 attribute @s minecraft:fall_damage_multiplier base set 0
 attribute @s minecraft:camera_distance base set 24
 
-# Snap it on the eyes of its mannequin right away, it never leaves them afterwards
-tp @s ~ ~{EYE_OFFSET} ~
 tellraw @s ["\\n",{{"nbt":"Survisland","storage":"{ns}:main","interpret":true}},{{"text":" Vous ne faites plus qu'un ! Chacun n'a qu'une partie des commandes."}}]
 """)
 
 
-def generate_input_predicates() -> None:
-	""" Write one predicate per readable key, matching a player currently holding it down. """
+def generate_predicates() -> None:
+	""" Write the predicates read every tick: one per readable key, plus the two entity states the tick needs. """
 	ns: str = Mem.ctx.project_id
-	for key in INPUT_KEYS:
-		json_content: JsonDict = {"condition": "minecraft:entity_properties", "entity": "this", "predicate": {"minecraft:type_specific/player": {"input": {key: True}}}}
-		Mem.ctx.data[ns].predicates[f"input/{key}"] = set_json_encoder(Predicate(json_content), max_level=-1)
+	predicates: dict[str, JsonDict] = {f"input/{key}": {"minecraft:type_specific/player": {"input": {key: True}}} for key in INPUT_KEYS}
+	predicates["on_ground"] = {"minecraft:flags": {"is_on_ground": True}}
+	predicates["riding"] = {"minecraft:vehicle": {}}
+
+	for path, entity_predicate in predicates.items():
+		json_content: JsonDict = {"condition": "minecraft:entity_properties", "entity": "this", "predicate": entity_predicate}
+		Mem.ctx.data[ns].predicates[path] = set_json_encoder(Predicate(json_content), max_level=-1)
 
 
 def generate_start() -> None:
 	""" Write the function starting one group, safe to run every tick from a command block. """
 	ns: str = Mem.ctx.project_id
 	tag: str = f"{ns}.{MODE}"
-	free_player: str = f"distance=..{TRIGGER_RADIUS},tag=!{tag},gamemode=!creative,gamemode=!spectator"
+	free_player: str = f"tag=!{tag},distance=..{TRIGGER_RADIUS},gamemode=!creative,gamemode=!spectator"
 	objectives: str = "\n".join(f"scoreboard objectives add {name} dummy" for name in state_objectives())
 	profile: str = f',profile:"{MANNEQUIN_PROFILE}"' if MANNEQUIN_PROFILE else ""
 
 	write_function(f"{ns}:modes/{MODE}/start", f"""
-# Objectives of the mode, the last four are carried by the mannequins themselves
+# Objectives of the mode, all but the first one are carried by the mannequins themselves
 {objectives}
 
 # Speeds shared by every group, in thousandths of a block per tick
@@ -130,13 +140,13 @@ scoreboard players set #{MODE}_speed_walk {ns}.data {WALK_SPEED}
 scoreboard players set #{MODE}_speed_sprint {ns}.data {SPRINT_SPEED}
 scoreboard players set #{MODE}_speed_back {ns}.data {BACK_SPEED}
 scoreboard players set #{MODE}_speed_sneak {ns}.data {SNEAK_SPEED}
-scoreboard players add #{MODE}_group_counter {ns}.data 1
 
 # Nothing happens until enough free players stand here, so a group already playing is never disturbed
 execute store result score #{MODE}_free {ns}.data if entity @a[{free_player}]
 execute if score #{MODE}_free {ns}.data matches ..{START_PLAYERS - 1} run return 0
 
 # The nearest free players become the controllers of this new group, the closest one being the Joueur 1
+scoreboard players add #{MODE}_group_counter {ns}.data 1
 scoreboard players set #{MODE}_slot {ns}.data 0
 execute as @a[{free_player},limit={GROUP_SIZE},sort=nearest] run function {ns}:modes/{MODE}/body/enroll_player
 
@@ -154,8 +164,18 @@ data merge entity @s {{immovable:0b,hide_description:1b,Invulnerable:1b{profile}
 scoreboard players operation @s {tag}.group = #{MODE}_group_counter {ns}.data
 scoreboard players set @s {tag}.phase 0
 scoreboard players set @s {tag}.pose 0
+scoreboard players set @s {tag}.sprint 0
+scoreboard players set @s {tag}.moving 0
+
+# The seat carrying the click holder in front of the face, since the head is already taken by the others
+execute at @s summon minecraft:item_display run function {ns}:modes/{MODE}/body/new_seat
 
 execute at @s run function {ns}:modes/{MODE}/body/setup_sensors
+""")
+
+	write_function(f"{ns}:modes/{MODE}/body/new_seat", f"""
+tag @s add {tag}.seat
+scoreboard players operation @s {tag}.group = #{MODE}_group_counter {ns}.data
 """)
 
 	write_function(f"{ns}:modes/{MODE}/body/setup_sensors", f"""
@@ -163,6 +183,7 @@ execute at @s run function {ns}:modes/{MODE}/body/setup_sensors
 scoreboard players operation @a[tag={tag}.new] {tag}.group = @s {tag}.group
 execute as @a[tag={tag}.new] run function {ns}:modes/{MODE}/body/setup_player
 
+# Deals the first command set, then puts everyone on its vehicle
 function {ns}:modes/{MODE}/body/enter_phase/{PHASES[0].id}
 """)
 
@@ -182,7 +203,9 @@ def generate_stop() -> None:
 
 	write_function(f"{ns}:modes/{MODE}/body/stop", f"""
 # Single scan of the group: every player is released, tags included
-execute as @a[tag={tag}] if score @s {tag}.group = @e[type=mannequin,tag={tag}.body,limit=1,sort=nearest] {tag}.group run function {ns}:modes/{MODE}/body/release_player
+scoreboard players operation #{MODE}_group {ns}.data = @s {tag}.group
+execute as @a[tag={tag},distance=..{GROUP_RADIUS}] if score @s {tag}.group = #{MODE}_group {ns}.data run function {ns}:modes/{MODE}/body/release_player
+execute as @e[type=item_display,tag={tag}.seat,distance=..{GROUP_RADIUS}] if score @s {tag}.group = #{MODE}_group {ns}.data run kill @s
 kill @s
 """)
 
@@ -195,6 +218,7 @@ execute as @n[type=mannequin,tag={tag}.body,distance=..{TRIGGER_RADIUS}] at @s r
 # Stop every group still running
 execute as @e[type=mannequin,tag={tag}.body] at @s run function {ns}:modes/{MODE}/body/stop
 kill @e[type=mannequin,tag={tag}.body]
+kill @e[type=item_display,tag={tag}.seat]
 
 # Catch anyone who ended up out of range of their body
 execute as @a[tag={tag}] run function {ns}:modes/{MODE}/body/release_player
@@ -206,7 +230,7 @@ schedule clear {ns}:modes/{MODE}/tick
 
 def main() -> None:
 	""" Generate every file of the "All Together" mode. """
-	generate_input_predicates()
+	generate_predicates()
 	generate_player_helpers()
 	generate_start()
 	generate_tick()

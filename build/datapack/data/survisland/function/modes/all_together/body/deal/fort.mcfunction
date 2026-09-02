@@ -1,10 +1,13 @@
 
 #> survisland:modes/all_together/body/deal/fort
 #
-# @executed	as @a[tag=survisland.all_together]
+# @executed	as @a[tag=survisland.all_together,distance=..16]
 #
-# @within	survisland:modes/all_together/body/enter_phase/fort [ as @a[tag=survisland.all_together] ]
+# @within	survisland:modes/all_together/body/enter_phase/fort [ as @a[tag=survisland.all_together,distance=..16] ]
 #
+
+# The click holder rides its own seat, so a new command set can mean a new vehicle
+execute if predicate survisland:riding run ride @s dismount
 
 # Clear the previous command set
 tag @s remove survisland.all_together.forward
@@ -30,11 +33,12 @@ execute if score @s survisland.all_together matches 4 run tag @s add survisland.
 execute if score @s survisland.all_together matches 2 run tag @s add survisland.all_together.look
 execute if score @s survisland.all_together matches 1 run tag @s add survisland.all_together.click
 
-# Only the click holders keep a usable interaction range
+# Only the click holder keeps a body able to touch the world
+gamemode adventure @s
+attribute @s minecraft:block_break_speed base reset
 attribute @s minecraft:entity_interaction_range base set 0
 attribute @s minecraft:block_interaction_range base set 0
-execute if entity @s[tag=survisland.all_together.click] run attribute @s minecraft:entity_interaction_range base reset
-execute if entity @s[tag=survisland.all_together.click] run attribute @s minecraft:block_interaction_range base reset
+execute if entity @s[tag=survisland.all_together.click] run function survisland:modes/all_together/body/deal_click
 
 # Announce the new command set
 title @s title {"text": "Partie 3 - Fort", "color": "gold"}

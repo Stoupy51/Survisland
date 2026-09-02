@@ -5,10 +5,8 @@
 #			survisland:modes/all_together/tick 1t replace [ scheduled ]
 #
 
-# The loop dies with the last group, and any start brings it back
-execute unless entity @e[type=mannequin,tag=survisland.all_together.body,limit=1] run return 0
-schedule function survisland:modes/all_together/tick 1t replace
-
-# Every group is driven from the point of view of its own mannequin (position and rotation)
+# One scan of the world per tick, and the loop dies with the last group since any start brings it back
+scoreboard players set #all_together_alive survisland.data 0
 execute as @e[type=mannequin,tag=survisland.all_together.body] at @s run function survisland:modes/all_together/body/tick
+execute if score #all_together_alive survisland.data matches 1.. run schedule function survisland:modes/all_together/tick 1t replace
 

@@ -1,10 +1,15 @@
 
 #> survisland:modes/all_together/body/read_player
 #
-# @executed	as @a[tag=survisland.all_together]
+# @executed	at @s
 #
-# @within	survisland:modes/all_together/body/tick [ as @a[tag=survisland.all_together] ]
+# @within	survisland:modes/all_together/body/tick
+#			survisland:modes/all_together/body/seat_tick
+#			survisland:modes/all_together/body/mount_player
+#			survisland:modes/all_together/body/mount_seat
 #
+
+scoreboard players add #all_together_crew survisland.data 1
 
 # Report the keys it is holding down (crawl has no vanilla key, it is read on CRAWL_KEY)
 execute if entity @s[tag=survisland.all_together.forward,predicate=survisland:input/forward] run scoreboard players add #all_together_in_forward survisland.data 1
@@ -15,5 +20,4 @@ execute if entity @s[tag=survisland.all_together.jump,predicate=survisland:input
 execute if entity @s[tag=survisland.all_together.sneak,predicate=survisland:input/sneak] run scoreboard players add #all_together_in_sneak survisland.data 1
 execute if entity @s[tag=survisland.all_together.sprint,predicate=survisland:input/sprint] run scoreboard players add #all_together_in_sprint survisland.data 1
 execute if entity @s[tag=survisland.all_together.crawl,predicate=survisland:input/sprint] run scoreboard players add #all_together_in_crawl survisland.data 1
-execute if entity @s[tag=survisland.all_together.forward] run scoreboard players add #all_together_in_holders survisland.data 1
 
