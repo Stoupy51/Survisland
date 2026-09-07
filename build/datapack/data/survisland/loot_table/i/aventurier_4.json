@@ -15,7 +15,7 @@
 										"aventurier_4": true
 									},
 									"smithed": {
-										"dict": {"record": {"aventurier_4": true,"item_name": "4_aventurier"},"jukebox_song": {"comparator_output": 11,"length_in_seconds": 28,"sound_event": {"sound_id": "survisland:aventurier_4"},"description": {"text": "4_aventurier"}}},
+										"dict": {"record": {"aventurier_4": true,"item_name": "aventurier_4"},"jukebox_song": {"comparator_output": 11,"length_in_seconds": 28,"sound_event": {"sound_id": "survisland:aventurier_4"},"description": {"text": "aventurier_4"}}},
 										"id": "survisland:aventurier_4",
 										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}

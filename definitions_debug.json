@@ -2668,7 +2668,7 @@
 		"base_item": "minecraft:recovery_compass",
 		"recipes": [],
 		"components": {
-			"custom_data": {"survisland": {"aventurier_1": true},"smithed": {"dict": {"record": {"aventurier_1": true,"item_name": "1_aventurier"},"jukebox_song": {"comparator_output": 4,"length_in_seconds": 21,"sound_event": {"sound_id": "survisland:aventurier_1"},"description": {"text": "1_aventurier"}}},"id": "survisland:aventurier_1","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"survisland": {"aventurier_1": true},"smithed": {"dict": {"record": {"aventurier_1": true,"item_name": "aventurier_1"},"jukebox_song": {"comparator_output": 4,"length_in_seconds": 21,"sound_event": {"sound_id": "survisland:aventurier_1"},"description": {"text": "aventurier_1"}}},"id": "survisland:aventurier_1","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": {"text": "Music Disc","italic": false},
 			"jukebox_playable": "survisland:aventurier_1",
 			"max_stack_size": 1,
@@ -2683,7 +2683,7 @@
 		"base_item": "minecraft:recovery_compass",
 		"recipes": [],
 		"components": {
-			"custom_data": {"survisland": {"aventurier_2": true},"smithed": {"dict": {"record": {"aventurier_2": true,"item_name": "2_aventurier"},"jukebox_song": {"comparator_output": 8,"length_in_seconds": 25,"sound_event": {"sound_id": "survisland:aventurier_2"},"description": {"text": "2_aventurier"}}},"id": "survisland:aventurier_2","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"survisland": {"aventurier_2": true},"smithed": {"dict": {"record": {"aventurier_2": true,"item_name": "aventurier_2"},"jukebox_song": {"comparator_output": 8,"length_in_seconds": 25,"sound_event": {"sound_id": "survisland:aventurier_2"},"description": {"text": "aventurier_2"}}},"id": "survisland:aventurier_2","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": {"text": "Music Disc","italic": false},
 			"jukebox_playable": "survisland:aventurier_2",
 			"max_stack_size": 1,
@@ -2698,7 +2698,7 @@
 		"base_item": "minecraft:recovery_compass",
 		"recipes": [],
 		"components": {
-			"custom_data": {"survisland": {"aventurier_3": true},"smithed": {"dict": {"record": {"aventurier_3": true,"item_name": "3_aventurier"},"jukebox_song": {"comparator_output": 8,"length_in_seconds": 25,"sound_event": {"sound_id": "survisland:aventurier_3"},"description": {"text": "3_aventurier"}}},"id": "survisland:aventurier_3","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"survisland": {"aventurier_3": true},"smithed": {"dict": {"record": {"aventurier_3": true,"item_name": "aventurier_3"},"jukebox_song": {"comparator_output": 8,"length_in_seconds": 25,"sound_event": {"sound_id": "survisland:aventurier_3"},"description": {"text": "aventurier_3"}}},"id": "survisland:aventurier_3","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": {"text": "Music Disc","italic": false},
 			"jukebox_playable": "survisland:aventurier_3",
 			"max_stack_size": 1,
@@ -2713,7 +2713,7 @@
 		"base_item": "minecraft:recovery_compass",
 		"recipes": [],
 		"components": {
-			"custom_data": {"survisland": {"aventurier_4": true},"smithed": {"dict": {"record": {"aventurier_4": true,"item_name": "4_aventurier"},"jukebox_song": {"comparator_output": 11,"length_in_seconds": 28,"sound_event": {"sound_id": "survisland:aventurier_4"},"description": {"text": "4_aventurier"}}},"id": "survisland:aventurier_4","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"survisland": {"aventurier_4": true},"smithed": {"dict": {"record": {"aventurier_4": true,"item_name": "aventurier_4"},"jukebox_song": {"comparator_output": 11,"length_in_seconds": 28,"sound_event": {"sound_id": "survisland:aventurier_4"},"description": {"text": "aventurier_4"}}},"id": "survisland:aventurier_4","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": {"text": "Music Disc","italic": false},
 			"jukebox_playable": "survisland:aventurier_4",
 			"max_stack_size": 1,
@@ -2728,7 +2728,7 @@
 		"base_item": "minecraft:recovery_compass",
 		"recipes": [],
 		"components": {
-			"custom_data": {"survisland": {"aventurier_5": true},"smithed": {"dict": {"record": {"aventurier_5": true,"item_name": "5_aventurier"},"jukebox_song": {"comparator_output": 11,"length_in_seconds": 28,"sound_event": {"sound_id": "survisland:aventurier_5"},"description": {"text": "5_aventurier"}}},"id": "survisland:aventurier_5","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"survisland": {"aventurier_5": true},"smithed": {"dict": {"record": {"aventurier_5": true,"item_name": "aventurier_5"},"jukebox_song": {"comparator_output": 11,"length_in_seconds": 28,"sound_event": {"sound_id": "survisland:aventurier_5"},"description": {"text": "aventurier_5"}}},"id": "survisland:aventurier_5","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": {"text": "Music Disc","italic": false},
 			"jukebox_playable": "survisland:aventurier_5",
 			"max_stack_size": 1,
@@ -2743,7 +2743,7 @@
 		"base_item": "minecraft:recovery_compass",
 		"recipes": [],
 		"components": {
-			"custom_data": {"survisland": {"aventurier_6": true},"smithed": {"dict": {"record": {"aventurier_6": true,"item_name": "6_aventurier"},"jukebox_song": {"comparator_output": 15,"length_in_seconds": 32,"sound_event": {"sound_id": "survisland:aventurier_6"},"description": {"text": "6_aventurier"}}},"id": "survisland:aventurier_6","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"survisland": {"aventurier_6": true},"smithed": {"dict": {"record": {"aventurier_6": true,"item_name": "aventurier_6"},"jukebox_song": {"comparator_output": 15,"length_in_seconds": 32,"sound_event": {"sound_id": "survisland:aventurier_6"},"description": {"text": "aventurier_6"}}},"id": "survisland:aventurier_6","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": {"text": "Music Disc","italic": false},
 			"jukebox_playable": "survisland:aventurier_6",
 			"max_stack_size": 1,
