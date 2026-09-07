@@ -21,6 +21,7 @@ from user.database.misc_items import main as make_misc_items
 from user.database.modules.abyssion_wrath import main as make_abyssion_wrath
 from user.database.modules.aube_ecarlate import main as make_aube_ecarlate
 from user.database.modules.lefortdesrats import main as make_lefortdesrats
+from user.database.modules.manoir import main as make_manoir
 from user.database.nature import main as make_nature
 from user.database.necklaces import main as make_necklaces
 from user.database.scrolls import main as make_scrolls
@@ -50,6 +51,7 @@ def beet_default(ctx: Context) -> None:
 	make_aube_ecarlate()
 	make_abyssion_wrath()
 	make_lefortdesrats()
+	make_manoir()
 
 	# Generate custom disc records
 	generate_custom_records("auto")

@@ -1,0 +1,46 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:recovery_compass",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"survisland": {
+										"aventurier_4": true
+									},
+									"smithed": {
+										"dict": {"record": {"aventurier_4": true,"item_name": "4_aventurier"},"jukebox_song": {"comparator_output": 11,"length_in_seconds": 28,"sound_event": {"sound_id": "survisland:aventurier_4"},"description": {"text": "4_aventurier"}}},
+										"id": "survisland:aventurier_4",
+										"origin": "survisland",
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:item_name": {
+									"text": "Music Disc",
+									"italic": false
+								},
+								"minecraft:jukebox_playable": "survisland:aventurier_4",
+								"minecraft:max_stack_size": 1,
+								"minecraft:rarity": "rare",
+								"minecraft:item_model": "minecraft:music_disc_13",
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},
+										{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

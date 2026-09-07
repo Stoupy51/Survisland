@@ -2663,6 +2663,96 @@
 		},
 		"skip_gives": false
 	},
+	"aventurier_1": {
+		"id": "aventurier_1",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"custom_data": {"survisland": {"aventurier_1": true},"smithed": {"dict": {"record": {"aventurier_1": true,"item_name": "1_aventurier"},"jukebox_song": {"comparator_output": 4,"length_in_seconds": 21,"sound_event": {"sound_id": "survisland:aventurier_1"},"description": {"text": "1_aventurier"}}},"id": "survisland:aventurier_1","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"item_name": {"text": "Music Disc","italic": false},
+			"jukebox_playable": "survisland:aventurier_1",
+			"max_stack_size": 1,
+			"rarity": "rare",
+			"item_model": "minecraft:music_disc_13",
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]]
+		},
+		"skip_gives": false
+	},
+	"aventurier_2": {
+		"id": "aventurier_2",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"custom_data": {"survisland": {"aventurier_2": true},"smithed": {"dict": {"record": {"aventurier_2": true,"item_name": "2_aventurier"},"jukebox_song": {"comparator_output": 8,"length_in_seconds": 25,"sound_event": {"sound_id": "survisland:aventurier_2"},"description": {"text": "2_aventurier"}}},"id": "survisland:aventurier_2","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"item_name": {"text": "Music Disc","italic": false},
+			"jukebox_playable": "survisland:aventurier_2",
+			"max_stack_size": 1,
+			"rarity": "rare",
+			"item_model": "minecraft:music_disc_13",
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]]
+		},
+		"skip_gives": false
+	},
+	"aventurier_3": {
+		"id": "aventurier_3",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"custom_data": {"survisland": {"aventurier_3": true},"smithed": {"dict": {"record": {"aventurier_3": true,"item_name": "3_aventurier"},"jukebox_song": {"comparator_output": 8,"length_in_seconds": 25,"sound_event": {"sound_id": "survisland:aventurier_3"},"description": {"text": "3_aventurier"}}},"id": "survisland:aventurier_3","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"item_name": {"text": "Music Disc","italic": false},
+			"jukebox_playable": "survisland:aventurier_3",
+			"max_stack_size": 1,
+			"rarity": "rare",
+			"item_model": "minecraft:music_disc_13",
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]]
+		},
+		"skip_gives": false
+	},
+	"aventurier_4": {
+		"id": "aventurier_4",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"custom_data": {"survisland": {"aventurier_4": true},"smithed": {"dict": {"record": {"aventurier_4": true,"item_name": "4_aventurier"},"jukebox_song": {"comparator_output": 11,"length_in_seconds": 28,"sound_event": {"sound_id": "survisland:aventurier_4"},"description": {"text": "4_aventurier"}}},"id": "survisland:aventurier_4","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"item_name": {"text": "Music Disc","italic": false},
+			"jukebox_playable": "survisland:aventurier_4",
+			"max_stack_size": 1,
+			"rarity": "rare",
+			"item_model": "minecraft:music_disc_13",
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]]
+		},
+		"skip_gives": false
+	},
+	"aventurier_5": {
+		"id": "aventurier_5",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"custom_data": {"survisland": {"aventurier_5": true},"smithed": {"dict": {"record": {"aventurier_5": true,"item_name": "5_aventurier"},"jukebox_song": {"comparator_output": 11,"length_in_seconds": 28,"sound_event": {"sound_id": "survisland:aventurier_5"},"description": {"text": "5_aventurier"}}},"id": "survisland:aventurier_5","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"item_name": {"text": "Music Disc","italic": false},
+			"jukebox_playable": "survisland:aventurier_5",
+			"max_stack_size": 1,
+			"rarity": "rare",
+			"item_model": "minecraft:music_disc_13",
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]]
+		},
+		"skip_gives": false
+	},
+	"aventurier_6": {
+		"id": "aventurier_6",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"custom_data": {"survisland": {"aventurier_6": true},"smithed": {"dict": {"record": {"aventurier_6": true,"item_name": "6_aventurier"},"jukebox_song": {"comparator_output": 15,"length_in_seconds": 32,"sound_event": {"sound_id": "survisland:aventurier_6"},"description": {"text": "6_aventurier"}}},"id": "survisland:aventurier_6","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"item_name": {"text": "Music Disc","italic": false},
+			"jukebox_playable": "survisland:aventurier_6",
+			"max_stack_size": 1,
+			"rarity": "rare",
+			"item_model": "minecraft:music_disc_13",
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]]
+		},
+		"skip_gives": false
+	},
 	"01_es_clash_bonnie_grace": {
 		"id": "01_es_clash_bonnie_grace",
 		"base_item": "minecraft:recovery_compass",

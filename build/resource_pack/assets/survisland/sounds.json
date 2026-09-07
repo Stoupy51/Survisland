@@ -1,4 +1,28 @@
 {
+	"aventurier_1": {
+		"subtitle": "Aventurier 1",
+		"sounds": [{"name": "survisland:aventurier_1","stream": true}]
+	},
+	"aventurier_2": {
+		"subtitle": "Aventurier 2",
+		"sounds": [{"name": "survisland:aventurier_2","stream": true}]
+	},
+	"aventurier_3": {
+		"subtitle": "Aventurier 3",
+		"sounds": [{"name": "survisland:aventurier_3","stream": true}]
+	},
+	"aventurier_4": {
+		"subtitle": "Aventurier 4",
+		"sounds": [{"name": "survisland:aventurier_4","stream": true}]
+	},
+	"aventurier_5": {
+		"subtitle": "Aventurier 5",
+		"sounds": [{"name": "survisland:aventurier_5","stream": true}]
+	},
+	"aventurier_6": {
+		"subtitle": "Aventurier 6",
+		"sounds": [{"name": "survisland:aventurier_6","stream": true}]
+	},
 	"01_es_clash_bonnie_grace": {
 		"subtitle": "01 Es Clash Bonnie Grace",
 		"sounds": [{"name": "survisland:01_es_clash_bonnie_grace","stream": true}]
@@ -90,6 +114,38 @@
 	"lefortdesrats/lfdr_main_theme": {
 		"subtitle": "lefortdesrats/lfdr_main_theme",
 		"sounds": [{"name": "survisland:lefortdesrats/lfdr_main_theme","stream": true}]
+	},
+	"manoir/albert": {
+		"subtitle": "manoir/albert",
+		"sounds": [{"name": "survisland:manoir/albert","stream": true}]
+	},
+	"manoir/francis": {
+		"subtitle": "manoir/francis",
+		"sounds": [{"name": "survisland:manoir/francis","stream": true}]
+	},
+	"manoir/gertrude": {
+		"subtitle": "manoir/gertrude",
+		"sounds": [{"name": "survisland:manoir/gertrude","stream": true}]
+	},
+	"manoir/marty": {
+		"subtitle": "manoir/marty",
+		"sounds": [{"name": "survisland:manoir/marty","stream": true}]
+	},
+	"manoir/mc_a": {
+		"subtitle": "manoir/mc_a",
+		"sounds": [{"name": "survisland:manoir/mc_a","stream": true}]
+	},
+	"manoir/mc_b": {
+		"subtitle": "manoir/mc_b",
+		"sounds": ["survisland:manoir/mc_b"]
+	},
+	"manoir/mc_d": {
+		"subtitle": "manoir/mc_d",
+		"sounds": ["survisland:manoir/mc_d"]
+	},
+	"manoir/mireille": {
+		"subtitle": "manoir/mireille",
+		"sounds": [{"name": "survisland:manoir/mireille","stream": true}]
 	},
 	"maracas": {
 		"subtitle": "maracas",
