@@ -1,6 +1,13 @@
 {
+<<<<<<< HEAD
 	"Survisland_datapack.zip": "7f13651f6ac3d2f87fac6a83c3ab0b3435ab8ad5",
 	"Survisland_datapack_with_libs.zip": "fe99a27cb8e0adf3ef761cae0645f9e954521734",
 	"Survisland_resource_pack.zip": "b513bcff683703c50474da064e5b1eca99cb93cd",
 	"Survisland_resource_pack_with_libs.zip": "552ee10befefacf3fb73a684547f9bedef948903"
+=======
+	"Survisland_datapack.zip": "c3a1daaad151a6ebd6e21dfaf2e8afd2c73640fe",
+	"Survisland_datapack_with_libs.zip": "d84c0a3c77f1943cbe76dcd446107b20ed64242c",
+	"Survisland_resource_pack.zip": "fa583fe0ca022fb50e955c3863618dced49c7405",
+	"Survisland_resource_pack_with_libs.zip": "4bde594df0757b941d470bee73cff4872daedf8d"
+>>>>>>> 98137fd (feat: add painting + jingle for speed bingo)
 }

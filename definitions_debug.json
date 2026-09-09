@@ -1613,6 +1613,26 @@
 			"height": 4
 		}
 	},
+	"cadre_justeprix": {
+		"id": "cadre_justeprix",
+		"base_item": "minecraft:painting",
+		"recipes": [],
+		"components": {
+			"painting/variant": "survisland:cadre_justeprix",
+			"item_model": "survisland:cadre_justeprix",
+			"item_name": {"text": "Cadre Justeprix"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"cadre_justeprix": true},"smithed": {"id": "survisland:cadre_justeprix","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false,
+		"painting_data": {
+			"texture": "painting/cadre_justeprix",
+			"author": {"text": "Tata_Mymy","color": "yellow"},
+			"title": {"text": "Cadre Justeprix"},
+			"width": 4,
+			"height": 4
+		}
+	},
 	"icon": {
 		"id": "icon",
 		"base_item": "minecraft:recovery_compass",
