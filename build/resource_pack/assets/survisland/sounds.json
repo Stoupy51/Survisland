@@ -1,27 +1,27 @@
 {
 	"aventurier_1": {
 		"subtitle": "Aventurier 1",
-		"sounds": [{"name": "survisland:aventurier_1","stream": true}]
+		"sounds": [{"name": "survisland:aventurier_1","stream": true,"attenuation_distance": 5}]
 	},
 	"aventurier_2": {
 		"subtitle": "Aventurier 2",
-		"sounds": [{"name": "survisland:aventurier_2","stream": true}]
+		"sounds": [{"name": "survisland:aventurier_2","stream": true,"attenuation_distance": 5}]
 	},
 	"aventurier_3": {
 		"subtitle": "Aventurier 3",
-		"sounds": [{"name": "survisland:aventurier_3","stream": true}]
+		"sounds": [{"name": "survisland:aventurier_3","stream": true,"attenuation_distance": 5}]
 	},
 	"aventurier_4": {
 		"subtitle": "Aventurier 4",
-		"sounds": [{"name": "survisland:aventurier_4","stream": true}]
+		"sounds": [{"name": "survisland:aventurier_4","stream": true,"attenuation_distance": 5}]
 	},
 	"aventurier_5": {
 		"subtitle": "Aventurier 5",
-		"sounds": [{"name": "survisland:aventurier_5","stream": true}]
+		"sounds": [{"name": "survisland:aventurier_5","stream": true,"attenuation_distance": 5}]
 	},
 	"aventurier_6": {
 		"subtitle": "Aventurier 6",
-		"sounds": [{"name": "survisland:aventurier_6","stream": true}]
+		"sounds": [{"name": "survisland:aventurier_6","stream": true,"attenuation_distance": 5}]
 	},
 	"01_es_clash_bonnie_grace": {
 		"subtitle": "01 Es Clash Bonnie Grace",

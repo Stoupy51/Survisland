@@ -6,6 +6,9 @@ from stewbeet import Item, JsonDict, Mem, generate_custom_records
 RECORD_MODEL: str = "minecraft:music_disc_13"
 """ Vanilla music disc model worn by every aventurier record. """
 
+RECORD_ATTENUATION_DISTANCE: int = 5
+""" Blocks after which an aventurier record stops being heard, against the vanilla 16. """
+
 
 # Main function
 def main() -> None:
@@ -22,7 +25,10 @@ def main() -> None:
 	# Generate one record per aventurier, read straight from the manoir sounds folder
 	records_folder: str = Mem.ctx.meta["stewbeet"]["records_folder"]
 	Mem.ctx.meta["stewbeet"]["records_folder"] = f"{Mem.ctx.directory}/assets/sounds/manoir"
-	generate_custom_records({f"aventurier_{i}": f"aventurier_{i}.ogg" for i in range(1, 7)})
+	generate_custom_records(
+		{f"aventurier_{i}": f"aventurier_{i}.ogg" for i in range(1, 7)},
+		attenuation_distance=RECORD_ATTENUATION_DISTANCE,
+	)
 	Mem.ctx.meta["stewbeet"]["records_folder"] = records_folder
 
 	# Wear a vanilla disc instead of asking for a custom texture
