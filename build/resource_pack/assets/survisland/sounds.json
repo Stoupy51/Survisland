@@ -107,6 +107,10 @@
 		"subtitle": "fart_reverb",
 		"sounds": ["survisland:fart_reverb"]
 	},
+	"justeprix_jingle": {
+		"subtitle": "justeprix_jingle",
+		"sounds": [{"name": "survisland:justeprix_jingle","stream": true}]
+	},
 	"laser_gun": {
 		"subtitle": "laser_gun",
 		"sounds": ["survisland:laser_gun"]
