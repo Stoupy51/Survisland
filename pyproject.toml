@@ -6,9 +6,11 @@ readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "smithed",
-    "stewbeet>=3.6.5",
+    "stewbeet",
 ]
 
 [tool.uv.sources]
 smithed = { git = "https://github.com/Stoupy51/smithed-python.git" }
+stewbeet = { git = "https://github.com/Stoupy51/StewBeet.git", subdirectory = "python_package", rev = "main" }
+# TODO: turn back to pypi when 3.7.0 is released
 
