@@ -89,7 +89,6 @@ tag @s remove {tag}
 	write_function(f"{ns}:modes/{MODE}/body/release_player", f"""
 # Give this player its own body back
 execute if predicate {ns}:riding run ride @s dismount
-gamemode adventure @s
 effect clear @s minecraft:invisibility
 effect clear @s minecraft:resistance
 {attribute_lines(resets)}
@@ -99,7 +98,6 @@ function {ns}:modes/{MODE}/body/clear_player
 
 	write_function(f"{ns}:modes/{MODE}/body/setup_player", f"""
 # Turn this player into an invisible sensor (scale is clamped to 0.0625 by vanilla, 0 is impossible)
-gamemode adventure @s
 effect give @s minecraft:invisibility infinite 255 true
 effect give @s minecraft:resistance infinite 255 true
 attribute @s minecraft:scale base set 0.0625
@@ -129,7 +127,7 @@ def generate_start() -> None:
 	tag: str = f"{ns}.{MODE}"
 	free_player: str = f"tag=!{tag},distance=..{TRIGGER_RADIUS},gamemode=!creative,gamemode=!spectator"
 	objectives: str = "\n".join(f"scoreboard objectives add {name} dummy" for name in state_objectives())
-	profile: str = f',profile:"{MANNEQUIN_PROFILE}"' if MANNEQUIN_PROFILE else ""
+	profile: str = f'profile:"{MANNEQUIN_PROFILE}"' if MANNEQUIN_PROFILE else ""
 
 	write_function(f"{ns}:modes/{MODE}/start", f"""
 # Objectives of the mode, all but the first one are carried by the mannequins themselves
@@ -160,7 +158,7 @@ schedule function {ns}:modes/{MODE}/tick 1t replace
 	write_function(f"{ns}:modes/{MODE}/body/new", f"""
 # Identity and state of this body
 tag @s add {tag}.body
-data merge entity @s {{immovable:0b,hide_description:1b,Invulnerable:1b{profile}}}
+data merge entity @s {{immovable:0b,hide_description:1b,Invulnerable:1b,{profile}}}
 scoreboard players operation @s {tag}.group = #{MODE}_group_counter {ns}.data
 scoreboard players operation #{MODE}_group {ns}.data = @s {tag}.group
 scoreboard players set @s {tag}.phase 0

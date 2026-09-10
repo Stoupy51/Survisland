@@ -30,7 +30,6 @@ execute if score @s survisland.all_together matches 3 run tag @s add survisland.
 execute if score @s survisland.all_together matches 1 run tag @s add survisland.all_together.look
 
 # Only the click holder keeps a body able to touch the world
-gamemode adventure @s
 attribute @s minecraft:block_break_speed base reset
 attribute @s minecraft:entity_interaction_range base set 0
 attribute @s minecraft:block_interaction_range base set 0

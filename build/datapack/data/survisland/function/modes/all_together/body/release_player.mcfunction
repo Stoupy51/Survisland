@@ -9,7 +9,6 @@
 
 # Give this player its own body back
 execute if predicate survisland:riding run ride @s dismount
-gamemode adventure @s
 effect clear @s minecraft:invisibility
 effect clear @s minecraft:resistance
 attribute @s minecraft:scale base reset

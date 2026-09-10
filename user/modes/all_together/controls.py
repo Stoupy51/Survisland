@@ -224,8 +224,7 @@ def generate_phase_functions() -> None:
 	tag: str = f"{ns}.{MODE}"
 
 	write_function(f"{ns}:modes/{MODE}/body/deal_click", """
-# Adventure breaks nothing, and riding counts as being in the air which divides the mining speed by five
-gamemode survival @s
+# Riding counts as being in the air which divides the mining speed by five
 attribute @s minecraft:block_break_speed base set 5
 attribute @s minecraft:entity_interaction_range base reset
 attribute @s minecraft:block_interaction_range base reset
@@ -265,7 +264,6 @@ execute if predicate {ns}:riding run ride @s dismount
 {give_tags}
 
 # Only the click holder keeps a body able to touch the world
-gamemode adventure @s
 attribute @s minecraft:block_break_speed base reset
 attribute @s minecraft:entity_interaction_range base set 0
 attribute @s minecraft:block_interaction_range base set 0
