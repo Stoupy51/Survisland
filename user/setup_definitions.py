@@ -12,11 +12,11 @@ from stewbeet import (
 	generate_custom_records,
 )
 
-from user.database.accessories import main as make_accessories
 from user.database.cosmetics import main as make_cosmetics
 from user.database.cushions import main as make_cushions
 from user.database.food import main as make_food
 from user.database.generated import main as make_generated
+from user.database.idols import main as make_idols
 from user.database.misc_items import main as make_misc_items
 from user.database.modules.abyssion_wrath import main as make_abyssion_wrath
 from user.database.modules.aram import main as make_aram
@@ -24,7 +24,6 @@ from user.database.modules.aube_ecarlate import main as make_aube_ecarlate
 from user.database.modules.lefortdesrats import main as make_lefortdesrats
 from user.database.modules.manoir import main as make_manoir
 from user.database.nature import main as make_nature
-from user.database.necklaces import main as make_necklaces
 from user.database.scrolls import main as make_scrolls
 from user.database.sudokucraft import main as make_sudokucraft
 from user.database.tchoutchou import main as make_tchoutchou
@@ -38,7 +37,6 @@ def beet_default(ctx: Context) -> None:
 	# Apply database
 	make_scrolls()
 	make_cushions()
-	make_accessories()
 	make_cosmetics()
 	make_food()
 	make_generated()
@@ -46,7 +44,7 @@ def beet_default(ctx: Context) -> None:
 	make_nature()
 	make_sudokucraft()
 	make_torches()
-	make_necklaces()
+	make_idols()
 	make_tribe_civilization()
 	make_tchoutchou()
 	make_aube_ecarlate()

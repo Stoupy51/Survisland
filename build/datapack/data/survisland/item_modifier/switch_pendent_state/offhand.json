@@ -1,0 +1,86 @@
+[
+	{
+		"function": "minecraft:set_components",
+		"components": {
+			"minecraft:item_model": "survisland:pendent_held"
+		},
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"offhand": {
+							"components": {
+								"minecraft:item_model": "survisland:pendent"
+							}
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_components",
+		"components": {
+			"minecraft:item_model": "survisland:pendent_bee_fire_held"
+		},
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"offhand": {
+							"components": {
+								"minecraft:item_model": "survisland:pendent_bee_fire"
+							}
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_components",
+		"components": {
+			"minecraft:item_model": "survisland:pendent_bee_leaf_held"
+		},
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"offhand": {
+							"components": {
+								"minecraft:item_model": "survisland:pendent_bee_leaf"
+							}
+						}
+					}
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_components",
+		"components": {
+			"minecraft:item_model": "survisland:pendent_bee_water_held"
+		},
+		"conditions": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"equipment": {
+						"offhand": {
+							"components": {
+								"minecraft:item_model": "survisland:pendent_bee_water"
+							}
+						}
+					}
+				}
+			}
+		]
+	}
+]
