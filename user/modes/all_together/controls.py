@@ -20,12 +20,11 @@ from .phases import (
 	ACTIONS,
 	CLICK_OFFSET,
 	CRAWL_KEY,
-	GROUP_RADIUS,
 	GROUP_SIZE,
 	JUMP_VELOCITY,
 	MODE,
 	PHASES,
-	SEAT_RADIUS,
+	RADIUS,
 	SPRINT_HOLD,
 	TRIGGER_RADIUS,
 	Phase,
@@ -86,7 +85,7 @@ execute on passengers if entity @s[tag={tag}.look] rotated as @s on vehicle run 
 {reset_inputs}
 scoreboard players set #{MODE}_crew {ns}.data 0
 execute on passengers run function {ns}:modes/{MODE}/body/read_player
-execute store success score #{MODE}_seat {ns}.data rotated as @s anchored eyes positioned ^ ^ ^{CLICK_OFFSET} as @e[type=item_display,tag={tag}.seat,distance=..{SEAT_RADIUS}] if score @s {tag}.group = #{MODE}_group {ns}.data run function {ns}:modes/{MODE}/body/seat_tick
+execute store success score #{MODE}_seat {ns}.data rotated as @s anchored eyes positioned ^ ^ ^{CLICK_OFFSET} as @e[type=item_display,tag={tag}.seat,distance=..{RADIUS}] if score @s {tag}.group = #{MODE}_group {ns}.data run function {ns}:modes/{MODE}/body/seat_tick
 execute if score #{MODE}_seat {ns}.data matches 0 run function {ns}:modes/{MODE}/body/find_seat
 
 # Vanilla reads shift as a dismount, so whoever fell off is put back on and read right away
@@ -173,7 +172,7 @@ scoreboard players add #{MODE}_crew {ns}.data 1
 
 	write_function(f"{ns}:modes/{MODE}/body/remount", f"""
 # The only pass still scanning the players, and it only runs while someone is off its vehicle
-execute as @a[tag={tag},distance=..{GROUP_RADIUS}] if score @s {tag}.group = #{MODE}_group {ns}.data run function {ns}:modes/{MODE}/body/mount_player
+execute as @a[tag={tag},distance=..{RADIUS}] if score @s {tag}.group = #{MODE}_group {ns}.data run function {ns}:modes/{MODE}/body/mount_player
 
 # Still short, so someone was left behind by a teleport: the whole player list is searched this time
 execute if score #{MODE}_crew {ns}.data matches ..{GROUP_SIZE - 1} as @a[tag={tag}] if score @s {tag}.group = #{MODE}_group {ns}.data run function {ns}:modes/{MODE}/body/mount_player
@@ -187,7 +186,10 @@ function {ns}:modes/{MODE}/body/read_player
 """)
 
 	write_function(f"{ns}:modes/{MODE}/body/mount_seat", f"""
-ride @s mount @e[type=item_display,tag={tag}.seat,distance=..{SEAT_RADIUS},limit=1]
+# Another group is within reach at this radius, so the seat is picked by its group and the ride is issued from it
+tag @s add {tag}.mounting
+execute as @e[type=item_display,tag={tag}.seat,distance=..{RADIUS}] if score @s {tag}.group = #{MODE}_group {ns}.data run ride @a[tag={tag}.mounting,limit=1] mount @s
+tag @s remove {tag}.mounting
 function {ns}:modes/{MODE}/body/read_player
 """)
 
@@ -243,8 +245,11 @@ scoreboard players set @s {tag}.phase {index}
 scoreboard players operation #{MODE}_group {ns}.data = @s {tag}.group
 
 # Single scan of the group: every player is dealt its own command set, then put back on the right vehicle
-execute as @a[tag={tag},distance=..{GROUP_RADIUS}] if score @s {tag}.group = #{MODE}_group {ns}.data run function {ns}:modes/{MODE}/body/deal/{phase.id}
+execute as @a[tag={tag},distance=..{RADIUS}] if score @s {tag}.group = #{MODE}_group {ns}.data run function {ns}:modes/{MODE}/body/deal/{phase.id}
 function {ns}:modes/{MODE}/body/remount
+
+# The help is read by the whole group and by anyone watching them
+tellraw @a[distance=..{RADIUS}] {phase_help_message(phase)}
 """)
 
 		clear_tags: str = "\n".join(f"tag @s remove {tag}.{action.name}" for action in ACTIONS)
@@ -272,7 +277,6 @@ execute if entity @s[tag={tag}.click] run function {ns}:modes/{MODE}/body/deal_c
 # Announce the new command set
 title @s title {json.dumps({"text": phase.display, "color": "gold"}, ensure_ascii=False)}
 title @s subtitle {json.dumps({"text": "Nouveau set de commandes", "color": "gray"}, ensure_ascii=False)}
-tellraw @s {phase_help_message(phase)}
 playsound block.note_block.pling master @s
 """)
 
@@ -294,8 +298,8 @@ function {ns}:modes/{MODE}/body/apply_phase
 	write_function(f"{ns}:modes/{MODE}/body/shuffle_slots", f"""
 # Everyone of this group moves to the next slot, then the current command set is dealt again
 scoreboard players operation #{MODE}_group {ns}.data = @s {tag}.group
-execute as @a[tag={tag},distance=..{GROUP_RADIUS}] if score @s {tag}.group = #{MODE}_group {ns}.data run scoreboard players add @s {tag} 1
-execute as @a[tag={tag},scores={{{tag}={GROUP_SIZE + 1}..}},distance=..{GROUP_RADIUS}] if score @s {tag}.group = #{MODE}_group {ns}.data run scoreboard players set @s {tag} 1
+execute as @a[tag={tag},distance=..{RADIUS}] if score @s {tag}.group = #{MODE}_group {ns}.data run scoreboard players add @s {tag} 1
+execute as @a[tag={tag},scores={{{tag}={GROUP_SIZE + 1}..}},distance=..{RADIUS}] if score @s {tag}.group = #{MODE}_group {ns}.data run scoreboard players set @s {tag} 1
 function {ns}:modes/{MODE}/body/apply_phase
 """)
 

@@ -1,9 +1,9 @@
 
 #> survisland:modes/all_together/body/mount_player
 #
-# @executed	as @a[tag=survisland.all_together,distance=..16]
+# @executed	as @a[tag=survisland.all_together,distance=..50]
 #
-# @within	survisland:modes/all_together/body/remount [ as @a[tag=survisland.all_together,distance=..16] ]
+# @within	survisland:modes/all_together/body/remount [ as @a[tag=survisland.all_together,distance=..50] ]
 #			survisland:modes/all_together/body/remount [ as @a[tag=survisland.all_together] ]
 #
 

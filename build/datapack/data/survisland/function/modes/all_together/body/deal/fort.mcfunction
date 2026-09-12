@@ -1,9 +1,9 @@
 
 #> survisland:modes/all_together/body/deal/fort
 #
-# @executed	as @a[tag=survisland.all_together,distance=..16]
+# @executed	as @a[tag=survisland.all_together,distance=..50]
 #
-# @within	survisland:modes/all_together/body/enter_phase/fort [ as @a[tag=survisland.all_together,distance=..16] ]
+# @within	survisland:modes/all_together/body/enter_phase/fort [ as @a[tag=survisland.all_together,distance=..50] ]
 #
 
 # The click holder rides its own seat, so a new command set can mean a new vehicle
@@ -42,6 +42,5 @@ execute if entity @s[tag=survisland.all_together.click] run function survisland:
 # Announce the new command set
 title @s title {"text": "Partie 3 - Fort", "color": "gold"}
 title @s subtitle {"text": "Nouveau set de commandes", "color": "gray"}
-tellraw @s [{"text": "\n"}, {"text": "Joueur 1 : ", "color": "yellow"}, {"text": "Reculer / Clic gauche / Clic droit\n", "color": "white"}, {"text": "Joueur 2 : ", "color": "yellow"}, {"text": "Sauter / Tourner la tête\n", "color": "white"}, {"text": "Joueur 3 : ", "color": "yellow"}, {"text": "Marcher à gauche / Marcher à droite / Sprinter\n", "color": "white"}, {"text": "Joueur 4 : ", "color": "yellow"}, {"text": "Avancer / S'accroupir / S'allonger\n", "color": "white"}]
 playsound block.note_block.pling master @s
 

@@ -14,7 +14,7 @@ scoreboard objectives add survisland.all_together.moving dummy
 
 # Speeds shared by every group, in thousandths of a block per tick
 scoreboard players set #all_together_speed_walk survisland.data 216
-scoreboard players set #all_together_speed_sprint survisland.data 432
+scoreboard players set #all_together_speed_sprint survisland.data 281
 scoreboard players set #all_together_speed_back survisland.data 130
 scoreboard players set #all_together_speed_sneak survisland.data 65
 

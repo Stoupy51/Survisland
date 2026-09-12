@@ -46,12 +46,12 @@ from .controls import (
 from .phases import (
 	ACTIONS,
 	BACK_SPEED,
-	GROUP_RADIUS,
 	GROUP_SIZE,
 	INPUT_KEYS,
 	MANNEQUIN_PROFILE,
 	MODE,
 	PHASES,
+	RADIUS,
 	SNEAK_SPEED,
 	SPRINT_SPEED,
 	START_PLAYERS,
@@ -203,8 +203,8 @@ def generate_stop() -> None:
 	write_function(f"{ns}:modes/{MODE}/body/stop", f"""
 # Single scan of the group: every player is released, tags included
 scoreboard players operation #{MODE}_group {ns}.data = @s {tag}.group
-execute as @a[tag={tag},distance=..{GROUP_RADIUS}] if score @s {tag}.group = #{MODE}_group {ns}.data run function {ns}:modes/{MODE}/body/release_player
-execute as @e[type=item_display,tag={tag}.seat,distance=..{GROUP_RADIUS}] if score @s {tag}.group = #{MODE}_group {ns}.data run kill @s
+execute as @a[tag={tag},distance=..{RADIUS}] if score @s {tag}.group = #{MODE}_group {ns}.data run function {ns}:modes/{MODE}/body/release_player
+execute as @e[type=item_display,tag={tag}.seat,distance=..{RADIUS}] if score @s {tag}.group = #{MODE}_group {ns}.data run kill @s
 kill @s
 """)
 
