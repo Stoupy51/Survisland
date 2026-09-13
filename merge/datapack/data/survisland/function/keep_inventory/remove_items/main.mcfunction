@@ -16,7 +16,10 @@
 
 # Copy all chest items to storage
 data modify storage survisland:main AllChests set value []
+scoreboard players set #direction survisland.data 0
 execute positioned 0 1 0 run function survisland:keep_inventory/get_chest_items
+scoreboard players set #direction survisland.data 1
+execute positioned 0 2 0 run function survisland:keep_inventory/get_chest_items
 
 # Loop through all items in the inventory
 data modify storage survisland:main newInventory set value []
