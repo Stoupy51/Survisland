@@ -1139,6 +1139,36 @@
 		},
 		"skip_gives": false
 	},
+	"logo_s31": {
+		"id": "logo_s31",
+		"base_item": "minecraft:apple",
+		"manual_category": "logo",
+		"recipes": [],
+		"components": {
+			"consumable": {},
+			"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+			"item_model": "survisland:logo_s31",
+			"item_name": {"text": "Logo S31"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"logo_s31": true},"smithed": {"id": "survisland:logo_s31","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"logo_s32": {
+		"id": "logo_s32",
+		"base_item": "minecraft:apple",
+		"manual_category": "logo",
+		"recipes": [],
+		"components": {
+			"consumable": {},
+			"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+			"item_model": "survisland:logo_s32",
+			"item_name": {"text": "Logo S32"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"logo_s32": true},"smithed": {"id": "survisland:logo_s32","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
 	"blockguessr_map": {
 		"id": "blockguessr_map",
 		"base_item": "minecraft:carrot_on_a_stick",
