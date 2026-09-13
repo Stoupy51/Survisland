@@ -1,0 +1,8 @@
+{
+	"layers": {
+		"humanoid": [
+			{"texture": "survisland:netherland_necklace_held_overlay"},
+			{"texture": "survisland:netherland_necklace_held","dyeable": {"color_when_undyed": [1.0,1.0,1.0]}}
+		]
+	}
+}

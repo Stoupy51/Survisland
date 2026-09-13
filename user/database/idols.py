@@ -9,7 +9,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-from stewbeet import Equipment, Item, ItemModifier, JsonDict, Mem, Texture, set_json_encoder, write_function
+from stewbeet import Equipment, Item, ItemModifier, JsonDict, Mem, set_json_encoder, texture_mcmeta, write_function
 
 
 # Classes
@@ -42,9 +42,10 @@ IDOLS: list[Idol] = [
 	Idol(necklace="cursed_necklace"),
 	Idol(necklace="dinosaur_necklace"),
 	Idol(pendent="pendent"),
-	Idol(necklace="necklace_bee_fire",  pendent="pendent_bee_fire"),
-	Idol(necklace="necklace_bee_leaf",  pendent="pendent_bee_leaf"),
-	Idol(necklace="necklace_bee_water", pendent="pendent_bee_water"),
+	Idol(necklace="necklace_bee_fire",   pendent="pendent_bee_fire"),
+	Idol(necklace="necklace_bee_leaf",   pendent="pendent_bee_leaf"),
+	Idol(necklace="necklace_bee_water",  pendent="pendent_bee_water"),
+	Idol(necklace="netherland_necklace", pendent="netherland_pendent"),
 ]
 """ Every idol of the game. """
 
@@ -88,15 +89,16 @@ def main() -> None:
 
 	for idol in IDOLS:
 		if idol.necklace:
-			make_necklace(idol.necklace)
+			make_necklace(idol.necklace, texture_names)
 		if idol.pendent:
 			make_pendent(idol, texture_names)
 
 
-def make_necklace(item_id: str) -> None:
+def make_necklace(item_id: str, texture_names: set[str]) -> None:
 	""" Chest-equippable necklace and the humanoid layer drawn over whoever wears it. """
 	ns: str = Mem.ctx.project_id
 	textures_folder: str = Mem.ctx.meta.get("stewbeet", {}).get("textures_folder", "")
+	has_overlay: bool = f"{item_id}_held_overlay" in texture_names
 	Item(
 		id=item_id,
 		components={
@@ -108,8 +110,16 @@ def make_necklace(item_id: str) -> None:
 			}
 		}
 	)
-	Mem.ctx.assets[ns].textures[f"entity/equipment/humanoid/{item_id}_held"] = Texture(source_path=f"{textures_folder}/idols/{item_id}_held.png")
-	Mem.ctx.assets[ns].equipments[item_id] = set_json_encoder(Equipment({"layers": {"humanoid": [{"texture": f"{ns}:{item_id}_held"}]}}), max_level=3)
+	Mem.ctx.assets[ns].textures[f"entity/equipment/humanoid/{item_id}_held"] = texture_mcmeta(source_path=f"{textures_folder}/idols/{item_id}_held.png")
+	if has_overlay:
+		Mem.ctx.assets[ns].textures[f"entity/equipment/humanoid/{item_id}_held_overlay"] = texture_mcmeta(source_path=f"{textures_folder}/idols/{item_id}_held_overlay.png")
+		layers: list[JsonDict] = [
+			{"texture": f"{ns}:{item_id}_held_overlay"},
+			{"texture": f"{ns}:{item_id}_held", "dyeable": {"color_when_undyed": [1.0, 1.0, 1.0]}},
+		]
+	else:
+		layers = [{"texture": f"{ns}:{item_id}_held"}]
+	Mem.ctx.assets[ns].equipments[item_id] = set_json_encoder(Equipment({"layers": {"humanoid": layers}}), max_level=3)
 
 
 def make_pendent(idol: Idol, texture_names: set[str]) -> None:

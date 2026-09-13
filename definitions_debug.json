@@ -2293,6 +2293,46 @@
 		},
 		"skip_gives": false
 	},
+	"netherland_necklace": {
+		"id": "netherland_necklace",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"max_stack_size": 1,
+			"equippable": {"slot": "chest","asset_id": "survisland:netherland_necklace","damage_on_hurt": false},
+			"item_model": "survisland:netherland_necklace",
+			"item_name": {"text": "Netherland Necklace"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"netherland_necklace": true},"smithed": {"id": "survisland:netherland_necklace","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"netherland_pendent": {
+		"id": "netherland_pendent",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_name": {"text": "Netherland Pendent"},
+			"lore": [{"text": "[Seconde main pour l'équiper]","italic": false,"color": "gray"},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"max_stack_size": 64,
+			"custom_data": {"survisland": {"pendent": true,"netherland_pendent": true},"smithed": {"id": "survisland:netherland_pendent","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"item_model": "survisland:netherland_pendent"
+		},
+		"skip_gives": false
+	},
+	"netherland_pendent_held": {
+		"id": "netherland_pendent_held",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_name": {"text": "Netherland Pendent"},
+			"lore": [{"text": "[Seconde main pour l'équiper]","italic": false,"color": "gray"},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"max_stack_size": 64,
+			"custom_data": {"survisland": {"pendent": true,"netherland_pendent_held": true},"smithed": {"id": "survisland:netherland_pendent_held","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"item_model": "survisland:netherland_pendent_held"
+		},
+		"skip_gives": false
+	},
 	"astral_powder": {
 		"id": "astral_powder",
 		"base_item": "minecraft:recovery_compass",
