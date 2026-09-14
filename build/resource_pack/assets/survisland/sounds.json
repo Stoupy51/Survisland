@@ -39,6 +39,10 @@
 		"subtitle": "04 Es Our Last Stand Formantx",
 		"sounds": [{"name": "survisland:04_es_our_last_stand_formantx","stream": true}]
 	},
+	"05_deltarodd_roddkeys": {
+		"subtitle": "05 Deltarodd Roddkeys",
+		"sounds": [{"name": "survisland:05_deltarodd_roddkeys","stream": true}]
+	},
 	"rat_dance": {
 		"subtitle": "Rat Dance",
 		"sounds": [{"name": "survisland:rat_dance","stream": true}]

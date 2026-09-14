@@ -3023,6 +3023,21 @@
 		},
 		"skip_gives": false
 	},
+	"05_deltarodd_roddkeys": {
+		"id": "05_deltarodd_roddkeys",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"custom_data": {"survisland": {"05_deltarodd_roddkeys": true},"smithed": {"dict": {"record": {"05_deltarodd_roddkeys": true,"item_name": "05 - DeltaRodd - RoddKeys"},"jukebox_song": {"comparator_output": 15,"length_in_seconds": 112,"sound_event": {"sound_id": "survisland:05_deltarodd_roddkeys"},"description": {"text": "05 - DeltaRodd - RoddKeys"}}},"id": "survisland:05_deltarodd_roddkeys","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"item_name": {"text": "Music Disc","italic": false},
+			"jukebox_playable": "survisland:05_deltarodd_roddkeys",
+			"max_stack_size": 1,
+			"rarity": "rare",
+			"item_model": "survisland:05_deltarodd_roddkeys",
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]]
+		},
+		"skip_gives": false
+	},
 	"rat_dance": {
 		"id": "rat_dance",
 		"base_item": "minecraft:recovery_compass",

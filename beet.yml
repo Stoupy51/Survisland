@@ -13,6 +13,7 @@ output: "build"
 # A list of importable plugin strings
 require:
     - "stewbeet"
+    #- "stewbeet.plugins.sniffer"
 
 # Takes a nested pack config, see PackConfig() documentation
 data_pack:
