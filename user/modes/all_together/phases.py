@@ -98,7 +98,7 @@ ACTIONS: list[Action] = [
 	Action(name="jump",     display="Sauter"),
 	Action(name="sneak",    display="S'accroupir"),
 	Action(name="sprint",   display="Sprinter"),
-	Action(name="crawl",    display="S'allonger"),
+	Action(name="crawl",    display="S'allonger (touche sprint)"),
 	Action(name="look",     display="Tourner la tête"),
 	Action(name="click",    display="Clic gauche / Clic droit"),
 ]
@@ -106,8 +106,8 @@ ACTIONS: list[Action] = [
 
 PHASES: list[Phase] = [
 	Phase(id="clairiere", display="Partie 1 - Clairière", bindings={"forward": (1,), "backward": (1,), "click": (2,), "jump": (3,), "left": (3,), "right": (3,), "look": (4,)}),
-	Phase(id="riviere",   display="Partie 2 - Rivière",   bindings={"look": (1,), "forward": (2,), "jump": (3,), "backward": (3,), "left": (4,), "right": (4,)}),
-	Phase(id="fort",      display="Partie 3 - Fort",      bindings={"click": (1,), "backward": (1,), "jump": (2,), "look": (2,), "sprint": (3,), "left": (3,), "right": (3,), "forward": (4,), "sneak": (4,), "crawl": (4,)}),
+	Phase(id="riviere",   display="Partie 2 - Rivière",   bindings={"look": (1,), "forward": (2,), "jump": (3,), "click": (3,), "left": (4,), "right": (4,), "backward": (4,)}),
+	Phase(id="fort",      display="Partie 3 - Fort",      bindings={"click": (1,), "look": (2,), "backward": (2,), "sprint": (3,), "left": (3,), "right": (3,), "jump": (3,), "forward": (4,), "sneak": (4,), "crawl": (4,)}),
 ]
 """ The three parts where the mannequin is shared, in play order.
 Before the first one and after the last one the players own their body, so there is no phase for those.

@@ -23,11 +23,12 @@ tag @s remove survisland.all_together.click
 
 # Give the command set of this part
 execute if score @s survisland.all_together matches 2 run tag @s add survisland.all_together.forward
-execute if score @s survisland.all_together matches 3 run tag @s add survisland.all_together.backward
+execute if score @s survisland.all_together matches 4 run tag @s add survisland.all_together.backward
 execute if score @s survisland.all_together matches 4 run tag @s add survisland.all_together.left
 execute if score @s survisland.all_together matches 4 run tag @s add survisland.all_together.right
 execute if score @s survisland.all_together matches 3 run tag @s add survisland.all_together.jump
 execute if score @s survisland.all_together matches 1 run tag @s add survisland.all_together.look
+execute if score @s survisland.all_together matches 3 run tag @s add survisland.all_together.click
 
 # Only the click holder keeps a body able to touch the world
 attribute @s minecraft:block_break_speed base reset

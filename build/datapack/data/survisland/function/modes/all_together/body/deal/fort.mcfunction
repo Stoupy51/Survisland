@@ -23,10 +23,10 @@ tag @s remove survisland.all_together.click
 
 # Give the command set of this part
 execute if score @s survisland.all_together matches 4 run tag @s add survisland.all_together.forward
-execute if score @s survisland.all_together matches 1 run tag @s add survisland.all_together.backward
+execute if score @s survisland.all_together matches 2 run tag @s add survisland.all_together.backward
 execute if score @s survisland.all_together matches 3 run tag @s add survisland.all_together.left
 execute if score @s survisland.all_together matches 3 run tag @s add survisland.all_together.right
-execute if score @s survisland.all_together matches 2 run tag @s add survisland.all_together.jump
+execute if score @s survisland.all_together matches 3 run tag @s add survisland.all_together.jump
 execute if score @s survisland.all_together matches 4 run tag @s add survisland.all_together.sneak
 execute if score @s survisland.all_together matches 3 run tag @s add survisland.all_together.sprint
 execute if score @s survisland.all_together matches 4 run tag @s add survisland.all_together.crawl
