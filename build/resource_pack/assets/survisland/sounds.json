@@ -207,6 +207,10 @@
 		"subtitle": "tchoutchou/double_elim",
 		"sounds": [{"name": "survisland:tchoutchou/double_elim","stream": true}]
 	},
+	"traprace/star_festival": {
+		"subtitle": "traprace/star_festival",
+		"sounds": [{"name": "survisland:traprace/star_festival","stream": true}]
+	},
 	"vine_boom": {
 		"subtitle": "vine_boom",
 		"sounds": ["survisland:vine_boom"]
