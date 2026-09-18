@@ -2613,30 +2613,6 @@
 		},
 		"skip_gives": false
 	},
-	"ae_button": {
-		"id": "ae_button",
-		"base_item": "minecraft:recovery_compass",
-		"recipes": [],
-		"components": {
-			"item_model": "survisland:ae_button",
-			"item_name": {"text": "Ae Button"},
-			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
-			"custom_data": {"survisland": {"ae_button": true},"smithed": {"id": "survisland:ae_button","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
-		},
-		"skip_gives": false
-	},
-	"ae_button_pressed": {
-		"id": "ae_button_pressed",
-		"base_item": "minecraft:recovery_compass",
-		"recipes": [],
-		"components": {
-			"item_model": "survisland:ae_button_pressed",
-			"item_name": {"text": "Ae Button Pressed"},
-			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
-			"custom_data": {"survisland": {"ae_button_pressed": true},"smithed": {"id": "survisland:ae_button_pressed","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
-		},
-		"skip_gives": false
-	},
 	"abyssion_crown": {
 		"id": "abyssion_crown",
 		"base_item": "minecraft:recovery_compass",
@@ -2726,6 +2702,30 @@
 			"item_name": {"text": "Abyssion Skeleton Boots"},
 			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
 			"custom_data": {"survisland": {"abyssion_skeleton_boots": true},"smithed": {"id": "survisland:abyssion_skeleton_boots","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"ae_button": {
+		"id": "ae_button",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:ae_button",
+			"item_name": {"text": "Ae Button"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"ae_button": true},"smithed": {"id": "survisland:ae_button","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"ae_button_pressed": {
+		"id": "ae_button_pressed",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:ae_button_pressed",
+			"item_name": {"text": "Ae Button Pressed"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"ae_button_pressed": true},"smithed": {"id": "survisland:ae_button_pressed","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
 		},
 		"skip_gives": false
 	},

@@ -23,6 +23,7 @@ from user.database.modules.aram import main as make_aram
 from user.database.modules.aube_ecarlate import main as make_aube_ecarlate
 from user.database.modules.lefortdesrats import main as make_lefortdesrats
 from user.database.modules.manoir import main as make_manoir
+from user.database.modules.traprace import main as make_traprace
 from user.database.nature import main as make_nature
 from user.database.scrolls import main as make_scrolls
 from user.database.sudokucraft import main as make_sudokucraft
@@ -47,11 +48,12 @@ def beet_default(ctx: Context) -> None:
 	make_idols()
 	make_tribe_civilization()
 	make_tchoutchou()
-	make_aube_ecarlate()
+	make_aram()
 	make_abyssion_wrath()
+	make_aube_ecarlate()
 	make_lefortdesrats()
 	make_manoir()
-	make_aram()
+	make_traprace()
 
 	# Generate custom disc records
 	generate_custom_records("auto")
