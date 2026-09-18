@@ -1,0 +1,46 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:recovery_compass",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"survisland": {
+										"05_deltarodd_roddkeys": true
+									},
+									"smithed": {
+										"dict": {"record": {"05_deltarodd_roddkeys": true,"item_name": "05 - DeltaRodd - RoddKeys"},"jukebox_song": {"comparator_output": 15,"length_in_seconds": 112,"sound_event": {"sound_id": "survisland:05_deltarodd_roddkeys"},"description": {"text": "05 - DeltaRodd - RoddKeys"}}},
+										"id": "survisland:05_deltarodd_roddkeys",
+										"origin": "survisland",
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:item_name": {
+									"text": "Music Disc",
+									"italic": false
+								},
+								"minecraft:jukebox_playable": "survisland:05_deltarodd_roddkeys",
+								"minecraft:max_stack_size": 1,
+								"minecraft:rarity": "rare",
+								"minecraft:item_model": "survisland:05_deltarodd_roddkeys",
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},
+										{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

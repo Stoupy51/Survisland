@@ -19,19 +19,14 @@ Each one is the raw key state, so "sprint" is the sprint key itself and misses a
 GROUP_SIZE: int = 4
 """ Number of slots of a group, so the number of players sharing one mannequin. """
 
-GROUP_RADIUS: int = 16
-""" Radius searched first when a rider has to be put back on its vehicle.
-A player who fell off is normally right there, and the whole world is searched only when that fails.
+RADIUS: int = 50
+""" Radius of every search made around a mannequin: its players, its seat, and who reads its help message.
+A teleport carries the mannequin and its passengers but leaves the seat and whoever fell off behind, so the radius is wide enough to catch them.
 """
 
 TRIGGER_RADIUS: int = 3
 """ Radius of the command blocks driving a group.
 The start block enrolls the free players standing on it, the others act on the nearest mannequin.
-"""
-
-SEAT_RADIUS: int = 3
-""" Radius searched around a mannequin for the item display carrying its click holder.
-Out of range means the mannequin was teleported without its seat, and the seat is then searched everywhere.
 """
 
 START_PLAYERS: int = 4
@@ -48,8 +43,8 @@ MANNEQUIN_PROFILE: str = "GoldVision98"
 WALK_SPEED: int = 216
 """ Horizontal speed in thousandths of a block per tick, matching the vanilla walking speed. """
 
-SPRINT_SPEED: int = 432
-""" Horizontal speed when sprinting, twice the walking speed. """
+SPRINT_SPEED: int = 281
+""" Horizontal speed when sprinting, the vanilla 1.3 times the walking speed. """
 
 SPRINT_HOLD: int = 5
 """ Ticks a sprint press keeps the mannequin sprinting.
@@ -103,7 +98,7 @@ ACTIONS: list[Action] = [
 	Action(name="jump",     display="Sauter"),
 	Action(name="sneak",    display="S'accroupir"),
 	Action(name="sprint",   display="Sprinter"),
-	Action(name="crawl",    display="S'allonger"),
+	Action(name="crawl",    display="S'allonger (touche sprint)"),
 	Action(name="look",     display="Tourner la tête"),
 	Action(name="click",    display="Clic gauche / Clic droit"),
 ]
@@ -111,8 +106,8 @@ ACTIONS: list[Action] = [
 
 PHASES: list[Phase] = [
 	Phase(id="clairiere", display="Partie 1 - Clairière", bindings={"forward": (1,), "backward": (1,), "click": (2,), "jump": (3,), "left": (3,), "right": (3,), "look": (4,)}),
-	Phase(id="riviere",   display="Partie 2 - Rivière",   bindings={"look": (1,), "forward": (2,), "jump": (3,), "backward": (3,), "left": (4,), "right": (4,)}),
-	Phase(id="fort",      display="Partie 3 - Fort",      bindings={"click": (1,), "backward": (1,), "jump": (2,), "look": (2,), "sprint": (3,), "left": (3,), "right": (3,), "forward": (4,), "sneak": (4,), "crawl": (4,)}),
+	Phase(id="riviere",   display="Partie 2 - Rivière",   bindings={"look": (1,), "forward": (2,), "jump": (3,), "click": (3,), "left": (4,), "right": (4,), "backward": (4,)}),
+	Phase(id="fort",      display="Partie 3 - Fort",      bindings={"click": (1,), "look": (2,), "backward": (2,), "sprint": (3,), "left": (3,), "right": (3,), "jump": (3,), "forward": (4,), "sneak": (4,), "crawl": (4,)}),
 ]
 """ The three parts where the mannequin is shared, in play order.
 Before the first one and after the last one the players own their body, so there is no phase for those.

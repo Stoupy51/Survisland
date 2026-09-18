@@ -12,6 +12,9 @@ scoreboard players set @s survisland.all_together.phase 2
 scoreboard players operation #all_together_group survisland.data = @s survisland.all_together.group
 
 # Single scan of the group: every player is dealt its own command set, then put back on the right vehicle
-execute as @a[tag=survisland.all_together,distance=..16] if score @s survisland.all_together.group = #all_together_group survisland.data run function survisland:modes/all_together/body/deal/fort
+execute as @a[tag=survisland.all_together,distance=..50] if score @s survisland.all_together.group = #all_together_group survisland.data run function survisland:modes/all_together/body/deal/fort
 function survisland:modes/all_together/body/remount
+
+# The help is read by the whole group and by anyone watching them
+tellraw @a[distance=..50] [{"text": "\n"}, {"text": "Joueur 1 : ", "color": "yellow"}, {"text": "Clic gauche / Clic droit\n", "color": "white"}, {"text": "Joueur 2 : ", "color": "yellow"}, {"text": "Reculer / Tourner la tête\n", "color": "white"}, {"text": "Joueur 3 : ", "color": "yellow"}, {"text": "Marcher à gauche / Marcher à droite / Sauter / Sprinter\n", "color": "white"}, {"text": "Joueur 4 : ", "color": "yellow"}, {"text": "Avancer / S'accroupir / S'allonger (touche sprint)\n", "color": "white"}]
 

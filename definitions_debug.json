@@ -40,32 +40,6 @@
 		},
 		"skip_gives": false
 	},
-	"pendent": {
-		"id": "pendent",
-		"base_item": "minecraft:recovery_compass",
-		"recipes": [],
-		"components": {
-			"lore": [{"text": "[Seconde main pour l'équiper]","italic": false,"color": "gray"},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
-			"max_stack_size": 64,
-			"item_model": "survisland:pendent",
-			"item_name": {"text": "Pendent"},
-			"custom_data": {"survisland": {"pendent": true},"smithed": {"id": "survisland:pendent","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
-		},
-		"skip_gives": false
-	},
-	"pendent_held": {
-		"id": "pendent_held",
-		"base_item": "minecraft:recovery_compass",
-		"recipes": [],
-		"components": {
-			"lore": [{"text": "[Seconde main pour l'équiper]","italic": false,"color": "gray"},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
-			"max_stack_size": 64,
-			"item_model": "survisland:pendent_held",
-			"item_name": {"text": "Pendent Held"},
-			"custom_data": {"survisland": {"pendent_held": true},"smithed": {"id": "survisland:pendent_held","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
-		},
-		"skip_gives": false
-	},
 	"maracas": {
 		"id": "maracas",
 		"base_item": "minecraft:diamond_sword",
@@ -1165,6 +1139,36 @@
 		},
 		"skip_gives": false
 	},
+	"logo_s31": {
+		"id": "logo_s31",
+		"base_item": "minecraft:apple",
+		"manual_category": "logo",
+		"recipes": [],
+		"components": {
+			"consumable": {},
+			"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+			"item_model": "survisland:logo_s31",
+			"item_name": {"text": "Logo S31"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"logo_s31": true},"smithed": {"id": "survisland:logo_s31","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"logo_s32": {
+		"id": "logo_s32",
+		"base_item": "minecraft:apple",
+		"manual_category": "logo",
+		"recipes": [],
+		"components": {
+			"consumable": {},
+			"food": {"nutrition": 4,"saturation": 2.4,"can_always_eat": true},
+			"item_model": "survisland:logo_s32",
+			"item_name": {"text": "Logo S32"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"logo_s32": true},"smithed": {"id": "survisland:logo_s32","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
 	"blockguessr_map": {
 		"id": "blockguessr_map",
 		"base_item": "minecraft:carrot_on_a_stick",
@@ -2143,6 +2147,192 @@
 		},
 		"skip_gives": false
 	},
+	"pendent": {
+		"id": "pendent",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_name": {"text": "Pendent"},
+			"lore": [{"text": "[Seconde main pour l'équiper]","italic": false,"color": "gray"},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"max_stack_size": 64,
+			"custom_data": {"survisland": {"pendent": true},"smithed": {"id": "survisland:pendent","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"item_model": "survisland:pendent"
+		},
+		"skip_gives": false
+	},
+	"pendent_held": {
+		"id": "pendent_held",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_name": {"text": "Pendent"},
+			"lore": [{"text": "[Seconde main pour l'équiper]","italic": false,"color": "gray"},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"max_stack_size": 64,
+			"custom_data": {"survisland": {"pendent": true,"pendent_held": true},"smithed": {"id": "survisland:pendent_held","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"item_model": "survisland:pendent_held"
+		},
+		"skip_gives": false
+	},
+	"necklace_bee_fire": {
+		"id": "necklace_bee_fire",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"max_stack_size": 1,
+			"equippable": {"slot": "chest","asset_id": "survisland:necklace_bee_fire","damage_on_hurt": false},
+			"item_model": "survisland:necklace_bee_fire",
+			"item_name": {"text": "Necklace Bee Fire"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"necklace_bee_fire": true},"smithed": {"id": "survisland:necklace_bee_fire","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"pendent_bee_fire": {
+		"id": "pendent_bee_fire",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_name": {"text": "Pendent Bee Fire"},
+			"lore": [{"text": "[Seconde main pour l'équiper]","italic": false,"color": "gray"},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"max_stack_size": 64,
+			"custom_data": {"survisland": {"pendent": true,"pendent_bee_fire": true},"smithed": {"id": "survisland:pendent_bee_fire","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"item_model": "survisland:pendent_bee_fire"
+		},
+		"skip_gives": false
+	},
+	"pendent_bee_fire_held": {
+		"id": "pendent_bee_fire_held",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_name": {"text": "Pendent Bee Fire"},
+			"lore": [{"text": "[Seconde main pour l'équiper]","italic": false,"color": "gray"},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"max_stack_size": 64,
+			"custom_data": {"survisland": {"pendent": true,"pendent_bee_fire_held": true},"smithed": {"id": "survisland:pendent_bee_fire_held","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"item_model": "survisland:pendent_bee_fire_held"
+		},
+		"skip_gives": false
+	},
+	"necklace_bee_leaf": {
+		"id": "necklace_bee_leaf",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"max_stack_size": 1,
+			"equippable": {"slot": "chest","asset_id": "survisland:necklace_bee_leaf","damage_on_hurt": false},
+			"item_model": "survisland:necklace_bee_leaf",
+			"item_name": {"text": "Necklace Bee Leaf"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"necklace_bee_leaf": true},"smithed": {"id": "survisland:necklace_bee_leaf","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"pendent_bee_leaf": {
+		"id": "pendent_bee_leaf",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_name": {"text": "Pendent Bee Leaf"},
+			"lore": [{"text": "[Seconde main pour l'équiper]","italic": false,"color": "gray"},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"max_stack_size": 64,
+			"custom_data": {"survisland": {"pendent": true,"pendent_bee_leaf": true},"smithed": {"id": "survisland:pendent_bee_leaf","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"item_model": "survisland:pendent_bee_leaf"
+		},
+		"skip_gives": false
+	},
+	"pendent_bee_leaf_held": {
+		"id": "pendent_bee_leaf_held",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_name": {"text": "Pendent Bee Leaf"},
+			"lore": [{"text": "[Seconde main pour l'équiper]","italic": false,"color": "gray"},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"max_stack_size": 64,
+			"custom_data": {"survisland": {"pendent": true,"pendent_bee_leaf_held": true},"smithed": {"id": "survisland:pendent_bee_leaf_held","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"item_model": "survisland:pendent_bee_leaf_held"
+		},
+		"skip_gives": false
+	},
+	"necklace_bee_water": {
+		"id": "necklace_bee_water",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"max_stack_size": 1,
+			"equippable": {"slot": "chest","asset_id": "survisland:necklace_bee_water","damage_on_hurt": false},
+			"item_model": "survisland:necklace_bee_water",
+			"item_name": {"text": "Necklace Bee Water"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"necklace_bee_water": true},"smithed": {"id": "survisland:necklace_bee_water","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"pendent_bee_water": {
+		"id": "pendent_bee_water",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_name": {"text": "Pendent Bee Water"},
+			"lore": [{"text": "[Seconde main pour l'équiper]","italic": false,"color": "gray"},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"max_stack_size": 64,
+			"custom_data": {"survisland": {"pendent": true,"pendent_bee_water": true},"smithed": {"id": "survisland:pendent_bee_water","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"item_model": "survisland:pendent_bee_water"
+		},
+		"skip_gives": false
+	},
+	"pendent_bee_water_held": {
+		"id": "pendent_bee_water_held",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_name": {"text": "Pendent Bee Water"},
+			"lore": [{"text": "[Seconde main pour l'équiper]","italic": false,"color": "gray"},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"max_stack_size": 64,
+			"custom_data": {"survisland": {"pendent": true,"pendent_bee_water_held": true},"smithed": {"id": "survisland:pendent_bee_water_held","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"item_model": "survisland:pendent_bee_water_held"
+		},
+		"skip_gives": false
+	},
+	"netherland_necklace": {
+		"id": "netherland_necklace",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"max_stack_size": 1,
+			"equippable": {"slot": "chest","asset_id": "survisland:netherland_necklace","damage_on_hurt": false},
+			"item_model": "survisland:netherland_necklace",
+			"item_name": {"text": "Netherland Necklace"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"netherland_necklace": true},"smithed": {"id": "survisland:netherland_necklace","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"netherland_pendent": {
+		"id": "netherland_pendent",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_name": {"text": "Netherland Pendent"},
+			"lore": [{"text": "[Seconde main pour l'équiper]","italic": false,"color": "gray"},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"max_stack_size": 64,
+			"custom_data": {"survisland": {"pendent": true,"netherland_pendent": true},"smithed": {"id": "survisland:netherland_pendent","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"item_model": "survisland:netherland_pendent"
+		},
+		"skip_gives": false
+	},
+	"netherland_pendent_held": {
+		"id": "netherland_pendent_held",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_name": {"text": "Netherland Pendent"},
+			"lore": [{"text": "[Seconde main pour l'équiper]","italic": false,"color": "gray"},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"max_stack_size": 64,
+			"custom_data": {"survisland": {"pendent": true,"netherland_pendent_held": true},"smithed": {"id": "survisland:netherland_pendent_held","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"item_model": "survisland:netherland_pendent_held"
+		},
+		"skip_gives": false
+	},
 	"astral_powder": {
 		"id": "astral_powder",
 		"base_item": "minecraft:recovery_compass",
@@ -2829,6 +3019,21 @@
 			"max_stack_size": 1,
 			"rarity": "rare",
 			"item_model": "survisland:04_es_our_last_stand_formantx",
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]]
+		},
+		"skip_gives": false
+	},
+	"05_deltarodd_roddkeys": {
+		"id": "05_deltarodd_roddkeys",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"custom_data": {"survisland": {"05_deltarodd_roddkeys": true},"smithed": {"dict": {"record": {"05_deltarodd_roddkeys": true,"item_name": "05 - DeltaRodd - RoddKeys"},"jukebox_song": {"comparator_output": 15,"length_in_seconds": 112,"sound_event": {"sound_id": "survisland:05_deltarodd_roddkeys"},"description": {"text": "05 - DeltaRodd - RoddKeys"}}},"id": "survisland:05_deltarodd_roddkeys","origin": "survisland","ignore": {"functionality": true,"crafting": true}}},
+			"item_name": {"text": "Music Disc","italic": false},
+			"jukebox_playable": "survisland:05_deltarodd_roddkeys",
+			"max_stack_size": 1,
+			"rarity": "rare",
+			"item_model": "survisland:05_deltarodd_roddkeys",
 			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]]
 		},
 		"skip_gives": false

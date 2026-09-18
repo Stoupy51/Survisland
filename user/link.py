@@ -3,13 +3,13 @@
 from stewbeet import Context, Mem, official_lib_used
 from stewbeet.dependencies import OFFICIAL_LIBS
 
+from user.database.idols import generate_pendent_system
 from user.modes.all_together import main as generate_all_together
 from user.utils.cushion_placement import main as generate_cushion_placement
 from user.utils.dyeable_items import main as generate_dyeable_items
 from user.utils.font import main as generate_screamer
 from user.utils.item_modifiers import main as generate_books_modifiers
 from user.utils.parchemins import main as generate_parchemins
-from user.utils.pendent import main as generate_pendent
 from user.utils.pop_ups import main as generate_pop_ups
 from user.utils.right_click import main as generate_right_click
 from user.utils.scheduled_functions import main as generate_scheduled_functions
@@ -23,7 +23,7 @@ def beet_default(ctx: Context) -> None:
 	generate_dyeable_items()
 	generate_cushion_placement()
 	generate_parchemins()
-	generate_pendent()
+	generate_pendent_system()
 	generate_url()
 	generate_books_modifiers()
 	generate_pop_ups()

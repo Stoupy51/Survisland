@@ -1,9 +1,9 @@
 
 #> survisland:modes/all_together/body/deal/fort
 #
-# @executed	as @a[tag=survisland.all_together,distance=..16]
+# @executed	as @a[tag=survisland.all_together,distance=..50]
 #
-# @within	survisland:modes/all_together/body/enter_phase/fort [ as @a[tag=survisland.all_together,distance=..16] ]
+# @within	survisland:modes/all_together/body/enter_phase/fort [ as @a[tag=survisland.all_together,distance=..50] ]
 #
 
 # The click holder rides its own seat, so a new command set can mean a new vehicle
@@ -23,10 +23,10 @@ tag @s remove survisland.all_together.click
 
 # Give the command set of this part
 execute if score @s survisland.all_together matches 4 run tag @s add survisland.all_together.forward
-execute if score @s survisland.all_together matches 1 run tag @s add survisland.all_together.backward
+execute if score @s survisland.all_together matches 2 run tag @s add survisland.all_together.backward
 execute if score @s survisland.all_together matches 3 run tag @s add survisland.all_together.left
 execute if score @s survisland.all_together matches 3 run tag @s add survisland.all_together.right
-execute if score @s survisland.all_together matches 2 run tag @s add survisland.all_together.jump
+execute if score @s survisland.all_together matches 3 run tag @s add survisland.all_together.jump
 execute if score @s survisland.all_together matches 4 run tag @s add survisland.all_together.sneak
 execute if score @s survisland.all_together matches 3 run tag @s add survisland.all_together.sprint
 execute if score @s survisland.all_together matches 4 run tag @s add survisland.all_together.crawl
@@ -34,7 +34,6 @@ execute if score @s survisland.all_together matches 2 run tag @s add survisland.
 execute if score @s survisland.all_together matches 1 run tag @s add survisland.all_together.click
 
 # Only the click holder keeps a body able to touch the world
-gamemode adventure @s
 attribute @s minecraft:block_break_speed base reset
 attribute @s minecraft:entity_interaction_range base set 0
 attribute @s minecraft:block_interaction_range base set 0
@@ -43,6 +42,5 @@ execute if entity @s[tag=survisland.all_together.click] run function survisland:
 # Announce the new command set
 title @s title {"text": "Partie 3 - Fort", "color": "gold"}
 title @s subtitle {"text": "Nouveau set de commandes", "color": "gray"}
-tellraw @s [{"text": "\n"}, {"text": "Joueur 1 : ", "color": "yellow"}, {"text": "Reculer / Clic gauche / Clic droit\n", "color": "white"}, {"text": "Joueur 2 : ", "color": "yellow"}, {"text": "Sauter / Tourner la tête\n", "color": "white"}, {"text": "Joueur 3 : ", "color": "yellow"}, {"text": "Marcher à gauche / Marcher à droite / Sprinter\n", "color": "white"}, {"text": "Joueur 4 : ", "color": "yellow"}, {"text": "Avancer / S'accroupir / S'allonger\n", "color": "white"}]
 playsound block.note_block.pling master @s
 

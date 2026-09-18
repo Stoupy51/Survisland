@@ -4,7 +4,6 @@
 # @executed	as the player & at current position
 #
 # @within	survisland:advancements/inventory_changed {"item":"pendent"}
-#			survisland:advancements/inventory_changed {"item":"pendent_held"}
 #
 # @args		item (string)
 #
