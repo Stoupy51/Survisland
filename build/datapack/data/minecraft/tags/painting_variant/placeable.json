@@ -17,6 +17,11 @@
 		"survisland:cadre_tata_marcus",
 		"survisland:cadre_tata_saut",
 		"survisland:cadre_tata_tue",
-		"survisland:cadre_justeprix"
+		"survisland:cadre_justeprix",
+		"survisland:tv_cuisine",
+		"survisland:tv_dessin",
+		"survisland:tv_eteinte",
+		"survisland:tv_foot",
+		"survisland:tv_infos"
 	]
 }

@@ -1,0 +1,42 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:painting",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:painting/variant": "survisland:tv_foot",
+								"minecraft:item_model": "survisland:tv_foot",
+								"minecraft:item_name": {
+									"text": "Tv Foot"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},
+										{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}
+									]
+								],
+								"minecraft:custom_data": {
+									"survisland": {
+										"tv_foot": true
+									},
+									"smithed": {
+										"id": "survisland:tv_foot",
+										"origin": "survisland",
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
