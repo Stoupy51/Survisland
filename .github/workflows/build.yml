@@ -1,0 +1,39 @@
+name: Build
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v8.0.0
+        with:
+          python-version: "3.14"
+
+      - name: Build the project
+        run: uv run --frozen stewbeet
+
+      - name: Commit and push the build
+        env:
+          ACTOR: ${{ github.actor }}
+          ACTOR_ID: ${{ github.actor_id }}
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing changed after the build, no commit needed."
+            exit 0
+          fi
+          git config user.name "$ACTOR"
+          git config user.email "$ACTOR_ID+$ACTOR@users.noreply.github.com"
+          git commit -m "build: 🚀 Build"
+          git push
