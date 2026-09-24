@@ -1,5 +1,6 @@
 
 # Imports
+from copy import deepcopy
 from typing import Any
 
 from stewbeet import Item, ItemModifier, JsonDict, Mem, set_json_encoder
@@ -33,6 +34,16 @@ def main() -> None:
 	flambeau = Item.from_id("flambeau")
 	normal: str = flambeau.components["item_model"]
 	lighted: str = f"{normal}_on"
+
+	# The "_on" variant is the extinguished torch (grey texture), so its flame must not be emissive
+	# (deep copy because stewbeet shares the same elements list between both variants)
+	extinguished_model = Mem.ctx.assets.models.get(f"{ns}:item/flambeau_on")
+	if extinguished_model is not None:
+		elements: list[JsonDict] = deepcopy(extinguished_model.data.get("elements", []))
+		for element in elements:
+			element.pop("light_emission", None)
+		extinguished_model.data["elements"] = elements
+
 	for slot in ["mainhand", "offhand"]:
 		item_modifiers: Any = [
 			{"function":"minecraft:set_components","components":{"minecraft:item_model":normal},"conditions":[{"condition":"minecraft:entity_properties","entity":"this","predicate":{"equipment":{slot:{"components":{"minecraft:item_model":lighted}}}}}]},

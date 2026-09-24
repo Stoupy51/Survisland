@@ -159,6 +159,7 @@ def main() -> None:
 				{
 					"from": [6.5, 6.75, 6.5],
 					"to": [9.5, 8.75, 9.5],
+					"light_emission": 15,
 					"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
 					"faces": {
 						"north": {"uv": [7, 6, 9, 7], "rotation": 180, "texture": "#layer0"},
@@ -172,6 +173,7 @@ def main() -> None:
 				{
 					"from": [6.75, 8.75, 6.75],
 					"to": [9.25, 10.5, 9.25],
+					"light_emission": 15,
 					"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
 					"faces": {
 						"north": {"uv": [7, 6, 9, 7], "texture": "#layer0"},
