@@ -91,7 +91,7 @@ wheels = [
 
 [[package]]
 name = "beet"
-version = "0.118.0"
+version = "0.119.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
@@ -104,9 +104,9 @@ dependencies = [
     { name = "pyyaml" },
     { name = "toml" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/8c/9e/6767633eb3184f9c99592e8109a7ac701fd277b32a347336ffb3e2a5df34/beet-0.118.0.tar.gz", hash = "sha256:85751092729f552d17324b1d2ad66dcc56723f9f74efb6165b9a7c66647175a8", size = 96545, upload-time = "2026-09-10T18:31:57.167Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/6b/df/a19834ef6a840f2b27ad25374fa54a42e7c776b49cd97a7030eba06387bd/beet-0.119.0.tar.gz", hash = "sha256:571c4be422365e9b597989dd75a9c01d3560ff190aceb0657283fccd744bb6af", size = 98741, upload-time = "2026-09-19T23:03:41.828Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/06/37/f55ece6782f464e6a53fc9b825b47a163c35e470f44cb3ca8fbc34dbda4e/beet-0.118.0-py3-none-any.whl", hash = "sha256:77429d7ca7624931389ef95280fba7aa2da39ff05d42e9152f6f6e76a1eff735", size = 125732, upload-time = "2026-09-10T18:31:56.025Z" },
+    { url = "https://files.pythonhosted.org/packages/ce/77/77e6f2aee45e5b2563387028b9c1cb32ebacec0f971b59e8db7b0040f494/beet-0.119.0-py3-none-any.whl", hash = "sha256:1d197366138c70afddd7ea8f5dbe186adf63c88635ce077c9cc0f64da5f81c52", size = 127466, upload-time = "2026-09-19T23:03:40.612Z" },
 ]
 
 [[package]]
@@ -486,15 +486,15 @@ wheels = [
 
 [[package]]
 name = "mecha"
-version = "0.105.0"
+version = "0.106.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beet" },
     { name = "tokenstream" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/b7/e9/d0bff8142ae20c32b3a104cf7b85da0f0aa3cc834475d5dd7879c7896326/mecha-0.105.0.tar.gz", hash = "sha256:6e2f4dfe4bac0f14a507b451ca9d790496d4aac79471d6edf221823a6a34b859", size = 630718, upload-time = "2026-09-10T18:32:31.911Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/88/ae/3364f83d380c10014a66a4da75cf11b6d0593fc4f753347cbdc9c46d7193/mecha-0.106.0.tar.gz", hash = "sha256:c01042067600e0dd6752d954519a31ef4a0772e7ae51a0457bbe8c4639844c22", size = 650012, upload-time = "2026-09-19T23:04:09.81Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/1f/13/65111ee9209a5d09cd77b2449a9063564bf161e415796e41ea27e5774ae1/mecha-0.105.0-py3-none-any.whl", hash = "sha256:4db591f5bf5061caba55a7a3a8f0f057f7555227809a2439c4eb671c75813e01", size = 667984, upload-time = "2026-09-10T18:32:30.634Z" },
+    { url = "https://files.pythonhosted.org/packages/d3/76/5e66471009c56b231687a607184e87537aae21ffa811767d5d94e85ee24f/mecha-0.106.0-py3-none-any.whl", hash = "sha256:a71ae0242f5eaa37918f9fdc510c14913a2416ebf1bd0ce1642f44516cdd3121", size = 687928, upload-time = "2026-09-19T23:04:08.3Z" },
 ]
 
 [[package]]
@@ -971,7 +971,7 @@ dependencies = [
 
 [[package]]
 name = "stewbeet"
-version = "3.8.0"
+version = "3.9.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beet" },
@@ -984,14 +984,14 @@ dependencies = [
     { name = "smithed" },
     { name = "stouputils" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/be/8d/69765d549c4d0fdfa1596508955cc6cf9b4abc3cdb9ad2ac542d2845c83d/stewbeet-3.8.0.tar.gz", hash = "sha256:fde439629b916741f11e8338a58848cead6bdfc193bc9d099489295e474d6a21", size = 748079, upload-time = "2026-09-15T19:34:50.509Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/f1/3d/1c0d6d5443b3400de391d1dd23304145515330268509e4a88d7f86458ad6/stewbeet-3.9.2.tar.gz", hash = "sha256:70395cea580bd48e0623deee59434801786307c7cb84e4e191e9cc76c3d1d25a", size = 749048, upload-time = "2026-09-24T11:43:23.074Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/95/fc/4d01bcb16ee0c24d78d3eb81e6ecad7260fde90fdc7264aba322d97e02f5/stewbeet-3.8.0-py3-none-any.whl", hash = "sha256:4536fe07d0dadc007ce9fb0ca23058ee84e1f856c498ed5e59ba551c74bb8fd4", size = 915905, upload-time = "2026-09-15T19:34:47.798Z" },
+    { url = "https://files.pythonhosted.org/packages/13/d4/2bdf189eee6dfd8987ac27063473bfb4eacd25b4dc0a62b524c1da734d22/stewbeet-3.9.2-py3-none-any.whl", hash = "sha256:43fabecccc2f447fec770f4c0bf0840a1bf30199635d7ba6fd1940001729134a", size = 918214, upload-time = "2026-09-24T11:43:19.234Z" },
 ]
 
 [[package]]
 name = "stouputils"
-version = "26.5.0"
+version = "26.7.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "argcomplete" },
@@ -1005,9 +1005,9 @@ dependencies = [
     { name = "setproctitle" },
     { name = "tqdm" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/0c/00/993ed17daa841340925fb85704304ead3a1edd028d54a46b2e09aa56d126/stouputils-26.5.0.tar.gz", hash = "sha256:43bf925c2d77b603098400c196d301315b3b8046e41a46c0fdae478fc01a168d", size = 178009, upload-time = "2026-09-15T08:37:07.366Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/4f/cf/69d7198827c6bc28368f6e201e9eedfec5227d537afd7dd2473f3940f5d4/stouputils-26.7.2.tar.gz", hash = "sha256:98b2c0353326644c403f7590070f9730703f80d9e8ce44460c1b78f5f1cc7f09", size = 181653, upload-time = "2026-09-22T07:43:21.887Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/70/80/55906f4dfd7250e88e971057b5a73d766efcfcc129052b3c511e3e2d9970/stouputils-26.5.0-py3-none-any.whl", hash = "sha256:a4109d90bbffe0b739d69591de8e5b8761df14c598ac020152d1abf3532a7456", size = 244153, upload-time = "2026-09-15T08:37:05.962Z" },
+    { url = "https://files.pythonhosted.org/packages/11/ab/73d65da0bbd93ac3062e58a935df80fe2730b6870a4d722d790c34dfcefc/stouputils-26.7.2-py3-none-any.whl", hash = "sha256:bb57c2d53e05accce0be6834200f13deff72ff1f24f3c7dfd122c1425bb9e976", size = 249578, upload-time = "2026-09-22T07:43:20.579Z" },
 ]
 
 [[package]]
@@ -1022,7 +1022,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "smithed", git = "https://github.com/Stoupy51/smithed-python.git" },
-    { name = "stewbeet", specifier = ">=3.8.0" },
+    { name = "stewbeet", specifier = ">=3.9.2" },
 ]
 
 [[package]]
