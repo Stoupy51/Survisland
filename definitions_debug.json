@@ -1297,106 +1297,6 @@
 			"height": 4
 		}
 	},
-	"tv_cuisine": {
-		"id": "tv_cuisine",
-		"base_item": "minecraft:painting",
-		"recipes": [],
-		"components": {
-			"painting/variant": "survisland:tv_cuisine",
-			"item_model": "survisland:tv_cuisine",
-			"item_name": {"text": "Tv Cuisine"},
-			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
-			"custom_data": {"survisland": {"tv_cuisine": true},"smithed": {"id": "survisland:tv_cuisine","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
-		},
-		"skip_gives": false,
-		"painting_data": {
-			"texture": "painting/tv_cuisine",
-			"author": {"text": "M4TOUW","color": "yellow"},
-			"title": {"text": "Tv Cuisine"},
-			"width": 4,
-			"height": 2
-		}
-	},
-	"tv_dessin": {
-		"id": "tv_dessin",
-		"base_item": "minecraft:painting",
-		"recipes": [],
-		"components": {
-			"painting/variant": "survisland:tv_dessin",
-			"item_model": "survisland:tv_dessin",
-			"item_name": {"text": "Tv Dessin"},
-			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
-			"custom_data": {"survisland": {"tv_dessin": true},"smithed": {"id": "survisland:tv_dessin","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
-		},
-		"skip_gives": false,
-		"painting_data": {
-			"texture": "painting/tv_dessin",
-			"author": {"text": "M4TOUW","color": "yellow"},
-			"title": {"text": "Tv Dessin"},
-			"width": 4,
-			"height": 2
-		}
-	},
-	"tv_eteinte": {
-		"id": "tv_eteinte",
-		"base_item": "minecraft:painting",
-		"recipes": [],
-		"components": {
-			"painting/variant": "survisland:tv_eteinte",
-			"item_model": "survisland:tv_eteinte",
-			"item_name": {"text": "Tv Eteinte"},
-			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
-			"custom_data": {"survisland": {"tv_eteinte": true},"smithed": {"id": "survisland:tv_eteinte","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
-		},
-		"skip_gives": false,
-		"painting_data": {
-			"texture": "painting/tv_eteinte",
-			"author": {"text": "M4TOUW","color": "yellow"},
-			"title": {"text": "Tv Eteinte"},
-			"width": 4,
-			"height": 2
-		}
-	},
-	"tv_foot": {
-		"id": "tv_foot",
-		"base_item": "minecraft:painting",
-		"recipes": [],
-		"components": {
-			"painting/variant": "survisland:tv_foot",
-			"item_model": "survisland:tv_foot",
-			"item_name": {"text": "Tv Foot"},
-			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
-			"custom_data": {"survisland": {"tv_foot": true},"smithed": {"id": "survisland:tv_foot","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
-		},
-		"skip_gives": false,
-		"painting_data": {
-			"texture": "painting/tv_foot",
-			"author": {"text": "M4TOUW","color": "yellow"},
-			"title": {"text": "Tv Foot"},
-			"width": 4,
-			"height": 2
-		}
-	},
-	"tv_infos": {
-		"id": "tv_infos",
-		"base_item": "minecraft:painting",
-		"recipes": [],
-		"components": {
-			"painting/variant": "survisland:tv_infos",
-			"item_model": "survisland:tv_infos",
-			"item_name": {"text": "Tv Infos"},
-			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
-			"custom_data": {"survisland": {"tv_infos": true},"smithed": {"id": "survisland:tv_infos","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
-		},
-		"skip_gives": false,
-		"painting_data": {
-			"texture": "painting/tv_infos",
-			"author": {"text": "M4TOUW","color": "yellow"},
-			"title": {"text": "Tv Infos"},
-			"width": 4,
-			"height": 2
-		}
-	},
 	"knights_painting": {
 		"id": "knights_painting",
 		"base_item": "minecraft:painting",
@@ -1735,6 +1635,106 @@
 			"title": {"text": "Cadre Justeprix"},
 			"width": 4,
 			"height": 4
+		}
+	},
+	"tv_cuisine": {
+		"id": "tv_cuisine",
+		"base_item": "minecraft:painting",
+		"recipes": [],
+		"components": {
+			"painting/variant": "survisland:tv_cuisine",
+			"item_model": "survisland:tv_cuisine",
+			"item_name": {"text": "Tv Cuisine"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"tv_cuisine": true},"smithed": {"id": "survisland:tv_cuisine","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false,
+		"painting_data": {
+			"texture": "painting/tv_cuisine",
+			"author": {"text": "M4TOUW","color": "yellow"},
+			"title": {"text": "Tv Cuisine"},
+			"width": 4,
+			"height": 2
+		}
+	},
+	"tv_dessin": {
+		"id": "tv_dessin",
+		"base_item": "minecraft:painting",
+		"recipes": [],
+		"components": {
+			"painting/variant": "survisland:tv_dessin",
+			"item_model": "survisland:tv_dessin",
+			"item_name": {"text": "Tv Dessin"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"tv_dessin": true},"smithed": {"id": "survisland:tv_dessin","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false,
+		"painting_data": {
+			"texture": "painting/tv_dessin",
+			"author": {"text": "M4TOUW","color": "yellow"},
+			"title": {"text": "Tv Dessin"},
+			"width": 4,
+			"height": 2
+		}
+	},
+	"tv_eteinte": {
+		"id": "tv_eteinte",
+		"base_item": "minecraft:painting",
+		"recipes": [],
+		"components": {
+			"painting/variant": "survisland:tv_eteinte",
+			"item_model": "survisland:tv_eteinte",
+			"item_name": {"text": "Tv Eteinte"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"tv_eteinte": true},"smithed": {"id": "survisland:tv_eteinte","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false,
+		"painting_data": {
+			"texture": "painting/tv_eteinte",
+			"author": {"text": "M4TOUW","color": "yellow"},
+			"title": {"text": "Tv Eteinte"},
+			"width": 4,
+			"height": 2
+		}
+	},
+	"tv_foot": {
+		"id": "tv_foot",
+		"base_item": "minecraft:painting",
+		"recipes": [],
+		"components": {
+			"painting/variant": "survisland:tv_foot",
+			"item_model": "survisland:tv_foot",
+			"item_name": {"text": "Tv Foot"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"tv_foot": true},"smithed": {"id": "survisland:tv_foot","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false,
+		"painting_data": {
+			"texture": "painting/tv_foot",
+			"author": {"text": "M4TOUW","color": "yellow"},
+			"title": {"text": "Tv Foot"},
+			"width": 4,
+			"height": 2
+		}
+	},
+	"tv_infos": {
+		"id": "tv_infos",
+		"base_item": "minecraft:painting",
+		"recipes": [],
+		"components": {
+			"painting/variant": "survisland:tv_infos",
+			"item_model": "survisland:tv_infos",
+			"item_name": {"text": "Tv Infos"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"tv_infos": true},"smithed": {"id": "survisland:tv_infos","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false,
+		"painting_data": {
+			"texture": "painting/tv_infos",
+			"author": {"text": "M4TOUW","color": "yellow"},
+			"title": {"text": "Tv Infos"},
+			"width": 4,
+			"height": 2
 		}
 	},
 	"icon": {

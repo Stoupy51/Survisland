@@ -1,11 +1,6 @@
 {
 	"values": [
 		"survisland:mariage_painting",
-		"survisland:tv_cuisine",
-		"survisland:tv_dessin",
-		"survisland:tv_eteinte",
-		"survisland:tv_foot",
-		"survisland:tv_infos",
 		"survisland:knights_painting",
 		"survisland:koko_painting",
 		"survisland:fusoya_painting",
@@ -22,6 +17,11 @@
 		"survisland:cadre_tata_marcus",
 		"survisland:cadre_tata_saut",
 		"survisland:cadre_tata_tue",
-		"survisland:cadre_justeprix"
+		"survisland:cadre_justeprix",
+		"survisland:tv_cuisine",
+		"survisland:tv_dessin",
+		"survisland:tv_eteinte",
+		"survisland:tv_foot",
+		"survisland:tv_infos"
 	]
 }
