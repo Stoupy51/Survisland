@@ -1,6 +1,11 @@
 {
 	"values": [
 		"survisland:mariage_painting",
+		"survisland:tv_cuisine",
+		"survisland:tv_dessin",
+		"survisland:tv_eteinte",
+		"survisland:tv_foot",
+		"survisland:tv_infos",
 		"survisland:knights_painting",
 		"survisland:koko_painting",
 		"survisland:fusoya_painting",
