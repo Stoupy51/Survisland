@@ -52,6 +52,7 @@ pipeline:
     - "stewbeet.plugins.finalyze.last_final.silent"
     - "stewbeet.plugins.auto.scoreboard_constants.silent"
     # - "stewbeet.plugins.auto.lang_file"
+    - "stewbeet.plugins.auto.text_renders.silent"
     - "stewbeet.plugins.auto.headers.silent"
     - "stewbeet.plugins.archive"
     - "stewbeet.plugins.merge_smithed_weld.datapack"
@@ -84,6 +85,11 @@ meta:
             folder: "assets/sounds"
             # Optional: glob patterns to exclude from processing
             exclude_patterns: []
+        # Directory holding the images of {"render": "<namespace>:<name>"} text components, as <namespace>/<name>.png
+        iso_renders_path: "assets/iso_renders"
+        # Renders bigger than 256x256 are cut into a grid of glyphs instead of being shrunk
+        text_renders:
+            allow_oversized: true
         # Directory containing all jukebox records
         records_folder: "assets/records"
         # Directory containing libraries that will be copied to the build destination, and merged using Smithed Weld if enabled.
