@@ -1737,6 +1737,26 @@
 			"height": 2
 		}
 	},
+	"mumble_painting": {
+		"id": "mumble_painting",
+		"base_item": "minecraft:painting",
+		"recipes": [],
+		"components": {
+			"painting/variant": "survisland:mumble_painting",
+			"item_model": "survisland:mumble_painting",
+			"item_name": {"text": "Mumble Painting"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"mumble_painting": true},"smithed": {"id": "survisland:mumble_painting","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false,
+		"painting_data": {
+			"texture": "painting/mumble_painting",
+			"author": {"text": "Fhara x Mymy","color": "yellow"},
+			"title": {"text": "Mumble Painting"},
+			"width": 4,
+			"height": 3
+		}
+	},
 	"icon": {
 		"id": "icon",
 		"base_item": "minecraft:recovery_compass",
