@@ -42,6 +42,19 @@
 #			advancement survisland:pop_ups/conseil_dans_55_minutes
 #			advancement survisland:pop_ups/conseil_dans_60_minutes
 #			advancement survisland:pop_ups/conseil_maintenant
+#			advancement survisland:pop_ups/fermeture_du_serveur_dans_5_minutes
+#			advancement survisland:pop_ups/fermeture_du_serveur_dans_10_minutes
+#			advancement survisland:pop_ups/fermeture_du_serveur_dans_15_minutes
+#			advancement survisland:pop_ups/fermeture_du_serveur_dans_20_minutes
+#			advancement survisland:pop_ups/fermeture_du_serveur_dans_25_minutes
+#			advancement survisland:pop_ups/fermeture_du_serveur_dans_30_minutes
+#			advancement survisland:pop_ups/fermeture_du_serveur_dans_35_minutes
+#			advancement survisland:pop_ups/fermeture_du_serveur_dans_40_minutes
+#			advancement survisland:pop_ups/fermeture_du_serveur_dans_45_minutes
+#			advancement survisland:pop_ups/fermeture_du_serveur_dans_50_minutes
+#			advancement survisland:pop_ups/fermeture_du_serveur_dans_55_minutes
+#			advancement survisland:pop_ups/fermeture_du_serveur_dans_60_minutes
+#			advancement survisland:pop_ups/fermeture_du_serveur_maintenant
 #
 
 # Revoke all pop-ups
@@ -87,6 +100,19 @@ tellraw @s[advancements={survisland:pop_ups/conseil_dans_50_minutes=true}] [{"nb
 tellraw @s[advancements={survisland:pop_ups/conseil_dans_55_minutes=true}] [{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true},{"text":" Conseil dans 55 minutes !","color":"aqua"}]
 tellraw @s[advancements={survisland:pop_ups/conseil_dans_60_minutes=true}] [{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true},{"text":" Conseil dans 60 minutes !","color":"aqua"}]
 tellraw @s[advancements={survisland:pop_ups/conseil_maintenant=true}] [{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true},{"text":" Conseil maintenant !","color":"aqua"}]
+tellraw @s[advancements={survisland:pop_ups/fermeture_du_serveur_dans_5_minutes=true}] [{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true},{"text":" Fermeture du serveur dans 5 minutes !","color":"aqua"}]
+tellraw @s[advancements={survisland:pop_ups/fermeture_du_serveur_dans_10_minutes=true}] [{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true},{"text":" Fermeture du serveur dans 10 minutes !","color":"aqua"}]
+tellraw @s[advancements={survisland:pop_ups/fermeture_du_serveur_dans_15_minutes=true}] [{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true},{"text":" Fermeture du serveur dans 15 minutes !","color":"aqua"}]
+tellraw @s[advancements={survisland:pop_ups/fermeture_du_serveur_dans_20_minutes=true}] [{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true},{"text":" Fermeture du serveur dans 20 minutes !","color":"aqua"}]
+tellraw @s[advancements={survisland:pop_ups/fermeture_du_serveur_dans_25_minutes=true}] [{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true},{"text":" Fermeture du serveur dans 25 minutes !","color":"aqua"}]
+tellraw @s[advancements={survisland:pop_ups/fermeture_du_serveur_dans_30_minutes=true}] [{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true},{"text":" Fermeture du serveur dans 30 minutes !","color":"aqua"}]
+tellraw @s[advancements={survisland:pop_ups/fermeture_du_serveur_dans_35_minutes=true}] [{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true},{"text":" Fermeture du serveur dans 35 minutes !","color":"aqua"}]
+tellraw @s[advancements={survisland:pop_ups/fermeture_du_serveur_dans_40_minutes=true}] [{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true},{"text":" Fermeture du serveur dans 40 minutes !","color":"aqua"}]
+tellraw @s[advancements={survisland:pop_ups/fermeture_du_serveur_dans_45_minutes=true}] [{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true},{"text":" Fermeture du serveur dans 45 minutes !","color":"aqua"}]
+tellraw @s[advancements={survisland:pop_ups/fermeture_du_serveur_dans_50_minutes=true}] [{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true},{"text":" Fermeture du serveur dans 50 minutes !","color":"aqua"}]
+tellraw @s[advancements={survisland:pop_ups/fermeture_du_serveur_dans_55_minutes=true}] [{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true},{"text":" Fermeture du serveur dans 55 minutes !","color":"aqua"}]
+tellraw @s[advancements={survisland:pop_ups/fermeture_du_serveur_dans_60_minutes=true}] [{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true},{"text":" Fermeture du serveur dans 60 minutes !","color":"aqua"}]
+tellraw @s[advancements={survisland:pop_ups/fermeture_du_serveur_maintenant=true}] [{"nbt":"SurvislandWarning","storage":"survisland:main","interpret":true},{"text":" Fermeture du serveur maintenant !","color":"aqua"}]
 
 # Playsound
 playsound ui.toast.in

@@ -3,7 +3,7 @@
 from stewbeet import Advancement, JsonDict, Mem, set_json_encoder, write_function
 
 # Constants
-LABELS: list[str] = ["Confort", "Immunité", "Conseil"]
+LABELS: list[str] = ["Confort", "Immunité", "Conseil", "Fermeture du serveur"]
 TIMES: list[str] = [f"dans {x} minutes" for x in range(5, 61, 5)] + ["maintenant"]
 
 # Generates pop-ups
