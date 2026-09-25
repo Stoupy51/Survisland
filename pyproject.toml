@@ -6,7 +6,7 @@ readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "smithed",
-    "stewbeet>=3.9.2",
+    "stewbeet>=3.9.3",
 ]
 
 [tool.uv.sources]

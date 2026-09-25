@@ -4,7 +4,7 @@
 # @within	survisland:utils/compteur_subtitle
 #
 
-# Rendered by stewbeet.plugins.auto.text_renders from assets/iso_renders/compteur_rat/
+# Rendered by stewbeet.plugins.auto.text_renders from assets/textures/compteur_rat/
 execute if score #compteur survisland.data matches 8 run return run title @a subtitle {"text": "耡耢耣耤耥耢耦耧耨耩耨耪耫耦耬耨耭耨耮耯耦耰耢耱耢耲耢","font": "survisland:renders"}
 execute if score #compteur survisland.data matches 7 run return run title @a subtitle {"text": "耳耢耴耨耵耫耦耶耨耷耨耸耹耦耺耨耻耨耼耫耦耽耢耾耢耿耢","font": "survisland:renders"}
 execute if score #compteur survisland.data matches 6 run return run title @a subtitle {"text": "聀耢聁耢聂耢耦聃耨聄耨聅耹耦聆耨聇耨聈聉耦聊耢聋职聍耢","font": "survisland:renders"}

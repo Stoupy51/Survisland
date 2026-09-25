@@ -85,8 +85,6 @@ meta:
             folder: "assets/sounds"
             # Optional: glob patterns to exclude from processing
             exclude_patterns: []
-        # Directory holding the images of {"render": "<namespace>:<name>"} text components, as <namespace>/<name>.png
-        iso_renders_path: "assets/iso_renders"
         # Renders bigger than 256x256 are cut into a grid of glyphs instead of being shrunk
         text_renders:
             allow_oversized: true
@@ -114,7 +112,6 @@ meta:
         # Configuration for in-game manual
         manual:
             high_resolution: true
-            cache_path: "manual_cache"
             cache_assets: true
             cache_pages: false
             json_dump_path: "manual_cache/content.json"
