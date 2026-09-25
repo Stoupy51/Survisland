@@ -75,7 +75,7 @@ def main() -> None:
 		))
 
 	# Add paintings 4x3
-	for item in ("mumble_painting"):
+	for item in ("mumble_painting",):
 		Painting(id=item, painting_data=PaintingData(
 			texture=f"painting/{item}",
 			author={"text":"Fhara x Mymy","color":"yellow"},
