@@ -1,10 +1,10 @@
 
 #> survisland:modes/all_together/body/seat_tick
 #
-# @executed	rotated as @s & anchored eyes & positioned ^ ^ ^0.6 & as @e[type=item_display,tag=survisland.all_together.seat,distance=..50]
+# @executed	rotated as @s & anchored eyes & positioned ^ ^ ^0.6 & as @e[type=item_display,tag=survisland.all_together.seat,predicate=survisland:modes/all_together/same_group,distance=..50]
 #
-# @within	survisland:modes/all_together/body/tick [ rotated as @s & anchored eyes & positioned ^ ^ ^0.6 & as @e[type=item_display,tag=survisland.all_together.seat,distance=..50] ]
-#			survisland:modes/all_together/body/find_seat [ as @e[type=item_display,tag=survisland.all_together.seat] ]
+# @within	survisland:modes/all_together/body/tick [ rotated as @s & anchored eyes & positioned ^ ^ ^0.6 & as @e[type=item_display,tag=survisland.all_together.seat,predicate=survisland:modes/all_together/same_group,distance=..50] ]
+#			survisland:modes/all_together/body/find_seat [ as @e[type=item_display,tag=survisland.all_together.seat,predicate=survisland:modes/all_together/same_group] ]
 #
 
 # The seat is dropped on the point the caller computed, in front of the mannequin eyes

@@ -1,0 +1,24 @@
+{
+	"condition": "minecraft:entity_scores",
+	"entity": "this",
+	"scores": {
+		"survisland.all_together.group": {
+			"min": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "#all_together_group"
+				},
+				"score": "survisland.data"
+			},
+			"max": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "#all_together_group"
+				},
+				"score": "survisland.data"
+			}
+		}
+	}
+}

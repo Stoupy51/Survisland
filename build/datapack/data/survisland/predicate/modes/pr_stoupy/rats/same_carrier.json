@@ -1,0 +1,24 @@
+{
+	"condition": "minecraft:entity_scores",
+	"entity": "this",
+	"scores": {
+		"survisland.pr_rats.id": {
+			"min": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "#pr_rats_id"
+				},
+				"score": "survisland.data"
+			},
+			"max": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "#pr_rats_id"
+				},
+				"score": "survisland.data"
+			}
+		}
+	}
+}

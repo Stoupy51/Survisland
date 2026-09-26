@@ -1,0 +1,26 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:entity_hurt_player",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"nbt": "{Tags:[\"survisland.pr_orbit\"]}"
+						}
+					}
+				],
+				"damage": {
+					"source_entity": {
+						"type": "minecraft:phantom"
+					}
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "survisland:modes/pr_stoupy/orbit/phantom_hit"
+	}
+}

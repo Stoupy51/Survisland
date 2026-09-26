@@ -1,0 +1,42 @@
+{
+	"condition": "minecraft:entity_scores",
+	"entity": "this",
+	"scores": {
+		"survisland.pr_mirror.session": {
+			"min": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "#pr_mirror_session"
+				},
+				"score": "survisland.data"
+			},
+			"max": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "#pr_mirror_session"
+				},
+				"score": "survisland.data"
+			}
+		},
+		"survisland.pr_mirror": {
+			"min": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "#pr_mirror_slot"
+				},
+				"score": "survisland.data"
+			},
+			"max": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "#pr_mirror_slot"
+				},
+				"score": "survisland.data"
+			}
+		}
+	}
+}

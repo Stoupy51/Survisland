@@ -1,9 +1,9 @@
 
 #> survisland:modes/all_together/body/deal/fort
 #
-# @executed	as @a[tag=survisland.all_together,distance=..50]
+# @executed	as @a[tag=survisland.all_together,predicate=survisland:modes/all_together/same_group,distance=..50]
 #
-# @within	survisland:modes/all_together/body/enter_phase/fort [ as @a[tag=survisland.all_together,distance=..50] ]
+# @within	survisland:modes/all_together/body/enter_phase/fort [ as @a[tag=survisland.all_together,predicate=survisland:modes/all_together/same_group,distance=..50] ]
 #
 
 # The click holder rides its own seat, so a new command set can mean a new vehicle
