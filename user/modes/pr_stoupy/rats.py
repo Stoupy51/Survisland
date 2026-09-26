@@ -4,14 +4,17 @@ A rat is an invisible ocelot, which runs away from players, carrying the item di
 Hitting a rat catches it: it then floats above the head of its catcher, up to RATS_PER_PLAYER at once.
 Standing next to a cage drops every carried rat inside. The last rat caged gives the star.
 Nobody is enrolled, so players can join or leave at any time, and more hands make it faster.
+
+Cages placed within CAGE_GROUP_RADIUS of each other form an arena, and a rat belongs to the arena of the nearest cage
+when summoned, so several copies of the lab each count their own rats. Place the cages before the rats.
 """
 # ruff: noqa: E501
 # Imports
-from stewbeet import Advancement, JsonDict, Mem, Predicate, set_json_encoder, write_function
+from stewbeet import Advancement, JsonDict, Mem, set_json_encoder, write_function
 
 from user.database.pr_stoupy import RAT_VARIANTS
 
-from .shared import LAB
+from .shared import LAB, write_match_predicate
 
 # Constants
 MODE: str = "pr_rats"
@@ -25,6 +28,9 @@ CATCH_RADIUS: int = 6
 
 CAGE_RADIUS: str = "2.5"
 """ Distance to a cage marker at which carried rats are dropped inside. """
+
+CAGE_GROUP_RADIUS: int = 48
+""" Distance under which a new cage joins the arena of an existing one instead of opening its own. """
 
 SIZE_RANGE: str = "75..125"
 """ Random size of a rat, in percent. """
@@ -54,10 +60,13 @@ CAGE_SPACING: float = 0.45
 # Functions
 def main() -> None:
 	""" Write every function of the rats trial. """
+	tag: str = f"{Mem.ctx.project_id}.{MODE}"
+	same_arena: str = write_match_predicate(f"{LAB}/rats/same_arena", {f"{tag}.arena": f"#{MODE}_arena"})
+	same_carrier: str = write_match_predicate(f"{LAB}/rats/same_carrier", {f"{tag}.id": f"#{MODE}_id"})
 	generate_placement()
 	generate_catch()
-	generate_tick()
-	generate_stop()
+	generate_tick(same_arena, same_carrier)
+	generate_stop(same_arena, same_carrier)
 
 
 def generate_placement() -> None:
@@ -75,14 +84,17 @@ def generate_placement() -> None:
 scoreboard objectives add {tag}.carried dummy
 scoreboard objectives add {tag}.id dummy
 scoreboard objectives add {tag}.index dummy
+scoreboard objectives add {tag}.arena dummy
 summon minecraft:ocelot ~ ~ ~ {{Tags:["{tag}.rat","{tag}.new"],PersistenceRequired:1b,Silent:1b,Trusting:0b,Age:0,active_effects:[{{id:"minecraft:invisibility",duration:-1,amplifier:0b,show_particles:0b}},{{id:"minecraft:resistance",duration:-1,amplifier:4b,show_particles:0b}}]{ocelot_extra},Passengers:[{{id:"minecraft:item_display",Tags:["{tag}.model"],item_display:"none",teleport_duration:1,item:{{id:"minecraft:stone",count:1,components:{{"minecraft:item_model":"{ns}:rat_{variant}"}}}}{display_extra}}}]}}
 execute as @e[type=minecraft:ocelot,tag={tag}.new] run function {root}/resize
 schedule function {root}/tick 1t replace
 """)
 
 	write_function(f"{root}/resize", f"""
-# Hitbox and model scaled together, from {SIZE_RANGE} %
 tag @s remove {tag}.new
+scoreboard players operation @s {tag}.arena = @n[type=minecraft:marker,tag={tag}.cage] {tag}.arena
+
+# Hitbox and model scaled together, from {SIZE_RANGE} %
 execute store result score #{MODE}_size {ns}.data run random value {SIZE_RANGE}
 scoreboard players operation #{MODE}_hitbox {ns}.data = #{MODE}_size {ns}.data
 execute store result storage {ns}:{MODE} size.hitbox double 0.001 run scoreboard players operation #{MODE}_hitbox {ns}.data *= #{HITBOX_PER_PERCENT} {ns}.data
@@ -139,8 +151,20 @@ tag @e[type=minecraft:ocelot,tag={tag}.spreading] remove {tag}.spreading
 """)
 
 	write_function(f"{root}/here/place_cage", f"""
-execute align xyz positioned ~0.5 ~ ~0.5 summon minecraft:marker run tag @s add {tag}.cage
+# Joins the arena of a cage within {CAGE_GROUP_RADIUS} blocks, or opens a new one
+scoreboard objectives add {tag}.arena dummy
+scoreboard objectives add {tag}.caged dummy
+scoreboard players set #{MODE}_arena {ns}.data 0
+scoreboard players operation #{MODE}_arena {ns}.data = @n[type=minecraft:marker,tag={tag}.cage,distance=..{CAGE_GROUP_RADIUS}] {tag}.arena
+execute if score #{MODE}_arena {ns}.data matches 0 store result score #{MODE}_arena {ns}.data run scoreboard players add #{MODE}_arena_counter {ns}.data 1
+execute align xyz positioned ~0.5 ~ ~0.5 summon minecraft:marker run function {root}/new_cage
 tellraw @a[distance=..16] {{"text":"Rats : cage placée.","color":"green"}}
+""")
+
+	write_function(f"{root}/new_cage", f"""
+tag @s add {tag}.cage
+scoreboard players operation @s {tag}.arena = #{MODE}_arena {ns}.data
+scoreboard players set @s {tag}.caged 0
 """)
 
 
@@ -157,10 +181,6 @@ def generate_catch() -> None:
 		"rewards": {"function": f"{root}/hit"},
 	}
 	Mem.ctx.data[ns].advancements[f"{LAB}/rats_hit"] = set_json_encoder(Advancement(json_content), max_level=-1)
-
-	carrier: JsonDict = {"type": "minecraft:score", "target": {"type": "minecraft:fixed", "name": f"#{MODE}_id"}, "score": f"{ns}.data"}
-	same_carrier: JsonDict = {"condition": "minecraft:entity_scores", "entity": "this", "scores": {f"{tag}.id": {"min": carrier, "max": carrier}}}
-	Mem.ctx.data[ns].predicates[f"{LAB}/rats/same_carrier"] = set_json_encoder(Predicate(same_carrier), max_level=-1)
 
 	write_function(f"{root}/hit", f"""
 advancement revoke @s only {ns}:{LAB}/rats_hit
@@ -180,6 +200,7 @@ execute unless score @s {tag}.id matches 1.. store result score @s {tag}.id run 
 scoreboard players add @s {tag}.carried 1
 scoreboard players operation #{MODE}_id {ns}.data = @s {tag}.id
 scoreboard players operation #{MODE}_index {ns}.data = @s {tag}.carried
+scoreboard players operation #{MODE}_arena {ns}.data = @n[type=minecraft:ocelot,tag={tag}.caught] {tag}.arena
 
 execute as @n[type=minecraft:ocelot,tag={tag}.caught] on passengers run data modify storage {ns}:{MODE} model set from entity @s
 execute at @s summon minecraft:item_display run function {root}/new_carried
@@ -198,6 +219,7 @@ data modify entity @s glow_color_override set from storage {ns}:{MODE} model.glo
 data modify entity @s teleport_duration set value 1
 scoreboard players operation @s {tag}.id = #{MODE}_id {ns}.data
 scoreboard players operation @s {tag}.index = #{MODE}_index {ns}.data
+scoreboard players operation @s {tag}.arena = #{MODE}_arena {ns}.data
 """)
 
 	write_function(f"{root}/remove_rat", """
@@ -207,7 +229,7 @@ kill @s
 """)
 
 
-def generate_tick() -> None:
+def generate_tick(same_arena: str, same_carrier: str) -> None:
 	""" Write the tick: rats looking where they run, carried rats following their catcher, and the cages. """
 	ns: str = Mem.ctx.project_id
 	root: str = f"{ns}:{LAB}/rats"
@@ -230,7 +252,7 @@ execute if entity @e[type=minecraft:item_display,tag={tag}.carried] run schedule
 
 	write_function(f"{root}/carry", f"""
 scoreboard players operation #{MODE}_id {ns}.data = @s {tag}.id
-execute as @e[type=minecraft:item_display,tag={tag}.carried,predicate={ns}:{LAB}/rats/same_carrier] run function {root}/carry_one
+execute as @e[type=minecraft:item_display,tag={tag}.carried,{same_carrier}] run function {root}/carry_one
 """)
 
 	write_function(f"{root}/carry_one", f"""
@@ -239,17 +261,21 @@ execute as @e[type=minecraft:item_display,tag={tag}.carried,predicate={ns}:{LAB}
 """)
 
 	write_function(f"{root}/drop_in_cage", f"""
-# Positioned on the cage, @s is a player carrying rats
+# Positioned on the cage, @s is a player carrying rats: they join the arena of the cage and fill its next slots
 scoreboard players operation #{MODE}_id {ns}.data = @s {tag}.id
-execute as @e[type=minecraft:item_display,tag={tag}.carried,predicate={ns}:{LAB}/rats/same_carrier] run function {root}/cage_one
+scoreboard players operation #{MODE}_arena {ns}.data = @n[type=minecraft:marker,tag={tag}.cage,distance=..0.1] {tag}.arena
+scoreboard players operation #{MODE}_caged {ns}.data = @n[type=minecraft:marker,tag={tag}.cage,distance=..0.1] {tag}.caged
+execute as @e[type=minecraft:item_display,tag={tag}.carried,{same_carrier}] run function {root}/cage_one
+scoreboard players operation @n[type=minecraft:marker,tag={tag}.cage,distance=..0.1] {tag}.caged = #{MODE}_caged {ns}.data
 scoreboard players set @s {tag}.carried 0
 playsound minecraft:block.iron_door.close block @a[distance=..16] ~ ~ ~ 1 1.2
-execute unless entity @e[type=minecraft:ocelot,tag={tag}.rat] unless entity @e[type=minecraft:item_display,tag={tag}.carried] run function {root}/victory
+execute unless entity @e[type=minecraft:ocelot,tag={tag}.rat,{same_arena}] unless entity @e[type=minecraft:item_display,tag={tag}.carried,{same_arena}] run function {root}/victory
 """)
 
 	write_function(f"{root}/cage_one", f"""
 tag @s remove {tag}.carried
 tag @s add {tag}.caged
+scoreboard players operation @s {tag}.arena = #{MODE}_arena {ns}.data
 scoreboard players operation #{MODE}_slot {ns}.data = #{MODE}_caged {ns}.data
 scoreboard players operation #{MODE}_slot {ns}.data %= #{CAGE_GRID * CAGE_GRID} {ns}.data
 scoreboard players add #{MODE}_caged {ns}.data 1
@@ -257,8 +283,8 @@ scoreboard players add #{MODE}_caged {ns}.data 1
 """)
 
 
-def generate_stop() -> None:
-	""" Write the victory, and the stop clearing every rat, carried or caged. """
+def generate_stop(same_arena: str, same_carrier: str) -> None:
+	""" Write the victory, and the stops clearing the rats of the nearest arena or of all of them. """
 	ns: str = Mem.ctx.project_id
 	root: str = f"{ns}:{LAB}/rats"
 	tag: str = f"{ns}.{MODE}"
@@ -267,12 +293,28 @@ def generate_stop() -> None:
 function {ns}:{LAB}/give_star {{trial:"Les rats de labo"}}
 """)
 
+	write_function(f"{root}/here/stop", f"""
+# The arena of the nearest cage: its rats, free, carried or caged, then the carriers count what they still hold
+scoreboard players operation #{MODE}_arena {ns}.data = @n[type=minecraft:marker,tag={tag}.cage] {tag}.arena
+execute as @e[type=minecraft:ocelot,tag={tag}.rat,{same_arena}] run function {root}/remove_rat
+kill @e[type=minecraft:item_display,tag={tag}.carried,{same_arena}]
+kill @e[type=minecraft:item_display,tag={tag}.caged,{same_arena}]
+scoreboard players set @e[type=minecraft:marker,tag={tag}.cage,{same_arena}] {tag}.caged 0
+execute as @a[scores={{{tag}.carried=1..}}] run function {root}/recount
+""")
+
+	write_function(f"{root}/recount", f"""
+scoreboard players operation #{MODE}_id {ns}.data = @s {tag}.id
+execute store result score @s {tag}.carried if entity @e[type=minecraft:item_display,tag={tag}.carried,{same_carrier}]
+""")
+
 	write_function(f"{root}/stop", f"""
+# Every arena, everywhere
 execute as @e[type=minecraft:ocelot,tag={tag}.rat] run function {root}/remove_rat
 kill @e[type=minecraft:item_display,tag={tag}.carried]
 kill @e[type=minecraft:item_display,tag={tag}.caged]
 scoreboard players reset * {tag}.carried
-scoreboard players set #{MODE}_caged {ns}.data 0
+scoreboard players set @e[type=minecraft:marker,tag={tag}.cage] {tag}.caged 0
 schedule clear {root}/tick
 """)
 

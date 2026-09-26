@@ -2,7 +2,7 @@
 # Imports
 import json
 
-from stewbeet import Mem, write_function
+from stewbeet import JsonDict, Mem, Predicate, set_json_encoder, write_function
 
 # Constants
 LAB: str = "modes/pr_stoupy"
@@ -26,6 +26,38 @@ def crt_text(text: str) -> str:
 	'{"text": "5", "color": "#01FE41"}'
 	"""
 	return json.dumps({"text": text, "color": CRT_COLOR}, ensure_ascii=False)
+
+
+def write_match_predicate(path: str, matches: dict[str, str]) -> str:
+	""" Write a predicate true when every objective of the entity equals its fake player, and return the selector argument using it
+
+	Args:
+		path:    Predicate path inside the project namespace
+		matches: Objective -> fake player (read in the data objective) it must be equal to
+	Returns:
+		The selector argument, ex: "predicate=survisland:modes/pr_stoupy/orbit/same_arena"
+	"""
+	ns: str = Mem.ctx.project_id
+	scores: JsonDict = {}
+	for objective, fake in matches.items():
+		bound: JsonDict = {"type": "minecraft:score", "target": {"type": "minecraft:fixed", "name": fake}, "score": f"{ns}.data"}
+		scores[objective] = {"min": bound, "max": bound}
+	Mem.ctx.data[ns].predicates[path] = set_json_encoder(Predicate({"condition": "minecraft:entity_scores", "entity": "this", "scores": scores}), max_level=-1)
+	return f"predicate={ns}:{path}"
+
+
+def copy_state(mode: str, names: tuple[str, ...], to_anchor: bool) -> str:
+	""" Commands copying the state of an arena between its anchor (@s) and the fake players the functions work on
+
+	>>> print(copy_state("pr_x", ("round",), to_anchor=False))
+	scoreboard players operation #pr_x_round survisland.data = @s survisland.pr_x.round
+	"""
+	ns: str = "survisland"
+	return "\n".join(
+		f"scoreboard players operation @s {ns}.{mode}.{name} = #{mode}_{name} {ns}.data" if to_anchor
+		else f"scoreboard players operation #{mode}_{name} {ns}.data = @s {ns}.{mode}.{name}"
+		for name in names
+	)
 
 
 def generate_give_star() -> None:

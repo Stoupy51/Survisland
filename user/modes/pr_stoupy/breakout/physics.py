@@ -57,27 +57,33 @@ def zone_motion(angle: int) -> tuple[int, int]:
 	return round(BALL_SPEED * math.sin(math.radians(angle))), round(BALL_SPEED * math.cos(math.radians(angle)))
 
 
-def main() -> None:
-	""" Write the ball tick, the brick hits, the bumper bounces and the bumper steering. """
-	generate_ball_tick()
+def main(same_arena: str, same_slot: str) -> None:
+	""" Write the ball tick, the brick hits, the bumper bounces and the bumper steering.
+
+	Args:
+		same_arena: Selector argument keeping the entities of the arena in #pr_breakout_arena
+		same_slot:  Selector argument keeping the entities of that arena and of the slot in #pr_breakout_slot
+	"""
+	generate_ball_tick(same_arena)
 	generate_hits()
-	generate_zones()
-	generate_steering()
+	generate_zones(same_arena)
+	generate_steering(same_arena, same_slot)
 
 
-def generate_ball_tick() -> None:
+def generate_ball_tick(same_arena: str) -> None:
 	""" Write the tick of one ball: read its state once, then look for a death or a bounce. """
 	ns: str = Mem.ctx.project_id
 	root: str = f"{ns}:{LAB}/breakout"
 	tag: str = f"{ns}.{MODE}"
 
 	write_function(f"{root}/play_tick", f"""
-execute as @e[type=minecraft:sulfur_cube,tag={tag}.ball] at @s run function {root}/ball_tick
+# Run as and at the corner of the arena, whose state is loaded in the fake players
+execute as @e[type=minecraft:sulfur_cube,tag={tag}.ball,{same_arena}] at @s run function {root}/ball_tick
 
 scoreboard players add #{MODE}_clock {ns}.data 1
 scoreboard players operation #{MODE}_step {ns}.data = #{MODE}_clock {ns}.data
 scoreboard players operation #{MODE}_step {ns}.data %= #{BUMPER_PERIOD} {ns}.data
-execute if score #{MODE}_step {ns}.data matches 0 as @a[tag={tag}] run function {root}/steer
+execute if score #{MODE}_step {ns}.data matches 0 as @a[tag={tag},{same_arena}] run function {root}/steer
 """)
 
 	write_function(f"{root}/ball_tick", f"""
@@ -143,7 +149,7 @@ execute if score #{MODE}_remaining {ns}.data matches ..0 run function {root}/lev
 """)
 
 
-def generate_zones() -> None:
+def generate_zones(same_arena: str) -> None:
 	""" Write the bumper bounce: the slice of the bumper under the ball picks the new direction. """
 	ns: str = Mem.ctx.project_id
 	root: str = f"{ns}:{LAB}/breakout"
@@ -158,7 +164,7 @@ def generate_zones() -> None:
 
 	write_function(f"{root}/bumper_hit", f"""
 scoreboard players set #{MODE}_zone {ns}.data -1
-execute as @e[type=minecraft:marker,tag={tag}.bumper] run function {root}/measure_bumper
+execute as @e[type=minecraft:marker,tag={tag}.bumper,{same_arena}] run function {root}/measure_bumper
 execute if score #{MODE}_zone {ns}.data matches -1 run return 0
 function {root}/apply_zone
 playsound minecraft:block.note_block.hat master @a ~ ~ ~ 1 1.4
@@ -185,7 +191,7 @@ execute store result entity @s Motion[1] double 0.001 run scoreboard players get
 """)
 
 
-def generate_steering() -> None:
+def generate_steering(same_arena: str, same_slot: str) -> None:
 	""" Write the bumper steps, a bumper only entering an empty cell so the bumpers block each other. """
 	ns: str = Mem.ctx.project_id
 	root: str = f"{ns}:{LAB}/breakout"
@@ -200,7 +206,7 @@ execute if predicate {ns}:input/left run scoreboard players remove #{MODE}_dir {
 execute if score #{MODE}_dir {ns}.data matches 0 run return 0
 execute if score #{MODE}_invert {ns}.data matches 1 run scoreboard players operation #{MODE}_dir {ns}.data *= #-1 {ns}.data
 scoreboard players operation #{MODE}_slot {ns}.data = @s {tag}
-execute as @e[type=minecraft:marker,tag={tag}.bumper,predicate={ns}:{LAB}/breakout/same_slot] at @s run function {root}/move_bumper
+execute as @e[type=minecraft:marker,tag={tag}.bumper,{same_slot}] at @s run function {root}/move_bumper
 """)
 
 	write_function(f"{root}/move_bumper", f"""
