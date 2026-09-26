@@ -86,7 +86,8 @@ void main() {
             texCoord0 = UV0 * vec2(1.0, 1.0 / 14.0);
         }
     } else {
-        isMarker = 0;
+        // A skin whose unused top left texel carries the "SVL" signature is drawn as a hologram
+        isMarker = all(lessThan(abs(_v0.rgb * 255.0 - vec3(83.0, 86.0, 76.0)), vec3(0.5))) ? 2 : 0;
         screenY = 0.0;
         gl_Position = ProjMat * ModelViewMat * vec4(Position, 1.0);
         texCoord0 = UV0;

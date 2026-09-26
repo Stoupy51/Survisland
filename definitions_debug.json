@@ -1181,102 +1181,6 @@
 		},
 		"skip_gives": false
 	},
-	"smolder_aurora": {
-		"id": "smolder_aurora",
-		"base_item": "minecraft:recovery_compass",
-		"recipes": [],
-		"components": {
-			"item_model": "survisland:smolder_aurora",
-			"item_name": {"text": "Smolder Aurora"},
-			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
-			"custom_data": {"survisland": {"smolder_aurora": true},"smithed": {"id": "survisland:smolder_aurora","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
-		},
-		"skip_gives": false
-	},
-	"smolder_blackhole": {
-		"id": "smolder_blackhole",
-		"base_item": "minecraft:recovery_compass",
-		"recipes": [],
-		"components": {
-			"item_model": "survisland:smolder_blackhole",
-			"item_name": {"text": "Smolder Blackhole"},
-			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
-			"custom_data": {"survisland": {"smolder_blackhole": true},"smithed": {"id": "survisland:smolder_blackhole","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
-		},
-		"skip_gives": false
-	},
-	"smolder_cobwebs": {
-		"id": "smolder_cobwebs",
-		"base_item": "minecraft:recovery_compass",
-		"recipes": [],
-		"components": {
-			"item_model": "survisland:smolder_cobwebs",
-			"item_name": {"text": "Smolder Cobwebs"},
-			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
-			"custom_data": {"survisland": {"smolder_cobwebs": true},"smithed": {"id": "survisland:smolder_cobwebs","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
-		},
-		"skip_gives": false
-	},
-	"smolder_crazy": {
-		"id": "smolder_crazy",
-		"base_item": "minecraft:recovery_compass",
-		"recipes": [],
-		"components": {
-			"item_model": "survisland:smolder_crazy",
-			"item_name": {"text": "Smolder Crazy"},
-			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
-			"custom_data": {"survisland": {"smolder_crazy": true},"smithed": {"id": "survisland:smolder_crazy","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
-		},
-		"skip_gives": false
-	},
-	"smolder_ocean": {
-		"id": "smolder_ocean",
-		"base_item": "minecraft:recovery_compass",
-		"recipes": [],
-		"components": {
-			"item_model": "survisland:smolder_ocean",
-			"item_name": {"text": "Smolder Ocean"},
-			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
-			"custom_data": {"survisland": {"smolder_ocean": true},"smithed": {"id": "survisland:smolder_ocean","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
-		},
-		"skip_gives": false
-	},
-	"smolder_stars": {
-		"id": "smolder_stars",
-		"base_item": "minecraft:recovery_compass",
-		"recipes": [],
-		"components": {
-			"item_model": "survisland:smolder_stars",
-			"item_name": {"text": "Smolder Stars"},
-			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
-			"custom_data": {"survisland": {"smolder_stars": true},"smithed": {"id": "survisland:smolder_stars","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
-		},
-		"skip_gives": false
-	},
-	"smolder_sunset": {
-		"id": "smolder_sunset",
-		"base_item": "minecraft:recovery_compass",
-		"recipes": [],
-		"components": {
-			"item_model": "survisland:smolder_sunset",
-			"item_name": {"text": "Smolder Sunset"},
-			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
-			"custom_data": {"survisland": {"smolder_sunset": true},"smithed": {"id": "survisland:smolder_sunset","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
-		},
-		"skip_gives": false
-	},
-	"smolder_tunnelcable": {
-		"id": "smolder_tunnelcable",
-		"base_item": "minecraft:recovery_compass",
-		"recipes": [],
-		"components": {
-			"item_model": "survisland:smolder_tunnelcable",
-			"item_name": {"text": "Smolder Tunnelcable"},
-			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
-			"custom_data": {"survisland": {"smolder_tunnelcable": true},"smithed": {"id": "survisland:smolder_tunnelcable","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
-		},
-		"skip_gives": false
-	},
 	"mariage_painting": {
 		"id": "mariage_painting",
 		"base_item": "minecraft:painting",
@@ -3080,6 +2984,66 @@
 			"rarity": "rare",
 			"item_model": "minecraft:music_disc_13",
 			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]]
+		},
+		"skip_gives": false
+	},
+	"black_hole": {
+		"id": "black_hole",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:black_hole",
+			"item_name": {"text": "Black Hole"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"black_hole": true},"smithed": {"id": "survisland:black_hole","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"rat_grey": {
+		"id": "rat_grey",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:rat_grey",
+			"item_name": {"text": "Rat Grey"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"rat_grey": true},"smithed": {"id": "survisland:rat_grey","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"rat_white": {
+		"id": "rat_white",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:rat_white",
+			"item_name": {"text": "Rat White"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"rat_white": true},"smithed": {"id": "survisland:rat_white","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"rat_brown": {
+		"id": "rat_brown",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:rat_brown",
+			"item_name": {"text": "Rat Brown"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"rat_brown": true},"smithed": {"id": "survisland:rat_brown","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"rat_mutant": {
+		"id": "rat_mutant",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:rat_mutant",
+			"item_name": {"text": "Rat Mutant"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"rat_mutant": true},"smithed": {"id": "survisland:rat_mutant","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
 		},
 		"skip_gives": false
 	},

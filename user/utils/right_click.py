@@ -31,6 +31,7 @@ execute if score #success {ns}.data matches 0 store success score #success {ns}.
 execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s equipment.offhand.components."minecraft:custom_data".{ns}.snuffer positioned ^ ^ ^2 as @p[gamemode=!spectator,distance=..3] at @s run function {ns}:utils/snuffer
 execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s SelectedItem.components."minecraft:custom_data".{ns}.coord_stick run function {ns}:utils/coord_stick
 execute if score #success {ns}.data matches 0 store success score #success {ns}.data if data entity @s equipment.offhand.components."minecraft:custom_data".{ns}.coord_stick run function {ns}:utils/coord_stick
+execute if score #success {ns}.data matches 0 store success score #success {ns}.data if items entity @s weapon.mainhand *[custom_data~{{{ns}:{{mirror_freeze:true}}}}] run function {ns}:modes/pr_stoupy/mirror/toggle_freeze
 
 # Reset score and tag
 scoreboard players reset @s {ns}.right_click
