@@ -176,7 +176,7 @@ def generate_catch() -> None:
 
 	json_content: JsonDict = {
 		"criteria": {"requirement": {"trigger": "minecraft:player_hurt_entity", "conditions": {"entity": [
-			{"condition": "minecraft:entity_properties", "entity": "this", "predicate": {"type": "minecraft:ocelot", "nbt": f'{{Tags:["{tag}.rat"]}}'}}
+			{"condition": "minecraft:entity_properties", "entity": "this", "predicate": {"entity_type": "minecraft:ocelot", "entity_tags": {"all_of": [f"{tag}.rat"]}}}
 		]}}},
 		"rewards": {"function": f"{root}/hit"},
 	}

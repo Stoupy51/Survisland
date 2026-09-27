@@ -8,13 +8,17 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
-							"nbt": "{Tags:[\"survisland.pr_orbit\"]}"
+							"entity_tags": {
+								"all_of": [
+									"survisland.pr_orbit"
+								]
+							}
 						}
 					}
 				],
 				"damage": {
 					"source_entity": {
-						"type": "minecraft:phantom"
+						"entity_type": "minecraft:phantom"
 					}
 				}
 			}

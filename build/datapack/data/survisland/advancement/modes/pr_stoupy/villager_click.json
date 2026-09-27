@@ -8,8 +8,12 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
-							"type": "minecraft:interaction",
-							"nbt": "{Tags:[\"survisland.pr_stoupy.villager\"]}"
+							"entity_type": "minecraft:interaction",
+							"entity_tags": {
+								"all_of": [
+									"survisland.pr_stoupy.villager"
+								]
+							}
 						}
 					}
 				]

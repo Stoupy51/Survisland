@@ -51,7 +51,7 @@ playsound minecraft:ui.toast.challenge_complete master @a[distance=..32]
 
 	json_content: JsonDict = {
 		"criteria": {"requirement": {"trigger": "minecraft:player_interacted_with_entity", "conditions": {"entity": [
-			{"condition": "minecraft:entity_properties", "entity": "this", "predicate": {"type": "minecraft:interaction", "nbt": f'{{Tags:["{tag}"]}}'}}
+			{"condition": "minecraft:entity_properties", "entity": "this", "predicate": {"entity_type": "minecraft:interaction", "entity_tags": {"all_of": [tag]}}}
 		]}}},
 		"rewards": {"function": f"{root}/talk"},
 	}

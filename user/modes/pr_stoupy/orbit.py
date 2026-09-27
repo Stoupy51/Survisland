@@ -461,8 +461,8 @@ kill @s
 
 	json_content: JsonDict = {
 		"criteria": {"requirement": {"trigger": "minecraft:entity_hurt_player", "conditions": {
-			"player": [{"condition": "minecraft:entity_properties", "entity": "this", "predicate": {"nbt": f'{{Tags:["{tag}"]}}'}}],
-			"damage": {"source_entity": {"type": "minecraft:phantom"}},
+			"player": [{"condition": "minecraft:entity_properties", "entity": "this", "predicate": {"entity_tags": {"all_of": [tag]}}}],
+			"damage": {"source_entity": {"entity_type": "minecraft:phantom"}},
 		}}},
 		"rewards": {"function": f"{root}/phantom_hit"},
 	}

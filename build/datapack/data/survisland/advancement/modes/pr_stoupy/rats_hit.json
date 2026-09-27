@@ -8,8 +8,12 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
-							"type": "minecraft:ocelot",
-							"nbt": "{Tags:[\"survisland.pr_rats.rat\"]}"
+							"entity_type": "minecraft:ocelot",
+							"entity_tags": {
+								"all_of": [
+									"survisland.pr_rats.rat"
+								]
+							}
 						}
 					}
 				]
