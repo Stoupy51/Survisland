@@ -1,6 +1,7 @@
 
-# Images of the rat (only drawn from 8 down to GO)
+# Images of the rat (only drawn from 8 down to GO): 1 for the high resolution ones, 2 for the alternative drawings
 execute if score #compteur_images survisland.data matches 1 if score #compteur survisland.data matches ..8 run return run function survisland:utils/compteur_images
+execute if score #compteur_images survisland.data matches 2 if score #compteur survisland.data matches ..8 run return run function survisland:utils/compteur_images_alt
 
 # Text
 execute if score #compteur survisland.data matches 4.. run title @a subtitle [{"score":{"name":"#compteur","objective":"survisland.data"}},{"text":"..."}]
