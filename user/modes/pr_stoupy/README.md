@@ -90,7 +90,7 @@ Setup, une seule fois, positionné sur le coin bas gauche (la première case de 
 Le terrain s'étend vers +axis et vers le haut. Relancer avec `invert:1` si gauche et droite sont inversées pour les joueurs :
 
 ```
-execute positioned 100 64 200 run function survisland:modes/pr_stoupy/breakout/here/setup {width:24,height:16,axis:"x",invert:0}
+execute positioned 100 64 200 run function survisland:modes/pr_stoupy/breakout/here/setup {width:13,height:20,axis:"z",invert:0}
 ```
 
 Départ, command block répétitif à 8 blocs ou moins des joueurs :
@@ -190,6 +190,18 @@ Se donner une étoile bleue :
 ```
 loot give @s loot survisland:i/blue_star
 ```
+
+## Remise à zéro (développement)
+
+Arrête tous les trials dans le rayon et rend leur état aux joueurs (corps, attributs, items, tags).
+Supprime ensuite toutes les entités du labo dans ce rayon, setup compris : villageois, marqueurs, cages, rats, écran, trou noir.
+Rien ne sort du rayon, donc la deuxième copie n'est pas touchée si elle est plus loin :
+
+```
+function survisland:modes/pr_stoupy/here/clear {radius:100}
+```
+
+Les salles sont ensuite à refaire avec les commandes de setup ci-dessus.
 
 ## Textes CRT
 

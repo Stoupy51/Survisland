@@ -5,6 +5,7 @@
 #
 # @within	survisland:modes/pr_stoupy/breakout/here/stop [ as @n[type=minecraft:marker,tag=survisland.pr_breakout.corner] ]
 #			survisland:modes/pr_stoupy/breakout/stop [ as @e[type=minecraft:marker,tag=survisland.pr_breakout.corner] ]
+#			survisland:modes/pr_stoupy/here/clear
 #
 
 function survisland:modes/pr_stoupy/breakout/load_arena

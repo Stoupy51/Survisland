@@ -48,17 +48,28 @@ Il suffit d'éloigner les copies de plus de 48 blocs (regroupement des cages de 
 	rats/here/spawn_rats {count:16,radius:10}   des rats au hasard, posés au sol dans le rayon
 	rats/here/stop                              retire les rats de la salle, en liberté, portés ou en cage
 
+# Remise à zéro pendant le développement
+	here/clear {radius:100}                     arrête tout dans le rayon, puis supprime toutes les entités du labo, setup compris
+
 # Textes CRT
 Tout texte de couleur #01FE41 (tellraw, title, text display) est dessiné comme un vieil écran cathodique par le shader.
 """
 # ruff: noqa: E501
 # Imports
+from stewbeet import Mem, write_function
+
 from .breakout import main as generate_breakout
+from .breakout.physics import MODE as BREAKOUT_MODE
+from .duo import DUO
 from .duo import main as generate_duo
+from .mirror import MODE as MIRROR_MODE
 from .mirror import main as generate_mirror
+from .orbit import MARKERS as ORBIT_MARKERS
+from .orbit import MODE as ORBIT_MODE
 from .orbit import main as generate_orbit
+from .rats import MODE as RATS_MODE
 from .rats import main as generate_rats
-from .shared import generate_give_star
+from .shared import LAB, generate_give_star
 from .villager import main as generate_villager
 
 
@@ -72,4 +83,34 @@ def main() -> None:
 	generate_breakout()
 	generate_orbit()
 	generate_rats()
+	generate_clear()
+
+
+def generate_clear() -> None:
+	""" Write the reset of everything the lab put within $(radius) blocks, players released first. """
+	ns: str = Mem.ctx.project_id
+	root: str = f"{ns}:{LAB}"
+	duo, mirror, breakout, orbit, rats = (f"{ns}.{mode}" for mode in (DUO.id, MIRROR_MODE, BREAKOUT_MODE, ORBIT_MODE, RATS_MODE))
+	entity_tags: list[str] = [
+		f"{duo}.body", f"{duo}.seat",
+		f"{mirror}.body", f"{mirror}.anchor",
+		f"{breakout}.corner", f"{breakout}.screen", f"{breakout}.bumper", f"{breakout}.ball",
+		f"{orbit}.hole", *(f"{orbit}.{name}" for name in ORBIT_MARKERS), f"{orbit}.sky", f"{orbit}.fragment", f"{orbit}.phantom",
+		f"{rats}.rat", f"{rats}.model", f"{rats}.cage", f"{rats}.carried", f"{rats}.caged",
+		f"{ns}.pr_stoupy.villager",
+	]
+	kills: str = "\n".join(f"$kill @e[tag={entity_tag},distance=..$(radius)]" for entity_tag in entity_tags)
+
+	write_function(f"{root}/here/clear", f"""
+# The stops of each trial give the players their state back, the kills then take everything else, setup included
+$execute as @e[type=minecraft:mannequin,tag={duo}.body,distance=..$(radius)] at @s run function {root}/duo/body/stop
+$execute as @a[tag={mirror},distance=..$(radius)] at @s run function {root}/mirror/here/stop
+$execute as @e[type=minecraft:marker,tag={breakout}.corner,distance=..$(radius)] run function {root}/breakout/stop_corner
+$execute as @e[type=minecraft:marker,tag={orbit}.hole,distance=..$(radius)] run function {root}/orbit/stop_hole
+$execute as @e[type=minecraft:marker,tag={rats}.cage,distance=..$(radius)] at @s run function {root}/rats/here/stop
+
+{kills}
+$tellraw @a[distance=..16] {{"text":"Laboratoire : tout est supprimé à $(radius) blocs.","color":"green"}}
+""")
+
 

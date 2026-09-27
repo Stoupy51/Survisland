@@ -5,6 +5,7 @@
 #
 # @within	survisland:modes/pr_stoupy/duo/here/stop [ at @s ]
 #			survisland:modes/pr_stoupy/duo/stop [ at @s ]
+#			survisland:modes/pr_stoupy/here/clear
 #
 
 # Single scan of the group: every player is released, tags included

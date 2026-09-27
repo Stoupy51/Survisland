@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/mirror/here/stop
 #
-# @within	???
+# @within	survisland:modes/pr_stoupy/here/clear
 #
 
 # The session of the nearest player of the trial
