@@ -1,12 +1,12 @@
 
 #> survisland:modes/pr_stoupy/breakout/here/setup
 #
-# @within	???
+# @within	survisland:modes/pr_stoupy/breakout/here/example {width:$(width),height:$(height),axis:"$(axis)",invert:0}
 #
 # @args		width (unknown)
 #			height (unknown)
-#			invert (unknown)
-#			axis (unknown)
+#			invert (int)
+#			axis (string)
 #
 
 # Positioned on the bottom left cell of the field, width and height in blocks, axis along which the field extends

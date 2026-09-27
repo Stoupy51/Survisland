@@ -8,6 +8,8 @@
 #			survisland:modes/pr_stoupy/breakout/start [ as @n[type=minecraft:marker,tag=survisland.pr_breakout.corner] ]
 #			survisland:modes/pr_stoupy/breakout/next_level
 #			survisland:modes/pr_stoupy/breakout/stop_corner
+#			survisland:modes/pr_stoupy/breakout/example/build
+#			survisland:modes/pr_stoupy/breakout/example/bricks
 #
 
 # @s is a corner

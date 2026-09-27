@@ -7,11 +7,45 @@ Les commandes sont écrites pour un command block (sans `/`). Dans le chat, ajou
 Les fonctions `here/` et `start` agissent sur la salle la plus proche du point d'exécution.
 Les `stop` sans `here/` agissent sur toutes les copies à la fois, ils servent au dépannage.
 
+## Avant de commencer
+
+1. Build depuis la racine du repo avec `stewbeet`. Le datapack est copié tout seul dans `saves/s31/datapacks`, puis `/reload` en jeu.
+2. Le resource pack (`build/resource_pack`, copié dans `resource_pack_shortcut`) doit être actif chez tout le monde.
+	Sans lui, pas d'écran CRT, pas de trou noir, et les rats sont des blocs de pierre.
+3. Toi en créatif pour tout poser. Les joueurs en survie ou aventure : les `start` ignorent les joueurs en créatif et en spectateur.
+4. Les command blocks doivent être activés (`enable-command-block=true` sur un serveur).
+
+Deux réglages de command block reviennent partout :
+- **Répétitif, toujours actif** pour les `start` et `duo/here/stop`. Ils ne font rien tant qu'il n'y a pas assez de joueurs.
+- **Impulsion, redstone requise** pour les récompenses, branché sur une plaque de pression, un bouton ou la porte d'un puzzle.
+
+## Setup d'une copie depuis zéro
+
+Dans l'ordre, pour une copie de 100x100 :
+
+1. Construire la maison de Stoupy, l'entrée du labo, les 5 salles et la salle du villageois. Ce qu'il faut dans chaque salle est détaillé dans sa section.
+	- Duos : un parcours pour les mannequins, une arrivée, puis un puzzle redstone.
+	- Miroirs : une salle symétrique autour d'un plan.
+	- Casse-briques : un mur de jeu avec des cabines de joueurs, ou le terrain d'exemple.
+	- Orbite : une grande salle avec un plafond haut.
+	- Rats : une salle fermée avec des cages.
+2. Poser le villageois.
+3. Pour chaque trial, poser les marqueurs de setup puis les command blocks de départ et de récompense.
+4. Tester (voir [Tester en solo](#tester-en-solo)). Pour tout recommencer, `here/clear` supprime les entités du labo dans un rayon.
+5. Faire la deuxième copie.
+
+Conseil : mets chaque commande de setup dans un command block impulsion avec un bouton, en coordonnées relatives (`~`).
+Refaire le setup, après un `here/clear` ou dans la deuxième copie, revient alors à appuyer sur les boutons.
+
 ## Deux copies
 
 Chaque copie d'une salle est une arène indépendante, tout est relatif à ses marqueurs.
 Deux copies de 100x100 séparées d'environ 200 blocs ne se voient jamais : le plus grand rayon de recherche est de 48 blocs (regroupement des cages de rats).
-Pour la deuxième copie, refaire exactement le même setup dans ses salles.
+
+Pour la deuxième copie, cloner **les blocs seulement** : `/clone`, ou des structure blocks avec "Inclure les entités" désactivé.
+Les marqueurs portent l'identifiant de leur arène, une copie de marqueurs ferait jouer les deux copies sur la même arène.
+Refaire ensuite le setup dans la copie. Les command blocks clonés sont déjà en place, et le sont aussi les boutons de setup s'ils sont en relatif.
+`/clone` est limité à 32768 blocs par commande, il en faut donc plusieurs pour 100x100.
 
 ## Villageois
 
@@ -25,7 +59,10 @@ Un clic droit dessus avec les 5 étoiles termine l'épreuve.
 
 ## 1. Duos (4 joueurs)
 
-Départ, command block répétitif. Il prend les 4 joueurs à moins de 3 blocs et forme 2 paires par distance :
+À construire : une zone de départ, un parcours pour 2 mannequins, une arrivée, puis un puzzle redstone dont la porte déclenche la récompense.
+
+Départ, command block répétitif. Il prend les 4 joueurs à moins de 3 blocs et forme 2 paires par distance.
+Chaque mannequin apparaît sur le Joueur 1 de sa paire :
 
 ```
 function survisland:modes/pr_stoupy/duo/start
@@ -37,7 +74,7 @@ Arrivée, command block répétitif là où le mannequin doit arriver. Il rend l
 function survisland:modes/pr_stoupy/duo/here/stop
 ```
 
-Récompense, command block impulsion déclenché par la porte du puzzle redstone. L'étoile va au joueur le plus proche :
+Récompense, command block impulsion déclenché par la porte du puzzle redstone. L'étoile va au joueur le plus proche, à 5 blocs au plus :
 
 ```
 function survisland:modes/pr_stoupy/duo/here/reward
@@ -51,7 +88,11 @@ function survisland:modes/pr_stoupy/duo/here/shuffle_slots
 
 ## 2. Miroirs (2 joueurs)
 
-Départ, command block répétitif posé sur le plan du miroir. `axis:"x"` inverse la coordonnée X (miroir perpendiculaire à X), `axis:"z"` pour l'autre sens :
+À construire : une salle coupée en deux par un plan vertical. Les joueurs marchent d'un côté, leurs reflets de l'autre.
+Le côté des reflets porte les murs, escaliers et plaques de pression du puzzle.
+
+Départ, command block répétitif posé sur le plan du miroir, 2 joueurs à moins de 3 blocs.
+`axis:"x"` inverse la coordonnée X (miroir perpendiculaire à X), `axis:"z"` pour l'autre sens :
 
 ```
 function survisland:modes/pr_stoupy/mirror/start {axis:"x"}
@@ -60,7 +101,7 @@ function survisland:modes/pr_stoupy/mirror/start {axis:"x"}
 Les joueurs reçoivent l'item "Figer le reflet" : clic droit pour figer ou libérer leur mannequin.
 Le mannequin subit murs, escaliers et plaques de pression, le puzzle repose sur le décalage accumulé pendant qu'il est figé.
 
-Sortie, command block impulsion. L'étoile va au joueur le plus proche, puis ses reflets disparaissent :
+Sortie, command block impulsion. L'étoile va au joueur le plus proche, à 5 blocs au plus, puis ses reflets disparaissent :
 
 ```
 function survisland:modes/pr_stoupy/mirror/here/reward
@@ -80,27 +121,57 @@ function survisland:modes/pr_stoupy/mirror/here/stop
 
 ## 3. Casse-briques (4 joueurs)
 
-Construction :
-- Un mur vertical. La rangée du bas reste vide, c'est la ligne des bumpers.
+### Terrain d'exemple
+
+Construit un terrain jouable complet et fait le setup, à lancer sur le coin bas gauche (la première case de la rangée des bumpers).
+Tous les blocs du terrain, du cadre, de la plateforme et des cabines sont remplacés, donc à lancer dans un endroit vide :
+
+```
+execute positioned 100 64 200 run function survisland:modes/pr_stoupy/breakout/here/example {width:20,height:13,axis:"z"}
+```
+
+Avec ces valeurs, le terrain occupe x=100, de z=200 à 212 et de y=64 à 83 :
+- Un cadre en pierre lisse autour, un fond en blackstone côté +x, une vitre côté -x.
+- 6 rangées de briques en diagonales rouges, bleu clair, vert clair et jaunes, sous une rangée du haut laissée vide.
+- Une plateforme à x=85 (15 blocs devant la vitre), sol à y=72 pour avoir les yeux au milieu du terrain.
+- 4 cabines 1x1 ouvertes en haut, de sol rouge, bleu clair, vert clair et jaune, de z=201 à 211. Les joueurs sautent dedans et ne peuvent plus en sortir.
+- Le command block répétitif de `breakout/start`, sous le milieu de la plateforme.
+
+Avec `axis:"x"`, le terrain s'étend vers +x, le fond est côté -z et les joueurs côté +z.
+La distance de la plateforme vaut 3/4 de la hauteur et le sol est à mi-hauteur moins 2, quelle que soit la taille choisie.
+
+Remettre les briques d'exemple dans le terrain le plus proche, par exemple entre deux niveaux, avant `here/next_level` :
+
+```
+function survisland:modes/pr_stoupy/breakout/here/example_level
+```
+
+### Construire son propre terrain
+
+- Un mur vertical. La rangée du bas reste vide, c'est la ligne des bumpers. Un sol dessous pour que la balle perdue s'arrête.
 - Au-dessus, les briques en concrete, laine, terracotta ou verre teinté, dans les couleurs des joueurs.
+	Le cadre et le fond ne doivent pas être de ces blocs colorés dans le plan du terrain, sinon ils comptent comme des briques.
 - Chaque joueur se tient sur un bloc de sa couleur, face au mur, enfermé dans une case 1x1.
 	Le datapack ne les bloque pas, et les touches gauche/droite qui dirigent le bumper déplaceraient aussi le joueur.
+- Le Joueur 1 est le plus proche du coin, son bumper est au début de la rangée.
 
-Setup, une seule fois, positionné sur le coin bas gauche (la première case de la rangée des bumpers).
-Le terrain s'étend vers +axis et vers le haut. Relancer avec `invert:1` si gauche et droite sont inversées pour les joueurs :
+Setup, une seule fois, positionné sur le coin bas gauche. Le terrain s'étend vers +axis et vers le haut.
+Relancer avec `invert:1` si gauche et droite sont inversées pour les joueurs :
 
 ```
-execute positioned 100 64 200 run function survisland:modes/pr_stoupy/breakout/here/setup {width:13,height:20,axis:"z",invert:0}
+execute positioned 100 64 200 run function survisland:modes/pr_stoupy/breakout/here/setup {width:20,height:13,axis:"z",invert:0}
 ```
 
-Départ, command block répétitif à 8 blocs ou moins des joueurs :
+Départ, command block répétitif à 8 blocs ou moins des 4 joueurs :
 
 ```
 function survisland:modes/pr_stoupy/breakout/start
 ```
 
+### Pendant la partie
+
 Un niveau est fini quand il ne reste aucune brique des couleurs jouées.
-Cloner alors le niveau suivant dans le mur (structure block ou `clone`), puis lancer :
+Cloner alors le niveau suivant dans le mur (structure block, `clone` ou `here/example_level`), puis lancer :
 
 ```
 function survisland:modes/pr_stoupy/breakout/here/next_level
@@ -114,6 +185,7 @@ function survisland:modes/pr_stoupy/breakout/here/stop
 
 ## 4. Orbite (2 à 4 joueurs)
 
+À construire : une grande salle, avec un plafond assez haut pour les phantoms des rounds 2 et 3.
 À poser dans cet ordre, le trou noir d'abord.
 
 1. Le trou noir, un cube inversé géant rendu par le shader :
@@ -141,13 +213,15 @@ function survisland:modes/pr_stoupy/breakout/here/stop
 	function survisland:modes/pr_stoupy/orbit/start
 	```
 
-Prévoir un plafond assez haut pour les phantoms des rounds 2 et 3. Arrêter la partie de la salle la plus proche :
+Arrêter la partie de la salle la plus proche :
 
 ```
 function survisland:modes/pr_stoupy/orbit/here/stop
 ```
 
 ## 5. Rats de labo (1 à 8 joueurs)
+
+À construire : une salle fermée d'où les rats ne peuvent pas sortir, avec une ou plusieurs cages.
 
 1. Une cage, au centre de chaque cage construite, avant les rats. Les rats y sont posés en carré.
 	Toutes les cages d'une même salle doivent être à moins de 48 blocs les unes des autres.
@@ -173,6 +247,18 @@ Retirer tous les rats de la salle, en liberté, portés ou en cage :
 function survisland:modes/pr_stoupy/rats/here/stop
 ```
 
+## Remise à zéro (développement)
+
+Arrête tous les trials dans le rayon et rend leur état aux joueurs (corps, attributs, items, tags).
+Supprime ensuite toutes les entités du labo dans ce rayon, setup compris : villageois, marqueurs, cages, rats, écran, trou noir.
+Les blocs ne sont pas touchés. Rien ne sort du rayon, donc la deuxième copie n'est pas touchée si elle est plus loin :
+
+```
+function survisland:modes/pr_stoupy/here/clear {radius:100}
+```
+
+Les salles sont ensuite à refaire avec les commandes de setup ci-dessus.
+
 ## Dépannage global
 
 Chaque ligne arrête le trial partout, dans les deux copies :
@@ -191,18 +277,6 @@ Se donner une étoile bleue :
 loot give @s loot survisland:i/blue_star
 ```
 
-## Remise à zéro (développement)
-
-Arrête tous les trials dans le rayon et rend leur état aux joueurs (corps, attributs, items, tags).
-Supprime ensuite toutes les entités du labo dans ce rayon, setup compris : villageois, marqueurs, cages, rats, écran, trou noir.
-Rien ne sort du rayon, donc la deuxième copie n'est pas touchée si elle est plus loin :
-
-```
-function survisland:modes/pr_stoupy/here/clear {radius:100}
-```
-
-Les salles sont ensuite à refaire avec les commandes de setup ci-dessus.
-
 ## Textes CRT
 
 Tout texte de couleur `#01FE41` (tellraw, title, text display) est dessiné comme un vieil écran cathodique par le shader :
@@ -216,5 +290,5 @@ tellraw @a {"text":"Bienvenue au laboratoire","color":"#01FE41"}
 1. Rats : entièrement testable seul.
 2. Orbite : baisser temporairement `MIN_PLAYERS` à 1 dans `orbit.py`.
 3. Villageois : avec 5 étoiles données par le `loot give` ci-dessus.
-4. Casse-briques, miroirs, duos : seul le setup se vérifie (marqueurs, écran CRT, bumpers). Le gameplay demande de vrais joueurs ou des comptes alts.
-
+4. Casse-briques : le terrain d'exemple montre le cadre, l'écran CRT et les briques. Le gameplay demande 4 joueurs.
+5. Miroirs, duos : seul le setup se vérifie. Le gameplay demande de vrais joueurs ou des comptes alts.

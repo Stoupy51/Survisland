@@ -32,6 +32,9 @@ Il suffit d'éloigner les copies de plus de 48 blocs (regroupement des cages de 
 	breakout/start                              (répétitif) 4 joueurs à 8 blocs, lancement du niveau 1 du terrain le plus proche
 	breakout/here/next_level                    après avoir cloné le niveau suivant : balles remises, "Prochain niveau : 2/3"
 	breakout/here/stop
+	execute positioned <coin bas gauche> run function survisland:modes/pr_stoupy/breakout/here/example {width:13,height:20,axis:"z"}
+		Terrain d'exemple construit et configuré : cadre, vitre, briques, cabines des joueurs et command block de départ.
+	breakout/here/example_level                 remet les briques d'exemple dans le terrain le plus proche
 
 # 4. L'orbite (2 à 4 joueurs), à placer dans cet ordre, le trou noir d'abord
 	orbit/here/place_black_hole {scale:100}     cube inversé géant rendu par le shader du trou noir

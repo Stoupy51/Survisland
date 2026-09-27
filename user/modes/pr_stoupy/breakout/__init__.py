@@ -17,6 +17,7 @@ from stewbeet import JsonDict, Mem, write_function
 
 from ..shared import LAB, copy_state, crt_text, write_match_predicate
 from .colors import COLORS, color_tag, generate_color_tags, team_name, team_setup_lines
+from .example import main as generate_example
 from .physics import BUMPER_LENGTH, MODE, main as generate_physics
 
 # Constants
@@ -74,6 +75,7 @@ def main() -> None:
 	generate_countdown(arena)
 	generate_physics(arena.same, arena.same_slot)
 	generate_endings(arena)
+	generate_example()
 
 
 def generate_setup(arena: Arena) -> None:

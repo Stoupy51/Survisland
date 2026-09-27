@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/breakout/start
 #
-# @within	???
+# @within	string in survisland:modes/pr_stoupy/breakout/example/frame
 #
 
 # Safe to fire every tick: the nearest field starts once idle with 4 free players around this block
