@@ -21,5 +21,6 @@ scoreboard players operation #pr_rats_model survisland.data = #pr_rats_size surv
 scoreboard players operation #pr_rats_model survisland.data *= #5 survisland.data
 scoreboard players operation #pr_rats_offset survisland.data = #pr_rats_size survisland.data
 scoreboard players operation #pr_rats_offset survisland.data *= #-17 survisland.data
+execute store result score #pr_rats_hat survisland.data run random value 0..4
 execute on passengers run function survisland:modes/pr_stoupy/rats/resize_model
 

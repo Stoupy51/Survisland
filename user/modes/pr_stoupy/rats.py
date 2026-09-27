@@ -1,6 +1,6 @@
 """ Trial "Rats de labo": the lab rats escaped, anyone around can catch them and bring them back to a cage.
 
-A rat is an invisible ocelot, which runs away from players, carrying the item display of its model.
+A rat is an invisible ocelot, which runs away from players, carrying the item display of its model and of a random mini hat.
 Hitting a rat catches it: it then floats above the head of its catcher, up to RATS_PER_PLAYER at once.
 Standing next to a cage drops every carried rat inside. The last rat caged gives the star.
 Nobody is enrolled, so players can join or leave at any time, and more hands make it faster.
@@ -12,7 +12,7 @@ when summoned, so several copies of the lab each count their own rats. Place the
 # Imports
 from stewbeet import Advancement, JsonDict, Mem, set_json_encoder, write_function
 
-from user.database.pr_stoupy import RAT_VARIANTS
+from user.database.pr_stoupy import RAT_HATS, RAT_VARIANTS, add_rat_hats
 
 from .shared import LAB, write_match_predicate
 
@@ -63,6 +63,7 @@ def main() -> None:
 	tag: str = f"{Mem.ctx.project_id}.{MODE}"
 	same_arena: str = write_match_predicate(f"{LAB}/rats/same_arena", {f"{tag}.arena": f"#{MODE}_arena"})
 	same_carrier: str = write_match_predicate(f"{LAB}/rats/same_carrier", {f"{tag}.id": f"#{MODE}_id"})
+	add_rat_hats()
 	generate_placement()
 	generate_catch()
 	generate_tick(same_arena, same_carrier)
@@ -74,6 +75,7 @@ def generate_placement() -> None:
 	ns: str = Mem.ctx.project_id
 	root: str = f"{ns}:{LAB}/rats"
 	tag: str = f"{ns}.{MODE}"
+	pick_hat: str = "\n".join(f'execute if score #{MODE}_hat {ns}.data matches {index} run data modify entity @s item.components."minecraft:custom_model_data" set value {{strings:["{hat.name}"]}}' for index, hat in enumerate(RAT_HATS))
 	random_variant: str = "\n".join(f"execute if score #{MODE}_variant {ns}.data matches {index} run function {root}/summon/{variant}" for index, variant in enumerate(RAT_VARIANTS))
 
 	for variant in RAT_VARIANTS:
@@ -103,6 +105,7 @@ scoreboard players operation #{MODE}_model {ns}.data = #{MODE}_size {ns}.data
 scoreboard players operation #{MODE}_model {ns}.data *= #{MODEL_PER_PERCENT} {ns}.data
 scoreboard players operation #{MODE}_offset {ns}.data = #{MODE}_size {ns}.data
 scoreboard players operation #{MODE}_offset {ns}.data *= #{RIDE_OFFSET_PER_PERCENT} {ns}.data
+execute store result score #{MODE}_hat {ns}.data run random value 0..{len(RAT_HATS) - 1}
 execute on passengers run function {root}/resize_model
 """)
 
@@ -115,6 +118,7 @@ execute store result entity @s transformation.scale[0] float 0.001 run scoreboar
 execute store result entity @s transformation.scale[1] float 0.001 run scoreboard players get #{MODE}_model {ns}.data
 execute store result entity @s transformation.scale[2] float 0.001 run scoreboard players get #{MODE}_model {ns}.data
 execute store result entity @s transformation.translation[1] float 0.0001 run scoreboard players get #{MODE}_offset {ns}.data
+{pick_hat}
 """)
 
 	write_function(f"{root}/here/place_rat", f"""
