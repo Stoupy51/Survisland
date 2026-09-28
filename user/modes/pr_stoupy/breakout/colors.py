@@ -12,8 +12,6 @@ class BrickColor:
 	""" One dye color a player can stand on, with the blocks counting as its bricks. """
 	name: str
 	""" Dye name, prefix of every block of the color (ex: "light_blue"). """
-	display: str
-	""" How the players call it, used in "Joueur <display> est mort". """
 	team_color: str
 	""" Chat color of the team giving its glow to the ball. """
 
@@ -33,22 +31,22 @@ BRICK_SOUNDS: dict[str, str] = {
 """ Block kinds a brick of each color can be made of, the first one being the bumper, with the sound of their break. """
 
 COLORS: list[BrickColor] = [
-	BrickColor(name="white",      display="blanc",      team_color="white"),
-	BrickColor(name="orange",     display="orange",     team_color="gold"),
-	BrickColor(name="magenta",    display="magenta",    team_color="light_purple"),
-	BrickColor(name="light_blue", display="bleu clair", team_color="aqua"),
-	BrickColor(name="yellow",     display="jaune",      team_color="yellow"),
-	BrickColor(name="lime",       display="vert clair", team_color="green"),
-	BrickColor(name="pink",       display="rose",       team_color="light_purple"),
-	BrickColor(name="gray",       display="gris",       team_color="dark_gray"),
-	BrickColor(name="light_gray", display="gris clair", team_color="gray"),
-	BrickColor(name="cyan",       display="cyan",       team_color="dark_aqua"),
-	BrickColor(name="purple",     display="violet",     team_color="dark_purple"),
-	BrickColor(name="blue",       display="bleu",       team_color="blue"),
-	BrickColor(name="brown",      display="marron",     team_color="gold"),
-	BrickColor(name="green",      display="vert",       team_color="dark_green"),
-	BrickColor(name="red",        display="rouge",      team_color="red"),
-	BrickColor(name="black",      display="noir",       team_color="black"),
+	BrickColor(name="white",      team_color="white"),
+	BrickColor(name="orange",     team_color="gold"),
+	BrickColor(name="magenta",    team_color="light_purple"),
+	BrickColor(name="light_blue", team_color="aqua"),
+	BrickColor(name="yellow",     team_color="yellow"),
+	BrickColor(name="lime",       team_color="green"),
+	BrickColor(name="pink",       team_color="light_purple"),
+	BrickColor(name="gray",       team_color="dark_gray"),
+	BrickColor(name="light_gray", team_color="gray"),
+	BrickColor(name="cyan",       team_color="dark_aqua"),
+	BrickColor(name="purple",     team_color="dark_purple"),
+	BrickColor(name="blue",       team_color="blue"),
+	BrickColor(name="brown",      team_color="gold"),
+	BrickColor(name="green",      team_color="dark_green"),
+	BrickColor(name="red",        team_color="red"),
+	BrickColor(name="black",      team_color="black"),
 ]
 """ Every color, its index in this list being the color score of players and balls. """
 

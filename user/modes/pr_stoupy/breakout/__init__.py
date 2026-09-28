@@ -23,7 +23,6 @@ from ..shared import (
 	STORE_TP,
 	TELEPORT,
 	copy_state,
-	crt_text,
 	require_players,
 	write_match_predicate,
 )
@@ -48,6 +47,9 @@ LEVELS: int = 3
 
 SETUP_RADIUS: int = 16
 """ Radius around a new corner in which the previous corner of the same field is replaced. """
+
+MAX_SIZE: int = 64
+""" Most cells measured along the row or up the column of a field, for a frame left open or made of bricks. """
 
 START_DELAY: int = 20
 """ Ticks a start waits with fewer players than needed (solo mode), so players reaching the pads a tick apart all get in. """
@@ -274,6 +276,7 @@ scoreboard players set #{MODE}_slot_counter {ns}.data 0
 execute at {arena.corner} as @a[tag={tag}.new,sort=nearest] at @s run function {root}/enroll_player
 tag @a remove {tag}.new
 execute if entity @a[tag={tag},{arena.same},scores={{{tag}.color=-1}}] run return run function {root}/abort_colorless
+execute as {arena.corner} at @s rotated as @s run function {root}/measure_field
 execute as {arena.corner} at @s run function {root}/place_screen
 
 # Fewer players than needed only happens in solo mode, where every ball breaks every solo color
@@ -320,6 +323,28 @@ scoreboard players operation @s {tag}.arena = #{MODE}_arena {ns}.data
 
 	write_function(f"{root}/read_color", f"""
 {read_color}
+""")
+
+	write_function(f"{root}/measure_field", f"""
+# @s is the corner, at and rotated as itself: the field is measured up to its frame at every start, whatever the setup was given
+scoreboard players set #{MODE}_width {ns}.data 0
+function {root}/measure_row
+scoreboard players set #{MODE}_height {ns}.data 1
+execute positioned ~ ~1 ~ run function {root}/measure_column
+""")
+
+	write_function(f"{root}/measure_row", f"""
+# The bumper row is empty up to the frame, but for the barriers of bumpers left over
+execute unless block ~ ~ ~ #minecraft:air unless block ~ ~ ~ minecraft:barrier run return 0
+scoreboard players add #{MODE}_width {ns}.data 1
+execute if score #{MODE}_width {ns}.data matches ..{MAX_SIZE - 1} positioned ^ ^ ^1 run function {root}/measure_row
+""")
+
+	write_function(f"{root}/measure_column", f"""
+# The first column holds only air and bricks up to the frame
+execute unless block ~ ~ ~ #minecraft:air unless block ~ ~ ~ #{ns}:pr_stoupy/breakout/any run return 0
+scoreboard players add #{MODE}_height {ns}.data 1
+execute if score #{MODE}_height {ns}.data matches ..{MAX_SIZE - 1} positioned ~ ~1 ~ run function {root}/measure_column
 """)
 
 	write_function(f"{root}/forget_redstone", """
@@ -402,6 +427,8 @@ kill @e[type=minecraft:block_display,tag={tag}.bumper,{arena.same}]
 execute store result storage {ns}:{MODE} row.last int 1 run scoreboard players remove #{MODE}_width {ns}.data 1
 scoreboard players add #{MODE}_width {ns}.data 1
 execute at {arena.corner} rotated as {arena.corner} run function {root}/clear_row with storage {ns}:{MODE} row
+execute store result score #{MODE}_spread {ns}.data if entity {arena.players}
+scoreboard players operation #{MODE}_spread {ns}.data *= #2 {ns}.data
 execute as {arena.players} run function {root}/place_bumper
 """)
 
@@ -410,14 +437,14 @@ $fill ^ ^ ^ ^ ^ ^$(last) minecraft:air
 """)
 
 	write_function(f"{root}/place_bumper", f"""
-# First cell of the bumper of slot k: (2k - 1) * width / {2 * PLAYERS} - {BUMPER_LENGTH // 2}
+# First cell of the bumper of slot k among n players: (2k - 1) * width / 2n - {BUMPER_LENGTH // 2}
 scoreboard players operation #{MODE}_slot {ns}.data = @s {tag}
 scoreboard players operation #{MODE}_color {ns}.data = @s {tag}.color
 scoreboard players operation #{MODE}_offset {ns}.data = @s {tag}
 scoreboard players operation #{MODE}_offset {ns}.data *= #2 {ns}.data
 scoreboard players remove #{MODE}_offset {ns}.data 1
 scoreboard players operation #{MODE}_offset {ns}.data *= #{MODE}_width {ns}.data
-scoreboard players operation #{MODE}_offset {ns}.data /= #{2 * PLAYERS} {ns}.data
+scoreboard players operation #{MODE}_offset {ns}.data /= #{MODE}_spread {ns}.data
 execute store result storage {ns}:{MODE} bumper.offset int 1 run scoreboard players remove #{MODE}_offset {ns}.data {BUMPER_LENGTH // 2}
 execute at {arena.corner} rotated as {arena.corner} run function {root}/summon_bumper with storage {ns}:{MODE} bumper
 """)
@@ -452,9 +479,6 @@ schedule function {root}/tick 1t replace
 # @s is the corner of the field
 function {root}/load_arena
 scoreboard players add #{MODE}_level {ns}.data 1
-title {arena.players} times 10 40 10
-title {arena.players} subtitle {json.dumps([{"text": "Prochain niveau : ", "color": "gray"}, {"score": {"name": f"#{MODE}_level", "objective": f"{ns}.data"}, "color": "aqua"}, {"text": f"/{LEVELS}", "color": "aqua"}], ensure_ascii=False)}
-title {arena.players} title {json.dumps({"text": ""})}
 function {root}/begin_level
 function {root}/save_arena
 """)
@@ -481,15 +505,12 @@ execute if score #{MODE}_timer {ns}.data matches ..0 run function {root}/launch
 	for second in range(1, COUNTDOWN + 1):
 		write_function(f"{root}/count/{second}", f"""
 {arena.screen({"text": str(second), "color": "#01FE41"})}
-title {arena.players} times 0 15 5
-title {arena.players} title {crt_text(str(second))}
 execute as {arena.players} at @s run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 1 {0.8 + 0.1 * (COUNTDOWN - second):.1f}
 """)
 
 	write_function(f"{root}/launch", f"""
 scoreboard players set #{MODE}_state {ns}.data 2
 {arena.screen({"text": ""})}
-title {arena.players} title {crt_text("GO !")}
 execute as {arena.players} at @s run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 1 2
 execute as {arena.players} run function {root}/spawn_ball
 """)
@@ -524,12 +545,6 @@ def generate_endings(arena: Arena) -> None:
 	ns: str = Mem.ctx.project_id
 	root: str = f"{ns}:{LAB}/breakout"
 	tag: str = f"{ns}.{MODE}"
-	death_names: str = "\n".join(
-		f"execute if score @s {tag}.color matches {index} run item modify entity @s armor.body " + json.dumps({"function": "minecraft:set_name", "entity": "this", "target": "custom_name", "name": [
-			{"selector": f"@a[tag={tag},{arena.same_slot}]", "color": color.team_color}, {"text": " est mort !", "color": "#01FE41"},
-		]}, ensure_ascii=False)
-		for index, color in enumerate(COLORS)
-	)
 	cleared_title: list[JsonDict] = [{"text": "Niveau ", "color": "#01FE41"}, {"score": {"name": f"#{MODE}_level", "objective": f"{ns}.data"}, "color": "#01FE41"}, {"text": " terminé !", "color": "#01FE41"}]
 
 	write_function(f"{root}/death", f"""
@@ -539,9 +554,7 @@ tag @s add {tag}.lost
 execute if entity @e[type=minecraft:sulfur_cube,tag={tag}.ball,tag=!{tag}.lost,{arena.same_slot}] run return run kill @s
 
 # Its last ball: every ball of the arena is taken back and relaunched after the countdown
-# The name of its player is resolved on the ball's own item, since a text set on the screen is never resolved
-{death_names}
-data modify entity @n[type=minecraft:text_display,tag={tag}.screen,{arena.same}] text set from entity @s equipment.body.components."minecraft:custom_name"
+{arena.screen({"text": "Balle perdue !", "color": "#01FE41"})}
 kill {arena.balls}
 scoreboard players set #{MODE}_state {ns}.data 1
 scoreboard players set #{MODE}_timer {ns}.data {COUNTDOWN * 20 + MESSAGE_TICKS}

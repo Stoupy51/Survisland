@@ -201,6 +201,9 @@ Relancer avec `invert:1` si gauche et droite sont inversées pour les joueurs :
 execute positioned 100 64 200 run function survisland:modes/pr_stoupy/breakout/here/setup {width:20,height:13,axis:"z",invert:0}
 ```
 
+À chaque départ, la largeur et la hauteur sont remesurées jusqu'au cadre : la rangée des bumpers, vide, et la première colonne, faite d'air et de briques.
+Le cadre doit donc fermer ces deux lignes, et ne pas être fait d'un bloc de couleur (64 cases au plus sinon).
+
 Départ, command block répétitif à 16 blocs ou moins des 4 blocs d'émeraude.
 Le `tp` est le même pour tous : chaque bloc de couleur doit être au même décalage de son émeraude (5 blocs au-dessus avec `tp:"~ ~5 ~"`).
 La couleur est lue juste après le `tp`. Avec `tp:""`, le bloc lu est l'émeraude et la partie ne démarre pas.
