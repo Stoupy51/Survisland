@@ -146,7 +146,9 @@ execute anchored feet positioned as @s positioned ^ ^ ^8 rotated as @s positione
 
 	write_function(f"{root}/body/seat_tick", f"""
 # The seat is dropped on the point the caller computed, in front of the mannequin eyes
-tp @s ~ ~ ~
+# Never with tp: it teleports the rider too, and a teleported player has every click refused until its client answers
+execute summon minecraft:marker run function {root}/body/mark_seat
+data modify entity @s Pos set from storage {ns}:{mode.id} seat
 execute on passengers run function {root}/body/read_player
 execute on passengers unless entity @s[tag={tag}.look] run function {root}/body/aim
 
@@ -155,6 +157,11 @@ execute on passengers if entity @s[tag={tag}.look] rotated as @s as @n[type=mann
 
 # Tells the caller the seat was found, whether or not it carries anyone
 return 1
+""")
+
+	write_function(f"{root}/body/mark_seat", f"""
+data modify storage {ns}:{mode.id} seat set from entity @s Pos
+kill @s
 """)
 
 	write_function(f"{root}/body/find_seat", f"""

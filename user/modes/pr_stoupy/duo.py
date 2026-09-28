@@ -21,6 +21,7 @@ DUO: CrewMode = CrewMode(
 	profile="",
 	start_filter=f"distance=..{START_RADIUS},{ON_START_PAD}",
 	solo_flag=SOLO,
+	camera_distance=7,
 )
 """ Four players split into two pairs, each pair sharing one mannequin that wears the skin of its Joueur 1.
 Sprint and crawl sit on different slots since crawl is read on the sprint key.

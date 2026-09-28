@@ -9,6 +9,7 @@
 # Identity and state of this body
 tag @s add survisland.pr_stoupy_duo.body
 data merge entity @s {immovable:0b,hide_description:1b,Invulnerable:1b}
+attribute @s minecraft:camera_distance base set 7
 execute as @a[tag=survisland.pr_stoupy_duo.new,scores={survisland.pr_stoupy_duo=1},limit=1] run loot replace entity @n[type=mannequin,tag=survisland.pr_stoupy_duo.body,distance=..1] weapon.mainhand loot survisland:player_head
 data modify entity @s profile set from entity @s equipment.mainhand.components."minecraft:profile"
 item replace entity @s weapon.mainhand with minecraft:air

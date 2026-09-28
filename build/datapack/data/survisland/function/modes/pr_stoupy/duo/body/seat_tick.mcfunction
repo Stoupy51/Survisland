@@ -8,7 +8,9 @@
 #
 
 # The seat is dropped on the point the caller computed, in front of the mannequin eyes
-tp @s ~ ~ ~
+# Never with tp: it teleports the rider too, and a teleported player has every click refused until its client answers
+execute summon minecraft:marker run function survisland:modes/pr_stoupy/duo/body/mark_seat
+data modify entity @s Pos set from storage survisland:pr_stoupy_duo seat
 execute on passengers run function survisland:modes/pr_stoupy/duo/body/read_player
 execute on passengers unless entity @s[tag=survisland.pr_stoupy_duo.look] run function survisland:modes/pr_stoupy/duo/body/aim
 

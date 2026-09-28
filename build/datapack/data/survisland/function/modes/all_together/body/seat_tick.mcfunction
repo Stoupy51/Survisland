@@ -8,7 +8,9 @@
 #
 
 # The seat is dropped on the point the caller computed, in front of the mannequin eyes
-tp @s ~ ~ ~
+# Never with tp: it teleports the rider too, and a teleported player has every click refused until its client answers
+execute summon minecraft:marker run function survisland:modes/all_together/body/mark_seat
+data modify entity @s Pos set from storage survisland:all_together seat
 execute on passengers run function survisland:modes/all_together/body/read_player
 execute on passengers unless entity @s[tag=survisland.all_together.look] run function survisland:modes/all_together/body/aim
 

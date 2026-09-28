@@ -103,7 +103,7 @@ effect give @s minecraft:resistance infinite 255 true
 attribute @s minecraft:scale base set 0.0625
 attribute @s minecraft:gravity base set 0
 attribute @s minecraft:fall_damage_multiplier base set 0
-attribute @s minecraft:camera_distance base set 24
+attribute @s minecraft:camera_distance base set 32
 
 tellraw @s ["\\n",{{"nbt":"Survisland","storage":"{ns}:main","interpret":true}},{{"text":" Vous ne faites plus qu'un ! Chacun n'a qu'une partie des commandes."}}]
 """)
@@ -178,6 +178,7 @@ tag @a[tag={tag}.new] remove {tag}.new
 # Identity and state of this body
 tag @s add {tag}.body
 data merge entity @s {{immovable:0b,hide_description:1b,Invulnerable:1b}}
+attribute @s minecraft:camera_distance base set {mode.camera_distance}
 {skin}
 scoreboard players operation @s {tag}.group = #{mode.id}_group_counter {ns}.data
 scoreboard players operation #{mode.id}_group {ns}.data = @s {tag}.group
@@ -195,6 +196,7 @@ execute at @s run function {root}/body/setup_sensors
 	write_function(f"{root}/body/new_seat", f"""
 tag @s add {tag}.seat
 scoreboard players operation @s {tag}.group = #{mode.id}_group {ns}.data
+data merge entity @s {{teleport_duration:1}}
 """)
 
 	write_function(f"{root}/body/setup_sensors", f"""
