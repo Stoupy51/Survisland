@@ -196,7 +196,7 @@ execute at @s run function {root}/body/setup_sensors
 	write_function(f"{root}/body/new_seat", f"""
 tag @s add {tag}.seat
 scoreboard players operation @s {tag}.group = #{mode.id}_group {ns}.data
-data merge entity @s {{teleport_duration:1}}
+data merge entity @s {{teleport_duration:2}}
 """)
 
 	write_function(f"{root}/body/setup_sensors", f"""

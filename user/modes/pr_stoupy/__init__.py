@@ -70,17 +70,11 @@ from stewbeet import Mem, write_function
 
 from .breakout import main as generate_breakout
 from .breakout.physics import MODE as BREAKOUT_MODE
-from .doors import DOOR_TAG
-from .doors import main as generate_doors
-from .duo import DUO
-from .duo import main as generate_duo
-from .mirror import MODE as MIRROR_MODE
-from .mirror import main as generate_mirror
-from .orbit import MARKERS as ORBIT_MARKERS
-from .orbit import MODE as ORBIT_MODE
-from .orbit import main as generate_orbit
-from .rats import MODE as RATS_MODE
-from .rats import main as generate_rats
+from .doors import DOOR_TAG, main as generate_doors
+from .duo import DUO, main as generate_duo
+from .mirror import MODE as MIRROR_MODE, main as generate_mirror
+from .orbit import MARKERS as ORBIT_MARKERS, MODE as ORBIT_MODE, main as generate_orbit
+from .rats import MODE as RATS_MODE, main as generate_rats
 from .shared import LAB, generate_give_star, generate_lobby
 from .villager import main as generate_villager
 

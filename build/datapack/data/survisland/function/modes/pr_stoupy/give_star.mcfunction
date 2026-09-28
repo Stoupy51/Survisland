@@ -14,9 +14,9 @@
 
 # @s receives the star of the trial named $(trial)
 loot give @s loot survisland:i/blue_star
-$tellraw @a[distance=..48] ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Épreuve \"$(trial)\" réussie ! ","color":"green"},{"selector":"@s","color":"aqua"},{"text":" récupère une étoile bleue.","color":"green"}]
-title @a[distance=..48] times 10 50 20
-$title @a[distance=..48] subtitle {"text":"$(trial)","color":"aqua"}
-title @a[distance=..48] title {"text":"Étoile bleue obtenue !","color":"gold"}
-playsound minecraft:ui.toast.challenge_complete master @a[distance=..48]
+$tellraw @a[distance=..96] ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Expérience '$(trial)' réussie !\n","color":"green"},{"selector":"@a[gamemode=!spectator,distance=..12]","color":"aqua"},{"text":" récupère(nt) une étoile bleue.","color":"green"}]
+title @a[distance=..96] times 10 50 20
+$title @a[distance=..96] subtitle {"text":"$(trial)","color":"aqua"}
+title @a[distance=..96] title {"text":"Étoile bleue obtenue !","color":"gold"}
+execute as @a[distance=..96] at @s run playsound entity.player.levelup ambient @s ~ ~ ~ 0.5 0
 

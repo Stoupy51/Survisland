@@ -9,5 +9,5 @@
 
 tag @s add survisland.pr_stoupy_duo.seat
 scoreboard players operation @s survisland.pr_stoupy_duo.group = #pr_stoupy_duo_group survisland.data
-data merge entity @s {teleport_duration:1}
+data merge entity @s {teleport_duration:2}
 
