@@ -217,6 +217,8 @@ function survisland:modes/pr_stoupy/breakout/start {tp:"~ ~5 ~",redstone:"~ ~-2 
 Les bumpers font 2 blocs de large et 0.5 d'épaisseur : des barrières sous un block display de la couleur du joueur.
 Tous les 15 blocs cassés, la balle qui casse le 15e reçoit un bonus, en alternance : vitesse x2, puis une deuxième balle.
 Un joueur ne perd que quand sa dernière balle tombe.
+Le béton prend deux coups : le premier le change en verre teinté de sa couleur, le second le casse. La laine, la terre cuite et le verre cassent en un coup.
+Le joueur arrive par le `tp` au-dessus de sa case : sa couleur est lue sur le premier bloc de couleur dans les 3 blocs sous ses pieds.
 
 Un niveau est fini quand il ne reste aucune brique des couleurs jouées.
 Cloner alors le niveau suivant dans le mur (structure block, `clone` ou `here/example_level`), puis lancer :

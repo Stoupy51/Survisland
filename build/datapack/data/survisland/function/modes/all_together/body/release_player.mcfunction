@@ -10,7 +10,7 @@
 # Give this player its own body back
 execute if predicate survisland:riding run ride @s dismount
 effect clear @s minecraft:invisibility
-effect clear @s minecraft:resistance
+item replace entity @s armor.body with minecraft:air
 attribute @s minecraft:scale base reset
 attribute @s minecraft:gravity base reset
 attribute @s minecraft:fall_damage_multiplier base reset

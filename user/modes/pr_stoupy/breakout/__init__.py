@@ -275,6 +275,13 @@ scoreboard players operation @s {tag}.arena = #{MODE}_arena {ns}.data
 tag @s add {tag}
 attribute @s minecraft:movement_speed modifier add {FROZEN} -1 add_multiplied_total
 scoreboard players set @s {tag}.color -1
+# The tp may leave the player above its booth, so the first colored block down to 3 blocks under the feet counts
+function {root}/read_color
+execute if score @s {tag}.color matches -1 positioned ~ ~-1 ~ run function {root}/read_color
+execute if score @s {tag}.color matches -1 positioned ~ ~-2 ~ run function {root}/read_color
+""")
+
+	write_function(f"{root}/read_color", f"""
 {read_color}
 """)
 

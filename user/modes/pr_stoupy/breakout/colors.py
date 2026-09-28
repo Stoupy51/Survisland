@@ -59,11 +59,12 @@ def color_tag(color: BrickColor) -> str:
 
 
 def generate_color_tags() -> None:
-	""" Write one block tag per color, their union and the solo colors. """
+	""" Write one block tag per color, their union, the concretes taking two hits and the solo colors. """
 	ns: str = Mem.ctx.project_id
 	for color in COLORS:
 		Mem.ctx.data[ns].block_tags[f"pr_stoupy/breakout/{color.name}"] = set_json_encoder(BlockTag({"values": color.blocks}))
 	Mem.ctx.data[ns].block_tags["pr_stoupy/breakout/any"] = set_json_encoder(BlockTag({"values": [color_tag(color) for color in COLORS]}))
+	Mem.ctx.data[ns].block_tags["pr_stoupy/breakout/concrete"] = set_json_encoder(BlockTag({"values": [f"minecraft:{color.name}_concrete" for color in COLORS]}))
 	Mem.ctx.data[ns].block_tags["pr_stoupy/breakout/solo"] = set_json_encoder(BlockTag({"values": [color_tag(color) for color in SOLO_COLORS]}))
 
 

@@ -145,7 +145,12 @@ execute if score #{MODE}_solo {ns}.data matches 1 if block ~ ~ ~ #{ns}:pr_stoupy
 {own_color}
 """)
 
+	crack: str = "\n".join(f"execute if block ~ ~ ~ minecraft:{color.name}_concrete run return run setblock ~ ~ ~ minecraft:{color.name}_stained_glass" for color in COLORS)
 	write_function(f"{root}/break_brick", f"""
+# Concrete cracks into the stained glass of its color, broken by the next hit like any other brick
+execute if block ~ ~ ~ #{ns}:pr_stoupy/breakout/concrete run playsound minecraft:block.glass.place block @a ~ ~ ~ 1 1.4
+{crack}
+
 # destroy gives the real break particles and sound, its drop is removed right away
 setblock ~ ~ ~ minecraft:air destroy
 kill @e[type=minecraft:item,distance=..1.5]
