@@ -2,6 +2,7 @@
 
 #moj_import <minecraft:fog.glsl>
 #moj_import <minecraft:dynamictransforms.glsl>
+#moj_import <minecraft:globals.glsl>
 
 uniform sampler2D Sampler0;
 
@@ -41,6 +42,23 @@ void main() {
         }
         vec3 finalColor = mix(vec3(0.0), barColor.rgb, barColor.a);
         fragColor = vec4(finalColor, 1.0) * ColorModulator;
+        return;
+    }
+
+    if (isMarker == 2) {
+        vec4 texel = texture(Sampler0, texCoord0);
+        if (texel.a < 0.1) {
+            discard;
+        }
+
+        // Scanlines scrolling upward, every third screen row left out so the world shows through
+        float ticks = fract(GameTime) * 24000.0;
+        if (mod(gl_FragCoord.y - ticks * 0.5, 3.0) < 1.0) {
+            discard;
+        }
+        float flicker = 0.85 + 0.15 * sin(ticks * 1.7) * sin(ticks * 0.31);
+        float luma = dot(texel.rgb, vec3(0.299, 0.587, 0.114));
+        fragColor = vec4(vec3(0.25, 0.9, 1.0) * (0.45 + luma) * flicker, 1.0);
         return;
     }
 

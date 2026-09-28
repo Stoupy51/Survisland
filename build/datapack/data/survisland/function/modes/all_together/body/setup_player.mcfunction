@@ -12,7 +12,7 @@ effect give @s minecraft:resistance infinite 255 true
 attribute @s minecraft:scale base set 0.0625
 attribute @s minecraft:gravity base set 0
 attribute @s minecraft:fall_damage_multiplier base set 0
-attribute @s minecraft:camera_distance base set 24
+attribute @s minecraft:camera_distance base set 32
 
 tellraw @s ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Vous ne faites plus qu'un ! Chacun n'a qu'une partie des commandes."}]
 

@@ -1,0 +1,42 @@
+{
+	"condition": "minecraft:entity_scores",
+	"entity": "this",
+	"scores": {
+		"survisland.pr_breakout.arena": {
+			"min": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "#pr_breakout_arena"
+				},
+				"score": "survisland.data"
+			},
+			"max": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "#pr_breakout_arena"
+				},
+				"score": "survisland.data"
+			}
+		},
+		"survisland.pr_breakout": {
+			"min": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "#pr_breakout_slot"
+				},
+				"score": "survisland.data"
+			},
+			"max": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "#pr_breakout_slot"
+				},
+				"score": "survisland.data"
+			}
+		}
+	}
+}

@@ -25,6 +25,7 @@ from user.database.modules.lefortdesrats import main as make_lefortdesrats
 from user.database.modules.manoir import main as make_manoir
 from user.database.modules.traprace import main as make_traprace
 from user.database.nature import main as make_nature
+from user.database.pr_stoupy import main as make_pr_stoupy
 from user.database.scrolls import main as make_scrolls
 from user.database.sudokucraft import main as make_sudokucraft
 from user.database.tchoutchou import main as make_tchoutchou
@@ -54,6 +55,7 @@ def beet_default(ctx: Context) -> None:
 	make_lefortdesrats()
 	make_manoir()
 	make_traprace()
+	make_pr_stoupy()
 
 	# Generate custom disc records
 	generate_custom_records("auto")

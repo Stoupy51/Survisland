@@ -19,6 +19,7 @@ execute if score #success survisland.data matches 0 store success score #success
 execute if score #success survisland.data matches 0 store success score #success survisland.data if data entity @s equipment.offhand.components."minecraft:custom_data".survisland.snuffer positioned ^ ^ ^2 as @p[gamemode=!spectator,distance=..3] at @s run function survisland:utils/snuffer
 execute if score #success survisland.data matches 0 store success score #success survisland.data if data entity @s SelectedItem.components."minecraft:custom_data".survisland.coord_stick run function survisland:utils/coord_stick
 execute if score #success survisland.data matches 0 store success score #success survisland.data if data entity @s equipment.offhand.components."minecraft:custom_data".survisland.coord_stick run function survisland:utils/coord_stick
+execute if score #success survisland.data matches 0 store success score #success survisland.data if items entity @s weapon.mainhand *[custom_data~{survisland:{mirror_freeze:true}}] run function survisland:modes/pr_stoupy/mirror/toggle_freeze
 
 # Reset score and tag
 scoreboard players reset @s survisland.right_click

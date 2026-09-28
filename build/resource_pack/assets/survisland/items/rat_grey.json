@@ -1,0 +1,17 @@
+{
+	"model": {
+		"type": "minecraft:composite",
+		"models": [
+			{
+				"type": "minecraft:model",
+				"model": "survisland:item/rat_grey"
+			},
+			{
+				"type": "minecraft:select",
+				"property": "minecraft:custom_model_data",
+				"cases": [{"when": "top_hat","model": {"type": "minecraft:model","model": "survisland:item/rat_hat/top_hat"}},{"when": "party_hat","model": {"type": "minecraft:model","model": "survisland:item/rat_hat/party_hat"}},{"when": "crown","model": {"type": "minecraft:model","model": "survisland:item/rat_hat/crown"}},{"when": "chef_hat","model": {"type": "minecraft:model","model": "survisland:item/rat_hat/chef_hat"}},{"when": "wizard_hat","model": {"type": "minecraft:model","model": "survisland:item/rat_hat/wizard_hat"}}],
+				"fallback": {"type": "minecraft:empty"}
+			}
+		]
+	}
+}

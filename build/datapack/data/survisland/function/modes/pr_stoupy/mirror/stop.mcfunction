@@ -1,0 +1,13 @@
+
+#> survisland:modes/pr_stoupy/mirror/stop
+#
+# @within	survisland:modes/pr_stoupy/mirror/tick
+#
+
+# Every session, everywhere
+kill @e[type=mannequin,tag=survisland.pr_mirror.body]
+kill @e[type=minecraft:marker,tag=survisland.pr_mirror.anchor]
+clear @a[tag=survisland.pr_mirror] *[custom_data~{survisland:{mirror_freeze:true}}]
+tag @a remove survisland.pr_mirror
+schedule clear survisland:modes/pr_stoupy/mirror/tick
+

@@ -52,10 +52,6 @@ def main() -> None:
 			Item(id="blockguessr_map", base_item="minecraft:carrot_on_a_stick", override_model={"parent":"item/generated"})
 			continue
 
-	# Add smolder shader textures
-	for item in [x for x in textures if "smolder_" in x]:
-		Item(id=item, override_model={"parent":"minecraft:block/cube_all"})
-
 	# Add paintings 4x4
 	for item in ("mariage_painting", "knights_painting", "koko_painting", "fusoya_painting", "hamelin_painting", "cadre_m4_puni", "cadre_photo_artyu", "cadre_photo_banga", "cadre_photo_leon", "cadre_photo_mega", "cadre_photo_ona", "cadre_photo_rox", "cadre_tata_cookie", "cadre_tata_marcus_massage", "cadre_tata_marcus", "cadre_tata_saut", "cadre_tata_tue", "cadre_justeprix"):
 		Painting(id=item, painting_data=PaintingData(
@@ -82,3 +78,4 @@ def main() -> None:
 			width=4,
 			height=3
 		))
+

@@ -12,7 +12,7 @@ scoreboard players set @s survisland.all_together.phase 2
 scoreboard players operation #all_together_group survisland.data = @s survisland.all_together.group
 
 # Single scan of the group: every player is dealt its own command set, then put back on the right vehicle
-execute as @a[tag=survisland.all_together,distance=..50] if score @s survisland.all_together.group = #all_together_group survisland.data run function survisland:modes/all_together/body/deal/fort
+execute as @a[tag=survisland.all_together,predicate=survisland:modes/all_together/same_group,distance=..50] run function survisland:modes/all_together/body/deal/fort
 function survisland:modes/all_together/body/remount
 
 # The help is read by the whole group and by anyone watching them

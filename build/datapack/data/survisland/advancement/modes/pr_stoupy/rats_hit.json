@@ -1,0 +1,26 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"entity_type": "minecraft:ocelot",
+							"entity_tags": {
+								"all_of": [
+									"survisland.pr_rats.rat"
+								]
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "survisland:modes/pr_stoupy/rats/hit"
+	}
+}

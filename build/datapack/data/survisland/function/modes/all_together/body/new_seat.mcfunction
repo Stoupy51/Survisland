@@ -9,4 +9,5 @@
 
 tag @s add survisland.all_together.seat
 scoreboard players operation @s survisland.all_together.group = #all_together_group survisland.data
+data merge entity @s {teleport_duration:2}
 

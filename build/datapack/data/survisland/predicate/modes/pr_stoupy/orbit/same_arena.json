@@ -1,0 +1,24 @@
+{
+	"condition": "minecraft:entity_scores",
+	"entity": "this",
+	"scores": {
+		"survisland.pr_orbit.arena": {
+			"min": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "#pr_orbit_arena"
+				},
+				"score": "survisland.data"
+			},
+			"max": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "#pr_orbit_arena"
+				},
+				"score": "survisland.data"
+			}
+		}
+	}
+}
