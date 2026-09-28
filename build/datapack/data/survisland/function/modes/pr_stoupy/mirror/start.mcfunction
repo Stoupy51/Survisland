@@ -25,6 +25,7 @@ scoreboard objectives add survisland.pr_mirror.frozen dummy
 scoreboard objectives add survisland.pr_mirror.moving dummy
 scoreboard objectives add survisland.pr_mirror.yaw dummy
 scoreboard objectives add survisland.pr_mirror.pitch dummy
+scoreboard objectives add survisland.pr_mirror.sneak dummy
 
 # The mirror plane goes through this block, normal to the given axis
 $data modify storage survisland:pr_mirror axis set value "$(axis)"

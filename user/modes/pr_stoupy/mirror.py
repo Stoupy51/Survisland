@@ -58,7 +58,7 @@ def generate_start(same_pair: str) -> None:
 	root: str = f"{ns}:{LAB}/mirror"
 	tag: str = f"{ns}.{MODE}"
 	free_player: str = f"tag=!{tag},distance=..{START_RADIUS},{ON_START_PAD},gamemode=!creative,gamemode=!spectator"
-	objectives: str = "\n".join(f"scoreboard objectives add {tag}{suffix} dummy" for suffix in ("", ".session", ".x", ".y", ".z", ".plane_x", ".plane_z", ".flip_x", ".flip_z", ".frozen", ".moving", ".yaw", ".pitch"))
+	objectives: str = "\n".join(f"scoreboard objectives add {tag}{suffix} dummy" for suffix in ("", ".session", ".x", ".y", ".z", ".plane_x", ".plane_z", ".flip_x", ".flip_z", ".frozen", ".moving", ".yaw", ".pitch", ".sneak"))
 
 	write_function(f"{root}/start", f"""
 # Safe to fire every tick: one session per command block, and only with two free players on the start pads
@@ -129,6 +129,7 @@ scoreboard players operation @s {tag} = #{MODE}_slot_counter {ns}.data
 scoreboard players operation @s {tag}.session = #{MODE}_session {ns}.data
 scoreboard players set @s {tag}.frozen 0
 scoreboard players set @s {tag}.moving 0
+scoreboard players set @s {tag}.sneak 0
 
 # Same skin as its player, borrowed through a player head
 execute as @a[tag={tag}.new,limit=1] run loot replace entity @n[type=mannequin,tag={tag}.fresh] weapon.mainhand loot {PLAYER_HEAD_LOOT_TABLE}
@@ -222,6 +223,7 @@ scoreboard players operation #{MODE}_yaw {ns}.data = @s bs.rot.h
 scoreboard players operation #{MODE}_pitch {ns}.data = @s bs.rot.v
 execute if score @s {tag}.flip_x matches -1 run scoreboard players operation #{MODE}_yaw {ns}.data *= #-1 {ns}.data
 execute if score @s {tag}.flip_z matches -1 run function {root}/reflect_yaw_z
+execute store success score #{MODE}_sneak {ns}.data if entity @s[predicate={ns}:is_sneaking]
 
 execute as @e[type=mannequin,tag={tag}.body,{same_pair}] run function {root}/drive
 """)
@@ -237,6 +239,9 @@ execute if score @s {tag}.frozen matches 1 run return 0
 # A rise starting from the ground is a jump, gravity handles the rest of the arc
 execute if score #{MODE}_dy {ns}.data matches {JUMP_TRIGGER}.. if predicate {ns}:on_ground run data modify entity @s Motion[1] set value 0.42d
 
+# Crouch or stand up only when the player just did
+execute unless score #{MODE}_sneak {ns}.data = @s {tag}.sneak run function {root}/update_pose
+
 # Turn only when the aim changed
 execute unless score #{MODE}_yaw {ns}.data = @s {tag}.yaw run function {root}/aim
 execute unless score #{MODE}_pitch {ns}.data = @s {tag}.pitch run function {root}/aim
@@ -249,6 +254,12 @@ execute if score #{MODE}_moving {ns}.data matches 0 if score @s {tag}.moving mat
 scoreboard players operation @s {tag}.moving = #{MODE}_moving {ns}.data
 execute store result entity @s Motion[0] double 0.001 run scoreboard players get #{MODE}_dx {ns}.data
 execute store result entity @s Motion[2] double 0.001 run scoreboard players get #{MODE}_dz {ns}.data
+""")
+
+	write_function(f"{root}/update_pose", f"""
+scoreboard players operation @s {tag}.sneak = #{MODE}_sneak {ns}.data
+execute if score #{MODE}_sneak {ns}.data matches 0 run data modify entity @s pose set value "standing"
+execute if score #{MODE}_sneak {ns}.data matches 1 run data modify entity @s pose set value "crouching"
 """)
 
 	write_function(f"{root}/aim", f"""

@@ -11,6 +11,9 @@ execute if score @s survisland.pr_mirror.frozen matches 1 run return 0
 # A rise starting from the ground is a jump, gravity handles the rest of the arc
 execute if score #pr_mirror_dy survisland.data matches 100.. if predicate survisland:on_ground run data modify entity @s Motion[1] set value 0.42d
 
+# Crouch or stand up only when the player just did
+execute unless score #pr_mirror_sneak survisland.data = @s survisland.pr_mirror.sneak run function survisland:modes/pr_stoupy/mirror/update_pose
+
 # Turn only when the aim changed
 execute unless score #pr_mirror_yaw survisland.data = @s survisland.pr_mirror.yaw run function survisland:modes/pr_stoupy/mirror/aim
 execute unless score #pr_mirror_pitch survisland.data = @s survisland.pr_mirror.pitch run function survisland:modes/pr_stoupy/mirror/aim

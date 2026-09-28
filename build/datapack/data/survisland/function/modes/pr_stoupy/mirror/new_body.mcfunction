@@ -13,6 +13,7 @@ scoreboard players operation @s survisland.pr_mirror = #pr_mirror_slot_counter s
 scoreboard players operation @s survisland.pr_mirror.session = #pr_mirror_session survisland.data
 scoreboard players set @s survisland.pr_mirror.frozen 0
 scoreboard players set @s survisland.pr_mirror.moving 0
+scoreboard players set @s survisland.pr_mirror.sneak 0
 
 # Same skin as its player, borrowed through a player head
 execute as @a[tag=survisland.pr_mirror.new,limit=1] run loot replace entity @n[type=mannequin,tag=survisland.pr_mirror.fresh] weapon.mainhand loot survisland:player_head

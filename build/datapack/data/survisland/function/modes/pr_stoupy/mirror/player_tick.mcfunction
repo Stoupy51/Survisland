@@ -30,6 +30,7 @@ scoreboard players operation #pr_mirror_yaw survisland.data = @s bs.rot.h
 scoreboard players operation #pr_mirror_pitch survisland.data = @s bs.rot.v
 execute if score @s survisland.pr_mirror.flip_x matches -1 run scoreboard players operation #pr_mirror_yaw survisland.data *= #-1 survisland.data
 execute if score @s survisland.pr_mirror.flip_z matches -1 run function survisland:modes/pr_stoupy/mirror/reflect_yaw_z
+execute store success score #pr_mirror_sneak survisland.data if entity @s[predicate=survisland:is_sneaking]
 
 execute as @e[type=mannequin,tag=survisland.pr_mirror.body,predicate=survisland:modes/pr_stoupy/mirror/same_pair] run function survisland:modes/pr_stoupy/mirror/drive
 
