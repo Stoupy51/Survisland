@@ -29,6 +29,7 @@ from ..shared import (
 from .bonuses import main as generate_bonuses
 from .colors import (
 	COLORS,
+	MULTIBALL,
 	SOLO_COLORS,
 	color_tag,
 	generate_color_tags,
@@ -101,7 +102,7 @@ def main() -> None:
 	generate_levels(arena)
 	generate_countdown(arena)
 	generate_physics(arena.same, arena.same_slot)
-	generate_bonuses(arena.players)
+	generate_bonuses(arena.players, arena.balls)
 	generate_endings(arena)
 	generate_example()
 
@@ -250,7 +251,7 @@ def generate_start(arena: Arena) -> None:
 	root: str = f"{ns}:{LAB}/breakout"
 	tag: str = f"{ns}.{MODE}"
 	free_player: str = f"tag=!{tag},distance=..{START_RADIUS},{ON_START_PAD},gamemode=!creative,gamemode=!spectator"
-	read_color: str = "\n".join(f"execute if block ~ ~-1 ~ {color_tag(color)} run scoreboard players set @s {tag}.color {index}" for index, color in enumerate(COLORS))
+	read_color: str = "\n".join(f"execute if block ~ ~-1 ~ {color_tag(color)} run scoreboard players set @s {tag}.color {index}" for index, color in enumerate(COLORS) if color is not MULTIBALL)
 
 	write_function(f"{root}/start", f"""
 # Safe to fire every tick: the nearest field starts once idle with {PLAYERS} free players on the start pads
@@ -379,7 +380,7 @@ def generate_levels(arena: Arena) -> None:
 	sum_solo: str = "\n".join(f"scoreboard players operation #{MODE}_remaining {ns}.data += #{MODE}_bricks_{color.name} {ns}.data" for color in SOLO_COLORS)
 	sum_played: str = "\n".join(
 		f"execute if entity @a[tag={tag},{arena.same},scores={{{tag}.color={index}}}] run scoreboard players operation #{MODE}_remaining {ns}.data += #{MODE}_bricks_{color.name} {ns}.data"
-		for index, color in enumerate(COLORS)
+		for index, color in enumerate(COLORS) if color is not MULTIBALL
 	)
 	bumper_blocks: str = "\n".join(f'execute if score @s {tag}.color matches {index} run data modify entity @s block_state.Name set value "{color.blocks[0]}"' for index, color in enumerate(COLORS))
 	level_title: list[JsonDict] = [{"text": "Niveau ", "color": "#01FE41"}, {"score": {"name": f"#{MODE}_level", "objective": f"{ns}.data"}, "color": "#01FE41"}, {"text": f"/{LEVELS}", "color": "#01FE41"}]

@@ -1,4 +1,5 @@
-""" Bonuses of the breakout, given in turn to the ball breaking every BONUS_BRICKS-th brick of a game. """
+""" Bonuses of the breakout, given in turn to the ball breaking every BONUS_BRICKS-th brick of a game, and the multiball of the multiball bricks. """
+# ruff: noqa: E501
 # Imports
 import json
 from dataclasses import dataclass
@@ -44,13 +45,20 @@ execute at @s summon minecraft:sulfur_cube run function {root}/new_ball
 ]
 """ Bonuses in the order they are given, starting over after the last one. """
 
+MULTIBALL_FACTOR: int = 5
+""" Balls each ball in play becomes when a multiball brick breaks. """
+
+MAX_BALLS: int = 40
+""" Balls an arena holds at most, the multiball stopping there so a few multiball bricks never flood the server. """
+
 
 # Functions
-def main(players: str) -> None:
-	""" Write the brick counter and the bonuses it gives in turn.
+def main(players: str, balls: str) -> None:
+	""" Write the brick counter, the bonuses it gives in turn, and the multiball of the multiball bricks.
 
 	Args:
 		players: Selector of the players of the arena in #pr_breakout_arena
+		balls:   Selector of the balls of that arena
 	"""
 	ns: str = Mem.ctx.project_id
 	root: str = f"{ns}:{LAB}/breakout"
@@ -71,5 +79,28 @@ scoreboard players operation #{MODE}_bonus {ns}.data %= #{len(BONUSES)} {ns}.dat
 		write_function(f"{root}/bonus/{bonus.name}", bonus.commands.format(ns=ns, root=root, tag=tag) + f"""
 title {players} actionbar {json.dumps({"text": bonus.display, "color": "#01FE41"}, ensure_ascii=False)}
 execute as {players} at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1.2
+""")
+
+	clones: str = "\n".join([f"execute if score #{MODE}_balls {ns}.data matches ..{MAX_BALLS - 1} run function {root}/bonus/clone_ball"] * (MULTIBALL_FACTOR - 1))
+	write_function(f"{root}/bonus/multiball", f"""
+# Positioned on a multiball brick, which any ball breaks without it counting as a brick of the level
+function {root}/shatter
+execute store result score #{MODE}_balls {ns}.data if entity {balls}
+execute as {balls} at @s run function {root}/bonus/multiply_ball
+title {players} actionbar {json.dumps({"text": f"Bonus : balles x{MULTIBALL_FACTOR} !", "color": "#01FE41"}, ensure_ascii=False)}
+execute as {players} at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 0.8
+""")
+
+	write_function(f"{root}/bonus/multiply_ball", f"""
+# @s is a ball in play, its copies share its player, its color and its speed
+scoreboard players operation #{MODE}_slot {ns}.data = @s {tag}
+scoreboard players operation #{MODE}_color {ns}.data = @s {tag}.color
+scoreboard players operation #{MODE}_speed {ns}.data = @s {tag}.speed
+{clones}
+""")
+
+	write_function(f"{root}/bonus/clone_ball", f"""
+scoreboard players add #{MODE}_balls {ns}.data 1
+execute summon minecraft:sulfur_cube run function {root}/new_ball
 """)
 

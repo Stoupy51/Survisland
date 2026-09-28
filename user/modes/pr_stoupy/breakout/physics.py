@@ -12,7 +12,7 @@ import math
 from stewbeet import Mem, write_function
 
 from ..shared import LAB
-from .colors import BRICK_SOUNDS, COLORS, color_tag
+from .colors import BRICK_SOUNDS, COLORS, MULTIBALL, color_tag
 
 # Constants
 MODE: str = "pr_breakout"
@@ -164,11 +164,12 @@ def generate_hits(same_arena: str) -> None:
 	players: str = f"@a[tag={tag},{same_arena}]"
 	own_color: str = "\n".join(
 		f"execute if score @s {tag}.color matches {index} if block ~ ~ ~ {color_tag(color)} run return run function {root}/break_brick"
-		for index, color in enumerate(COLORS)
+		for index, color in enumerate(COLORS) if color is not MULTIBALL
 	)
 
 	write_function(f"{root}/hit_brick", f"""
 # Positioned on the probed block, run as the ball that bounced
+execute if block ~ ~ ~ {color_tag(MULTIBALL)} run return run function {root}/bonus/multiball
 execute if score #{MODE}_solo {ns}.data matches 1 if block ~ ~ ~ #{ns}:pr_stoupy/breakout/solo run return run function {root}/break_brick
 {own_color}
 """)
@@ -184,15 +185,19 @@ execute if score #{MODE}_solo {ns}.data matches 1 if block ~ ~ ~ #{ns}:pr_stoupy
 execute if block ~ ~ ~ #{ns}:pr_stoupy/breakout/concrete as {players} at @s run playsound minecraft:block.glass.place ambient @s ~ ~ ~ 1 1.4
 {crack}
 
-# Sounds are played on the players themselves, the bricks being too far from them to be heard
-{sounds}
-function {root}/break_particles
-setblock ~ ~ ~ minecraft:air
+function {root}/shatter
 scoreboard players remove #{MODE}_remaining {ns}.data 1
 # The count only covers the field as it was at the level start, so a count reaching 0 is checked by a new scan
 execute if score #{MODE}_remaining {ns}.data matches ..0 run function {root}/count_bricks
 execute if score #{MODE}_remaining {ns}.data matches ..0 run return run function {root}/level_cleared
 function {root}/bonus/count
+""")
+
+	write_function(f"{root}/shatter", f"""
+# Sounds are played on the players themselves, the bricks being too far from them to be heard
+{sounds}
+function {root}/break_particles
+setblock ~ ~ ~ minecraft:air
 """)
 
 	write_function(f"{root}/break_particles", particles)

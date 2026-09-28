@@ -50,6 +50,9 @@ COLORS: list[BrickColor] = [
 ]
 """ Every color, its index in this list being the color score of players and balls. """
 
+MULTIBALL: BrickColor = next(color for color in COLORS if color.name == "purple")
+""" Color of the bricks any ball breaks to multiply every ball in play, never a player color nor a brick to clear. """
+
 SOLO_COLORS: list[BrickColor] = [color for name in ("red", "light_blue", "lime", "yellow") for color in COLORS if color.name == name]
 """ Colors broken by every ball of a game started with fewer players than needed, and of the example booths from the start of the field to its end. """
 

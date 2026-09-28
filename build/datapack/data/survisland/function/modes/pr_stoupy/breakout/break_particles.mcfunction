@@ -3,7 +3,7 @@
 #
 # @executed	positioned ^ ^0.2 ^0.5
 #
-# @within	survisland:modes/pr_stoupy/breakout/break_brick
+# @within	survisland:modes/pr_stoupy/breakout/shatter
 #
 
 execute if block ~ ~ ~ minecraft:white_concrete run return run particle minecraft:block{block_state:"minecraft:white_concrete"} ~ ~0.5 ~ 0.25 0.25 0.25 0 30

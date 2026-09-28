@@ -5,6 +5,7 @@
 #
 # @within	survisland:modes/pr_stoupy/breakout/spawn_ball [ at @s & positioned ^ ^2 ^0.5 ]
 #			survisland:modes/pr_stoupy/breakout/bonus/split [ at @s ]
+#			survisland:modes/pr_stoupy/breakout/bonus/clone_ball
 #
 
 data merge entity @s {Tags:["survisland.pr_breakout.ball"],Size:0,Invulnerable:1b,Silent:1b,PersistenceRequired:1b,Glowing:1b,equipment:{body:{id:"minecraft:stone",count:1}},drop_chances:{body:0.0f},attributes:[{id:"minecraft:gravity",base:0.0d},{id:"minecraft:bounciness",base:1.0d},{id:"minecraft:air_drag_modifier",base:0.0d},{id:"minecraft:friction_modifier",base:0.0d},{id:"minecraft:scale",base:0.8d},{id:"minecraft:movement_speed",base:0.0d}]}
