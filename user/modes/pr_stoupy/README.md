@@ -191,7 +191,7 @@ function survisland:modes/pr_stoupy/breakout/here/example_level
 	Le cadre et le fond ne doivent pas être de ces blocs colorés dans le plan du terrain, sinon ils comptent comme des briques.
 - Chaque joueur arrive par le `tp` sur un bloc plein de sa couleur, face au mur, enfermé dans une case 1x1.
 	Un tapis ou une dalle posé dessus cache la couleur : c'est le bloc juste sous les pieds qui est lu.
-	Ils sont assis sur une monture invisible pendant la partie : sans vitesse modifiée, donc sans zoom, et remis dessus aussitôt s'ils descendent avec sneak.
+	Ils sont assis au centre de leur bloc sur une monture invisible pendant la partie, et remis dessus aussitôt s'ils descendent avec sneak. Leur vitesse baisse de 20 % pour un léger zoom.
 - Le Joueur 1 est le plus proche du coin, son bumper est au début de la rangée.
 
 Setup, une seule fois, positionné sur le coin bas gauche. Le terrain s'étend vers +axis et vers le haut.

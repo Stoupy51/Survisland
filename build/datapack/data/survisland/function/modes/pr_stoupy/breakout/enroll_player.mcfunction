@@ -16,9 +16,10 @@ function survisland:modes/pr_stoupy/breakout/read_color
 execute if score @s survisland.pr_breakout.color matches -1 positioned ~ ~-1 ~ run function survisland:modes/pr_stoupy/breakout/read_color
 execute if score @s survisland.pr_breakout.color matches -1 positioned ~ ~-2 ~ run function survisland:modes/pr_stoupy/breakout/read_color
 
-# Seated for the whole game: its keys only steer the bumper, with no slowness zooming the view
-# A seated player sinks by its vehicle attachment of 0.6, so the seat is raised by as much
-execute positioned ~ ~0.6 ~ summon minecraft:item_display run function survisland:modes/pr_stoupy/breakout/new_seat
+# Seated for the whole game, so its keys only steer the bumper
+# In the middle of its block, raised by the 0.6 a seated player sinks by its vehicle attachment
+execute align xz positioned ~0.5 ~0.6 ~0.5 summon minecraft:item_display run function survisland:modes/pr_stoupy/breakout/new_seat
+attribute @s minecraft:movement_speed modifier add survisland:pr_breakout_zoom -0.2 add_multiplied_total
 ride @s mount @n[type=minecraft:item_display,tag=survisland.pr_breakout.new_seat]
 tag @e[type=minecraft:item_display,tag=survisland.pr_breakout.new_seat] remove survisland.pr_breakout.new_seat
 

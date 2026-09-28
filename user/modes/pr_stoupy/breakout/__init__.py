@@ -61,6 +61,9 @@ STATE: tuple[str, ...] = ("arena", "state", "timer", "level", "clock", "axis", "
 BALL_NBT: str = '{Tags:["survisland.pr_breakout.ball"],Size:0,Invulnerable:1b,Silent:1b,PersistenceRequired:1b,Glowing:1b,equipment:{body:{id:"minecraft:stone",count:1}},drop_chances:{body:0.0f},attributes:[{id:"minecraft:gravity",base:0.0d},{id:"minecraft:bounciness",base:1.0d},{id:"minecraft:air_drag_modifier",base:0.0d},{id:"minecraft:friction_modifier",base:0.0d},{id:"minecraft:scale",base:0.8d},{id:"minecraft:movement_speed",base:0.0d}]}'
 """ A tiny sulfur cube, bouncing without any loss: gravity, drag and friction are zeroed and every bounce keeps the full speed. """
 
+ZOOM: str = "survisland:pr_breakout_zoom"
+""" Movement speed modifier slowing the seated players, only for the slight zoom it gives their view. """
+
 SCREEN_OFFSET: str = "1.5"
 """ Blocks between the brick plane and the screen text, toward the players so the bricks never hide it. """
 
@@ -160,7 +163,8 @@ function {root}/place_screen
 kill @e[type=minecraft:text_display,tag={tag}.screen,{arena.same}]
 execute store result storage {ns}:{MODE} middle.u double 0.5 run scoreboard players remove #{MODE}_width {ns}.data 1
 scoreboard players add #{MODE}_width {ns}.data 1
-execute store result storage {ns}:{MODE} middle.v double 0.5 run scoreboard players get #{MODE}_height {ns}.data
+execute store result storage {ns}:{MODE} middle.v double 0.5 run scoreboard players remove #{MODE}_height {ns}.data 1
+scoreboard players add #{MODE}_height {ns}.data 1
 scoreboard players operation #{MODE}_side {ns}.data = #{MODE}_invert {ns}.data
 scoreboard players operation #{MODE}_side {ns}.data *= #2 {ns}.data
 execute store result storage {ns}:{MODE} middle.side double {SCREEN_OFFSET} run scoreboard players remove #{MODE}_side {ns}.data 1
@@ -219,8 +223,13 @@ kill {arena.balls}
 execute as @e[type=minecraft:block_display,tag={tag}.bumper,{arena.same}] at @s run fill ^ ^ ^ ^ ^ ^{BUMPER_LENGTH - 1} minecraft:air replace minecraft:barrier
 kill @e[type=minecraft:block_display,tag={tag}.bumper,{arena.same}]
 kill @e[type=minecraft:item_display,tag={tag}.seat,{arena.same}]
-tag {arena.players} remove {tag}
+execute as {arena.players} run function {root}/release_player
 scoreboard players set #{MODE}_state {ns}.data 0
+""")
+
+	write_function(f"{root}/release_player", f"""
+attribute @s minecraft:movement_speed modifier remove {ZOOM}
+tag @s remove {tag}
 """)
 
 	write_function(f"{root}/remount", f"""
@@ -287,9 +296,10 @@ function {root}/read_color
 execute if score @s {tag}.color matches -1 positioned ~ ~-1 ~ run function {root}/read_color
 execute if score @s {tag}.color matches -1 positioned ~ ~-2 ~ run function {root}/read_color
 
-# Seated for the whole game: its keys only steer the bumper, with no slowness zooming the view
-# A seated player sinks by its vehicle attachment of 0.6, so the seat is raised by as much
-execute positioned ~ ~0.6 ~ summon minecraft:item_display run function {root}/new_seat
+# Seated for the whole game, so its keys only steer the bumper
+# In the middle of its block, raised by the 0.6 a seated player sinks by its vehicle attachment
+execute align xz positioned ~0.5 ~0.6 ~0.5 summon minecraft:item_display run function {root}/new_seat
+attribute @s minecraft:movement_speed modifier add {ZOOM} -0.2 add_multiplied_total
 ride @s mount @n[type=minecraft:item_display,tag={tag}.new_seat]
 tag @e[type=minecraft:item_display,tag={tag}.new_seat] remove {tag}.new_seat
 """)
@@ -323,7 +333,7 @@ scoreboard players operation @s {tag}.arena = #{MODE}_arena {ns}.data
 	write_function(f"{root}/abort_colorless", f"""
 tellraw {arena.players} {{"text":"Casse-briques : chaque joueur doit se tenir sur un bloc de couleur (béton, laine, terre cuite ou verre teinté).","color":"red"}}
 kill @e[type=minecraft:item_display,tag={tag}.seat,{arena.same}]
-tag {arena.players} remove {tag}
+execute as {arena.players} run function {root}/release_player
 """)
 
 

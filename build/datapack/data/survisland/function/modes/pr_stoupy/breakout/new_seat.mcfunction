@@ -1,9 +1,9 @@
 
 #> survisland:modes/pr_stoupy/breakout/new_seat
 #
-# @executed	positioned ~ ~0.6 ~
+# @executed	align xz & positioned ~0.5 ~0.6 ~0.5
 #
-# @within	survisland:modes/pr_stoupy/breakout/enroll_player [ positioned ~ ~0.6 ~ ]
+# @within	survisland:modes/pr_stoupy/breakout/enroll_player [ align xz & positioned ~0.5 ~0.6 ~0.5 ]
 #
 
 tag @s add survisland.pr_breakout.seat

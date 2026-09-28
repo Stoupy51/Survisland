@@ -13,6 +13,6 @@ kill @e[type=minecraft:sulfur_cube,tag=survisland.pr_breakout.ball,predicate=sur
 execute as @e[type=minecraft:block_display,tag=survisland.pr_breakout.bumper,predicate=survisland:modes/pr_stoupy/breakout/same_arena] at @s run fill ^ ^ ^ ^ ^ ^1 minecraft:air replace minecraft:barrier
 kill @e[type=minecraft:block_display,tag=survisland.pr_breakout.bumper,predicate=survisland:modes/pr_stoupy/breakout/same_arena]
 kill @e[type=minecraft:item_display,tag=survisland.pr_breakout.seat,predicate=survisland:modes/pr_stoupy/breakout/same_arena]
-tag @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena] remove survisland.pr_breakout
+execute as @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena] run function survisland:modes/pr_stoupy/breakout/release_player
 scoreboard players set #pr_breakout_state survisland.data 0
 

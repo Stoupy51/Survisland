@@ -12,7 +12,7 @@ import math
 from stewbeet import Mem, write_function
 
 from ..shared import LAB
-from .colors import COLORS, color_tag
+from .colors import BRICK_SOUNDS, COLORS, color_tag
 
 # Constants
 MODE: str = "pr_breakout"
@@ -27,7 +27,7 @@ BUMPER_HEIGHT: str = "0.5"
 BUMPER_PERIOD: int = 2
 """ Ticks between two steps of a bumper, so 20 / BUMPER_PERIOD blocks per second. """
 
-BALL_SPEED: int = 420
+BALL_SPEED: int = 350
 """ Speed of a ball in thousandths of a block per tick, kept by every bounce. """
 
 ZONE_ANGLES: tuple[int, ...] = (-60, -45, -30, -15, 15, 30, 45, 60)
@@ -69,7 +69,7 @@ def main(same_arena: str, same_slot: str) -> None:
 		same_slot:  Selector argument keeping the entities of that arena and of the slot in #pr_breakout_slot
 	"""
 	generate_ball_tick(same_arena)
-	generate_hits()
+	generate_hits(same_arena)
 	generate_zones(same_arena)
 	generate_steering(same_arena, same_slot)
 
@@ -129,11 +129,12 @@ execute positioned ~ ~{PROBE_BELOW} ~ run function {root}/hit_brick
 """)
 
 
-def generate_hits() -> None:
+def generate_hits(same_arena: str) -> None:
 	""" Write the brick hit, only breaking the bricks of the color of the ball, or any solo color in a solo game. """
 	ns: str = Mem.ctx.project_id
 	root: str = f"{ns}:{LAB}/breakout"
 	tag: str = f"{ns}.{MODE}"
+	players: str = f"@a[tag={tag},{same_arena}]"
 	own_color: str = "\n".join(
 		f"execute if score @s {tag}.color matches {index} if block ~ ~ ~ {color_tag(color)} run return run function {root}/break_brick"
 		for index, color in enumerate(COLORS)
@@ -146,20 +147,28 @@ execute if score #{MODE}_solo {ns}.data matches 1 if block ~ ~ ~ #{ns}:pr_stoupy
 """)
 
 	crack: str = "\n".join(f"execute if block ~ ~ ~ minecraft:{color.name}_concrete run return run setblock ~ ~ ~ minecraft:{color.name}_stained_glass" for color in COLORS)
+	particles: str = "\n".join(
+		f'execute if block ~ ~ ~ {block} run return run particle minecraft:block{{block_state:"{block}"}} ~ ~0.5 ~ 0.25 0.25 0.25 0 30'
+		for color in COLORS for block in color.blocks
+	)
+	sounds: str = "\n".join(f"execute if block ~ ~ ~ #{ns}:pr_stoupy/breakout/{kind} as {players} at @s run playsound {sound} ambient @s" for kind, sound in BRICK_SOUNDS.items())
 	write_function(f"{root}/break_brick", f"""
 # Concrete cracks into the stained glass of its color, broken by the next hit like any other brick
-execute if block ~ ~ ~ #{ns}:pr_stoupy/breakout/concrete run playsound minecraft:block.glass.place block @a ~ ~ ~ 1 1.4
+execute if block ~ ~ ~ #{ns}:pr_stoupy/breakout/concrete as {players} at @s run playsound minecraft:block.glass.place ambient @s ~ ~ ~ 1 1.4
 {crack}
 
-# destroy gives the real break particles and sound, its drop is removed right away
-setblock ~ ~ ~ minecraft:air destroy
-kill @e[type=minecraft:item,distance=..1.5]
+# Sounds are played on the players themselves, the bricks being too far from them to be heard
+{sounds}
+function {root}/break_particles
+setblock ~ ~ ~ minecraft:air
 scoreboard players remove #{MODE}_remaining {ns}.data 1
 # The count only covers the field as it was at the level start, so a count reaching 0 is checked by a new scan
 execute if score #{MODE}_remaining {ns}.data matches ..0 run function {root}/count_bricks
 execute if score #{MODE}_remaining {ns}.data matches ..0 run return run function {root}/level_cleared
 function {root}/bonus/count
 """)
+
+	write_function(f"{root}/break_particles", particles)
 
 
 def generate_zones(same_arena: str) -> None:

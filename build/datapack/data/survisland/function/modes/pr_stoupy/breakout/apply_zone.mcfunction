@@ -8,22 +8,22 @@
 #
 
 # @s is a ball, sent along the motion of slice #pr_breakout_zone, times its speed in percent
-execute if score #pr_breakout_zone survisland.data matches 0 run scoreboard players set #pr_breakout_mu survisland.data -364
-execute if score #pr_breakout_zone survisland.data matches 0 run scoreboard players set #pr_breakout_mv survisland.data 210
-execute if score #pr_breakout_zone survisland.data matches 1 run scoreboard players set #pr_breakout_mu survisland.data -297
-execute if score #pr_breakout_zone survisland.data matches 1 run scoreboard players set #pr_breakout_mv survisland.data 297
-execute if score #pr_breakout_zone survisland.data matches 2 run scoreboard players set #pr_breakout_mu survisland.data -210
-execute if score #pr_breakout_zone survisland.data matches 2 run scoreboard players set #pr_breakout_mv survisland.data 364
-execute if score #pr_breakout_zone survisland.data matches 3 run scoreboard players set #pr_breakout_mu survisland.data -109
-execute if score #pr_breakout_zone survisland.data matches 3 run scoreboard players set #pr_breakout_mv survisland.data 406
-execute if score #pr_breakout_zone survisland.data matches 4 run scoreboard players set #pr_breakout_mu survisland.data 109
-execute if score #pr_breakout_zone survisland.data matches 4 run scoreboard players set #pr_breakout_mv survisland.data 406
-execute if score #pr_breakout_zone survisland.data matches 5 run scoreboard players set #pr_breakout_mu survisland.data 210
-execute if score #pr_breakout_zone survisland.data matches 5 run scoreboard players set #pr_breakout_mv survisland.data 364
-execute if score #pr_breakout_zone survisland.data matches 6 run scoreboard players set #pr_breakout_mu survisland.data 297
-execute if score #pr_breakout_zone survisland.data matches 6 run scoreboard players set #pr_breakout_mv survisland.data 297
-execute if score #pr_breakout_zone survisland.data matches 7 run scoreboard players set #pr_breakout_mu survisland.data 364
-execute if score #pr_breakout_zone survisland.data matches 7 run scoreboard players set #pr_breakout_mv survisland.data 210
+execute if score #pr_breakout_zone survisland.data matches 0 run scoreboard players set #pr_breakout_mu survisland.data -303
+execute if score #pr_breakout_zone survisland.data matches 0 run scoreboard players set #pr_breakout_mv survisland.data 175
+execute if score #pr_breakout_zone survisland.data matches 1 run scoreboard players set #pr_breakout_mu survisland.data -247
+execute if score #pr_breakout_zone survisland.data matches 1 run scoreboard players set #pr_breakout_mv survisland.data 247
+execute if score #pr_breakout_zone survisland.data matches 2 run scoreboard players set #pr_breakout_mu survisland.data -175
+execute if score #pr_breakout_zone survisland.data matches 2 run scoreboard players set #pr_breakout_mv survisland.data 303
+execute if score #pr_breakout_zone survisland.data matches 3 run scoreboard players set #pr_breakout_mu survisland.data -91
+execute if score #pr_breakout_zone survisland.data matches 3 run scoreboard players set #pr_breakout_mv survisland.data 338
+execute if score #pr_breakout_zone survisland.data matches 4 run scoreboard players set #pr_breakout_mu survisland.data 91
+execute if score #pr_breakout_zone survisland.data matches 4 run scoreboard players set #pr_breakout_mv survisland.data 338
+execute if score #pr_breakout_zone survisland.data matches 5 run scoreboard players set #pr_breakout_mu survisland.data 175
+execute if score #pr_breakout_zone survisland.data matches 5 run scoreboard players set #pr_breakout_mv survisland.data 303
+execute if score #pr_breakout_zone survisland.data matches 6 run scoreboard players set #pr_breakout_mu survisland.data 247
+execute if score #pr_breakout_zone survisland.data matches 6 run scoreboard players set #pr_breakout_mv survisland.data 247
+execute if score #pr_breakout_zone survisland.data matches 7 run scoreboard players set #pr_breakout_mu survisland.data 303
+execute if score #pr_breakout_zone survisland.data matches 7 run scoreboard players set #pr_breakout_mv survisland.data 175
 scoreboard players operation #pr_breakout_mu survisland.data *= @s survisland.pr_breakout.speed
 scoreboard players operation #pr_breakout_mv survisland.data *= @s survisland.pr_breakout.speed
 scoreboard players operation #pr_breakout_mu survisland.data /= #100 survisland.data

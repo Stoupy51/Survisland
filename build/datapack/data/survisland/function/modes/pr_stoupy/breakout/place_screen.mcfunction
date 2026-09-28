@@ -11,7 +11,8 @@
 kill @e[type=minecraft:text_display,tag=survisland.pr_breakout.screen,predicate=survisland:modes/pr_stoupy/breakout/same_arena]
 execute store result storage survisland:pr_breakout middle.u double 0.5 run scoreboard players remove #pr_breakout_width survisland.data 1
 scoreboard players add #pr_breakout_width survisland.data 1
-execute store result storage survisland:pr_breakout middle.v double 0.5 run scoreboard players get #pr_breakout_height survisland.data
+execute store result storage survisland:pr_breakout middle.v double 0.5 run scoreboard players remove #pr_breakout_height survisland.data 1
+scoreboard players add #pr_breakout_height survisland.data 1
 scoreboard players operation #pr_breakout_side survisland.data = #pr_breakout_invert survisland.data
 scoreboard players operation #pr_breakout_side survisland.data *= #2 survisland.data
 execute store result storage survisland:pr_breakout middle.side double 1.5 run scoreboard players remove #pr_breakout_side survisland.data 1

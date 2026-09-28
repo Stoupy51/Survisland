@@ -20,10 +20,18 @@ class BrickColor:
 	@property
 	def blocks(self) -> list[str]:
 		""" Blocks of this color that count as bricks, and of which the bumper is made (the first one). """
-		return [f"minecraft:{self.name}_{kind}" for kind in ("concrete", "wool", "terracotta", "stained_glass")]
+		return [f"minecraft:{self.name}_{kind}" for kind in BRICK_SOUNDS]
 
 
 # Constants
+BRICK_SOUNDS: dict[str, str] = {
+	"concrete":      "minecraft:block.stone.break",
+	"wool":          "minecraft:block.wool.break",
+	"terracotta":    "minecraft:block.stone.break",
+	"stained_glass": "minecraft:block.glass.break",
+}
+""" Block kinds a brick of each color can be made of, the first one being the bumper, with the sound of their break. """
+
 COLORS: list[BrickColor] = [
 	BrickColor(name="white",      display="blanc",      team_color="white"),
 	BrickColor(name="orange",     display="orange",     team_color="gold"),
@@ -59,12 +67,13 @@ def color_tag(color: BrickColor) -> str:
 
 
 def generate_color_tags() -> None:
-	""" Write one block tag per color, their union, the concretes taking two hits and the solo colors. """
+	""" Write one block tag per color, their union, one per block kind and the solo colors. """
 	ns: str = Mem.ctx.project_id
 	for color in COLORS:
 		Mem.ctx.data[ns].block_tags[f"pr_stoupy/breakout/{color.name}"] = set_json_encoder(BlockTag({"values": color.blocks}))
 	Mem.ctx.data[ns].block_tags["pr_stoupy/breakout/any"] = set_json_encoder(BlockTag({"values": [color_tag(color) for color in COLORS]}))
-	Mem.ctx.data[ns].block_tags["pr_stoupy/breakout/concrete"] = set_json_encoder(BlockTag({"values": [f"minecraft:{color.name}_concrete" for color in COLORS]}))
+	for kind in BRICK_SOUNDS:
+		Mem.ctx.data[ns].block_tags[f"pr_stoupy/breakout/{kind}"] = set_json_encoder(BlockTag({"values": [f"minecraft:{color.name}_{kind}" for color in COLORS]}))
 	Mem.ctx.data[ns].block_tags["pr_stoupy/breakout/solo"] = set_json_encoder(BlockTag({"values": [color_tag(color) for color in SOLO_COLORS]}))
 
 
