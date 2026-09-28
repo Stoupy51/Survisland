@@ -25,7 +25,7 @@ Deux réglages de command block reviennent partout :
 
 Un `start` prend les joueurs **debout sur un bloc d'émeraude**, à 16 blocs au plus de son command block.
 Le rayon peut donc être large sans prendre les joueurs qui passent : il faut marcher sur un bloc de départ.
-Pose un bloc d'émeraude par place (4 pour les duos, 2 pour les miroirs, 2 à 4 pour l'orbite), dans un sas devant la salle.
+Pose un bloc d'émeraude par place (4 pour les duos, 2 pour les miroirs, 4 pour l'orbite), dans un sas devant la salle.
 Le casse-briques n'en a pas besoin : ses blocs de départ sont les blocs de couleur des cabines.
 Les blocs acceptés sont dans `START_PAD_BLOCKS` (`shared.py`).
 
@@ -53,7 +53,7 @@ function survisland:modes/pr_stoupy/solo {enabled:0}
 ```
 
 - Casse-briques : jouable jusqu'au bout, seules les briques de ta couleur comptent. Ton bumper est celui du Joueur 1, au début de la rangée.
-- Orbite : jouable jusqu'au bout.
+- Orbite : déjà jouable seul, de 1 à 4 joueurs sans mode solo.
 - Miroirs : un seul reflet. La mécanique se teste, un puzzle pensé pour 2 ne sera peut-être pas faisable.
 - Duos : un mannequin pour toi seul, avec toutes les commandes (regard, déplacements, clic, saut).
 
@@ -226,35 +226,46 @@ Le 3e niveau terminé donne l'étoile. Arrêter la partie du terrain le plus pro
 function survisland:modes/pr_stoupy/breakout/here/stop
 ```
 
-## 4. Orbite (2 à 4 joueurs)
+## 4. Orbite (1 à 4 joueurs)
 
 À construire : une grande salle, avec un plafond assez haut pour les phantoms des rounds 2 et 3.
+Le trou noir est peint sur un mur : les joueurs sont poussés vers lui en permanence pendant la partie, rounds et pauses compris.
+Un voleur d'étoiles plonge dans la même direction et disparaît en touchant le premier bloc sur son chemin.
 À poser dans cet ordre, le trou noir d'abord.
 
 1. Le trou noir, un cube inversé géant rendu par le shader :
 	```
 	function survisland:modes/pr_stoupy/orbit/here/place_black_hole {scale:100}
 	```
-2. Au même endroit, l'ancre de la salle. Un joueur à moins de 3 blocs est avalé, l'attraction est plus forte sous 12 blocs :
+2. Au même endroit, l'ancre de la salle. Les joueurs arrivent 1 bloc au-dessus, et la poussée suit son yaw.
+	Depuis un command block, c'est +z. Pour une autre direction, préciser le yaw (0 sud/+z, 90 ouest, 180 nord, -90 est) :
 	```
 	function survisland:modes/pr_stoupy/orbit/here/set_hole
+	execute rotated 180 0 run function survisland:modes/pr_stoupy/orbit/here/set_hole
 	```
 3. Le centre des anneaux de fragments :
 	```
 	function survisland:modes/pr_stoupy/orbit/here/set_orbit
 	```
-4. Le dépôt des fragments, de l'autre côté de la salle par rapport au trou :
+4. Le dépôt des fragments, du côté opposé au mur du trou noir :
 	```
 	function survisland:modes/pr_stoupy/orbit/here/set_collector
 	```
-5. Le départ des joueurs, et le retour de ceux qui sont avalés :
-	```
-	function survisland:modes/pr_stoupy/orbit/here/set_spawn
-	```
-6. Command block répétitif, 2 à 4 joueurs sur les blocs de départ. Ils sont téléportés au départ de l'étape 5, les 3 rounds s'enchaînent seuls, l'épée est donnée puis reprise :
+5. 4 blocs d'émeraude dans le sas, espacés d'au moins un bloc, et un command block répétitif à 16 blocs au plus :
 	```
 	function survisland:modes/pr_stoupy/orbit/start
 	```
+	Chaque joueur qui monte sur un bloc est téléporté 1 bloc au-dessus de l'ancre et reçoit l'épée.
+	Le premier lance le round 1, les suivants rejoignent la partie en cours.
+	Le bloc d'émeraude disparaît, donc 4 joueurs au plus. Tous les blocs reviennent à la fin de la partie (victoire ou stop).
+
+La chute dans le trou noir est à détecter toi-même, avec un command block répétitif de la salle.
+La fonction s'exécute en tant que le joueur tombé : elle le renvoie 1 bloc au-dessus de l'ancre et remet ses fragments en orbite.
+Exemple avec une zone de détection devant le mur (à adapter) :
+
+```
+execute as @a[tag=survisland.pr_orbit,x=100,y=60,z=240,dx=40,dy=2,dz=3] run function survisland:modes/pr_stoupy/orbit/swallow
+```
 
 Arrêter la partie de la salle la plus proche :
 

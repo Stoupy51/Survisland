@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/orbit/next_round
 #
-# @within	survisland:modes/pr_stoupy/orbit/start
+# @within	survisland:modes/pr_stoupy/orbit/begin
 #			survisland:modes/pr_stoupy/orbit/break_tick
 #
 

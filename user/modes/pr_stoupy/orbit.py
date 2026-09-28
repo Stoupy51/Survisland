@@ -1,8 +1,10 @@
-""" Trial "Orbite": two to four players in a room pulled toward a black hole, over three rounds.
+""" Trial "Orbite": one to four players in a room pushed toward a black hole painted on a wall, over three rounds.
 
 Star fragments circle around the orbit center on three rings. A player picks one up by touching it
-and banks it at the collector, on the far side of the room, against the pull of the hole.
-Getting too close to the hole sends the player back to the spawn and returns the fragments it carried to orbit.
+and banks it at the collector, against the push of the hole, which never stops while the game runs.
+A player falling into the hole is detected by a command block of the room, which calls swallow on it:
+back above the hole marker, and the fragments it carried return to orbit.
+Each player stepping on a start pad joins at once and the pad disappears until the game ends, the first one starts round 1.
 From the second round phantoms join, and in the third some of them steal fragments and dive into the hole with them.
 A round is won once all its fragments are banked and all its phantoms are dead.
 
@@ -18,10 +20,10 @@ from stewbeet import Advancement, JsonDict, Mem, set_json_encoder, write_functio
 from .shared import (
 	LAB,
 	ON_START_PAD,
+	START_PAD_BLOCKS,
 	START_RADIUS,
 	copy_state,
 	crt_text,
-	require_players,
 	write_match_predicate,
 )
 
@@ -29,20 +31,8 @@ from .shared import (
 MODE: str = "pr_orbit"
 """ Suffix of the tags, objectives and fake players of the trial. """
 
-MIN_PLAYERS: int = 2
-""" Players needed on the start pads, one in solo mode. """
-
-MAX_PLAYERS: int = 4
-""" Players taken at most, the nearest ones. """
-
 HOLE_RADIUS: int = 16
 """ Radius around a new hole marker in which the previous hole of the same room is replaced, keeping its arena. """
-
-SWALLOW_RADIUS: int = 3
-""" Distance to the hole under which a player is swallowed. """
-
-INNER_RADIUS: int = 12
-""" Distance to the hole under which the pull gets stronger. """
 
 PICKUP_RADIUS: str = "1.6"
 """ Distance at which a player picks up a fragment. """
@@ -51,7 +41,10 @@ BANK_RADIUS: int = 3
 """ Distance to the collector at which carried fragments are banked. """
 
 PULL_PERIOD: int = 4
-""" Ticks between two pulls, each one being a player_motion launch toward the hole. """
+""" Ticks between two pushes, each one being a player_motion launch along the facing of the hole marker. """
+
+PAD_OFFSETS: tuple[str, ...] = ("~ ~-1 ~", "~0.3 ~-1 ~0.3", "~-0.3 ~-1 ~0.3", "~0.3 ~-1 ~-0.3", "~-0.3 ~-1 ~-0.3")
+""" Points under a player where its start pad is looked for: the center, then the corners of its hitbox. """
 
 PLAYER_GRAVITY: str = "0.05"
 """ Gravity of the players during the trial, vanilla being 0.08. """
@@ -68,13 +61,12 @@ THIEF_SPEED: str = "0.18"
 BREAK_TICKS: int = 100
 """ Ticks of rest between two rounds. """
 
-STATE: tuple[str, ...] = ("arena", "state", "round", "banked", "required", "pull", "inner_pull", "timer", "clock")
+STATE: tuple[str, ...] = ("arena", "state", "round", "banked", "required", "pull", "timer", "clock")
 """ Scores of the hole marker holding the state of its arena, each one mirrored by a #pr_orbit_<name> fake player. """
 
 MARKERS: dict[str, str] = {
 	"orbit": "centre des anneaux de fragments",
 	"collector": "où les fragments sont déposés",
-	"spawn": "départ et retour des joueurs avalés",
 }
 """ Markers of a room besides its hole, each one joining the arena of the nearest hole when placed. """
 
@@ -97,9 +89,7 @@ class Round:
 	fragments: int
 	""" Fragments to bank, spread over the rings. """
 	pull: int
-	""" Pull strength far from the hole, in ten thousandths of a block per tick. """
-	inner_pull: int
-	""" Pull strength within INNER_RADIUS of the hole. """
+	""" Push strength toward the hole, in ten thousandths of a block per tick. """
 	phantoms: int
 	""" Phantoms that only attack. """
 	thieves: int
@@ -114,7 +104,6 @@ class Arena:
 		self.hole: str = self.marker("hole")
 		self.orbit: str = self.marker("orbit")
 		self.collector: str = self.marker("collector")
-		self.spawn: str = self.marker("spawn")
 		self.players: str = f"@a[tag={tag},{self.same}]"
 		self.fragments: str = f"@e[type=minecraft:item_display,tag={tag}.fragment,{self.same}]"
 		self.phantoms: str = f"@e[type=minecraft:phantom,tag={tag}.phantom,{self.same}]"
@@ -133,9 +122,9 @@ RINGS: list[Ring] = [
 """ The rings the fragments are spread over, one fragment out of three on each. """
 
 ROUNDS: list[Round] = [
-	Round(fragments=6,  pull=1000, inner_pull=1600, phantoms=0, thieves=0),
-	Round(fragments=8,  pull=1400, inner_pull=2200, phantoms=3, thieves=0),
-	Round(fragments=10, pull=1800, inner_pull=2800, phantoms=3, thieves=2),
+	Round(fragments=6,  pull=1000, phantoms=0, thieves=0),
+	Round(fragments=8,  pull=1400, phantoms=3, thieves=0),
+	Round(fragments=10, pull=1800, phantoms=3, thieves=2),
 ]
 """ The three rounds, in play order: about two minutes each for three players. """
 
@@ -161,18 +150,19 @@ def generate_setup(arena: Arena) -> None:
 	objectives: str = "\n".join(f"scoreboard objectives add {tag}.{name} dummy" for name in ("carried", *STATE))
 
 	write_function(f"{root}/here/set_hole", f"""
-# The hole anchors the arena of the room, a hole placed again near the previous one keeps its arena
+# The hole anchors the arena of the room and pushes along the yaw of the caller, a hole placed again near the previous one keeps its arena
 {objectives}
 scoreboard players set #{MODE}_arena {ns}.data 0
 execute as @n[type=minecraft:marker,tag={tag}.hole,distance=..{HOLE_RADIUS}] run scoreboard players operation #{MODE}_arena {ns}.data = @s {tag}.arena
 kill @n[type=minecraft:marker,tag={tag}.hole,distance=..{HOLE_RADIUS}]
 execute if score #{MODE}_arena {ns}.data matches 0 store result score #{MODE}_arena {ns}.data run scoreboard players add #{MODE}_arena_counter {ns}.data 1
 execute align xyz positioned ~0.5 ~ ~0.5 summon minecraft:marker run function {root}/new_hole
-tellraw @a[distance=..16] {{"text":"Orbite : trou noir placé (cible de l'attraction), place ensuite orbit, collector et spawn.","color":"green"}}
+tellraw @a[distance=..16] {{"text":"Orbite : ancre placée (arrivée des joueurs, poussée vers son yaw), place ensuite orbit et collector.","color":"green"}}
 """)
 
 	write_function(f"{root}/new_hole", f"""
 tag @s add {tag}.hole
+rotate @s ~ 0
 scoreboard players set #{MODE}_state {ns}.data 0
 {copy_state(MODE, STATE, to_anchor=True)}
 """)
@@ -225,6 +215,8 @@ execute if score #{MODE}_active {ns}.data matches 1.. run schedule function {roo
 # State: 1 round in play, 2 break between two rounds, 0 stopped
 execute unless score @s {tag}.state matches 1..2 run return 0
 function {root}/load_arena
+scoreboard players add #{MODE}_clock {ns}.data 1
+function {root}/push_tick
 execute if score #{MODE}_state {ns}.data matches 1 run function {root}/play_tick
 execute if score #{MODE}_state {ns}.data matches 2 run function {root}/break_tick
 execute if score #{MODE}_state {ns}.data matches 1..2 run scoreboard players add #{MODE}_active {ns}.data 1
@@ -233,28 +225,31 @@ function {root}/save_arena
 
 
 def generate_start(arena: Arena) -> None:
-	""" Write the start, taking the players around the command block and turning them into light astronauts. """
+	""" Write the start, taking every player stepping on a start pad and turning it into a light astronaut. """
 	ns: str = Mem.ctx.project_id
 	root: str = f"{ns}:{LAB}/orbit"
 	tag: str = f"{ns}.{MODE}"
 	free_player: str = f"tag=!{tag},distance=..{START_RADIUS},{ON_START_PAD},gamemode=!creative,gamemode=!spectator"
 	markers_missing: str = "\n".join(f"execute unless entity {arena.marker(name)} run return 0" for name in MARKERS)
+	take_pad: str = "\n".join(f"execute positioned {offset} if block ~ ~ ~ #{ns}:pr_stoupy/start_pad run return run function {root}/take_pad" for offset in PAD_OFFSETS)
 
 	write_function(f"{root}/start", f"""
-# Safe to fire every tick: the room of the nearest hole starts once idle, fully placed, with enough free players on the start pads
+# Safe to fire every tick: a player on a start pad joins the room of the nearest hole, the first one starts round 1
 execute unless entity @e[type=minecraft:marker,tag={tag}.hole] run return 0
-execute if score @n[type=minecraft:marker,tag={tag}.hole] {tag}.state matches 1.. run return 0
-execute store result score #{MODE}_free {ns}.data if entity @a[{free_player}]
-{require_players(f"#{MODE}_free {ns}.data", MIN_PLAYERS)}
+execute unless entity @a[{free_player}] run return 0
 execute as @n[type=minecraft:marker,tag={tag}.hole] run function {root}/load_arena
 {markers_missing}
 
-execute as @a[{free_player},limit={MAX_PLAYERS},sort=nearest] run function {root}/enroll_player
+execute as @a[{free_player}] at @s run function {root}/enroll_player
+execute if score #{MODE}_state {ns}.data matches 0 run function {root}/begin
+execute as {arena.hole} run function {root}/save_arena
+schedule function {root}/tick 1t replace
+""")
+
+	write_function(f"{root}/begin", f"""
 scoreboard players set #{MODE}_round {ns}.data 0
 scoreboard players set #{MODE}_clock {ns}.data 0
 function {root}/next_round
-execute as {arena.hole} run function {root}/save_arena
-schedule function {root}/tick 1t replace
 """)
 
 	write_function(f"{root}/enroll_player", f"""
@@ -264,7 +259,21 @@ scoreboard players set @s {tag}.carried 0
 attribute @s minecraft:gravity base set {PLAYER_GRAVITY}
 attribute @s minecraft:fall_damage_multiplier base set 0
 give @s minecraft:iron_sword[custom_data={{{ns}:{{orbit_sword:true}}}},item_name={{"text":"Épée stellaire","color":"aqua"}}]
-tp @s {arena.spawn}
+function {root}/find_pad
+execute at {arena.hole} run tp @s ~ ~1 ~
+""")
+
+	write_function(f"{root}/find_pad", take_pad)
+
+	write_function(f"{root}/take_pad", f"""
+# The pad under the player is emptied until the game ends, a marker remembers where to put it back
+setblock ~ ~ ~ minecraft:air
+execute align xyz positioned ~0.5 ~ ~0.5 summon minecraft:marker run function {root}/new_pad
+""")
+
+	write_function(f"{root}/new_pad", f"""
+tag @s add {tag}.pad
+scoreboard players operation @s {tag}.arena = #{MODE}_arena {ns}.data
 """)
 
 
@@ -295,7 +304,6 @@ scoreboard players set #{MODE}_banked {ns}.data 0
 		write_function(f"{root}/round/{index}", f"""
 scoreboard players set #{MODE}_required {ns}.data {round_.fragments}
 scoreboard players set #{MODE}_pull {ns}.data {round_.pull}
-scoreboard players set #{MODE}_inner_pull {ns}.data {round_.inner_pull}
 {fragments}
 {phantoms}
 title {arena.players} times 10 50 10
@@ -326,7 +334,7 @@ execute as {arena.players} at @s run playsound minecraft:entity.player.levelup m
 
 
 def generate_tick(arena: Arena) -> None:
-	""" Write the tick of one arena: fragments turning, pickups, banking, the pull of the hole and the swallowed players. """
+	""" Write the tick of one arena: the push of the hole, fragments turning, pickups, banking, and the swallowed players. """
 	ns: str = Mem.ctx.project_id
 	root: str = f"{ns}:{LAB}/orbit"
 	tag: str = f"{ns}.{MODE}"
@@ -335,6 +343,15 @@ def generate_tick(arena: Arena) -> None:
 		for index in range(len(RINGS))
 	)
 
+	write_function(f"{root}/push_tick", f"""
+# The hole pushes during the rounds and the breaks between them alike
+scoreboard players operation #{MODE}_step {ns}.data = #{MODE}_clock {ns}.data
+scoreboard players operation #{MODE}_step {ns}.data %= #{PULL_PERIOD} {ns}.data
+execute unless score #{MODE}_step {ns}.data matches 0 run return 0
+execute as {arena.players} at @s run function {root}/pull
+execute as {arena.players} run title @s actionbar {actionbar_text()}
+""")
+
 	write_function(f"{root}/break_tick", f"""
 scoreboard players remove #{MODE}_timer {ns}.data 1
 execute if score #{MODE}_timer {ns}.data matches ..0 run function {root}/next_round
@@ -342,17 +359,9 @@ execute if score #{MODE}_timer {ns}.data matches ..0 run function {root}/next_ro
 
 	write_function(f"{root}/play_tick", f"""
 # Run as and at the hole of the arena, whose state is loaded in the fake players
-scoreboard players add #{MODE}_clock {ns}.data 1
 {turns}
 execute as @e[type=minecraft:item_display,tag={tag}.fragment,tag=!{tag}.stolen,{arena.same}] at @s as @p[tag={tag},{arena.same},distance=..{PICKUP_RADIUS}] run function {root}/pick_up
 execute at {arena.collector} as @a[tag={tag},{arena.same},scores={{{tag}.carried=1..}},distance=..{BANK_RADIUS}] run function {root}/bank
-execute as @a[tag={tag},{arena.same},distance=..{SWALLOW_RADIUS}] run function {root}/swallowed
-
-scoreboard players operation #{MODE}_step {ns}.data = #{MODE}_clock {ns}.data
-scoreboard players operation #{MODE}_step {ns}.data %= #{PULL_PERIOD} {ns}.data
-execute if score #{MODE}_step {ns}.data matches 0 as {arena.players} at @s run function {root}/pull
-execute if score #{MODE}_step {ns}.data matches 0 as {arena.players} run title @s actionbar {actionbar_text()}
-
 function {root}/phantoms_tick
 function {root}/check_round
 """)
@@ -381,21 +390,27 @@ particle minecraft:end_rod ~ ~1 ~ 0.4 0.8 0.4 0.05 40
 		f"execute if score @s {tag}.carried matches {count}.. at {arena.orbit} summon minecraft:item_display run function {root}/new_fragment {{ring:{(count - 1) % len(RINGS)},angle:{count * 97 % 360}}}"
 		for count in range(1, max(round_.fragments for round_ in ROUNDS) + 1)
 	)
+	write_function(f"{root}/swallow", f"""
+# Called on a player who fell into the black hole, from any command block
+execute unless entity @s[tag={tag}] run return fail
+scoreboard players operation #{MODE}_arena {ns}.data = @s {tag}.arena
+function {root}/swallowed
+""")
+
 	write_function(f"{root}/swallowed", f"""
-# Back to the spawn, and every fragment carried goes back to orbit
+# Back above the hole marker, and every fragment carried goes back to orbit
 {restore}
 scoreboard players set @s {tag}.carried 0
-tp @s {arena.spawn}
+execute at {arena.hole} run tp @s ~ ~1 ~
 effect give @s minecraft:blindness 2 0 true
 playsound minecraft:entity.enderman.teleport master @s ~ ~ ~ 1 0.5
 tellraw {arena.players} [{{"selector":"@s","color":"aqua"}},{{"text":" a été avalé par le trou noir !","color":"#01FE41"}}]
 """)
 
 	write_function(f"{root}/pull", f"""
-# @s is a player, launched toward the hole, harder once within {INNER_RADIUS} blocks of it
+# @s is a player, launched along the facing of the hole marker
 scoreboard players operation $strength player_motion.api.launch = #{MODE}_pull {ns}.data
-execute at {arena.hole} if entity @s[distance=..{INNER_RADIUS}] run scoreboard players operation $strength player_motion.api.launch = #{MODE}_inner_pull {ns}.data
-execute facing entity {arena.hole} feet run function player_motion:api/launch_looking
+execute rotated as {arena.hole} run function player_motion:api/launch_looking
 """)
 
 
@@ -433,7 +448,7 @@ data merge entity @s {{Glowing:1b,CustomName:{{"text":"Voleur d'étoiles","color
 scoreboard players operation #{MODE}_step {ns}.data = #{MODE}_clock {ns}.data
 scoreboard players operation #{MODE}_step {ns}.data %= #{THIEF_PERIOD} {ns}.data
 execute if score #{MODE}_step {ns}.data matches 0 as @e[type=minecraft:phantom,tag={tag}.thief,tag=!{tag}.diving,{arena.same},limit=1,sort=random] run function {root}/steal
-execute as @e[type=minecraft:phantom,tag={tag}.diving,{arena.same}] at @s facing entity {arena.hole} feet run function {root}/dive
+execute as @e[type=minecraft:phantom,tag={tag}.diving,{arena.same}] at @s rotated as {arena.hole} run function {root}/dive
 
 # The fragment of a thief killed on the way falls back into orbit
 execute as @e[type=minecraft:item_display,tag={tag}.stolen,{arena.same}] unless predicate {ns}:riding run tag @s remove {tag}.stolen
@@ -452,8 +467,9 @@ tellraw {arena.players} {{"text":"Un voleur d'étoiles emporte un fragment vers 
 """)
 
 	write_function(f"{root}/dive", f"""
+# Along the push of the hole until the wall it is painted on
 tp @s ^ ^ ^{THIEF_SPEED} ~ ~
-execute at {arena.hole} if entity @s[distance=..{SWALLOW_RADIUS}] run function {root}/thief_swallowed
+execute positioned ^ ^ ^1 unless block ~ ~ ~ #minecraft:air run function {root}/thief_swallowed
 """)
 
 	write_function(f"{root}/thief_swallowed", f"""
@@ -477,7 +493,7 @@ kill @s
 advancement revoke @s only {ns}:{LAB}/orbit_phantom_hit
 scoreboard players operation #{MODE}_arena {ns}.data = @s {tag}.arena
 scoreboard players set $strength player_motion.api.launch {PHANTOM_PUSH}
-execute at @s facing entity {arena.hole} feet run function player_motion:api/launch_looking
+execute at @s rotated as {arena.hole} run function player_motion:api/launch_looking
 """)
 
 
@@ -501,6 +517,8 @@ execute as {arena.players} run attribute @s minecraft:gravity base reset
 execute as {arena.players} run attribute @s minecraft:fall_damage_multiplier base reset
 clear {arena.players} *[custom_data~{{{ns}:{{orbit_sword:true}}}}]
 tag {arena.players} remove {tag}
+execute at @e[type=minecraft:marker,tag={tag}.pad,{arena.same}] run setblock ~ ~ ~ {START_PAD_BLOCKS[0]}
+kill @e[type=minecraft:marker,tag={tag}.pad,{arena.same}]
 scoreboard players set #{MODE}_state {ns}.data 0
 """)
 

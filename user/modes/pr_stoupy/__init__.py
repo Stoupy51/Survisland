@@ -43,13 +43,13 @@ Il suffit d'éloigner les copies de plus de 48 blocs (regroupement des cages de 
 		Terrain d'exemple construit et configuré : cadre, vitre, briques, cabines des joueurs et command block de départ.
 	breakout/here/example_level                 remet les briques d'exemple dans le terrain le plus proche
 
-# 4. L'orbite (2 à 4 joueurs), à placer dans cet ordre, le trou noir d'abord
+# 4. L'orbite (1 à 4 joueurs), à placer dans cet ordre, le trou noir d'abord
 	orbit/here/place_black_hole {scale:100}     cube inversé géant rendu par le shader du trou noir
-	orbit/here/set_hole                         cible de l'attraction, là où le trou noir apparaît, ancre de la salle
+	orbit/here/set_hole                         ancre de la salle au centre du trou noir : arrivée 1 bloc au-dessus, poussée vers son yaw (+z depuis un command block)
 	orbit/here/set_orbit                        centre des anneaux de fragments
 	orbit/here/set_collector                    où les fragments sont déposés
-	orbit/here/set_spawn                        départ des joueurs, et retour de ceux qui sont avalés
-	orbit/start                                 (répétitif) 2 à 4 joueurs sur les blocs de départ, enchaîne les 3 rounds tout seul
+	orbit/start                                 (répétitif) chaque joueur sur un bloc de départ rejoint la partie, le bloc disparaît jusqu'à la fin
+	orbit/swallow                               à exécuter en tant que le joueur tombé dans le trou noir
 	orbit/here/stop
 
 # 5. Les rats de labo (1 à 8 joueurs, n'importe qui peut aider), les cages d'abord
@@ -109,7 +109,7 @@ def generate_clear() -> None:
 		f"{duo}.body", f"{duo}.seat",
 		f"{mirror}.body", f"{mirror}.anchor",
 		f"{breakout}.corner", f"{breakout}.screen", f"{breakout}.bumper", f"{breakout}.ball",
-		f"{orbit}.hole", *(f"{orbit}.{name}" for name in ORBIT_MARKERS), f"{orbit}.sky", f"{orbit}.fragment", f"{orbit}.phantom",
+		f"{orbit}.hole", *(f"{orbit}.{name}" for name in ORBIT_MARKERS), f"{orbit}.sky", f"{orbit}.fragment", f"{orbit}.phantom", f"{orbit}.pad",
 		f"{rats}.rat", f"{rats}.model", f"{rats}.cage", f"{rats}.carried", f"{rats}.caged",
 		f"{ns}.pr_stoupy.villager", DOOR_TAG,
 	]

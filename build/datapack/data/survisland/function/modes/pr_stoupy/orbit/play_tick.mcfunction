@@ -7,19 +7,11 @@
 #
 
 # Run as and at the hole of the arena, whose state is loaded in the fake players
-scoreboard players add #pr_orbit_clock survisland.data 1
 execute as @e[type=minecraft:item_display,tag=survisland.pr_orbit.ring0,tag=!survisland.pr_orbit.stolen,predicate=survisland:modes/pr_stoupy/orbit/same_arena] at @e[type=minecraft:marker,tag=survisland.pr_orbit.orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] run function survisland:modes/pr_stoupy/orbit/turn/0
 execute as @e[type=minecraft:item_display,tag=survisland.pr_orbit.ring1,tag=!survisland.pr_orbit.stolen,predicate=survisland:modes/pr_stoupy/orbit/same_arena] at @e[type=minecraft:marker,tag=survisland.pr_orbit.orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] run function survisland:modes/pr_stoupy/orbit/turn/1
 execute as @e[type=minecraft:item_display,tag=survisland.pr_orbit.ring2,tag=!survisland.pr_orbit.stolen,predicate=survisland:modes/pr_stoupy/orbit/same_arena] at @e[type=minecraft:marker,tag=survisland.pr_orbit.orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] run function survisland:modes/pr_stoupy/orbit/turn/2
 execute as @e[type=minecraft:item_display,tag=survisland.pr_orbit.fragment,tag=!survisland.pr_orbit.stolen,predicate=survisland:modes/pr_stoupy/orbit/same_arena] at @s as @p[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena,distance=..1.6] run function survisland:modes/pr_stoupy/orbit/pick_up
 execute at @e[type=minecraft:marker,tag=survisland.pr_orbit.collector,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] as @a[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena,scores={survisland.pr_orbit.carried=1..},distance=..3] run function survisland:modes/pr_stoupy/orbit/bank
-execute as @a[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena,distance=..3] run function survisland:modes/pr_stoupy/orbit/swallowed
-
-scoreboard players operation #pr_orbit_step survisland.data = #pr_orbit_clock survisland.data
-scoreboard players operation #pr_orbit_step survisland.data %= #4 survisland.data
-execute if score #pr_orbit_step survisland.data matches 0 as @a[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena] at @s run function survisland:modes/pr_stoupy/orbit/pull
-execute if score #pr_orbit_step survisland.data matches 0 as @a[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena] run title @s actionbar [{"text":"Portés : ","color":"#01FE41"},{"score":{"name":"@s","objective":"survisland.pr_orbit.carried"},"color":"#01FE41"},{"text":"   Déposés : ","color":"#01FE41"},{"score":{"name":"#pr_orbit_banked","objective":"survisland.data"},"color":"#01FE41"},{"text":"/","color":"#01FE41"},{"score":{"name":"#pr_orbit_required","objective":"survisland.data"},"color":"#01FE41"}]
-
 function survisland:modes/pr_stoupy/orbit/phantoms_tick
 function survisland:modes/pr_stoupy/orbit/check_round
 
