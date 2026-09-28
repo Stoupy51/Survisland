@@ -3,7 +3,7 @@
 from dataclasses import dataclass
 
 from beet import BlockTag
-from stewbeet import Mem, set_json_encoder
+from stewbeet import Mem, Predicate, set_json_encoder
 
 
 # Classes
@@ -56,11 +56,14 @@ def color_tag(color: BrickColor) -> str:
 
 
 def generate_color_tags() -> None:
-	""" Write one block tag per color, plus the union of them all used to skip empty cells while counting bricks. """
+	""" Write one block tag per color, their union, and the predicate of a player standing on any of them. """
 	ns: str = Mem.ctx.project_id
 	for color in COLORS:
 		Mem.ctx.data[ns].block_tags[f"pr_stoupy/breakout/{color.name}"] = set_json_encoder(BlockTag({"values": color.blocks}))
 	Mem.ctx.data[ns].block_tags["pr_stoupy/breakout/any"] = set_json_encoder(BlockTag({"values": [color_tag(color) for color in COLORS]}))
+	Mem.ctx.data[ns].predicates["modes/pr_stoupy/breakout/on_brick"] = set_json_encoder(Predicate({"condition": "minecraft:entity_properties", "entity": "this", "predicate": {
+		"stepping_on": {"block": {"blocks": f"#{ns}:pr_stoupy/breakout/any"}},
+	}}), max_level=-1)
 
 
 def team_name(color: BrickColor) -> str:

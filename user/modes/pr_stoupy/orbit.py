@@ -15,20 +15,25 @@ from dataclasses import dataclass
 
 from stewbeet import Advancement, JsonDict, Mem, set_json_encoder, write_function
 
-from .shared import LAB, copy_state, crt_text, write_match_predicate
+from .shared import (
+	LAB,
+	ON_START_PAD,
+	START_RADIUS,
+	copy_state,
+	crt_text,
+	require_players,
+	write_match_predicate,
+)
 
 # Constants
 MODE: str = "pr_orbit"
 """ Suffix of the tags, objectives and fake players of the trial. """
 
 MIN_PLAYERS: int = 2
-""" Players needed around the start command block. """
+""" Players needed on the start pads, one in solo mode. """
 
 MAX_PLAYERS: int = 4
 """ Players taken at most, the nearest ones. """
-
-START_RADIUS: int = 6
-""" Radius around the start command block where the players are taken. """
 
 HOLE_RADIUS: int = 16
 """ Radius around a new hole marker in which the previous hole of the same room is replaced, keeping its arena. """
@@ -232,15 +237,15 @@ def generate_start(arena: Arena) -> None:
 	ns: str = Mem.ctx.project_id
 	root: str = f"{ns}:{LAB}/orbit"
 	tag: str = f"{ns}.{MODE}"
-	free_player: str = f"tag=!{tag},distance=..{START_RADIUS},gamemode=!creative,gamemode=!spectator"
+	free_player: str = f"tag=!{tag},distance=..{START_RADIUS},{ON_START_PAD},gamemode=!creative,gamemode=!spectator"
 	markers_missing: str = "\n".join(f"execute unless entity {arena.marker(name)} run return 0" for name in MARKERS)
 
 	write_function(f"{root}/start", f"""
-# Safe to fire every tick: the room of the nearest hole starts once idle, fully placed, with enough free players here
+# Safe to fire every tick: the room of the nearest hole starts once idle, fully placed, with enough free players on the start pads
 execute unless entity @e[type=minecraft:marker,tag={tag}.hole] run return 0
 execute if score @n[type=minecraft:marker,tag={tag}.hole] {tag}.state matches 1.. run return 0
 execute store result score #{MODE}_free {ns}.data if entity @a[{free_player}]
-execute if score #{MODE}_free {ns}.data matches ..{MIN_PLAYERS - 1} run return 0
+{require_players(f"#{MODE}_free {ns}.data", MIN_PLAYERS)}
 execute as @n[type=minecraft:marker,tag={tag}.hole] run function {root}/load_arena
 {markers_missing}
 

@@ -20,6 +20,7 @@ scoreboard players set #all_together_speed_sneak survisland.data 65
 
 # Nothing happens until enough free players stand here, so a group already playing is never disturbed
 execute store result score #all_together_free survisland.data if entity @a[tag=!survisland.all_together,distance=..3,gamemode=!creative,gamemode=!spectator]
+execute if score #all_together_free survisland.data matches 0 run return 0
 execute if score #all_together_free survisland.data matches ..3 run return 0
 
 # The nearest free players are split into groups, each one taking the closest players still free

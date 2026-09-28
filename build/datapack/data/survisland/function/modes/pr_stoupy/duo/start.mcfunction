@@ -19,12 +19,15 @@ scoreboard players set #pr_stoupy_duo_speed_back survisland.data 130
 scoreboard players set #pr_stoupy_duo_speed_sneak survisland.data 65
 
 # Nothing happens until enough free players stand here, so a group already playing is never disturbed
-execute store result score #pr_stoupy_duo_free survisland.data if entity @a[tag=!survisland.pr_stoupy_duo,distance=..3,gamemode=!creative,gamemode=!spectator]
-execute if score #pr_stoupy_duo_free survisland.data matches ..3 run return 0
+execute store result score #pr_stoupy_duo_free survisland.data if entity @a[tag=!survisland.pr_stoupy_duo,distance=..16,predicate=survisland:modes/pr_stoupy/on_start_pad,gamemode=!creative,gamemode=!spectator]
+execute if score #pr_stoupy_duo_free survisland.data matches 0 run return 0
+execute unless score #pr_stoupy_solo survisland.data matches 1 if score #pr_stoupy_duo_free survisland.data matches ..3 run return 0
 
 # The nearest free players are split into groups, each one taking the closest players still free
 function survisland:modes/pr_stoupy/duo/body/form_group
 function survisland:modes/pr_stoupy/duo/body/form_group
 
 schedule function survisland:modes/pr_stoupy/duo/tick 1t replace
+
+schedule function survisland:modes/pr_stoupy/door/tick 1t replace
 

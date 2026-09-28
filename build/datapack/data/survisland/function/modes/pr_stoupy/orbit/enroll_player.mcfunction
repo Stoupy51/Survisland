@@ -1,9 +1,9 @@
 
 #> survisland:modes/pr_stoupy/orbit/enroll_player
 #
-# @executed	as @a[tag=!survisland.pr_orbit,distance=..6,gamemode=!creative,limit=4,sort=nearest]
+# @executed	as @a[tag=!survisland.pr_orbit,distance=..16,predicate=survisland:modes/pr_stoupy/on_start_pad,gamemode=!creative,limit=4,sort=nearest]
 #
-# @within	survisland:modes/pr_stoupy/orbit/start [ as @a[tag=!survisland.pr_orbit,distance=..6,gamemode=!creative,limit=4,sort=nearest] ]
+# @within	survisland:modes/pr_stoupy/orbit/start [ as @a[tag=!survisland.pr_orbit,distance=..16,predicate=survisland:modes/pr_stoupy/on_start_pad,gamemode=!creative,limit=4,sort=nearest] ]
 #
 
 tag @s add survisland.pr_orbit

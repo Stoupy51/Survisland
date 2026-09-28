@@ -5,6 +5,7 @@
 #
 # @within	survisland:modes/all_together/body/tick [ rotated as @s ]
 #			survisland:modes/all_together/body/seat_tick
+#			survisland:modes/all_together/body/seat_tick [ rotated as @s & as @n[type=mannequin,tag=survisland.all_together.body,predicate=survisland:modes/all_together/same_group,distance=..50] ]
 #
 
 # Yaw first, from the flattened aim: a point straight above the feet has no direction to read a yaw from

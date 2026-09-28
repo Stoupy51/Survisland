@@ -1,9 +1,9 @@
 
 #> survisland:modes/pr_stoupy/mirror/enroll_player
 #
-# @executed	as @a[tag=!survisland.pr_mirror,distance=..3,gamemode=!creative,limit=2,sort=nearest] & at @s
+# @executed	at @s
 #
-# @within	survisland:modes/pr_stoupy/mirror/start [ as @a[tag=!survisland.pr_mirror,distance=..3,gamemode=!creative,limit=2,sort=nearest] & at @s ]
+# @within	survisland:modes/pr_stoupy/mirror/start [ at @s ]
 #
 
 scoreboard players add #pr_mirror_slot_counter survisland.data 1

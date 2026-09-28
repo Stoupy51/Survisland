@@ -131,7 +131,8 @@ def generate_start(mode: CrewMode) -> None:
 	ns: str = Mem.ctx.project_id
 	root: str = f"{ns}:{mode.path}"
 	tag: str = f"{ns}.{mode.id}"
-	free_player: str = f"tag=!{tag},distance=..{TRIGGER_RADIUS},gamemode=!creative,gamemode=!spectator"
+	free_player: str = f"tag=!{tag},{mode.start_filter},gamemode=!creative,gamemode=!spectator"
+	solo_guard: str = f"unless score {mode.solo_flag} matches 1 " if mode.solo_flag else ""
 	objectives: str = "\n".join(f"scoreboard objectives add {name} dummy" for name in state_objectives(mode))
 	form_groups: str = "\n".join(f"function {root}/body/form_group" for _ in range(mode.start_players // mode.group_size))
 	skin: str = (
@@ -153,7 +154,8 @@ scoreboard players set #{mode.id}_speed_sneak {ns}.data {SNEAK_SPEED}
 
 # Nothing happens until enough free players stand here, so a group already playing is never disturbed
 execute store result score #{mode.id}_free {ns}.data if entity @a[{free_player}]
-execute if score #{mode.id}_free {ns}.data matches ..{mode.start_players - 1} run return 0
+execute if score #{mode.id}_free {ns}.data matches 0 run return 0
+execute {solo_guard}if score #{mode.id}_free {ns}.data matches ..{mode.start_players - 1} run return 0
 
 # The nearest free players are split into groups, each one taking the closest players still free
 {form_groups}

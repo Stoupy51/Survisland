@@ -19,18 +19,57 @@ Deux réglages de command block reviennent partout :
 - **Répétitif, toujours actif** pour les `start` et `duo/here/stop`. Ils ne font rien tant qu'il n'y a pas assez de joueurs.
 - **Impulsion, redstone requise** pour les récompenses, branché sur une plaque de pression, un bouton ou la porte d'un puzzle.
 
+## Départs, portes et mode solo
+
+### Blocs de départ
+
+Un `start` prend les joueurs **debout sur un bloc d'émeraude**, à 16 blocs au plus de son command block.
+Le rayon peut donc être large sans prendre les joueurs qui passent : il faut marcher sur un bloc de départ.
+Pose un bloc d'émeraude par place (4 pour les duos, 2 pour les miroirs, 2 à 4 pour l'orbite), dans un sas devant la salle.
+Le casse-briques n'en a pas besoin : ses blocs de départ sont les blocs de couleur des cabines.
+Les blocs acceptés sont dans `START_PAD_BLOCKS` (`shared.py`).
+
+### Portes
+
+Une porte est un bloc d'une ouverture. Il se remplit tant qu'un joueur en partie de ce trial est à moins de `radius` blocs, puis se vide à la fin.
+Personne ne sort et personne n'entre pendant la partie. Un marqueur par bloc, donc 2 pour une ouverture de 1x2, posé à ta position :
+
+```
+function survisland:modes/pr_stoupy/mirror/here/place_door {block:"minecraft:iron_bars",radius:24}
+```
+
+Existe aussi pour `duo`, `breakout` et `orbit` (les rats n'ont pas de départ, tout le monde peut aider).
+Le rayon doit couvrir la salle sans atteindre la deuxième copie.
+Avec `block:"minecraft:redstone_block"`, le bloc alimente un mécanisme à toi (portes en fer, pistons).
+Ne pas se tenir dans l'ouverture au départ : le bloc s'y pose quand même.
+
+### Mode solo
+
+Chaque trial démarre avec un seul joueur, pour tester seul. Toujours en survie ou aventure :
+
+```
+function survisland:modes/pr_stoupy/solo {enabled:1}
+function survisland:modes/pr_stoupy/solo {enabled:0}
+```
+
+- Casse-briques : jouable jusqu'au bout, seules les briques de ta couleur comptent. Ton bumper est celui du Joueur 1, au début de la rangée.
+- Orbite : jouable jusqu'au bout.
+- Miroirs : un seul reflet. La mécanique se teste, un puzzle pensé pour 2 ne sera peut-être pas faisable.
+- Duos : un mannequin pour toi seul, avec toutes les commandes (regard, déplacements, clic, saut).
+
 ## Setup d'une copie depuis zéro
 
 Dans l'ordre, pour une copie de 100x100 :
 
 1. Construire la maison de Stoupy, l'entrée du labo, les 5 salles et la salle du villageois. Ce qu'il faut dans chaque salle est détaillé dans sa section.
+	Devant chaque salle à départ, un sas avec les blocs d'émeraude, et une ouverture pour la porte.
 	- Duos : un parcours pour les mannequins, une arrivée, puis un puzzle redstone.
 	- Miroirs : une salle symétrique autour d'un plan.
 	- Casse-briques : un mur de jeu avec des cabines de joueurs, ou le terrain d'exemple.
 	- Orbite : une grande salle avec un plafond haut.
 	- Rats : une salle fermée avec des cages.
 2. Poser le villageois.
-3. Pour chaque trial, poser les marqueurs de setup puis les command blocks de départ et de récompense.
+3. Pour chaque trial, poser les marqueurs de setup, les portes, puis les command blocks de départ et de récompense.
 4. Tester (voir [Tester en solo](#tester-en-solo)). Pour tout recommencer, `here/clear` supprime les entités du labo dans un rayon.
 5. Faire la deuxième copie.
 
@@ -61,8 +100,8 @@ Un clic droit dessus avec les 5 étoiles termine l'épreuve.
 
 À construire : une zone de départ, un parcours pour 2 mannequins, une arrivée, puis un puzzle redstone dont la porte déclenche la récompense.
 
-Départ, command block répétitif. Il prend les 4 joueurs à moins de 3 blocs et forme 2 paires par distance.
-Chaque mannequin apparaît sur le Joueur 1 de sa paire :
+Départ, command block répétitif. Il prend les 4 joueurs sur les blocs de départ et forme 2 paires, par distance au command block.
+Chaque mannequin apparaît sur le Joueur 1 de sa paire, donc les blocs de départ sont la ligne de départ du parcours :
 
 ```
 function survisland:modes/pr_stoupy/duo/start
@@ -91,12 +130,16 @@ function survisland:modes/pr_stoupy/duo/here/shuffle_slots
 À construire : une salle coupée en deux par un plan vertical. Les joueurs marchent d'un côté, leurs reflets de l'autre.
 Le côté des reflets porte les murs, escaliers et plaques de pression du puzzle.
 
-Départ, command block répétitif posé sur le plan du miroir, 2 joueurs à moins de 3 blocs.
-`axis:"x"` inverse la coordonnée X (miroir perpendiculaire à X), `axis:"z"` pour l'autre sens :
+Départ, command block répétitif posé sur le plan du miroir, 2 joueurs sur les blocs de départ.
+`axis:"x"` inverse la coordonnée X (miroir perpendiculaire à X), `axis:"z"` pour l'autre sens.
+`tp` déplace chaque joueur depuis son bloc de départ au lancement, avec une rotation en option. `""` les laisse en place :
 
 ```
-function survisland:modes/pr_stoupy/mirror/start {axis:"x"}
+function survisland:modes/pr_stoupy/mirror/start {axis:"x",tp:"~ ~ ~10 180 0"}
 ```
+
+Le déplacement est le même pour les deux, ils arrivent donc côte à côte comme sur leurs blocs de départ.
+Leur reflet apparaît après le déplacement, en face de leur point d'arrivée.
 
 Les joueurs reçoivent l'item "Figer le reflet" : clic droit pour figer ou libérer leur mannequin.
 Le mannequin subit murs, escaliers et plaques de pression, le puzzle repose sur le décalage accumulé pendant qu'il est figé.
@@ -162,7 +205,7 @@ Relancer avec `invert:1` si gauche et droite sont inversées pour les joueurs :
 execute positioned 100 64 200 run function survisland:modes/pr_stoupy/breakout/here/setup {width:20,height:13,axis:"z",invert:0}
 ```
 
-Départ, command block répétitif à 8 blocs ou moins des 4 joueurs :
+Départ, command block répétitif à 16 blocs ou moins des 4 joueurs, chacun debout sur un bloc de couleur :
 
 ```
 function survisland:modes/pr_stoupy/breakout/start
@@ -208,7 +251,7 @@ function survisland:modes/pr_stoupy/breakout/here/stop
 	```
 	function survisland:modes/pr_stoupy/orbit/here/set_spawn
 	```
-6. Command block répétitif, 2 à 4 joueurs à moins de 6 blocs. Les 3 rounds s'enchaînent seuls, l'épée est donnée puis reprise :
+6. Command block répétitif, 2 à 4 joueurs sur les blocs de départ. Ils sont téléportés au départ de l'étape 5, les 3 rounds s'enchaînent seuls, l'épée est donnée puis reprise :
 	```
 	function survisland:modes/pr_stoupy/orbit/start
 	```
@@ -249,8 +292,8 @@ function survisland:modes/pr_stoupy/rats/here/stop
 
 ## Remise à zéro (développement)
 
-Arrête tous les trials dans le rayon et rend leur état aux joueurs (corps, attributs, items, tags).
-Supprime ensuite toutes les entités du labo dans ce rayon, setup compris : villageois, marqueurs, cages, rats, écran, trou noir.
+Arrête tous les trials dans le rayon et rend leur état aux joueurs (corps, attributs, items, tags), puis ouvre les portes.
+Supprime ensuite toutes les entités du labo dans ce rayon, setup compris : villageois, marqueurs, portes, cages, rats, écran, trou noir.
 Les blocs ne sont pas touchés. Rien ne sort du rayon, donc la deuxième copie n'est pas touchée si elle est plus loin :
 
 ```
@@ -287,8 +330,8 @@ tellraw @a {"text":"Bienvenue au laboratoire","color":"#01FE41"}
 
 ## Tester en solo
 
-1. Rats : entièrement testable seul.
-2. Orbite : baisser temporairement `MIN_PLAYERS` à 1 dans `orbit.py`.
-3. Villageois : avec 5 étoiles données par le `loot give` ci-dessus.
-4. Casse-briques : le terrain d'exemple montre le cadre, l'écran CRT et les briques. Le gameplay demande 4 joueurs.
-5. Miroirs, duos : seul le setup se vérifie. Le gameplay demande de vrais joueurs ou des comptes alts.
+Activer le [mode solo](#mode-solo), passer en survie ou aventure, puis monter sur un bloc de départ.
+Les rats et le villageois (avec 5 étoiles du `loot give` ci-dessus) se testent seul sans mode solo.
+
+Ce que le mode solo ne teste pas : deux joueurs sur un même mannequin, quatre balles en même temps, un puzzle de miroir à deux.
+Pour ça, un serveur local avec `online-mode=false` et plusieurs clients en comptes hors-ligne (Prism Launcher) sur `localhost`.

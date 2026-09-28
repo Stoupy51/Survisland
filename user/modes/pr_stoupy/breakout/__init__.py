@@ -15,7 +15,7 @@ import json
 
 from stewbeet import JsonDict, Mem, write_function
 
-from ..shared import LAB, copy_state, crt_text, write_match_predicate
+from ..shared import LAB, START_RADIUS, copy_state, crt_text, require_players, write_match_predicate
 from .colors import COLORS, color_tag, generate_color_tags, team_name, team_setup_lines
 from .example import main as generate_example
 from .physics import BUMPER_LENGTH, MODE, main as generate_physics
@@ -26,9 +26,6 @@ PLAYERS: int = 4
 
 LEVELS: int = 3
 """ Levels to clear before the star is given. """
-
-START_RADIUS: int = 8
-""" Radius around the start command block where the players are taken. """
 
 SETUP_RADIUS: int = 16
 """ Radius around a new corner in which the previous corner of the same field is replaced. """
@@ -191,15 +188,15 @@ def generate_start(arena: Arena) -> None:
 	ns: str = Mem.ctx.project_id
 	root: str = f"{ns}:{LAB}/breakout"
 	tag: str = f"{ns}.{MODE}"
-	free_player: str = f"tag=!{tag},distance=..{START_RADIUS},gamemode=!creative,gamemode=!spectator"
+	free_player: str = f"tag=!{tag},distance=..{START_RADIUS},predicate={ns}:{LAB}/breakout/on_brick,gamemode=!creative,gamemode=!spectator"
 	read_color: str = "\n".join(f"execute if block ~ ~-1 ~ {color_tag(color)} run scoreboard players set @s {tag}.color {index}" for index, color in enumerate(COLORS))
 
 	write_function(f"{root}/start", f"""
-# Safe to fire every tick: the nearest field starts once idle with {PLAYERS} free players around this block
+# Safe to fire every tick: the nearest field starts once idle with {PLAYERS} free players standing on a colored block
 execute unless entity @e[type=minecraft:marker,tag={tag}.corner] run return 0
 execute if score @n[type=minecraft:marker,tag={tag}.corner] {tag}.state matches 1.. run return 0
 execute store result score #{MODE}_free {ns}.data if entity @a[{free_player}]
-execute if score #{MODE}_free {ns}.data matches ..{PLAYERS - 1} run return 0
+{require_players(f"#{MODE}_free {ns}.data", PLAYERS)}
 execute as @n[type=minecraft:marker,tag={tag}.corner] run function {root}/load_arena
 
 # Slots go from the start of the field to its end, the closest player to the first cell being the Joueur 1

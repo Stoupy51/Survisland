@@ -73,7 +73,6 @@ class Phase:
 	""" Title shown when the part begins. """
 	bindings: dict[str, tuple[int, ...]]
 	""" Action name -> slots (1 to group size) holding it. An action missing from the dict is disabled for the whole part.
-	One slot cannot hold both "look" and "click": the click holder rides its own seat, out of reach of the pass reading the aim.
 	"""
 
 
@@ -92,6 +91,10 @@ class CrewMode:
 	""" Command sets in play order, the first one being dealt when a group forms. """
 	profile: str
 	""" Player name giving its skin to the mannequin, empty to wear the skin of the Joueur 1 of the group. """
+	start_filter: str = f"distance=..{TRIGGER_RADIUS}"
+	""" Selector arguments a free player must match to be taken by the start block. """
+	solo_flag: str = ""
+	""" Score that, at 1, lets a single player start alone and hold every command, ex: "#solo survisland.data". """
 
 
 # Constants (tables)

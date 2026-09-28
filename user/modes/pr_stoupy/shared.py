@@ -2,6 +2,7 @@
 # Imports
 import json
 
+from beet import BlockTag
 from stewbeet import JsonDict, Mem, Predicate, set_json_encoder, write_function
 
 # Constants
@@ -16,6 +17,18 @@ STARS_NEEDED: int = 5
 
 CRT_COLOR: str = "#01FE41"
 """ Text color turned into an old CRT screen by the text shader, the exact value is the trigger. """
+
+START_RADIUS: int = 16
+""" Radius around a start command block in which the players standing on a start pad are taken. """
+
+START_PAD_BLOCKS: list[str] = ["minecraft:emerald_block"]
+""" Blocks a player stands on to be taken by a start, gathered in the block tag behind ON_START_PAD. """
+
+ON_START_PAD: str = f"predicate=survisland:{LAB}/on_start_pad"
+""" Selector argument true for a player standing on a start pad. """
+
+SOLO: str = "#pr_stoupy_solo survisland.data"
+""" Set to 1 by the solo function, every start then runs with a single player. """
 
 
 # Functions
@@ -44,6 +57,35 @@ def write_match_predicate(path: str, matches: dict[str, str]) -> str:
 		scores[objective] = {"min": bound, "max": bound}
 	Mem.ctx.data[ns].predicates[path] = set_json_encoder(Predicate({"condition": "minecraft:entity_scores", "entity": "this", "scores": scores}), max_level=-1)
 	return f"predicate={ns}:{path}"
+
+
+def require_players(free: str, needed: int) -> str:
+	""" Commands leaving the function unless the score counts enough players, a single one in solo mode
+
+	Args:
+		free: Score holding the number of players found, ex: "#pr_mirror_free survisland.data"
+
+	>>> print(require_players("#f d", 2))
+	execute unless score #f d matches 1.. run return 0
+	execute unless score #pr_stoupy_solo survisland.data matches 1 unless score #f d matches 2.. run return 0
+	"""
+	return f"execute unless score {free} matches 1.. run return 0\nexecute unless score {SOLO} matches 1 unless score {free} matches {needed}.. run return 0"
+
+
+def generate_lobby() -> None:
+	""" Write the start pads and the solo switch shared by every start of the lab. """
+	ns: str = Mem.ctx.project_id
+	Mem.ctx.data[ns].block_tags["pr_stoupy/start_pad"] = set_json_encoder(BlockTag({"values": START_PAD_BLOCKS}))
+	Mem.ctx.data[ns].predicates[f"{LAB}/on_start_pad"] = set_json_encoder(Predicate({"condition": "minecraft:entity_properties", "entity": "this", "predicate": {
+		"stepping_on": {"block": {"blocks": f"#{ns}:pr_stoupy/start_pad"}},
+	}}), max_level=-1)
+
+	write_function(f"{ns}:{LAB}/solo", f"""
+# $(enabled) at 1 lets every trial start with one player, and a duo player then holds every command
+$scoreboard players set {SOLO} $(enabled)
+execute if score {SOLO} matches 1 run tellraw @s {{"text":"Laboratoire : mode solo activé, chaque trial démarre avec un seul joueur.","color":"yellow"}}
+execute unless score {SOLO} matches 1 run tellraw @s {{"text":"Laboratoire : mode solo désactivé.","color":"yellow"}}
+""")
 
 
 def copy_state(mode: str, names: tuple[str, ...], to_anchor: bool) -> str:

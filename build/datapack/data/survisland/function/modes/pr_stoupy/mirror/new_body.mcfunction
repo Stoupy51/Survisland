@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/mirror/new_body
 #
-# @executed	as @a[tag=!survisland.pr_mirror,distance=..3,gamemode=!creative,limit=2,sort=nearest] & at @s
+# @executed	at @s
 #
 # @within	survisland:modes/pr_stoupy/mirror/enroll_player
 #

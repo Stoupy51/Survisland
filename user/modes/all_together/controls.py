@@ -148,7 +148,10 @@ execute anchored feet positioned as @s positioned ^ ^ ^8 rotated as @s positione
 # The seat is dropped on the point the caller computed, in front of the mannequin eyes
 tp @s ~ ~ ~
 execute on passengers run function {root}/body/read_player
-execute on passengers run function {root}/body/aim
+execute on passengers unless entity @s[tag={tag}.look] run function {root}/body/aim
+
+# A rider holding both the click and the look, a solo player for instance, aims the mannequin from here
+execute on passengers if entity @s[tag={tag}.look] rotated as @s as @n[type=mannequin,tag={tag}.body,{same_group},distance=..{RADIUS}] run function {root}/body/aim
 
 # Tells the caller the seat was found, whether or not it carries anyone
 return 1
@@ -258,6 +261,11 @@ tellraw @a[distance=..{RADIUS}] {phase_help_message(phase, mode.group_size)}
 			for action in ACTIONS
 			for slot in phase.bindings.get(action.name, ())
 		)
+		solo_tags: str = "\n".join(
+			f"execute if score {mode.solo_flag} matches 1 run tag @s add {tag}.{action.name}"
+			for action in ACTIONS
+			if mode.solo_flag and action.name in phase.bindings
+		)
 		write_function(f"{root}/body/deal/{phase.id}", f"""
 # The click holder rides its own seat, so a new command set can mean a new vehicle
 execute if predicate {ns}:riding run ride @s dismount
@@ -267,6 +275,7 @@ execute if predicate {ns}:riding run ride @s dismount
 
 # Give the command set of this part
 {give_tags}
+{solo_tags}
 
 # Only the click holder keeps a body able to touch the world
 attribute @s minecraft:block_break_speed base reset

@@ -4,7 +4,7 @@ from stewbeet import Mem, write_function
 from user.modes.all_together import generate_crew_mode
 from user.modes.all_together.phases import CrewMode, Phase
 
-from .shared import LAB
+from .shared import LAB, ON_START_PAD, SOLO, START_RADIUS
 
 # Constants
 DUO: CrewMode = CrewMode(
@@ -19,6 +19,8 @@ DUO: CrewMode = CrewMode(
 		}),
 	],
 	profile="",
+	start_filter=f"distance=..{START_RADIUS},{ON_START_PAD}",
+	solo_flag=SOLO,
 )
 """ Four players split into two pairs, each pair sharing one mannequin that wears the skin of its Joueur 1.
 Sprint and crawl sit on different slots since crawl is read on the sprint key.

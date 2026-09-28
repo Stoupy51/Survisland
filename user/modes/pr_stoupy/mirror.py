@@ -14,14 +14,17 @@ from stewbeet import Mem, write_function
 
 from user.utils.player_head import PLAYER_HEAD_LOOT_TABLE
 
-from .shared import LAB, write_match_predicate
+from .shared import (
+	LAB,
+	ON_START_PAD,
+	START_RADIUS,
+	require_players,
+	write_match_predicate,
+)
 
 # Constants
 MODE: str = "pr_mirror"
 """ Suffix of the tags, objectives and fake players of the trial. """
-
-START_RADIUS: int = 3
-""" Radius around the start command block where the two players are taken. """
 
 REWARD_RADIUS: int = 5
 """ Radius around the reward command block where the player receiving the star is looked for. """
@@ -54,14 +57,14 @@ def generate_start(same_pair: str) -> None:
 	ns: str = Mem.ctx.project_id
 	root: str = f"{ns}:{LAB}/mirror"
 	tag: str = f"{ns}.{MODE}"
-	free_player: str = f"tag=!{tag},distance=..{START_RADIUS},gamemode=!creative,gamemode=!spectator"
+	free_player: str = f"tag=!{tag},distance=..{START_RADIUS},{ON_START_PAD},gamemode=!creative,gamemode=!spectator"
 	objectives: str = "\n".join(f"scoreboard objectives add {tag}{suffix} dummy" for suffix in ("", ".session", ".x", ".y", ".z", ".plane_x", ".plane_z", ".flip_x", ".flip_z", ".frozen", ".moving", ".yaw", ".pitch"))
 
 	write_function(f"{root}/start", f"""
-# Safe to fire every tick: one session per command block, and only with two free players standing here
+# Safe to fire every tick: one session per command block, and only with two free players on the start pads
 execute if entity @e[type=minecraft:marker,tag={tag}.anchor,distance=..1] run return 0
 execute store result score #{MODE}_free {ns}.data if entity @a[{free_player}]
-execute if score #{MODE}_free {ns}.data matches ..1 run return 0
+{require_players(f"#{MODE}_free {ns}.data", 2)}
 {objectives}
 
 # The mirror plane goes through this block, normal to the given axis
@@ -74,9 +77,18 @@ scoreboard players add #{MODE}_session_counter {ns}.data 1
 scoreboard players operation #{MODE}_session {ns}.data = #{MODE}_session_counter {ns}.data
 execute align xyz positioned ~0.5 ~ ~0.5 summon minecraft:marker run function {root}/new_anchor
 
+# $(tp) moves each player from where it stands, "" to leave them on the pads
 scoreboard players set #{MODE}_slot_counter {ns}.data 0
-execute as @a[{free_player},limit=2,sort=nearest] at @s run function {root}/enroll_player
+tag @a[{free_player},limit=2,sort=nearest] add {tag}.entering
+$data modify storage {ns}:{MODE} tp set value "$(tp)"
+execute unless data storage {ns}:{MODE} {{tp:""}} as @a[tag={tag}.entering] at @s run function {root}/teleport with storage {ns}:{MODE}
+execute as @a[tag={tag}.entering] at @s run function {root}/enroll_player
+tag @a remove {tag}.entering
 schedule function {root}/tick 1t replace
+""")
+
+	write_function(f"{root}/teleport", """
+$tp @s $(tp)
 """)
 
 	write_function(f"{root}/new_anchor", f"""

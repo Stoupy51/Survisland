@@ -10,7 +10,10 @@
 # The seat is dropped on the point the caller computed, in front of the mannequin eyes
 tp @s ~ ~ ~
 execute on passengers run function survisland:modes/all_together/body/read_player
-execute on passengers run function survisland:modes/all_together/body/aim
+execute on passengers unless entity @s[tag=survisland.all_together.look] run function survisland:modes/all_together/body/aim
+
+# A rider holding both the click and the look, a solo player for instance, aims the mannequin from here
+execute on passengers if entity @s[tag=survisland.all_together.look] rotated as @s as @n[type=mannequin,tag=survisland.all_together.body,predicate=survisland:modes/all_together/same_group,distance=..50] run function survisland:modes/all_together/body/aim
 
 # Tells the caller the seat was found, whether or not it carries anyone
 return 1
