@@ -49,6 +49,9 @@ LEVELS: int = 3
 SETUP_RADIUS: int = 16
 """ Radius around a new corner in which the previous corner of the same field is replaced. """
 
+START_DELAY: int = 20
+""" Ticks a start waits with fewer players than needed (solo mode), so players reaching the pads a tick apart all get in. """
+
 COUNTDOWN: int = 5
 """ Seconds counted down before the balls are launched. """
 
@@ -106,7 +109,7 @@ def generate_setup(arena: Arena) -> None:
 	ns: str = Mem.ctx.project_id
 	root: str = f"{ns}:{LAB}/breakout"
 	tag: str = f"{ns}.{MODE}"
-	objectives: str = "\n".join(f"scoreboard objectives add {tag}.{name} dummy" for name in ("color", "mu", "mv", "u", "speed", *STATE))
+	objectives: str = "\n".join(f"scoreboard objectives add {tag}.{name} dummy" for name in ("color", "mu", "mv", "u", "speed", "wait", *STATE))
 
 	write_function(f"{root}/here/setup", f"""
 # Positioned on the bottom left cell of the field, width and height in blocks, axis along which the field extends
@@ -254,9 +257,13 @@ def generate_start(arena: Arena) -> None:
 execute unless entity @e[type=minecraft:marker,tag={tag}.corner] run return 0
 execute if score @n[type=minecraft:marker,tag={tag}.corner] {tag}.state matches 1.. run return 0
 execute store result score #{MODE}_free {ns}.data if entity @a[{free_player}]
+execute unless score #{MODE}_free {ns}.data matches 1.. run return run scoreboard players set @n[type=minecraft:marker,tag={tag}.corner] {tag}.wait 0
 {require_players(f"#{MODE}_free {ns}.data", PLAYERS)}
-execute as @n[type=minecraft:marker,tag={tag}.corner] run function {root}/load_arena
 function {root}/objectives
+execute if score #{MODE}_free {ns}.data matches ..{PLAYERS - 1} run scoreboard players add @n[type=minecraft:marker,tag={tag}.corner] {tag}.wait 1
+execute if score #{MODE}_free {ns}.data matches ..{PLAYERS - 1} if score @n[type=minecraft:marker,tag={tag}.corner] {tag}.wait matches ..{START_DELAY - 1} run return 0
+scoreboard players set @n[type=minecraft:marker,tag={tag}.corner] {tag}.wait 0
+execute as @n[type=minecraft:marker,tag={tag}.corner] run function {root}/load_arena
 
 tag @a[{free_player},limit={PLAYERS},sort=nearest] add {tag}.new
 {STORE_TP}

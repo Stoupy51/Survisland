@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/breakout/bumper_hit
 #
-# @executed	at @s
+# @executed	rotated -90 0
 #
 # @within	survisland:modes/pr_stoupy/breakout/bounce_below
 #

@@ -1,14 +1,9 @@
 
 #> survisland:modes/pr_stoupy/breakout/hit_brick
 #
-# @executed	positioned ~0.5 ~0.2 ~
+# @executed	positioned ^ ^0.2 ^0.5
 #
-# @within	survisland:modes/pr_stoupy/breakout/ball_tick [ positioned ~0.5 ~0.2 ~ ]
-#			survisland:modes/pr_stoupy/breakout/ball_tick [ positioned ~-0.5 ~0.2 ~ ]
-#			survisland:modes/pr_stoupy/breakout/ball_tick [ positioned ~ ~0.2 ~0.5 ]
-#			survisland:modes/pr_stoupy/breakout/ball_tick [ positioned ~ ~0.2 ~-0.5 ]
-#			survisland:modes/pr_stoupy/breakout/ball_tick [ positioned ~ ~0.7 ~ ]
-#			survisland:modes/pr_stoupy/breakout/bounce_below [ positioned ~ ~-0.3 ~ ]
+# @within	survisland:modes/pr_stoupy/breakout/probe
 #
 
 # Positioned on the probed block, run as the ball that bounced

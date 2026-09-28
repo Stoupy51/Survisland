@@ -13,10 +13,14 @@
 execute unless entity @e[type=minecraft:marker,tag=survisland.pr_breakout.corner] run return 0
 execute if score @n[type=minecraft:marker,tag=survisland.pr_breakout.corner] survisland.pr_breakout.state matches 1.. run return 0
 execute store result score #pr_breakout_free survisland.data if entity @a[tag=!survisland.pr_breakout,distance=..16,predicate=survisland:modes/pr_stoupy/on_start_pad,gamemode=!creative,gamemode=!spectator]
+execute unless score #pr_breakout_free survisland.data matches 1.. run return run scoreboard players set @n[type=minecraft:marker,tag=survisland.pr_breakout.corner] survisland.pr_breakout.wait 0
 execute unless score #pr_breakout_free survisland.data matches 1.. run return 0
 execute unless score #pr_stoupy_solo survisland.data matches 1 unless score #pr_breakout_free survisland.data matches 4.. run return 0
-execute as @n[type=minecraft:marker,tag=survisland.pr_breakout.corner] run function survisland:modes/pr_stoupy/breakout/load_arena
 function survisland:modes/pr_stoupy/breakout/objectives
+execute if score #pr_breakout_free survisland.data matches ..3 run scoreboard players add @n[type=minecraft:marker,tag=survisland.pr_breakout.corner] survisland.pr_breakout.wait 1
+execute if score #pr_breakout_free survisland.data matches ..3 if score @n[type=minecraft:marker,tag=survisland.pr_breakout.corner] survisland.pr_breakout.wait matches ..19 run return 0
+scoreboard players set @n[type=minecraft:marker,tag=survisland.pr_breakout.corner] survisland.pr_breakout.wait 0
+execute as @n[type=minecraft:marker,tag=survisland.pr_breakout.corner] run function survisland:modes/pr_stoupy/breakout/load_arena
 
 tag @a[tag=!survisland.pr_breakout,distance=..16,predicate=survisland:modes/pr_stoupy/on_start_pad,gamemode=!creative,gamemode=!spectator,limit=4,sort=nearest] add survisland.pr_breakout.new
 $data modify storage survisland:pr_stoupy tp set value "$(tp)"

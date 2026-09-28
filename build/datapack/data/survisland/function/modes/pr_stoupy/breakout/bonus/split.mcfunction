@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/breakout/bonus/split
 #
-# @executed	positioned ~0.5 ~0.2 ~
+# @executed	positioned ^ ^0.2 ^0.5
 #
 # @within	survisland:modes/pr_stoupy/breakout/bonus/count
 #

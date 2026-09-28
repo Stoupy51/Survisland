@@ -11,6 +11,7 @@ scoreboard objectives add survisland.pr_breakout.mu dummy
 scoreboard objectives add survisland.pr_breakout.mv dummy
 scoreboard objectives add survisland.pr_breakout.u dummy
 scoreboard objectives add survisland.pr_breakout.speed dummy
+scoreboard objectives add survisland.pr_breakout.wait dummy
 scoreboard objectives add survisland.pr_breakout.arena dummy
 scoreboard objectives add survisland.pr_breakout.state dummy
 scoreboard objectives add survisland.pr_breakout.timer dummy

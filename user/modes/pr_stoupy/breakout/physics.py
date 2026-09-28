@@ -2,7 +2,7 @@
 
 Bounces are done by the vanilla physics of the sulfur cube (bounciness 1, no drag, no gravity).
 A bounce shows up as a component of the motion that changed sign since the previous tick,
-and the block probed just past the ball on that side is the brick that was hit.
+and the first solid block probed just past the ball on that side, under its center then under its edges, is the one it hit.
 A bumper is a row of barriers under a thin block display, so the ball bounces on it like on any block.
 """
 # ruff: noqa: E501
@@ -34,10 +34,17 @@ ZONE_ANGLES: tuple[int, ...] = (-60, -45, -30, -15, 15, 30, 45, 60)
 """ Angle from the vertical given by each slice of a bumper, left to right, none of them straight up. """
 
 PROBE_SIDE: str = "0.5"
-""" Distance from the ball center to the block probed after a sideways bounce, past its half width of 0.196. """
+""" Distance from the ball center to the blocks probed after a sideways bounce, past its half width of 0.196. """
 
-PROBE_MID: str = "0.2"
-""" Height of the ball center above its feet, where sideways probes are made. """
+SIDE_HEIGHTS: tuple[str, ...] = ("0.2", "0.01", "0.38", "-0.3", "0.7")
+""" Heights above the feet probed ahead after a sideways bounce, in order: the center of the ball, then its bottom and top edges.
+The last two are the rows under and above it, which the ball may have slid past after the hit within the same tick.
+"""
+
+VERTICAL_OFFSETS: tuple[str, ...] = ("0", "0.19", "-0.19", "-0.5")
+""" Offsets along the heading of the ball probed after a vertical bounce, in order: its center, then its front and back edges.
+The last one is the column behind it, which the ball may have slid past after the hit within the same tick.
+"""
 
 PROBE_ABOVE: str = "0.7"
 """ Height above the feet probed after a bounce on a ceiling, past the 0.392 of the ball. """
@@ -105,27 +112,47 @@ execute store result score #{MODE}_mv {ns}.data run data get storage {ns}:{MODE}
 
 execute if score #{MODE}_v {ns}.data < #{MODE}_death_v {ns}.data run return run function {root}/death
 
-# Sideways bounce: the brick hit is on the side the ball was heading to
-scoreboard players operation #{MODE}_flip {ns}.data = #{MODE}_mu {ns}.data
-scoreboard players operation #{MODE}_flip {ns}.data *= @s {tag}.mu
-execute if score #{MODE}_flip {ns}.data matches ..-1 if score #{MODE}_axis {ns}.data matches 0 if score @s {tag}.mu matches 1.. positioned ~{PROBE_SIDE} ~{PROBE_MID} ~ run function {root}/hit_brick
-execute if score #{MODE}_flip {ns}.data matches ..-1 if score #{MODE}_axis {ns}.data matches 0 if score @s {tag}.mu matches ..-1 positioned ~-{PROBE_SIDE} ~{PROBE_MID} ~ run function {root}/hit_brick
-execute if score #{MODE}_flip {ns}.data matches ..-1 if score #{MODE}_axis {ns}.data matches 1 if score @s {tag}.mu matches 1.. positioned ~ ~{PROBE_MID} ~{PROBE_SIDE} run function {root}/hit_brick
-execute if score #{MODE}_flip {ns}.data matches ..-1 if score #{MODE}_axis {ns}.data matches 1 if score @s {tag}.mu matches ..-1 positioned ~ ~{PROBE_MID} ~-{PROBE_SIDE} run function {root}/hit_brick
-
-# Vertical bounce: a ceiling, or on the way down a bumper or the top of a brick
-scoreboard players operation #{MODE}_flip {ns}.data = #{MODE}_mv {ns}.data
-scoreboard players operation #{MODE}_flip {ns}.data *= @s {tag}.mv
-execute if score #{MODE}_flip {ns}.data matches ..-1 if score @s {tag}.mv matches 1.. positioned ~ ~{PROBE_ABOVE} ~ run function {root}/hit_brick
-execute if score #{MODE}_flip {ns}.data matches ..-1 if score @s {tag}.mv matches ..-1 run function {root}/bounce_below
+# Probes are made facing the heading of the ball along the field, so ^ ^ ^1 is one block ahead of it
+execute if score #{MODE}_axis {ns}.data matches 0 if score @s {tag}.mu matches 0.. rotated -90 0 run function {root}/bounces
+execute if score #{MODE}_axis {ns}.data matches 0 if score @s {tag}.mu matches ..-1 rotated 90 0 run function {root}/bounces
+execute if score #{MODE}_axis {ns}.data matches 1 if score @s {tag}.mu matches 0.. rotated 0 0 run function {root}/bounces
+execute if score #{MODE}_axis {ns}.data matches 1 if score @s {tag}.mu matches ..-1 rotated 180 0 run function {root}/bounces
 
 scoreboard players operation @s {tag}.mu = #{MODE}_mu {ns}.data
 scoreboard players operation @s {tag}.mv = #{MODE}_mv {ns}.data
 """)
 
+	write_function(f"{root}/bounces", f"""
+# Sideways bounce: the block hit is ahead of the ball
+scoreboard players operation #{MODE}_flip {ns}.data = #{MODE}_mu {ns}.data
+scoreboard players operation #{MODE}_flip {ns}.data *= @s {tag}.mu
+execute if score #{MODE}_flip {ns}.data matches ..-1 run function {root}/side_bounce
+
+# Vertical bounce: a ceiling, or on the way down a bumper or the top of a brick
+scoreboard players operation #{MODE}_flip {ns}.data = #{MODE}_mv {ns}.data
+scoreboard players operation #{MODE}_flip {ns}.data *= @s {tag}.mv
+execute if score #{MODE}_flip {ns}.data matches ..-1 if score @s {tag}.mv matches 1.. positioned ~ ~{PROBE_ABOVE} ~ run function {root}/vertical_bounce
+execute if score #{MODE}_flip {ns}.data matches ..-1 if score @s {tag}.mv matches ..-1 run function {root}/bounce_below
+""")
+
+	write_function(f"{root}/side_bounce", f"scoreboard players set #{MODE}_hit {ns}.data 0\n" + "\n".join(
+		f"execute if score #{MODE}_hit {ns}.data matches 0 positioned ^ ^{height} ^{PROBE_SIDE} run function {root}/probe" for height in SIDE_HEIGHTS
+	))
+
 	write_function(f"{root}/bounce_below", f"""
 execute if score #{MODE}_v {ns}.data < #{MODE}_bumper_top {ns}.data run return run function {root}/bumper_hit
-execute positioned ~ ~{PROBE_BELOW} ~ run function {root}/hit_brick
+execute positioned ~ ~{PROBE_BELOW} ~ run function {root}/vertical_bounce
+""")
+
+	write_function(f"{root}/vertical_bounce", f"scoreboard players set #{MODE}_hit {ns}.data 0\n" + "\n".join(
+		f"execute if score #{MODE}_hit {ns}.data matches 0 positioned ^ ^ ^{offset} run function {root}/probe" for offset in VERTICAL_OFFSETS
+	))
+
+	write_function(f"{root}/probe", f"""
+# The first solid block found is the one the ball bounced on, and only breaks if it is a brick of the ball
+execute if block ~ ~ ~ #minecraft:air run return 0
+scoreboard players set #{MODE}_hit {ns}.data 1
+function {root}/hit_brick
 """)
 
 

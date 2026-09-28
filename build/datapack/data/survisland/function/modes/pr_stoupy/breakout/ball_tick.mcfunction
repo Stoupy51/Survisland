@@ -20,19 +20,11 @@ execute store result score #pr_breakout_mv survisland.data run data get storage 
 
 execute if score #pr_breakout_v survisland.data < #pr_breakout_death_v survisland.data run return run function survisland:modes/pr_stoupy/breakout/death
 
-# Sideways bounce: the brick hit is on the side the ball was heading to
-scoreboard players operation #pr_breakout_flip survisland.data = #pr_breakout_mu survisland.data
-scoreboard players operation #pr_breakout_flip survisland.data *= @s survisland.pr_breakout.mu
-execute if score #pr_breakout_flip survisland.data matches ..-1 if score #pr_breakout_axis survisland.data matches 0 if score @s survisland.pr_breakout.mu matches 1.. positioned ~0.5 ~0.2 ~ run function survisland:modes/pr_stoupy/breakout/hit_brick
-execute if score #pr_breakout_flip survisland.data matches ..-1 if score #pr_breakout_axis survisland.data matches 0 if score @s survisland.pr_breakout.mu matches ..-1 positioned ~-0.5 ~0.2 ~ run function survisland:modes/pr_stoupy/breakout/hit_brick
-execute if score #pr_breakout_flip survisland.data matches ..-1 if score #pr_breakout_axis survisland.data matches 1 if score @s survisland.pr_breakout.mu matches 1.. positioned ~ ~0.2 ~0.5 run function survisland:modes/pr_stoupy/breakout/hit_brick
-execute if score #pr_breakout_flip survisland.data matches ..-1 if score #pr_breakout_axis survisland.data matches 1 if score @s survisland.pr_breakout.mu matches ..-1 positioned ~ ~0.2 ~-0.5 run function survisland:modes/pr_stoupy/breakout/hit_brick
-
-# Vertical bounce: a ceiling, or on the way down a bumper or the top of a brick
-scoreboard players operation #pr_breakout_flip survisland.data = #pr_breakout_mv survisland.data
-scoreboard players operation #pr_breakout_flip survisland.data *= @s survisland.pr_breakout.mv
-execute if score #pr_breakout_flip survisland.data matches ..-1 if score @s survisland.pr_breakout.mv matches 1.. positioned ~ ~0.7 ~ run function survisland:modes/pr_stoupy/breakout/hit_brick
-execute if score #pr_breakout_flip survisland.data matches ..-1 if score @s survisland.pr_breakout.mv matches ..-1 run function survisland:modes/pr_stoupy/breakout/bounce_below
+# Probes are made facing the heading of the ball along the field, so ^ ^ ^1 is one block ahead of it
+execute if score #pr_breakout_axis survisland.data matches 0 if score @s survisland.pr_breakout.mu matches 0.. rotated -90 0 run function survisland:modes/pr_stoupy/breakout/bounces
+execute if score #pr_breakout_axis survisland.data matches 0 if score @s survisland.pr_breakout.mu matches ..-1 rotated 90 0 run function survisland:modes/pr_stoupy/breakout/bounces
+execute if score #pr_breakout_axis survisland.data matches 1 if score @s survisland.pr_breakout.mu matches 0.. rotated 0 0 run function survisland:modes/pr_stoupy/breakout/bounces
+execute if score #pr_breakout_axis survisland.data matches 1 if score @s survisland.pr_breakout.mu matches ..-1 rotated 180 0 run function survisland:modes/pr_stoupy/breakout/bounces
 
 scoreboard players operation @s survisland.pr_breakout.mu = #pr_breakout_mu survisland.data
 scoreboard players operation @s survisland.pr_breakout.mv = #pr_breakout_mv survisland.data
