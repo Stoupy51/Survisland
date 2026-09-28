@@ -2,6 +2,7 @@
 #> survisland:modes/pr_stoupy/breakout/count_bricks
 #
 # @within	survisland:modes/pr_stoupy/breakout/begin_level
+#			survisland:modes/pr_stoupy/breakout/break_brick
 #
 
 # Raster scan of the brick rows, once per level: breaks are then counted down one by one

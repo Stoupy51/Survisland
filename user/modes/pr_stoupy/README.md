@@ -191,7 +191,7 @@ function survisland:modes/pr_stoupy/breakout/here/example_level
 	Le cadre et le fond ne doivent pas être de ces blocs colorés dans le plan du terrain, sinon ils comptent comme des briques.
 - Chaque joueur arrive par le `tp` sur un bloc plein de sa couleur, face au mur, enfermé dans une case 1x1.
 	Un tapis ou une dalle posé dessus cache la couleur : c'est le bloc juste sous les pieds qui est lu.
-	Leur vitesse est à 0 pendant la partie, mais un saut ou une poussée les ferait quand même sortir de leur bloc.
+	Ils sont assis sur une monture invisible pendant la partie : sans vitesse modifiée, donc sans zoom, et remis dessus aussitôt s'ils descendent avec sneak.
 - Le Joueur 1 est le plus proche du coin, son bumper est au début de la rangée.
 
 Setup, une seule fois, positionné sur le coin bas gauche. Le terrain s'étend vers +axis et vers le haut.
@@ -215,7 +215,7 @@ function survisland:modes/pr_stoupy/breakout/start {tp:"~ ~5 ~",redstone:"~ ~-2 
 ### Pendant la partie
 
 Les bumpers font 2 blocs de large et 0.5 d'épaisseur : des barrières sous un block display de la couleur du joueur.
-Tous les 15 blocs cassés, la balle qui casse le 15e reçoit un bonus, en alternance : vitesse x2, puis une deuxième balle.
+Tous les 15 blocs cassés, la balle qui casse le 15e reçoit un bonus, en alternance : vitesse x1.5, puis une deuxième balle (à la même vitesse). Les bonus se cumulent.
 Un joueur ne perd que quand sa dernière balle tombe.
 Le béton prend deux coups : le premier le change en verre teinté de sa couleur, le second le casse. La laine, la terre cuite et le verre cassent en un coup.
 Le joueur arrive par le `tp` au-dessus de sa case : sa couleur est lue sur le premier bloc de couleur dans les 3 blocs sous ses pieds.

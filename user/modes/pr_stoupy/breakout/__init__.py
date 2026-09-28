@@ -3,7 +3,7 @@
 The field is a wall of W x H cells whose bottom row holds the bumpers and whose other rows hold the bricks.
 A ball only breaks the bricks of the color its player stands on, and bounces off everything else.
 When the last ball of a player falls under the bumper row, every ball is taken back and relaunched after a countdown.
-Every 15 bricks broken, the ball breaking the last one gets a bonus: twice its speed, or a second ball.
+Every 15 bricks broken, the ball breaking the last one gets a bonus stacking with the previous ones: half again its speed, or a second ball.
 A level is over once no brick of the players' colors is left, the next one is cloned in by hand.
 
 Each field is an arena: its corner marker holds the state of the game in its own scores, and its players, balls,
@@ -61,10 +61,7 @@ STATE: tuple[str, ...] = ("arena", "state", "timer", "level", "clock", "axis", "
 BALL_NBT: str = '{Tags:["survisland.pr_breakout.ball"],Size:0,Invulnerable:1b,Silent:1b,PersistenceRequired:1b,Glowing:1b,equipment:{body:{id:"minecraft:stone",count:1}},drop_chances:{body:0.0f},attributes:[{id:"minecraft:gravity",base:0.0d},{id:"minecraft:bounciness",base:1.0d},{id:"minecraft:air_drag_modifier",base:0.0d},{id:"minecraft:friction_modifier",base:0.0d},{id:"minecraft:scale",base:0.8d},{id:"minecraft:movement_speed",base:0.0d}]}'
 """ A tiny sulfur cube, bouncing without any loss: gravity, drag and friction are zeroed and every bounce keeps the full speed. """
 
-FROZEN: str = "survisland:pr_breakout_frozen"
-""" Movement speed modifier multiplying by 0 the speed of the players during a game, so their keys only steer the bumpers. """
-
-SCREEN_OFFSET: str = "0.6"
+SCREEN_OFFSET: str = "1.5"
 """ Blocks between the brick plane and the screen text, toward the players so the bricks never hide it. """
 
 
@@ -155,10 +152,15 @@ scoreboard players add #{MODE}_death_v {ns}.data 500
 scoreboard players operation #{MODE}_bumper_top {ns}.data = @s bs.pos.y
 scoreboard players add #{MODE}_bumper_top {ns}.data 1300
 function {root}/save_arena
+function {root}/place_screen
+""")
 
-# The screen hangs in the middle of the field, on the side of the players: ^-1 with invert:0, ^1 with invert:1
-execute store result storage {ns}:{MODE} middle.u int 0.5 run scoreboard players get #{MODE}_width {ns}.data
-execute store result storage {ns}:{MODE} middle.v int 0.5 run scoreboard players get #{MODE}_height {ns}.data
+	write_function(f"{root}/place_screen", f"""
+# @s is the corner, at itself: the screen hangs in the middle of the field, on the side of the players (^- with invert:0, ^+ with invert:1)
+kill @e[type=minecraft:text_display,tag={tag}.screen,{arena.same}]
+execute store result storage {ns}:{MODE} middle.u double 0.5 run scoreboard players remove #{MODE}_width {ns}.data 1
+scoreboard players add #{MODE}_width {ns}.data 1
+execute store result storage {ns}:{MODE} middle.v double 0.5 run scoreboard players get #{MODE}_height {ns}.data
 scoreboard players operation #{MODE}_side {ns}.data = #{MODE}_invert {ns}.data
 scoreboard players operation #{MODE}_side {ns}.data *= #2 {ns}.data
 execute store result storage {ns}:{MODE} middle.side double {SCREEN_OFFSET} run scoreboard players remove #{MODE}_side {ns}.data 1
@@ -166,13 +168,15 @@ execute rotated as @s run function {root}/summon_screen with storage {ns}:{MODE}
 """)
 
 	write_function(f"{root}/summon_screen", f"""
-$execute positioned ^$(side) ^$(v) ^$(u) summon minecraft:text_display run function {root}/new_screen
+# Facing the players and parallel to the bricks, so looking up at it never tilts it into them
+$execute positioned ^$(side) ^$(v) ^$(u) facing ^$(side) ^ ^ summon minecraft:text_display run function {root}/new_screen
 """)
 
 	write_function(f"{root}/new_screen", f"""
 tag @s add {tag}.screen
+rotate @s ~ ~
 scoreboard players operation @s {tag}.arena = #{MODE}_arena {ns}.data
-data merge entity @s {{billboard:"center",alignment:"center",background:0,shadow:0b,line_width:400,brightness:{{sky:15,block:15}},transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[3f,3f,3f]}}}}
+data merge entity @s {{billboard:"fixed",alignment:"center",background:0,shadow:0b,line_width:400,brightness:{{sky:15,block:15}},transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[3f,3f,3f]}}}}
 """)
 
 
@@ -202,6 +206,7 @@ execute if score #{MODE}_active {ns}.data matches 1.. run schedule function {roo
 # State: 1 countdown, 2 balls in play, 3 level cleared and waiting for next_level, 0 stopped
 execute unless score @s {tag}.state matches 1..2 run return 0
 function {root}/load_arena
+execute as {arena.players} unless predicate {ns}:riding run function {root}/remount
 execute if score #{MODE}_state {ns}.data matches 1 run function {root}/countdown_tick
 execute if score #{MODE}_state {ns}.data matches 2 run function {root}/play_tick
 execute if score #{MODE}_state {ns}.data matches 1..2 run scoreboard players add #{MODE}_active {ns}.data 1
@@ -213,13 +218,15 @@ function {root}/save_arena
 kill {arena.balls}
 execute as @e[type=minecraft:block_display,tag={tag}.bumper,{arena.same}] at @s run fill ^ ^ ^ ^ ^ ^{BUMPER_LENGTH - 1} minecraft:air replace minecraft:barrier
 kill @e[type=minecraft:block_display,tag={tag}.bumper,{arena.same}]
-execute as {arena.players} run function {root}/release_player
+kill @e[type=minecraft:item_display,tag={tag}.seat,{arena.same}]
+tag {arena.players} remove {tag}
 scoreboard players set #{MODE}_state {ns}.data 0
 """)
 
-	write_function(f"{root}/release_player", f"""
-attribute @s minecraft:movement_speed modifier remove {FROZEN}
-tag @s remove {tag}
+	write_function(f"{root}/remount", f"""
+# Sneaking gets a player off its seat, it is put back on right away
+scoreboard players operation #{MODE}_slot {ns}.data = @s {tag}
+ride @s mount @e[type=minecraft:item_display,tag={tag}.seat,{arena.same_slot},limit=1]
 """)
 
 
@@ -251,6 +258,7 @@ scoreboard players set #{MODE}_slot_counter {ns}.data 0
 execute at {arena.corner} as @a[tag={tag}.new,sort=nearest] at @s run function {root}/enroll_player
 tag @a remove {tag}.new
 execute if entity @a[tag={tag},{arena.same},scores={{{tag}.color=-1}}] run return run function {root}/abort_colorless
+execute as {arena.corner} at @s run function {root}/place_screen
 
 # Fewer players than needed only happens in solo mode, where every ball breaks every solo color
 scoreboard players set #{MODE}_solo {ns}.data 0
@@ -273,12 +281,24 @@ scoreboard players add #{MODE}_slot_counter {ns}.data 1
 scoreboard players operation @s {tag} = #{MODE}_slot_counter {ns}.data
 scoreboard players operation @s {tag}.arena = #{MODE}_arena {ns}.data
 tag @s add {tag}
-attribute @s minecraft:movement_speed modifier add {FROZEN} -1 add_multiplied_total
 scoreboard players set @s {tag}.color -1
 # The tp may leave the player above its booth, so the first colored block down to 3 blocks under the feet counts
 function {root}/read_color
 execute if score @s {tag}.color matches -1 positioned ~ ~-1 ~ run function {root}/read_color
 execute if score @s {tag}.color matches -1 positioned ~ ~-2 ~ run function {root}/read_color
+
+# Seated for the whole game: its keys only steer the bumper, with no slowness zooming the view
+# A seated player sinks by its vehicle attachment of 0.6, so the seat is raised by as much
+execute positioned ~ ~0.6 ~ summon minecraft:item_display run function {root}/new_seat
+ride @s mount @n[type=minecraft:item_display,tag={tag}.new_seat]
+tag @e[type=minecraft:item_display,tag={tag}.new_seat] remove {tag}.new_seat
+""")
+
+	write_function(f"{root}/new_seat", f"""
+tag @s add {tag}.seat
+tag @s add {tag}.new_seat
+scoreboard players operation @s {tag} = #{MODE}_slot_counter {ns}.data
+scoreboard players operation @s {tag}.arena = #{MODE}_arena {ns}.data
 """)
 
 	write_function(f"{root}/read_color", f"""
@@ -302,7 +322,8 @@ scoreboard players operation @s {tag}.arena = #{MODE}_arena {ns}.data
 
 	write_function(f"{root}/abort_colorless", f"""
 tellraw {arena.players} {{"text":"Casse-briques : chaque joueur doit se tenir sur un bloc de couleur (béton, laine, terre cuite ou verre teinté).","color":"red"}}
-execute as {arena.players} run function {root}/release_player
+kill @e[type=minecraft:item_display,tag={tag}.seat,{arena.same}]
+tag {arena.players} remove {tag}
 """)
 
 
@@ -324,6 +345,7 @@ def generate_levels(arena: Arena) -> None:
 	write_function(f"{root}/begin_level", f"""
 kill {arena.balls}
 function {root}/count_bricks
+tellraw @a[distance=..64] {json.dumps([{"text": "Casse-briques : ", "color": "gray", "italic": True}, {"score": {"name": f"#{MODE}_remaining", "objective": f"{ns}.data"}}, {"text": " briques à casser sur un terrain de "}, {"score": {"name": f"#{MODE}_width", "objective": f"{ns}.data"}}, {"text": " x "}, {"score": {"name": f"#{MODE}_height", "objective": f"{ns}.data"}}, {"text": " (rangée des bumpers comprise)."}], ensure_ascii=False)}
 function {root}/place_bumpers
 scoreboard players set #{MODE}_state {ns}.data 1
 scoreboard players set #{MODE}_timer {ns}.data {COUNTDOWN * 20 + MESSAGE_TICKS}
@@ -459,6 +481,7 @@ execute as {arena.players} run function {root}/spawn_ball
 # @s is a player, its ball appears two blocks above the middle of its bumper
 scoreboard players operation #{MODE}_slot {ns}.data = @s {tag}
 scoreboard players operation #{MODE}_color {ns}.data = @s {tag}.color
+scoreboard players set #{MODE}_speed {ns}.data 100
 execute as @e[type=minecraft:block_display,tag={tag}.bumper,{arena.same_slot}] at @s positioned ^ ^2 ^{(BUMPER_LENGTH - 1) / 2} summon minecraft:sulfur_cube run function {root}/new_ball
 """)
 
@@ -469,7 +492,7 @@ scoreboard players operation @s {tag}.arena = #{MODE}_arena {ns}.data
 scoreboard players operation @s {tag}.color = #{MODE}_color {ns}.data
 {ball_blocks}
 {ball_teams}
-scoreboard players set @s {tag}.speed 1
+scoreboard players operation @s {tag}.speed = #{MODE}_speed {ns}.data
 
 # Launched upward along one of the middle slices, left or right at random
 execute store result score #{MODE}_zone {ns}.data run random value 2..5
@@ -484,8 +507,10 @@ def generate_endings(arena: Arena) -> None:
 	ns: str = Mem.ctx.project_id
 	root: str = f"{ns}:{LAB}/breakout"
 	tag: str = f"{ns}.{MODE}"
-	death_messages: str = "\n".join(
-		f"execute if score @s {tag}.color matches {index} run {arena.screen([{'text': f'Joueur {color.display}', 'color': color.team_color}, {'text': ' est mort !', 'color': '#01FE41'}])}"
+	death_names: str = "\n".join(
+		f"execute if score @s {tag}.color matches {index} run item modify entity @s armor.body " + json.dumps({"function": "minecraft:set_name", "entity": "this", "target": "custom_name", "name": [
+			{"selector": f"@a[tag={tag},{arena.same_slot}]", "color": color.team_color}, {"text": " est mort !", "color": "#01FE41"},
+		]}, ensure_ascii=False)
 		for index, color in enumerate(COLORS)
 	)
 	cleared_title: list[JsonDict] = [{"text": "Niveau ", "color": "#01FE41"}, {"score": {"name": f"#{MODE}_level", "objective": f"{ns}.data"}, "color": "#01FE41"}, {"text": " terminé !", "color": "#01FE41"}]
@@ -497,7 +522,9 @@ tag @s add {tag}.lost
 execute if entity @e[type=minecraft:sulfur_cube,tag={tag}.ball,tag=!{tag}.lost,{arena.same_slot}] run return run kill @s
 
 # Its last ball: every ball of the arena is taken back and relaunched after the countdown
-{death_messages}
+# The name of its player is resolved on the ball's own item, since a text set on the screen is never resolved
+{death_names}
+data modify entity @n[type=minecraft:text_display,tag={tag}.screen,{arena.same}] text set from entity @s equipment.body.components."minecraft:custom_name"
 kill {arena.balls}
 scoreboard players set #{MODE}_state {ns}.data 1
 scoreboard players set #{MODE}_timer {ns}.data {COUNTDOWN * 20 + MESSAGE_TICKS}

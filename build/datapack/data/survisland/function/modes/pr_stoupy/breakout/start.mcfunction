@@ -27,6 +27,7 @@ scoreboard players set #pr_breakout_slot_counter survisland.data 0
 execute at @e[type=minecraft:marker,tag=survisland.pr_breakout.corner,predicate=survisland:modes/pr_stoupy/breakout/same_arena,limit=1] as @a[tag=survisland.pr_breakout.new,sort=nearest] at @s run function survisland:modes/pr_stoupy/breakout/enroll_player
 tag @a remove survisland.pr_breakout.new
 execute if entity @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena,scores={survisland.pr_breakout.color=-1}] run return run function survisland:modes/pr_stoupy/breakout/abort_colorless
+execute as @e[type=minecraft:marker,tag=survisland.pr_breakout.corner,predicate=survisland:modes/pr_stoupy/breakout/same_arena,limit=1] at @s run function survisland:modes/pr_stoupy/breakout/place_screen
 
 # Fewer players than needed only happens in solo mode, where every ball breaks every solo color
 scoreboard players set #pr_breakout_solo survisland.data 0

@@ -27,7 +27,7 @@ BUMPER_HEIGHT: str = "0.5"
 BUMPER_PERIOD: int = 2
 """ Ticks between two steps of a bumper, so 20 / BUMPER_PERIOD blocks per second. """
 
-BALL_SPEED: int = 350
+BALL_SPEED: int = 420
 """ Speed of a ball in thousandths of a block per tick, kept by every bounce. """
 
 ZONE_ANGLES: tuple[int, ...] = (-60, -45, -30, -15, 15, 30, 45, 60)
@@ -155,6 +155,8 @@ execute if block ~ ~ ~ #{ns}:pr_stoupy/breakout/concrete run playsound minecraft
 setblock ~ ~ ~ minecraft:air destroy
 kill @e[type=minecraft:item,distance=..1.5]
 scoreboard players remove #{MODE}_remaining {ns}.data 1
+# The count only covers the field as it was at the level start, so a count reaching 0 is checked by a new scan
+execute if score #{MODE}_remaining {ns}.data matches ..0 run function {root}/count_bricks
 execute if score #{MODE}_remaining {ns}.data matches ..0 run return run function {root}/level_cleared
 function {root}/bonus/count
 """)
@@ -194,10 +196,12 @@ scoreboard players operation #{MODE}_zone {ns}.data = #{MODE}_rel {ns}.data
 """)
 
 	write_function(f"{root}/apply_zone", f"""
-# @s is a ball, sent along the motion of slice #{MODE}_zone, times its speed bonus
+# @s is a ball, sent along the motion of slice #{MODE}_zone, times its speed in percent
 {set_zone}
 scoreboard players operation #{MODE}_mu {ns}.data *= @s {tag}.speed
 scoreboard players operation #{MODE}_mv {ns}.data *= @s {tag}.speed
+scoreboard players operation #{MODE}_mu {ns}.data /= #100 {ns}.data
+scoreboard players operation #{MODE}_mv {ns}.data /= #100 {ns}.data
 execute if score #{MODE}_axis {ns}.data matches 0 store result entity @s Motion[0] double 0.001 run scoreboard players get #{MODE}_mu {ns}.data
 execute if score #{MODE}_axis {ns}.data matches 1 store result entity @s Motion[2] double 0.001 run scoreboard players get #{MODE}_mu {ns}.data
 execute store result entity @s Motion[1] double 0.001 run scoreboard players get #{MODE}_mv {ns}.data

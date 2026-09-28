@@ -29,6 +29,8 @@ execute if block ~ ~ ~ minecraft:black_concrete run return run setblock ~ ~ ~ mi
 setblock ~ ~ ~ minecraft:air destroy
 kill @e[type=minecraft:item,distance=..1.5]
 scoreboard players remove #pr_breakout_remaining survisland.data 1
+# The count only covers the field as it was at the level start, so a count reaching 0 is checked by a new scan
+execute if score #pr_breakout_remaining survisland.data matches ..0 run function survisland:modes/pr_stoupy/breakout/count_bricks
 execute if score #pr_breakout_remaining survisland.data matches ..0 run return run function survisland:modes/pr_stoupy/breakout/level_cleared
 function survisland:modes/pr_stoupy/breakout/bonus/count
 

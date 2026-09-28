@@ -3,7 +3,7 @@
 import json
 from dataclasses import dataclass
 
-from stewbeet import Mem, write_function
+from stewbeet import McFunction, Mem, write_function
 
 from ..shared import LAB
 from .physics import MODE
@@ -17,7 +17,7 @@ class Bonus:
 	""" Function name under breakout/bonus/. """
 	display: str
 	""" Action bar message shown to the players of the arena. """
-	commands: str
+	commands: McFunction
 	""" Body of the function, where {ns}, {root} and {tag} are filled in. """
 
 
@@ -26,18 +26,19 @@ BONUS_BRICKS: int = 15
 """ Bricks broken between two bonuses, counted over the whole game. """
 
 BONUSES: list[Bonus] = [
-	Bonus(name="speed", display="Bonus : vitesse x2 !", commands="""
-# Twice as fast until the ball is lost, a second one on the same ball is wasted
-execute if score @s {tag}.speed matches 2 run return 0
-scoreboard players set @s {tag}.speed 2
-execute if score #pr_breakout_axis {ns}.data matches 0 store result entity @s Motion[0] double 0.002 run scoreboard players get #pr_breakout_mu {ns}.data
-execute if score #pr_breakout_axis {ns}.data matches 1 store result entity @s Motion[2] double 0.002 run scoreboard players get #pr_breakout_mu {ns}.data
-execute store result entity @s Motion[1] double 0.002 run scoreboard players get #pr_breakout_mv {ns}.data
+	Bonus(name="speed", display="Bonus : vitesse x1.5 !", commands="""
+# Half again as fast until the ball is lost, on top of its previous speed bonuses
+scoreboard players operation @s {tag}.speed *= #3 {ns}.data
+scoreboard players operation @s {tag}.speed /= #2 {ns}.data
+execute if score #pr_breakout_axis {ns}.data matches 0 store result entity @s Motion[0] double 0.0015 run scoreboard players get #pr_breakout_mu {ns}.data
+execute if score #pr_breakout_axis {ns}.data matches 1 store result entity @s Motion[2] double 0.0015 run scoreboard players get #pr_breakout_mu {ns}.data
+execute store result entity @s Motion[1] double 0.0015 run scoreboard players get #pr_breakout_mv {ns}.data
 """),
 	Bonus(name="split", display="Bonus : balles x2 !", commands="""
-# A second ball of the same player, launched upward from here
+# A second ball of the same player, launched upward from here at the speed of this one
 scoreboard players operation #pr_breakout_slot {ns}.data = @s {tag}
 scoreboard players operation #pr_breakout_color {ns}.data = @s {tag}.color
+scoreboard players operation #pr_breakout_speed {ns}.data = @s {tag}.speed
 execute at @s summon minecraft:sulfur_cube run function {root}/new_ball
 """),
 ]

@@ -43,7 +43,7 @@ execute if score #pr_breakout_color survisland.data matches 12 run team join sur
 execute if score #pr_breakout_color survisland.data matches 13 run team join survisland.breakout.green @s
 execute if score #pr_breakout_color survisland.data matches 14 run team join survisland.breakout.red @s
 execute if score #pr_breakout_color survisland.data matches 15 run team join survisland.breakout.black @s
-scoreboard players set @s survisland.pr_breakout.speed 1
+scoreboard players operation @s survisland.pr_breakout.speed = #pr_breakout_speed survisland.data
 
 # Launched upward along one of the middle slices, left or right at random
 execute store result score #pr_breakout_zone survisland.data run random value 2..5

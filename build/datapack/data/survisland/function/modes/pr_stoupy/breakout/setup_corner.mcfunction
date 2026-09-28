@@ -18,12 +18,5 @@ scoreboard players add #pr_breakout_death_v survisland.data 500
 scoreboard players operation #pr_breakout_bumper_top survisland.data = @s bs.pos.y
 scoreboard players add #pr_breakout_bumper_top survisland.data 1300
 function survisland:modes/pr_stoupy/breakout/save_arena
-
-# The screen hangs in the middle of the field, on the side of the players: ^-1 with invert:0, ^1 with invert:1
-execute store result storage survisland:pr_breakout middle.u int 0.5 run scoreboard players get #pr_breakout_width survisland.data
-execute store result storage survisland:pr_breakout middle.v int 0.5 run scoreboard players get #pr_breakout_height survisland.data
-scoreboard players operation #pr_breakout_side survisland.data = #pr_breakout_invert survisland.data
-scoreboard players operation #pr_breakout_side survisland.data *= #2 survisland.data
-execute store result storage survisland:pr_breakout middle.side double 0.6 run scoreboard players remove #pr_breakout_side survisland.data 1
-execute rotated as @s run function survisland:modes/pr_stoupy/breakout/summon_screen with storage survisland:pr_breakout middle
+function survisland:modes/pr_stoupy/breakout/place_screen
 
