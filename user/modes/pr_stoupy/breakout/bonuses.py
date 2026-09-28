@@ -7,7 +7,7 @@ from dataclasses import dataclass
 from stewbeet import McFunction, Mem, write_function
 
 from ..shared import LAB
-from .physics import MODE
+from .physics import MODE, ZONE_ANGLES
 
 
 # Classes
@@ -101,6 +101,18 @@ scoreboard players operation #{MODE}_speed {ns}.data = @s {tag}.speed
 
 	write_function(f"{root}/bonus/clone_ball", f"""
 scoreboard players add #{MODE}_balls {ns}.data 1
-execute summon minecraft:sulfur_cube run function {root}/new_ball
+execute summon minecraft:sulfur_cube run function {root}/bonus/new_clone
+""")
+
+	write_function(f"{root}/bonus/new_clone", f"""
+# Any slice, up or down, so the copies spread out instead of following the ball they came from
+function {root}/new_ball
+execute store result score #{MODE}_zone {ns}.data run random value 0..{len(ZONE_ANGLES) - 1}
+function {root}/apply_zone
+execute store result score #{MODE}_down {ns}.data run random value 0..1
+execute if score #{MODE}_down {ns}.data matches 1 store result entity @s Motion[1] double -0.001 run scoreboard players get #{MODE}_mv {ns}.data
+execute if score #{MODE}_down {ns}.data matches 1 run scoreboard players operation #{MODE}_mv {ns}.data *= #-1 {ns}.data
+scoreboard players operation @s {tag}.mu = #{MODE}_mu {ns}.data
+scoreboard players operation @s {tag}.mv = #{MODE}_mv {ns}.data
 """)
 

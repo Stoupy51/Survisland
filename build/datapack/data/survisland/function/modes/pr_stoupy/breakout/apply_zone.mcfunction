@@ -5,6 +5,7 @@
 #
 # @within	survisland:modes/pr_stoupy/breakout/new_ball
 #			survisland:modes/pr_stoupy/breakout/bumper_hit
+#			survisland:modes/pr_stoupy/breakout/bonus/new_clone
 #
 
 # @s is a ball, sent along the motion of slice #pr_breakout_zone, times its speed in percent
