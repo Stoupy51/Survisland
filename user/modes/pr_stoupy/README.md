@@ -19,29 +19,22 @@ Deux réglages de command block reviennent partout :
 - **Répétitif, toujours actif** pour les `start` et `duo/here/stop`. Ils ne font rien tant qu'il n'y a pas assez de joueurs.
 - **Impulsion, redstone requise** pour les récompenses, branché sur une plaque de pression, un bouton ou la porte d'un puzzle.
 
-## Départs, portes et mode solo
+## Départs, téléports et mode solo
 
 ### Blocs de départ
 
 Un `start` prend les joueurs **debout sur un bloc d'émeraude**, à 16 blocs au plus de son command block.
 Le rayon peut donc être large sans prendre les joueurs qui passent : il faut marcher sur un bloc de départ.
-Pose un bloc d'émeraude par place (4 pour les duos, 2 pour les miroirs, 4 pour l'orbite), dans un sas devant la salle.
-Le casse-briques n'en a pas besoin : ses blocs de départ sont les blocs de couleur des cabines.
+Pose un bloc d'émeraude par place (4 pour les duos, 2 pour les miroirs, 4 pour le casse-briques, 4 pour l'orbite), dans un sas devant la salle.
 Les blocs acceptés sont dans `START_PAD_BLOCKS` (`shared.py`).
 
-### Portes
+### Téléports
 
-Une porte est un bloc d'une ouverture. Il se remplit tant qu'un joueur en partie de ce trial est à moins de `radius` blocs, puis se vide à la fin.
-Personne ne sort et personne n'entre pendant la partie. Un marqueur par bloc, donc 2 pour une ouverture de 1x2, posé à ta position :
-
-```
-function survisland:modes/pr_stoupy/mirror/here/place_door {block:"minecraft:iron_bars",radius:24}
-```
-
-Existe aussi pour `duo`, `breakout` et `orbit` (les rats n'ont pas de départ, tout le monde peut aider).
-Le rayon doit couvrir la salle sans atteindre la deuxième copie.
-Avec `block:"minecraft:redstone_block"`, le bloc alimente un mécanisme à toi (portes en fer, pistons).
-Ne pas se tenir dans l'ouverture au départ : le bloc s'y pose quand même.
+Les `start` des duos, des miroirs et du casse-briques prennent un argument `tp`.
+Il déplace chaque joueur pris depuis sa propre position, avec une rotation en option, par exemple `tp:"~ ~ ~10 180 0"`.
+Les joueurs arrivent donc dans la même disposition que sur leurs blocs de départ. `tp:""` les laisse en place.
+Téléporter les joueurs dans une salle fermée suffit à ce que personne ne sorte ni n'entre pendant la partie.
+L'orbite n'en a pas besoin : chaque joueur arrive au-dessus du trou noir.
 
 ### Mode solo
 
@@ -52,7 +45,7 @@ function survisland:modes/pr_stoupy/solo {enabled:1}
 function survisland:modes/pr_stoupy/solo {enabled:0}
 ```
 
-- Casse-briques : jouable jusqu'au bout, seules les briques de ta couleur comptent. Ton bumper est celui du Joueur 1, au début de la rangée.
+- Casse-briques : jouable jusqu'au bout, ta balle casse les briques rouges, bleu clair, vert clair et jaunes (`SOLO_COLORS`, `colors.py`). Ton bumper est celui du Joueur 1, au début de la rangée.
 - Orbite : déjà jouable seul, de 1 à 4 joueurs sans mode solo.
 - Miroirs : un seul reflet. La mécanique se teste, un puzzle pensé pour 2 ne sera peut-être pas faisable.
 - Duos : un mannequin pour toi seul, avec toutes les commandes (regard, déplacements, clic, saut).
@@ -62,14 +55,14 @@ function survisland:modes/pr_stoupy/solo {enabled:0}
 Dans l'ordre, pour une copie de 100x100 :
 
 1. Construire la maison de Stoupy, l'entrée du labo, les 5 salles et la salle du villageois. Ce qu'il faut dans chaque salle est détaillé dans sa section.
-	Devant chaque salle à départ, un sas avec les blocs d'émeraude, et une ouverture pour la porte.
+	Devant chaque salle à départ, un sas avec les blocs d'émeraude, d'où le `tp` du start envoie les joueurs dans la salle.
 	- Duos : un parcours pour les mannequins, une arrivée, puis un puzzle redstone.
 	- Miroirs : une salle symétrique autour d'un plan.
 	- Casse-briques : un mur de jeu avec des cabines de joueurs, ou le terrain d'exemple.
 	- Orbite : une grande salle avec un plafond haut.
 	- Rats : une salle fermée avec des cages.
 2. Poser le villageois.
-3. Pour chaque trial, poser les marqueurs de setup, les portes, puis les command blocks de départ et de récompense.
+3. Pour chaque trial, poser les marqueurs de setup, puis les command blocks de départ et de récompense.
 4. Tester (voir [Tester en solo](#tester-en-solo)). Pour tout recommencer, `here/clear` supprime les entités du labo dans un rayon.
 5. Faire la deuxième copie.
 
@@ -101,10 +94,10 @@ Un clic droit dessus avec les 5 étoiles termine l'épreuve.
 À construire : une zone de départ, un parcours pour 2 mannequins, une arrivée, puis un puzzle redstone dont la porte déclenche la récompense.
 
 Départ, command block répétitif. Il prend les 4 joueurs sur les blocs de départ et forme 2 paires, par distance au command block.
-Chaque mannequin apparaît sur le Joueur 1 de sa paire, donc les blocs de départ sont la ligne de départ du parcours :
+Chaque mannequin apparaît sur le Joueur 1 de sa paire, après le `tp`. Sans `tp`, les blocs de départ sont la ligne de départ du parcours :
 
 ```
-function survisland:modes/pr_stoupy/duo/start
+function survisland:modes/pr_stoupy/duo/start {tp:""}
 ```
 
 Arrivée, command block répétitif là où le mannequin doit arriver. Il rend leur corps aux joueurs du mannequin à moins de 3 blocs :
@@ -177,8 +170,10 @@ Avec ces valeurs, le terrain occupe x=100, de z=200 à 212 et de y=64 à 83 :
 - Un cadre en pierre lisse autour, un fond en blackstone côté +x, une vitre côté -x.
 - 6 rangées de briques en diagonales rouges, bleu clair, vert clair et jaunes, sous une rangée du haut laissée vide.
 - Une plateforme à x=85 (15 blocs devant la vitre), sol à y=72 pour avoir les yeux au milieu du terrain.
-- 4 cabines 1x1 ouvertes en haut, de sol rouge, bleu clair, vert clair et jaune, de z=201 à 211. Les joueurs sautent dedans et ne peuvent plus en sortir.
-- Le command block répétitif de `breakout/start`, sous le milieu de la plateforme.
+- 4 cabines 1x1 ouvertes en haut, de sol rouge, bleu clair, vert clair et jaune, de z=201 à 211.
+- Sous la plateforme, 5 blocs plus bas que les sols des cabines, une passerelle avec un bloc d'émeraude sous chaque cabine.
+- Le command block répétitif de `breakout/start {tp:"~ ~5 ~",redstone:""}`, sous le milieu de la plateforme.
+	Les joueurs se mettent sur les émeraudes et arrivent chacun dans la cabine au-dessus.
 
 Avec `axis:"x"`, le terrain s'étend vers +x, le fond est côté -z et les joueurs côté +z.
 La distance de la plateforme vaut 3/4 de la hauteur et le sol est à mi-hauteur moins 2, quelle que soit la taille choisie.
@@ -194,8 +189,9 @@ function survisland:modes/pr_stoupy/breakout/here/example_level
 - Un mur vertical. La rangée du bas reste vide, c'est la ligne des bumpers. Un sol dessous pour que la balle perdue s'arrête.
 - Au-dessus, les briques en concrete, laine, terracotta ou verre teinté, dans les couleurs des joueurs.
 	Le cadre et le fond ne doivent pas être de ces blocs colorés dans le plan du terrain, sinon ils comptent comme des briques.
-- Chaque joueur se tient sur un bloc de sa couleur, face au mur, enfermé dans une case 1x1.
-	Le datapack ne les bloque pas, et les touches gauche/droite qui dirigent le bumper déplaceraient aussi le joueur.
+- Chaque joueur arrive par le `tp` sur un bloc plein de sa couleur, face au mur, enfermé dans une case 1x1.
+	Un tapis ou une dalle posé dessus cache la couleur : c'est le bloc juste sous les pieds qui est lu.
+	Leur vitesse est à 0 pendant la partie, mais un saut ou une poussée les ferait quand même sortir de leur bloc.
 - Le Joueur 1 est le plus proche du coin, son bumper est au début de la rangée.
 
 Setup, une seule fois, positionné sur le coin bas gauche. Le terrain s'étend vers +axis et vers le haut.
@@ -205,13 +201,22 @@ Relancer avec `invert:1` si gauche et droite sont inversées pour les joueurs :
 execute positioned 100 64 200 run function survisland:modes/pr_stoupy/breakout/here/setup {width:20,height:13,axis:"z",invert:0}
 ```
 
-Départ, command block répétitif à 16 blocs ou moins des 4 joueurs, chacun debout sur un bloc de couleur :
+Départ, command block répétitif à 16 blocs ou moins des 4 blocs d'émeraude.
+Le `tp` est le même pour tous : chaque bloc de couleur doit être au même décalage de son émeraude (5 blocs au-dessus avec `tp:"~ ~5 ~"`).
+La couleur est lue juste après le `tp`. Avec `tp:""`, le bloc lu est l'émeraude et la partie ne démarre pas.
+Si un joueur n'arrive pas sur un bloc de couleur, la partie ne démarre pas et il reste où le `tp` l'a mis.
+`redstone` pose un bloc de redstone à la victoire, relatif au command block, pour ouvrir la sortie par exemple.
+Il est retiré au start suivant. `redstone:""` pour aucun :
 
 ```
-function survisland:modes/pr_stoupy/breakout/start
+function survisland:modes/pr_stoupy/breakout/start {tp:"~ ~5 ~",redstone:"~ ~-2 ~"}
 ```
 
 ### Pendant la partie
+
+Les bumpers font 2 blocs de large et 0.5 d'épaisseur : des barrières sous un block display de la couleur du joueur.
+Tous les 15 blocs cassés, la balle qui casse le 15e reçoit un bonus, en alternance : vitesse x2, puis une deuxième balle.
+Un joueur ne perd que quand sa dernière balle tombe.
 
 Un niveau est fini quand il ne reste aucune brique des couleurs jouées.
 Cloner alors le niveau suivant dans le mur (structure block, `clone` ou `here/example_level`), puis lancer :
@@ -303,8 +308,8 @@ function survisland:modes/pr_stoupy/rats/here/stop
 
 ## Remise à zéro (développement)
 
-Arrête tous les trials dans le rayon et rend leur état aux joueurs (corps, attributs, items, tags), puis ouvre les portes.
-Supprime ensuite toutes les entités du labo dans ce rayon, setup compris : villageois, marqueurs, portes, cages, rats, écran, trou noir.
+Arrête tous les trials dans le rayon et rend leur état aux joueurs (corps, attributs, items, tags).
+Supprime ensuite toutes les entités du labo dans ce rayon, setup compris : villageois, marqueurs, cages, rats, écran, trou noir.
 Les blocs ne sont pas touchés. Rien ne sort du rayon, donc la deuxième copie n'est pas touchée si elle est plus loin :
 
 ```

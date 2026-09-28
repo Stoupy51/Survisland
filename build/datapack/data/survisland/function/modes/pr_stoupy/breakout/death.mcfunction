@@ -6,7 +6,12 @@
 # @within	survisland:modes/pr_stoupy/breakout/ball_tick
 #
 
-# @s is the ball that fell: every ball of the arena is taken back and relaunched after the countdown
+# @s is the ball that fell, lost for nothing while its player has another one in play
+scoreboard players operation #pr_breakout_slot survisland.data = @s survisland.pr_breakout
+tag @s add survisland.pr_breakout.lost
+execute if entity @e[type=minecraft:sulfur_cube,tag=survisland.pr_breakout.ball,tag=!survisland.pr_breakout.lost,predicate=survisland:modes/pr_stoupy/breakout/same_slot] run return run kill @s
+
+# Its last ball: every ball of the arena is taken back and relaunched after the countdown
 execute if score @s survisland.pr_breakout.color matches 0 run data modify entity @n[type=minecraft:text_display,tag=survisland.pr_breakout.screen,predicate=survisland:modes/pr_stoupy/breakout/same_arena] text set value [{"text": "Joueur blanc", "color": "white"}, {"text": " est mort !", "color": "#01FE41"}]
 execute if score @s survisland.pr_breakout.color matches 1 run data modify entity @n[type=minecraft:text_display,tag=survisland.pr_breakout.screen,predicate=survisland:modes/pr_stoupy/breakout/same_arena] text set value [{"text": "Joueur orange", "color": "gold"}, {"text": " est mort !", "color": "#01FE41"}]
 execute if score @s survisland.pr_breakout.color matches 2 run data modify entity @n[type=minecraft:text_display,tag=survisland.pr_breakout.screen,predicate=survisland:modes/pr_stoupy/breakout/same_arena] text set value [{"text": "Joueur magenta", "color": "light_purple"}, {"text": " est mort !", "color": "#01FE41"}]

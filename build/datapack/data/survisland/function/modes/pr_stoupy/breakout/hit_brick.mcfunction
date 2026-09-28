@@ -12,6 +12,7 @@
 #
 
 # Positioned on the probed block, run as the ball that bounced
+execute if score #pr_breakout_solo survisland.data matches 1 if block ~ ~ ~ #survisland:pr_stoupy/breakout/solo run return run function survisland:modes/pr_stoupy/breakout/break_brick
 execute if score @s survisland.pr_breakout.color matches 0 if block ~ ~ ~ #survisland:pr_stoupy/breakout/white run return run function survisland:modes/pr_stoupy/breakout/break_brick
 execute if score @s survisland.pr_breakout.color matches 1 if block ~ ~ ~ #survisland:pr_stoupy/breakout/orange run return run function survisland:modes/pr_stoupy/breakout/break_brick
 execute if score @s survisland.pr_breakout.color matches 2 if block ~ ~ ~ #survisland:pr_stoupy/breakout/magenta run return run function survisland:modes/pr_stoupy/breakout/break_brick

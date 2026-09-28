@@ -10,5 +10,6 @@
 setblock ~ ~ ~ minecraft:air destroy
 kill @e[type=minecraft:item,distance=..1.5]
 scoreboard players remove #pr_breakout_remaining survisland.data 1
-execute if score #pr_breakout_remaining survisland.data matches ..0 run function survisland:modes/pr_stoupy/breakout/level_cleared
+execute if score #pr_breakout_remaining survisland.data matches ..0 run return run function survisland:modes/pr_stoupy/breakout/level_cleared
+function survisland:modes/pr_stoupy/breakout/bonus/count
 

@@ -8,5 +8,5 @@
 # @args		offset (unknown)
 #
 
-$execute positioned ^ ^ ^$(offset) summon minecraft:marker run function survisland:modes/pr_stoupy/breakout/new_bumper
+$execute positioned ^ ^ ^$(offset) summon minecraft:block_display run function survisland:modes/pr_stoupy/breakout/new_bumper
 

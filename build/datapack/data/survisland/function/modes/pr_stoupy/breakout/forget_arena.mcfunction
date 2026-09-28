@@ -10,5 +10,6 @@
 function survisland:modes/pr_stoupy/breakout/load_arena
 function survisland:modes/pr_stoupy/breakout/stop_arena
 kill @e[type=minecraft:text_display,tag=survisland.pr_breakout.screen,predicate=survisland:modes/pr_stoupy/breakout/same_arena]
+kill @e[type=minecraft:marker,tag=survisland.pr_breakout.redstone,predicate=survisland:modes/pr_stoupy/breakout/same_arena]
 kill @s
 

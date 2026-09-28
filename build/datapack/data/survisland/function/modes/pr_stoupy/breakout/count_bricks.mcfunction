@@ -24,6 +24,7 @@ scoreboard players set #pr_breakout_bricks_black survisland.data 0
 scoreboard players set #pr_breakout_scan_v survisland.data 1
 execute at @e[type=minecraft:marker,tag=survisland.pr_breakout.corner,predicate=survisland:modes/pr_stoupy/breakout/same_arena,limit=1] rotated as @e[type=minecraft:marker,tag=survisland.pr_breakout.corner,predicate=survisland:modes/pr_stoupy/breakout/same_arena,limit=1] positioned ~ ~1 ~ run function survisland:modes/pr_stoupy/breakout/scan_row
 scoreboard players set #pr_breakout_remaining survisland.data 0
+execute if score #pr_breakout_solo survisland.data matches 1 run return run function survisland:modes/pr_stoupy/breakout/sum_solo
 execute if entity @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena,scores={survisland.pr_breakout.color=0}] run scoreboard players operation #pr_breakout_remaining survisland.data += #pr_breakout_bricks_white survisland.data
 execute if entity @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena,scores={survisland.pr_breakout.color=1}] run scoreboard players operation #pr_breakout_remaining survisland.data += #pr_breakout_bricks_orange survisland.data
 execute if entity @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena,scores={survisland.pr_breakout.color=2}] run scoreboard players operation #pr_breakout_remaining survisland.data += #pr_breakout_bricks_magenta survisland.data

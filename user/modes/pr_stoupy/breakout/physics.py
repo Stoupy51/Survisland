@@ -3,6 +3,7 @@
 Bounces are done by the vanilla physics of the sulfur cube (bounciness 1, no drag, no gravity).
 A bounce shows up as a component of the motion that changed sign since the previous tick,
 and the block probed just past the ball on that side is the brick that was hit.
+A bumper is a row of barriers under a thin block display, so the ball bounces on it like on any block.
 """
 # ruff: noqa: E501
 # Imports
@@ -17,8 +18,11 @@ from .colors import COLORS, color_tag
 MODE: str = "pr_breakout"
 """ Suffix of the tags, objectives and fake players of the trial. """
 
-BUMPER_LENGTH: int = 3
+BUMPER_LENGTH: int = 2
 """ Blocks of a bumper. """
+
+BUMPER_HEIGHT: str = "0.5"
+""" Thickness of the block display drawing a bumper, on top of the barriers the ball bounces on. """
 
 BUMPER_PERIOD: int = 2
 """ Ticks between two steps of a bumper, so 20 / BUMPER_PERIOD blocks per second. """
@@ -126,7 +130,7 @@ execute positioned ~ ~{PROBE_BELOW} ~ run function {root}/hit_brick
 
 
 def generate_hits() -> None:
-	""" Write the brick hit, only breaking the bricks of the color of the ball. """
+	""" Write the brick hit, only breaking the bricks of the color of the ball, or any solo color in a solo game. """
 	ns: str = Mem.ctx.project_id
 	root: str = f"{ns}:{LAB}/breakout"
 	tag: str = f"{ns}.{MODE}"
@@ -137,6 +141,7 @@ def generate_hits() -> None:
 
 	write_function(f"{root}/hit_brick", f"""
 # Positioned on the probed block, run as the ball that bounced
+execute if score #{MODE}_solo {ns}.data matches 1 if block ~ ~ ~ #{ns}:pr_stoupy/breakout/solo run return run function {root}/break_brick
 {own_color}
 """)
 
@@ -145,7 +150,8 @@ def generate_hits() -> None:
 setblock ~ ~ ~ minecraft:air destroy
 kill @e[type=minecraft:item,distance=..1.5]
 scoreboard players remove #{MODE}_remaining {ns}.data 1
-execute if score #{MODE}_remaining {ns}.data matches ..0 run function {root}/level_cleared
+execute if score #{MODE}_remaining {ns}.data matches ..0 run return run function {root}/level_cleared
+function {root}/bonus/count
 """)
 
 
@@ -164,7 +170,7 @@ def generate_zones(same_arena: str) -> None:
 
 	write_function(f"{root}/bumper_hit", f"""
 scoreboard players set #{MODE}_zone {ns}.data -1
-execute as @e[type=minecraft:marker,tag={tag}.bumper,{same_arena}] run function {root}/measure_bumper
+execute as @e[type=minecraft:block_display,tag={tag}.bumper,{same_arena}] run function {root}/measure_bumper
 execute if score #{MODE}_zone {ns}.data matches -1 run return 0
 function {root}/apply_zone
 playsound minecraft:block.note_block.hat master @a ~ ~ ~ 1 1.4
@@ -183,8 +189,10 @@ scoreboard players operation #{MODE}_zone {ns}.data = #{MODE}_rel {ns}.data
 """)
 
 	write_function(f"{root}/apply_zone", f"""
-# @s is a ball, sent along the motion of slice #{MODE}_zone
+# @s is a ball, sent along the motion of slice #{MODE}_zone, times its speed bonus
 {set_zone}
+scoreboard players operation #{MODE}_mu {ns}.data *= @s {tag}.speed
+scoreboard players operation #{MODE}_mv {ns}.data *= @s {tag}.speed
 execute if score #{MODE}_axis {ns}.data matches 0 store result entity @s Motion[0] double 0.001 run scoreboard players get #{MODE}_mu {ns}.data
 execute if score #{MODE}_axis {ns}.data matches 1 store result entity @s Motion[2] double 0.001 run scoreboard players get #{MODE}_mu {ns}.data
 execute store result entity @s Motion[1] double 0.001 run scoreboard players get #{MODE}_mv {ns}.data
@@ -206,24 +214,24 @@ execute if predicate {ns}:input/left run scoreboard players remove #{MODE}_dir {
 execute if score #{MODE}_dir {ns}.data matches 0 run return 0
 execute if score #{MODE}_invert {ns}.data matches 1 run scoreboard players operation #{MODE}_dir {ns}.data *= #-1 {ns}.data
 scoreboard players operation #{MODE}_slot {ns}.data = @s {tag}
-execute as @e[type=minecraft:marker,tag={tag}.bumper,{same_slot}] at @s run function {root}/move_bumper
+execute as @e[type=minecraft:block_display,tag={tag}.bumper,{same_slot}] at @s run function {root}/move_bumper
 """)
 
 	write_function(f"{root}/move_bumper", f"""
 # @s is a bumper standing on its first block, facing along the field
-execute if score #{MODE}_dir {ns}.data matches 1 positioned ^ ^ ^{BUMPER_LENGTH} {free_cell} run return run function {root}/step_forward with entity @s data
-execute if score #{MODE}_dir {ns}.data matches -1 positioned ^ ^ ^-1 {free_cell} run function {root}/step_backward with entity @s data
+execute if score #{MODE}_dir {ns}.data matches 1 positioned ^ ^ ^{BUMPER_LENGTH} {free_cell} run return run function {root}/step_forward
+execute if score #{MODE}_dir {ns}.data matches -1 positioned ^ ^ ^-1 {free_cell} run function {root}/step_backward
 """)
 
 	write_function(f"{root}/step_forward", f"""
-$setblock ~ ~ ~ $(block)
+setblock ~ ~ ~ minecraft:barrier
 execute at @s run setblock ~ ~ ~ minecraft:air
 execute at @s run tp @s ^ ^ ^1
 scoreboard players add @s {tag}.u 1000
 """)
 
 	write_function(f"{root}/step_backward", f"""
-$setblock ~ ~ ~ $(block)
+setblock ~ ~ ~ minecraft:barrier
 execute at @s run setblock ^ ^ ^{BUMPER_LENGTH - 1} minecraft:air
 execute at @s run tp @s ^ ^ ^-1
 scoreboard players remove @s {tag}.u 1000

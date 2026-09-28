@@ -94,9 +94,11 @@ class CrewMode:
 	start_filter: str = f"distance=..{TRIGGER_RADIUS}"
 	""" Selector arguments a free player must match to be taken by the start block. """
 	solo_flag: str = ""
+	""" Score that, at 1, lets a single player start alone and hold every command, ex: "#solo survisland.data". """
 	camera_distance: int = 5
 	""" Third person camera distance of the mannequin, used by the players riding its head, so never by the click holder on its seat. """
-	""" Score that, at 1, lets a single player start alone and hold every command, ex: "#solo survisland.data". """
+	enroll_command: str = ""
+	""" Command run as and at each player of a new group, before its mannequin is summoned on the Joueur 1. """
 
 
 # Constants (tables)

@@ -23,4 +23,7 @@ scoreboard players operation @s survisland.pr_breakout.invert = #pr_breakout_inv
 scoreboard players operation @s survisland.pr_breakout.death_v = #pr_breakout_death_v survisland.data
 scoreboard players operation @s survisland.pr_breakout.bumper_top = #pr_breakout_bumper_top survisland.data
 scoreboard players operation @s survisland.pr_breakout.remaining = #pr_breakout_remaining survisland.data
+scoreboard players operation @s survisland.pr_breakout.solo = #pr_breakout_solo survisland.data
+scoreboard players operation @s survisland.pr_breakout.broken = #pr_breakout_broken survisland.data
+scoreboard players operation @s survisland.pr_breakout.bonus = #pr_breakout_bonus survisland.data
 

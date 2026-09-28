@@ -10,6 +10,7 @@ scoreboard players add #pr_breakout_slot_counter survisland.data 1
 scoreboard players operation @s survisland.pr_breakout = #pr_breakout_slot_counter survisland.data
 scoreboard players operation @s survisland.pr_breakout.arena = #pr_breakout_arena survisland.data
 tag @s add survisland.pr_breakout
+attribute @s minecraft:movement_speed modifier add survisland:pr_breakout_frozen -1 add_multiplied_total
 scoreboard players set @s survisland.pr_breakout.color -1
 execute if block ~ ~-1 ~ #survisland:pr_stoupy/breakout/white run scoreboard players set @s survisland.pr_breakout.color 0
 execute if block ~ ~-1 ~ #survisland:pr_stoupy/breakout/orange run scoreboard players set @s survisland.pr_breakout.color 1

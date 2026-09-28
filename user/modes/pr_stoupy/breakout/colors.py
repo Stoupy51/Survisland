@@ -3,7 +3,7 @@
 from dataclasses import dataclass
 
 from beet import BlockTag
-from stewbeet import Mem, Predicate, set_json_encoder
+from stewbeet import Mem, set_json_encoder
 
 
 # Classes
@@ -44,6 +44,9 @@ COLORS: list[BrickColor] = [
 ]
 """ Every color, its index in this list being the color score of players and balls. """
 
+SOLO_COLORS: list[BrickColor] = [color for name in ("red", "light_blue", "lime", "yellow") for color in COLORS if color.name == name]
+""" Colors broken by every ball of a game started with fewer players than needed, and of the example booths from the start of the field to its end. """
+
 
 # Functions
 def color_tag(color: BrickColor) -> str:
@@ -56,14 +59,12 @@ def color_tag(color: BrickColor) -> str:
 
 
 def generate_color_tags() -> None:
-	""" Write one block tag per color, their union, and the predicate of a player standing on any of them. """
+	""" Write one block tag per color, their union and the solo colors. """
 	ns: str = Mem.ctx.project_id
 	for color in COLORS:
 		Mem.ctx.data[ns].block_tags[f"pr_stoupy/breakout/{color.name}"] = set_json_encoder(BlockTag({"values": color.blocks}))
 	Mem.ctx.data[ns].block_tags["pr_stoupy/breakout/any"] = set_json_encoder(BlockTag({"values": [color_tag(color) for color in COLORS]}))
-	Mem.ctx.data[ns].predicates["modes/pr_stoupy/breakout/on_brick"] = set_json_encoder(Predicate({"condition": "minecraft:entity_properties", "entity": "this", "predicate": {
-		"stepping_on": {"block": {"blocks": f"#{ns}:pr_stoupy/breakout/any"}},
-	}}), max_level=-1)
+	Mem.ctx.data[ns].block_tags["pr_stoupy/breakout/solo"] = set_json_encoder(BlockTag({"values": [color_tag(color) for color in SOLO_COLORS]}))
 
 
 def team_name(color: BrickColor) -> str:

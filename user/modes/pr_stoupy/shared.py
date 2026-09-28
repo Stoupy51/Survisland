@@ -30,6 +30,12 @@ ON_START_PAD: str = f"predicate=survisland:{LAB}/on_start_pad"
 SOLO: str = "#pr_stoupy_solo survisland.data"
 """ Set to 1 by the solo function, every start then runs with a single player. """
 
+STORE_TP: str = '$data modify storage survisland:pr_stoupy tp set value "$(tp)"'
+""" Macro line of a start keeping its $(tp) argument for TELEPORT, "" meaning the players stay where they are. """
+
+TELEPORT: str = f"function survisland:{LAB}/teleport"
+""" Command moving @s by the tp kept with STORE_TP, to run at @s since the coordinates are relative to the player. """
+
 
 # Functions
 def crt_text(text: str) -> str:
@@ -73,12 +79,21 @@ def require_players(free: str, needed: int) -> str:
 
 
 def generate_lobby() -> None:
-	""" Write the start pads and the solo switch shared by every start of the lab. """
+	""" Write the start pads, the start teleport and the solo switch shared by every start of the lab. """
 	ns: str = Mem.ctx.project_id
 	Mem.ctx.data[ns].block_tags["pr_stoupy/start_pad"] = set_json_encoder(BlockTag({"values": START_PAD_BLOCKS}))
 	Mem.ctx.data[ns].predicates[f"{LAB}/on_start_pad"] = set_json_encoder(Predicate({"condition": "minecraft:entity_properties", "entity": "this", "predicate": {
 		"stepping_on": {"block": {"blocks": f"#{ns}:pr_stoupy/start_pad"}},
 	}}), max_level=-1)
+
+	write_function(f"{ns}:{LAB}/teleport", f"""
+execute if data storage {ns}:pr_stoupy {{tp:""}} run return 0
+function {ns}:{LAB}/teleport_by with storage {ns}:pr_stoupy
+""")
+
+	write_function(f"{ns}:{LAB}/teleport_by", """
+$tp @s $(tp)
+""")
 
 	write_function(f"{ns}:{LAB}/solo", f"""
 # $(enabled) at 1 lets every trial start with one player, and a duo player then holds every command

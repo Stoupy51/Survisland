@@ -1,9 +1,10 @@
 
 #> survisland:modes/pr_stoupy/breakout/new_ball
 #
-# @executed	at @s & positioned ^ ^2 ^1
+# @executed	at @s & positioned ^ ^2 ^0.5
 #
-# @within	survisland:modes/pr_stoupy/breakout/spawn_ball [ at @s & positioned ^ ^2 ^1 ]
+# @within	survisland:modes/pr_stoupy/breakout/spawn_ball [ at @s & positioned ^ ^2 ^0.5 ]
+#			survisland:modes/pr_stoupy/breakout/bonus/split [ at @s ]
 #
 
 data merge entity @s {Tags:["survisland.pr_breakout.ball"],Size:0,Invulnerable:1b,Silent:1b,PersistenceRequired:1b,Glowing:1b,equipment:{body:{id:"minecraft:stone",count:1}},drop_chances:{body:0.0f},attributes:[{id:"minecraft:gravity",base:0.0d},{id:"minecraft:bounciness",base:1.0d},{id:"minecraft:air_drag_modifier",base:0.0d},{id:"minecraft:friction_modifier",base:0.0d},{id:"minecraft:scale",base:0.8d},{id:"minecraft:movement_speed",base:0.0d}]}
@@ -42,6 +43,7 @@ execute if score #pr_breakout_color survisland.data matches 12 run team join sur
 execute if score #pr_breakout_color survisland.data matches 13 run team join survisland.breakout.green @s
 execute if score #pr_breakout_color survisland.data matches 14 run team join survisland.breakout.red @s
 execute if score #pr_breakout_color survisland.data matches 15 run team join survisland.breakout.black @s
+scoreboard players set @s survisland.pr_breakout.speed 1
 
 # Launched upward along one of the middle slices, left or right at random
 execute store result score #pr_breakout_zone survisland.data run random value 2..5

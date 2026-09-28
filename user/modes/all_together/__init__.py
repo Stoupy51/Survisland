@@ -168,6 +168,7 @@ schedule function {root}/tick 1t replace
 scoreboard players add #{mode.id}_group_counter {ns}.data 1
 scoreboard players set #{mode.id}_slot {ns}.data 0
 execute as @a[{free_player},limit={mode.group_size},sort=nearest] run function {root}/body/enroll_player
+{f"execute as @a[tag={tag}.new] at @s run {mode.enroll_command}" if mode.enroll_command else ""}
 
 # Their body is summoned on the Joueur 1, never on the caller which may be a command block inside a wall
 execute at @a[tag={tag}.new,scores={{{tag}=1}},limit=1] summon minecraft:mannequin run function {root}/body/new

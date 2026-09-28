@@ -16,5 +16,3 @@ execute if score #pr_orbit_state survisland.data matches 0 run function survisla
 execute as @e[type=minecraft:marker,tag=survisland.pr_orbit.hole,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] run function survisland:modes/pr_stoupy/orbit/save_arena
 schedule function survisland:modes/pr_stoupy/orbit/tick 1t replace
 
-schedule function survisland:modes/pr_stoupy/door/tick 1t replace
-

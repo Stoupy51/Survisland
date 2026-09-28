@@ -5,11 +5,10 @@ Toutes les fonctions sont sous survisland:modes/pr_stoupy/. Celles marquées (r�
 un command block répétitif, elles ne font rien tant que les conditions ne sont pas réunies.
 Celles marquées (une fois) sont à déclencher une seule fois (command block impulsion, redstone).
 
-# Départs, portes et mode solo
+# Départs et mode solo
 Un start prend les joueurs debout sur un bloc d'émeraude (START_PAD_BLOCKS) à 16 blocs au plus, en survie ou aventure.
 	solo {enabled:1}                            chaque trial démarre avec un seul joueur, {enabled:0} pour revenir à la normale
-	<trial>/here/place_door {block:"minecraft:iron_bars",radius:24}
-		Un bloc de porte, rempli tant qu'un joueur de ce trial est à moins de radius blocs (duo, mirror, breakout, orbit).
+	Le tp des start (duo, mirror, breakout) déplace chaque joueur pris depuis sa position (ex: "~ ~ ~10 180 0"), "" pour le laisser en place.
 
 # Plusieurs copies de l'épreuve
 Chaque copie d'une salle est une arène indépendante, repérée par ses propres marqueurs : tout se fait en relatif.
@@ -21,13 +20,12 @@ Il suffit d'éloigner les copies de plus de 48 blocs (regroupement des cages de 
 	villager/here/place                         pose le villageois ici (execute rotated <yaw> 0 pour l'orienter)
 
 # 1. Les duos (4 joueurs, 2 paires de mannequins All Together)
-	duo/start                                   (répétitif) 4 joueurs sur les blocs de départ, coupés en 2 paires par distance
+	duo/start {tp:""}                           (répétitif) 4 joueurs sur les blocs de départ, coupés en 2 paires par distance
 	duo/here/stop                               (répétitif) rend son corps au duo dont le mannequin passe ici
 	duo/here/reward                             (une fois) étoile au joueur le plus proche, après le puzzle redstone
 
 # 2. Les miroirs (2 joueurs)
 	mirror/start {axis:"x",tp:""}               (répétitif) plan du miroir passant par ce bloc, axis "x" ou "z" = axe inversé
-		tp déplace chaque joueur depuis sa position au départ (ex: "~ ~ ~10"), "" pour les laisser en place.
 	mirror/here/reset                           renvoie les reflets du joueur le plus proche en face de leurs joueurs
 	mirror/here/reward                          (une fois) étoile au joueur le plus proche, puis fin de ses reflets
 	mirror/here/stop                            fin de la session du joueur le plus proche
@@ -36,7 +34,10 @@ Il suffit d'éloigner les copies de plus de 48 blocs (regroupement des cages de 
 	execute positioned <coin bas gauche> run function survisland:modes/pr_stoupy/breakout/here/setup {width:24,height:16,axis:"x",invert:0}
 		(une fois) Le coin est la première case de la rangée des bumpers, le terrain s'étend vers +axis et vers le haut.
 		Mettre invert:1 si gauche et droite sont inversées pour les joueurs.
-	breakout/start                              (répétitif) 4 joueurs sur un bloc de couleur, lancement du niveau 1 du terrain le plus proche
+	breakout/start {tp:"~ ~5 ~",redstone:""}   (répétitif) 4 joueurs sur les blocs de départ, lancement du niveau 1 du terrain le plus proche
+		tp amène chaque joueur sur un bloc de sa couleur, lue juste après.
+		redstone : bloc de redstone posé à la victoire, relatif au command block (ex: "~ ~-2 ~"), retiré au start suivant, "" pour aucun.
+		En solo, chaque balle casse les briques rouges, bleu clair, vert clair et jaunes.
 	breakout/here/next_level                    après avoir cloné le niveau suivant : balles remises, "Prochain niveau : 2/3"
 	breakout/here/stop
 	execute positioned <coin bas gauche> run function survisland:modes/pr_stoupy/breakout/here/example {width:13,height:20,axis:"z"}
@@ -59,7 +60,7 @@ Il suffit d'éloigner les copies de plus de 48 blocs (regroupement des cages de 
 	rats/here/stop                              retire les rats de la salle, en liberté, portés ou en cage
 
 # Remise à zéro pendant le développement
-	here/clear {radius:100}                     arrête tout dans le rayon, ouvre les portes, puis supprime toutes les entités du labo, setup compris
+	here/clear {radius:100}                     arrête tout dans le rayon, puis supprime toutes les entités du labo, setup compris
 
 # Textes CRT
 Tout texte de couleur #01FE41 (tellraw, title, text display) est dessiné comme un vieil écran cathodique par le shader.
@@ -70,7 +71,6 @@ from stewbeet import Mem, write_function
 
 from .breakout import main as generate_breakout
 from .breakout.physics import MODE as BREAKOUT_MODE
-from .doors import DOOR_TAG, main as generate_doors
 from .duo import DUO, main as generate_duo
 from .mirror import MODE as MIRROR_MODE, main as generate_mirror
 from .orbit import MARKERS as ORBIT_MARKERS, MODE as ORBIT_MODE, main as generate_orbit
@@ -90,7 +90,6 @@ def main() -> None:
 	generate_breakout()
 	generate_orbit()
 	generate_rats()
-	generate_doors()
 	generate_clear()
 
 
@@ -102,10 +101,10 @@ def generate_clear() -> None:
 	entity_tags: list[str] = [
 		f"{duo}.body", f"{duo}.seat",
 		f"{mirror}.body", f"{mirror}.anchor",
-		f"{breakout}.corner", f"{breakout}.screen", f"{breakout}.bumper", f"{breakout}.ball",
+		f"{breakout}.corner", f"{breakout}.screen", f"{breakout}.bumper", f"{breakout}.ball", f"{breakout}.redstone",
 		f"{orbit}.hole", *(f"{orbit}.{name}" for name in ORBIT_MARKERS), f"{orbit}.sky", f"{orbit}.fragment", f"{orbit}.phantom", f"{orbit}.pad",
 		f"{rats}.rat", f"{rats}.model", f"{rats}.cage", f"{rats}.carried", f"{rats}.caged",
-		f"{ns}.pr_stoupy.villager", DOOR_TAG,
+		f"{ns}.pr_stoupy.villager",
 	]
 	kills: str = "\n".join(f"$kill @e[tag={entity_tag},distance=..$(radius)]" for entity_tag in entity_tags)
 
@@ -116,7 +115,6 @@ $execute as @a[tag={mirror},distance=..$(radius)] at @s run function {root}/mirr
 $execute as @e[type=minecraft:marker,tag={breakout}.corner,distance=..$(radius)] run function {root}/breakout/stop_corner
 $execute as @e[type=minecraft:marker,tag={orbit}.hole,distance=..$(radius)] run function {root}/orbit/stop_hole
 $execute as @e[type=minecraft:marker,tag={rats}.cage,distance=..$(radius)] at @s run function {root}/rats/here/stop
-$execute as @e[type=minecraft:marker,tag={DOOR_TAG},distance=..$(radius)] at @s run function {root}/door/open with entity @s data
 
 {kills}
 $tellraw @a[distance=..16] {{"text":"Laboratoire : tout est supprimé à $(radius) blocs.","color":"green"}}

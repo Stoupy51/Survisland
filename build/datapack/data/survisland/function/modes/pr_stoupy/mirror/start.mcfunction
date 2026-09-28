@@ -40,11 +40,9 @@ execute align xyz positioned ~0.5 ~ ~0.5 summon minecraft:marker run function su
 # $(tp) moves each player from where it stands, "" to leave them on the pads
 scoreboard players set #pr_mirror_slot_counter survisland.data 0
 tag @a[tag=!survisland.pr_mirror,distance=..16,predicate=survisland:modes/pr_stoupy/on_start_pad,gamemode=!creative,gamemode=!spectator,limit=2,sort=nearest] add survisland.pr_mirror.entering
-$data modify storage survisland:pr_mirror tp set value "$(tp)"
-execute unless data storage survisland:pr_mirror {tp:""} as @a[tag=survisland.pr_mirror.entering] at @s run function survisland:modes/pr_stoupy/mirror/teleport with storage survisland:pr_mirror
+$data modify storage survisland:pr_stoupy tp set value "$(tp)"
+execute as @a[tag=survisland.pr_mirror.entering] at @s run function survisland:modes/pr_stoupy/teleport
 execute as @a[tag=survisland.pr_mirror.entering] at @s run function survisland:modes/pr_stoupy/mirror/enroll_player
 tag @a remove survisland.pr_mirror.entering
 schedule function survisland:modes/pr_stoupy/mirror/tick 1t replace
-
-schedule function survisland:modes/pr_stoupy/door/tick 1t replace
 

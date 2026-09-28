@@ -9,5 +9,5 @@
 # @s is a player, its ball appears two blocks above the middle of its bumper
 scoreboard players operation #pr_breakout_slot survisland.data = @s survisland.pr_breakout
 scoreboard players operation #pr_breakout_color survisland.data = @s survisland.pr_breakout.color
-execute as @e[type=minecraft:marker,tag=survisland.pr_breakout.bumper,predicate=survisland:modes/pr_stoupy/breakout/same_slot] at @s positioned ^ ^2 ^1 summon minecraft:sulfur_cube run function survisland:modes/pr_stoupy/breakout/new_ball
+execute as @e[type=minecraft:block_display,tag=survisland.pr_breakout.bumper,predicate=survisland:modes/pr_stoupy/breakout/same_slot] at @s positioned ^ ^2 ^0.5 summon minecraft:sulfur_cube run function survisland:modes/pr_stoupy/breakout/new_ball
 

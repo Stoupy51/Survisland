@@ -18,6 +18,8 @@ from .shared import (
 	LAB,
 	ON_START_PAD,
 	START_RADIUS,
+	STORE_TP,
+	TELEPORT,
 	require_players,
 	write_match_predicate,
 )
@@ -80,15 +82,11 @@ execute align xyz positioned ~0.5 ~ ~0.5 summon minecraft:marker run function {r
 # $(tp) moves each player from where it stands, "" to leave them on the pads
 scoreboard players set #{MODE}_slot_counter {ns}.data 0
 tag @a[{free_player},limit=2,sort=nearest] add {tag}.entering
-$data modify storage {ns}:{MODE} tp set value "$(tp)"
-execute unless data storage {ns}:{MODE} {{tp:""}} as @a[tag={tag}.entering] at @s run function {root}/teleport with storage {ns}:{MODE}
+{STORE_TP}
+execute as @a[tag={tag}.entering] at @s run {TELEPORT}
 execute as @a[tag={tag}.entering] at @s run function {root}/enroll_player
 tag @a remove {tag}.entering
 schedule function {root}/tick 1t replace
-""")
-
-	write_function(f"{root}/teleport", """
-$tp @s $(tp)
 """)
 
 	write_function(f"{root}/new_anchor", f"""

@@ -6,14 +6,11 @@ which is the side where the right key moves a bumper toward the end of the field
 # Imports
 from stewbeet import Mem, write_function
 
-from ..shared import LAB
-from .colors import COLORS, BrickColor
+from ..shared import LAB, START_PAD_BLOCKS
+from .colors import SOLO_COLORS
 from .physics import MODE
 
 # Constants
-EXAMPLE_COLORS: list[BrickColor] = [color for name in ("red", "light_blue", "lime", "yellow") for color in COLORS if color.name == name]
-""" Colors of the four booths from the start of the field to its end, and of the bricks. """
-
 BRICK_ROWS: int = 6
 """ Rows of bricks under the empty top row, laid in diagonal stripes of the four colors. """
 
@@ -36,8 +33,8 @@ scoreboard players set #{MODE}_offset {data} {2 * slot - 1}
 scoreboard players operation #{MODE}_offset {data} *= #{MODE}_width {data}
 execute store result storage {storage}.u int 1 run scoreboard players operation #{MODE}_offset {data} /= #8 {data}
 data modify storage {storage}.block set value "{color.blocks[0]}"
-function {root}/example/booth with storage {storage}""" for slot, color in enumerate(EXAMPLE_COLORS, start=1))
-	pick_brick: str = "\n".join(f"execute if score #{MODE}_pick {data} matches {index} run setblock ~ ~ ~ {color.blocks[0]}" for index, color in enumerate(EXAMPLE_COLORS))
+function {root}/example/booth with storage {storage}""" for slot, color in enumerate(SOLO_COLORS, start=1))
+	pick_brick: str = "\n".join(f"execute if score #{MODE}_pick {data} matches {index} run setblock ~ ~ ~ {color.blocks[0]}" for index, color in enumerate(SOLO_COLORS))
 
 	write_function(f"{root}/here/example", f"""
 # Sets up a field here like here/setup, then builds it: every block of the frame, the glass front and the booths is replaced
@@ -77,16 +74,18 @@ $fill ^ ^ ^-1 ^ ^$(height) ^-1 {FRAME_BLOCK}
 $fill ^ ^ ^$(width) ^ ^$(height) ^$(width) {FRAME_BLOCK}
 $fill ^-1 ^-1 ^-1 ^-1 ^$(height) ^$(width) minecraft:glass
 
-# Platform of the players, with the start command block under its middle
+# Platform of the players, with the start command block under its middle and the walkway of the start pads 5 blocks lower
 $execute positioned ^$(front) ^$(floor) ^ run fill ^1 ^ ^-1 ^-1 ^ ^$(width) {FRAME_BLOCK}
-$execute positioned ^$(front) ^$(floor) ^$(middle) run setblock ~ ~-1 ~ minecraft:repeating_command_block{{auto:1b,Command:"function {root}/start"}}
+$execute positioned ^$(front) ^$(floor) ^ run fill ^1 ^-5 ^-1 ^-1 ^-5 ^$(width) {FRAME_BLOCK}
+$execute positioned ^$(front) ^$(floor) ^$(middle) run setblock ~ ~-1 ~ minecraft:repeating_command_block{{auto:1b,Command:'function {root}/start {{tp:"~ ~5 ~",redstone:""}}'}}
 """)
 
-	write_function(f"{root}/example/booth", """
-# A 1x1 glass booth open on top, so a player drops in and cannot jump out
+	write_function(f"{root}/example/booth", f"""
+# A 1x1 glass booth open on top, above its start pad from which tp:"~ ~5 ~" lands the player on the colored floor
 $execute positioned ^$(front) ^$(floor) ^$(u) run fill ^-1 ^1 ^-1 ^1 ^2 ^1 minecraft:glass
 $execute positioned ^$(front) ^$(floor) ^$(u) run fill ^ ^1 ^ ^ ^2 ^ minecraft:air
 $execute positioned ^$(front) ^$(floor) ^$(u) run setblock ~ ~ ~ $(block)
+$execute positioned ^$(front) ^$(floor) ^$(u) run setblock ~ ~-5 ~ {START_PAD_BLOCKS[0]}
 """)
 
 	write_function(f"{root}/example/bricks", f"""
@@ -116,7 +115,7 @@ execute if score #{MODE}_row {data} matches ..{BRICK_ROWS - 1} positioned ~ ~1 ~
 	write_function(f"{root}/example/brick_cell", f"""
 scoreboard players operation #{MODE}_pick {data} = #{MODE}_cell {data}
 scoreboard players operation #{MODE}_pick {data} += #{MODE}_row {data}
-scoreboard players operation #{MODE}_pick {data} %= #{len(EXAMPLE_COLORS)} {data}
+scoreboard players operation #{MODE}_pick {data} %= #{len(SOLO_COLORS)} {data}
 {pick_brick}
 scoreboard players add #{MODE}_cell {data} 1
 execute if score #{MODE}_cell {data} < #{MODE}_width {data} positioned ^ ^ ^1 run function {root}/example/brick_cell

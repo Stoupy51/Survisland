@@ -3,6 +3,11 @@
 #
 # @within	???
 #
+# @args		tp (unknown)
+#
+
+# $(tp) moves each player of a new pair from where it stands, "" to leave them on the pads
+$data modify storage survisland:pr_stoupy tp set value "$(tp)"
 
 # Objectives of the mode, all but the first one are carried by the mannequins themselves
 scoreboard objectives add survisland.pr_stoupy_duo dummy
@@ -28,6 +33,4 @@ function survisland:modes/pr_stoupy/duo/body/form_group
 function survisland:modes/pr_stoupy/duo/body/form_group
 
 schedule function survisland:modes/pr_stoupy/duo/tick 1t replace
-
-schedule function survisland:modes/pr_stoupy/door/tick 1t replace
 
