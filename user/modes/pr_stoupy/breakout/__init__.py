@@ -573,6 +573,8 @@ execute as {arena.players} at @s run playsound minecraft:entity.generic.explode 
 
 	write_function(f"{root}/level_cleared", f"""
 kill {arena.balls}
+# Left in place until the next level block replaces it, or the next start takes it back
+execute at @e[type=minecraft:marker,tag={tag}.level_block,{arena.same}] run setblock ~ ~ ~ minecraft:redstone_block
 execute if score #{MODE}_level {ns}.data matches {LEVELS}.. run return run function {root}/victory
 scoreboard players set #{MODE}_state {ns}.data 3
 {arena.screen(cleared_title)}

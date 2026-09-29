@@ -216,6 +216,7 @@ function survisland:modes/pr_stoupy/breakout/start {tp:"~ ~5 ~",level_block:"~ ~
 `level_block` pose un bloc au début de chaque niveau, relatif au command block : fer au niveau 1, or au 2, diamant au 3 (`LEVEL_BLOCKS`).
 Des command blocks le détectent (`execute if block ... minecraft:gold_block run clone ...`) pour cloner les briques du bon niveau.
 Il est retiré au lancement des balles, 7 secondes plus tard, et les briques sont comptées à ce moment-là. `level_block:""` pour aucun.
+À la fin de chaque niveau, un bloc de redstone est posé au même endroit, et y reste jusqu'au bloc du niveau suivant (ou au départ suivant après le dernier).
 
 ### Pendant la partie
 

@@ -37,6 +37,7 @@ Il suffit d'éloigner les copies de plus de 48 blocs (regroupement des cages de 
 	breakout/start {tp:"~ ~5 ~",level_block:""}   (répétitif) 4 joueurs sur les blocs de départ, lancement du niveau 1 du terrain le plus proche
 		tp amène chaque joueur sur un bloc de sa couleur, lue juste après.
 		level_block : bloc posé au début de chaque niveau (fer, or puis diamant), relatif au command block (ex: "~ ~-2 ~"), retiré au lancement des balles, "" pour aucun.
+			Bloc de redstone au même endroit à la fin de chaque niveau, jusqu'au bloc du niveau suivant.
 		En solo, chaque balle casse les briques rouges, bleu clair, vert clair et jaunes.
 	breakout/here/next_level                    niveau suivant, cloné pendant le compte à rebours grâce à son bloc de niveau
 	breakout/here/stop

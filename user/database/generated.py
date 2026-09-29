@@ -49,7 +49,13 @@ def main() -> None:
 	# Add blockguessr items
 	for item in [x for x in textures if "blockguessr_" in x]:
 		if "_map" in item:
-			Item(id="blockguessr_map", base_item="minecraft:carrot_on_a_stick", override_model={"parent":"item/generated"})
+			Item(id="blockguessr_map", base_item="minecraft:carrot_on_a_stick", override_model={
+				"parent":"item/generated",
+				"display":{
+					"thirdperson_lefthand": {"scale": [0,0,0]},
+					"thirdperson_righthand": {"scale": [0,0,0]}
+				}
+			})
 			continue
 
 	# Add paintings 4x4
