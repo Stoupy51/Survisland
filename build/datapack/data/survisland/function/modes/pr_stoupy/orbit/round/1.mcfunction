@@ -6,12 +6,12 @@
 
 scoreboard players set #pr_orbit_required survisland.data 6
 scoreboard players set #pr_orbit_pull survisland.data 500
-execute at @e[type=minecraft:marker,tag=survisland.pr_orbit.hole,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] summon minecraft:interaction run function survisland:modes/pr_stoupy/orbit/new_fragment {ring:0,yaw:0,pitch:0,half:0}
-execute at @e[type=minecraft:marker,tag=survisland.pr_orbit.hole,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] summon minecraft:interaction run function survisland:modes/pr_stoupy/orbit/new_fragment {ring:1,yaw:0,pitch:-30,half:0}
-execute at @e[type=minecraft:marker,tag=survisland.pr_orbit.hole,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] summon minecraft:interaction run function survisland:modes/pr_stoupy/orbit/new_fragment {ring:2,yaw:90,pitch:30,half:0}
-execute at @e[type=minecraft:marker,tag=survisland.pr_orbit.hole,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] summon minecraft:interaction run function survisland:modes/pr_stoupy/orbit/new_fragment {ring:0,yaw:180,pitch:0,half:0}
-execute at @e[type=minecraft:marker,tag=survisland.pr_orbit.hole,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] summon minecraft:interaction run function survisland:modes/pr_stoupy/orbit/new_fragment {ring:1,yaw:180,pitch:30,half:1}
-execute at @e[type=minecraft:marker,tag=survisland.pr_orbit.hole,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] summon minecraft:interaction run function survisland:modes/pr_stoupy/orbit/new_fragment {ring:2,yaw:270,pitch:-30,half:1}
+execute at @e[type=minecraft:marker,tag=survisland.pr_orbit.hole,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] summon minecraft:item_display run function survisland:modes/pr_stoupy/orbit/new_fragment {ring:0,yaw:0,pitch:0,half:0}
+execute at @e[type=minecraft:marker,tag=survisland.pr_orbit.hole,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] summon minecraft:item_display run function survisland:modes/pr_stoupy/orbit/new_fragment {ring:1,yaw:0,pitch:-30,half:0}
+execute at @e[type=minecraft:marker,tag=survisland.pr_orbit.hole,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] summon minecraft:item_display run function survisland:modes/pr_stoupy/orbit/new_fragment {ring:2,yaw:90,pitch:30,half:0}
+execute at @e[type=minecraft:marker,tag=survisland.pr_orbit.hole,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] summon minecraft:item_display run function survisland:modes/pr_stoupy/orbit/new_fragment {ring:0,yaw:180,pitch:0,half:0}
+execute at @e[type=minecraft:marker,tag=survisland.pr_orbit.hole,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] summon minecraft:item_display run function survisland:modes/pr_stoupy/orbit/new_fragment {ring:1,yaw:180,pitch:30,half:1}
+execute at @e[type=minecraft:marker,tag=survisland.pr_orbit.hole,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] summon minecraft:item_display run function survisland:modes/pr_stoupy/orbit/new_fragment {ring:2,yaw:270,pitch:-30,half:1}
 
 title @a[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena] times 10 50 10
 title @a[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena] subtitle {"text": "6 fragments à ramener", "color": "#01FE41"}

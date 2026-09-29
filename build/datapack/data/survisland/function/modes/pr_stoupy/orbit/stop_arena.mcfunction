@@ -6,7 +6,7 @@
 #
 
 # The arena loaded in the fake players goes back to rest
-execute as @e[type=minecraft:interaction,tag=survisland.pr_orbit.fragment,predicate=survisland:modes/pr_stoupy/orbit/same_arena] run function survisland:modes/pr_stoupy/orbit/remove_fragment
+execute as @e[type=minecraft:item_display,tag=survisland.pr_orbit.fragment,predicate=survisland:modes/pr_stoupy/orbit/same_arena] run function survisland:modes/pr_stoupy/orbit/remove_fragment
 execute as @e[type=minecraft:phantom,tag=survisland.pr_orbit.phantom,predicate=survisland:modes/pr_stoupy/orbit/same_arena] run tp @s ~ -1000 ~
 kill @e[type=minecraft:phantom,tag=survisland.pr_orbit.phantom,predicate=survisland:modes/pr_stoupy/orbit/same_arena]
 execute as @a[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena] run attribute @s minecraft:gravity base reset

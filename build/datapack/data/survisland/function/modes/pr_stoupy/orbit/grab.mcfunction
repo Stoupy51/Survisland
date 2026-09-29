@@ -1,9 +1,9 @@
 
 #> survisland:modes/pr_stoupy/orbit/grab
 #
-# @executed	as @e[type=minecraft:interaction,tag=survisland.pr_orbit.fragment,distance=..8]
+# @executed	as @e[type=minecraft:interaction,tag=survisland.pr_orbit.hitbox,distance=..8]
 #
-# @within	survisland:modes/pr_stoupy/orbit/click [ as @e[type=minecraft:interaction,tag=survisland.pr_orbit.fragment,distance=..8] ]
+# @within	survisland:modes/pr_stoupy/orbit/click [ as @e[type=minecraft:interaction,tag=survisland.pr_orbit.hitbox,distance=..8] ]
 #
 
 scoreboard players add @a[tag=survisland.pr_orbit.clicker,limit=1] survisland.pr_orbit.carried 1

@@ -122,7 +122,7 @@ class Arena:
 		self.hole: str = self.marker("hole")
 		self.collector: str = self.marker("collector")
 		self.players: str = f"@a[tag={tag},{self.same}]"
-		self.fragments: str = f"@e[type=minecraft:interaction,tag={tag}.fragment,{self.same}]"
+		self.fragments: str = f"@e[type=minecraft:item_display,tag={tag}.fragment,{self.same}]"
 		self.phantoms: str = f"@e[type=minecraft:phantom,tag={tag}.phantom,{self.same}]"
 
 	def marker(self, name: str) -> str:
@@ -333,7 +333,7 @@ scoreboard players set #{MODE}_banked {ns}.data 0
 
 	for index, round_ in enumerate(ROUNDS, start=1):
 		fragments: str = "\n".join(
-			f"execute at {arena.hole} summon minecraft:interaction run function {root}/new_fragment {{ring:{fragment % len(RINGS)},{RINGS[fragment % len(RINGS)].rotation(fragment * 360 // round_.fragments)}}}"
+			f"execute at {arena.hole} summon minecraft:item_display run function {root}/new_fragment {{ring:{fragment % len(RINGS)},{RINGS[fragment % len(RINGS)].rotation(fragment * 360 // round_.fragments)}}}"
 			for fragment in range(round_.fragments)
 		)
 		phantoms: str = "\n".join(
@@ -352,22 +352,23 @@ execute as {arena.players} at @s run playsound minecraft:block.beacon.power_sele
 """)
 
 	write_function(f"{root}/new_fragment", f"""
-# @s is the hitbox the players touch or click, the star riding it is lowered into its middle
+# @s is the star teleported along its ring: the client smooths the teleports of a display, never those of an interaction, so the hitbox rides the star
 tag @s add {tag}.fragment
 $tag @s add {tag}.ring$(ring)
 $tag @s add {tag}.half$(half)
 scoreboard players operation @s {tag}.arena = #{MODE}_arena {ns}.data
-data merge entity @s {{width:1f,height:1f,response:1b}}
+data merge entity @s {{item:{{id:"minecraft:nether_star",count:1}},billboard:"center",Glowing:1b,glow_color_override:5636095,teleport_duration:1,brightness:{{sky:15,block:15}},transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.8f,0.8f,0.8f]}}}}
 $rotate @s $(yaw) $(pitch)
 tag @s add {tag}.new
-execute summon minecraft:item_display run function {root}/new_star
+execute summon minecraft:interaction run function {root}/new_hitbox
 tag @s remove {tag}.new
 """)
 
-	write_function(f"{root}/new_star", f"""
-tag @s add {tag}.fragment
-data merge entity @s {{item:{{id:"minecraft:nether_star",count:1}},billboard:"vertical",Glowing:1b,glow_color_override:5636095,teleport_duration:1,brightness:{{sky:15,block:15}},transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.8f,0.8f,0.8f]}}}}
-ride @s mount @e[type=minecraft:interaction,tag={tag}.new,limit=1]
+	write_function(f"{root}/new_hitbox", f"""
+# The negative height hangs the box below the star's origin, around the lowered star
+tag @s add {tag}.hitbox
+data merge entity @s {{width:1f,height:-1f,response:1b}}
+ride @s mount @e[type=minecraft:item_display,tag={tag}.new,limit=1]
 """)
 
 	write_function(f"{root}/check_round", f"""
@@ -389,7 +390,7 @@ def generate_tick(arena: Arena) -> None:
 	root: str = f"{ns}:{LAB}/orbit"
 	tag: str = f"{ns}.{MODE}"
 	turns: str = "\n".join(
-		f"execute as @e[type=minecraft:interaction,tag={tag}.ring{index},tag=!{tag}.stolen,{arena.same}] at {arena.hole} run function {root}/turn/{index}"
+		f"execute as @e[type=minecraft:item_display,tag={tag}.ring{index},tag=!{tag}.stolen,{arena.same}] at {arena.hole} run function {root}/turn/{index}"
 		for index in range(len(RINGS))
 	)
 
@@ -410,7 +411,7 @@ execute if score #{MODE}_timer {ns}.data matches ..0 run function {root}/next_ro
 	write_function(f"{root}/play_tick", f"""
 # Run as and at the hole of the arena, whose state is loaded in the fake players
 {turns}
-execute as @e[type=minecraft:interaction,tag={tag}.fragment,tag=!{tag}.stolen,{arena.same}] at @s as @p[tag={tag},{arena.same},distance=..{PICKUP_RADIUS}] run function {root}/pick_up
+execute as @e[type=minecraft:item_display,tag={tag}.fragment,tag=!{tag}.stolen,{arena.same}] at @s as @p[tag={tag},{arena.same},distance=..{PICKUP_RADIUS}] run function {root}/pick_up
 execute at {arena.collector} as @a[tag={tag},{arena.same},scores={{{tag}.carried=1..}},distance=..{BANK_RADIUS}] run function {root}/bank
 function {root}/phantoms_tick
 function {root}/check_round
@@ -438,7 +439,7 @@ tag @s add {tag}.half1
 	write_function(f"{root}/pick_up", f"""
 # @s is the player touching the fragment, which disappears from the orbit
 scoreboard players add @s {tag}.carried 1
-execute as @e[type=minecraft:interaction,tag={tag}.fragment,tag=!{tag}.stolen,{arena.same},distance=..{PICKUP_RADIUS},limit=1,sort=nearest] run function {root}/remove_fragment
+execute as @e[type=minecraft:item_display,tag={tag}.fragment,tag=!{tag}.stolen,{arena.same},distance=..{PICKUP_RADIUS},limit=1,sort=nearest] run function {root}/remove_fragment
 playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1.2
 """)
 
@@ -450,7 +451,7 @@ kill @s
 	for trigger, name in (("minecraft:player_hurt_entity", "hit"), ("minecraft:player_interacted_with_entity", "use")):
 		json_content: JsonDict = {
 			"criteria": {"requirement": {"trigger": trigger, "conditions": {"entity": [
-				{"condition": "minecraft:entity_properties", "entity": "this", "predicate": {"entity_type": "minecraft:interaction", "entity_tags": {"all_of": [f"{tag}.fragment"]}}},
+				{"condition": "minecraft:entity_properties", "entity": "this", "predicate": {"entity_type": "minecraft:interaction", "entity_tags": {"all_of": [f"{tag}.hitbox"]}}},
 			]}}},
 			"rewards": {"function": f"{root}/click"},
 		}
@@ -461,7 +462,7 @@ kill @s
 advancement revoke @s only {ns}:{LAB}/orbit_hit_fragment
 advancement revoke @s only {ns}:{LAB}/orbit_use_fragment
 tag @s add {tag}.clicker
-execute if entity @s[tag={tag}] as @e[type=minecraft:interaction,tag={tag}.fragment,distance=..8] if function {root}/clicked run function {root}/grab
+execute if entity @s[tag={tag}] as @e[type=minecraft:interaction,tag={tag}.hitbox,distance=..8] if function {root}/clicked on vehicle run function {root}/grab
 tag @s remove {tag}.clicker
 """)
 
@@ -486,7 +487,7 @@ particle minecraft:end_rod ~ ~1 ~ 0.4 0.8 0.4 0.05 40
 """)
 
 	restore: str = "\n".join(
-		f"execute if score @s {tag}.carried matches {count}.. at {arena.hole} summon minecraft:interaction run function {root}/new_fragment {{ring:{(count - 1) % len(RINGS)},{RINGS[(count - 1) % len(RINGS)].rotation(count * 97 % 360)}}}"
+		f"execute if score @s {tag}.carried matches {count}.. at {arena.hole} summon minecraft:item_display run function {root}/new_fragment {{ring:{(count - 1) % len(RINGS)},{RINGS[(count - 1) % len(RINGS)].rotation(count * 97 % 360)}}}"
 		for count in range(1, max(round_.fragments for round_ in ROUNDS) + 1)
 	)
 	write_function(f"{root}/swallow", f"""
@@ -550,17 +551,17 @@ execute if score #{MODE}_step {ns}.data matches 0 as @e[type=minecraft:phantom,t
 execute as @e[type=minecraft:phantom,tag={tag}.diving,{arena.same}] at @s rotated as {arena.hole} run function {root}/dive
 
 # The fragment of a thief killed on the way falls back into orbit
-execute as @e[type=minecraft:interaction,tag={tag}.stolen,{arena.same}] unless predicate {ns}:riding run tag @s remove {tag}.stolen
+execute as @e[type=minecraft:item_display,tag={tag}.stolen,{arena.same}] unless predicate {ns}:riding run tag @s remove {tag}.stolen
 """)
 
 	write_function(f"{root}/steal", f"""
-execute unless entity @e[type=minecraft:interaction,tag={tag}.fragment,tag=!{tag}.stolen,{arena.same}] run return fail
+execute unless entity @e[type=minecraft:item_display,tag={tag}.fragment,tag=!{tag}.stolen,{arena.same}] run return fail
 tag @s add {tag}.diving
 data merge entity @s {{NoAI:1b}}
-tag @e[type=minecraft:interaction,tag={tag}.fragment,tag=!{tag}.stolen,{arena.same},limit=1,sort=random] add {tag}.stealing
-ride @e[type=minecraft:interaction,tag={tag}.stealing,limit=1] mount @s
-tag @e[type=minecraft:interaction,tag={tag}.stealing] add {tag}.stolen
-tag @e[type=minecraft:interaction,tag={tag}.stealing] remove {tag}.stealing
+tag @e[type=minecraft:item_display,tag={tag}.fragment,tag=!{tag}.stolen,{arena.same},limit=1,sort=random] add {tag}.stealing
+ride @e[type=minecraft:item_display,tag={tag}.stealing,limit=1] mount @s
+tag @e[type=minecraft:item_display,tag={tag}.stealing] add {tag}.stolen
+tag @e[type=minecraft:item_display,tag={tag}.stealing] remove {tag}.stealing
 execute at @s run playsound minecraft:entity.phantom.swoop hostile {arena.players} ~ ~ ~ 2 0.6
 tellraw {arena.players} {{"text":"Un voleur d'étoiles emporte un fragment vers le trou noir !","color":"red"}}
 """)

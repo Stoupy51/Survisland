@@ -44,14 +44,14 @@
 #			pitch (int)
 #
 
-# @s is the hitbox the players touch or click, the star riding it is lowered into its middle
+# @s is the star teleported along its ring: the client smooths the teleports of a display, never those of an interaction, so the hitbox rides the star
 tag @s add survisland.pr_orbit.fragment
 $tag @s add survisland.pr_orbit.ring$(ring)
 $tag @s add survisland.pr_orbit.half$(half)
 scoreboard players operation @s survisland.pr_orbit.arena = #pr_orbit_arena survisland.data
-data merge entity @s {width:1f,height:1f,response:1b}
+data merge entity @s {item:{id:"minecraft:nether_star",count:1},billboard:"center",Glowing:1b,glow_color_override:5636095,teleport_duration:1,brightness:{sky:15,block:15},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.8f,0.8f,0.8f]}}
 $rotate @s $(yaw) $(pitch)
 tag @s add survisland.pr_orbit.new
-execute summon minecraft:item_display run function survisland:modes/pr_stoupy/orbit/new_star
+execute summon minecraft:interaction run function survisland:modes/pr_stoupy/orbit/new_hitbox
 tag @s remove survisland.pr_orbit.new
 

@@ -11,7 +11,7 @@
 							"entity_type": "minecraft:interaction",
 							"entity_tags": {
 								"all_of": [
-									"survisland.pr_orbit.fragment"
+									"survisland.pr_orbit.hitbox"
 								]
 							}
 						}
