@@ -13,7 +13,8 @@ Un voleur d'étoiles plonge dans la même direction et disparaît en touchant le
 	function survisland:modes/pr_stoupy/orbit/here/place_black_hole {scale:100}
 	execute rotated 0 0 run function survisland:modes/pr_stoupy/orbit/here/place_black_hole {scale:100}
 	```
-2. Le dépôt des fragments, du côté -z, pour que les joueurs remontent contre la poussée :
+2. Le dépôt des fragments, du côté -z, pour que les joueurs remontent contre la poussée.
+	Une étoile lumineuse et le texte "Dépôt des fragments" le signalent au-dessus :
 	```
 	function survisland:modes/pr_stoupy/orbit/here/set_collector
 	```

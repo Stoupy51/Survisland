@@ -47,7 +47,7 @@ PULL_PERIOD: int = 4
 PAD_OFFSETS: tuple[str, ...] = ("~ ~-1 ~", "~0.3 ~-1 ~0.3", "~-0.3 ~-1 ~0.3", "~0.3 ~-1 ~-0.3", "~-0.3 ~-1 ~-0.3")
 """ Points under a player where its start pad is looked for: the center, then the corners of its hitbox. """
 
-PLAYER_GRAVITY: str = "0.05"
+PLAYER_GRAVITY: str = "0.025"
 """ Gravity of the players during the trial, vanilla being 0.08. """
 
 PHANTOM_PUSH: int = 6000
@@ -65,9 +65,7 @@ BREAK_TICKS: int = 100
 STATE: tuple[str, ...] = ("arena", "state", "round", "banked", "required", "pull", "timer", "clock")
 """ Scores of the hole marker holding the state of its arena, each one mirrored by a #pr_orbit_<name> fake player. """
 
-MARKERS: dict[str, str] = {
-	"collector": "où les fragments sont déposés",
-}
+MARKERS: tuple[str, ...] = ("collector",)
 """ Markers of a room besides its hole, each one joining the arena of the nearest hole when placed. """
 
 ROCK_BLOCKS: tuple[str, ...] = ("minecraft:blackstone", "minecraft:blackstone", "minecraft:basalt", "minecraft:deepslate", "minecraft:tuff")
@@ -127,9 +125,9 @@ RINGS: list[Ring] = [
 """ The rings the fragments are spread over, one fragment out of three on each. """
 
 ROUNDS: list[Round] = [
-	Round(fragments=6,  pull=1000, phantoms=0, thieves=0),
-	Round(fragments=8,  pull=1400, phantoms=3, thieves=0),
-	Round(fragments=10, pull=1800, phantoms=3, thieves=2),
+	Round(fragments=6,  pull=500, phantoms=0, thieves=0),
+	Round(fragments=8,  pull=700, phantoms=3, thieves=0),
+	Round(fragments=10, pull=900, phantoms=3, thieves=2),
 ]
 """ The three rounds, in play order: about two minutes each for three players. """
 
@@ -176,19 +174,21 @@ scoreboard players set #{MODE}_state {ns}.data 0
 {copy_state(MODE, STATE, to_anchor=True)}
 """)
 
-	for name, role in MARKERS.items():
-		write_function(f"{root}/here/set_{name}", f"""
-# Joins the arena of the nearest hole, which must be placed first
+	write_function(f"{root}/here/set_collector", f"""
+# Joins the arena of the nearest hole, which must be placed first, with a glowing star and a label showing it from afar
 execute unless entity @e[type=minecraft:marker,tag={tag}.hole] run return run tellraw @a[distance=..16] {{"text":"Orbite : place d'abord le trou noir (here/place_black_hole).","color":"red"}}
 scoreboard players operation #{MODE}_arena {ns}.data = @n[type=minecraft:marker,tag={tag}.hole] {tag}.arena
-kill @e[type=minecraft:marker,tag={tag}.{name},{arena.same}]
-execute align xyz positioned ~0.5 ~ ~0.5 summon minecraft:marker run function {root}/new_marker {{name:"{name}"}}
-tellraw @a[distance=..16] {{"text":"Orbite : {name} placé ({role}).","color":"green"}}
+kill @e[tag={tag}.collector,{arena.same}]
+execute align xyz positioned ~0.5 ~ ~0.5 run function {root}/place_collector
+tellraw @a[distance=..16] {{"text":"Orbite : collector placé (où les fragments sont déposés).","color":"green"}}
 """)
 
-	write_function(f"{root}/new_marker", f"""
-$tag @s add {tag}.$(name)
-scoreboard players operation @s {tag}.arena = #{MODE}_arena {ns}.data
+	write_function(f"{root}/place_collector", f"""
+summon minecraft:marker ~ ~ ~ {{Tags:["{tag}.collector","{tag}.new"]}}
+summon minecraft:item_display ~ ~1.5 ~ {{Tags:["{tag}.collector","{tag}.new"],item:{{id:"minecraft:nether_star",count:1}},billboard:"center",Glowing:1b,glow_color_override:5636095,brightness:{{sky:15,block:15}},transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.5f,1.5f,1.5f]}}}}
+summon minecraft:text_display ~ ~2.6 ~ {{Tags:["{tag}.collector","{tag}.new"],text:{crt_text("Dépôt des fragments")},billboard:"center",background:0,brightness:{{sky:15,block:15}}}}
+scoreboard players operation @e[tag={tag}.new] {tag}.arena = #{MODE}_arena {ns}.data
+tag @e[tag={tag}.new] remove {tag}.new
 """)
 
 	pick_block: str = "\n".join(f"execute if score #{MODE}_rock {ns}.data matches {index} run return run setblock ~ ~ ~ {block}" for index, block in enumerate(ROCK_BLOCKS))
@@ -250,13 +250,16 @@ def generate_start(arena: Arena) -> None:
 	root: str = f"{ns}:{LAB}/orbit"
 	tag: str = f"{ns}.{MODE}"
 	free_player: str = f"tag=!{tag},distance=..{START_RADIUS},{ON_START_PAD},gamemode=!creative,gamemode=!spectator"
-	markers_missing: str = "\n".join(f"execute unless entity {arena.marker(name)} run return 0" for name in MARKERS)
+	markers_missing: str = "\n".join(
+		f'execute unless entity {arena.marker(name)} run return run title @a[{free_player}] actionbar {{"text":"Orbite : pas de {name} pour ce trou noir, le poser avec here/set_{name}.","color":"red"}}'
+		for name in MARKERS
+	)
 	take_pad: str = "\n".join(f"execute positioned {offset} if block ~ ~ ~ #{ns}:pr_stoupy/start_pad run return run function {root}/take_pad" for offset in PAD_OFFSETS)
 
 	write_function(f"{root}/start", f"""
 # Safe to fire every tick: a player on a start pad joins the room of the nearest hole, the first one starts round 1
-execute unless entity @e[type=minecraft:marker,tag={tag}.hole] run return 0
 execute unless entity @a[{free_player}] run return 0
+execute unless entity @e[type=minecraft:marker,tag={tag}.hole] run return run title @a[{free_player}] actionbar {{"text":"Orbite : pas de trou noir, le poser avec here/place_black_hole.","color":"red"}}
 execute as @n[type=minecraft:marker,tag={tag}.hole] run function {root}/load_arena
 {markers_missing}
 
@@ -278,6 +281,8 @@ scoreboard players operation @s {tag}.arena = #{MODE}_arena {ns}.data
 scoreboard players set @s {tag}.carried 0
 attribute @s minecraft:gravity base set {PLAYER_GRAVITY}
 attribute @s minecraft:fall_damage_multiplier base set 0
+# Phantoms still shove the player toward the hole, but a death would leave it tagged and pushed wherever it respawns
+effect give @s minecraft:resistance infinite 4 true
 give @s minecraft:iron_sword[custom_data={{{ns}:{{orbit_sword:true}}}},item_name={{"text":"Épée stellaire","color":"aqua"}}]
 function {root}/find_pad
 execute at {arena.hole} run tp @s ~ ~1 ~
@@ -535,6 +540,7 @@ execute as {arena.phantoms} run tp @s ~ -1000 ~
 kill {arena.phantoms}
 execute as {arena.players} run attribute @s minecraft:gravity base reset
 execute as {arena.players} run attribute @s minecraft:fall_damage_multiplier base reset
+effect clear {arena.players} minecraft:resistance
 clear {arena.players} *[custom_data~{{{ns}:{{orbit_sword:true}}}}]
 tag {arena.players} remove {tag}
 execute at @e[type=minecraft:marker,tag={tag}.pad,{arena.same}] run setblock ~ ~ ~ {START_PAD_BLOCKS[0]}

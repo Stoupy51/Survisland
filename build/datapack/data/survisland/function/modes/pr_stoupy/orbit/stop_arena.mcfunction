@@ -11,6 +11,7 @@ execute as @e[type=minecraft:phantom,tag=survisland.pr_orbit.phantom,predicate=s
 kill @e[type=minecraft:phantom,tag=survisland.pr_orbit.phantom,predicate=survisland:modes/pr_stoupy/orbit/same_arena]
 execute as @a[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena] run attribute @s minecraft:gravity base reset
 execute as @a[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena] run attribute @s minecraft:fall_damage_multiplier base reset
+effect clear @a[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena] minecraft:resistance
 clear @a[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena] *[custom_data~{survisland:{orbit_sword:true}}]
 tag @a[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena] remove survisland.pr_orbit
 execute at @e[type=minecraft:marker,tag=survisland.pr_orbit.pad,predicate=survisland:modes/pr_stoupy/orbit/same_arena] run setblock ~ ~ ~ minecraft:emerald_block
