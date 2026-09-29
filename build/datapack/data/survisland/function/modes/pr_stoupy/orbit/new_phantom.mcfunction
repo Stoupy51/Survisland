@@ -1,10 +1,10 @@
 
 #> survisland:modes/pr_stoupy/orbit/new_phantom
 #
-# @executed	at @e[type=minecraft:marker,tag=survisland.pr_orbit.orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] & positioned ~ ~8 ~
+# @executed	at @e[type=minecraft:marker,tag=survisland.pr_orbit.hole,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] & positioned ~ ~8 ~
 #
-# @within	survisland:modes/pr_stoupy/orbit/round/2 [ at @e[type=minecraft:marker,tag=survisland.pr_orbit.orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] & positioned ~ ~8 ~ ]
-#			survisland:modes/pr_stoupy/orbit/round/3 [ at @e[type=minecraft:marker,tag=survisland.pr_orbit.orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] & positioned ~ ~8 ~ ]
+# @within	survisland:modes/pr_stoupy/orbit/round/2 [ at @e[type=minecraft:marker,tag=survisland.pr_orbit.hole,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] & positioned ~ ~8 ~ ]
+#			survisland:modes/pr_stoupy/orbit/round/3 [ at @e[type=minecraft:marker,tag=survisland.pr_orbit.hole,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] & positioned ~ ~8 ~ ]
 #			survisland:modes/pr_stoupy/orbit/new_thief
 #
 

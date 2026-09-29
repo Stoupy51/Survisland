@@ -3,8 +3,7 @@
 #
 # @executed	align xyz & positioned ~0.5 ~ ~0.5
 #
-# @within	survisland:modes/pr_stoupy/orbit/here/set_orbit {name:"orbit"} [ align xyz & positioned ~0.5 ~ ~0.5 ]
-#			survisland:modes/pr_stoupy/orbit/here/set_collector {name:"collector"} [ align xyz & positioned ~0.5 ~ ~0.5 ]
+# @within	survisland:modes/pr_stoupy/orbit/here/set_collector {name:"collector"} [ align xyz & positioned ~0.5 ~ ~0.5 ]
 #
 # @args		name (string)
 #

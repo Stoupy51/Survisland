@@ -1,30 +1,31 @@
 
 # 4. Orbite (1 à 4 joueurs)
 
-À construire : une grande salle, avec un plafond assez haut pour les phantoms des rounds 2 et 3.
-Le trou noir est peint sur un mur : les joueurs sont poussés vers lui en permanence pendant la partie, rounds et pauses compris.
+À construire : une grande salle vide (40x40x40 par exemple), avec des rochers flottants pour sauter de l'un à l'autre.
+Le trou noir est dessiné à l'infini dans le ciel par le shader, vers +z : les joueurs sont poussés vers lui en permanence pendant la partie, rounds et pauses compris.
 Un voleur d'étoiles plonge dans la même direction et disparaît en touchant le premier bloc sur son chemin.
 À poser dans cet ordre, le trou noir d'abord.
 
-1. Le trou noir, un cube inversé géant rendu par le shader :
+1. Le trou noir, au centre de la salle : le cube du ciel rendu par le shader, et l'ancre de la salle.
+	Les joueurs arrivent 1 bloc au-dessus, les fragments tournent autour (à 6, 10 et 14 blocs), et la poussée suit son yaw.
+	Depuis un command block, c'est +z, la direction du trou noir dans le ciel. Depuis le chat, forcer ce yaw :
 	```
 	function survisland:modes/pr_stoupy/orbit/here/place_black_hole {scale:100}
+	execute rotated 0 0 run function survisland:modes/pr_stoupy/orbit/here/place_black_hole {scale:100}
 	```
-2. Au même endroit, l'ancre de la salle. Les joueurs arrivent 1 bloc au-dessus, et la poussée suit son yaw.
-	Depuis un command block, c'est +z. Pour une autre direction, préciser le yaw (0 sud/+z, 90 ouest, 180 nord, -90 est) :
-	```
-	function survisland:modes/pr_stoupy/orbit/here/set_hole
-	execute rotated 180 0 run function survisland:modes/pr_stoupy/orbit/here/set_hole
-	```
-3. Le centre des anneaux de fragments :
-	```
-	function survisland:modes/pr_stoupy/orbit/here/set_orbit
-	```
-4. Le dépôt des fragments, du côté opposé au mur du trou noir :
+2. Le dépôt des fragments, du côté -z, pour que les joueurs remontent contre la poussée :
 	```
 	function survisland:modes/pr_stoupy/orbit/here/set_collector
 	```
-5. 4 blocs d'émeraude dans le sas, espacés d'au moins un bloc, et un command block répétitif à 16 blocs au plus :
+3. Des rochers flottants, centrés à ta position. Cinq tailles (rayon 1 à 5 blocs), le bord de chacun est tiré au hasard :
+	```
+	function survisland:modes/pr_stoupy/orbit/here/rock/tiny
+	function survisland:modes/pr_stoupy/orbit/here/rock/small
+	function survisland:modes/pr_stoupy/orbit/here/rock/medium
+	function survisland:modes/pr_stoupy/orbit/here/rock/large
+	function survisland:modes/pr_stoupy/orbit/here/rock/huge
+	```
+4. 4 blocs d'émeraude dans le sas, espacés d'au moins un bloc, et un command block répétitif à 16 blocs au plus :
 	```
 	function survisland:modes/pr_stoupy/orbit/start
 	```

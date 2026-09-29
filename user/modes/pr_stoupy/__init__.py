@@ -47,10 +47,9 @@ Il suffit d'éloigner les copies de plus de 48 blocs (regroupement des cages de 
 	breakout/here/example_level                 remet les briques d'exemple dans le terrain le plus proche
 
 # 4. L'orbite (1 à 4 joueurs), à placer dans cet ordre, le trou noir d'abord
-	orbit/here/place_black_hole {scale:100}     cube inversé géant rendu par le shader du trou noir
-	orbit/here/set_hole                         ancre de la salle au centre du trou noir : arrivée 1 bloc au-dessus, poussée vers son yaw (+z depuis un command block)
-	orbit/here/set_orbit                        centre des anneaux de fragments
+	orbit/here/place_black_hole {scale:100}     ciel du trou noir et ancre de la salle : arrivée 1 bloc au-dessus, fragments autour, poussée vers son yaw (+z depuis un command block)
 	orbit/here/set_collector                    où les fragments sont déposés
+	orbit/here/rock/<tiny|small|medium|large|huge>   rocher flottant de pierres sombres centré ici, bord tiré au hasard
 	orbit/start                                 (répétitif) chaque joueur sur un bloc de départ rejoint la partie, le bloc disparaît jusqu'à la fin
 	orbit/swallow                               à exécuter en tant que le joueur tombé dans le trou noir
 	orbit/here/stop

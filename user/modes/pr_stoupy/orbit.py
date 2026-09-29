@@ -1,6 +1,6 @@
 """ Trial "Orbite": one to four players in a room pushed toward a black hole painted on a wall, over three rounds.
 
-Star fragments circle around the orbit center on three rings. A player picks one up by touching it
+Star fragments circle around the hole marker on three rings. A player picks one up by touching it
 and banks it at the collector, against the push of the hole, which never stops while the game runs.
 A player falling into the hole is detected by a command block of the room, which calls swallow on it:
 back above the hole marker, and the fragments it carried return to orbit.
@@ -13,6 +13,7 @@ The other markers, the players, the fragments and the phantoms carry the arena i
 """
 # ruff: noqa: E501
 # Imports
+import math
 from dataclasses import dataclass
 
 from stewbeet import Advancement, JsonDict, Mem, set_json_encoder, write_function
@@ -65,16 +66,21 @@ STATE: tuple[str, ...] = ("arena", "state", "round", "banked", "required", "pull
 """ Scores of the hole marker holding the state of its arena, each one mirrored by a #pr_orbit_<name> fake player. """
 
 MARKERS: dict[str, str] = {
-	"orbit": "centre des anneaux de fragments",
 	"collector": "où les fragments sont déposés",
 }
 """ Markers of a room besides its hole, each one joining the arena of the nearest hole when placed. """
+
+ROCK_BLOCKS: tuple[str, ...] = ("minecraft:blackstone", "minecraft:blackstone", "minecraft:basalt", "minecraft:deepslate", "minecraft:tuff")
+""" Blocks a rock is made of, one drawn at random for each block, a repeated one coming up more often. """
+
+ROCK_RADII: dict[str, int] = {"tiny": 1, "small": 2, "medium": 3, "large": 4, "huge": 5}
+""" Radius in blocks of each rock size, placed by here/rock/<size>. """
 
 
 # Classes
 @dataclass(frozen=True)
 class Ring:
-	""" One orbit of the fragments around the orbit center. """
+	""" One orbit of the fragments around the hole marker. """
 	radius: int
 	""" Horizontal distance to the center, in blocks. """
 	height: int
@@ -102,7 +108,6 @@ class Arena:
 		tag: str = f"{Mem.ctx.project_id}.{MODE}"
 		self.same: str = write_match_predicate(f"{LAB}/orbit/same_arena", {f"{tag}.arena": f"#{MODE}_arena"})
 		self.hole: str = self.marker("hole")
-		self.orbit: str = self.marker("orbit")
 		self.collector: str = self.marker("collector")
 		self.players: str = f"@a[tag={tag},{self.same}]"
 		self.fragments: str = f"@e[type=minecraft:item_display,tag={tag}.fragment,{self.same}]"
@@ -149,15 +154,19 @@ def generate_setup(arena: Arena) -> None:
 	tag: str = f"{ns}.{MODE}"
 	objectives: str = "\n".join(f"scoreboard objectives add {tag}.{name} dummy" for name in ("carried", *STATE))
 
-	write_function(f"{root}/here/set_hole", f"""
-# The hole anchors the arena of the room and pushes along the yaw of the caller, a hole placed again near the previous one keeps its arena
+	write_function(f"{root}/here/place_black_hole", f"""
+# A huge inverted cube rendered by the black hole shader, seen from inside
+kill @e[type=minecraft:item_display,tag={tag}.sky,distance=..8]
+$summon minecraft:item_display ~ ~ ~ {{Tags:["{tag}.sky"],item:{{id:"minecraft:stone",count:1,components:{{"minecraft:item_model":"{ns}:black_hole"}}}},view_range:10f,transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[-$(scale)f,-$(scale)f,-$(scale)f]}}}}
+
+# Its marker anchors the arena of the room and pushes along the yaw of the caller, a hole placed again near the previous one keeps its arena
 {objectives}
 scoreboard players set #{MODE}_arena {ns}.data 0
 execute as @n[type=minecraft:marker,tag={tag}.hole,distance=..{HOLE_RADIUS}] run scoreboard players operation #{MODE}_arena {ns}.data = @s {tag}.arena
 kill @n[type=minecraft:marker,tag={tag}.hole,distance=..{HOLE_RADIUS}]
 execute if score #{MODE}_arena {ns}.data matches 0 store result score #{MODE}_arena {ns}.data run scoreboard players add #{MODE}_arena_counter {ns}.data 1
 execute align xyz positioned ~0.5 ~ ~0.5 summon minecraft:marker run function {root}/new_hole
-tellraw @a[distance=..16] {{"text":"Orbite : ancre placée (arrivée des joueurs, poussée vers son yaw), place ensuite orbit et collector.","color":"green"}}
+tellraw @a[distance=..16] {{"text":"Orbite : trou noir placé (arrivée des joueurs, poussée vers son yaw), place ensuite le collector.","color":"green"}}
 """)
 
 	write_function(f"{root}/new_hole", f"""
@@ -170,7 +179,7 @@ scoreboard players set #{MODE}_state {ns}.data 0
 	for name, role in MARKERS.items():
 		write_function(f"{root}/here/set_{name}", f"""
 # Joins the arena of the nearest hole, which must be placed first
-execute unless entity @e[type=minecraft:marker,tag={tag}.hole] run return run tellraw @a[distance=..16] {{"text":"Orbite : place d'abord le trou noir (here/set_hole).","color":"red"}}
+execute unless entity @e[type=minecraft:marker,tag={tag}.hole] run return run tellraw @a[distance=..16] {{"text":"Orbite : place d'abord le trou noir (here/place_black_hole).","color":"red"}}
 scoreboard players operation #{MODE}_arena {ns}.data = @n[type=minecraft:marker,tag={tag}.hole] {tag}.arena
 kill @e[type=minecraft:marker,tag={tag}.{name},{arena.same}]
 execute align xyz positioned ~0.5 ~ ~0.5 summon minecraft:marker run function {root}/new_marker {{name:"{name}"}}
@@ -182,11 +191,22 @@ $tag @s add {tag}.$(name)
 scoreboard players operation @s {tag}.arena = #{MODE}_arena {ns}.data
 """)
 
-	write_function(f"{root}/here/place_black_hole", f"""
-# A huge inverted cube rendered by the black hole shader, seen from inside
-kill @e[type=minecraft:item_display,tag={tag}.sky,distance=..8]
-$summon minecraft:item_display ~ ~ ~ {{Tags:["{tag}.sky"],item:{{id:"minecraft:stone",count:1,components:{{"minecraft:item_model":"{ns}:black_hole"}}}},view_range:10f,transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[-$(scale)f,-$(scale)f,-$(scale)f]}}}}
+	pick_block: str = "\n".join(f"execute if score #{MODE}_rock {ns}.data matches {index} run return run setblock ~ ~ ~ {block}" for index, block in enumerate(ROCK_BLOCKS))
+	write_function(f"{root}/rock_block", f"""
+execute store result score #{MODE}_rock {ns}.data run random value 0..{len(ROCK_BLOCKS) - 1}
+{pick_block}
 """)
+
+	for size, radius in ROCK_RADII.items():
+		cells: list[tuple[int, int, int, float]] = [
+			(x, y, z, math.hypot(x, y, z))
+			for x in range(-radius, radius + 1) for y in range(-radius, radius + 1) for z in range(-radius, radius + 1)
+			if math.hypot(x, y, z) <= radius + 0.5
+		]
+		write_function(f"{root}/here/rock/{size}", "# A ball of dark stones centered here, whose outer layer is drawn at random so no two rocks are alike\n" + "\n".join(
+			f"execute {'' if distance <= radius - 0.5 else f'if predicate {ns}:chance/0.5 '}positioned ~{x} ~{y} ~{z} run function {root}/rock_block"
+			for x, y, z, distance in cells
+		))
 
 
 def generate_arena_state(arena: Arena) -> None:
@@ -294,11 +314,11 @@ scoreboard players set #{MODE}_banked {ns}.data 0
 
 	for index, round_ in enumerate(ROUNDS, start=1):
 		fragments: str = "\n".join(
-			f"execute at {arena.orbit} summon minecraft:item_display run function {root}/new_fragment {{ring:{fragment % len(RINGS)},angle:{fragment * 360 // round_.fragments}}}"
+			f"execute at {arena.hole} summon minecraft:item_display run function {root}/new_fragment {{ring:{fragment % len(RINGS)},angle:{fragment * 360 // round_.fragments}}}"
 			for fragment in range(round_.fragments)
 		)
 		phantoms: str = "\n".join(
-			f"execute at {arena.orbit} positioned ~ ~8 ~ summon minecraft:phantom run function {root}/{'new_thief' if phantom >= round_.phantoms else 'new_phantom'}"
+			f"execute at {arena.hole} positioned ~ ~8 ~ summon minecraft:phantom run function {root}/{'new_thief' if phantom >= round_.phantoms else 'new_phantom'}"
 			for phantom in range(round_.phantoms + round_.thieves)
 		)
 		write_function(f"{root}/round/{index}", f"""
@@ -339,7 +359,7 @@ def generate_tick(arena: Arena) -> None:
 	root: str = f"{ns}:{LAB}/orbit"
 	tag: str = f"{ns}.{MODE}"
 	turns: str = "\n".join(
-		f"execute as @e[type=minecraft:item_display,tag={tag}.ring{index},tag=!{tag}.stolen,{arena.same}] at {arena.orbit} run function {root}/turn/{index}"
+		f"execute as @e[type=minecraft:item_display,tag={tag}.ring{index},tag=!{tag}.stolen,{arena.same}] at {arena.hole} run function {root}/turn/{index}"
 		for index in range(len(RINGS))
 	)
 
@@ -387,7 +407,7 @@ particle minecraft:end_rod ~ ~1 ~ 0.4 0.8 0.4 0.05 40
 """)
 
 	restore: str = "\n".join(
-		f"execute if score @s {tag}.carried matches {count}.. at {arena.orbit} summon minecraft:item_display run function {root}/new_fragment {{ring:{(count - 1) % len(RINGS)},angle:{count * 97 % 360}}}"
+		f"execute if score @s {tag}.carried matches {count}.. at {arena.hole} summon minecraft:item_display run function {root}/new_fragment {{ring:{(count - 1) % len(RINGS)},angle:{count * 97 % 360}}}"
 		for count in range(1, max(round_.fragments for round_ in ROUNDS) + 1)
 	)
 	write_function(f"{root}/swallow", f"""

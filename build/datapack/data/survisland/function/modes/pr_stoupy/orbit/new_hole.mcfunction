@@ -3,7 +3,7 @@
 #
 # @executed	align xyz & positioned ~0.5 ~ ~0.5
 #
-# @within	survisland:modes/pr_stoupy/orbit/here/set_hole [ align xyz & positioned ~0.5 ~ ~0.5 ]
+# @within	survisland:modes/pr_stoupy/orbit/here/place_black_hole [ align xyz & positioned ~0.5 ~ ~0.5 ]
 #
 
 tag @s add survisland.pr_orbit.hole
