@@ -221,7 +221,7 @@ scoreboard players set #{MODE}_zone {ns}.data -1
 execute as @e[type=minecraft:block_display,tag={tag}.bumper,{same_arena}] run function {root}/measure_bumper
 execute if score #{MODE}_zone {ns}.data matches -1 run return 0
 function {root}/apply_zone
-playsound minecraft:block.note_block.hat master @a ~ ~ ~ 1 1.4
+playsound minecraft:block.note_block.hat ambient @a ~ ~ ~ 1 1.4
 """)
 
 	write_function(f"{root}/measure_bumper", f"""

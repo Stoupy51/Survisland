@@ -295,7 +295,7 @@ scoreboard players set @s {tag}.moving 0
 data modify entity @s Motion[0] set value 0.0d
 data modify entity @s Motion[2] set value 0.0d
 data modify entity @s profile.texture set value "{HOLOGRAM_TEXTURE}"
-execute at @s run playsound minecraft:block.beacon.deactivate master @a[distance=..48] ~ ~ ~ 1 1.6
+execute at @s run playsound minecraft:block.beacon.deactivate ambient @a[distance=..48] ~ ~ ~ 1 1.6
 execute at @s run particle minecraft:electric_spark ~ ~1 ~ 0.3 0.6 0.3 0.1 30
 title @a[tag={tag},{same_pair}] actionbar {{"text":"Reflet figé","color":"aqua"}}
 """)
@@ -303,7 +303,7 @@ title @a[tag={tag},{same_pair}] actionbar {{"text":"Reflet figé","color":"aqua"
 	write_function(f"{root}/unfreeze", f"""
 scoreboard players set @s {tag}.frozen 0
 data remove entity @s profile.texture
-execute at @s run playsound minecraft:block.beacon.activate master @a[distance=..48] ~ ~ ~ 1 1.6
+execute at @s run playsound minecraft:block.beacon.activate ambient @a[distance=..48] ~ ~ ~ 1 1.6
 title @a[tag={tag},{same_pair}] actionbar {{"text":"Reflet libéré","color":"green"}}
 """)
 

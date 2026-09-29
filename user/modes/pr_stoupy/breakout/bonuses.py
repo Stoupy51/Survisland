@@ -78,7 +78,7 @@ scoreboard players operation #{MODE}_bonus {ns}.data %= #{len(BONUSES)} {ns}.dat
 	for bonus in BONUSES:
 		write_function(f"{root}/bonus/{bonus.name}", bonus.commands.format(ns=ns, root=root, tag=tag) + f"""
 title {players} actionbar {json.dumps({"text": bonus.display, "color": "#01FE41"}, ensure_ascii=False)}
-execute as {players} at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1.2
+execute as {players} at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1.2
 """)
 
 	clones: str = "\n".join([f"execute if score #{MODE}_balls {ns}.data matches ..{MAX_BALLS - 1} run function {root}/bonus/clone_ball"] * (MULTIBALL_FACTOR - 1))
@@ -88,7 +88,7 @@ function {root}/shatter
 execute store result score #{MODE}_balls {ns}.data if entity {balls}
 execute as {balls} at @s run function {root}/bonus/multiply_ball
 title {players} actionbar {json.dumps({"text": f"Bonus : balles x{MULTIBALL_FACTOR} !", "color": "#01FE41"}, ensure_ascii=False)}
-execute as {players} at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 0.8
+execute as {players} at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 0.8
 """)
 
 	write_function(f"{root}/bonus/multiply_ball", f"""

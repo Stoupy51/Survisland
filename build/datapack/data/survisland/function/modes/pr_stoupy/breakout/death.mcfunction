@@ -16,5 +16,5 @@ data modify entity @n[type=minecraft:text_display,tag=survisland.pr_breakout.scr
 kill @e[type=minecraft:sulfur_cube,tag=survisland.pr_breakout.ball,predicate=survisland:modes/pr_stoupy/breakout/same_arena]
 scoreboard players set #pr_breakout_state survisland.data 1
 scoreboard players set #pr_breakout_timer survisland.data 140
-execute as @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena] at @s run playsound minecraft:entity.generic.explode master @s ~ ~ ~ 0.6 1.4
+execute as @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena] at @s run playsound minecraft:entity.generic.explode ambient @s ~ ~ ~ 0.6 1.4
 

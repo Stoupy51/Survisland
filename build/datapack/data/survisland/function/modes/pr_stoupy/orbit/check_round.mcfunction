@@ -14,5 +14,5 @@ scoreboard players set #pr_orbit_timer survisland.data 100
 title @a[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena] times 10 40 10
 title @a[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena] subtitle {"text": "Préparez-vous au suivant", "color": "#01FE41"}
 title @a[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena] title {"text": "Round terminé !", "color": "#01FE41"}
-execute as @a[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena] at @s run playsound minecraft:entity.player.levelup master @s
+execute as @a[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena] at @s run playsound minecraft:entity.player.levelup ambient @s
 

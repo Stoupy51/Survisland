@@ -11,5 +11,5 @@ function survisland:modes/pr_stoupy/breakout/shatter
 execute store result score #pr_breakout_balls survisland.data if entity @e[type=minecraft:sulfur_cube,tag=survisland.pr_breakout.ball,predicate=survisland:modes/pr_stoupy/breakout/same_arena]
 execute as @e[type=minecraft:sulfur_cube,tag=survisland.pr_breakout.ball,predicate=survisland:modes/pr_stoupy/breakout/same_arena] at @s run function survisland:modes/pr_stoupy/breakout/bonus/multiply_ball
 title @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena] actionbar {"text": "Bonus : balles x5 !", "color": "#01FE41"}
-execute as @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 0.8
+execute as @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena] at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 0.8
 

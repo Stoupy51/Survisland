@@ -185,7 +185,7 @@ tellraw @a[distance=..16] {{"text":"Orbite : collector placé (où les fragments
 
 	write_function(f"{root}/place_collector", f"""
 summon minecraft:marker ~ ~ ~ {{Tags:["{tag}.collector","{tag}.new"]}}
-summon minecraft:item_display ~ ~1.5 ~ {{Tags:["{tag}.collector","{tag}.new"],item:{{id:"minecraft:nether_star",count:1}},billboard:"center",Glowing:1b,glow_color_override:5636095,brightness:{{sky:15,block:15}},transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.5f,1.5f,1.5f]}}}}
+summon minecraft:item_display ~ ~1.5 ~ {{Tags:["{tag}.collector","{tag}.new"],item:{{id:"minecraft:nether_star",count:1}},billboard:"center",glow_color_override:5636095,brightness:{{sky:15,block:15}},transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.5f,1.5f,1.5f]}}}}
 summon minecraft:text_display ~ ~2.6 ~ {{Tags:["{tag}.collector","{tag}.new"],text:{crt_text("Dépôt des fragments")},billboard:"center",background:0,brightness:{{sky:15,block:15}}}}
 scoreboard players operation @e[tag={tag}.new] {tag}.arena = #{MODE}_arena {ns}.data
 tag @e[tag={tag}.new] remove {tag}.new
@@ -334,7 +334,7 @@ scoreboard players set #{MODE}_pull {ns}.data {round_.pull}
 title {arena.players} times 10 50 10
 title {arena.players} subtitle {crt_text(f"{round_.fragments} fragments à ramener" + (f", {round_.phantoms + round_.thieves} phantoms à abattre" if round_.phantoms + round_.thieves else ""))}
 title {arena.players} title {crt_text(f"Round {index}/{len(ROUNDS)}")}
-execute as {arena.players} at @s run playsound minecraft:block.beacon.power_select master @s
+execute as {arena.players} at @s run playsound minecraft:block.beacon.power_select ambient @s
 """)
 
 	write_function(f"{root}/new_fragment", f"""
@@ -354,7 +354,7 @@ scoreboard players set #{MODE}_timer {ns}.data {BREAK_TICKS}
 title {arena.players} times 10 40 10
 title {arena.players} subtitle {crt_text("Préparez-vous au suivant")}
 title {arena.players} title {crt_text("Round terminé !")}
-execute as {arena.players} at @s run playsound minecraft:entity.player.levelup master @s
+execute as {arena.players} at @s run playsound minecraft:entity.player.levelup ambient @s
 """)
 
 
@@ -401,13 +401,13 @@ execute rotated as @s positioned ^ ^{ring.height} ^{ring.radius} run tp @s ~ ~ ~
 # @s is the player touching the fragment, which disappears from the orbit
 scoreboard players add @s {tag}.carried 1
 execute as @e[type=minecraft:item_display,tag={tag}.fragment,tag=!{tag}.stolen,{arena.same},distance=..{PICKUP_RADIUS},limit=1,sort=nearest] run kill @s
-playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1.2
+playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1.2
 """)
 
 	write_function(f"{root}/bank", f"""
 scoreboard players operation #{MODE}_banked {ns}.data += @s {tag}.carried
 scoreboard players set @s {tag}.carried 0
-playsound minecraft:block.beacon.power_select master {arena.players} ~ ~ ~ 1 1.6
+playsound minecraft:block.beacon.power_select ambient {arena.players} ~ ~ ~ 1 1.6
 particle minecraft:end_rod ~ ~1 ~ 0.4 0.8 0.4 0.05 40
 """)
 
@@ -428,7 +428,7 @@ function {root}/swallowed
 scoreboard players set @s {tag}.carried 0
 execute at {arena.hole} run tp @s ~ ~1 ~
 effect give @s minecraft:blindness 2 0 true
-playsound minecraft:entity.enderman.teleport master @s ~ ~ ~ 1 0.5
+playsound minecraft:entity.enderman.teleport ambient @s ~ ~ ~ 1 0.5
 tellraw {arena.players} [{{"selector":"@s","color":"aqua"}},{{"text":" a été avalé par le trou noir !","color":"#01FE41"}}]
 """)
 

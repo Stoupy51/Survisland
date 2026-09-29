@@ -513,7 +513,7 @@ execute if score #{MODE}_timer {ns}.data matches ..0 run function {root}/launch
 	for second in range(1, COUNTDOWN + 1):
 		write_function(f"{root}/count/{second}", f"""
 {arena.screen({"text": str(second), "color": "#01FE41"})}
-execute as {arena.players} at @s run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 1 {0.8 + 0.1 * (COUNTDOWN - second):.1f}
+execute as {arena.players} at @s run playsound minecraft:block.note_block.pling ambient @s ~ ~ ~ 1 {0.8 + 0.1 * (COUNTDOWN - second):.1f}
 """)
 
 	write_function(f"{root}/launch", f"""
@@ -521,7 +521,7 @@ scoreboard players set #{MODE}_state {ns}.data 2
 execute at @e[type=minecraft:marker,tag={tag}.level_block,{arena.same}] run setblock ~ ~ ~ minecraft:air
 function {root}/count_bricks
 {arena.screen({"text": ""})}
-execute as {arena.players} at @s run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 1 2
+execute as {arena.players} at @s run playsound minecraft:block.note_block.pling ambient @s ~ ~ ~ 1 2
 execute as {arena.players} run function {root}/spawn_ball
 """)
 
@@ -568,7 +568,7 @@ execute if entity @e[type=minecraft:sulfur_cube,tag={tag}.ball,tag=!{tag}.lost,{
 kill {arena.balls}
 scoreboard players set #{MODE}_state {ns}.data 1
 scoreboard players set #{MODE}_timer {ns}.data {COUNTDOWN * 20 + MESSAGE_TICKS}
-execute as {arena.players} at @s run playsound minecraft:entity.generic.explode master @s ~ ~ ~ 0.6 1.4
+execute as {arena.players} at @s run playsound minecraft:entity.generic.explode ambient @s ~ ~ ~ 0.6 1.4
 """)
 
 	write_function(f"{root}/level_cleared", f"""
@@ -578,7 +578,7 @@ execute at @e[type=minecraft:marker,tag={tag}.level_block,{arena.same}] run setb
 execute if score #{MODE}_level {ns}.data matches {LEVELS}.. run return run function {root}/victory
 scoreboard players set #{MODE}_state {ns}.data 3
 {arena.screen(cleared_title)}
-execute as {arena.players} at @s run playsound minecraft:entity.player.levelup master @s
+execute as {arena.players} at @s run playsound minecraft:entity.player.levelup ambient @s
 tellraw @a[distance=..64] {{"text":"Casse-briques : niveau terminé, lance /function {root}/here/next_level","color":"gray","italic":true}}
 """)
 

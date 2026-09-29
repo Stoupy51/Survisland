@@ -18,6 +18,6 @@ execute if score @s survisland.pr_orbit.carried matches 10.. at @e[type=minecraf
 scoreboard players set @s survisland.pr_orbit.carried 0
 execute at @e[type=minecraft:marker,tag=survisland.pr_orbit.hole,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] run tp @s ~ ~1 ~
 effect give @s minecraft:blindness 2 0 true
-playsound minecraft:entity.enderman.teleport master @s ~ ~ ~ 1 0.5
+playsound minecraft:entity.enderman.teleport ambient @s ~ ~ ~ 1 0.5
 tellraw @a[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena] [{"selector":"@s","color":"aqua"},{"text":" a été avalé par le trou noir !","color":"#01FE41"}]
 
