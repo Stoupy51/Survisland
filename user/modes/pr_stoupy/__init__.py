@@ -17,7 +17,8 @@ Les fonctions sans here/ (stop) agissent sur toutes les copies à la fois, elles
 Il suffit d'éloigner les copies de plus de 48 blocs (regroupement des cages de rats) pour qu'elles ne se voient jamais.
 
 # Villageois
-	villager/here/place                         pose le villageois ici (execute rotated <yaw> 0 pour l'orienter)
+	villager/here/place                         pose le villageois ici (execute rotated <yaw> 0 pour l'orienter), libre de se promener
+		Les 5 étoiles rendues : étoiles retirées et bloc de redstone 2 blocs sous ce point, pour les messages de fin.
 
 # 1. Les duos (4 joueurs, 2 paires de mannequins All Together)
 	duo/start {tp:""}                           (répétitif) 4 joueurs sur les blocs de départ, coupés en 2 paires par distance

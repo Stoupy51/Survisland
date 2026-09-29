@@ -87,7 +87,9 @@ Pose le villageois à ta position, orienté vers le yaw donné (0 sud, 90 ouest,
 execute rotated 180 0 run function survisland:modes/pr_stoupy/villager/here/place
 ```
 
-Un clic droit dessus avec les 5 étoiles termine l'épreuve.
+Il garde son IA et se promène : le retrouver fait partie de l'épreuve.
+Un clic droit dessus avec les 5 étoiles les retire toutes et pose un bloc de redstone 2 blocs sous l'endroit où il a été posé.
+Les messages de fin sont à brancher sur ce bloc.
 
 ## 1. Duos (4 joueurs)
 

@@ -7,7 +7,6 @@
 #
 
 advancement revoke @s only survisland:modes/pr_stoupy/villager_click
-execute as @n[type=interaction,tag=survisland.pr_stoupy.villager,distance=..8] run data remove entity @s interaction
 
 execute store result score #pr_stoupy_stars survisland.data run clear @s *[custom_data~{survisland:{blue_star:true}}] 0
 execute if score #pr_stoupy_stars survisland.data matches 5.. run return run function survisland:modes/pr_stoupy/villager/deliver

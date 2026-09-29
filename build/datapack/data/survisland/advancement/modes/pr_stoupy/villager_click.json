@@ -8,7 +8,7 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
-							"entity_type": "minecraft:interaction",
+							"entity_type": "minecraft:villager",
 							"entity_tags": {
 								"all_of": [
 									"survisland.pr_stoupy.villager"
