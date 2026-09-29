@@ -366,7 +366,7 @@ tag @s remove {tag}.new
 
 	write_function(f"{root}/new_star", f"""
 tag @s add {tag}.fragment
-data merge entity @s {{item:{{id:"minecraft:nether_star",count:1}},billboard:"vertical",Glowing:1b,glow_color_override:5636095,brightness:{{sky:15,block:15}},transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.8f,0.8f,0.8f]}}}}
+data merge entity @s {{item:{{id:"minecraft:nether_star",count:1}},billboard:"vertical",Glowing:1b,glow_color_override:5636095,teleport_duration:1,brightness:{{sky:15,block:15}},transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.8f,0.8f,0.8f]}}}}
 ride @s mount @e[type=minecraft:interaction,tag={tag}.new,limit=1]
 """)
 
@@ -422,15 +422,15 @@ execute rotated as @s run rotate @s ~{ring.speed} ~
 execute rotated as @s positioned ^ ^{ring.height} ^{ring.radius} run tp @s ~ ~ ~
 """ if ring.vertical_yaw is None else f"""
 # The pitch is clamped to 90 degrees, so each half of the circle is swept by pitch and the fragment turns over between them
-execute if entity @s[tag=!{tag}.half1] run rotate @s ~ ~{ring.speed}
-execute if entity @s[tag={tag}.half1] run rotate @s ~ ~-{ring.speed}
+execute if entity @s[tag=!{tag}.half1] rotated as @s run rotate @s ~ ~{ring.speed}
+execute if entity @s[tag={tag}.half1] rotated as @s run rotate @s ~ ~-{ring.speed}
 execute if entity @s[tag=!{tag}.half1,x_rotation=90] run function {root}/turn_over
 execute if entity @s[tag={tag}.half1,x_rotation=-90] run function {root}/turn_over
 execute rotated as @s positioned ~ ~{ring.height} ~ positioned ^ ^ ^{ring.radius} run tp @s ~ ~ ~
 """)
 
 	write_function(f"{root}/turn_over", f"""
-rotate @s ~180 ~
+execute rotated as @s run rotate @s ~180 ~
 execute if entity @s[tag={tag}.half1] run return run tag @s remove {tag}.half1
 tag @s add {tag}.half1
 """)

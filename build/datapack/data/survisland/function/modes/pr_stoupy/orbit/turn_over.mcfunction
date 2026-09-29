@@ -7,7 +7,7 @@
 #			survisland:modes/pr_stoupy/orbit/turn/2
 #
 
-rotate @s ~180 ~
+execute rotated as @s run rotate @s ~180 ~
 execute if entity @s[tag=survisland.pr_orbit.half1] run return run tag @s remove survisland.pr_orbit.half1
 tag @s add survisland.pr_orbit.half1
 
