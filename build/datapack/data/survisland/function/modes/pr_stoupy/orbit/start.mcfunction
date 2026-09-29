@@ -8,6 +8,7 @@
 tag @a[tag=survisland.pr_orbit.back,predicate=!survisland:modes/pr_stoupy/on_start_pad] remove survisland.pr_orbit.back
 execute unless entity @a[tag=!survisland.pr_orbit,tag=!survisland.pr_orbit.back,distance=..16,predicate=survisland:modes/pr_stoupy/on_start_pad,gamemode=!creative,gamemode=!spectator] run return 0
 execute unless entity @e[type=minecraft:marker,tag=survisland.pr_orbit.hole] run return run title @a[tag=!survisland.pr_orbit,tag=!survisland.pr_orbit.back,distance=..16,predicate=survisland:modes/pr_stoupy/on_start_pad,gamemode=!creative,gamemode=!spectator] actionbar {"text":"Orbite : pas de trou noir, le poser avec here/place_black_hole.","color":"red"}
+execute if entity @n[type=minecraft:marker,tag=survisland.pr_orbit.hole,tag=survisland.pr_orbit.done] run return fail
 execute as @n[type=minecraft:marker,tag=survisland.pr_orbit.hole] run function survisland:modes/pr_stoupy/orbit/load_arena
 execute unless entity @e[type=minecraft:marker,tag=survisland.pr_orbit.collector,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] run return run title @a[tag=!survisland.pr_orbit,tag=!survisland.pr_orbit.back,distance=..16,predicate=survisland:modes/pr_stoupy/on_start_pad,gamemode=!creative,gamemode=!spectator] actionbar {"text":"Orbite : pas de collector pour ce trou noir, le poser avec here/set_collector.","color":"red"}
 

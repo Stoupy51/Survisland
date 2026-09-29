@@ -285,6 +285,7 @@ def generate_start(arena: Arena) -> None:
 tag @a[tag={tag}.back,{ON_START_PAD.replace("predicate=", "predicate=!")}] remove {tag}.back
 execute unless entity @a[{free_player}] run return 0
 execute unless entity @e[type=minecraft:marker,tag={tag}.hole] run return run title @a[{free_player}] actionbar {{"text":"Orbite : pas de trou noir, le poser avec here/place_black_hole.","color":"red"}}
+execute if entity @n[type=minecraft:marker,tag={tag}.hole,tag={tag}.done] run return fail
 execute as @n[type=minecraft:marker,tag={tag}.hole] run function {root}/load_arena
 {markers_missing}
 
@@ -610,6 +611,8 @@ def generate_stop(arena: Arena) -> None:
 	tag: str = f"{ns}.{MODE}"
 
 	write_function(f"{root}/victory", f"""
+# The hole keeps the win, so its room cannot be played again until the hole is placed anew
+tag {arena.hole} add {tag}.done
 execute as @r[tag={tag},{arena.same}] at @s run function {ns}:{LAB}/give_star {{trial:"L'orbite"}}
 function {root}/stop_arena
 """)

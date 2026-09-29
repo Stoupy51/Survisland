@@ -36,6 +36,7 @@ Un voleur d'étoiles plonge dans la même direction et disparaît en touchant le
 	Le premier lance le round 1, les suivants rejoignent la partie en cours.
 	Le bloc d'émeraude disparaît, donc 4 joueurs au plus. À la fin de la partie (victoire ou stop), tous les blocs reviennent et chaque joueur est renvoyé sur l'un d'eux.
 	Il ne peut rejoindre une partie qu'après en être descendu.
+	Une fois l'épreuve réussie, elle ne peut plus être relancée : replacer le trou noir la réarme.
 
 La chute dans le trou noir est à détecter toi-même, avec un command block répétitif de la salle.
 La fonction s'exécute en tant que le joueur tombé : elle le renvoie 1 bloc au-dessus de l'ancre et remet ses fragments en orbite.
