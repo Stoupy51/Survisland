@@ -7,7 +7,9 @@ Un voleur d'étoiles plonge dans la même direction et disparaît en touchant le
 À poser dans cet ordre, le trou noir d'abord.
 
 1. Le trou noir, au centre de la salle : le cube du ciel rendu par le shader, et l'ancre de la salle.
-	Les joueurs arrivent 1 bloc au-dessus, les fragments tournent autour (à 6, 10 et 14 blocs), et la poussée suit son yaw.
+	Les joueurs arrivent 1 bloc au-dessus, et la poussée suit son yaw.
+	Les fragments tournent autour sur 3 anneaux : à 6 blocs à plat, à 10 blocs debout dans le plan y-z, à 14 blocs debout dans le plan x-y.
+	Un joueur attrape un fragment en le touchant, ou en cliquant dessus (gauche ou droit), même un fragment emporté par un voleur.
 	Depuis un command block, c'est +z, la direction du trou noir dans le ciel. Depuis le chat, forcer ce yaw :
 	```
 	function survisland:modes/pr_stoupy/orbit/here/place_black_hole {scale:100}

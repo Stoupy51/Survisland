@@ -9,7 +9,7 @@
 tag @s add survisland.pr_orbit
 scoreboard players operation @s survisland.pr_orbit.arena = #pr_orbit_arena survisland.data
 scoreboard players set @s survisland.pr_orbit.carried 0
-attribute @s minecraft:gravity base set 0.025
+attribute @s minecraft:gravity base set 0.01
 attribute @s minecraft:fall_damage_multiplier base set 0
 # Phantoms still shove the player toward the hole, but a death would leave it tagged and pushed wherever it respawns
 effect give @s minecraft:resistance infinite 4 true
