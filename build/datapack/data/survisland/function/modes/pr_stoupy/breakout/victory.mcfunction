@@ -8,6 +8,5 @@
 
 data modify entity @n[type=minecraft:text_display,tag=survisland.pr_breakout.screen,predicate=survisland:modes/pr_stoupy/breakout/same_arena] text set value {"text": "Bravo !", "color": "#01FE41"}
 execute as @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena,scores={survisland.pr_breakout=1},limit=1] at @s run function survisland:modes/pr_stoupy/give_star {trial:"Le casse-briques"}
-execute at @e[type=minecraft:marker,tag=survisland.pr_breakout.redstone,predicate=survisland:modes/pr_stoupy/breakout/same_arena] run setblock ~ ~ ~ minecraft:redstone_block
 function survisland:modes/pr_stoupy/breakout/stop_arena
 

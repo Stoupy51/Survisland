@@ -1,11 +1,13 @@
 
 #> survisland:modes/pr_stoupy/breakout/count_bricks
 #
-# @within	survisland:modes/pr_stoupy/breakout/begin_level
+# @executed	at @s
+#
+# @within	survisland:modes/pr_stoupy/breakout/launch
 #			survisland:modes/pr_stoupy/breakout/break_brick
 #
 
-# Raster scan of the brick rows, once per level: breaks are then counted down one by one
+# Raster scan of the brick rows at every launch, once the level is cloned in: breaks are then counted down one by one
 scoreboard players set #pr_breakout_bricks_white survisland.data 0
 scoreboard players set #pr_breakout_bricks_orange survisland.data 0
 scoreboard players set #pr_breakout_bricks_magenta survisland.data 0

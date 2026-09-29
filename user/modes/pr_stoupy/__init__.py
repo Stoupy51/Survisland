@@ -34,11 +34,11 @@ Il suffit d'éloigner les copies de plus de 48 blocs (regroupement des cages de 
 	execute positioned <coin bas gauche> run function survisland:modes/pr_stoupy/breakout/here/setup {width:24,height:16,axis:"x",invert:0}
 		(une fois) Le coin est la première case de la rangée des bumpers, le terrain s'étend vers +axis et vers le haut.
 		Mettre invert:1 si gauche et droite sont inversées pour les joueurs.
-	breakout/start {tp:"~ ~5 ~",redstone:""}   (répétitif) 4 joueurs sur les blocs de départ, lancement du niveau 1 du terrain le plus proche
+	breakout/start {tp:"~ ~5 ~",level_block:""}   (répétitif) 4 joueurs sur les blocs de départ, lancement du niveau 1 du terrain le plus proche
 		tp amène chaque joueur sur un bloc de sa couleur, lue juste après.
-		redstone : bloc de redstone posé à la victoire, relatif au command block (ex: "~ ~-2 ~"), retiré au start suivant, "" pour aucun.
+		level_block : bloc posé au début de chaque niveau (fer, or puis diamant), relatif au command block (ex: "~ ~-2 ~"), retiré au lancement des balles, "" pour aucun.
 		En solo, chaque balle casse les briques rouges, bleu clair, vert clair et jaunes.
-	breakout/here/next_level                    après avoir cloné le niveau suivant : balles remises, "Prochain niveau : 2/3"
+	breakout/here/next_level                    niveau suivant, cloné pendant le compte à rebours grâce à son bloc de niveau
 	breakout/here/stop
 	execute positioned <coin bas gauche> run function survisland:modes/pr_stoupy/breakout/here/example {width:13,height:20,axis:"z"}
 		Terrain d'exemple construit et configuré : cadre, vitre, briques, cabines des joueurs et command block de départ.
@@ -101,7 +101,7 @@ def generate_clear() -> None:
 	entity_tags: list[str] = [
 		f"{duo}.body", f"{duo}.seat",
 		f"{mirror}.body", f"{mirror}.anchor",
-		f"{breakout}.corner", f"{breakout}.screen", f"{breakout}.bumper", f"{breakout}.ball", f"{breakout}.redstone",
+		f"{breakout}.corner", f"{breakout}.screen", f"{breakout}.bumper", f"{breakout}.ball", f"{breakout}.level_block",
 		f"{orbit}.hole", *(f"{orbit}.{name}" for name in ORBIT_MARKERS), f"{orbit}.sky", f"{orbit}.fragment", f"{orbit}.phantom", f"{orbit}.pad",
 		f"{rats}.rat", f"{rats}.model", f"{rats}.cage", f"{rats}.carried", f"{rats}.caged",
 		f"{ns}.pr_stoupy.villager",

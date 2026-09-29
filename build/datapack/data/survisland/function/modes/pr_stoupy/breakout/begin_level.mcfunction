@@ -6,8 +6,10 @@
 #
 
 kill @e[type=minecraft:sulfur_cube,tag=survisland.pr_breakout.ball,predicate=survisland:modes/pr_stoupy/breakout/same_arena]
-function survisland:modes/pr_stoupy/breakout/count_bricks
-tellraw @a[distance=..64] [{"text": "Casse-briques : ", "color": "gray", "italic": true}, {"score": {"name": "#pr_breakout_remaining", "objective": "survisland.data"}}, {"text": " briques à casser sur un terrain de "}, {"score": {"name": "#pr_breakout_width", "objective": "survisland.data"}}, {"text": " x "}, {"score": {"name": "#pr_breakout_height", "objective": "survisland.data"}}, {"text": " (rangée des bumpers comprise)."}]
+# The level block lets command blocks clone the bricks of the level in during the countdown, it is taken back at the launch
+execute if score #pr_breakout_level survisland.data matches 1 at @e[type=minecraft:marker,tag=survisland.pr_breakout.level_block,predicate=survisland:modes/pr_stoupy/breakout/same_arena] run setblock ~ ~ ~ minecraft:iron_block
+execute if score #pr_breakout_level survisland.data matches 2 at @e[type=minecraft:marker,tag=survisland.pr_breakout.level_block,predicate=survisland:modes/pr_stoupy/breakout/same_arena] run setblock ~ ~ ~ minecraft:gold_block
+execute if score #pr_breakout_level survisland.data matches 3 at @e[type=minecraft:marker,tag=survisland.pr_breakout.level_block,predicate=survisland:modes/pr_stoupy/breakout/same_arena] run setblock ~ ~ ~ minecraft:diamond_block
 function survisland:modes/pr_stoupy/breakout/place_bumpers
 scoreboard players set #pr_breakout_state survisland.data 1
 scoreboard players set #pr_breakout_timer survisland.data 140

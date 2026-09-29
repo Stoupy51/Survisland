@@ -45,7 +45,7 @@ function survisland:modes/pr_stoupy/solo {enabled:1}
 function survisland:modes/pr_stoupy/solo {enabled:0}
 ```
 
-- Casse-briques : jouable jusqu'au bout, ta balle casse les briques rouges, bleu clair, vert clair et jaunes (`SOLO_COLORS`, `colors.py`). Ton bumper est celui du Joueur 1, au début de la rangée.
+- Casse-briques : jouable jusqu'au bout, ta balle casse les briques rouges, bleu clair, vert clair et jaunes (`SOLO_COLORS`, `colors.py`). Ton bumper est seul, au milieu de la rangée.
 - Orbite : déjà jouable seul, de 1 à 4 joueurs sans mode solo.
 - Miroirs : un seul reflet. La mécanique se teste, un puzzle pensé pour 2 ne sera peut-être pas faisable.
 - Duos : un mannequin pour toi seul, avec toutes les commandes (regard, déplacements, clic, saut).
@@ -172,7 +172,7 @@ Avec ces valeurs, le terrain occupe x=100, de z=200 à 212 et de y=64 à 83 :
 - Une plateforme à x=85 (15 blocs devant la vitre), sol à y=72 pour avoir les yeux au milieu du terrain.
 - 4 cabines 1x1 ouvertes en haut, de sol rouge, bleu clair, vert clair et jaune, de z=201 à 211.
 - Sous la plateforme, 5 blocs plus bas que les sols des cabines, une passerelle avec un bloc d'émeraude sous chaque cabine.
-- Le command block répétitif de `breakout/start {tp:"~ ~5 ~",redstone:""}`, sous le milieu de la plateforme.
+- Le command block répétitif de `breakout/start {tp:"~ ~5 ~",level_block:""}`, sous le milieu de la plateforme.
 	Les joueurs se mettent sur les émeraudes et arrivent chacun dans la cabine au-dessus.
 
 Avec `axis:"x"`, le terrain s'étend vers +x, le fond est côté -z et les joueurs côté +z.
@@ -186,47 +186,47 @@ function survisland:modes/pr_stoupy/breakout/here/example_level
 
 ### Construire son propre terrain
 
-- Un mur vertical. La rangée du bas reste vide, c'est la ligne des bumpers. Un sol dessous pour que la balle perdue s'arrête.
-- Au-dessus, les briques en concrete, laine, terracotta ou verre teinté, dans les couleurs des joueurs.
-	Le cadre et le fond ne doivent pas être de ces blocs colorés dans le plan du terrain, sinon ils comptent comme des briques.
-- Chaque joueur arrive par le `tp` sur un bloc plein de sa couleur, face au mur, enfermé dans une case 1x1.
-	Un tapis ou une dalle posé dessus cache la couleur : c'est le bloc juste sous les pieds qui est lu.
-	Ils sont assis au centre de leur bloc sur une monture invisible pendant la partie, et remis dessus aussitôt s'ils descendent avec sneak. Leur vitesse baisse de 20 % pour un léger zoom.
-- Le Joueur 1 est le plus proche du coin, son bumper est au début de la rangée.
+Le terrain :
+- Un mur vertical fermé par un cadre, avec un sol dessous. La rangée du bas reste vide, c'est la ligne des bumpers.
+- Au-dessus, les briques en béton, laine, terre cuite ou verre teinté, dans les couleurs des joueurs. Le violet est réservé à la brique multiball.
+- Le cadre et le fond ne sont pas faits de ces blocs colorés : dans le plan du terrain, ils compteraient comme des briques.
 
-Setup, une seule fois, positionné sur le coin bas gauche. Le terrain s'étend vers +axis et vers le haut.
-Relancer avec `invert:1` si gauche et droite sont inversées pour les joueurs :
+Les joueurs :
+- 4 blocs d'émeraude dans un sas, à 16 blocs au plus du command block de départ.
+- Pour chaque émeraude, une case 1x1 face au mur, avec au sol un bloc plein de couleur, au même décalage que le `tp` (5 blocs au-dessus avec `tp:"~ ~5 ~"`).
+- Juste après le `tp`, la couleur est lue sur le premier bloc de couleur dans les 3 blocs sous les pieds.
+	Si un joueur n'en trouve pas (ou tombe sur du violet), la partie ne démarre pas et il reste où le `tp` l'a mis.
+
+Setup, une seule fois, positionné sur le coin bas gauche (la première case de la rangée des bumpers).
+Le terrain s'étend vers +axis et vers le haut. `invert:1` si gauche et droite sont inversées pour les joueurs :
 
 ```
 execute positioned 100 64 200 run function survisland:modes/pr_stoupy/breakout/here/setup {width:20,height:13,axis:"z",invert:0}
 ```
 
-À chaque départ, la largeur et la hauteur sont remesurées jusqu'au cadre : la rangée des bumpers, vide, et la première colonne, faite d'air et de briques.
-Le cadre doit donc fermer ces deux lignes, et ne pas être fait d'un bloc de couleur (64 cases au plus sinon).
+`width` et `height` ne placent l'écran que jusqu'au premier départ : chaque départ remesure le terrain jusqu'au cadre.
+La largeur est prise le long de la rangée des bumpers (vide), la hauteur le long de la première colonne (air et briques), 64 cases au plus.
 
-Départ, command block répétitif à 16 blocs ou moins des 4 blocs d'émeraude.
-Le `tp` est le même pour tous : chaque bloc de couleur doit être au même décalage de son émeraude (5 blocs au-dessus avec `tp:"~ ~5 ~"`).
-La couleur est lue juste après le `tp`. Avec `tp:""`, le bloc lu est l'émeraude et la partie ne démarre pas.
-Si un joueur n'arrive pas sur un bloc de couleur, la partie ne démarre pas et il reste où le `tp` l'a mis.
-`redstone` pose un bloc de redstone à la victoire, relatif au command block, pour ouvrir la sortie par exemple.
-Il est retiré au start suivant. `redstone:""` pour aucun :
+Départ, command block répétitif :
 
 ```
-function survisland:modes/pr_stoupy/breakout/start {tp:"~ ~5 ~",redstone:"~ ~-2 ~"}
+function survisland:modes/pr_stoupy/breakout/start {tp:"~ ~5 ~",level_block:"~ ~-2 ~"}
 ```
+
+`level_block` pose un bloc au début de chaque niveau, relatif au command block : fer au niveau 1, or au 2, diamant au 3 (`LEVEL_BLOCKS`).
+Des command blocks le détectent (`execute if block ... minecraft:gold_block run clone ...`) pour cloner les briques du bon niveau.
+Il est retiré au lancement des balles, 7 secondes plus tard, et les briques sont comptées à ce moment-là. `level_block:""` pour aucun.
 
 ### Pendant la partie
 
-Les bumpers font 2 blocs de large et 0.5 d'épaisseur : des barrières sous un block display de la couleur du joueur.
-Tous les 15 blocs cassés, la balle qui casse le 15e reçoit un bonus, en alternance : vitesse x1.5, puis une deuxième balle (à la même vitesse). Les bonus se cumulent.
-Une brique violette (béton, laine, terre cuite ou verre) est cassée par n'importe quelle balle et multiplie par 5 toutes les balles en jeu, 40 au plus par terrain.
-Elle ne compte pas pour finir le niveau, et le violet n'est pas une couleur de joueur.
-Un joueur ne perd que quand sa dernière balle tombe.
-Le béton prend deux coups : le premier le change en verre teinté de sa couleur, le second le casse. La laine, la terre cuite et le verre cassent en un coup.
-Le joueur arrive par le `tp` au-dessus de sa case : sa couleur est lue sur le premier bloc de couleur dans les 3 blocs sous ses pieds.
+- Chaque joueur est assis au centre de sa case sur une monture invisible, et remis dessus s'il descend avec sneak. Sa vitesse baisse de 20 % pour un léger zoom.
+- Gauche et droite déplacent son bumper : 2 blocs de large, 0.5 d'épaisseur. Les bumpers sont répartis sur la rangée selon le nombre de joueurs, le Joueur 1 (le plus proche du coin) en premier.
+- Une balle ne casse que les briques de la couleur de son joueur. Le béton prend deux coups : il devient du verre teinté, puis casse.
+- Tous les 15 blocs cassés, la balle qui casse le 15e reçoit un bonus, en alternance : vitesse x1.5, puis une deuxième balle à la même vitesse. Les bonus se cumulent.
+- Une brique violette est cassée par n'importe quelle balle et multiplie par 5 toutes les balles en jeu, dans des directions au hasard, 40 au plus par terrain. Elle ne compte pas pour finir le niveau.
+- Un joueur ne perd que quand sa dernière balle tombe : toutes les balles reviennent alors sur les bumpers, puis repartent après le compte à rebours.
 
-Un niveau est fini quand il ne reste aucune brique des couleurs jouées.
-Cloner alors le niveau suivant dans le mur (structure block, `clone` ou `here/example_level`), puis lancer :
+Un niveau est fini quand il ne reste aucune brique des couleurs jouées. Lancer alors le suivant :
 
 ```
 function survisland:modes/pr_stoupy/breakout/here/next_level

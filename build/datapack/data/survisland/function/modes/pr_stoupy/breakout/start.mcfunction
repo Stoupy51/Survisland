@@ -1,15 +1,15 @@
 
 #> survisland:modes/pr_stoupy/breakout/start
 #
-# @within	string in survisland:modes/pr_stoupy/breakout/example/frame {tp:"~ ~5 ~",redstone:""}
+# @within	string in survisland:modes/pr_stoupy/breakout/example/frame {tp:"~ ~5 ~",level_block:""}
 #
 # @args		tp (string)
-#			redstone (string)
+#			level_block (string)
 #
 
 # Safe to fire every tick: the nearest field starts once idle with 4 free players on the start pads
 # $(tp) moves each player onto its colored block, read right after, "" to read it under the pad
-# $(redstone) is where a redstone block is placed on victory, relative to the caller, "" for none
+# $(level_block) is where the block of each level is placed when it starts, relative to the caller, "" for none
 execute unless entity @e[type=minecraft:marker,tag=survisland.pr_breakout.corner] run return 0
 execute if score @n[type=minecraft:marker,tag=survisland.pr_breakout.corner] survisland.pr_breakout.state matches 1.. run return 0
 execute store result score #pr_breakout_free survisland.data if entity @a[tag=!survisland.pr_breakout,distance=..16,predicate=survisland:modes/pr_stoupy/on_start_pad,gamemode=!creative,gamemode=!spectator]
@@ -38,9 +38,9 @@ execute as @e[type=minecraft:marker,tag=survisland.pr_breakout.corner,predicate=
 scoreboard players set #pr_breakout_solo survisland.data 0
 execute if score #pr_breakout_free survisland.data matches ..3 run scoreboard players set #pr_breakout_solo survisland.data 1
 
-execute as @e[type=minecraft:marker,tag=survisland.pr_breakout.redstone,predicate=survisland:modes/pr_stoupy/breakout/same_arena] at @s run function survisland:modes/pr_stoupy/breakout/forget_redstone
-$data modify storage survisland:pr_breakout redstone set value "$(redstone)"
-execute unless data storage survisland:pr_breakout {redstone:""} run function survisland:modes/pr_stoupy/breakout/place_redstone with storage survisland:pr_breakout
+execute as @e[type=minecraft:marker,tag=survisland.pr_breakout.level_block,predicate=survisland:modes/pr_stoupy/breakout/same_arena] at @s run function survisland:modes/pr_stoupy/breakout/forget_level_block
+$data modify storage survisland:pr_breakout level_block set value "$(level_block)"
+execute unless data storage survisland:pr_breakout {level_block:""} run function survisland:modes/pr_stoupy/breakout/place_level_block with storage survisland:pr_breakout
 
 scoreboard players set #pr_breakout_broken survisland.data 0
 scoreboard players set #pr_breakout_bonus survisland.data 0

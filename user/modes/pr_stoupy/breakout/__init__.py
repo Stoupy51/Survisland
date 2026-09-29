@@ -4,7 +4,7 @@ The field is a wall of W x H cells whose bottom row holds the bumpers and whose 
 A ball only breaks the bricks of the color its player stands on, and bounces off everything else.
 When the last ball of a player falls under the bumper row, every ball is taken back and relaunched after a countdown.
 Every 15 bricks broken, the ball breaking the last one gets a bonus stacking with the previous ones: half again its speed, or a second ball.
-A level is over once no brick of the players' colors is left, the next one is cloned in by hand.
+A level is over once no brick of the players' colors is left, the next one being cloned in during its countdown.
 
 Each field is an arena: its corner marker holds the state of the game in its own scores, and its players, balls,
 bumpers and screen carry the arena id, so several copies of the field run side by side.
@@ -43,7 +43,10 @@ from .physics import BUMPER_HEIGHT, BUMPER_LENGTH, BUMPER_PERIOD, MODE, main as 
 PLAYERS: int = 4
 """ Players of a game, each one standing on a block of its own color. """
 
-LEVELS: int = 3
+LEVEL_BLOCKS: tuple[str, ...] = ("minecraft:iron_block", "minecraft:gold_block", "minecraft:diamond_block")
+""" Block placed at the level_block position when each level starts, for command blocks to detect which level to clone in. """
+
+LEVELS: int = len(LEVEL_BLOCKS)
 """ Levels to clear before the star is given. """
 
 SETUP_RADIUS: int = 16
@@ -144,7 +147,7 @@ scoreboard objectives add {tag} dummy
 function {root}/load_arena
 function {root}/stop_arena
 kill @e[type=minecraft:text_display,tag={tag}.screen,{arena.same}]
-kill @e[type=minecraft:marker,tag={tag}.redstone,{arena.same}]
+kill @e[type=minecraft:marker,tag={tag}.level_block,{arena.same}]
 kill @s
 """)
 
@@ -256,7 +259,7 @@ def generate_start(arena: Arena) -> None:
 	write_function(f"{root}/start", f"""
 # Safe to fire every tick: the nearest field starts once idle with {PLAYERS} free players on the start pads
 # $(tp) moves each player onto its colored block, read right after, "" to read it under the pad
-# $(redstone) is where a redstone block is placed on victory, relative to the caller, "" for none
+# $(level_block) is where the block of each level is placed when it starts, relative to the caller, "" for none
 execute unless entity @e[type=minecraft:marker,tag={tag}.corner] run return 0
 execute if score @n[type=minecraft:marker,tag={tag}.corner] {tag}.state matches 1.. run return 0
 execute store result score #{MODE}_free {ns}.data if entity @a[{free_player}]
@@ -284,9 +287,9 @@ execute as {arena.corner} at @s run function {root}/place_screen
 scoreboard players set #{MODE}_solo {ns}.data 0
 execute if score #{MODE}_free {ns}.data matches ..{PLAYERS - 1} run scoreboard players set #{MODE}_solo {ns}.data 1
 
-execute as @e[type=minecraft:marker,tag={tag}.redstone,{arena.same}] at @s run function {root}/forget_redstone
-$data modify storage {ns}:{MODE} redstone set value "$(redstone)"
-execute unless data storage {ns}:{MODE} {{redstone:""}} run function {root}/place_redstone with storage {ns}:{MODE}
+execute as @e[type=minecraft:marker,tag={tag}.level_block,{arena.same}] at @s run function {root}/forget_level_block
+$data modify storage {ns}:{MODE} level_block set value "$(level_block)"
+execute unless data storage {ns}:{MODE} {{level_block:""}} run function {root}/place_level_block with storage {ns}:{MODE}
 
 scoreboard players set #{MODE}_broken {ns}.data 0
 scoreboard players set #{MODE}_bonus {ns}.data 0
@@ -348,18 +351,18 @@ scoreboard players add #{MODE}_height {ns}.data 1
 execute if score #{MODE}_height {ns}.data matches ..{MAX_SIZE - 1} positioned ~ ~1 ~ run function {root}/measure_column
 """)
 
-	write_function(f"{root}/forget_redstone", """
-# The redstone block of the previous game is taken back with its marker
-execute if block ~ ~ ~ minecraft:redstone_block run setblock ~ ~ ~ minecraft:air
+	write_function(f"{root}/forget_level_block", """
+# The level block of the previous game is taken back with its marker
+setblock ~ ~ ~ minecraft:air
 kill @s
 """)
 
-	write_function(f"{root}/place_redstone", f"""
-$execute positioned $(redstone) align xyz positioned ~0.5 ~ ~0.5 summon minecraft:marker run function {root}/new_redstone
+	write_function(f"{root}/place_level_block", f"""
+$execute positioned $(level_block) align xyz positioned ~0.5 ~ ~0.5 summon minecraft:marker run function {root}/new_level_block
 """)
 
-	write_function(f"{root}/new_redstone", f"""
-tag @s add {tag}.redstone
+	write_function(f"{root}/new_level_block", f"""
+tag @s add {tag}.level_block
 scoreboard players operation @s {tag}.arena = #{MODE}_arena {ns}.data
 """)
 
@@ -383,12 +386,16 @@ def generate_levels(arena: Arena) -> None:
 		for index, color in enumerate(COLORS) if color is not MULTIBALL
 	)
 	bumper_blocks: str = "\n".join(f'execute if score @s {tag}.color matches {index} run data modify entity @s block_state.Name set value "{color.blocks[0]}"' for index, color in enumerate(COLORS))
+	place_level_block: str = "\n".join(
+		f"execute if score #{MODE}_level {ns}.data matches {level} at @e[type=minecraft:marker,tag={tag}.level_block,{arena.same}] run setblock ~ ~ ~ {block}"
+		for level, block in enumerate(LEVEL_BLOCKS, start=1)
+	)
 	level_title: list[JsonDict] = [{"text": "Niveau ", "color": "#01FE41"}, {"score": {"name": f"#{MODE}_level", "objective": f"{ns}.data"}, "color": "#01FE41"}, {"text": f"/{LEVELS}", "color": "#01FE41"}]
 
 	write_function(f"{root}/begin_level", f"""
 kill {arena.balls}
-function {root}/count_bricks
-tellraw @a[distance=..64] {json.dumps([{"text": "Casse-briques : ", "color": "gray", "italic": True}, {"score": {"name": f"#{MODE}_remaining", "objective": f"{ns}.data"}}, {"text": " briques à casser sur un terrain de "}, {"score": {"name": f"#{MODE}_width", "objective": f"{ns}.data"}}, {"text": " x "}, {"score": {"name": f"#{MODE}_height", "objective": f"{ns}.data"}}, {"text": " (rangée des bumpers comprise)."}], ensure_ascii=False)}
+# The level block lets command blocks clone the bricks of the level in during the countdown, it is taken back at the launch
+{place_level_block}
 function {root}/place_bumpers
 scoreboard players set #{MODE}_state {ns}.data 1
 scoreboard players set #{MODE}_timer {ns}.data {COUNTDOWN * 20 + MESSAGE_TICKS}
@@ -396,7 +403,7 @@ scoreboard players set #{MODE}_timer {ns}.data {COUNTDOWN * 20 + MESSAGE_TICKS}
 """)
 
 	write_function(f"{root}/count_bricks", f"""
-# Raster scan of the brick rows, once per level: breaks are then counted down one by one
+# Raster scan of the brick rows at every launch, once the level is cloned in: breaks are then counted down one by one
 {reset_counts}
 scoreboard players set #{MODE}_scan_v {ns}.data 1
 execute at {arena.corner} rotated as {arena.corner} positioned ~ ~1 ~ run function {root}/scan_row
@@ -470,7 +477,7 @@ execute if score #{MODE}_axis {ns}.data matches 1 run scoreboard players operati
 """)
 
 	write_function(f"{root}/here/next_level", f"""
-# To call once the next level is cloned in: the nearest field takes its balls back and goes on from the countdown
+# The nearest field takes its balls back and goes on from the countdown, during which its level block gets the level cloned in
 execute unless score @n[type=minecraft:marker,tag={tag}.corner] {tag}.state matches 1.. run return fail
 execute as @n[type=minecraft:marker,tag={tag}.corner] run function {root}/next_level
 schedule function {root}/tick 1t replace
@@ -511,6 +518,8 @@ execute as {arena.players} at @s run playsound minecraft:block.note_block.pling 
 
 	write_function(f"{root}/launch", f"""
 scoreboard players set #{MODE}_state {ns}.data 2
+execute at @e[type=minecraft:marker,tag={tag}.level_block,{arena.same}] run setblock ~ ~ ~ minecraft:air
+function {root}/count_bricks
 {arena.screen({"text": ""})}
 execute as {arena.players} at @s run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 1 2
 execute as {arena.players} run function {root}/spawn_ball
@@ -568,13 +577,12 @@ execute if score #{MODE}_level {ns}.data matches {LEVELS}.. run return run funct
 scoreboard players set #{MODE}_state {ns}.data 3
 {arena.screen(cleared_title)}
 execute as {arena.players} at @s run playsound minecraft:entity.player.levelup master @s
-tellraw @a[distance=..64] {{"text":"Casse-briques : niveau terminé, clone le suivant puis lance /function {root}/here/next_level","color":"gray","italic":true}}
+tellraw @a[distance=..64] {{"text":"Casse-briques : niveau terminé, lance /function {root}/here/next_level","color":"gray","italic":true}}
 """)
 
 	write_function(f"{root}/victory", f"""
 {arena.screen({"text": "Bravo !", "color": "#01FE41"})}
 execute as @a[tag={tag},{arena.same},scores={{{tag}=1}},limit=1] at @s run function {ns}:{LAB}/give_star {{trial:"Le casse-briques"}}
-execute at @e[type=minecraft:marker,tag={tag}.redstone,{arena.same}] run setblock ~ ~ ~ minecraft:redstone_block
 function {root}/stop_arena
 """)
 

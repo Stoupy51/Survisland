@@ -1,6 +1,8 @@
 
 #> survisland:modes/pr_stoupy/breakout/sum_solo
 #
+# @executed	at @s
+#
 # @within	survisland:modes/pr_stoupy/breakout/count_bricks
 #
 
