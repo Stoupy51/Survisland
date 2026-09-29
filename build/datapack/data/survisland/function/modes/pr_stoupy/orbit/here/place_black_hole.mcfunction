@@ -12,6 +12,7 @@ $summon minecraft:item_display ~ ~ ~ {Tags:["survisland.pr_orbit.sky"],item:{id:
 
 # Its marker anchors the arena of the room and pushes along the yaw of the caller, a hole placed again near the previous one keeps its arena
 scoreboard objectives add survisland.pr_orbit.carried dummy
+scoreboard objectives add survisland.pr_orbit.step dummy
 scoreboard objectives add survisland.pr_orbit.arena dummy
 scoreboard objectives add survisland.pr_orbit.state dummy
 scoreboard objectives add survisland.pr_orbit.round dummy

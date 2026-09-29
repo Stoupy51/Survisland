@@ -10,5 +10,5 @@
 
 tag @s add survisland.pr_orbit.phantom
 scoreboard players operation @s survisland.pr_orbit.arena = #pr_orbit_arena survisland.data
-data merge entity @s {PersistenceRequired:1b,size:2,active_effects:[{id:"minecraft:fire_resistance",duration:-1,amplifier:0b,show_particles:0b}]}
+data merge entity @s {PersistenceRequired:1b,DeathLootTable:"minecraft:empty",size:2,active_effects:[{id:"minecraft:fire_resistance",duration:-1,amplifier:0b,show_particles:0b}]}
 

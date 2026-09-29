@@ -1,6 +1,6 @@
 """ Trial "Orbite": one to four players in a room pushed toward a black hole painted on a wall, over three rounds.
 
-Star fragments circle around the hole marker on three rings, one flat and two upright. A player picks one up by touching or clicking it
+Star fragments circle around the hole marker on six rings tilted each its own way. A player picks one up by touching or clicking it
 and banks it at the collector, against the push of the hole, which never stops while the game runs.
 A player falling into the hole is detected by a command block of the room, which calls swallow on it:
 back above the hole marker, and the fragments it carried return to orbit.
@@ -34,6 +34,9 @@ MODE: str = "pr_orbit"
 
 HOLE_RADIUS: int = 16
 """ Radius around a new hole marker in which the previous hole of the same room is replaced, keeping its arena. """
+
+ROOM_RADIUS: int = 40
+""" Distance to the hole marker covering every corner of its room. """
 
 PICKUP_RADIUS: str = "1.6"
 """ Distance at which a player picks up a fragment. """
@@ -78,27 +81,30 @@ ROCK_RADII: dict[str, int] = {"tiny": 1, "small": 2, "medium": 3, "large": 4, "h
 # Classes
 @dataclass(frozen=True)
 class Ring:
-	""" One orbit of the fragments around the hole marker. """
+	""" One circular orbit of the fragments around the hole marker, tilted on any axis. """
 	radius: int
 	""" Distance to the center, in blocks. """
-	height: int
-	""" Height above the center, in blocks. """
-	speed: int
-	""" Degrees turned per tick, negative for the other way round (positive only on a vertical ring). """
-	vertical_yaw: int | None = None
-	""" Yaw of the vertical plane the ring turns in, None for a horizontal ring. """
+	tilt: int
+	""" Angle between the ring and the horizontal plane, in degrees. """
+	facing: int
+	""" Turn of the tilted ring around the vertical axis, in degrees. """
+	period: int
+	""" Ticks per lap, negative for the other way round. """
 
-	def rotation(self, angle: int) -> str:
-		""" Macro arguments of new_fragment putting a fragment at an angle of the ring, 0 being the top of a vertical ring
+	def points(self) -> list[str]:
+		""" Offset from the center at each tick of a lap, as the destination of a tp.
 
-		>>> Ring(radius=5, height=0, speed=2, vertical_yaw=90).rotation(270)
-		'yaw:270,pitch:0,half:1'
+		>>> Ring(radius=2, tilt=90, facing=0, period=4).points()[:2]
+		['~2.00 ~0.00 ~0.00', '~0.00 ~2.00 ~0.00']
 		"""
-		if self.vertical_yaw is None:
-			return f"yaw:{angle},pitch:0,half:0"
-		if angle < 180:
-			return f"yaw:{self.vertical_yaw},pitch:{angle - 90},half:0"
-		return f"yaw:{self.vertical_yaw + 180},pitch:{270 - angle},half:1"
+		tilt: float = math.radians(self.tilt)
+		facing: float = math.radians(self.facing)
+		points: list[str] = []
+		for step in range(abs(self.period)):
+			angle: float = math.tau * step / self.period
+			x, y, z = math.cos(angle) * self.radius, math.sin(angle) * math.sin(tilt) * self.radius, math.sin(angle) * math.cos(tilt) * self.radius
+			points.append(f"~{x * math.cos(facing) - z * math.sin(facing):.2f} ~{y:.2f} ~{x * math.sin(facing) + z * math.cos(facing):.2f}")
+		return points
 
 
 @dataclass(frozen=True)
@@ -132,16 +138,19 @@ class Arena:
 
 # Constants (tables)
 RINGS: list[Ring] = [
-	Ring(radius=6,  height=1, speed=3),
-	Ring(radius=10, height=0, speed=2, vertical_yaw=0),
-	Ring(radius=14, height=0, speed=1, vertical_yaw=90),
+	Ring(radius=6,  tilt=0,  facing=0,   period=120),
+	Ring(radius=8,  tilt=60, facing=0,   period=-160),
+	Ring(radius=10, tilt=60, facing=120, period=200),
+	Ring(radius=12, tilt=60, facing=240, period=-240),
+	Ring(radius=14, tilt=90, facing=45,  period=280),
+	Ring(radius=16, tilt=30, facing=300, period=-320),
 ]
-""" The rings the fragments are spread over, one fragment out of three on each. """
+""" The rings the fragments are spread over, fragment n on ring n modulo their count, all at about 6 blocks per second. """
 
 ROUNDS: list[Round] = [
-	Round(fragments=6,  pull=500, phantoms=0, thieves=0),
-	Round(fragments=8,  pull=700, phantoms=3, thieves=0),
-	Round(fragments=10, pull=900, phantoms=3, thieves=2),
+	Round(fragments=12, pull=500, phantoms=0, thieves=0),
+	Round(fragments=16, pull=700, phantoms=3, thieves=0),
+	Round(fragments=20, pull=900, phantoms=3, thieves=2),
 ]
 """ The three rounds, in play order: about two minutes each for three players. """
 
@@ -164,7 +173,7 @@ def generate_setup(arena: Arena) -> None:
 	ns: str = Mem.ctx.project_id
 	root: str = f"{ns}:{LAB}/orbit"
 	tag: str = f"{ns}.{MODE}"
-	objectives: str = "\n".join(f"scoreboard objectives add {tag}.{name} dummy" for name in ("carried", *STATE))
+	objectives: str = "\n".join(f"scoreboard objectives add {tag}.{name} dummy" for name in ("carried", "step", *STATE))
 
 	write_function(f"{root}/here/place_black_hole", f"""
 # A huge inverted cube rendered by the black hole shader, seen from inside
@@ -269,6 +278,7 @@ def generate_start(arena: Arena) -> None:
 		for name in MARKERS
 	)
 	take_pad: str = "\n".join(f"execute positioned {offset} if block ~ ~ ~ #{ns}:pr_stoupy/start_pad run return run function {root}/take_pad" for offset in PAD_OFFSETS)
+	paths: str = ",".join("[" + ",".join(f'{{pos:"{point}"}}' for point in ring.points()) + "]" for ring in RINGS)
 
 	write_function(f"{root}/start", f"""
 # Safe to fire every tick: a player on a start pad joins the room of the nearest hole, the first one starts round 1
@@ -286,6 +296,7 @@ schedule function {root}/tick 1t replace
 	write_function(f"{root}/begin", f"""
 scoreboard players set #{MODE}_round {ns}.data 0
 scoreboard players set #{MODE}_clock {ns}.data 0
+data modify storage {ns}:{MODE} paths set value [{paths}]
 function {root}/next_round
 """)
 
@@ -333,7 +344,7 @@ scoreboard players set #{MODE}_banked {ns}.data 0
 
 	for index, round_ in enumerate(ROUNDS, start=1):
 		fragments: str = "\n".join(
-			f"execute at {arena.hole} summon minecraft:item_display run function {root}/new_fragment {{ring:{fragment % len(RINGS)},{RINGS[fragment % len(RINGS)].rotation(fragment * 360 // round_.fragments)}}}"
+			f"execute at {arena.hole} summon minecraft:item_display run function {root}/new_fragment {{ring:{fragment % len(RINGS)},step:{fragment * abs(RINGS[fragment % len(RINGS)].period) // round_.fragments}}}"
 			for fragment in range(round_.fragments)
 		)
 		phantoms: str = "\n".join(
@@ -355,10 +366,9 @@ execute as {arena.players} at @s run playsound minecraft:block.beacon.power_sele
 # @s is the star teleported along its ring: the client smooths the teleports of a display, never those of an interaction, so the hitbox rides the star
 tag @s add {tag}.fragment
 $tag @s add {tag}.ring$(ring)
-$tag @s add {tag}.half$(half)
+$scoreboard players set @s {tag}.step $(step)
 scoreboard players operation @s {tag}.arena = #{MODE}_arena {ns}.data
 data merge entity @s {{item:{{id:"minecraft:nether_star",count:1}},billboard:"center",Glowing:1b,glow_color_override:5636095,teleport_duration:1,brightness:{{sky:15,block:15}},transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.8f,0.8f,0.8f]}}}}
-$rotate @s $(yaw) $(pitch)
 tag @s add {tag}.new
 execute summon minecraft:interaction run function {root}/new_hitbox
 tag @s remove {tag}.new
@@ -414,27 +424,22 @@ execute if score #{MODE}_timer {ns}.data matches ..0 run function {root}/next_ro
 execute as @e[type=minecraft:item_display,tag={tag}.fragment,tag=!{tag}.stolen,{arena.same}] at @s as @p[tag={tag},{arena.same},distance=..{PICKUP_RADIUS}] run function {root}/pick_up
 execute at {arena.collector} as @a[tag={tag},{arena.same},scores={{{tag}.carried=1..}},distance=..{BANK_RADIUS}] run function {root}/bank
 function {root}/phantoms_tick
+# No NBT stops a mob from dropping experience, so the orbs of dead phantoms are removed as they appear
+kill @e[type=minecraft:experience_orb,distance=..{ROOM_RADIUS}]
 function {root}/check_round
 """)
 
 	for index, ring in enumerate(RINGS):
 		write_function(f"{root}/turn/{index}", f"""
-execute rotated as @s run rotate @s ~{ring.speed} ~
-execute rotated as @s positioned ^ ^{ring.height} ^{ring.radius} run tp @s ~ ~ ~
-""" if ring.vertical_yaw is None else f"""
-# The pitch is clamped to 90 degrees, so each half of the circle is swept by pitch and the fragment turns over between them
-execute if entity @s[tag=!{tag}.half1] rotated as @s run rotate @s ~ ~{ring.speed}
-execute if entity @s[tag={tag}.half1] rotated as @s run rotate @s ~ ~-{ring.speed}
-execute if entity @s[tag=!{tag}.half1,x_rotation=90] run function {root}/turn_over
-execute if entity @s[tag={tag}.half1,x_rotation=-90] run function {root}/turn_over
-execute rotated as @s positioned ~ ~{ring.height} ~ positioned ^ ^ ^{ring.radius} run tp @s ~ ~ ~
+# The step of @s indexes the points of its ring, written in storage when the game begins
+scoreboard players add @s {tag}.step 1
+execute if score @s {tag}.step matches {abs(ring.period)}.. run scoreboard players set @s {tag}.step 0
+execute store result storage {ns}:{MODE} turn.step int 1 run scoreboard players get @s {tag}.step
+function {root}/turn/{index}_point with storage {ns}:{MODE} turn
 """)
+		write_function(f"{root}/turn/{index}_point", f"$function {root}/move with storage {ns}:{MODE} paths[{index}][$(step)]")
 
-	write_function(f"{root}/turn_over", f"""
-execute rotated as @s run rotate @s ~180 ~
-execute if entity @s[tag={tag}.half1] run return run tag @s remove {tag}.half1
-tag @s add {tag}.half1
-""")
+	write_function(f"{root}/move", "$tp @s $(pos)")
 
 	write_function(f"{root}/pick_up", f"""
 # @s is the player touching the fragment, which disappears from the orbit
@@ -487,7 +492,7 @@ particle minecraft:end_rod ~ ~1 ~ 0.4 0.8 0.4 0.05 40
 """)
 
 	restore: str = "\n".join(
-		f"execute if score @s {tag}.carried matches {count}.. at {arena.hole} summon minecraft:item_display run function {root}/new_fragment {{ring:{(count - 1) % len(RINGS)},{RINGS[(count - 1) % len(RINGS)].rotation(count * 97 % 360)}}}"
+		f"execute if score @s {tag}.carried matches {count}.. at {arena.hole} summon minecraft:item_display run function {root}/new_fragment {{ring:{(count - 1) % len(RINGS)},step:{count * 97 % abs(RINGS[(count - 1) % len(RINGS)].period)}}}"
 		for count in range(1, max(round_.fragments for round_ in ROUNDS) + 1)
 	)
 	write_function(f"{root}/swallow", f"""
@@ -534,7 +539,7 @@ def generate_phantoms(arena: Arena) -> None:
 	write_function(f"{root}/new_phantom", f"""
 tag @s add {tag}.phantom
 scoreboard players operation @s {tag}.arena = #{MODE}_arena {ns}.data
-data merge entity @s {{PersistenceRequired:1b,size:2,active_effects:[{{id:"minecraft:fire_resistance",duration:-1,amplifier:0b,show_particles:0b}}]}}
+data merge entity @s {{PersistenceRequired:1b,DeathLootTable:"minecraft:empty",size:2,active_effects:[{{id:"minecraft:fire_resistance",duration:-1,amplifier:0b,show_particles:0b}}]}}
 """)
 
 	write_function(f"{root}/new_thief", f"""

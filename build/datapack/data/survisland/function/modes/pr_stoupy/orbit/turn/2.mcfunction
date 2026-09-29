@@ -6,10 +6,9 @@
 # @within	survisland:modes/pr_stoupy/orbit/play_tick [ at @e[type=minecraft:marker,tag=survisland.pr_orbit.hole,predicate=survisland:modes/pr_stoupy/orbit/same_arena,limit=1] ]
 #
 
-# The pitch is clamped to 90 degrees, so each half of the circle is swept by pitch and the fragment turns over between them
-execute if entity @s[tag=!survisland.pr_orbit.half1] rotated as @s run rotate @s ~ ~1
-execute if entity @s[tag=survisland.pr_orbit.half1] rotated as @s run rotate @s ~ ~-1
-execute if entity @s[tag=!survisland.pr_orbit.half1,x_rotation=90] run function survisland:modes/pr_stoupy/orbit/turn_over
-execute if entity @s[tag=survisland.pr_orbit.half1,x_rotation=-90] run function survisland:modes/pr_stoupy/orbit/turn_over
-execute rotated as @s positioned ~ ~0 ~ positioned ^ ^ ^14 run tp @s ~ ~ ~
+# The step of @s indexes the points of its ring, written in storage when the game begins
+scoreboard players add @s survisland.pr_orbit.step 1
+execute if score @s survisland.pr_orbit.step matches 200.. run scoreboard players set @s survisland.pr_orbit.step 0
+execute store result storage survisland:pr_orbit turn.step int 1 run scoreboard players get @s survisland.pr_orbit.step
+function survisland:modes/pr_stoupy/orbit/turn/2_point with storage survisland:pr_orbit turn
 

@@ -8,7 +8,7 @@ Un voleur d'étoiles plonge dans la même direction et disparaît en touchant le
 
 1. Le trou noir, au centre de la salle : le cube du ciel rendu par le shader, et l'ancre de la salle.
 	Les joueurs arrivent 1 bloc au-dessus, et la poussée suit son yaw.
-	Les fragments tournent autour sur 3 anneaux : à 6 blocs à plat, à 10 blocs debout dans le plan y-z, à 14 blocs debout dans le plan x-y.
+	Les fragments tournent autour sur 6 anneaux inclinés chacun dans un sens différent, de 6 à 16 blocs du centre.
 	Un joueur attrape un fragment en le touchant, ou en cliquant dessus (gauche ou droit), même un fragment emporté par un voleur.
 	Depuis un command block, c'est +z, la direction du trou noir dans le ciel. Depuis le chat, forcer ce yaw :
 	```
