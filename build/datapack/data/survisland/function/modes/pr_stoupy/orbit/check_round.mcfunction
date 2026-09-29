@@ -9,6 +9,7 @@
 # Won once every fragment is banked and every phantom is dead
 execute if score #pr_orbit_banked survisland.data < #pr_orbit_required survisland.data run return 0
 execute if entity @e[type=minecraft:phantom,tag=survisland.pr_orbit.phantom,predicate=survisland:modes/pr_stoupy/orbit/same_arena] run return 0
+execute if score #pr_orbit_round survisland.data matches 3.. run return run function survisland:modes/pr_stoupy/orbit/victory
 scoreboard players set #pr_orbit_state survisland.data 2
 scoreboard players set #pr_orbit_timer survisland.data 100
 title @a[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena] times 10 40 10

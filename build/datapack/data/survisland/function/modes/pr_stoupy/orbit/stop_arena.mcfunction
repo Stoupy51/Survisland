@@ -1,6 +1,8 @@
 
 #> survisland:modes/pr_stoupy/orbit/stop_arena
 #
+# @executed	at @s
+#
 # @within	survisland:modes/pr_stoupy/orbit/victory
 #			survisland:modes/pr_stoupy/orbit/stop_hole
 #
@@ -13,6 +15,7 @@ execute as @a[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit
 execute as @a[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena] run attribute @s minecraft:fall_damage_multiplier base reset
 effect clear @a[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena] minecraft:resistance
 clear @a[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena] *[custom_data~{survisland:{orbit_sword:true}}]
+execute as @e[type=minecraft:marker,tag=survisland.pr_orbit.pad,predicate=survisland:modes/pr_stoupy/orbit/same_arena] at @s run function survisland:modes/pr_stoupy/orbit/return_to_pad
 tag @a[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena] remove survisland.pr_orbit
 execute at @e[type=minecraft:marker,tag=survisland.pr_orbit.pad,predicate=survisland:modes/pr_stoupy/orbit/same_arena] run setblock ~ ~ ~ minecraft:emerald_block
 kill @e[type=minecraft:marker,tag=survisland.pr_orbit.pad,predicate=survisland:modes/pr_stoupy/orbit/same_arena]

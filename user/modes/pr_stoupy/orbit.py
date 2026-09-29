@@ -272,7 +272,7 @@ def generate_start(arena: Arena) -> None:
 	ns: str = Mem.ctx.project_id
 	root: str = f"{ns}:{LAB}/orbit"
 	tag: str = f"{ns}.{MODE}"
-	free_player: str = f"tag=!{tag},distance=..{START_RADIUS},{ON_START_PAD},gamemode=!creative,gamemode=!spectator"
+	free_player: str = f"tag=!{tag},tag=!{tag}.back,distance=..{START_RADIUS},{ON_START_PAD},gamemode=!creative,gamemode=!spectator"
 	markers_missing: str = "\n".join(
 		f'execute unless entity {arena.marker(name)} run return run title @a[{free_player}] actionbar {{"text":"Orbite : pas de {name} pour ce trou noir, le poser avec here/set_{name}.","color":"red"}}'
 		for name in MARKERS
@@ -282,6 +282,7 @@ def generate_start(arena: Arena) -> None:
 
 	write_function(f"{root}/start", f"""
 # Safe to fire every tick: a player on a start pad joins the room of the nearest hole, the first one starts round 1
+tag @a[tag={tag}.back,{ON_START_PAD.replace("predicate=", "predicate=!")}] remove {tag}.back
 execute unless entity @a[{free_player}] run return 0
 execute unless entity @e[type=minecraft:marker,tag={tag}.hole] run return run title @a[{free_player}] actionbar {{"text":"Orbite : pas de trou noir, le poser avec here/place_black_hole.","color":"red"}}
 execute as @n[type=minecraft:marker,tag={tag}.hole] run function {root}/load_arena
@@ -336,7 +337,6 @@ def generate_rounds(arena: Arena) -> None:
 
 	write_function(f"{root}/next_round", f"""
 scoreboard players add #{MODE}_round {ns}.data 1
-execute if score #{MODE}_round {ns}.data matches {len(ROUNDS) + 1}.. run return run function {root}/victory
 scoreboard players set #{MODE}_state {ns}.data 1
 scoreboard players set #{MODE}_banked {ns}.data 0
 {starts}
@@ -385,6 +385,7 @@ ride @s mount @e[type=minecraft:item_display,tag={tag}.new,limit=1]
 # Won once every fragment is banked and every phantom is dead
 execute if score #{MODE}_banked {ns}.data < #{MODE}_required {ns}.data run return 0
 execute if entity {arena.phantoms} run return 0
+execute if score #{MODE}_round {ns}.data matches {len(ROUNDS)}.. run return run function {root}/victory
 scoreboard players set #{MODE}_state {ns}.data 2
 scoreboard players set #{MODE}_timer {ns}.data {BREAK_TICKS}
 title {arena.players} times 10 40 10
@@ -622,10 +623,21 @@ execute as {arena.players} run attribute @s minecraft:gravity base reset
 execute as {arena.players} run attribute @s minecraft:fall_damage_multiplier base reset
 effect clear {arena.players} minecraft:resistance
 clear {arena.players} *[custom_data~{{{ns}:{{orbit_sword:true}}}}]
+execute as @e[type=minecraft:marker,tag={tag}.pad,{arena.same}] at @s run function {root}/return_to_pad
 tag {arena.players} remove {tag}
 execute at @e[type=minecraft:marker,tag={tag}.pad,{arena.same}] run setblock ~ ~ ~ {START_PAD_BLOCKS[0]}
 kill @e[type=minecraft:marker,tag={tag}.pad,{arena.same}]
 scoreboard players set #{MODE}_state {ns}.data 0
+""")
+
+	write_function(f"{root}/return_to_pad", f"""
+# Run at a start pad, which takes back one player, and that player joins again only once off the pads
+execute as @a[tag={tag},tag=!{tag}.back,{arena.same},limit=1] run function {root}/land_on_pad
+""")
+
+	write_function(f"{root}/land_on_pad", f"""
+tp @s ~ ~1 ~
+tag @s add {tag}.back
 """)
 
 	write_function(f"{root}/stop_hole", f"""

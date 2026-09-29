@@ -14,7 +14,9 @@
 
 # @s receives the star of the trial named $(trial)
 loot give @s loot survisland:i/blue_star
-$tellraw @a[distance=..96] ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Expérience '$(trial)' réussie !\n","color":"green"},{"selector":"@a[gamemode=!spectator,distance=..12]","color":"aqua"},{"text":" récupère(nt) une étoile bleue.","color":"green"}]
+execute store result score #star_players survisland.data if entity @a[gamemode=!spectator,distance=..24]
+$execute if score #star_players survisland.data matches ..1 run tellraw @a[distance=..96] ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Expérience '$(trial)' réussie !\n","color":"green"},{"selector":"@a[gamemode=!spectator,distance=..12]","color":"aqua"},{"text":" récupère une étoile bleue.","color":"green"}]
+$execute if score #star_players survisland.data matches 2.. run tellraw @a[distance=..96] ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Expérience '$(trial)' réussie !\n","color":"green"},{"selector":"@a[gamemode=!spectator,distance=..12]","color":"aqua"},{"text":" récupèrent une étoile bleue.","color":"green"}]
 title @a[distance=..96] times 10 50 20
 $title @a[distance=..96] subtitle {"text":"$(trial)","color":"aqua"}
 title @a[distance=..96] title {"text":"Étoile bleue obtenue !","color":"gold"}

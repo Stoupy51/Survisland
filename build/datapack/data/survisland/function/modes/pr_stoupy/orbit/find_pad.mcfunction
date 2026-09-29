@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/orbit/find_pad
 #
-# @executed	as @a[tag=!survisland.pr_orbit,distance=..16,predicate=survisland:modes/pr_stoupy/on_start_pad,gamemode=!creative] & at @s
+# @executed	as @a[tag=!...,distance=..16,predicate=survisland:modes/pr_stoupy/on_start_pad,gamemode=!creative] & at @s
 #
 # @within	survisland:modes/pr_stoupy/orbit/enroll_player
 #
