@@ -8,5 +8,4 @@
 
 tag @s add survisland.pr_rats.cage
 scoreboard players operation @s survisland.pr_rats.arena = #pr_rats_arena survisland.data
-scoreboard players set @s survisland.pr_rats.caged 0
 

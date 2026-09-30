@@ -7,8 +7,6 @@
 # Every arena, everywhere
 execute as @e[type=minecraft:ocelot,tag=survisland.pr_rats.rat] run function survisland:modes/pr_stoupy/rats/remove_rat
 kill @e[type=minecraft:item_display,tag=survisland.pr_rats.carried]
-kill @e[type=minecraft:item_display,tag=survisland.pr_rats.caged]
 scoreboard players reset * survisland.pr_rats.carried
-scoreboard players set @e[type=minecraft:marker,tag=survisland.pr_rats.cage] survisland.pr_rats.caged 0
 schedule clear survisland:modes/pr_stoupy/rats/tick
 

@@ -11,8 +11,6 @@ execute unless score @s survisland.pr_rats.id matches 1.. store result score @s 
 scoreboard players add @s survisland.pr_rats.carried 1
 scoreboard players operation #pr_rats_id survisland.data = @s survisland.pr_rats.id
 scoreboard players operation #pr_rats_index survisland.data = @s survisland.pr_rats.carried
-scoreboard players operation #pr_rats_arena survisland.data = @n[type=minecraft:ocelot,tag=survisland.pr_rats.caught] survisland.pr_rats.arena
-
 execute as @n[type=minecraft:ocelot,tag=survisland.pr_rats.caught] on passengers run data modify storage survisland:pr_rats model set from entity @s
 execute at @s summon minecraft:item_display run function survisland:modes/pr_stoupy/rats/new_carried
 execute as @n[type=minecraft:ocelot,tag=survisland.pr_rats.caught] run function survisland:modes/pr_stoupy/rats/remove_rat

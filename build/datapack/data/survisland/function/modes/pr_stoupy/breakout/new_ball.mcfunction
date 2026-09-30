@@ -8,7 +8,7 @@
 #			survisland:modes/pr_stoupy/breakout/bonus/new_clone
 #
 
-data merge entity @s {Tags:["survisland.pr_breakout.ball"],Size:0,Invulnerable:1b,Silent:1b,PersistenceRequired:1b,Glowing:1b,equipment:{body:{id:"minecraft:stone",count:1}},drop_chances:{body:0.0f},attributes:[{id:"minecraft:gravity",base:0.0d},{id:"minecraft:bounciness",base:1.0d},{id:"minecraft:air_drag_modifier",base:0.0d},{id:"minecraft:friction_modifier",base:0.0d},{id:"minecraft:scale",base:0.8d},{id:"minecraft:movement_speed",base:0.0d}]}
+data merge entity @s {Tags:["survisland.pr_breakout.ball"],Size:0,Invulnerable:1b,Silent:1b,PersistenceRequired:1b,equipment:{body:{id:"minecraft:stone",count:1}},drop_chances:{body:0.0f},attributes:[{id:"minecraft:gravity",base:0.0d},{id:"minecraft:bounciness",base:1.0d},{id:"minecraft:air_drag_modifier",base:0.0d},{id:"minecraft:friction_modifier",base:0.0d},{id:"minecraft:scale",base:0.8d},{id:"minecraft:movement_speed",base:0.0d}]}
 scoreboard players operation @s survisland.pr_breakout = #pr_breakout_slot survisland.data
 scoreboard players operation @s survisland.pr_breakout.arena = #pr_breakout_arena survisland.data
 scoreboard players operation @s survisland.pr_breakout.color = #pr_breakout_color survisland.data
@@ -28,22 +28,7 @@ execute if score #pr_breakout_color survisland.data matches 12 run data modify e
 execute if score #pr_breakout_color survisland.data matches 13 run data modify entity @s equipment.body.id set value "minecraft:green_concrete"
 execute if score #pr_breakout_color survisland.data matches 14 run data modify entity @s equipment.body.id set value "minecraft:red_concrete"
 execute if score #pr_breakout_color survisland.data matches 15 run data modify entity @s equipment.body.id set value "minecraft:black_concrete"
-execute if score #pr_breakout_color survisland.data matches 0 run team join survisland.breakout.white @s
-execute if score #pr_breakout_color survisland.data matches 1 run team join survisland.breakout.orange @s
-execute if score #pr_breakout_color survisland.data matches 2 run team join survisland.breakout.magenta @s
-execute if score #pr_breakout_color survisland.data matches 3 run team join survisland.breakout.light_blue @s
-execute if score #pr_breakout_color survisland.data matches 4 run team join survisland.breakout.yellow @s
-execute if score #pr_breakout_color survisland.data matches 5 run team join survisland.breakout.lime @s
-execute if score #pr_breakout_color survisland.data matches 6 run team join survisland.breakout.pink @s
-execute if score #pr_breakout_color survisland.data matches 7 run team join survisland.breakout.gray @s
-execute if score #pr_breakout_color survisland.data matches 8 run team join survisland.breakout.light_gray @s
-execute if score #pr_breakout_color survisland.data matches 9 run team join survisland.breakout.cyan @s
-execute if score #pr_breakout_color survisland.data matches 10 run team join survisland.breakout.purple @s
-execute if score #pr_breakout_color survisland.data matches 11 run team join survisland.breakout.blue @s
-execute if score #pr_breakout_color survisland.data matches 12 run team join survisland.breakout.brown @s
-execute if score #pr_breakout_color survisland.data matches 13 run team join survisland.breakout.green @s
-execute if score #pr_breakout_color survisland.data matches 14 run team join survisland.breakout.red @s
-execute if score #pr_breakout_color survisland.data matches 15 run team join survisland.breakout.black @s
+team join survisland.no_collision @s
 scoreboard players operation @s survisland.pr_breakout.speed = #pr_breakout_speed survisland.data
 
 # Launched upward along one of the middle slices, left or right at random

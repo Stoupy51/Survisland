@@ -6,6 +6,7 @@
 # @within	survisland:modes/pr_stoupy/orbit/start [ as @a[tag=!...,distance=..16,predicate=survisland:modes/pr_stoupy/on_start_pad,gamemode=!creative] & at @s ]
 #
 
+function survisland:modes/pr_stoupy/rats/release
 tag @s add survisland.pr_orbit
 scoreboard players operation @s survisland.pr_orbit.arena = #pr_orbit_arena survisland.data
 scoreboard players set @s survisland.pr_orbit.carried 0

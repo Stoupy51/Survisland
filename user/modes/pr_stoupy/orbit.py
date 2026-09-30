@@ -198,7 +198,7 @@ scoreboard players set #{MODE}_state {ns}.data 0
 """)
 
 	write_function(f"{root}/here/set_collector", f"""
-# Joins the arena of the nearest hole, which must be placed first, with a glowing star and a label showing it from afar
+# Joins the arena of the nearest hole, which must be placed first, with a star and a label showing it from afar
 execute unless entity @e[type=minecraft:marker,tag={tag}.hole] run return run tellraw @a[distance=..16] {{"text":"Orbite : place d'abord le trou noir (here/place_black_hole).","color":"red"}}
 scoreboard players operation #{MODE}_arena {ns}.data = @n[type=minecraft:marker,tag={tag}.hole] {tag}.arena
 kill @e[tag={tag}.collector,{arena.same}]
@@ -208,7 +208,7 @@ tellraw @a[distance=..16] {{"text":"Orbite : collector placé (où les fragments
 
 	write_function(f"{root}/place_collector", f"""
 summon minecraft:marker ~ ~ ~ {{Tags:["{tag}.collector","{tag}.new"]}}
-summon minecraft:item_display ~ ~1.5 ~ {{Tags:["{tag}.collector","{tag}.new"],item:{{id:"minecraft:nether_star",count:1}},billboard:"center",glow_color_override:5636095,brightness:{{sky:15,block:15}},transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.5f,1.5f,1.5f]}}}}
+summon minecraft:item_display ~ ~1.5 ~ {{Tags:["{tag}.collector","{tag}.new"],item:{{id:"minecraft:nether_star",count:1}},billboard:"center",brightness:{{sky:15,block:15}},transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.5f,1.5f,1.5f]}}}}
 summon minecraft:text_display ~ ~2.6 ~ {{Tags:["{tag}.collector","{tag}.new"],text:{crt_text("Dépôt des fragments")},billboard:"center",background:0,brightness:{{sky:15,block:15}}}}
 scoreboard players operation @e[tag={tag}.new] {tag}.arena = #{MODE}_arena {ns}.data
 tag @e[tag={tag}.new] remove {tag}.new
@@ -303,6 +303,7 @@ function {root}/next_round
 """)
 
 	write_function(f"{root}/enroll_player", f"""
+function {ns}:{LAB}/rats/release
 tag @s add {tag}
 scoreboard players operation @s {tag}.arena = #{MODE}_arena {ns}.data
 scoreboard players set @s {tag}.carried 0
@@ -369,7 +370,7 @@ tag @s add {tag}.fragment
 $tag @s add {tag}.ring$(ring)
 $scoreboard players set @s {tag}.step $(step)
 scoreboard players operation @s {tag}.arena = #{MODE}_arena {ns}.data
-data merge entity @s {{item:{{id:"minecraft:nether_star",count:1}},billboard:"center",Glowing:1b,glow_color_override:5636095,teleport_duration:1,brightness:{{sky:15,block:15}},transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.8f,0.8f,0.8f]}}}}
+data merge entity @s {{item:{{id:"minecraft:nether_star",count:1}},billboard:"center",teleport_duration:1,brightness:{{sky:15,block:15}},transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.8f,0.8f,0.8f]}}}}
 tag @s add {tag}.new
 execute summon minecraft:interaction run function {root}/new_hitbox
 tag @s remove {tag}.new
@@ -547,7 +548,7 @@ data merge entity @s {{PersistenceRequired:1b,DeathLootTable:"minecraft:empty",s
 	write_function(f"{root}/new_thief", f"""
 function {root}/new_phantom
 tag @s add {tag}.thief
-data merge entity @s {{Glowing:1b,CustomName:{{"text":"Voleur d'étoiles","color":"red"}}}}
+data merge entity @s {{CustomName:{{"text":"Voleur d'étoiles","color":"red"}}}}
 """)
 
 	write_function(f"{root}/phantoms_tick", f"""
