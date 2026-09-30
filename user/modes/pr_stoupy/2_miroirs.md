@@ -18,7 +18,7 @@ Leur reflet apparaît après le déplacement, en face de leur point d'arrivée.
 Les joueurs reçoivent l'item "Figer le reflet" : clic droit pour figer ou libérer leur mannequin.
 Le mannequin subit murs, escaliers et plaques de pression, le puzzle repose sur le décalage accumulé pendant qu'il est figé.
 
-Sortie, command block impulsion. L'étoile va au joueur le plus proche, à 5 blocs au plus, puis ses reflets disparaissent :
+Sortie, command block impulsion. L'étoile va au joueur le plus proche, à 5 blocs au plus, puis ses reflets disparaissent et les deux joueurs retournent sur leur bloc de départ :
 
 ```
 function survisland:modes/pr_stoupy/mirror/here/reward
@@ -30,7 +30,8 @@ Dépannage, sur un bouton. Renvoie les reflets du joueur le plus proche en face 
 function survisland:modes/pr_stoupy/mirror/here/reset
 ```
 
-Fin de la session du joueur le plus proche :
+Fin de la session du joueur le plus proche, qui renvoie aussi les deux joueurs sur leur bloc de départ.
+Ils ne peuvent relancer qu'après en être descendus :
 
 ```
 function survisland:modes/pr_stoupy/mirror/here/stop

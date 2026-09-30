@@ -34,7 +34,16 @@ STORE_TP: str = '$data modify storage survisland:pr_stoupy tp set value "$(tp)"'
 """ Macro line of a start keeping its $(tp) argument for TELEPORT, "" meaning the players stay where they are. """
 
 TELEPORT: str = f"function survisland:{LAB}/teleport"
-""" Command dropping the rats carried by @s then moving it by the tp kept with STORE_TP, to run at @s since the coordinates are relative to the player. """
+""" Command dropping the rats carried by @s, remembering its spot for SEND_BACK, then moving it by the tp kept with STORE_TP, to run at @s since the coordinates are relative to the player. """
+
+SEND_BACK: str = f"function survisland:{LAB}/send_back"
+""" Command moving @s back to the spot where TELEPORT took it, tagged BACK. """
+
+BACK: str = "survisland.pr_stoupy.back"
+""" Tag of a player sent back onto a start pad at the end of its trial, which no start takes until it steps off the pads. """
+
+FORGET_BACK: str = f"tag @a[tag={BACK},predicate=!survisland:{LAB}/on_start_pad] remove {BACK}"
+""" First command of the starts taking back their players, freeing those who stepped off the pads. """
 
 
 # Functions
@@ -89,12 +98,23 @@ def generate_lobby() -> None:
 	write_function(f"{ns}:{LAB}/teleport", f"""
 # Every start runs it, so the rats carried into a trial are put back on the ground before anyone moves
 function {ns}:{LAB}/rats/release
+{"\n".join(f"scoreboard objectives add {ns}.pr_stoupy.{axis} dummy\nexecute store result score @s {ns}.pr_stoupy.{axis} run data get entity @s Pos[{index}] 100" for index, axis in enumerate("xyz"))}
 execute if data storage {ns}:pr_stoupy {{tp:""}} run return 0
 function {ns}:{LAB}/teleport_by with storage {ns}:pr_stoupy
 """)
 
 	write_function(f"{ns}:{LAB}/teleport_by", """
 $tp @s $(tp)
+""")
+
+	write_function(f"{ns}:{LAB}/send_back", f"""
+{"\n".join(f"execute store result storage {ns}:pr_stoupy back.{axis} double 0.01 run scoreboard players get @s {ns}.pr_stoupy.{axis}" for axis in "xyz")}
+function {ns}:{LAB}/send_back_to with storage {ns}:pr_stoupy back
+tag @s add {BACK}
+""")
+
+	write_function(f"{ns}:{LAB}/send_back_to", """
+$tp @s $(x) $(y) $(z)
 """)
 
 	write_function(f"{ns}:{LAB}/solo", f"""

@@ -15,8 +15,11 @@ from stewbeet import Mem, write_function
 from user.utils.player_head import PLAYER_HEAD_LOOT_TABLE
 
 from .shared import (
+	BACK,
+	FORGET_BACK,
 	LAB,
 	ON_START_PAD,
+	SEND_BACK,
 	START_RADIUS,
 	STORE_TP,
 	TELEPORT,
@@ -59,11 +62,12 @@ def generate_start(same_pair: str) -> None:
 	ns: str = Mem.ctx.project_id
 	root: str = f"{ns}:{LAB}/mirror"
 	tag: str = f"{ns}.{MODE}"
-	free_player: str = f"tag=!{tag},distance=..{START_RADIUS},{ON_START_PAD},gamemode=!creative,gamemode=!spectator"
+	free_player: str = f"tag=!{tag},tag=!{BACK},distance=..{START_RADIUS},{ON_START_PAD},gamemode=!creative,gamemode=!spectator"
 	objectives: str = "\n".join(f"scoreboard objectives add {tag}{suffix} dummy" for suffix in ("", ".session", ".x", ".y", ".z", ".plane_x", ".plane_z", ".flip_x", ".flip_z", ".frozen", ".moving", ".yaw", ".pitch", ".sneak"))
 
 	write_function(f"{root}/start", f"""
 # Safe to fire every tick: one session per command block, and only with two free players on the start pads
+{FORGET_BACK}
 execute if entity @e[type=minecraft:marker,tag={tag}.anchor,distance=..1] run return 0
 execute store result score #{MODE}_free {ns}.data if entity @a[{free_player}]
 {require_players(f"#{MODE}_free {ns}.data", 2)}
@@ -319,6 +323,7 @@ def generate_stop(same_session: str) -> None:
 kill @e[type=mannequin,tag={tag}.body,{same_session}]
 kill @e[type=minecraft:marker,tag={tag}.anchor,{same_session}]
 clear @a[tag={tag},{same_session}] *[custom_data~{{survisland:{{mirror_freeze:true}}}}]
+execute as @a[tag={tag},{same_session}] run {SEND_BACK}
 tag @a[tag={tag},{same_session}] remove {tag}
 """)
 
@@ -341,6 +346,7 @@ function {root}/stop_session
 kill @e[type=mannequin,tag={tag}.body]
 kill @e[type=minecraft:marker,tag={tag}.anchor]
 clear @a[tag={tag}] *[custom_data~{{survisland:{{mirror_freeze:true}}}}]
+execute as @a[tag={tag}] run {SEND_BACK}
 tag @a remove {tag}
 schedule clear {root}/tick
 """)

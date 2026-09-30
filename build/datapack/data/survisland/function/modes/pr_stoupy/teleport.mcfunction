@@ -10,6 +10,12 @@
 
 # Every start runs it, so the rats carried into a trial are put back on the ground before anyone moves
 function survisland:modes/pr_stoupy/rats/release
+scoreboard objectives add survisland.pr_stoupy.x dummy
+execute store result score @s survisland.pr_stoupy.x run data get entity @s Pos[0] 100
+scoreboard objectives add survisland.pr_stoupy.y dummy
+execute store result score @s survisland.pr_stoupy.y run data get entity @s Pos[1] 100
+scoreboard objectives add survisland.pr_stoupy.z dummy
+execute store result score @s survisland.pr_stoupy.z run data get entity @s Pos[2] 100
 execute if data storage survisland:pr_stoupy {tp:""} run return 0
 function survisland:modes/pr_stoupy/teleport_by with storage survisland:pr_stoupy
 

@@ -8,8 +8,9 @@
 #
 
 # Safe to fire every tick: one session per command block, and only with two free players on the start pads
+tag @a[tag=survisland.pr_stoupy.back,predicate=!survisland:modes/pr_stoupy/on_start_pad] remove survisland.pr_stoupy.back
 execute if entity @e[type=minecraft:marker,tag=survisland.pr_mirror.anchor,distance=..1] run return 0
-execute store result score #pr_mirror_free survisland.data if entity @a[tag=!survisland.pr_mirror,distance=..16,predicate=survisland:modes/pr_stoupy/on_start_pad,gamemode=!creative,gamemode=!spectator]
+execute store result score #pr_mirror_free survisland.data if entity @a[tag=!survisland.pr_mirror,tag=!survisland.pr_stoupy.back,distance=..16,predicate=survisland:modes/pr_stoupy/on_start_pad,gamemode=!creative,gamemode=!spectator]
 execute unless score #pr_mirror_free survisland.data matches 1.. run return 0
 execute unless score #pr_stoupy_solo survisland.data matches 1 unless score #pr_mirror_free survisland.data matches 2.. run return 0
 scoreboard objectives add survisland.pr_mirror dummy
@@ -39,7 +40,7 @@ execute align xyz positioned ~0.5 ~ ~0.5 summon minecraft:marker run function su
 
 # $(tp) moves each player from where it stands, "" to leave them on the pads
 scoreboard players set #pr_mirror_slot_counter survisland.data 0
-tag @a[tag=!survisland.pr_mirror,distance=..16,predicate=survisland:modes/pr_stoupy/on_start_pad,gamemode=!creative,gamemode=!spectator,limit=2,sort=nearest] add survisland.pr_mirror.entering
+tag @a[tag=!survisland.pr_mirror,tag=!survisland.pr_stoupy.back,distance=..16,predicate=survisland:modes/pr_stoupy/on_start_pad,gamemode=!creative,gamemode=!spectator,limit=2,sort=nearest] add survisland.pr_mirror.entering
 $data modify storage survisland:pr_stoupy tp set value "$(tp)"
 execute as @a[tag=survisland.pr_mirror.entering] at @s run function survisland:modes/pr_stoupy/teleport
 execute as @a[tag=survisland.pr_mirror.entering] at @s run function survisland:modes/pr_stoupy/mirror/enroll_player

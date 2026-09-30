@@ -6,6 +6,7 @@
 # @args		tp (unknown)
 #
 
+tag @a[tag=survisland.pr_stoupy.back,predicate=!survisland:modes/pr_stoupy/on_start_pad] remove survisland.pr_stoupy.back
 # $(tp) moves each player of a new pair from where it stands, "" to leave them on the pads
 $data modify storage survisland:pr_stoupy tp set value "$(tp)"
 
@@ -24,7 +25,7 @@ scoreboard players set #pr_stoupy_duo_speed_back survisland.data 130
 scoreboard players set #pr_stoupy_duo_speed_sneak survisland.data 65
 
 # Nothing happens until enough free players stand here, so a group already playing is never disturbed
-execute store result score #pr_stoupy_duo_free survisland.data if entity @a[tag=!survisland.pr_stoupy_duo,distance=..16,predicate=survisland:modes/pr_stoupy/on_start_pad,gamemode=!creative,gamemode=!spectator]
+execute store result score #pr_stoupy_duo_free survisland.data if entity @a[tag=!survisland.pr_stoupy_duo,tag=!survisland.pr_stoupy.back,distance=..16,predicate=survisland:modes/pr_stoupy/on_start_pad,gamemode=!creative,gamemode=!spectator]
 execute if score #pr_stoupy_duo_free survisland.data matches 0 run return 0
 execute unless score #pr_stoupy_solo survisland.data matches 1 if score #pr_stoupy_duo_free survisland.data matches ..3 run return 0
 

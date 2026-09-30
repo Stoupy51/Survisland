@@ -7,5 +7,5 @@
 #
 
 tp @s ~ ~1 ~
-tag @s add survisland.pr_orbit.back
+tag @s add survisland.pr_stoupy.back
 

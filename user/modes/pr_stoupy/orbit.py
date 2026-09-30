@@ -19,6 +19,8 @@ from dataclasses import dataclass
 from stewbeet import Advancement, JsonDict, Mem, set_json_encoder, write_function
 
 from .shared import (
+	BACK,
+	FORGET_BACK,
 	LAB,
 	ON_START_PAD,
 	START_PAD_BLOCKS,
@@ -272,7 +274,7 @@ def generate_start(arena: Arena) -> None:
 	ns: str = Mem.ctx.project_id
 	root: str = f"{ns}:{LAB}/orbit"
 	tag: str = f"{ns}.{MODE}"
-	free_player: str = f"tag=!{tag},tag=!{tag}.back,distance=..{START_RADIUS},{ON_START_PAD},gamemode=!creative,gamemode=!spectator"
+	free_player: str = f"tag=!{tag},tag=!{BACK},distance=..{START_RADIUS},{ON_START_PAD},gamemode=!creative,gamemode=!spectator"
 	markers_missing: str = "\n".join(
 		f'execute unless entity {arena.marker(name)} run return run title @a[{free_player}] actionbar {{"text":"Orbite : pas de {name} pour ce trou noir, le poser avec here/set_{name}.","color":"red"}}'
 		for name in MARKERS
@@ -282,7 +284,7 @@ def generate_start(arena: Arena) -> None:
 
 	write_function(f"{root}/start", f"""
 # Safe to fire every tick: a player on a start pad joins the room of the nearest hole, the first one starts round 1
-tag @a[tag={tag}.back,{ON_START_PAD.replace("predicate=", "predicate=!")}] remove {tag}.back
+{FORGET_BACK}
 execute unless entity @a[{free_player}] run return 0
 execute unless entity @e[type=minecraft:marker,tag={tag}.hole] run return run title @a[{free_player}] actionbar {{"text":"Orbite : pas de trou noir, le poser avec here/place_black_hole.","color":"red"}}
 execute if entity @n[type=minecraft:marker,tag={tag}.hole,tag={tag}.done] run return fail
@@ -636,12 +638,12 @@ scoreboard players set #{MODE}_state {ns}.data 0
 
 	write_function(f"{root}/return_to_pad", f"""
 # Run at a start pad, which takes back one player, and that player joins again only once off the pads
-execute as @a[tag={tag},tag=!{tag}.back,{arena.same},limit=1] run function {root}/land_on_pad
+execute as @a[tag={tag},tag=!{BACK},{arena.same},limit=1] run function {root}/land_on_pad
 """)
 
 	write_function(f"{root}/land_on_pad", f"""
 tp @s ~ ~1 ~
-tag @s add {tag}.back
+tag @s add {BACK}
 """)
 
 	write_function(f"{root}/stop_hole", f"""

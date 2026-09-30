@@ -21,3 +21,5 @@ attribute @s minecraft:block_break_speed base reset
 
 function survisland:modes/pr_stoupy/duo/body/clear_player
 
+function survisland:modes/pr_stoupy/send_back
+

@@ -10,7 +10,8 @@ Chaque mannequin apparaît sur le Joueur 1 de sa paire, après le `tp`. Sans `tp
 function survisland:modes/pr_stoupy/duo/start {tp:""}
 ```
 
-Arrivée, command block répétitif là où le mannequin doit arriver. Il rend leur corps aux joueurs du mannequin à moins de 3 blocs :
+Arrivée, command block répétitif là où le mannequin doit arriver. Il rend leur corps aux joueurs du mannequin à moins de 3 blocs et les renvoie sur leur bloc de départ.
+Ils ne peuvent relancer qu'après en être descendus :
 
 ```
 function survisland:modes/pr_stoupy/duo/here/stop
