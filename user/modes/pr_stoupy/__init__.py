@@ -39,7 +39,7 @@ Il suffit d'éloigner les copies de plus de 48 blocs (regroupement des collecteu
 		tp amène chaque joueur sur un bloc de sa couleur, lue juste après.
 		level_block : bloc posé au début de chaque niveau (fer, or puis diamant), relatif au command block (ex: "~ ~-2 ~"), retiré au lancement des balles, "" pour aucun.
 			Bloc de redstone au même endroit à la fin de chaque niveau, jusqu'au bloc du niveau suivant.
-		En solo, chaque balle casse les briques rouges, bleu clair, vert clair et jaunes.
+		En solo, le niveau est fini quand il ne reste plus de briques rouges, bleu clair, vert clair et jaunes.
 	breakout/here/next_level                    niveau suivant, cloné pendant le compte à rebours grâce à son bloc de niveau
 	breakout/here/stop
 	execute positioned <coin bas gauche> run function survisland:modes/pr_stoupy/breakout/here/example {width:13,height:20,axis:"z"}

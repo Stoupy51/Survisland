@@ -66,7 +66,7 @@ Il est retiré au lancement des balles, 7 secondes plus tard, et les briques son
 
 - Chaque joueur est assis au centre de sa case sur une monture invisible, et remis dessus s'il descend avec sneak. Sa vitesse baisse de 20 % pour un léger zoom.
 - Gauche et droite déplacent son bumper : 2 blocs de large, 0.5 d'épaisseur. Les bumpers sont répartis sur la rangée selon le nombre de joueurs, le Joueur 1 (le plus proche du coin) en premier.
-- Une balle ne casse que les briques de la couleur de son joueur. Le béton prend deux coups : il devient du verre teinté, puis casse.
+- Chaque balle casse les briques de toutes les couleurs. Le béton prend deux coups : il devient du verre teinté, puis casse.
 - Tous les 15 blocs cassés, la balle qui casse le 15e reçoit un bonus, en alternance : vitesse x1.5, puis une deuxième balle à la même vitesse. Les bonus se cumulent.
 - Une brique violette est cassée par n'importe quelle balle et multiplie par 5 toutes les balles en jeu, dans des directions au hasard, 40 au plus par terrain. Elle ne compte pas pour finir le niveau.
 - Un joueur ne perd que quand sa dernière balle tombe : toutes les balles reviennent alors sur les bumpers, puis repartent après le compte à rebours.

@@ -1,7 +1,7 @@
 """ Trial "Casse-briques": four players, one bumper and one ball each, on a vertical field facing them.
 
 The field is a wall of W x H cells whose bottom row holds the bumpers and whose other rows hold the bricks.
-A ball only breaks the bricks of the color its player stands on, and bounces off everything else.
+Any ball breaks the bricks of any color, and bounces off everything else.
 When the last ball of a player falls under the bumper row, every ball is taken back and relaunched after a countdown.
 Every 15 bricks broken, the ball breaking the last one gets a bonus stacking with the previous ones: half again its speed, or a second ball.
 A level is over once no brick of the players' colors is left, the next one being cloned in during its countdown.
@@ -280,7 +280,7 @@ execute if entity @a[tag={tag},{arena.same},scores={{{tag}.color=-1}}] run retur
 execute as {arena.corner} at @s rotated as @s run function {root}/measure_field
 execute as {arena.corner} at @s run function {root}/place_screen
 
-# Fewer players than needed only happens in solo mode, where every ball breaks every solo color
+# Fewer players than needed only happens in solo mode, where the level is over once no solo color is left
 scoreboard players set #{MODE}_solo {ns}.data 0
 execute if score #{MODE}_free {ns}.data matches ..{PLAYERS - 1} run scoreboard players set #{MODE}_solo {ns}.data 1
 

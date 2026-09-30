@@ -34,7 +34,7 @@ execute if entity @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_st
 execute as @e[type=minecraft:marker,tag=survisland.pr_breakout.corner,predicate=survisland:modes/pr_stoupy/breakout/same_arena,limit=1] at @s rotated as @s run function survisland:modes/pr_stoupy/breakout/measure_field
 execute as @e[type=minecraft:marker,tag=survisland.pr_breakout.corner,predicate=survisland:modes/pr_stoupy/breakout/same_arena,limit=1] at @s run function survisland:modes/pr_stoupy/breakout/place_screen
 
-# Fewer players than needed only happens in solo mode, where every ball breaks every solo color
+# Fewer players than needed only happens in solo mode, where the level is over once no solo color is left
 scoreboard players set #pr_breakout_solo survisland.data 0
 execute if score #pr_breakout_free survisland.data matches ..3 run scoreboard players set #pr_breakout_solo survisland.data 1
 

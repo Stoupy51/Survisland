@@ -149,7 +149,7 @@ execute positioned ~ ~{PROBE_BELOW} ~ run function {root}/vertical_bounce
 	))
 
 	write_function(f"{root}/probe", f"""
-# The first solid block found is the one the ball bounced on, and only breaks if it is a brick of the ball
+# The first solid block found is the one the ball bounced on, and only breaks if it is a brick
 execute if block ~ ~ ~ #minecraft:air run return 0
 scoreboard players set #{MODE}_hit {ns}.data 1
 function {root}/hit_brick
@@ -157,21 +157,16 @@ function {root}/hit_brick
 
 
 def generate_hits(same_arena: str) -> None:
-	""" Write the brick hit, only breaking the bricks of the color of the ball, or any solo color in a solo game. """
+	""" Write the brick hit, any ball breaking a brick of any color. """
 	ns: str = Mem.ctx.project_id
 	root: str = f"{ns}:{LAB}/breakout"
 	tag: str = f"{ns}.{MODE}"
 	players: str = f"@a[tag={tag},{same_arena}]"
-	own_color: str = "\n".join(
-		f"execute if score @s {tag}.color matches {index} if block ~ ~ ~ {color_tag(color)} run return run function {root}/break_brick"
-		for index, color in enumerate(COLORS) if color is not MULTIBALL
-	)
 
 	write_function(f"{root}/hit_brick", f"""
 # Positioned on the probed block, run as the ball that bounced
 execute if block ~ ~ ~ {color_tag(MULTIBALL)} run return run function {root}/bonus/multiball
-execute if score #{MODE}_solo {ns}.data matches 1 if block ~ ~ ~ #{ns}:pr_stoupy/breakout/solo run return run function {root}/break_brick
-{own_color}
+execute if block ~ ~ ~ #{ns}:pr_stoupy/breakout/any run function {root}/break_brick
 """)
 
 	crack: str = "\n".join(f"execute if block ~ ~ ~ minecraft:{color.name}_concrete run return run setblock ~ ~ ~ minecraft:{color.name}_stained_glass" for color in COLORS)

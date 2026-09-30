@@ -45,7 +45,7 @@ function survisland:modes/pr_stoupy/solo {enabled:1}
 function survisland:modes/pr_stoupy/solo {enabled:0}
 ```
 
-- Casse-briques : jouable jusqu'au bout, ta balle casse les briques rouges, bleu clair, vert clair et jaunes (`SOLO_COLORS`, `colors.py`). Ton bumper est seul, au milieu de la rangée.
+- Casse-briques : jouable jusqu'au bout, le niveau est fini quand il ne reste plus de briques rouges, bleu clair, vert clair et jaunes (`SOLO_COLORS`, `colors.py`). Ton bumper est seul, au milieu de la rangée.
 - Orbite : déjà jouable seul, de 1 à 4 joueurs sans mode solo.
 - Miroirs : un seul reflet. La mécanique se teste, un puzzle pensé pour 2 ne sera peut-être pas faisable.
 - Duos : un mannequin pour toi seul, avec toutes les commandes (regard, déplacements, clic, saut).

@@ -52,7 +52,7 @@ MULTIBALL: BrickColor = next(color for color in COLORS if color.name == "purple"
 """ Color of the bricks any ball breaks to multiply every ball in play, never a player color nor a brick to clear. """
 
 SOLO_COLORS: list[BrickColor] = [color for name in ("red", "light_blue", "lime", "yellow") for color in COLORS if color.name == name]
-""" Colors broken by every ball of a game started with fewer players than needed, and of the example booths from the start of the field to its end. """
+""" Colors to clear in a game started with fewer players than needed, and of the example booths from the start of the field to its end. """
 
 
 # Functions
@@ -66,12 +66,11 @@ def color_tag(color: BrickColor) -> str:
 
 
 def generate_color_tags() -> None:
-	""" Write one block tag per color, their union, one per block kind and the solo colors. """
+	""" Write one block tag per color, their union and one per block kind. """
 	ns: str = Mem.ctx.project_id
 	for color in COLORS:
 		Mem.ctx.data[ns].block_tags[f"pr_stoupy/breakout/{color.name}"] = set_json_encoder(BlockTag({"values": color.blocks}))
 	Mem.ctx.data[ns].block_tags["pr_stoupy/breakout/any"] = set_json_encoder(BlockTag({"values": [color_tag(color) for color in COLORS]}))
 	for kind in BRICK_SOUNDS:
 		Mem.ctx.data[ns].block_tags[f"pr_stoupy/breakout/{kind}"] = set_json_encoder(BlockTag({"values": [f"minecraft:{color.name}_{kind}" for color in COLORS]}))
-	Mem.ctx.data[ns].block_tags["pr_stoupy/breakout/solo"] = set_json_encoder(BlockTag({"values": [color_tag(color) for color in SOLO_COLORS]}))
 
