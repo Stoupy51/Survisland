@@ -8,6 +8,9 @@ from .shared import LAB, STAR_ITEM, STARS_NEEDED
 PROFILE: str = "Maarcouscous"
 """ Player whose head the villager wears. """
 
+LAB_RADIUS: int = 100
+""" Radius around the player talking to the villager in which the players holding a star are named. """
+
 
 # Functions
 def main() -> None:
@@ -33,6 +36,10 @@ execute if score #pr_stoupy_stars {ns}.data matches {STARS_NEEDED}.. run return 
 scoreboard players set #pr_stoupy_missing {ns}.data {STARS_NEEDED}
 scoreboard players operation #pr_stoupy_missing {ns}.data -= #pr_stoupy_stars {ns}.data
 tellraw @s ["",{{"text":"<{PROFILE}> ","color":"yellow"}},{{"text":"Rapporte-moi les {STARS_NEEDED} étoiles bleues du laboratoire, toutes ensemble ! Il t'en manque encore "}},{{"score":{{"name":"#pr_stoupy_missing","objective":"{ns}.data"}},"color":"aqua"}},{{"text":"."}}]
+scoreboard objectives add {tag}.stars dummy
+execute as @a[distance=..{LAB_RADIUS}] store result score @s {tag}.stars run clear @s {STAR_ITEM} 0
+execute unless entity @a[distance=..{LAB_RADIUS},scores={{{tag}.stars=1..}}] run tellraw @s ["",{{"text":"<{PROFILE}> ","color":"yellow"}},{{"text":"Personne dans le laboratoire n'a encore d'étoile."}}]
+execute if entity @a[distance=..{LAB_RADIUS},scores={{{tag}.stars=1..}}] run tellraw @s ["",{{"text":"<{PROFILE}> ","color":"yellow"}},{{"text":"Déjà des étoiles sur eux : "}},{{"selector":"@a[distance=..{LAB_RADIUS},scores={{{tag}.stars=1..}}]","color":"aqua"}},{{"text":"."}}]
 playsound minecraft:entity.villager.no neutral @s
 """)
 
