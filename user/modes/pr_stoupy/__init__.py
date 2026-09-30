@@ -14,7 +14,7 @@ Un start prend les joueurs debout sur un bloc d'émeraude (START_PAD_BLOCKS) à 
 Chaque copie d'une salle est une arène indépendante, repérée par ses propres marqueurs : tout se fait en relatif.
 Les fonctions here/ et start agissent sur la salle la plus proche du point d'exécution.
 Les fonctions sans here/ (stop) agissent sur toutes les copies à la fois, elles sont réservées au dépannage.
-Il suffit d'éloigner les copies de plus de 48 blocs (regroupement des cages de rats) pour qu'elles ne se voient jamais.
+Il suffit d'éloigner les copies de plus de 48 blocs (regroupement des collecteurs de rats) pour qu'elles ne se voient jamais.
 
 # Villageois
 	villager/here/place                         pose le villageois ici (execute rotated <yaw> 0 pour l'orienter), libre de se promener
@@ -54,10 +54,12 @@ Il suffit d'éloigner les copies de plus de 48 blocs (regroupement des cages de 
 	orbit/swallow                               à exécuter en tant que le joueur tombé dans le trou noir
 	orbit/here/stop
 
-# 5. Les rats de labo (1 à 8 joueurs, n'importe qui peut aider), les cages d'abord
-	rats/here/place_cage                        une cage, il peut y en avoir plusieurs par salle
+# 5. Les rats de labo (1 à 8 joueurs, n'importe qui peut aider), à placer dans cet ordre
+	Entrer dans n'importe quel trial (start) repose au sol les rats portés, avant toute téléportation.
+	rats/here/place_collector                   bloc à cliquer (gauche ou droit) pour envoyer ses rats dans la cage, un par salle
+	rats/here/place_cage                        où les rats déposés sont relâchés, entouré de blocs invisibles pour qu'ils y restent
+	rats/here/spawn_rats {count:25,radius:10,goal:20}   des rats au hasard, posés au sol dans le rayon, goal à mettre en cage (0 pour tous)
 	rats/here/place_rat {variant:"grey"}        un rat ici : grey, white, brown ou mutant
-	rats/here/spawn_rats {count:16,radius:10}   des rats au hasard, posés au sol dans le rayon
 	rats/here/stop                              retire les rats de la salle, en liberté, portés ou en cage
 
 # Remise à zéro pendant le développement
@@ -104,7 +106,7 @@ def generate_clear() -> None:
 		f"{mirror}.body", f"{mirror}.anchor",
 		f"{breakout}.corner", f"{breakout}.screen", f"{breakout}.bumper", f"{breakout}.ball", f"{breakout}.level_block",
 		f"{orbit}.hole", *(f"{orbit}.{name}" for name in ORBIT_MARKERS), f"{orbit}.sky", f"{orbit}.fragment", f"{orbit}.phantom", f"{orbit}.pad",
-		f"{rats}.rat", f"{rats}.model", f"{rats}.cage", f"{rats}.carried", f"{rats}.caged",
+		f"{rats}.rat", f"{rats}.model", f"{rats}.collector", f"{rats}.cage", f"{rats}.carried",
 		f"{ns}.pr_stoupy.villager",
 	]
 	kills: str = "\n".join(f"$kill @e[tag={entity_tag},distance=..$(radius)]" for entity_tag in entity_tags)
@@ -115,7 +117,7 @@ $execute as @e[type=minecraft:mannequin,tag={duo}.body,distance=..$(radius)] at 
 $execute as @a[tag={mirror},distance=..$(radius)] at @s run function {root}/mirror/here/stop
 $execute as @e[type=minecraft:marker,tag={breakout}.corner,distance=..$(radius)] run function {root}/breakout/stop_corner
 $execute as @e[type=minecraft:marker,tag={orbit}.hole,distance=..$(radius)] run function {root}/orbit/stop_hole
-$execute as @e[type=minecraft:marker,tag={rats}.cage,distance=..$(radius)] at @s run function {root}/rats/here/stop
+$execute as @e[type=minecraft:interaction,tag={rats}.collector,distance=..$(radius)] at @s run function {root}/rats/here/stop
 
 {kills}
 $tellraw @a[distance=..16] {{"text":"Laboratoire : tout est supprimé à $(radius) blocs.","color":"green"}}

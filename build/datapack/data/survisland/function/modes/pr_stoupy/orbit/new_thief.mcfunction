@@ -8,5 +8,5 @@
 
 function survisland:modes/pr_stoupy/orbit/new_phantom
 tag @s add survisland.pr_orbit.thief
-data merge entity @s {Glowing:1b,CustomName:{"text":"Voleur d'étoiles","color":"red"}}
+data merge entity @s {CustomName:{"text":"Voleur d'étoiles","color":"red"}}
 

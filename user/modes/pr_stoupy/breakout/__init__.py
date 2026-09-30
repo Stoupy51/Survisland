@@ -33,8 +33,6 @@ from .colors import (
 	SOLO_COLORS,
 	color_tag,
 	generate_color_tags,
-	team_name,
-	team_setup_lines,
 )
 from .example import main as generate_example
 from .physics import BUMPER_HEIGHT, BUMPER_LENGTH, BUMPER_PERIOD, MODE, main as generate_physics
@@ -67,7 +65,7 @@ MESSAGE_TICKS: int = 40
 STATE: tuple[str, ...] = ("arena", "state", "timer", "level", "clock", "axis", "width", "height", "invert", "death_v", "bumper_top", "remaining", "solo", "broken", "bonus")
 """ Scores of the corner marker holding the state of its arena, each one mirrored by a #pr_breakout_<name> fake player. """
 
-BALL_NBT: str = '{Tags:["survisland.pr_breakout.ball"],Size:0,Invulnerable:1b,Silent:1b,PersistenceRequired:1b,Glowing:1b,equipment:{body:{id:"minecraft:stone",count:1}},drop_chances:{body:0.0f},attributes:[{id:"minecraft:gravity",base:0.0d},{id:"minecraft:bounciness",base:1.0d},{id:"minecraft:air_drag_modifier",base:0.0d},{id:"minecraft:friction_modifier",base:0.0d},{id:"minecraft:scale",base:0.8d},{id:"minecraft:movement_speed",base:0.0d}]}'
+BALL_NBT: str = '{Tags:["survisland.pr_breakout.ball"],Size:0,Invulnerable:1b,Silent:1b,PersistenceRequired:1b,equipment:{body:{id:"minecraft:stone",count:1}},drop_chances:{body:0.0f},attributes:[{id:"minecraft:gravity",base:0.0d},{id:"minecraft:bounciness",base:1.0d},{id:"minecraft:air_drag_modifier",base:0.0d},{id:"minecraft:friction_modifier",base:0.0d},{id:"minecraft:scale",base:0.8d},{id:"minecraft:movement_speed",base:0.0d}]}'
 """ A tiny sulfur cube, bouncing without any loss: gravity, drag and friction are zeroed and every bounce keeps the full speed. """
 
 ZOOM: str = "survisland:pr_breakout_zoom"
@@ -120,7 +118,6 @@ def generate_setup(arena: Arena) -> None:
 	write_function(f"{root}/here/setup", f"""
 # Positioned on the bottom left cell of the field, width and height in blocks, axis along which the field extends
 function {root}/objectives
-{team_setup_lines()}
 execute as @e[type=minecraft:marker,tag={tag}.corner,distance=..{SETUP_RADIUS}] run function {root}/forget_arena
 
 scoreboard players add #{MODE}_arena_counter {ns}.data 1
@@ -502,7 +499,6 @@ def generate_countdown(arena: Arena) -> None:
 		for second in range(1, COUNTDOWN + 1)
 	)
 	ball_blocks: str = "\n".join(f'execute if score #{MODE}_color {ns}.data matches {index} run data modify entity @s equipment.body.id set value "{color.blocks[0]}"' for index, color in enumerate(COLORS))
-	ball_teams: str = "\n".join(f"execute if score #{MODE}_color {ns}.data matches {index} run team join {team_name(color)} @s" for index, color in enumerate(COLORS))
 
 	write_function(f"{root}/countdown_tick", f"""
 scoreboard players remove #{MODE}_timer {ns}.data 1
@@ -539,7 +535,7 @@ scoreboard players operation @s {tag} = #{MODE}_slot {ns}.data
 scoreboard players operation @s {tag}.arena = #{MODE}_arena {ns}.data
 scoreboard players operation @s {tag}.color = #{MODE}_color {ns}.data
 {ball_blocks}
-{ball_teams}
+team join {ns}.no_collision @s
 scoreboard players operation @s {tag}.speed = #{MODE}_speed {ns}.data
 
 # Launched upward along one of the middle slices, left or right at random

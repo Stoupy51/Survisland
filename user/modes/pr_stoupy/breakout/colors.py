@@ -12,8 +12,6 @@ class BrickColor:
 	""" One dye color a player can stand on, with the blocks counting as its bricks. """
 	name: str
 	""" Dye name, prefix of every block of the color (ex: "light_blue"). """
-	team_color: str
-	""" Chat color of the team giving its glow to the ball. """
 
 	@property
 	def blocks(self) -> list[str]:
@@ -31,22 +29,22 @@ BRICK_SOUNDS: dict[str, str] = {
 """ Block kinds a brick of each color can be made of, the first one being the bumper, with the sound of their break. """
 
 COLORS: list[BrickColor] = [
-	BrickColor(name="white",      team_color="white"),
-	BrickColor(name="orange",     team_color="gold"),
-	BrickColor(name="magenta",    team_color="light_purple"),
-	BrickColor(name="light_blue", team_color="aqua"),
-	BrickColor(name="yellow",     team_color="yellow"),
-	BrickColor(name="lime",       team_color="green"),
-	BrickColor(name="pink",       team_color="light_purple"),
-	BrickColor(name="gray",       team_color="dark_gray"),
-	BrickColor(name="light_gray", team_color="gray"),
-	BrickColor(name="cyan",       team_color="dark_aqua"),
-	BrickColor(name="purple",     team_color="dark_purple"),
-	BrickColor(name="blue",       team_color="blue"),
-	BrickColor(name="brown",      team_color="gold"),
-	BrickColor(name="green",      team_color="dark_green"),
-	BrickColor(name="red",        team_color="red"),
-	BrickColor(name="black",      team_color="black"),
+	BrickColor(name="white"),
+	BrickColor(name="orange"),
+	BrickColor(name="magenta"),
+	BrickColor(name="light_blue"),
+	BrickColor(name="yellow"),
+	BrickColor(name="lime"),
+	BrickColor(name="pink"),
+	BrickColor(name="gray"),
+	BrickColor(name="light_gray"),
+	BrickColor(name="cyan"),
+	BrickColor(name="purple"),
+	BrickColor(name="blue"),
+	BrickColor(name="brown"),
+	BrickColor(name="green"),
+	BrickColor(name="red"),
+	BrickColor(name="black"),
 ]
 """ Every color, its index in this list being the color score of players and balls. """
 
@@ -76,21 +74,4 @@ def generate_color_tags() -> None:
 	for kind in BRICK_SOUNDS:
 		Mem.ctx.data[ns].block_tags[f"pr_stoupy/breakout/{kind}"] = set_json_encoder(BlockTag({"values": [f"minecraft:{color.name}_{kind}" for color in COLORS]}))
 	Mem.ctx.data[ns].block_tags["pr_stoupy/breakout/solo"] = set_json_encoder(BlockTag({"values": [color_tag(color) for color in SOLO_COLORS]}))
-
-
-def team_name(color: BrickColor) -> str:
-	""" Team giving its glow color to the balls of a color
-
-	>>> team_name(COLORS[14])
-	'survisland.breakout.red'
-	"""
-	return f"survisland.breakout.{color.name}"
-
-
-def team_setup_lines() -> str:
-	""" Commands creating one team per color: the glow of a ball takes its color, and balls never push each other. """
-	return "\n".join(
-		f"team add {team_name(color)}\nteam modify {team_name(color)} color {color.team_color}\nteam modify {team_name(color)} collisionRule never"
-		for color in COLORS
-	)
 

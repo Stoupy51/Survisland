@@ -3,7 +3,8 @@
 #
 # @executed	as @a[scores={survisland.pr_rats.carried=1..}]
 #
-# @within	survisland:modes/pr_stoupy/rats/here/stop [ as @a[scores={survisland.pr_rats.carried=1..}] ]
+# @within	survisland:modes/pr_stoupy/rats/victory [ as @a[scores={survisland.pr_rats.carried=1..}] ]
+#			survisland:modes/pr_stoupy/rats/here/stop [ as @a[scores={survisland.pr_rats.carried=1..}] ]
 #
 
 scoreboard players operation #pr_rats_id survisland.data = @s survisland.pr_rats.id

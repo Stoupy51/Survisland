@@ -34,7 +34,7 @@ STORE_TP: str = '$data modify storage survisland:pr_stoupy tp set value "$(tp)"'
 """ Macro line of a start keeping its $(tp) argument for TELEPORT, "" meaning the players stay where they are. """
 
 TELEPORT: str = f"function survisland:{LAB}/teleport"
-""" Command moving @s by the tp kept with STORE_TP, to run at @s since the coordinates are relative to the player. """
+""" Command dropping the rats carried by @s then moving it by the tp kept with STORE_TP, to run at @s since the coordinates are relative to the player. """
 
 
 # Functions
@@ -87,6 +87,8 @@ def generate_lobby() -> None:
 	}}), max_level=-1)
 
 	write_function(f"{ns}:{LAB}/teleport", f"""
+# Every start runs it, so the rats carried into a trial are put back on the ground before anyone moves
+function {ns}:{LAB}/rats/release
 execute if data storage {ns}:pr_stoupy {{tp:""}} run return 0
 function {ns}:{LAB}/teleport_by with storage {ns}:pr_stoupy
 """)

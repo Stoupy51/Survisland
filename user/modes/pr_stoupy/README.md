@@ -72,7 +72,7 @@ Refaire le setup, après un `here/clear` ou dans la deuxième copie, revient alo
 ## Deux copies
 
 Chaque copie d'une salle est une arène indépendante, tout est relatif à ses marqueurs.
-Deux copies de 100x100 séparées d'environ 200 blocs ne se voient jamais : le plus grand rayon de recherche est de 48 blocs (regroupement des cages de rats).
+Deux copies de 100x100 séparées d'environ 200 blocs ne se voient jamais : le plus grand rayon de recherche est de 48 blocs (regroupement des collecteurs de rats).
 
 Pour la deuxième copie, cloner **les blocs seulement** : `/clone`, ou des structure blocks avec "Inclure les entités" désactivé.
 Les marqueurs portent l'identifiant de leur arène, une copie de marqueurs ferait jouer les deux copies sur la même arène.
@@ -102,7 +102,7 @@ Les messages de fin sont à brancher sur ce bloc.
 ## Remise à zéro (développement)
 
 Arrête tous les trials dans le rayon et rend leur état aux joueurs (corps, attributs, items, tags).
-Supprime ensuite toutes les entités du labo dans ce rayon, setup compris : villageois, marqueurs, cages, rats, écran, trou noir.
+Supprime ensuite toutes les entités du labo dans ce rayon, setup compris : villageois, marqueurs, collecteurs et cages, rats, écran, trou noir.
 Les blocs ne sont pas touchés. Rien ne sort du rayon, donc la deuxième copie n'est pas touchée si elle est plus loin :
 
 ```

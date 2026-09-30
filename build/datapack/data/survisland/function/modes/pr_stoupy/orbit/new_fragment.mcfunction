@@ -81,7 +81,7 @@ tag @s add survisland.pr_orbit.fragment
 $tag @s add survisland.pr_orbit.ring$(ring)
 $scoreboard players set @s survisland.pr_orbit.step $(step)
 scoreboard players operation @s survisland.pr_orbit.arena = #pr_orbit_arena survisland.data
-data merge entity @s {item:{id:"minecraft:nether_star",count:1},billboard:"center",Glowing:1b,glow_color_override:5636095,teleport_duration:1,brightness:{sky:15,block:15},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.8f,0.8f,0.8f]}}
+data merge entity @s {item:{id:"minecraft:nether_star",count:1},billboard:"center",teleport_duration:1,brightness:{sky:15,block:15},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.8f,0.8f,0.8f]}}
 tag @s add survisland.pr_orbit.new
 execute summon minecraft:interaction run function survisland:modes/pr_stoupy/orbit/new_hitbox
 tag @s remove survisland.pr_orbit.new
