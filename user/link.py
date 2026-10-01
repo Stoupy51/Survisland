@@ -38,7 +38,7 @@ def beet_default(ctx: Context) -> None:
 	del OFFICIAL_LIBS["smithed.actionbar"]
 
 	# Force enable a all modules from Bookshelf (https://docs.mcbookshelf.dev/en/latest/modules/dump.html)
-	for module in OFFICIAL_LIBS.keys():
+	for module in OFFICIAL_LIBS:
 		if module.startswith(("bs.", "smithed.")) or module in ("cinemalya",):
 			official_lib_used(module)
 
