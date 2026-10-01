@@ -2,7 +2,6 @@
 	"values": [
 		{"id": "#smithed.custom_block:load","required": false},
 		{"id": "#smithed.crafter:load","required": false},
-		{"id": "#smithed.actionbar:load","required": false},
 		{"id": "#furnace_nbt_recipes:load","required": false},
 		{"id": "#cinemalya:load","required": false},
 		{"id": "#bs.load:load","required": false},

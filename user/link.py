@@ -34,9 +34,12 @@ def beet_default(ctx: Context) -> None:
 	generate_all_together()
 	generate_pr_stoupy()
 
+	# Vendored in libs/datapack with its sleep messages fixed for 26.2, where "interpret" no longer parses JSON strings
+	del OFFICIAL_LIBS["smithed.actionbar"]
+
 	# Force enable a all modules from Bookshelf (https://docs.mcbookshelf.dev/en/latest/modules/dump.html)
 	for module in OFFICIAL_LIBS.keys():
-		if module.startswith("bs.") or module.startswith("smithed.") or module in ("cinemalya",):
+		if module.startswith(("bs.", "smithed.")) or module in ("cinemalya",):
 			official_lib_used(module)
 
 	# Delete quick actions (manual)
