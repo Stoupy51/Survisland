@@ -1,7 +1,7 @@
 
 #> survisland:modes/shiren_trials/golf/start
 #
-# @within	???
+# @within	(public)
 #
 
 # Stop if the offhand and latest hotbar slot are not empty

@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/orbit/here/set_collector
 #
-# @within	???
+# @within	(public)
 #
 
 # Joins the arena of the nearest hole, which must be placed first, with a star and a label showing it from afar

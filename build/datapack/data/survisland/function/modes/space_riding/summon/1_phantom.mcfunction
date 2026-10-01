@@ -1,7 +1,7 @@
 
 #> survisland:modes/space_riding/summon/1_phantom
 #
-# @within	???
+# @within	(public)
 #
 
 # Configure the summons

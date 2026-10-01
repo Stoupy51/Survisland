@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/duo/set_phase/laboratoire
 #
-# @within	???
+# @within	(public)
 #
 
 # Every group at once, use the here/ version to handle a single one

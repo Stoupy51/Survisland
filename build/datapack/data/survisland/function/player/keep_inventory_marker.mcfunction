@@ -1,7 +1,7 @@
 
 #> survisland:player/keep_inventory_marker
 #
-# @within	???
+# @within	(public)
 #
 
 # ID System

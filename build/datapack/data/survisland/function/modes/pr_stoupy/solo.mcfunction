@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/solo
 #
-# @within	???
+# @within	(public)
 #
 # @args		enabled (unknown)
 #

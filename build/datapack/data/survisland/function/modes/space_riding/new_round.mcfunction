@@ -1,7 +1,7 @@
 
 #> survisland:modes/space_riding/new_round
 #
-# @within	???
+# @within	(public)
 #
 
 # Launch first round

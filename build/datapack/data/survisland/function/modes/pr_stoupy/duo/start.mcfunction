@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/duo/start
 #
-# @within	???
+# @within	(public)
 #
 # @args		tp (unknown)
 #

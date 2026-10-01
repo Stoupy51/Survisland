@@ -1,7 +1,7 @@
 
 #> survisland:modes/space_riding/advancements/killed_vehicle
 #
-# @within	???
+# @within	(public)
 #
 
 # Revoke advancement

@@ -1,7 +1,7 @@
 
 #> survisland:modes/minecraft_craft/add_jinzi
 #
-# @within	???
+# @within	(public)
 #
 
 scoreboard players add #mJinzi survisland.data 1

@@ -1,7 +1,7 @@
 
 #> survisland:modes/all_together/stop
 #
-# @within	???
+# @within	(public)
 #
 
 # Stop every group still running

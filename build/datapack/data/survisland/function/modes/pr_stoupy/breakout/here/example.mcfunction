@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/breakout/here/example
 #
-# @within	???
+# @within	(public)
 #
 # @args		width (unknown)
 #			height (unknown)

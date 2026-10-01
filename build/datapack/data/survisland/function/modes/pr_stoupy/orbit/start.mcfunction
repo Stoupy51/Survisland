@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/orbit/start
 #
-# @within	???
+# @within	(public)
 #
 
 # Safe to fire every tick: a player on a start pad joins the room of the nearest hole, the first one starts round 1

@@ -1,7 +1,7 @@
 
 #> survisland:modes/shiren_trials/race/stop
 #
-# @within	???
+# @within	(public)
 #
 
 # If time is beaten, stop race (2280 ticks = 1m54s to beat)

@@ -1,7 +1,7 @@
 
 #> survisland:modes/take_that_pig/advancements/killed_by_player
 #
-# @within	???
+# @within	(public)
 #
 
 advancement revoke @s only survisland:take_that_pig/killed_by_player

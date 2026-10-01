@@ -1,7 +1,7 @@
 
 #> survisland:modes/minecart_lever/advancements/powered_false
 #
-# @within	???
+# @within	(public)
 #
 
 advancement revoke @s only survisland:minecart_lever/powered_false

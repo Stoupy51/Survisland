@@ -1,7 +1,8 @@
 
 #> survisland:modes/pr_stoupy/rats/summon/white
 #
-# @within	survisland:modes/pr_stoupy/rats/spawn_loop
+# @within	survisland:modes/pr_stoupy/rats/here/place_rat
+#			survisland:modes/pr_stoupy/rats/spawn_loop
 #			survisland:modes/pr_stoupy/rats/release_one
 #
 

@@ -1,7 +1,7 @@
 
 #> survisland:modes/space_riding/summon/5_bat
 #
-# @within	???
+# @within	(public)
 #
 
 # Configure the summons

@@ -1,7 +1,7 @@
 
 #> survisland:modes/shiren_trials/golf/stop
 #
-# @within	???
+# @within	(public)
 #
 
 # If record is beaten, stop golf

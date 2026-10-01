@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/mirror/start
 #
-# @within	???
+# @within	(public)
 #
 # @args		axis (unknown)
 #			tp (unknown)

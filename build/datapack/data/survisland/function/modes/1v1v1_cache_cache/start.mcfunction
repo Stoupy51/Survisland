@@ -1,7 +1,7 @@
 
 #> survisland:modes/1v1v1_cache_cache/start
 #
-# @within	???
+# @within	(public)
 #
 
 # Config example:

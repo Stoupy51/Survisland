@@ -1,7 +1,7 @@
 
 #> survisland:modes/marcus_truc_s9/start
 #
-# @within	???
+# @within	(public)
 #
 
 ##Fonction executée lors du lancement de la partie

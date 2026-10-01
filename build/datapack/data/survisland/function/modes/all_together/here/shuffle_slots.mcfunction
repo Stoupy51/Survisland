@@ -1,7 +1,7 @@
 
 #> survisland:modes/all_together/here/shuffle_slots
 #
-# @within	???
+# @within	(public)
 #
 
 # Only the group whose mannequin is the nearest one

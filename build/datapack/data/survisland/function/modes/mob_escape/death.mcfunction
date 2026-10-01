@@ -1,7 +1,7 @@
 
 #> survisland:modes/mob_escape/death
 #
-# @within	???
+# @within	(public)
 #
 
 gamemode spectator @s[gamemode=!spectator]

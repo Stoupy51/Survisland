@@ -1,7 +1,7 @@
 
 #> survisland:modes/shiren_trials/start
 #
-# @within	???
+# @within	(public)
 #
 
 # Schedules

@@ -1,7 +1,7 @@
 
 #> survisland:modes/shiren_trials/race/start
 #
-# @within	???
+# @within	(public)
 #
 
 # Start race (Shopping Kart model, force rotation, summon new kart)

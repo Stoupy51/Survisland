@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/orbit/here/place_black_hole
 #
-# @within	???
+# @within	(public)
 #
 # @args		scale (unknown)
 #

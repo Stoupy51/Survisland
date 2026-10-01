@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/duo/here/set_phase/laboratoire
 #
-# @within	???
+# @within	(public)
 #
 
 # Only the group whose mannequin is the nearest one

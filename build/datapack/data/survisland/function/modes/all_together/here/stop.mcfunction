@@ -1,7 +1,7 @@
 
 #> survisland:modes/all_together/here/stop
 #
-# @within	???
+# @within	(public)
 #
 
 # Only the group whose mannequin is the nearest one

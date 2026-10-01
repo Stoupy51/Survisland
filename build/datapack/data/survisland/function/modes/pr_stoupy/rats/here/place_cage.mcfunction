@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/rats/here/place_cage
 #
-# @within	???
+# @within	(public)
 #
 
 # Replaces the cage of the arena of the nearest collector, the rats dropped there are let loose on this block

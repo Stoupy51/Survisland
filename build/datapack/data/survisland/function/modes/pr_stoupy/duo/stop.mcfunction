@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/duo/stop
 #
-# @within	???
+# @within	(public)
 #
 
 # Stop every group still running

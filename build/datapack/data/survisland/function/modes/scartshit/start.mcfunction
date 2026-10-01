@@ -1,7 +1,7 @@
 
 #> survisland:modes/scartshit/start
 #
-# @within	???
+# @within	(public)
 #
 
 ##Fonction executée lors du lancement de la partie

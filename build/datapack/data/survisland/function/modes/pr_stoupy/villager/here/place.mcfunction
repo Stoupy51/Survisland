@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/villager/here/place
 #
-# @within	???
+# @within	(public)
 #
 
 # Replace any villager of the lab spawned here, facing the rotation of the caller, then free to wander off and be found again

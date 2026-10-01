@@ -1,7 +1,7 @@
 
 #> survisland:modes/stoup_line/finished
 #
-# @within	???
+# @within	(public)
 #
 
 tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" "},{"selector":"@s"},{"text":" vient de terminer l'épreuve !"}]

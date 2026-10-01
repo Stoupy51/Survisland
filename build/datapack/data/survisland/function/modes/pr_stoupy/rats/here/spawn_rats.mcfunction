@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/rats/here/spawn_rats
 #
-# @within	???
+# @within	(public)
 #
 # @args		goal (unknown)
 #			count (unknown)

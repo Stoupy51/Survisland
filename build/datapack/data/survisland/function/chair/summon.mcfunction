@@ -1,7 +1,7 @@
 
 #> survisland:chair/summon
 #
-# @within	???
+# @within	(public)
 #
 
 data modify storage survisland:temp Rotation set from entity @s Rotation

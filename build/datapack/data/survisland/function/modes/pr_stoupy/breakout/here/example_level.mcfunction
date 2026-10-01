@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/breakout/here/example_level
 #
-# @within	???
+# @within	(public)
 #
 
 # Refills the bricks of the nearest field, then here/next_level goes on with them

@@ -1,7 +1,7 @@
 
 #> survisland:modes/space_riding/summon/4_bee
 #
-# @within	???
+# @within	(public)
 #
 
 # Configure the summons

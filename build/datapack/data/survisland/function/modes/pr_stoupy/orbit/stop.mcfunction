@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/orbit/stop
 #
-# @within	???
+# @within	(public)
 #
 
 # Every room, everywhere

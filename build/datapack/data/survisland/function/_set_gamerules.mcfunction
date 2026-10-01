@@ -1,7 +1,7 @@
 
 #> survisland:_set_gamerules
 #
-# @within	???
+# @within	(public)
 #
 
 # Set gamerules for Survisland

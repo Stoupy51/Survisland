@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/mirror/here/reward
 #
-# @within	???
+# @within	(public)
 #
 
 # One shot at the exit: the nearest player gets the star, then the reflections of its session go away

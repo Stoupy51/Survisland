@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/rats/here/place_rat
 #
-# @within	???
+# @within	(public)
 #
 # @args		variant (unknown)
 #

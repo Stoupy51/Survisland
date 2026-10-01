@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/breakout/here/stop
 #
-# @within	???
+# @within	(public)
 #
 
 # The nearest field only

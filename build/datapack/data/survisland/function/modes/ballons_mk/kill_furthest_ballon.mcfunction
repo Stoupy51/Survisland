@@ -1,7 +1,7 @@
 
 #> survisland:modes/ballons_mk/kill_furthest_ballon
 #
-# @within	???
+# @within	(public)
 #
 
 execute unless predicate bs.id:has_suid run return fail

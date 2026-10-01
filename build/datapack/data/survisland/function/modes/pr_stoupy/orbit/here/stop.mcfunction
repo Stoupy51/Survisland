@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/orbit/here/stop
 #
-# @within	???
+# @within	(public)
 #
 
 # The room of the nearest hole only

@@ -1,7 +1,7 @@
 
 #> survisland:modes/layers/kill
 #
-# @within	???
+# @within	(public)
 #
 
 advancement revoke @s only survisland:killed_player_layers

@@ -1,7 +1,7 @@
 
 #> survisland:modes/shiren_trials/stop
 #
-# @within	???
+# @within	(public)
 #
 
 # Clear schedules

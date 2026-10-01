@@ -1,7 +1,7 @@
 
 #> survisland:modes/confiance_aveugle/start
 #
-# @within	???
+# @within	(public)
 #
 
 ##Fonction executée lors du lancement de la partie

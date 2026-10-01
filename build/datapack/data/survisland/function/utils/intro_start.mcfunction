@@ -1,7 +1,7 @@
 
 #> survisland:utils/intro_start
 #
-# @within	???
+# @within	(public)
 #
 
 scoreboard players set #intro survisland.data 0

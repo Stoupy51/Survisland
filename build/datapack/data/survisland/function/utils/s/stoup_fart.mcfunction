@@ -1,7 +1,7 @@
 
 #> survisland:utils/s/stoup_fart
 #
-# @within	???
+# @within	(public)
 #
 
 title @s times 0 0 40

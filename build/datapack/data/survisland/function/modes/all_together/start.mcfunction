@@ -1,7 +1,7 @@
 
 #> survisland:modes/all_together/start
 #
-# @within	???
+# @within	(public)
 #
 
 # Objectives of the mode, all but the first one are carried by the mannequins themselves

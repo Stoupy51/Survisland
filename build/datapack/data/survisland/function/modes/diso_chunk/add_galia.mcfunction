@@ -1,7 +1,7 @@
 
 #> survisland:modes/diso_chunk/add_galia
 #
-# @within	???
+# @within	(public)
 #
 
 scoreboard players add #mGalia survisland.data 1

@@ -1,7 +1,7 @@
 
 #> survisland:modes/space_riding/summon/2_blaze
 #
-# @within	???
+# @within	(public)
 #
 
 # Configure the summons

@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/here/clear
 #
-# @within	???
+# @within	(public)
 #
 # @args		radius (unknown)
 #

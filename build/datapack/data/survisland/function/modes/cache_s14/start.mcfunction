@@ -1,7 +1,7 @@
 
 #> survisland:modes/cache_s14/start
 #
-# @within	???
+# @within	(public)
 #
 
 ##Fonction executée lors du lancement de la partie

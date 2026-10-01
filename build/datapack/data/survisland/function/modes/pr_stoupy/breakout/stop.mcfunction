@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/breakout/stop
 #
-# @within	???
+# @within	(public)
 #
 
 # Every field, everywhere

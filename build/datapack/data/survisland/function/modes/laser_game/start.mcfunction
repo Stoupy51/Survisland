@@ -1,7 +1,7 @@
 
 #> survisland:modes/laser_game/start
 #
-# @within	???
+# @within	(public)
 #
 
 ## Fonction executée lors du lancement de la partie

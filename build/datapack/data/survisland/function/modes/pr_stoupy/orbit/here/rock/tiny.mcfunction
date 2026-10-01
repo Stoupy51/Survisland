@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/orbit/here/rock/tiny
 #
-# @within	???
+# @within	(public)
 #
 
 # A ball of dark stones centered here, whose outer layer is drawn at random so no two rocks are alike

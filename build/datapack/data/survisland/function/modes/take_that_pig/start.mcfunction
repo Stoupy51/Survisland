@@ -1,7 +1,7 @@
 
 #> survisland:modes/take_that_pig/start
 #
-# @within	???
+# @within	(public)
 #
 
 ##Fonction executée lors du lancement de la partie

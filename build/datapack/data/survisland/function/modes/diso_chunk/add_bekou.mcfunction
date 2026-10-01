@@ -1,7 +1,7 @@
 
 #> survisland:modes/diso_chunk/add_bekou
 #
-# @within	???
+# @within	(public)
 #
 
 scoreboard players add #mBekou survisland.data 1

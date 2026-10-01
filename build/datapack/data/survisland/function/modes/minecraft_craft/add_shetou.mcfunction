@@ -1,7 +1,7 @@
 
 #> survisland:modes/minecraft_craft/add_shetou
 #
-# @within	???
+# @within	(public)
 #
 
 scoreboard players add #mShetou survisland.data 1

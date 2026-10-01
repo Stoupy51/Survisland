@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/mirror/here/reset
 #
-# @within	???
+# @within	(public)
 #
 
 # The session of the nearest player of the trial: every reflection goes back in front of its player, released

@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/duo/here/stop
 #
-# @within	???
+# @within	(public)
 #
 
 # Only the group whose mannequin is the nearest one

@@ -1,7 +1,7 @@
 
 #> survisland:modes/skateboard/stop
 #
-# @within	???
+# @within	(public)
 #
 
 schedule clear survisland:modes/skateboard/tick

@@ -1,7 +1,7 @@
 
 #> survisland:modes/find_that_button/start
 #
-# @within	???
+# @within	(public)
 #
 
 ##Fonction executée lors du lancement de la partie

@@ -1,7 +1,7 @@
 
 #> survisland:modes/space_riding/summon/3_chicken
 #
-# @within	???
+# @within	(public)
 #
 
 # Configure the summons

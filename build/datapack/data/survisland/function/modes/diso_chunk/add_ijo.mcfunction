@@ -1,7 +1,7 @@
 
 #> survisland:modes/diso_chunk/add_ijo
 #
-# @within	???
+# @within	(public)
 #
 
 scoreboard players add #mIjo survisland.data 1

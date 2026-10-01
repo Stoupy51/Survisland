@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/rats/stop
 #
-# @within	???
+# @within	(public)
 #
 
 # Every arena, everywhere

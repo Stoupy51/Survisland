@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/rats/here/place_collector
 #
-# @within	???
+# @within	(public)
 #
 
 # Replaces the collector of an arena within 48 blocks, or opens a new arena

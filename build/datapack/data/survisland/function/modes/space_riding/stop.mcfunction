@@ -1,7 +1,7 @@
 
 #> survisland:modes/space_riding/stop
 #
-# @within	???
+# @within	(public)
 #
 
 scoreboard objectives remove survisland.temp.sidebar

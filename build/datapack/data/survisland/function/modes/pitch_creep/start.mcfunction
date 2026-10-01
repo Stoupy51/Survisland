@@ -1,7 +1,7 @@
 
 #> survisland:modes/pitch_creep/start
 #
-# @within	???
+# @within	(public)
 #
 
 ##Fonction executée lors du lancement de la partie

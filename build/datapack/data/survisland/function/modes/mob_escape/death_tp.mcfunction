@@ -1,7 +1,7 @@
 
 #> survisland:modes/mob_escape/death_tp
 #
-# @within	???
+# @within	(public)
 #
 
 scoreboard players reset @s survisland.temp.death_count

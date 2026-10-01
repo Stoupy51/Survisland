@@ -1,7 +1,7 @@
 
 #> survisland:modes/quake/stop
 #
-# @within	???
+# @within	(public)
 #
 
 schedule clear survisland:modes/quake/tick

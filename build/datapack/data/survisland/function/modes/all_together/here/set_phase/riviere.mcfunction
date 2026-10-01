@@ -1,7 +1,7 @@
 
 #> survisland:modes/all_together/here/set_phase/riviere
 #
-# @within	???
+# @within	(public)
 #
 
 # Only the group whose mannequin is the nearest one

@@ -1,7 +1,7 @@
 
 #> survisland:modes/laser_game/stop
 #
-# @within	???
+# @within	(public)
 #
 
 kill @e[tag=survisland.laser_game.base]

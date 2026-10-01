@@ -1,7 +1,7 @@
 
 #> survisland:modes/cache_s12/adv/killed_player
 #
-# @within	???
+# @within	(public)
 #
 
 advancement revoke @s only survisland:killed_player_cache_cache

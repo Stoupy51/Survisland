@@ -1,7 +1,7 @@
 
 #> survisland:modes/all_together/set_phase/riviere
 #
-# @within	???
+# @within	(public)
 #
 
 # Every group at once, use the here/ version to handle a single one

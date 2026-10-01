@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/orbit/swallow
 #
-# @within	???
+# @within	(public)
 #
 
 # Called on a player who fell into the black hole, from any command block
