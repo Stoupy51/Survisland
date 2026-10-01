@@ -1,0 +1,42 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:painting",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:painting/variant": "survisland:cadre_sulfur_cube",
+								"minecraft:item_model": "survisland:cadre_sulfur_cube",
+								"minecraft:item_name": {
+									"text": "Cadre Sulfur Cube"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},
+										{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}
+									]
+								],
+								"minecraft:custom_data": {
+									"survisland": {
+										"cadre_sulfur_cube": true
+									},
+									"smithed": {
+										"id": "survisland:cadre_sulfur_cube",
+										"origin": "survisland",
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

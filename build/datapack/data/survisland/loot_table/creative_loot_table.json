@@ -98,6 +98,7 @@
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/cadre_tata_saut"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/cadre_tata_tue"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/cadre_justeprix"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/cadre_sulfur_cube"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/tv_cuisine"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/tv_dessin"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "survisland:i/tv_eteinte"}]},

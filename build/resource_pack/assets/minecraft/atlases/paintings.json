@@ -1,0 +1,29 @@
+{
+	"sources": [
+		{"type": "minecraft:single","resource": "survisland:item/mariage_painting","sprite": "survisland:painting/mariage_painting"},
+		{"type": "minecraft:single","resource": "survisland:item/knights_painting","sprite": "survisland:painting/knights_painting"},
+		{"type": "minecraft:single","resource": "survisland:item/koko_painting","sprite": "survisland:painting/koko_painting"},
+		{"type": "minecraft:single","resource": "survisland:item/fusoya_painting","sprite": "survisland:painting/fusoya_painting"},
+		{"type": "minecraft:single","resource": "survisland:item/hamelin_painting","sprite": "survisland:painting/hamelin_painting"},
+		{"type": "minecraft:single","resource": "survisland:item/cadre_m4_puni","sprite": "survisland:painting/cadre_m4_puni"},
+		{"type": "minecraft:single","resource": "survisland:item/cadre_photo_artyu","sprite": "survisland:painting/cadre_photo_artyu"},
+		{"type": "minecraft:single","resource": "survisland:item/cadre_photo_banga","sprite": "survisland:painting/cadre_photo_banga"},
+		{"type": "minecraft:single","resource": "survisland:item/cadre_photo_leon","sprite": "survisland:painting/cadre_photo_leon"},
+		{"type": "minecraft:single","resource": "survisland:item/cadre_photo_mega","sprite": "survisland:painting/cadre_photo_mega"},
+		{"type": "minecraft:single","resource": "survisland:item/cadre_photo_ona","sprite": "survisland:painting/cadre_photo_ona"},
+		{"type": "minecraft:single","resource": "survisland:item/cadre_photo_rox","sprite": "survisland:painting/cadre_photo_rox"},
+		{"type": "minecraft:single","resource": "survisland:item/cadre_tata_cookie","sprite": "survisland:painting/cadre_tata_cookie"},
+		{"type": "minecraft:single","resource": "survisland:item/cadre_tata_marcus_massage","sprite": "survisland:painting/cadre_tata_marcus_massage"},
+		{"type": "minecraft:single","resource": "survisland:item/cadre_tata_marcus","sprite": "survisland:painting/cadre_tata_marcus"},
+		{"type": "minecraft:single","resource": "survisland:item/cadre_tata_saut","sprite": "survisland:painting/cadre_tata_saut"},
+		{"type": "minecraft:single","resource": "survisland:item/cadre_tata_tue","sprite": "survisland:painting/cadre_tata_tue"},
+		{"type": "minecraft:single","resource": "survisland:item/cadre_justeprix","sprite": "survisland:painting/cadre_justeprix"},
+		{"type": "minecraft:single","resource": "survisland:item/cadre_sulfur_cube","sprite": "survisland:painting/cadre_sulfur_cube"},
+		{"type": "minecraft:single","resource": "survisland:item/tv_cuisine","sprite": "survisland:painting/tv_cuisine"},
+		{"type": "minecraft:single","resource": "survisland:item/tv_dessin","sprite": "survisland:painting/tv_dessin"},
+		{"type": "minecraft:single","resource": "survisland:item/tv_eteinte","sprite": "survisland:painting/tv_eteinte"},
+		{"type": "minecraft:single","resource": "survisland:item/tv_foot","sprite": "survisland:painting/tv_foot"},
+		{"type": "minecraft:single","resource": "survisland:item/tv_infos","sprite": "survisland:painting/tv_infos"},
+		{"type": "minecraft:single","resource": "survisland:item/mumble_painting","sprite": "survisland:painting/mumble_painting"}
+	]
+}

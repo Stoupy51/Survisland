@@ -1541,6 +1541,26 @@
 			"height": 4
 		}
 	},
+	"cadre_sulfur_cube": {
+		"id": "cadre_sulfur_cube",
+		"base_item": "minecraft:painting",
+		"recipes": [],
+		"components": {
+			"painting/variant": "survisland:cadre_sulfur_cube",
+			"item_model": "survisland:cadre_sulfur_cube",
+			"item_name": {"text": "Cadre Sulfur Cube"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"cadre_sulfur_cube": true},"smithed": {"id": "survisland:cadre_sulfur_cube","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false,
+		"painting_data": {
+			"texture": "painting/cadre_sulfur_cube",
+			"author": {"text": "Tata_Mymy","color": "yellow"},
+			"title": {"text": "Cadre Sulfur Cube"},
+			"width": 4,
+			"height": 4
+		}
+	},
 	"tv_cuisine": {
 		"id": "tv_cuisine",
 		"base_item": "minecraft:painting",
