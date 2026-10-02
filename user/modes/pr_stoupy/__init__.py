@@ -23,12 +23,12 @@ Il suffit d'éloigner les copies de plus de 48 blocs (regroupement des collecteu
 # 1. Les duos (4 joueurs, 2 paires de mannequins All Together)
 	duo/start {tp:""}                           (répétitif) 4 joueurs sur les blocs de départ, coupés en 2 paires par distance
 	duo/here/stop                               (répétitif) rend son corps au duo dont le mannequin passe ici
-	duo/here/reward                             (une fois) étoile au joueur le plus proche, après le puzzle redstone, et verrouillage de son départ
+	duo/here/reward                             fin de partie des paires du mannequin le plus proche après le puzzle redstone, avec étoile et verrouillage du départ
 
 # 2. Les miroirs (2 joueurs)
 	mirror/start {axis:"x",tp:""}               (répétitif) plan du miroir passant par ce bloc, axis "x" ou "z" = axe inversé
 	mirror/here/reset                           renvoie les reflets du joueur le plus proche en face de leurs joueurs
-	mirror/here/reward                          (une fois) étoile au joueur le plus proche, puis fin de ses reflets et verrouillage du départ
+	mirror/here/reward                          fin de la session du reflet le plus proche, avec étoile et verrouillage du départ
 	mirror/here/stop                            fin de la session du joueur le plus proche
 
 # 3. Le casse-briques (4 joueurs, chacun sur un bloc de couleur)

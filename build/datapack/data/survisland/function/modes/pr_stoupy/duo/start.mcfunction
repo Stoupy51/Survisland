@@ -11,6 +11,12 @@ execute if entity @e[type=minecraft:marker,tag=survisland.pr_stoupy_duo.done,dis
 # $(tp) moves each player of a new pair from where it stands, "" to leave them on the pads
 $data modify storage survisland:pr_stoupy tp set value "$(tp)"
 
+# The pairs formed by this start share a room, named after the first group they open
+scoreboard objectives add survisland.pr_stoupy_duo.room dummy
+scoreboard players add #pr_stoupy_duo_group_counter survisland.data 0
+scoreboard players operation #pr_stoupy_duo_room survisland.data = #pr_stoupy_duo_group_counter survisland.data
+scoreboard players add #pr_stoupy_duo_room survisland.data 1
+
 # Objectives of the mode, all but the first one are carried by the mannequins themselves
 scoreboard objectives add survisland.pr_stoupy_duo dummy
 scoreboard objectives add survisland.pr_stoupy_duo.group dummy

@@ -21,6 +21,9 @@ CRT_COLOR: str = "#01FE41"
 START_RADIUS: int = 16
 """ Radius around a start command block in which the players standing on a start pad are taken. """
 
+REWARD_RADIUS: int = 24
+""" Radius around a reward command block where the mannequins of the game it ends are looked for, half the spacing between copies of a room. """
+
 START_PAD_BLOCKS: list[str] = ["minecraft:emerald_block"]
 """ Blocks a player stands on to be taken by a start, gathered in the block tag behind ON_START_PAD. """
 

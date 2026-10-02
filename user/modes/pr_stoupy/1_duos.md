@@ -17,8 +17,10 @@ Ils ne peuvent relancer qu'après en être descendus :
 function survisland:modes/pr_stoupy/duo/here/stop
 ```
 
-Récompense, command block impulsion déclenché par la porte du puzzle redstone. L'étoile va au joueur le plus proche, à 5 blocs au plus.
-Le départ d'où ce joueur est parti ne peut plus être relancé, `here/clear` le réarme :
+Récompense, command block impulsion déclenché par la porte du puzzle redstone. Elle termine la partie du mannequin le plus proche, à 24 blocs au plus.
+Les deux paires lancées par le même départ que lui sont concernées. L'étoile va au joueur de ces paires le plus proche du command block.
+Ensuite, chaque joueur retrouve son corps sur son bloc de départ.
+Ce départ ne peut plus être relancé, `here/clear` le réarme. Sans mannequin dans le rayon, la récompense ne fait rien :
 
 ```
 function survisland:modes/pr_stoupy/duo/here/reward

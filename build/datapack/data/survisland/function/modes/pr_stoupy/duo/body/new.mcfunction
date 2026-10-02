@@ -25,3 +25,5 @@ execute at @s summon minecraft:item_display run function survisland:modes/pr_sto
 
 execute at @s run function survisland:modes/pr_stoupy/duo/body/setup_sensors
 
+scoreboard players operation @s survisland.pr_stoupy_duo.room = #pr_stoupy_duo_room survisland.data
+

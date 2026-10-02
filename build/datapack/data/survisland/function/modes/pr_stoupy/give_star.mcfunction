@@ -1,10 +1,10 @@
 
 #> survisland:modes/pr_stoupy/give_star
 #
-# @executed	as @p[distance=..5,gamemode=!spectator]
+# @executed	as @p[tag=survisland.pr_stoupy_duo,predicate=survisland:modes/pr_stoupy/duo/same_room] & at @s
 #
-# @within	survisland:modes/pr_stoupy/duo/here/reward {trial:"Les duos"} [ as @p[distance=..5,gamemode=!spectator] ]
-#			survisland:modes/pr_stoupy/mirror/here/reward {trial:"Les miroirs"} [ as @p[distance=..5,gamemode=!spectator] ]
+# @within	survisland:modes/pr_stoupy/duo/here/reward {trial:"Les duos"} [ as @p[tag=survisland.pr_stoupy_duo,predicate=survisland:modes/pr_stoupy/duo/same_room] & at @s ]
+#			survisland:modes/pr_stoupy/mirror/here/reward {trial:"Les miroirs"} [ as @p[tag=survisland.pr_mirror,predicate=survisland:modes/pr_stoupy/mirror/same_session] & at @s ]
 #			survisland:modes/pr_stoupy/breakout/victory {trial:"Le casse-briques"} [ as @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena,scores={survisland.pr_breakout=1},limit=1] & at @s ]
 #			survisland:modes/pr_stoupy/orbit/victory {trial:"L'orbite"} [ as @r[tag=survisland.pr_orbit,predicate=survisland:modes/pr_stoupy/orbit/same_arena] & at @s ]
 #			survisland:modes/pr_stoupy/rats/victory {trial:"Les rats de labo"}

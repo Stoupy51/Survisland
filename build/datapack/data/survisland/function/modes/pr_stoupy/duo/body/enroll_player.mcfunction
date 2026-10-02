@@ -11,3 +11,5 @@ scoreboard players operation @s survisland.pr_stoupy_duo = #pr_stoupy_duo_slot s
 tag @s add survisland.pr_stoupy_duo
 tag @s add survisland.pr_stoupy_duo.new
 
+scoreboard players operation @s survisland.pr_stoupy_duo.room = #pr_stoupy_duo_room survisland.data
+

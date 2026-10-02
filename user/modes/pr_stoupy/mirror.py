@@ -19,6 +19,7 @@ from .shared import (
 	FORGET_BACK,
 	LAB,
 	ON_START_PAD,
+	REWARD_RADIUS,
 	SEND_BACK,
 	START_RADIUS,
 	STORE_TP,
@@ -30,9 +31,6 @@ from .shared import (
 # Constants
 MODE: str = "pr_mirror"
 """ Suffix of the tags, objectives and fake players of the trial. """
-
-REWARD_RADIUS: int = 5
-""" Radius around the reward command block where the player receiving the star is looked for. """
 
 JUMP_TRIGGER: int = 100
 """ Rise of the player in one tick, in thousandths of a block, read as the start of a jump. """
@@ -338,11 +336,11 @@ function {root}/stop_session
 """)
 
 	write_function(f"{root}/here/reward", f"""
-# One shot at the exit: the nearest player gets the star, then the reflections of its session go away
+# The session of the nearest reflection, so nothing happens once it is over: its nearest player gets the star, then the session stops
 # The anchor stays as won on its start block, which cannot start again until here/clear removes it
-execute as @p[distance=..{REWARD_RADIUS},gamemode=!spectator] run function {ns}:{LAB}/give_star {{trial:"Les miroirs"}}
-execute unless entity @p[tag={tag},distance=..{REWARD_RADIUS}] run return 0
-scoreboard players operation #{MODE}_session {ns}.data = @p[tag={tag},distance=..{REWARD_RADIUS}] {tag}.session
+execute unless entity @e[type=mannequin,tag={tag}.body,distance=..{REWARD_RADIUS}] run return 0
+scoreboard players operation #{MODE}_session {ns}.data = @n[type=mannequin,tag={tag}.body,distance=..{REWARD_RADIUS}] {tag}.session
+execute as @p[tag={tag},{same_session}] at @s run function {ns}:{LAB}/give_star {{trial:"Les miroirs"}}
 tag @e[type=minecraft:marker,tag={tag}.anchor,{same_session}] add {tag}.done
 function {root}/stop_session
 """)
