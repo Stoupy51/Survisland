@@ -25,8 +25,8 @@ DUO: CrewMode = CrewMode(
 	start_players=4,
 	phases=[
 		Phase(id="laboratoire", display="Laboratoire - Duo", bindings={
-			"look": (1,), "forward": (1,), "backward": (1,), "sprint": (1,),
-			"click": (2,), "left": (2,), "right": (2,), "jump": (2,), "sneak": (2,), "crawl": (2,),
+			"look": (1,), "forward": (1,), "backward": (1,),
+			"click": (2,), "left": (2,), "right": (2,), "jump": (2,), "crawl": (2,),
 		}),
 	],
 	profile="",

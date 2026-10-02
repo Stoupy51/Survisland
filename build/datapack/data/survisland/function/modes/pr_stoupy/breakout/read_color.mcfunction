@@ -16,11 +16,10 @@ execute if block ~ ~-1 ~ #survisland:pr_stoupy/breakout/yellow run scoreboard pl
 execute if block ~ ~-1 ~ #survisland:pr_stoupy/breakout/lime run scoreboard players set @s survisland.pr_breakout.color 5
 execute if block ~ ~-1 ~ #survisland:pr_stoupy/breakout/pink run scoreboard players set @s survisland.pr_breakout.color 6
 execute if block ~ ~-1 ~ #survisland:pr_stoupy/breakout/gray run scoreboard players set @s survisland.pr_breakout.color 7
-execute if block ~ ~-1 ~ #survisland:pr_stoupy/breakout/light_gray run scoreboard players set @s survisland.pr_breakout.color 8
-execute if block ~ ~-1 ~ #survisland:pr_stoupy/breakout/cyan run scoreboard players set @s survisland.pr_breakout.color 9
-execute if block ~ ~-1 ~ #survisland:pr_stoupy/breakout/blue run scoreboard players set @s survisland.pr_breakout.color 11
-execute if block ~ ~-1 ~ #survisland:pr_stoupy/breakout/brown run scoreboard players set @s survisland.pr_breakout.color 12
-execute if block ~ ~-1 ~ #survisland:pr_stoupy/breakout/green run scoreboard players set @s survisland.pr_breakout.color 13
-execute if block ~ ~-1 ~ #survisland:pr_stoupy/breakout/red run scoreboard players set @s survisland.pr_breakout.color 14
-execute if block ~ ~-1 ~ #survisland:pr_stoupy/breakout/black run scoreboard players set @s survisland.pr_breakout.color 15
+execute if block ~ ~-1 ~ #survisland:pr_stoupy/breakout/cyan run scoreboard players set @s survisland.pr_breakout.color 8
+execute if block ~ ~-1 ~ #survisland:pr_stoupy/breakout/blue run scoreboard players set @s survisland.pr_breakout.color 10
+execute if block ~ ~-1 ~ #survisland:pr_stoupy/breakout/brown run scoreboard players set @s survisland.pr_breakout.color 11
+execute if block ~ ~-1 ~ #survisland:pr_stoupy/breakout/green run scoreboard players set @s survisland.pr_breakout.color 12
+execute if block ~ ~-1 ~ #survisland:pr_stoupy/breakout/red run scoreboard players set @s survisland.pr_breakout.color 13
+execute if block ~ ~-1 ~ #survisland:pr_stoupy/breakout/black run scoreboard players set @s survisland.pr_breakout.color 14
 

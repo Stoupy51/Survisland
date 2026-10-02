@@ -14,7 +14,6 @@ execute if block ~ ~ ~ #survisland:pr_stoupy/breakout/yellow run return run scor
 execute if block ~ ~ ~ #survisland:pr_stoupy/breakout/lime run return run scoreboard players add #pr_breakout_bricks_lime survisland.data 1
 execute if block ~ ~ ~ #survisland:pr_stoupy/breakout/pink run return run scoreboard players add #pr_breakout_bricks_pink survisland.data 1
 execute if block ~ ~ ~ #survisland:pr_stoupy/breakout/gray run return run scoreboard players add #pr_breakout_bricks_gray survisland.data 1
-execute if block ~ ~ ~ #survisland:pr_stoupy/breakout/light_gray run return run scoreboard players add #pr_breakout_bricks_light_gray survisland.data 1
 execute if block ~ ~ ~ #survisland:pr_stoupy/breakout/cyan run return run scoreboard players add #pr_breakout_bricks_cyan survisland.data 1
 execute if block ~ ~ ~ #survisland:pr_stoupy/breakout/purple run return run scoreboard players add #pr_breakout_bricks_purple survisland.data 1
 execute if block ~ ~ ~ #survisland:pr_stoupy/breakout/blue run return run scoreboard players add #pr_breakout_bricks_blue survisland.data 1

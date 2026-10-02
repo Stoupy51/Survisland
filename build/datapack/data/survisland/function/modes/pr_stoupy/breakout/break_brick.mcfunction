@@ -16,7 +16,6 @@ execute if block ~ ~ ~ minecraft:yellow_concrete run return run setblock ~ ~ ~ m
 execute if block ~ ~ ~ minecraft:lime_concrete run return run setblock ~ ~ ~ minecraft:lime_stained_glass
 execute if block ~ ~ ~ minecraft:pink_concrete run return run setblock ~ ~ ~ minecraft:pink_stained_glass
 execute if block ~ ~ ~ minecraft:gray_concrete run return run setblock ~ ~ ~ minecraft:gray_stained_glass
-execute if block ~ ~ ~ minecraft:light_gray_concrete run return run setblock ~ ~ ~ minecraft:light_gray_stained_glass
 execute if block ~ ~ ~ minecraft:cyan_concrete run return run setblock ~ ~ ~ minecraft:cyan_stained_glass
 execute if block ~ ~ ~ minecraft:purple_concrete run return run setblock ~ ~ ~ minecraft:purple_stained_glass
 execute if block ~ ~ ~ minecraft:blue_concrete run return run setblock ~ ~ ~ minecraft:blue_stained_glass

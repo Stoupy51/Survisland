@@ -17,5 +17,5 @@ execute as @a[tag=survisland.pr_stoupy_duo,predicate=survisland:modes/pr_stoupy/
 function survisland:modes/pr_stoupy/duo/body/remount
 
 # The help is read by the whole group and by anyone watching them
-tellraw @a[distance=..50] [{"text": "\n"}, {"text": "Joueur 1 : ", "color": "yellow"}, {"text": "Avancer / Reculer / Sprinter / Tourner la tête\n", "color": "white"}, {"text": "Joueur 2 : ", "color": "yellow"}, {"text": "Marcher à gauche / Marcher à droite / Sauter / S'accroupir / S'allonger (touche sprint) / Clic gauche / Clic droit\n", "color": "white"}]
+tellraw @a[distance=..50] [{"text": "\n"}, {"text": "Joueur 1 : ", "color": "yellow"}, {"text": "Avancer / Reculer / Tourner la tête\n", "color": "white"}, {"text": "Joueur 2 : ", "color": "yellow"}, {"text": "Marcher à gauche / Marcher à droite / Sauter / S'allonger (touche sprint) / Clic gauche / Clic droit\n", "color": "white"}]
 

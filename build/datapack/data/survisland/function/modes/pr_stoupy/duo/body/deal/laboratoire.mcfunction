@@ -27,8 +27,6 @@ execute if score @s survisland.pr_stoupy_duo matches 1 run tag @s add survisland
 execute if score @s survisland.pr_stoupy_duo matches 2 run tag @s add survisland.pr_stoupy_duo.left
 execute if score @s survisland.pr_stoupy_duo matches 2 run tag @s add survisland.pr_stoupy_duo.right
 execute if score @s survisland.pr_stoupy_duo matches 2 run tag @s add survisland.pr_stoupy_duo.jump
-execute if score @s survisland.pr_stoupy_duo matches 2 run tag @s add survisland.pr_stoupy_duo.sneak
-execute if score @s survisland.pr_stoupy_duo matches 1 run tag @s add survisland.pr_stoupy_duo.sprint
 execute if score @s survisland.pr_stoupy_duo matches 2 run tag @s add survisland.pr_stoupy_duo.crawl
 execute if score @s survisland.pr_stoupy_duo matches 1 run tag @s add survisland.pr_stoupy_duo.look
 execute if score @s survisland.pr_stoupy_duo matches 2 run tag @s add survisland.pr_stoupy_duo.click
@@ -37,8 +35,6 @@ execute if score #pr_stoupy_solo survisland.data matches 1 run tag @s add survis
 execute if score #pr_stoupy_solo survisland.data matches 1 run tag @s add survisland.pr_stoupy_duo.left
 execute if score #pr_stoupy_solo survisland.data matches 1 run tag @s add survisland.pr_stoupy_duo.right
 execute if score #pr_stoupy_solo survisland.data matches 1 run tag @s add survisland.pr_stoupy_duo.jump
-execute if score #pr_stoupy_solo survisland.data matches 1 run tag @s add survisland.pr_stoupy_duo.sneak
-execute if score #pr_stoupy_solo survisland.data matches 1 run tag @s add survisland.pr_stoupy_duo.sprint
 execute if score #pr_stoupy_solo survisland.data matches 1 run tag @s add survisland.pr_stoupy_duo.crawl
 execute if score #pr_stoupy_solo survisland.data matches 1 run tag @s add survisland.pr_stoupy_duo.look
 execute if score #pr_stoupy_solo survisland.data matches 1 run tag @s add survisland.pr_stoupy_duo.click

@@ -32,8 +32,8 @@ function survisland:modes/pr_stoupy/breakout/here/example_level
 
 Le terrain :
 - Un mur vertical fermé par un cadre, avec un sol dessous. La rangée du bas reste vide, c'est la ligne des bumpers.
-- Au-dessus, les briques en béton, laine, terre cuite ou verre teinté, dans les couleurs des joueurs. Le violet est réservé à la brique multiball.
-- Le cadre et le fond ne sont pas faits de ces blocs colorés : dans le plan du terrain, ils compteraient comme des briques.
+- Au-dessus, les briques en béton, laine, terre cuite ou verre teinté, dans les couleurs des joueurs. Le violet est réservé à la brique multiball, et le gris clair ne compte jamais comme une brique.
+- Le cadre et le fond ne sont pas faits de ces blocs colorés : dans le plan du terrain, ils compteraient comme des briques. Le gris clair convient.
 
 Les joueurs :
 - 4 blocs d'émeraude dans un sas, à 16 blocs au plus du command block de départ.

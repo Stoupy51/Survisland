@@ -37,7 +37,6 @@ COLORS: list[BrickColor] = [
 	BrickColor(name="lime"),
 	BrickColor(name="pink"),
 	BrickColor(name="gray"),
-	BrickColor(name="light_gray"),
 	BrickColor(name="cyan"),
 	BrickColor(name="purple"),
 	BrickColor(name="blue"),
@@ -46,7 +45,9 @@ COLORS: list[BrickColor] = [
 	BrickColor(name="red"),
 	BrickColor(name="black"),
 ]
-""" Every color, its index in this list being the color score of players and balls. """
+""" Every color, its index in this list being the color score of players and balls.
+Light gray is left out, so it can build the frame of a field.
+"""
 
 MULTIBALL: BrickColor = next(color for color in COLORS if color.name == "purple")
 """ Color of the bricks any ball breaks to multiply every ball in play, never a player color nor a brick to clear. """
@@ -59,7 +60,7 @@ SOLO_COLORS: list[BrickColor] = [color for name in ("red", "light_blue", "lime",
 def color_tag(color: BrickColor) -> str:
 	""" Block tag of the bricks of a color
 
-	>>> color_tag(COLORS[14])
+	>>> color_tag(COLORS[13])
 	'#survisland:pr_stoupy/breakout/red'
 	"""
 	return f"#survisland:pr_stoupy/breakout/{color.name}"

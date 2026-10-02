@@ -19,14 +19,13 @@ execute if score @s survisland.pr_breakout.color matches 4 run data modify entit
 execute if score @s survisland.pr_breakout.color matches 5 run data modify entity @s block_state.Name set value "minecraft:lime_concrete"
 execute if score @s survisland.pr_breakout.color matches 6 run data modify entity @s block_state.Name set value "minecraft:pink_concrete"
 execute if score @s survisland.pr_breakout.color matches 7 run data modify entity @s block_state.Name set value "minecraft:gray_concrete"
-execute if score @s survisland.pr_breakout.color matches 8 run data modify entity @s block_state.Name set value "minecraft:light_gray_concrete"
-execute if score @s survisland.pr_breakout.color matches 9 run data modify entity @s block_state.Name set value "minecraft:cyan_concrete"
-execute if score @s survisland.pr_breakout.color matches 10 run data modify entity @s block_state.Name set value "minecraft:purple_concrete"
-execute if score @s survisland.pr_breakout.color matches 11 run data modify entity @s block_state.Name set value "minecraft:blue_concrete"
-execute if score @s survisland.pr_breakout.color matches 12 run data modify entity @s block_state.Name set value "minecraft:brown_concrete"
-execute if score @s survisland.pr_breakout.color matches 13 run data modify entity @s block_state.Name set value "minecraft:green_concrete"
-execute if score @s survisland.pr_breakout.color matches 14 run data modify entity @s block_state.Name set value "minecraft:red_concrete"
-execute if score @s survisland.pr_breakout.color matches 15 run data modify entity @s block_state.Name set value "minecraft:black_concrete"
+execute if score @s survisland.pr_breakout.color matches 8 run data modify entity @s block_state.Name set value "minecraft:cyan_concrete"
+execute if score @s survisland.pr_breakout.color matches 9 run data modify entity @s block_state.Name set value "minecraft:purple_concrete"
+execute if score @s survisland.pr_breakout.color matches 10 run data modify entity @s block_state.Name set value "minecraft:blue_concrete"
+execute if score @s survisland.pr_breakout.color matches 11 run data modify entity @s block_state.Name set value "minecraft:brown_concrete"
+execute if score @s survisland.pr_breakout.color matches 12 run data modify entity @s block_state.Name set value "minecraft:green_concrete"
+execute if score @s survisland.pr_breakout.color matches 13 run data modify entity @s block_state.Name set value "minecraft:red_concrete"
+execute if score @s survisland.pr_breakout.color matches 14 run data modify entity @s block_state.Name set value "minecraft:black_concrete"
 # Its model spans the top 0.5 of the 2 cells in front of it, the barriers under it being what the ball bounces on
 data merge entity @s {teleport_duration:2,brightness:{sky:15,block:15},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.5f,0.5f,-0.5f],scale:[1f,0.5f,2f]}}
 fill ^ ^ ^ ^ ^ ^1 minecraft:barrier

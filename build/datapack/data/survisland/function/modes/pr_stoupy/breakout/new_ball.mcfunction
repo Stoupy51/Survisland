@@ -20,14 +20,13 @@ execute if score #pr_breakout_color survisland.data matches 4 run data modify en
 execute if score #pr_breakout_color survisland.data matches 5 run data modify entity @s equipment.body.id set value "minecraft:lime_concrete"
 execute if score #pr_breakout_color survisland.data matches 6 run data modify entity @s equipment.body.id set value "minecraft:pink_concrete"
 execute if score #pr_breakout_color survisland.data matches 7 run data modify entity @s equipment.body.id set value "minecraft:gray_concrete"
-execute if score #pr_breakout_color survisland.data matches 8 run data modify entity @s equipment.body.id set value "minecraft:light_gray_concrete"
-execute if score #pr_breakout_color survisland.data matches 9 run data modify entity @s equipment.body.id set value "minecraft:cyan_concrete"
-execute if score #pr_breakout_color survisland.data matches 10 run data modify entity @s equipment.body.id set value "minecraft:purple_concrete"
-execute if score #pr_breakout_color survisland.data matches 11 run data modify entity @s equipment.body.id set value "minecraft:blue_concrete"
-execute if score #pr_breakout_color survisland.data matches 12 run data modify entity @s equipment.body.id set value "minecraft:brown_concrete"
-execute if score #pr_breakout_color survisland.data matches 13 run data modify entity @s equipment.body.id set value "minecraft:green_concrete"
-execute if score #pr_breakout_color survisland.data matches 14 run data modify entity @s equipment.body.id set value "minecraft:red_concrete"
-execute if score #pr_breakout_color survisland.data matches 15 run data modify entity @s equipment.body.id set value "minecraft:black_concrete"
+execute if score #pr_breakout_color survisland.data matches 8 run data modify entity @s equipment.body.id set value "minecraft:cyan_concrete"
+execute if score #pr_breakout_color survisland.data matches 9 run data modify entity @s equipment.body.id set value "minecraft:purple_concrete"
+execute if score #pr_breakout_color survisland.data matches 10 run data modify entity @s equipment.body.id set value "minecraft:blue_concrete"
+execute if score #pr_breakout_color survisland.data matches 11 run data modify entity @s equipment.body.id set value "minecraft:brown_concrete"
+execute if score #pr_breakout_color survisland.data matches 12 run data modify entity @s equipment.body.id set value "minecraft:green_concrete"
+execute if score #pr_breakout_color survisland.data matches 13 run data modify entity @s equipment.body.id set value "minecraft:red_concrete"
+execute if score #pr_breakout_color survisland.data matches 14 run data modify entity @s equipment.body.id set value "minecraft:black_concrete"
 team join survisland.no_collision @s
 scoreboard players operation @s survisland.pr_breakout.speed = #pr_breakout_speed survisland.data
 

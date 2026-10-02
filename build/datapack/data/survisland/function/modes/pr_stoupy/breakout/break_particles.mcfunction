@@ -38,10 +38,6 @@ execute if block ~ ~ ~ minecraft:gray_concrete run return run particle minecraft
 execute if block ~ ~ ~ minecraft:gray_wool run return run particle minecraft:block{block_state:"minecraft:gray_wool"} ~ ~0.5 ~ 0.25 0.25 0.25 0 30
 execute if block ~ ~ ~ minecraft:gray_terracotta run return run particle minecraft:block{block_state:"minecraft:gray_terracotta"} ~ ~0.5 ~ 0.25 0.25 0.25 0 30
 execute if block ~ ~ ~ minecraft:gray_stained_glass run return run particle minecraft:block{block_state:"minecraft:gray_stained_glass"} ~ ~0.5 ~ 0.25 0.25 0.25 0 30
-execute if block ~ ~ ~ minecraft:light_gray_concrete run return run particle minecraft:block{block_state:"minecraft:light_gray_concrete"} ~ ~0.5 ~ 0.25 0.25 0.25 0 30
-execute if block ~ ~ ~ minecraft:light_gray_wool run return run particle minecraft:block{block_state:"minecraft:light_gray_wool"} ~ ~0.5 ~ 0.25 0.25 0.25 0 30
-execute if block ~ ~ ~ minecraft:light_gray_terracotta run return run particle minecraft:block{block_state:"minecraft:light_gray_terracotta"} ~ ~0.5 ~ 0.25 0.25 0.25 0 30
-execute if block ~ ~ ~ minecraft:light_gray_stained_glass run return run particle minecraft:block{block_state:"minecraft:light_gray_stained_glass"} ~ ~0.5 ~ 0.25 0.25 0.25 0 30
 execute if block ~ ~ ~ minecraft:cyan_concrete run return run particle minecraft:block{block_state:"minecraft:cyan_concrete"} ~ ~0.5 ~ 0.25 0.25 0.25 0 30
 execute if block ~ ~ ~ minecraft:cyan_wool run return run particle minecraft:block{block_state:"minecraft:cyan_wool"} ~ ~0.5 ~ 0.25 0.25 0.25 0 30
 execute if block ~ ~ ~ minecraft:cyan_terracotta run return run particle minecraft:block{block_state:"minecraft:cyan_terracotta"} ~ ~0.5 ~ 0.25 0.25 0.25 0 30

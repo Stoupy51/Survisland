@@ -16,7 +16,6 @@ scoreboard players set #pr_breakout_bricks_yellow survisland.data 0
 scoreboard players set #pr_breakout_bricks_lime survisland.data 0
 scoreboard players set #pr_breakout_bricks_pink survisland.data 0
 scoreboard players set #pr_breakout_bricks_gray survisland.data 0
-scoreboard players set #pr_breakout_bricks_light_gray survisland.data 0
 scoreboard players set #pr_breakout_bricks_cyan survisland.data 0
 scoreboard players set #pr_breakout_bricks_purple survisland.data 0
 scoreboard players set #pr_breakout_bricks_blue survisland.data 0
@@ -36,11 +35,10 @@ execute if entity @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_st
 execute if entity @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena,scores={survisland.pr_breakout.color=5}] run scoreboard players operation #pr_breakout_remaining survisland.data += #pr_breakout_bricks_lime survisland.data
 execute if entity @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena,scores={survisland.pr_breakout.color=6}] run scoreboard players operation #pr_breakout_remaining survisland.data += #pr_breakout_bricks_pink survisland.data
 execute if entity @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena,scores={survisland.pr_breakout.color=7}] run scoreboard players operation #pr_breakout_remaining survisland.data += #pr_breakout_bricks_gray survisland.data
-execute if entity @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena,scores={survisland.pr_breakout.color=8}] run scoreboard players operation #pr_breakout_remaining survisland.data += #pr_breakout_bricks_light_gray survisland.data
-execute if entity @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena,scores={survisland.pr_breakout.color=9}] run scoreboard players operation #pr_breakout_remaining survisland.data += #pr_breakout_bricks_cyan survisland.data
-execute if entity @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena,scores={survisland.pr_breakout.color=11}] run scoreboard players operation #pr_breakout_remaining survisland.data += #pr_breakout_bricks_blue survisland.data
-execute if entity @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena,scores={survisland.pr_breakout.color=12}] run scoreboard players operation #pr_breakout_remaining survisland.data += #pr_breakout_bricks_brown survisland.data
-execute if entity @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena,scores={survisland.pr_breakout.color=13}] run scoreboard players operation #pr_breakout_remaining survisland.data += #pr_breakout_bricks_green survisland.data
-execute if entity @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena,scores={survisland.pr_breakout.color=14}] run scoreboard players operation #pr_breakout_remaining survisland.data += #pr_breakout_bricks_red survisland.data
-execute if entity @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena,scores={survisland.pr_breakout.color=15}] run scoreboard players operation #pr_breakout_remaining survisland.data += #pr_breakout_bricks_black survisland.data
+execute if entity @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena,scores={survisland.pr_breakout.color=8}] run scoreboard players operation #pr_breakout_remaining survisland.data += #pr_breakout_bricks_cyan survisland.data
+execute if entity @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena,scores={survisland.pr_breakout.color=10}] run scoreboard players operation #pr_breakout_remaining survisland.data += #pr_breakout_bricks_blue survisland.data
+execute if entity @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena,scores={survisland.pr_breakout.color=11}] run scoreboard players operation #pr_breakout_remaining survisland.data += #pr_breakout_bricks_brown survisland.data
+execute if entity @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena,scores={survisland.pr_breakout.color=12}] run scoreboard players operation #pr_breakout_remaining survisland.data += #pr_breakout_bricks_green survisland.data
+execute if entity @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena,scores={survisland.pr_breakout.color=13}] run scoreboard players operation #pr_breakout_remaining survisland.data += #pr_breakout_bricks_red survisland.data
+execute if entity @a[tag=survisland.pr_breakout,predicate=survisland:modes/pr_stoupy/breakout/same_arena,scores={survisland.pr_breakout.color=14}] run scoreboard players operation #pr_breakout_remaining survisland.data += #pr_breakout_bricks_black survisland.data
 
