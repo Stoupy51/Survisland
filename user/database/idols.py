@@ -157,6 +157,12 @@ def generate_pendent_system() -> None:
 	write_pendent_switch_modifiers()
 
 	# advancements/inventory_changed
+	# Every pendent form carries the pendent flag, while a necklace only carries its own id
+	idol_flags: list[str] = ["pendent", *(idol.necklace for idol in IDOLS if idol.necklace)]
+	has_idol: str = "\n".join(
+		f"""execute if score #success {ns}.data matches 0 store success score #success {ns}.data run function {ns}:utils/has_item {{"item":"{flag}"}}"""
+		for flag in idol_flags
+	)
 	announce: str = "\n".join(
 		f"""execute if score #success {ns}.data matches 1 unless entity @s[tag={ns}.has_idol] run tellraw @a[team={team}] ["\\n",{{"nbt":"SurvislandSpec","storage":"{ns}:main","interpret":true}},{{"text":" Le joueur "}},{{"selector":"@s","color":"aqua"}},{{"text":" vient de récupérer un idol dans son inventaire !"}}]"""
 		for team in SPECTATOR_TEAMS
@@ -170,7 +176,8 @@ execute if data entity @s SelectedItem.components."minecraft:custom_data".{ns}.p
 execute if data entity @s equipment.offhand.components."minecraft:custom_data".{ns}.pendent run item modify entity @s weapon.offhand {ns}:switch_pendent_state/offhand
 
 # If has idol in inventory for first time, tell spectators
-execute store success score #success {ns}.data run function {ns}:utils/has_item {{"item":"pendent"}}
+scoreboard players set #success {ns}.data 0
+{has_idol}
 {announce}
 execute if score #success {ns}.data matches 1 run tag @s add {ns}.has_idol
 execute if score #success {ns}.data matches 0 run tag @s remove {ns}.has_idol

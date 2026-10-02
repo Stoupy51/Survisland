@@ -4,6 +4,13 @@
 # @executed	as the player & at current position
 #
 # @within	survisland:advancements/inventory_changed {"item":"pendent"}
+#			survisland:advancements/inventory_changed {"item":"necklace"}
+#			survisland:advancements/inventory_changed {"item":"cursed_necklace"}
+#			survisland:advancements/inventory_changed {"item":"dinosaur_necklace"}
+#			survisland:advancements/inventory_changed {"item":"necklace_bee_fire"}
+#			survisland:advancements/inventory_changed {"item":"necklace_bee_leaf"}
+#			survisland:advancements/inventory_changed {"item":"necklace_bee_water"}
+#			survisland:advancements/inventory_changed {"item":"netherland_necklace"}
 #
 # @args		item (string)
 #
