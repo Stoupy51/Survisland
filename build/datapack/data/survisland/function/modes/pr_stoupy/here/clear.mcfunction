@@ -15,6 +15,7 @@ $execute as @e[type=minecraft:interaction,tag=survisland.pr_rats.collector,dista
 
 $kill @e[tag=survisland.pr_stoupy_duo.body,distance=..$(radius)]
 $kill @e[tag=survisland.pr_stoupy_duo.seat,distance=..$(radius)]
+$kill @e[tag=survisland.pr_stoupy_duo.done,distance=..$(radius)]
 $kill @e[tag=survisland.pr_mirror.body,distance=..$(radius)]
 $kill @e[tag=survisland.pr_mirror.anchor,distance=..$(radius)]
 $kill @e[tag=survisland.pr_breakout.corner,distance=..$(radius)]

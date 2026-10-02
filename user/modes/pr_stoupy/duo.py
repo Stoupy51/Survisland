@@ -43,9 +43,11 @@ Sprint and crawl sit on different slots since crawl is read on the sprint key.
 def main() -> None:
 	""" Write the duo trial: the crew mode with its start teleport and its way back, and the reward of its exit. """
 	ns: str = Mem.ctx.project_id
+	lock: str = f"{ns}.{DUO.id}.done"
 	generate_crew_mode(DUO)
 	write_function(f"{ns}:{DUO.path}/start", f"""
 {FORGET_BACK}
+execute if entity @e[type=minecraft:marker,tag={lock},distance=..{START_RADIUS}] run return 0
 # $(tp) moves each player of a new pair from where it stands, "" to leave them on the pads
 {STORE_TP}
 """, prepend=True)
@@ -54,5 +56,12 @@ def main() -> None:
 	write_function(f"{ns}:{DUO.path}/here/reward", f"""
 # One shot at the exit, once the redstone puzzle is solved: the nearest player gets the star
 execute as @p[distance=..5,gamemode=!spectator] run function {ns}:{LAB}/give_star {{trial:"Les duos"}}
+execute if entity @p[distance=..5,gamemode=!spectator] summon minecraft:marker run function {ns}:{DUO.path}/lock
+""")
+
+	write_function(f"{ns}:{DUO.path}/lock", f"""
+# Run at the reward block, so @p is the winner: the marker goes where its start took it from and locks that start until here/clear
+tag @s add {lock}
+{"\n".join(f"execute store result entity @s Pos[{index}] double 0.01 run scoreboard players get @p[gamemode=!spectator] {ns}.pr_stoupy.{axis}" for index, axis in enumerate("xyz"))}
 """)
 

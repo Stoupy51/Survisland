@@ -7,6 +7,7 @@
 #
 
 tag @a[tag=survisland.pr_stoupy.back,predicate=!survisland:modes/pr_stoupy/on_start_pad] remove survisland.pr_stoupy.back
+execute if entity @e[type=minecraft:marker,tag=survisland.pr_stoupy_duo.done,distance=..16] run return 0
 # $(tp) moves each player of a new pair from where it stands, "" to leave them on the pads
 $data modify storage survisland:pr_stoupy tp set value "$(tp)"
 

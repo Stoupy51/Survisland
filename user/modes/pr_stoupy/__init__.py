@@ -23,12 +23,12 @@ Il suffit d'éloigner les copies de plus de 48 blocs (regroupement des collecteu
 # 1. Les duos (4 joueurs, 2 paires de mannequins All Together)
 	duo/start {tp:""}                           (répétitif) 4 joueurs sur les blocs de départ, coupés en 2 paires par distance
 	duo/here/stop                               (répétitif) rend son corps au duo dont le mannequin passe ici
-	duo/here/reward                             (une fois) étoile au joueur le plus proche, après le puzzle redstone
+	duo/here/reward                             (une fois) étoile au joueur le plus proche, après le puzzle redstone, et verrouillage de son départ
 
 # 2. Les miroirs (2 joueurs)
 	mirror/start {axis:"x",tp:""}               (répétitif) plan du miroir passant par ce bloc, axis "x" ou "z" = axe inversé
 	mirror/here/reset                           renvoie les reflets du joueur le plus proche en face de leurs joueurs
-	mirror/here/reward                          (une fois) étoile au joueur le plus proche, puis fin de ses reflets
+	mirror/here/reward                          (une fois) étoile au joueur le plus proche, puis fin de ses reflets et verrouillage du départ
 	mirror/here/stop                            fin de la session du joueur le plus proche
 
 # 3. Le casse-briques (4 joueurs, chacun sur un bloc de couleur)
@@ -64,6 +64,7 @@ Il suffit d'éloigner les copies de plus de 48 blocs (regroupement des collecteu
 
 # Remise à zéro pendant le développement
 	here/clear {radius:100}                     arrête tout dans le rayon, puis supprime toutes les entités du labo, setup compris
+		Seule façon de réarmer le départ d'un duo ou d'un miroir réussi.
 
 # Textes CRT
 Tout texte de couleur #01FE41 (tellraw, title, text display) est dessiné comme un vieil écran cathodique par le shader.
@@ -102,7 +103,7 @@ def generate_clear() -> None:
 	root: str = f"{ns}:{LAB}"
 	duo, mirror, breakout, orbit, rats = (f"{ns}.{mode}" for mode in (DUO.id, MIRROR_MODE, BREAKOUT_MODE, ORBIT_MODE, RATS_MODE))
 	entity_tags: list[str] = [
-		f"{duo}.body", f"{duo}.seat",
+		f"{duo}.body", f"{duo}.seat", f"{duo}.done",
 		f"{mirror}.body", f"{mirror}.anchor",
 		f"{breakout}.corner", f"{breakout}.screen", f"{breakout}.bumper", f"{breakout}.ball", f"{breakout}.level_block",
 		f"{orbit}.hole", *(f"{orbit}.{name}" for name in ORBIT_MARKERS), f"{orbit}.sky", f"{orbit}.fragment", f"{orbit}.phantom", f"{orbit}.pad",

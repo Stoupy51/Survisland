@@ -323,9 +323,9 @@ def generate_stop(same_session: str) -> None:
 	tag: str = f"{ns}.{MODE}"
 
 	write_function(f"{root}/stop_session", f"""
-# The session held in #{MODE}_session: reflections, freeze items, player tags and its anchor
+# The session held in #{MODE}_session: reflections, freeze items, player tags and its anchor, unless won
 kill @e[type=mannequin,tag={tag}.body,{same_session}]
-kill @e[type=minecraft:marker,tag={tag}.anchor,{same_session}]
+kill @e[type=minecraft:marker,tag={tag}.anchor,tag=!{tag}.done,{same_session}]
 clear @a[tag={tag},{same_session}] *[custom_data~{{survisland:{{mirror_freeze:true}}}}]
 execute as @a[tag={tag},{same_session}] run {SEND_BACK}
 tag @a[tag={tag},{same_session}] remove {tag}
@@ -339,16 +339,18 @@ function {root}/stop_session
 
 	write_function(f"{root}/here/reward", f"""
 # One shot at the exit: the nearest player gets the star, then the reflections of its session go away
+# The anchor stays as won on its start block, which cannot start again until here/clear removes it
 execute as @p[distance=..{REWARD_RADIUS},gamemode=!spectator] run function {ns}:{LAB}/give_star {{trial:"Les miroirs"}}
 execute unless entity @p[tag={tag},distance=..{REWARD_RADIUS}] run return 0
 scoreboard players operation #{MODE}_session {ns}.data = @p[tag={tag},distance=..{REWARD_RADIUS}] {tag}.session
+tag @e[type=minecraft:marker,tag={tag}.anchor,{same_session}] add {tag}.done
 function {root}/stop_session
 """)
 
 	write_function(f"{root}/stop", f"""
-# Every session, everywhere
+# Every session, everywhere, won rooms staying locked
 kill @e[type=mannequin,tag={tag}.body]
-kill @e[type=minecraft:marker,tag={tag}.anchor]
+kill @e[type=minecraft:marker,tag={tag}.anchor,tag=!{tag}.done]
 clear @a[tag={tag}] *[custom_data~{{survisland:{{mirror_freeze:true}}}}]
 execute as @a[tag={tag}] run {SEND_BACK}
 tag @a remove {tag}
