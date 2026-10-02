@@ -12,59 +12,52 @@ if os.getcwd() != os.path.dirname(os.path.realpath(__file__)):
 # Définition des fonctions
 def create_teams_file(teams: list[tuple[str, str, int, str]]) -> None:
 	""" Créer le fichier .mcfunction pour les équipes
+
 	Args:
-		teams (list): Liste des équipes sous la forme d'un tuple (nom, couleur, nb_joueurs, vanilla_color)
-
-	Returns:
-		None
+		teams: Liste des équipes, chacune sous la forme (nom, couleur, nb_joueurs, vanilla_color)
 	"""
-	# Création du fichier
-	f = open("create_teams.mcfunction", "w", encoding="utf-8")
-	f.write("\n")
-	f.write("## Création des équipes\n")
-	f.write("\n")
-
-	# Création des équipes
-	for nom, couleur, nb_joueurs, vanilla_color in teams:
-		for i in range(nb_joueurs):
-
-			# Indicatif de position
-			col = couleur
-			pos = "th"
-			if i == 0:
-				pos, col = "st", "#EBD759"
-			elif i == 1:
-				pos, col = "nd", "#C0C0C0"
-			elif i == 2:
-				pos, col = "rd", "#CD7F32"
-			nbPos = str(i + 1)
-			if len(nbPos) == 1:
-				nbPos = "0" + nbPos
-
-			# Création de l'équipe
-			f.write(f'team add {nom}_{nbPos}\n')
-			f.write(f'team modify {nom}_{nbPos} displayName {{"text":"{nom} - {i+1}{pos}","color":"{col}"}}\n')
-			f.write(f'team modify {nom}_{nbPos} suffix {{"text":" [{nom} - {i+1}{pos}]","color":"{col}"}}\n')
-			f.write(f'team modify {nom}_{nbPos} color {vanilla_color}\n')
-			f.write("\n")
-
-		# Création d'une équipe "???" pour placement inconnu
-		f.write(f'team add {nom}_x\n')
-		f.write(f'team modify {nom}_x displayName {{"text":"{nom} - ???","color":"{couleur}"}}\n')
-		f.write(f'team modify {nom}_x suffix {{"text":" [{nom} - ???]","color":"{couleur}"}}\n')
-		f.write(f'team modify {nom}_x color {vanilla_color}\n')
+	with open("create_teams.mcfunction", "w", encoding="utf-8") as f:
+		f.write("\n")
+		f.write("## Création des équipes\n")
 		f.write("\n")
 
-	# Ajout de l'équipe "aMJ"
-	f.write('team add MJ\n')
-	f.write('team modify MJ displayName {"text":"MJ","color":"dark_aqua"}\n')
-	f.write('team modify MJ suffix {"text":" [MJ]","color":"dark_aqua"}\n')
-	f.write('team modify MJ color aqua\n')
+		# Création des équipes
+		for nom, couleur, nb_joueurs, vanilla_color in teams:
+			for i in range(nb_joueurs):
 
-	# Fermeture du fichier et retour
-	f.write("\n")
-	f.close()
-	return None
+				# Indicatif de position
+				col = couleur
+				pos = "th"
+				if i == 0:
+					pos, col = "st", "#EBD759"
+				elif i == 1:
+					pos, col = "nd", "#C0C0C0"
+				elif i == 2:
+					pos, col = "rd", "#CD7F32"
+				nbPos = str(i + 1)
+				if len(nbPos) == 1:
+					nbPos = "0" + nbPos
+
+				# Création de l'équipe
+				f.write(f'team add {nom}_{nbPos}\n')
+				f.write(f'team modify {nom}_{nbPos} displayName {{"text":"{nom} - {i+1}{pos}","color":"{col}"}}\n')
+				f.write(f'team modify {nom}_{nbPos} suffix {{"text":" [{nom} - {i+1}{pos}]","color":"{col}"}}\n')
+				f.write(f'team modify {nom}_{nbPos} color {vanilla_color}\n')
+				f.write("\n")
+
+			# Création d'une équipe "???" pour placement inconnu
+			f.write(f'team add {nom}_x\n')
+			f.write(f'team modify {nom}_x displayName {{"text":"{nom} - ???","color":"{couleur}"}}\n')
+			f.write(f'team modify {nom}_x suffix {{"text":" [{nom} - ???]","color":"{couleur}"}}\n')
+			f.write(f'team modify {nom}_x color {vanilla_color}\n')
+			f.write("\n")
+
+		# Ajout de l'équipe "aMJ"
+		f.write('team add MJ\n')
+		f.write('team modify MJ displayName {"text":"MJ","color":"dark_aqua"}\n')
+		f.write('team modify MJ suffix {"text":" [MJ]","color":"dark_aqua"}\n')
+		f.write('team modify MJ color aqua\n')
+		f.write("\n")
 
 # Définition des équipes
 teams: list[tuple[str, str, int, str]] = [

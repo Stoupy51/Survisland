@@ -1,3 +1,4 @@
+
 # 5. Rats de labo (1 à 8 joueurs)
 
 À construire : une salle fermée d'où les rats ne peuvent pas sortir, et une cage entourée de blocs invisibles (barrières) pour que les rats relâchés dedans y restent.
@@ -32,3 +33,4 @@ Retirer tous les rats de la salle, en liberté, portés ou en cage :
 ```
 function survisland:modes/pr_stoupy/rats/here/stop
 ```
+

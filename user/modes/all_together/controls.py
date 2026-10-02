@@ -1,7 +1,7 @@
 """ Generation of the per tick control loop and of the phase switching functions.
 
-Every function under body/ runs as and at one mannequin: it is the anchor of its group, it carries the
-state of its part in its own scores, and its players are the ones riding it.
+Every function under body/ runs as and at one mannequin: it is the anchor of its group,
+it carries the state of its part in its own scores, and its players are the ones riding it.
 Any number of groups can therefore run at the same time without knowing anything about each other.
 The tick itself is generic: it only knows action tags, so changing part only redistributes those tags.
 

@@ -1,3 +1,4 @@
+
 name: Build
 
 on:
@@ -37,3 +38,4 @@ jobs:
           git config user.email "$ACTOR_ID+$ACTOR@users.noreply.github.com"
           git commit -m "build: 🚀 Build"
           git push
+

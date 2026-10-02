@@ -11,7 +11,9 @@ def main() -> None:
 
 	# Get textures
 	textures_folder = str(Mem.ctx.meta.get("stewbeet", {}).get("textures_folder", ""))
-	textures: list[str] = sorted(os.path.splitext(file)[0] for _, _, files in os.walk(textures_folder) for file in files if file.endswith(".png"))
+	textures: list[str] = sorted(
+		os.path.splitext(file)[0] for _, _, files in os.walk(textures_folder) for file in files if file.endswith(".png")
+	)
 
 	# Add colored books
 	books: list[str] = [x for x in textures if "book_" in x]
@@ -59,7 +61,13 @@ def main() -> None:
 			continue
 
 	# Add paintings 4x4
-	for item in ("mariage_painting", "knights_painting", "koko_painting", "fusoya_painting", "hamelin_painting", "cadre_m4_puni", "cadre_photo_artyu", "cadre_photo_banga", "cadre_photo_leon", "cadre_photo_mega", "cadre_photo_ona", "cadre_photo_rox", "cadre_tata_cookie", "cadre_tata_marcus_massage", "cadre_tata_marcus", "cadre_tata_saut", "cadre_tata_tue", "cadre_justeprix", "cadre_sulfur_cube"):
+	for item in (
+		"mariage_painting", "knights_painting", "koko_painting", "fusoya_painting", "hamelin_painting",
+		"cadre_m4_puni", "cadre_photo_artyu", "cadre_photo_banga", "cadre_photo_leon",
+		"cadre_photo_mega", "cadre_photo_ona", "cadre_photo_rox",
+		"cadre_tata_cookie", "cadre_tata_marcus_massage", "cadre_tata_marcus", "cadre_tata_saut", "cadre_tata_tue",
+		"cadre_justeprix", "cadre_sulfur_cube",
+	):
 		Painting(id=item, painting_data=PaintingData(
 			texture=f"painting/{item}",
 			author={"text":"Tata_Mymy","color":"yellow"},

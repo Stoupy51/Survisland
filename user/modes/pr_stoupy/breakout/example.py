@@ -3,6 +3,7 @@
 Seen from the corner facing along the field, the back wall is on the left (^1) and the players stand on the right (^-1),
 which is the side where the right key moves a bumper toward the end of the field (invert:0).
 """
+# ruff: noqa: E501
 # Imports
 from stewbeet import Mem, write_function
 

@@ -28,7 +28,7 @@ def main() -> None:
 	Item(id="grimoire", manual_category="misc")
 
 	# Cards 0 to 8
-	for i in range(0, 9):
+	for i in range(9):
 		Item(
 			id=f"card_{i}",
 			manual_category="misc",
@@ -39,3 +39,4 @@ def main() -> None:
 	Item(id="water_gun", manual_category="misc")
 	Item(id="pass_du_bureau_de_giovanni", manual_category="misc")
 	Item(id="filet_a_papillons", manual_category="misc")
+

@@ -1,4 +1,5 @@
 
+# ruff: noqa: E501
 # Imports
 from stewbeet import Advancement, JsonDict, Mem, set_json_encoder, write_function
 

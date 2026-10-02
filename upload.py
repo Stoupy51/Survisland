@@ -13,10 +13,10 @@ cfg: ProjectConfig = get_project_config()
 ## Uploads
 # Upload to GitHub
 github_config: JsonDict = {
-    "project_name": cfg.name,
-    "version": cfg.version,
-    "build_folder": cfg.output,
-    "endswith": [".zip"]
+	"project_name": cfg.name,
+	"version": cfg.version,
+	"build_folder": cfg.output,
+	"endswith": [".zip"]
 }
 changelog: str = upload_to_github(credentials, github_config)
 

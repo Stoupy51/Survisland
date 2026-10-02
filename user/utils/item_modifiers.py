@@ -11,7 +11,7 @@ def main() -> None:
 	ns: str = Mem.ctx.project_id
 
 	# For each book, generate an item modifier to change item_model
-	for item in Mem.definitions.keys():
+	for item in Mem.definitions:
 		data = Item.from_id(item).components
 		if "book_" in item:
 			model: str = data["item_model"]
@@ -50,6 +50,4 @@ def main() -> None:
 			{"function":"minecraft:set_components","components":{"minecraft:item_model":lighted},"conditions":[{"condition":"minecraft:entity_properties","entity":"this","predicate":{"equipment":{slot:{"components":{"minecraft:item_model":normal}}}}}]},
 		]
 		Mem.ctx.data[ns].item_modifiers[f"switch_flambeau_state/{slot}"] = set_json_encoder(ItemModifier(item_modifiers), max_level=-1)
-
-	pass
 

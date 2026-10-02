@@ -13,20 +13,9 @@ with stp.MeasureTime(message="Textures optimized"):
 				continue
 			filepath = f"{root}/{file}"
 
-			# Load image
-			image = Image.open(filepath)
-			image = image.convert("RGBA")
-			pixels = image.load()
-			width, height = image.size
-
-			# Optimize image
-			for x in range(width):
-				for y in range(height):
-					r, g, b, a = pixels[x, y]
-					if a == 0:
-						pixels[x, y] = (0, 0, 0, 0)
-
-			# Save image
-			image.save(filepath)
+			# Fully transparent pixels become (0, 0, 0, 0), the others are kept as they are
+			image = Image.open(filepath).convert("RGBA")
+			visible = image.getchannel("A").point(lambda alpha: 255 if alpha else 0)
+			Image.composite(image, Image.new("RGBA", image.size), visible).save(filepath)
 			stp.info(f"Optimized '{file}'")
 

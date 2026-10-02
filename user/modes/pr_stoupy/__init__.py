@@ -41,7 +41,7 @@ Il suffit d'éloigner les copies de plus de 48 blocs (regroupement des collecteu
 			Bloc de redstone au même endroit à la fin de chaque niveau, jusqu'au bloc du niveau suivant.
 		En solo, le niveau est fini quand il ne reste plus de briques rouges, bleu clair, vert clair et jaunes.
 	breakout/here/next_level                    niveau suivant, cloné pendant le compte à rebours grâce à son bloc de niveau
-	breakout/here/stop
+	breakout/here/stop                          arrête le terrain le plus proche
 	execute positioned <coin bas gauche> run function survisland:modes/pr_stoupy/breakout/here/example {width:13,height:20,axis:"z"}
 		Terrain d'exemple construit et configuré : cadre, vitre, briques, cabines des joueurs et command block de départ.
 	breakout/here/example_level                 remet les briques d'exemple dans le terrain le plus proche
@@ -52,14 +52,14 @@ Il suffit d'éloigner les copies de plus de 48 blocs (regroupement des collecteu
 	orbit/here/rock/<tiny|small|medium|large|huge>   rocher flottant de pierres sombres centré ici, bord tiré au hasard
 	orbit/start                                 (répétitif) chaque joueur sur un bloc de départ rejoint la partie, le bloc disparaît jusqu'à la fin
 	orbit/swallow                               à exécuter en tant que le joueur tombé dans le trou noir
-	orbit/here/stop
+	orbit/here/stop                             arrête la partie de la salle la plus proche
 
 # 5. Les rats de labo (1 à 8 joueurs, n'importe qui peut aider), à placer dans cet ordre
 	Entrer dans n'importe quel trial (start) repose au sol les rats portés, avant toute téléportation.
-	rats/here/place_collector                   bloc à cliquer (gauche ou droit) pour envoyer ses rats dans la cage, un par salle
+	rats/here/place_collector                   un seul par salle, bloc à cliquer (gauche ou droit) pour envoyer ses rats dans la cage
 	rats/here/place_cage                        où les rats déposés sont relâchés, entouré de blocs invisibles pour qu'ils y restent
 	rats/here/spawn_rats {count:25,radius:10,goal:20}   des rats au hasard, posés au sol dans le rayon, goal à mettre en cage (0 pour tous)
-	rats/here/place_rat {variant:"grey"}        un rat ici : grey, white, brown ou mutant
+	rats/here/place_rat {variant:"grey"}        variant parmi grey, white, brown et mutant : un rat de cette couleur posé ici
 	rats/here/stop                              retire les rats de la salle, en liberté, portés ou en cage
 
 # Remise à zéro pendant le développement
@@ -123,5 +123,4 @@ $execute as @e[type=minecraft:interaction,tag={rats}.collector,distance=..$(radi
 {kills}
 $tellraw @a[distance=..16] {{"text":"Laboratoire : tout est supprimé à $(radius) blocs.","color":"green"}}
 """)
-
 

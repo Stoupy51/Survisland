@@ -11,7 +11,7 @@ def main() -> None:
 	ns: str = Mem.ctx.project_id
 
 	# Make parchemins & cushions tintables
-	# (26.1 removed #minecraft:dyeable: dyeing is now a per-item "minecraft:crafting_dye" recipe, and cauldron washing is the #minecraft:cauldron_can_remove_dye tag)
+	# Dyeing is a "minecraft:crafting_dye" recipe per item, washing in a cauldron is the #minecraft:cauldron_can_remove_dye tag
 	parchemin = Item.from_id("parchemin")
 	cushion = Item.from_id("cushion")
 	dyeable_bases: list[str] = stp.unique_list([parchemin.base_item, cushion.base_item])

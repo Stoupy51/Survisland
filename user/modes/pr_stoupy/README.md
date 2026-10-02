@@ -144,3 +144,4 @@ Les rats et le villageois (avec 5 étoiles du `loot give` ci-dessus) se testent 
 
 Ce que le mode solo ne teste pas : deux joueurs sur un même mannequin, quatre balles en même temps, un puzzle de miroir à deux.
 Pour ça, un serveur local avec `online-mode=false` et plusieurs clients en comptes hors-ligne (Prism Launcher) sur `localhost`.
+

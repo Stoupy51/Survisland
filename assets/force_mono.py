@@ -6,6 +6,7 @@ import os
 import subprocess
 from multiprocessing import Pool
 
+
 def convert_file(args):
 	src, dst = args
 	previous_size = os.path.getsize(src)
@@ -30,7 +31,7 @@ if __name__ == "__main__":
 				files_to_compress.append((src, dst))
 
 	# Compress
-	cpu_count = os.cpu_count() // 2 + 1
+	cpu_count = (os.cpu_count() or 1) // 2 + 1
 	with Pool(processes = cpu_count) as pool:
 		pool.map(convert_file, files_to_compress)
 	print("Compression finished!")

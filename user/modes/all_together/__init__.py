@@ -7,9 +7,9 @@ Le mannequin est l'ancre de son groupe : il porte l'état de sa partie dans ses 
 joueurs sont ceux qui le chevauchent, donc plusieurs groupes peuvent faire le parcours en même temps sans se voir.
 
 # Le parcours, en command blocks
-Tout se repère par rapport au point d'exécution, donc depuis un command block c'est le bloc lui même qui
-sert de repère. Chaque fonction ne touche que les gens à moins de TRIGGER_RADIUS (3) blocs, et toutes sont
-faites pour être posées dans un command block répétitif : elles ne font rien quand il n'y a personne à prendre.
+Tout se repère par rapport au point d'exécution, donc depuis un command block c'est le bloc lui même qui sert de repère.
+Chaque fonction ne touche que les gens à moins de TRIGGER_RADIUS (3) blocs,
+et toutes sont faites pour être posées dans un command block répétitif : elles ne font rien quand il n'y a personne à prendre.
 
 	/function survisland:modes/all_together/start                    départ, groupe les joueurs libres qui passent ici
 	/function survisland:modes/all_together/here/set_phase/riviere   début d'une partie, ne fait rien si le groupe y est déjà

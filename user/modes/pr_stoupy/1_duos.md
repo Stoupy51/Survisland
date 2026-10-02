@@ -29,3 +29,4 @@ Redistribuer au hasard les commandes des deux joueurs du mannequin à moins de 3
 ```
 function survisland:modes/pr_stoupy/duo/here/shuffle_slots
 ```
+
