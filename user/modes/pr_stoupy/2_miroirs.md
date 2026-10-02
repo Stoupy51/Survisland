@@ -17,6 +17,7 @@ Leur reflet apparaît après le déplacement, en face de leur point d'arrivée.
 
 Les joueurs reçoivent l'item "Figer le reflet" : clic droit pour figer ou libérer leur mannequin.
 Le mannequin subit murs, escaliers et plaques de pression, le puzzle repose sur le décalage accumulé pendant qu'il est figé.
+Quand un joueur grimpe (échelle, lianes, échafaudage), son reflet monte et descend avec lui, même sans rien à grimper de son côté.
 
 Sortie, command block impulsion. L'étoile va au joueur le plus proche, à 5 blocs au plus, puis ses reflets disparaissent et les deux joueurs retournent sur leur bloc de départ :
 

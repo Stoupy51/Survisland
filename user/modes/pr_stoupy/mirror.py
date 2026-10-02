@@ -226,6 +226,7 @@ scoreboard players operation #{MODE}_pitch {ns}.data = @s bs.rot.v
 execute if score @s {tag}.flip_x matches -1 run scoreboard players operation #{MODE}_yaw {ns}.data *= #-1 {ns}.data
 execute if score @s {tag}.flip_z matches -1 run function {root}/reflect_yaw_z
 execute store success score #{MODE}_sneak {ns}.data if entity @s[predicate={ns}:is_sneaking]
+execute store success score #{MODE}_climb {ns}.data if block ~ ~ ~ #minecraft:climbable
 
 execute as @e[type=mannequin,tag={tag}.body,{same_pair}] run function {root}/drive
 """)
@@ -238,8 +239,11 @@ scoreboard players operation #{MODE}_yaw {ns}.data += #18000 {ns}.data
 	write_function(f"{root}/drive", f"""
 execute if score @s {tag}.frozen matches 1 run return 0
 
-# A rise starting from the ground is a jump, gravity handles the rest of the arc
-execute if score #{MODE}_dy {ns}.data matches {JUMP_TRIGGER}.. if predicate {ns}:on_ground run data modify entity @s Motion[1] set value 0.42d
+# A climbing player lends its vertical move as is, Motion being applied before gravity, so nothing needs to be climbed on this side
+execute if score #{MODE}_climb {ns}.data matches 1 store result entity @s Motion[1] double 0.001 run scoreboard players get #{MODE}_dy {ns}.data
+
+# Otherwise a rise starting from the ground is a jump, gravity handles the rest of the arc
+execute if score #{MODE}_climb {ns}.data matches 0 if score #{MODE}_dy {ns}.data matches {JUMP_TRIGGER}.. if predicate {ns}:on_ground run data modify entity @s Motion[1] set value 0.42d
 
 # Crouch or stand up only when the player just did
 execute unless score #{MODE}_sneak {ns}.data = @s {tag}.sneak run function {root}/update_pose
