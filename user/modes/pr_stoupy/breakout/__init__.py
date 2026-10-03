@@ -575,7 +575,6 @@ execute if score #{MODE}_level {ns}.data matches {LEVELS}.. run return run funct
 scoreboard players set #{MODE}_state {ns}.data 3
 {arena.screen(cleared_title)}
 execute as {arena.players} at @s run playsound minecraft:entity.player.levelup ambient @s
-tellraw @a[distance=..64] {{"text":"Casse-briques : niveau terminé, lance /function {root}/here/next_level","color":"gray","italic":true}}
 """)
 
 	write_function(f"{root}/victory", f"""

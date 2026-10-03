@@ -1,7 +1,7 @@
 
 #> survisland:modes/pr_stoupy/breakout/here/next_level
 #
-# @within	string in survisland:modes/pr_stoupy/breakout/level_cleared
+# @within	(public)
 #
 
 # The nearest field takes its balls back and goes on from the countdown, during which its level block gets the level cloned in

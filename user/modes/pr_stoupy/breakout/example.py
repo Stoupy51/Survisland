@@ -42,7 +42,6 @@ function {root}/example/booth with storage {storage}""" for slot, color in enume
 $function {root}/here/setup {{width:$(width),height:$(height),axis:"$(axis)",invert:0}}
 execute as {corner} at @s rotated as @s run function {root}/example/build
 execute as {corner} at @s rotated as @s run function {root}/example/bricks
-tellraw @a[distance=..32] {{"text":"Casse-briques : terrain d'exemple construit, les joueurs se mettent dans les cabines de couleur.","color":"green"}}
 """)
 
 	write_function(f"{root}/here/example_level", f"""
