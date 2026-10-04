@@ -47,54 +47,6 @@
 		"subtitle": "Rat Dance",
 		"sounds": [{"name": "survisland:rat_dance","stream": true}]
 	},
-	"abyssion_wrath/abyssion_boucle": {
-		"subtitle": "abyssion_wrath/abyssion_boucle",
-		"sounds": [{"name": "survisland:abyssion_wrath/abyssion_boucle","stream": true}]
-	},
-	"abyssion_wrath/abyssion_fight": {
-		"subtitle": "abyssion_wrath/abyssion_fight",
-		"sounds": [{"name": "survisland:abyssion_wrath/abyssion_fight","stream": true}]
-	},
-	"abyssion_wrath/abyssion_intro": {
-		"subtitle": "abyssion_wrath/abyssion_intro",
-		"sounds": [{"name": "survisland:abyssion_wrath/abyssion_intro","stream": true}]
-	},
-	"abyssion_wrath/end_epic": {
-		"subtitle": "abyssion_wrath/end_epic",
-		"sounds": ["survisland:abyssion_wrath/end_epic"]
-	},
-	"abyssion_wrath/end_rat": {
-		"subtitle": "abyssion_wrath/end_rat",
-		"sounds": ["survisland:abyssion_wrath/end_rat"]
-	},
-	"abyssion_wrath/entree_final": {
-		"subtitle": "abyssion_wrath/entree_final",
-		"sounds": [{"name": "survisland:abyssion_wrath/entree_final","stream": true}]
-	},
-	"abyssion_wrath/entree_intro": {
-		"subtitle": "abyssion_wrath/entree_intro",
-		"sounds": [{"name": "survisland:abyssion_wrath/entree_intro","stream": true}]
-	},
-	"abyssion_wrath/test_audio": {
-		"subtitle": "abyssion_wrath/test_audio",
-		"sounds": ["survisland:abyssion_wrath/test_audio"]
-	},
-	"abyssion_wrath/vault_early": {
-		"subtitle": "abyssion_wrath/vault_early",
-		"sounds": [{"name": "survisland:abyssion_wrath/vault_early","stream": true}]
-	},
-	"abyssion_wrath/vault_final": {
-		"subtitle": "abyssion_wrath/vault_final",
-		"sounds": [{"name": "survisland:abyssion_wrath/vault_final","stream": true}]
-	},
-	"abyssion_wrath/vault_intro": {
-		"subtitle": "abyssion_wrath/vault_intro",
-		"sounds": [{"name": "survisland:abyssion_wrath/vault_intro","stream": true}]
-	},
-	"abyssion_wrath/vault_mid": {
-		"subtitle": "abyssion_wrath/vault_mid",
-		"sounds": [{"name": "survisland:abyssion_wrath/vault_mid","stream": true}]
-	},
 	"artytris": {
 		"subtitle": "artytris",
 		"sounds": [{"name": "survisland:artytris","stream": true}]
@@ -114,10 +66,6 @@
 	"laser_gun": {
 		"subtitle": "laser_gun",
 		"sounds": ["survisland:laser_gun"]
-	},
-	"lefortdesrats/lfdr_main_theme": {
-		"subtitle": "lefortdesrats/lfdr_main_theme",
-		"sounds": [{"name": "survisland:lefortdesrats/lfdr_main_theme","stream": true}]
 	},
 	"manoir/albert": {
 		"subtitle": "manoir/albert",
@@ -202,10 +150,6 @@
 	"tchoutchou/double_elim": {
 		"subtitle": "tchoutchou/double_elim",
 		"sounds": [{"name": "survisland:tchoutchou/double_elim","stream": true}]
-	},
-	"traprace/star_festival": {
-		"subtitle": "traprace/star_festival",
-		"sounds": [{"name": "survisland:traprace/star_festival","stream": true}]
 	},
 	"vine_boom": {
 		"subtitle": "vine_boom",
