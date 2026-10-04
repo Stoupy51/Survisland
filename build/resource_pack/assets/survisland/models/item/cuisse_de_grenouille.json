@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/apple",
+	"textures": {
+		"layer0": "survisland:item/cuisse_de_grenouille"
+	}
+}

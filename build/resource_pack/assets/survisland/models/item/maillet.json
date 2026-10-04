@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/mace",
+	"textures": {
+		"layer0": "survisland:item/maillet"
+	}
+}
