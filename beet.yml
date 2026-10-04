@@ -68,6 +68,7 @@ meta:
             aram: {"libs": True}
             abyssion_wrath: {"sounds": True, "items": True}
             aube_ecarlate: {"sounds": False, "items": False}
+            cache_cache: {"libs": True}
             lefortdesrats: {"sounds": True, "items": True}
             manoir: {"sounds": True}
             traprace: {"sounds": True}
