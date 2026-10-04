@@ -104,3 +104,129 @@ def main() -> None:
 		}
 	)
 
+	Item(
+		id="arrosoir",
+		base_item="minecraft:apple",
+		manual_category="food",
+		components={
+			"lore": [{"text":"Made by Zenji","color":"gold","italic":False}],
+		}
+	)
+
+	Item(
+		id="blanquette",
+		base_item="minecraft:apple",
+		manual_category="food",
+		components={
+			"lore": [{"text":"Made by Zenji","color":"gold","italic":False}],
+		}
+	)
+
+	Item(
+		id="boeuf_bourguignon",
+		base_item="minecraft:apple",
+		manual_category="food",
+		components={
+			"lore": [{"text":"Made by Zenji","color":"gold","italic":False}],
+		}
+	)
+
+	Item(
+		id="choucroute",
+		base_item="minecraft:apple",
+		manual_category="food",
+		components={
+			"lore": [{"text":"Made by Zenji","color":"gold","italic":False}],
+		}
+	)
+
+	Item(
+		id="coq_au_vin",
+		base_item="minecraft:apple",
+		manual_category="food",
+		components={
+			"lore": [{"text":"Made by Zenji","color":"gold","italic":False}],
+		}
+	)
+
+	Item(
+		id="croissant_au_fromage",
+		base_item="minecraft:apple",
+		manual_category="food",
+		components={
+			"lore": [{"text":"Made by Zenji","color":"gold","italic":False}],
+		}
+	)
+
+	Item(
+		id="cuisse_de_grenouille",
+		base_item="minecraft:apple",
+		manual_category="food",
+		components={
+			"lore": [{"text":"Made by Zenji","color":"gold","italic":False}],
+		}
+	)
+
+	Item(
+		id="escargot",
+		base_item="minecraft:apple",
+		manual_category="food",
+		components={
+			"lore": [{"text":"Made by Zenji","color":"gold","italic":False}],
+		}
+	)
+
+	Item(
+		id="frites",
+		base_item="minecraft:apple",
+		manual_category="food",
+		components={
+			"lore": [{"text":"Made by Zenji","color":"gold","italic":False}],
+		}
+	)
+
+	Item(
+		id="fromage",
+		base_item="minecraft:apple",
+		manual_category="food",
+		components={
+			"lore": [{"text":"Made by Zenji","color":"gold","italic":False}],
+		}
+	)
+
+	Item(
+		id="maillet",
+		base_item="minecraft:mace",
+		manual_category="food",
+		components={
+			"lore": [{"text":"Made by Zenji","color":"gold","italic":False}],
+		}
+	)
+
+	Item(
+		id="plan_de_table",
+		base_item="minecraft:apple",
+		manual_category="food",
+		components={
+			"lore": [{"text":"Made by Zenji","color":"gold","italic":False}],
+		}
+	)
+
+	Item(
+		id="ratatouille",
+		base_item="minecraft:apple",
+		manual_category="food",
+		components={
+			"lore": [{"text":"Made by Zenji","color":"gold","italic":False}],
+		}
+	)
+
+	Item(
+		id="soupe",
+		base_item="minecraft:apple",
+		manual_category="food",
+		components={
+			"lore": [{"text":"Made by Zenji","color":"gold","italic":False}],
+		}
+	)
+

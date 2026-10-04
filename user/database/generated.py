@@ -79,7 +79,7 @@ def main() -> None:
 	for item in ("tv_cuisine","tv_dessin","tv_eteinte","tv_foot","tv_infos"):
 		Painting(id=item, painting_data=PaintingData(
 			texture=f"painting/{item}",
-			author={"text":"M4TOUW","color":"yellow"},
+			author={"text":"Tata_Mymy","color":"yellow"},
 			width=4,
 			height=2
 		))
