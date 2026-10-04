@@ -9,9 +9,18 @@
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
-## 2. Clonez le projet
+## 2.a Clonez le projet
 ```bash
 git clone https://github.com/Stoupy51/Survisland.git
+```
+
+## 2.b Synchronisez le projet
+Si vous avez déjà contribué, vous pouvez synchroniser votre fork avec le projet principal avant toute modification pour éviter les conflits :
+```bash
+git remote add upstream https://github.com/Stoupy51/Survisland.git
+git fetch upstream
+git reset --hard upstream/main
+git push -f origin main
 ```
 
 ## 3. Build le projet
