@@ -206,6 +206,188 @@
 		},
 		"skip_gives": false
 	},
+	"arrosoir": {
+		"id": "arrosoir",
+		"base_item": "minecraft:apple",
+		"manual_category": "food",
+		"recipes": [],
+		"components": {
+			"lore": [{"text": "Made by Zenji","color": "gold","italic": false},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"item_model": "survisland:arrosoir",
+			"item_name": {"text": "Arrosoir"},
+			"custom_data": {"survisland": {"arrosoir": true},"smithed": {"id": "survisland:arrosoir","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"blanquette": {
+		"id": "blanquette",
+		"base_item": "minecraft:apple",
+		"manual_category": "food",
+		"recipes": [],
+		"components": {
+			"lore": [{"text": "Made by Zenji","color": "gold","italic": false},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"item_model": "survisland:blanquette",
+			"item_name": {"text": "Blanquette"},
+			"custom_data": {"survisland": {"blanquette": true},"smithed": {"id": "survisland:blanquette","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"boeuf_bourguignon": {
+		"id": "boeuf_bourguignon",
+		"base_item": "minecraft:apple",
+		"manual_category": "food",
+		"recipes": [],
+		"components": {
+			"lore": [{"text": "Made by Zenji","color": "gold","italic": false},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"item_model": "survisland:boeuf_bourguignon",
+			"item_name": {"text": "Boeuf Bourguignon"},
+			"custom_data": {"survisland": {"boeuf_bourguignon": true},"smithed": {"id": "survisland:boeuf_bourguignon","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"choucroute": {
+		"id": "choucroute",
+		"base_item": "minecraft:apple",
+		"manual_category": "food",
+		"recipes": [],
+		"components": {
+			"lore": [{"text": "Made by Zenji","color": "gold","italic": false},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"item_model": "survisland:choucroute",
+			"item_name": {"text": "Choucroute"},
+			"custom_data": {"survisland": {"choucroute": true},"smithed": {"id": "survisland:choucroute","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"coq_au_vin": {
+		"id": "coq_au_vin",
+		"base_item": "minecraft:apple",
+		"manual_category": "food",
+		"recipes": [],
+		"components": {
+			"lore": [{"text": "Made by Zenji","color": "gold","italic": false},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"item_model": "survisland:coq_au_vin",
+			"item_name": {"text": "Coq Au Vin"},
+			"custom_data": {"survisland": {"coq_au_vin": true},"smithed": {"id": "survisland:coq_au_vin","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"croissant_au_fromage": {
+		"id": "croissant_au_fromage",
+		"base_item": "minecraft:apple",
+		"manual_category": "food",
+		"recipes": [],
+		"components": {
+			"lore": [{"text": "Made by Zenji","color": "gold","italic": false},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"item_model": "survisland:croissant_au_fromage",
+			"item_name": {"text": "Croissant Au Fromage"},
+			"custom_data": {"survisland": {"croissant_au_fromage": true},"smithed": {"id": "survisland:croissant_au_fromage","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"cuisse_de_grenouille": {
+		"id": "cuisse_de_grenouille",
+		"base_item": "minecraft:apple",
+		"manual_category": "food",
+		"recipes": [],
+		"components": {
+			"lore": [{"text": "Made by Zenji","color": "gold","italic": false},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"item_model": "survisland:cuisse_de_grenouille",
+			"item_name": {"text": "Cuisse De Grenouille"},
+			"custom_data": {"survisland": {"cuisse_de_grenouille": true},"smithed": {"id": "survisland:cuisse_de_grenouille","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"escargot": {
+		"id": "escargot",
+		"base_item": "minecraft:apple",
+		"manual_category": "food",
+		"recipes": [],
+		"components": {
+			"lore": [{"text": "Made by Zenji","color": "gold","italic": false},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"item_model": "survisland:escargot",
+			"item_name": {"text": "Escargot"},
+			"custom_data": {"survisland": {"escargot": true},"smithed": {"id": "survisland:escargot","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"frites": {
+		"id": "frites",
+		"base_item": "minecraft:apple",
+		"manual_category": "food",
+		"recipes": [],
+		"components": {
+			"lore": [{"text": "Made by Zenji","color": "gold","italic": false},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"item_model": "survisland:frites",
+			"item_name": {"text": "Frites"},
+			"custom_data": {"survisland": {"frites": true},"smithed": {"id": "survisland:frites","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"fromage": {
+		"id": "fromage",
+		"base_item": "minecraft:apple",
+		"manual_category": "food",
+		"recipes": [],
+		"components": {
+			"lore": [{"text": "Made by Zenji","color": "gold","italic": false},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"item_model": "survisland:fromage",
+			"item_name": {"text": "Fromage"},
+			"custom_data": {"survisland": {"fromage": true},"smithed": {"id": "survisland:fromage","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"maillet": {
+		"id": "maillet",
+		"base_item": "minecraft:mace",
+		"manual_category": "food",
+		"recipes": [],
+		"components": {
+			"lore": [{"text": "Made by Zenji","color": "gold","italic": false},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"item_model": "survisland:maillet",
+			"item_name": {"text": "Maillet"},
+			"custom_data": {"survisland": {"maillet": true},"smithed": {"id": "survisland:maillet","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"plan_de_table": {
+		"id": "plan_de_table",
+		"base_item": "minecraft:apple",
+		"manual_category": "food",
+		"recipes": [],
+		"components": {
+			"lore": [{"text": "Made by Zenji","color": "gold","italic": false},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"item_model": "survisland:plan_de_table",
+			"item_name": {"text": "Plan De Table"},
+			"custom_data": {"survisland": {"plan_de_table": true},"smithed": {"id": "survisland:plan_de_table","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"ratatouille": {
+		"id": "ratatouille",
+		"base_item": "minecraft:apple",
+		"manual_category": "food",
+		"recipes": [],
+		"components": {
+			"lore": [{"text": "Made by Zenji","color": "gold","italic": false},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"item_model": "survisland:ratatouille",
+			"item_name": {"text": "Ratatouille"},
+			"custom_data": {"survisland": {"ratatouille": true},"smithed": {"id": "survisland:ratatouille","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"soupe": {
+		"id": "soupe",
+		"base_item": "minecraft:apple",
+		"manual_category": "food",
+		"recipes": [],
+		"components": {
+			"lore": [{"text": "Made by Zenji","color": "gold","italic": false},["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"item_model": "survisland:soupe",
+			"item_name": {"text": "Soupe"},
+			"custom_data": {"survisland": {"soupe": true},"smithed": {"id": "survisland:soupe","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
 	"book_advanced": {
 		"id": "book_advanced",
 		"base_item": "minecraft:written_book",
@@ -1575,7 +1757,7 @@
 		"skip_gives": false,
 		"painting_data": {
 			"texture": "painting/tv_cuisine",
-			"author": {"text": "M4TOUW","color": "yellow"},
+			"author": {"text": "Tata_Mymy","color": "yellow"},
 			"title": {"text": "Tv Cuisine"},
 			"width": 4,
 			"height": 2
@@ -1595,7 +1777,7 @@
 		"skip_gives": false,
 		"painting_data": {
 			"texture": "painting/tv_dessin",
-			"author": {"text": "M4TOUW","color": "yellow"},
+			"author": {"text": "Tata_Mymy","color": "yellow"},
 			"title": {"text": "Tv Dessin"},
 			"width": 4,
 			"height": 2
@@ -1615,7 +1797,7 @@
 		"skip_gives": false,
 		"painting_data": {
 			"texture": "painting/tv_eteinte",
-			"author": {"text": "M4TOUW","color": "yellow"},
+			"author": {"text": "Tata_Mymy","color": "yellow"},
 			"title": {"text": "Tv Eteinte"},
 			"width": 4,
 			"height": 2
@@ -1635,7 +1817,7 @@
 		"skip_gives": false,
 		"painting_data": {
 			"texture": "painting/tv_foot",
-			"author": {"text": "M4TOUW","color": "yellow"},
+			"author": {"text": "Tata_Mymy","color": "yellow"},
 			"title": {"text": "Tv Foot"},
 			"width": 4,
 			"height": 2
@@ -1655,7 +1837,7 @@
 		"skip_gives": false,
 		"painting_data": {
 			"texture": "painting/tv_infos",
-			"author": {"text": "M4TOUW","color": "yellow"},
+			"author": {"text": "Tata_Mymy","color": "yellow"},
 			"title": {"text": "Tv Infos"},
 			"width": 4,
 			"height": 2

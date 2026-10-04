@@ -1,0 +1,46 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:mace",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:lore": [
+									{
+										"text": "Made by Zenji",
+										"color": "gold",
+										"italic": false
+									},
+									[
+										"",
+										{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},
+										{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}
+									]
+								],
+								"minecraft:item_model": "survisland:maillet",
+								"minecraft:item_name": {
+									"text": "Maillet"
+								},
+								"minecraft:custom_data": {
+									"survisland": {
+										"maillet": true
+									},
+									"smithed": {
+										"id": "survisland:maillet",
+										"origin": "survisland",
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
