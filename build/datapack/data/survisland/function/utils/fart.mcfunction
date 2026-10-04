@@ -4,7 +4,7 @@
 # @executed	at @s
 #
 # @within	survisland:tick
-#			survisland:v2.9.0/tick [ at @s ]
+#			survisland:v2.10.0/tick [ at @s ]
 #
 # @executed			as & at the player who farted
 # 
