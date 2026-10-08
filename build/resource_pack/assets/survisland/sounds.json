@@ -91,6 +91,10 @@
 		"subtitle": "manoir/mc_b",
 		"sounds": ["survisland:manoir/mc_b"]
 	},
+	"manoir/mc_c": {
+		"subtitle": "manoir/mc_c",
+		"sounds": ["survisland:manoir/mc_c"]
+	},
 	"manoir/mc_d": {
 		"subtitle": "manoir/mc_d",
 		"sounds": ["survisland:manoir/mc_d"]
