@@ -54,6 +54,7 @@ pipeline:
     # - "stewbeet.plugins.auto.lang_file"
     - "stewbeet.plugins.auto.text_renders.silent"
     - "stewbeet.plugins.auto.headers.silent"
+    - "user.stable_png" # User code (must run before archive)
     - "stewbeet.plugins.archive"
     - "stewbeet.plugins.merge_smithed_weld.datapack"
     - "stewbeet.plugins.merge_smithed_weld.resource_pack"
