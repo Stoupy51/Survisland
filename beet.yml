@@ -63,13 +63,19 @@ pipeline:
 # Generic dict which holds extra information usable by plugins
 meta:
     # Survisland specific data to disable/enable features
+    # (see user/database/modules/*.py)
     survisland:
         modules:
+            # Every key loads user/database/modules/<key>.py and calls its main() function.
+            # Modules run in this order; add new modules here without editing setup_definitions.py.
+            # External datapacks and resources
             aram: {"libs": False}
+            soleil: {"libs": True, "sounds": True}
             abyssion_wrath: {"sounds": False, "items": True}
             aube_ecarlate: {"sounds": False, "items": False}
-            cache_cache: {"libs": True}
+            cache_cache: {"libs": False}
             lefortdesrats: {"sounds": False, "items": True}
+            # Only sounds
             manoir: {"sounds": True}
             traprace: {"sounds": False}
 
@@ -119,4 +125,3 @@ meta:
             first_page_text: [{"text":"Ratio gold", "color":"#505050"}]
             showcase_image: 3
             use_dialog: 1 # 0 = no, 1 = yes, 2 = yes and no book
-

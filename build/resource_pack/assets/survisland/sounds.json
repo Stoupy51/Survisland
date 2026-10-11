@@ -115,6 +115,14 @@
 		"subtitle": "scary_screamer",
 		"sounds": ["survisland:scary_screamer"]
 	},
+	"soleil/green_light": {
+		"subtitle": "soleil/green_light",
+		"sounds": ["survisland:soleil/green_light"]
+	},
+	"soleil/pink_soldiers": {
+		"subtitle": "soleil/pink_soldiers",
+		"sounds": [{"name": "survisland:soleil/pink_soldiers","stream": true}]
+	},
 	"taco_bell": {
 		"subtitle": "taco_bell",
 		"sounds": ["survisland:taco_bell"]

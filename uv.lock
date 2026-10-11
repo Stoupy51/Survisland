@@ -91,7 +91,7 @@ wheels = [
 
 [[package]]
 name = "beet"
-version = "0.119.0"
+version = "0.119.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
@@ -104,9 +104,9 @@ dependencies = [
     { name = "pyyaml" },
     { name = "toml" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/6b/df/a19834ef6a840f2b27ad25374fa54a42e7c776b49cd97a7030eba06387bd/beet-0.119.0.tar.gz", hash = "sha256:571c4be422365e9b597989dd75a9c01d3560ff190aceb0657283fccd744bb6af", size = 98741, upload-time = "2026-09-19T23:03:41.828Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/9c/75/a7546a802aa2c4fefb6c28777fdc8c393e9340f6dfcc729c6efdd914037e/beet-0.119.1.tar.gz", hash = "sha256:c54c5501791027b408ee7ef4e74dd93a59c1eb64032ca1c6c5588b48c1c0c220", size = 98798, upload-time = "2026-10-02T23:05:31.65Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/ce/77/77e6f2aee45e5b2563387028b9c1cb32ebacec0f971b59e8db7b0040f494/beet-0.119.0-py3-none-any.whl", hash = "sha256:1d197366138c70afddd7ea8f5dbe186adf63c88635ce077c9cc0f64da5f81c52", size = 127466, upload-time = "2026-09-19T23:03:40.612Z" },
+    { url = "https://files.pythonhosted.org/packages/4a/f3/caa919e1f6b3dcfb28247d7743a512babd4049875c6833c295c3cacba4d1/beet-0.119.1-py3-none-any.whl", hash = "sha256:af0c49d5dde1dd059339000c16092cc71eeec1c86636a595e3eb00f182b2ee58", size = 127524, upload-time = "2026-10-02T23:05:30.563Z" },
 ]
 
 [[package]]
@@ -971,7 +971,7 @@ dependencies = [
 
 [[package]]
 name = "stewbeet"
-version = "3.9.6"
+version = "3.10.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beet" },
@@ -984,14 +984,14 @@ dependencies = [
     { name = "smithed" },
     { name = "stouputils" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/2f/9b/e0b50ef6be196ec22e17e7a995d005debe3197fad360bde658d824a9361c/stewbeet-3.9.6.tar.gz", hash = "sha256:468d93ee48eccc09c71518c545d528cdc54ae952fefba7329f14e15517463a2a", size = 755384, upload-time = "2026-10-01T18:59:31.777Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/92/15/286c139c3587979e9f841589faf84966effe9ca5626a42bd977ffc6db4ab/stewbeet-3.10.1.tar.gz", hash = "sha256:29c67eb128546a355532480fe1eea4f8d2a42ae8d3b4d988b7a5e0f7bd85e377", size = 764968, upload-time = "2026-10-09T17:41:51.858Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e9/aa/3e268361ab59d0d9a0afb1bfa9eaea2c0c09697a9e91ec46d85b8f0220bd/stewbeet-3.9.6-py3-none-any.whl", hash = "sha256:49c7be7376fb374cbf5f9892af5c621dc8b419035f9d5d2164880036032ffe2d", size = 925276, upload-time = "2026-10-01T18:59:28.618Z" },
+    { url = "https://files.pythonhosted.org/packages/75/fb/a0664b6c029d986512ca46234e6769682655f4738d8d2dcc3f8e286bc75d/stewbeet-3.10.1-py3-none-any.whl", hash = "sha256:cb4a9624e31267bb65857ca45211bb47aeba8c72356217dc58cf6b868a515d8a", size = 937410, upload-time = "2026-10-09T17:41:49.355Z" },
 ]
 
 [[package]]
 name = "stouputils"
-version = "26.8.0"
+version = "26.10.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "argcomplete" },
@@ -1005,9 +1005,9 @@ dependencies = [
     { name = "setproctitle" },
     { name = "tqdm" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/27/ef/b71383ba46e4a0c94abceb00db8ae65722207864d739a42ef129a9ded3d2/stouputils-26.8.0.tar.gz", hash = "sha256:4dfd4ed3193ef7282053f055544bc1eb53371cb08f50dabd31ca048ebe545009", size = 191443, upload-time = "2026-09-29T14:17:18.005Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/05/c4/2c7d356161a1ac4f32a8745462cf8cee7414ca1c90df819f48780c69ef08/stouputils-26.10.1.tar.gz", hash = "sha256:eef24b63f13cc95840f136edd3f4ae0c0d49bdfeacb3ce769e8f284a79a45982", size = 211761, upload-time = "2026-10-06T13:44:44.187Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/9b/4f/b949a3be7746b8b4db35177f660a72f528ff4a81978e03336c5c2496fac8/stouputils-26.8.0-py3-none-any.whl", hash = "sha256:c806c87ec024fc08e2c70a76c9dc2933dc241fe47db2481c5b45c2878bb0d2c4", size = 260773, upload-time = "2026-09-29T14:17:16.724Z" },
+    { url = "https://files.pythonhosted.org/packages/2d/49/e23cbcc22701ad68a2bc696fcd327c6f68a845f825ac260418bae052d71f/stouputils-26.10.1-py3-none-any.whl", hash = "sha256:5803c46fb9e12ac5745fa160157bcb265d00976e125c857e9c403f54a1668eb2", size = 284599, upload-time = "2026-10-06T13:44:42.734Z" },
 ]
 
 [[package]]
@@ -1022,7 +1022,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "smithed", git = "https://github.com/Stoupy51/smithed-python.git" },
-    { name = "stewbeet", specifier = ">=3.9.6" },
+    { name = "stewbeet", specifier = ">=3.10.1" },
 ]
 
 [[package]]
