@@ -33,12 +33,36 @@ Le projet est divisé en plusieurs dossiers :
 - `build/`: Build du projet, à ne pas modifier car il est généré automatiquement
 - `user/`: Code source du projet, c'est ici que vous devez faire vos modifications
   - `database/`: Base de données du projet, c'est ici que vous devez ajouter vos items, recettes
+    - `modules/`: Modules optionnels, automatiquement chargés à partir de `beet.yml`
   - `link and utils/`: Utilitaires du projet, c'est ici que vous pouvez ajouter des fonctions utilitaires pour faciliter votre développement
 - `assets/`: Assets du projet, c'est ici que vous pouvez ajouter des textures, des sons
   - `textures/`: Textures du projet, c'est ici que vous pouvez ajouter des textures pour vos items, blocs
   - `sounds/`: Sons du projet, c'est ici que vous pouvez ajouter des sons pour vos items, blocs
   - `models/`: Modèles du projet, c'est ici que je conseille d'ajouter des modèles complexes (qu'il faudra charger manuellement)
   - `records/`: Musiques de conseils globalement
+
+## Ajouter un module
+Pour ajouter un module, créez un fichier dans `user/database/modules/`, puis ajoutez une entrée sous `meta.survisland.modules` dans `beet.yml`. La clé doit correspondre au nom du fichier sans l'extension `.py`. Chaque module doit exposer une fonction `main()` sans argument ; elle sera importée et appelée automatiquement pendant la préparation des définitions.
+
+Par exemple, pour `user/database/modules/mon_module.py` :
+```python
+from stewbeet import Mem
+
+
+def main() -> None:
+    config = Mem.ctx.meta["survisland"]["modules"]["mon_module"]
+    # Ajouter ici les définitions et traitements du module.
+```
+
+Ajoutez ensuite sa configuration dans `beet.yml` :
+```yaml
+meta:
+  survisland:
+    modules:
+      mon_module: {"items": True, "sounds": False}
+```
+
+Les options configurées sont accessibles via `Mem.ctx.meta["survisland"]["modules"]["mon_module"]`. Les modules sont exécutés dans l'ordre de déclaration dans `beet.yml`. Il n'est pas nécessaire de modifier `user/setup_definitions.py`.
 
 ## 5. Configurer la copie automatique
 Pour faciliter le développement, vous pouvez configurer la copie automatique des datapacks et resource packs générés vers votre dossier de jeu Minecraft.
@@ -59,4 +83,3 @@ cmd /c mklink /d "resource_pack_shortcut" "D:\minecraft\snapshot\resourcepacks"
    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Stoupy51/Survisland&type=Date" />
  </picture>
 </a>
-
