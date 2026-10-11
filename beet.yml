@@ -63,15 +63,20 @@ pipeline:
 # Generic dict which holds extra information usable by plugins
 meta:
     # Survisland specific data to disable/enable features
+    # (see user/setup_definitions.py & user/database/modules/*.py)
     survisland:
         modules:
+            # Datapacks to merge
             aram: {"libs": False}
-            abyssion_wrath: {"sounds": False, "items": True}
-            aube_ecarlate: {"sounds": False, "items": False}
-            cache_cache: {"libs": True}
-            lefortdesrats: {"sounds": False, "items": True}
+            cache_cache: {"libs": False}
+            soleil: {"libs": True, "sounds": True}
+            # Only sounds
             manoir: {"sounds": True}
             traprace: {"sounds": False}
+            # Sounds and items
+            abyssion_wrath: {"sounds": False, "items": True}
+            aube_ecarlate: {"sounds": False, "items": False}
+            lefortdesrats: {"sounds": False, "items": True}
 
     # Model resolver configuration for caching models
     model_resolver:

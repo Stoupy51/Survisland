@@ -59,10 +59,6 @@
 		"subtitle": "fart_reverb",
 		"sounds": ["survisland:fart_reverb"]
 	},
-	"green_light": {
-		"subtitle": "green_light",
-		"sounds": ["survisland:green_light"]
-	},
 	"justeprix_jingle": {
 		"subtitle": "justeprix_jingle",
 		"sounds": [{"name": "survisland:justeprix_jingle","stream": true}]
@@ -111,10 +107,6 @@
 		"subtitle": "maracas",
 		"sounds": ["survisland:maracas"]
 	},
-	"pink_soldiers": {
-		"subtitle": "pink_soldiers",
-		"sounds": [{"name": "survisland:pink_soldiers","stream": true}]
-	},
 	"rompich": {
 		"subtitle": "rompich",
 		"sounds": ["survisland:rompich"]
@@ -122,6 +114,14 @@
 	"scary_screamer": {
 		"subtitle": "scary_screamer",
 		"sounds": ["survisland:scary_screamer"]
+	},
+	"soleil/green_light": {
+		"subtitle": "soleil/green_light",
+		"sounds": ["survisland:soleil/green_light"]
+	},
+	"soleil/pink_soldiers": {
+		"subtitle": "soleil/pink_soldiers",
+		"sounds": [{"name": "survisland:soleil/pink_soldiers","stream": true}]
 	},
 	"taco_bell": {
 		"subtitle": "taco_bell",

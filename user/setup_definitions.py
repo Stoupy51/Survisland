@@ -24,6 +24,7 @@ from user.database.modules.aube_ecarlate import main as make_aube_ecarlate
 from user.database.modules.cache_cache import main as make_cache_cache
 from user.database.modules.lefortdesrats import main as make_lefortdesrats
 from user.database.modules.manoir import main as make_manoir
+from user.database.modules.soleil import main as make_soleil
 from user.database.modules.traprace import main as make_traprace
 from user.database.nature import main as make_nature
 from user.database.pr_stoupy import main as make_pr_stoupy
@@ -51,6 +52,7 @@ def beet_default(ctx: Context) -> None:
 	make_tribe_civilization()
 	make_tchoutchou()
 	make_aram()
+	make_soleil()
 	make_abyssion_wrath()
 	make_aube_ecarlate()
 	make_cache_cache()
