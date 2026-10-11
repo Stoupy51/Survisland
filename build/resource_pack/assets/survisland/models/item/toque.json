@@ -5,10 +5,7 @@
 		"particle": "survisland:item/toque"
 	},
 	"credit": "Ratatouille City",
-	"texture_size": [
-		16,
-		16
-	],
+	"ambientocclusion": true,
 	"elements": [
 		{
 			"name": "base_avant",

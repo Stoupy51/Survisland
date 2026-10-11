@@ -12,8 +12,13 @@ def main() -> None:
 	assets: Path = Mem.ctx.directory / "assets"
 
 	def load_model(item_id: str, path: Path | str) -> JsonDict:
+		""" Load a model from a JSON file and update its textures to use the correct namespace (unless it's a Minecraft texture). """
 		model = stp.json_load(path)
-		model["textures"] = {k: f"{ns}:item/{item_id}" for k in model["textures"] if "minecraft:" not in k}
+		textures: JsonDict = model["textures"]
+		textures.update({k: f"{ns}:item/{item_id}" for k, v in textures.items() if "minecraft:" not in v})
+		for k in ("format_version", "texture_size"):
+			if k in model:
+				del model[k]
 		return model
 
 	Item(
