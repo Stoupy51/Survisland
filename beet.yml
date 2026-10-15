@@ -70,13 +70,13 @@ meta:
             # Modules run in this order; add new modules here without editing setup_definitions.py.
             # External datapacks and resources
             aram: {"libs": False}
-            soleil: {"libs": True, "sounds": True}
+            soleil: {"libs": False, "sounds": False}
             abyssion_wrath: {"sounds": False, "items": True}
             aube_ecarlate: {"sounds": False, "items": False}
             cache_cache: {"libs": False}
             lefortdesrats: {"sounds": False, "items": True}
             # Only sounds
-            manoir: {"sounds": True}
+            manoir: {"sounds": False}
             traprace: {"sounds": False}
 
     # Model resolver configuration for caching models
