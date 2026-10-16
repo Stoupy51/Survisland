@@ -1,0 +1,15 @@
+{
+	"replace": true,
+	"values": [
+		"camel",
+		"donkey",
+		"happy_ghast",
+		"horse",
+		"llama",
+		"mule",
+		"ravager",
+		"spider",
+		"trader_llama",
+		"zombie_horse"
+	]
+}

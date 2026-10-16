@@ -4,7 +4,7 @@
 			"path": "."
 		},
 		{
-			"path": "../StoupGun/minecraft_source_code"
+			"path": "../../clones/minecraft-decompiled"
 		},
 		{
 			"path": "../StewBeet"

@@ -1,6 +1,7 @@
 
 # Imports
-from stewbeet import Context, Mem, official_lib_used
+from beet import EntityTypeTag
+from stewbeet import Context, Mem, official_lib_used, set_json_encoder
 from stewbeet.dependencies import OFFICIAL_LIBS
 
 from user.database.idols import generate_pendent_system
@@ -45,6 +46,11 @@ def beet_default(ctx: Context) -> None:
 	# Delete quick actions (manual)
 	if Mem.ctx.data["minecraft"].dialogs_tags.get("quick_actions"):
 		del Mem.ctx.data["minecraft"].dialogs_tags["quick_actions"]
+
+	# Pigs (shopping kart), chickens and striders keep their rider under water
+	Mem.ctx.data["minecraft"].entity_type_tags["dismounts_underwater"] = set_json_encoder(EntityTypeTag({"replace": True, "values": [
+		"camel", "donkey", "happy_ghast", "horse", "llama", "mule", "ravager", "spider", "trader_llama", "zombie_horse",
+	]}))
 
 	# Prevent some crafts
 	Mem.ctx.data.mcmeta.data["filter"] = {
