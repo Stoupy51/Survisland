@@ -1964,19 +1964,6 @@
 		},
 		"skip_gives": false
 	},
-	"red_coin": {
-		"id": "red_coin",
-		"base_item": "minecraft:recovery_compass",
-		"manual_category": "misc",
-		"recipes": [],
-		"components": {
-			"item_model": "survisland:red_coin",
-			"item_name": {"text": "Red Coin"},
-			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
-			"custom_data": {"survisland": {"red_coin": true},"smithed": {"id": "survisland:red_coin","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
-		},
-		"skip_gives": false
-	},
 	"piece_sos": {
 		"id": "piece_sos",
 		"base_item": "minecraft:recovery_compass",
@@ -2003,19 +1990,6 @@
 		},
 		"skip_gives": false
 	},
-	"super_star": {
-		"id": "super_star",
-		"base_item": "minecraft:recovery_compass",
-		"manual_category": "misc",
-		"recipes": [],
-		"components": {
-			"item_model": "survisland:super_star",
-			"item_name": {"text": "Super Star"},
-			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
-			"custom_data": {"survisland": {"super_star": true},"smithed": {"id": "survisland:super_star","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
-		},
-		"skip_gives": false
-	},
 	"grimoire": {
 		"id": "grimoire",
 		"base_item": "minecraft:recovery_compass",
@@ -2026,6 +2000,32 @@
 			"item_name": {"text": "Grimoire"},
 			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
 			"custom_data": {"survisland": {"grimoire": true},"smithed": {"id": "survisland:grimoire","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"red_coin": {
+		"id": "red_coin",
+		"base_item": "minecraft:recovery_compass",
+		"manual_category": "misc",
+		"recipes": [],
+		"components": {
+			"item_name": {"text": "Pièce Rouge","color": "red","italic": false},
+			"item_model": "survisland:red_coin",
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"red_coin": true},"smithed": {"id": "survisland:red_coin","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"super_star": {
+		"id": "super_star",
+		"base_item": "minecraft:recovery_compass",
+		"manual_category": "misc",
+		"recipes": [],
+		"components": {
+			"item_name": {"text": "Etoile","color": "gold","italic": false},
+			"item_model": "survisland:super_star",
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"super_star": true},"smithed": {"id": "survisland:super_star","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
 		},
 		"skip_gives": false
 	},
