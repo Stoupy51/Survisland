@@ -10,10 +10,12 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
-								"minecraft:item_model": "survisland:red_coin",
 								"minecraft:item_name": {
-									"text": "Red Coin"
+									"text": "Pièce Rouge",
+									"color": "red",
+									"italic": false
 								},
+								"minecraft:item_model": "survisland:red_coin",
 								"minecraft:lore": [
 									[
 										"",
