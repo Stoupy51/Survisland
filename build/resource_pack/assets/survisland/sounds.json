@@ -43,6 +43,30 @@
 		"subtitle": "laser_gun",
 		"sounds": ["survisland:laser_gun"]
 	},
+	"lespetitstravaux/final": {
+		"subtitle": "lespetitstravaux/final",
+		"sounds": [{"name": "survisland:lespetitstravaux/final","stream": true}]
+	},
+	"lespetitstravaux/part_1f": {
+		"subtitle": "lespetitstravaux/part_1f",
+		"sounds": [{"name": "survisland:lespetitstravaux/part_1f","stream": true}]
+	},
+	"lespetitstravaux/part_2f": {
+		"subtitle": "lespetitstravaux/part_2f",
+		"sounds": [{"name": "survisland:lespetitstravaux/part_2f","stream": true}]
+	},
+	"lespetitstravaux/part_3f": {
+		"subtitle": "lespetitstravaux/part_3f",
+		"sounds": [{"name": "survisland:lespetitstravaux/part_3f","stream": true}]
+	},
+	"lespetitstravaux/part_4f": {
+		"subtitle": "lespetitstravaux/part_4f",
+		"sounds": [{"name": "survisland:lespetitstravaux/part_4f","stream": true}]
+	},
+	"lespetitstravaux/part_5f": {
+		"subtitle": "lespetitstravaux/part_5f",
+		"sounds": [{"name": "survisland:lespetitstravaux/part_5f","stream": true}]
+	},
 	"maracas": {
 		"subtitle": "maracas",
 		"sounds": ["survisland:maracas"]

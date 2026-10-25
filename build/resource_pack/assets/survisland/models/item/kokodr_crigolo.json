@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/stick",
+	"textures": {
+		"layer0": "survisland:item/kokodr_crigolo"
+	}
+}

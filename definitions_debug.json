@@ -3125,6 +3125,18 @@
 		},
 		"skip_gives": false
 	},
+	"kokodr_crigolo": {
+		"id": "kokodr_crigolo",
+		"base_item": "minecraft:stick",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:kokodr_crigolo",
+			"item_name": {"text": "Kokodr Crigolo"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"kokodr_crigolo": true},"smithed": {"id": "survisland:kokodr_crigolo","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
 	"black_hole": {
 		"id": "black_hole",
 		"base_item": "minecraft:recovery_compass",
