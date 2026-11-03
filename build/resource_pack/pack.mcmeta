@@ -14,8 +14,8 @@
 	"id": "survisland",
 	"overlays": {
 		"entries": [
-			{"formats": [0,72],"directory": "before_format_73","min_format": 0,"max_format": 72},
-			{"formats": [73,1000],"directory": "format_73_plus","min_format": 73,"max_format": 1000}
+			{"formats": [93,100],"directory": "shaders_26_3","min_format": [93,0],"max_format": [100,1]},
+			{"formats": [100,1000],"directory": "shaders_26_4","min_format": [100,2],"max_format": [1000,0]}
 		]
 	}
 }

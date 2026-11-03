@@ -4,19 +4,7 @@
 		"layer0": "survisland:item/blockguessr_map"
 	},
 	"display": {
-		"thirdperson_lefthand": {
-			"scale": [
-				0,
-				0,
-				0
-			]
-		},
-		"thirdperson_righthand": {
-			"scale": [
-				0,
-				0,
-				0
-			]
-		}
+		"thirdperson_lefthand": {"scale": [0,0,0]},
+		"thirdperson_righthand": {"scale": [0,0,0]}
 	}
 }

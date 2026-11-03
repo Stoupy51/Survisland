@@ -1,6 +1,8 @@
 
 # Imports
-from beet import EntityTypeTag
+from pathlib import Path
+
+from beet import EntityTypeTag, ResourcePack
 from stewbeet import Context, Mem, official_lib_used, set_json_encoder
 from stewbeet.dependencies import OFFICIAL_LIBS
 
@@ -18,6 +20,13 @@ from user.utils.right_click import main as generate_right_click
 from user.utils.scheduled_functions import main as generate_scheduled_functions
 from user.utils.url import main as generate_url
 
+# Constants
+SHADER_OVERLAYS: dict[str, tuple[list[int], list[int]]] = {
+	"shaders_26_3": ([93, 0], [100, 1]),
+	"shaders_26_4": ([100, 2], [1000, 0]),
+}
+""" Folder of merge/overlays to the first and last resource pack format [major, minor] it applies to. The base pack's shaders are the 26.2 ones. """
+
 
 # Main function is run just before making finalyzing the build process (zip, headers, lang, ...)
 def beet_default(ctx: Context) -> None:
@@ -34,6 +43,9 @@ def beet_default(ctx: Context) -> None:
 	generate_player_head()
 	generate_all_together()
 	generate_pr_stoupy()
+
+	for name, (min_format, max_format) in SHADER_OVERLAYS.items():
+		ctx.assets.overlays[name] = ResourcePack(path=Path("merge/overlays") / name, supported_formats=[min_format[0], max_format[0]], min_format=min_format, max_format=max_format)
 
 	# Vendored in libs/datapack with its sleep messages fixed for 26.2, where "interpret" no longer parses JSON strings
 	del OFFICIAL_LIBS["smithed.actionbar"]
