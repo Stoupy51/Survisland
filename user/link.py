@@ -45,7 +45,7 @@ def beet_default(ctx: Context) -> None:
 	generate_pr_stoupy()
 
 	for name, (min_format, max_format) in SHADER_OVERLAYS.items():
-		ctx.assets.overlays[name] = ResourcePack(path=Path("merge/overlays") / name, supported_formats=[min_format[0], max_format[0]], min_format=min_format, max_format=max_format)
+		ctx.assets.overlays[name] = ResourcePack(path=Path("merge/overlays") / name, min_format=min_format, max_format=max_format)
 
 	# Vendored in libs/datapack with its sleep messages fixed for 26.2, where "interpret" no longer parses JSON strings
 	del OFFICIAL_LIBS["smithed.actionbar"]
