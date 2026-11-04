@@ -2029,6 +2029,45 @@
 		},
 		"skip_gives": false
 	},
+	"str_preuve": {
+		"id": "str_preuve",
+		"base_item": "minecraft:recovery_compass",
+		"manual_category": "misc",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:str_preuve",
+			"item_name": {"text": "Str Preuve"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"str_preuve": true},"smithed": {"id": "survisland:str_preuve","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"str_voir": {
+		"id": "str_voir",
+		"base_item": "minecraft:recovery_compass",
+		"manual_category": "misc",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:str_voir",
+			"item_name": {"text": "Str Voir"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"str_voir": true},"smithed": {"id": "survisland:str_voir","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"str_vous": {
+		"id": "str_vous",
+		"base_item": "minecraft:recovery_compass",
+		"manual_category": "misc",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:str_vous",
+			"item_name": {"text": "Str Vous"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"str_vous": true},"smithed": {"id": "survisland:str_vous","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
 	"card_0": {
 		"id": "card_0",
 		"base_item": "minecraft:recovery_compass",

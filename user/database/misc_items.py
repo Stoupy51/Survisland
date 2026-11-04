@@ -36,6 +36,11 @@ def main() -> None:
 	Item(id="red_coin", manual_category="misc", override_model=override_model, components={"item_name": {"text":"Pièce Rouge","color":"red","italic":False}})
 	Item(id="super_star", manual_category="misc", components={"item_name": {"text":"Etoile","color":"gold","italic":False}})
 
+	# For Village Schtroumpf
+	Item(id="str_preuve", manual_category="misc")
+	Item(id="str_voir", manual_category="misc")
+	Item(id="str_vous", manual_category="misc")
+
 	# Cards 0 to 8
 	for i in range(9):
 		Item(

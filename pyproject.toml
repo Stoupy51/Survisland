@@ -5,8 +5,11 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
-    "stewbeet>=3.13.1",
+    "smithed",
+    "stewbeet>=3.10.1",
 ]
 
 [tool.uv.sources]
+smithed = { git = "https://github.com/Stoupy51/smithed-python.git" }
 #(stewbeet = { git = "https://github.com/Stoupy51/StewBeet.git", subdirectory = "python_package", rev = "main" }
+
