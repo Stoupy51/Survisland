@@ -1389,6 +1389,114 @@
 		},
 		"skip_gives": false
 	},
+	"lppmouton1": {
+		"id": "lppmouton1",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:lppmouton1",
+			"item_name": {"text": "Lppmouton1"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"lppmouton1": true},"smithed": {"id": "survisland:lppmouton1","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"lppmouton2": {
+		"id": "lppmouton2",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:lppmouton2",
+			"item_name": {"text": "Lppmouton2"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"lppmouton2": true},"smithed": {"id": "survisland:lppmouton2","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"lppmouton3": {
+		"id": "lppmouton3",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:lppmouton3",
+			"item_name": {"text": "Lppmouton3"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"lppmouton3": true},"smithed": {"id": "survisland:lppmouton3","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"lppmouton4": {
+		"id": "lppmouton4",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:lppmouton4",
+			"item_name": {"text": "Lppmouton4"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"lppmouton4": true},"smithed": {"id": "survisland:lppmouton4","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"lppmouton5": {
+		"id": "lppmouton5",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:lppmouton5",
+			"item_name": {"text": "Lppmouton5"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"lppmouton5": true},"smithed": {"id": "survisland:lppmouton5","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"lppmouton6": {
+		"id": "lppmouton6",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:lppmouton6",
+			"item_name": {"text": "Lppmouton6"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"lppmouton6": true},"smithed": {"id": "survisland:lppmouton6","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"lppmouton7": {
+		"id": "lppmouton7",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:lppmouton7",
+			"item_name": {"text": "Lppmouton7"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"lppmouton7": true},"smithed": {"id": "survisland:lppmouton7","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"lppmouton8": {
+		"id": "lppmouton8",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:lppmouton8",
+			"item_name": {"text": "Lppmouton8"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"lppmouton8": true},"smithed": {"id": "survisland:lppmouton8","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"lppmouton9": {
+		"id": "lppmouton9",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:lppmouton9",
+			"item_name": {"text": "Lppmouton9"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"lppmouton9": true},"smithed": {"id": "survisland:lppmouton9","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
 	"mariage_painting": {
 		"id": "mariage_painting",
 		"base_item": "minecraft:painting",

@@ -60,6 +60,15 @@ def main() -> None:
 			})
 			continue
 
+	for item in [x for x in textures if "lppmouton" in x]:
+		Item(id=item, override_model={
+                "parent":"item/generated",
+                "display":{
+                    "fixed": {"scale": [-2,2,-2]},
+                }
+            })
+
+		
 	# Add paintings 4x4
 	for item in (
 		"mariage_painting", "knights_painting", "koko_painting", "fusoya_painting", "hamelin_painting",

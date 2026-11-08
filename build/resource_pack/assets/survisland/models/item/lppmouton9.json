@@ -1,0 +1,9 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "survisland:item/lppmouton9"
+	},
+	"display": {
+		"fixed": {"scale": [-2,2,-2]}
+	}
+}
