@@ -76,6 +76,7 @@ meta:
             cache_cache: {"libs": False}
             lefortdesrats: {"sounds": False, "items": True}
             lespetitstravaux: {"sounds": True, "items": True}
+            blockguessr: {"items": True}
             # Only sounds
             manoir: {"sounds": False}
             traprace: {"sounds": False}

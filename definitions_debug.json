@@ -1377,18 +1377,6 @@
 		},
 		"skip_gives": false
 	},
-	"blockguessr_map": {
-		"id": "blockguessr_map",
-		"base_item": "minecraft:carrot_on_a_stick",
-		"recipes": [],
-		"components": {
-			"item_model": "survisland:blockguessr_map",
-			"item_name": {"text": "Blockguessr Map"},
-			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
-			"custom_data": {"survisland": {"blockguessr_map": true},"smithed": {"id": "survisland:blockguessr_map","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
-		},
-		"skip_gives": false
-	},
 	"lppmouton1": {
 		"id": "lppmouton1",
 		"base_item": "minecraft:recovery_compass",
@@ -3281,6 +3269,162 @@
 			"item_name": {"text": "Kokodr Crigolo"},
 			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
 			"custom_data": {"survisland": {"kokodr_crigolo": true},"smithed": {"id": "survisland:kokodr_crigolo","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"blockguessr_map": {
+		"id": "blockguessr_map",
+		"base_item": "minecraft:carrot_on_a_stick",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_map",
+			"item_name": {"text": "Blockguessr Map"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"blockguessr_map": true},"smithed": {"id": "survisland:blockguessr_map","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"blockguessr_1": {
+		"id": "blockguessr_1",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_1",
+			"item_name": {"text": "Blockguessr 1"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"blockguessr_1": true},"smithed": {"id": "survisland:blockguessr_1","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"blockguessr_10": {
+		"id": "blockguessr_10",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_10",
+			"item_name": {"text": "Blockguessr 10"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"blockguessr_10": true},"smithed": {"id": "survisland:blockguessr_10","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"blockguessr_11": {
+		"id": "blockguessr_11",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_11",
+			"item_name": {"text": "Blockguessr 11"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"blockguessr_11": true},"smithed": {"id": "survisland:blockguessr_11","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"blockguessr_12": {
+		"id": "blockguessr_12",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_12",
+			"item_name": {"text": "Blockguessr 12"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"blockguessr_12": true},"smithed": {"id": "survisland:blockguessr_12","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"blockguessr_2": {
+		"id": "blockguessr_2",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_2",
+			"item_name": {"text": "Blockguessr 2"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"blockguessr_2": true},"smithed": {"id": "survisland:blockguessr_2","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"blockguessr_3": {
+		"id": "blockguessr_3",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_3",
+			"item_name": {"text": "Blockguessr 3"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"blockguessr_3": true},"smithed": {"id": "survisland:blockguessr_3","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"blockguessr_4": {
+		"id": "blockguessr_4",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_4",
+			"item_name": {"text": "Blockguessr 4"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"blockguessr_4": true},"smithed": {"id": "survisland:blockguessr_4","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"blockguessr_5": {
+		"id": "blockguessr_5",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_5",
+			"item_name": {"text": "Blockguessr 5"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"blockguessr_5": true},"smithed": {"id": "survisland:blockguessr_5","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"blockguessr_6": {
+		"id": "blockguessr_6",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_6",
+			"item_name": {"text": "Blockguessr 6"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"blockguessr_6": true},"smithed": {"id": "survisland:blockguessr_6","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"blockguessr_7": {
+		"id": "blockguessr_7",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_7",
+			"item_name": {"text": "Blockguessr 7"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"blockguessr_7": true},"smithed": {"id": "survisland:blockguessr_7","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"blockguessr_8": {
+		"id": "blockguessr_8",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_8",
+			"item_name": {"text": "Blockguessr 8"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"blockguessr_8": true},"smithed": {"id": "survisland:blockguessr_8","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"blockguessr_9": {
+		"id": "blockguessr_9",
+		"base_item": "minecraft:recovery_compass",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:blockguessr_9",
+			"item_name": {"text": "Blockguessr 9"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"blockguessr_9": true},"smithed": {"id": "survisland:blockguessr_9","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
 		},
 		"skip_gives": false
 	},
