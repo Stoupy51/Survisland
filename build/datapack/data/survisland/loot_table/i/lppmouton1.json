@@ -1,0 +1,41 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:recovery_compass",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_model": "survisland:lppmouton1",
+								"minecraft:item_name": {
+									"text": "Lppmouton1"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},
+										{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}
+									]
+								],
+								"minecraft:custom_data": {
+									"survisland": {
+										"lppmouton1": true
+									},
+									"smithed": {
+										"id": "survisland:lppmouton1",
+										"origin": "survisland",
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

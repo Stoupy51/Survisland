@@ -67,6 +67,54 @@
 		"subtitle": "lespetitstravaux/part_5f",
 		"sounds": [{"name": "survisland:lespetitstravaux/part_5f","stream": true}]
 	},
+	"lpp/01lpp": {
+		"subtitle": "lpp/01lpp",
+		"sounds": [{"name": "survisland:lpp/01lpp","stream": true}]
+	},
+	"lpp/02lpp": {
+		"subtitle": "lpp/02lpp",
+		"sounds": [{"name": "survisland:lpp/02lpp","stream": true}]
+	},
+	"lpp/03lpp": {
+		"subtitle": "lpp/03lpp",
+		"sounds": [{"name": "survisland:lpp/03lpp","stream": true}]
+	},
+	"lpp/04lpp": {
+		"subtitle": "lpp/04lpp",
+		"sounds": [{"name": "survisland:lpp/04lpp","stream": true}]
+	},
+	"lpp/05lpp": {
+		"subtitle": "lpp/05lpp",
+		"sounds": [{"name": "survisland:lpp/05lpp","stream": true}]
+	},
+	"lpp/06lpp": {
+		"subtitle": "lpp/06lpp",
+		"sounds": [{"name": "survisland:lpp/06lpp","stream": true}]
+	},
+	"lpp/07lpp": {
+		"subtitle": "lpp/07lpp",
+		"sounds": [{"name": "survisland:lpp/07lpp","stream": true}]
+	},
+	"lpp/08lpp": {
+		"subtitle": "lpp/08lpp",
+		"sounds": [{"name": "survisland:lpp/08lpp","stream": true}]
+	},
+	"lpp/09lpp": {
+		"subtitle": "lpp/09lpp",
+		"sounds": [{"name": "survisland:lpp/09lpp","stream": true}]
+	},
+	"lpp/10lpp": {
+		"subtitle": "lpp/10lpp",
+		"sounds": [{"name": "survisland:lpp/10lpp","stream": true}]
+	},
+	"lpp/11lpp": {
+		"subtitle": "lpp/11lpp",
+		"sounds": [{"name": "survisland:lpp/11lpp","stream": true}]
+	},
+	"lpp/lppmusic": {
+		"subtitle": "lpp/lppmusic",
+		"sounds": [{"name": "survisland:lpp/lppmusic","stream": true}]
+	},
 	"maracas": {
 		"subtitle": "maracas",
 		"sounds": ["survisland:maracas"]
