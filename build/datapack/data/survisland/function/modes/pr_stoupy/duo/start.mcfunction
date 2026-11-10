@@ -17,6 +17,7 @@ scoreboard players add #pr_stoupy_duo_group_counter survisland.data 0
 scoreboard players operation #pr_stoupy_duo_room survisland.data = #pr_stoupy_duo_group_counter survisland.data
 scoreboard players add #pr_stoupy_duo_room survisland.data 1
 
+
 # Objectives of the mode, all but the first one are carried by the mannequins themselves
 scoreboard objectives add survisland.pr_stoupy_duo dummy
 scoreboard objectives add survisland.pr_stoupy_duo.group dummy

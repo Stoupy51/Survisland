@@ -7,6 +7,7 @@
 # Reset timer
 scoreboard players set #second survisland.data 0
 
+
 # Given an ID to every player who hasn't one
 execute as @a run function survisland:player/check_id
 

@@ -7,6 +7,7 @@
 # Reset timer
 scoreboard players set #minute survisland.data 1
 
+
 # Timer
 scoreboard players set #second survisland.data 0
 

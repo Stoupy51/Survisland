@@ -10,6 +10,7 @@ scoreboard players add #minute survisland.data 1
 execute if score #second survisland.data matches 20.. run function survisland:v2.10.0/second
 execute if score #minute survisland.data matches 1200.. run function survisland:v2.10.0/minute
 
+
 # Custom Keep Inventory System
 execute as @a[scores={survisland.deathCount=1..}] at @s run function survisland:keep_inventory/player_died
 
