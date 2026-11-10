@@ -14,13 +14,25 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 git clone https://github.com/Stoupy51/Survisland.git
 ```
 
-## 2.b Synchronisez le projet
-Si vous avez déjà contribué, vous pouvez synchroniser votre fork avec le projet principal avant toute modification pour éviter les conflits :
+## 2.b Synchronisez votre fork
+Ajoutez le dépôt officiel sous le nom `upstream` (une seule fois), puis récupérez ses changements :
 ```bash
 git remote add upstream https://github.com/Stoupy51/Survisland.git
 git fetch upstream
+```
+Pour mettre à jour votre `main` avant de travailler ou d'ouvrir une pull request :
+```bash
+git switch main
+git merge upstream/main
+git push origin main
+```
+
+Si votre `main` est dans un état incohérent et que vous voulez l'effacer pour la remettre exactement comme le dépôt officiel, sauvegardez d'abord tout travail à conserver. Ces commandes suppriment les changements et commits propres à votre `main`, localement et sur votre fork :
+```bash
+git fetch upstream
+git switch main
 git reset --hard upstream/main
-git push -f origin main
+git push --force-with-lease origin main
 ```
 
 ## 3. Build le projet
@@ -33,7 +45,7 @@ Le projet est divisé en plusieurs dossiers :
 - `build/`: Build du projet, à ne pas modifier car il est généré automatiquement
 - `user/`: Code source du projet, c'est ici que vous devez faire vos modifications
   - `database/`: Base de données du projet, c'est ici que vous devez ajouter vos items, recettes
-    - `modules/`: Modules optionnels, automatiquement chargés à partir de `beet.yml`
+    - `modules/`: Contenu optionnel chargé selon la configuration de `beet.yml` (voir ci-dessous)
   - `link and utils/`: Utilitaires du projet, c'est ici que vous pouvez ajouter des fonctions utilitaires pour faciliter votre développement
 - `assets/`: Assets du projet, c'est ici que vous pouvez ajouter des textures, des sons
   - `textures/`: Textures du projet, c'est ici que vous pouvez ajouter des textures pour vos items, blocs
@@ -42,27 +54,25 @@ Le projet est divisé en plusieurs dossiers :
   - `records/`: Musiques de conseils globalement
 
 ## Ajouter un module
-Pour ajouter un module, créez un fichier dans `user/database/modules/`, puis ajoutez une entrée sous `meta.survisland.modules` dans `beet.yml`. La clé doit correspondre au nom du fichier sans l'extension `.py`. Chaque module doit exposer une fonction `main()` sans argument ; elle sera importée et appelée automatiquement pendant la préparation des définitions.
-
-Par exemple, pour `user/database/modules/mon_module.py` :
+Un module regroupe du contenu optionnel. Pour en ajouter un, créez `user/database/modules/mon_module.py` avec une fonction `main()`, puis ajoutez `mon_module` sous `meta.survisland.modules` dans `beet.yml`. Le build appelle chaque module déclaré, dans l'ordre du fichier YAML. Le code du module lit ses options et choisit quoi créer :
 ```python
 from stewbeet import Mem
 
 
 def main() -> None:
     config = Mem.ctx.meta["survisland"]["modules"]["mon_module"]
-    # Ajouter ici les définitions et traitements du module.
+    if not config.get("items", False):
+        return
+    # Créer ici les items du module.
 ```
-
-Ajoutez ensuite sa configuration dans `beet.yml` :
+Dans `beet.yml` :
 ```yaml
 meta:
   survisland:
     modules:
-      mon_module: {"items": True, "sounds": False}
+      mon_module: {"items": True}
 ```
-
-Les options configurées sont accessibles via `Mem.ctx.meta["survisland"]["modules"]["mon_module"]`. Les modules sont exécutés dans l'ordre de déclaration dans `beet.yml`. Il n'est pas nécessaire de modifier `user/setup_definitions.py`.
+La clé doit correspondre au nom du fichier sans `.py`. Aucune modification de `user/setup_definitions.py` n'est nécessaire.
 
 ## 5. Configurer la copie automatique
 Pour faciliter le développement, vous pouvez configurer la copie automatique des datapacks et resource packs générés vers votre dossier de jeu Minecraft.
