@@ -2,9 +2,8 @@
 name: Build
 
 on:
-  pull_request:
-  push:
-    branches: [main]
+  pull_request_target:
+    types: [closed]
   workflow_dispatch:
 
 permissions:
@@ -16,6 +15,7 @@ concurrency:
 
 jobs:
   build:
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.merged
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -28,7 +28,6 @@ jobs:
         run: uv run --frozen stewbeet
 
       - name: Commit and push the build
-        if: github.event_name != 'pull_request'
         env:
           ACTOR: ${{ github.actor }}
           ACTOR_ID: ${{ github.actor_id }}
