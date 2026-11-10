@@ -3,6 +3,8 @@ name: Build
 
 on:
   pull_request:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -26,6 +28,7 @@ jobs:
         run: uv run --frozen stewbeet
 
       - name: Commit and push the build
+        if: github.event_name != 'pull_request'
         env:
           ACTOR: ${{ github.actor }}
           ACTOR_ID: ${{ github.actor_id }}
