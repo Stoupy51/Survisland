@@ -4,10 +4,11 @@
 
 # Vérification de l'emplacement du script
 import os
+import sys
 
 if os.getcwd() != os.path.dirname(os.path.realpath(__file__)):
 	print("Please execute this script in the same folder as the script")
-	exit()
+	sys.exit()
 
 # Définition des fonctions
 def create_teams_file(teams: list[tuple[str, str, int, str]]) -> None:
@@ -22,28 +23,7 @@ def create_teams_file(teams: list[tuple[str, str, int, str]]) -> None:
 		f.write("\n")
 
 		# Création des équipes
-		for nom, couleur, nb_joueurs, vanilla_color in teams:
-			for i in range(nb_joueurs):
-
-				# Indicatif de position
-				col = couleur
-				pos = "th"
-				if i == 0:
-					pos, col = "st", "#EBD759"
-				elif i == 1:
-					pos, col = "nd", "#C0C0C0"
-				elif i == 2:
-					pos, col = "rd", "#CD7F32"
-				nbPos = str(i + 1)
-				if len(nbPos) == 1:
-					nbPos = "0" + nbPos
-
-				# Création de l'équipe
-				f.write(f'team add {nom}_{nbPos}\n')
-				f.write(f'team modify {nom}_{nbPos} displayName {{"text":"{nom} - {i+1}{pos}","color":"{col}"}}\n')
-				f.write(f'team modify {nom}_{nbPos} suffix {{"text":" [{nom} - {i+1}{pos}]","color":"{col}"}}\n')
-				f.write(f'team modify {nom}_{nbPos} color {vanilla_color}\n')
-				f.write("\n")
+		for nom, couleur, _nb_joueurs, vanilla_color in teams:
 
 			# Création d'une équipe "???" pour placement inconnu
 			f.write(f'team add {nom}_x\n')
@@ -52,15 +32,8 @@ def create_teams_file(teams: list[tuple[str, str, int, str]]) -> None:
 			f.write(f'team modify {nom}_x color {vanilla_color}\n')
 			f.write("\n")
 
-		# Ajout de l'équipe "aMJ"
-		f.write('team add MJ\n')
-		f.write('team modify MJ displayName {"text":"MJ","color":"dark_aqua"}\n')
-		f.write('team modify MJ suffix {"text":" [MJ]","color":"dark_aqua"}\n')
-		f.write('team modify MJ color aqua\n')
-		f.write("\n")
-
 # Définition des équipes
-teams: list[tuple[str, str, int, str]] = [
+create_teams_file([
 	("S01", "#FA67FB", 18, "light_purple"),
 	("S02", "#fd7839", 20, "gold"),
 	("S03", "#5ee9f1", 18, "aqua"),
@@ -93,6 +66,5 @@ teams: list[tuple[str, str, int, str]] = [
 	("S30", "#d21a41", 20, "red"),
 	("S31", "#32dc2d", 21, "green"),
 	("S32", "#ffc857", 20, "yellow"),
-]
-create_teams_file(teams)
+])
 
