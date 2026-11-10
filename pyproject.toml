@@ -5,7 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
-    "stewbeet>=3.14.0",
+    "stewbeet>=3.14.1",
 ]
 
 [tool.uv.sources]
