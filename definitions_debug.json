@@ -2164,6 +2164,45 @@
 		},
 		"skip_gives": false
 	},
+	"carte_moins": {
+		"id": "carte_moins",
+		"base_item": "minecraft:recovery_compass",
+		"manual_category": "misc",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:carte_moins",
+			"item_name": {"text": "Carte Moins"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"carte_moins": true},"smithed": {"id": "survisland:carte_moins","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"carte_plus": {
+		"id": "carte_plus",
+		"base_item": "minecraft:recovery_compass",
+		"manual_category": "misc",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:carte_plus",
+			"item_name": {"text": "Carte Plus"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"carte_plus": true},"smithed": {"id": "survisland:carte_plus","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
+	"carte_fois": {
+		"id": "carte_fois",
+		"base_item": "minecraft:recovery_compass",
+		"manual_category": "misc",
+		"recipes": [],
+		"components": {
+			"item_model": "survisland:carte_fois",
+			"item_name": {"text": "Carte Fois"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
+			"custom_data": {"survisland": {"carte_fois": true},"smithed": {"id": "survisland:carte_fois","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
 	"card_0": {
 		"id": "card_0",
 		"base_item": "minecraft:recovery_compass",

@@ -41,6 +41,11 @@ def main() -> None:
 	Item(id="str_voir", manual_category="misc")
 	Item(id="str_vous", manual_category="misc")
 
+	# For Tous en Somme
+	Item(id="carte_moins", manual_category="misc")
+	Item(id="carte_plus", manual_category="misc")
+	Item(id="carte_fois", manual_category="misc")
+
 	# Cards 0 to 8
 	for i in range(9):
 		Item(

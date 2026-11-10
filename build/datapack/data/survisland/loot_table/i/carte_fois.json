@@ -1,0 +1,41 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:recovery_compass",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_model": "survisland:carte_fois",
+								"minecraft:item_name": {
+									"text": "Carte Fois"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},
+										{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}
+									]
+								],
+								"minecraft:custom_data": {
+									"survisland": {
+										"carte_fois": true
+									},
+									"smithed": {
+										"id": "survisland:carte_fois",
+										"origin": "survisland",
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
