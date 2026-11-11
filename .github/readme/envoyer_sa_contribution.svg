@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" role="img" aria-label="Envoyer une contribution : un fork, une modification, une pull request, puis la fusion.">
+	<style>
+		text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #1f2328; }
+		.title { font-size: 16px; font-weight: 600; }
+		.caption { font-size: 12px; fill: #59636e; }
+		.mono { font-family: ui-monospace, Consolas, "Courier New", monospace; font-size: 12.5px; }
+		.card { fill: #f6f8fa; stroke: #d1d9e0; stroke-width: 1.5; animation: focus 10s infinite; }
+		.box { fill: #ffffff; stroke: #d1d9e0; }
+		.chevron { fill: none; stroke: #8c959f; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+		.s2 { animation-delay: 2.5s; } .s3 { animation-delay: 5s; } .s4 { animation-delay: 7.5s; }
+		@keyframes focus { 0%, 22% { stroke: #2da44e; stroke-width: 3.5; } 27%, 100% { stroke: #d1d9e0; stroke-width: 1.5; } }
+		@media (prefers-color-scheme: dark) {
+			text { fill: #f0f6fc; }
+			.caption { fill: #9198a1; }
+			.card { fill: #151b23; stroke: #3d444d; }
+			.box { fill: #0d1117; stroke: #3d444d; }
+			@keyframes focus { 0%, 22% { stroke: #3fb950; stroke-width: 3.5; } 27%, 100% { stroke: #3d444d; stroke-width: 1.5; } }
+		}
+	</style>
+	<path class="chevron" d="M221 103 l9 12 l-9 12"/>
+	<path class="chevron" d="M446 103 l9 12 l-9 12"/>
+	<path class="chevron" d="M671 103 l9 12 l-9 12"/>
+	<g transform="translate(15 15)">
+		<rect class="card s1" width="195" height="200" rx="12"/>
+		<text class="title" x="97.5" y="34" text-anchor="middle">Votre fork</text>
+		<circle class="box" cx="97.5" cy="88" r="24" stroke-width="2"/>
+		<text class="title" x="97.5" y="94" text-anchor="middle">1</text>
+		<text class="caption" x="97.5" y="158" text-anchor="middle">Votre copie du projet</text>
+		<text class="caption" x="97.5" y="178" text-anchor="middle">sur votre compte GitHub</text>
+	</g>
+	<g transform="translate(240 15)">
+		<rect class="card s2" width="195" height="200" rx="12"/>
+		<text class="title" x="97.5" y="34" text-anchor="middle">Votre modification</text>
+		<circle class="box" cx="97.5" cy="88" r="24" stroke-width="2"/>
+		<text class="title" x="97.5" y="94" text-anchor="middle">2</text>
+		<text class="caption" x="97.5" y="158" text-anchor="middle">Vous enregistrez (commit)</text>
+		<text class="caption" x="97.5" y="178" text-anchor="middle">puis vous envoyez (push)</text>
+	</g>
+	<g transform="translate(465 15)">
+		<rect class="card s3" width="195" height="200" rx="12"/>
+		<text class="title" x="97.5" y="34" text-anchor="middle">Pull request</text>
+		<circle class="box" cx="97.5" cy="88" r="24" stroke-width="2"/>
+		<text class="title" x="97.5" y="94" text-anchor="middle">3</text>
+		<text class="caption" x="97.5" y="158" text-anchor="middle">Vous proposez votre travail</text>
+		<text class="caption" x="97.5" y="178" text-anchor="middle">au projet officiel</text>
+	</g>
+	<g transform="translate(690 15)">
+		<rect class="card s4" width="195" height="200" rx="12"/>
+		<text class="title" x="97.5" y="34" text-anchor="middle">Fusion</text>
+		<circle class="box" cx="97.5" cy="88" r="24" stroke-width="2"/>
+		<text class="title" x="97.5" y="94" text-anchor="middle">4</text>
+		<text class="caption" x="97.5" y="158" text-anchor="middle">Un responsable valide,</text>
+		<text class="caption" x="97.5" y="178" text-anchor="middle">le build se refait tout seul</text>
+	</g>
+</svg>
