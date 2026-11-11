@@ -3,7 +3,7 @@
 
 tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Zééééééé parti !!!! Ramenez-moi un maximum d'animaux !"}]
 
-gamemode adventure @a[gamemode=survival]
+execute as @a[gamemode=survival] run gamemode adventure @s
 gamerule immediate_respawn true
 time set 6000
 

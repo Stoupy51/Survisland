@@ -21,9 +21,9 @@ execute if score #process_end survisland.data matches 1 as @a at @s run function
 execute if score #process_end survisland.data matches 1 run effect clear @a
 execute if score #process_end survisland.data matches 1 run effect give @a slow_falling 20 1 true
 execute if score #process_end survisland.data matches 1 run effect give @a saturation 20 255 true
-execute if score #process_end survisland.data matches 1 run gamemode spectator @a[team=!mLiwai,team=!mMoemoea,gamemode=!creative]
-execute if score #process_end survisland.data matches 1 run gamemode adventure @a[team=mLiwai]
-execute if score #process_end survisland.data matches 1 run gamemode adventure @a[team=mMoemoea]
+execute if score #process_end survisland.data matches 1 as @a[team=!mLiwai,team=!mMoemoea,gamemode=!creative] run gamemode spectator @s
+execute if score #process_end survisland.data matches 1 as @a[team=mLiwai] run gamemode adventure @s
+execute if score #process_end survisland.data matches 1 as @a[team=mMoemoea] run gamemode adventure @s
 
 execute if score #process_end survisland.data matches 6000 run function survisland:modes/cache_s16/stop
 

@@ -14,8 +14,8 @@ execute if score #process_end survisland.data matches 1 as @a at @s run playsoun
 execute if score #process_end survisland.data matches 1 run effect give @a[gamemode=survival] saturation 20 255 true
 execute if score #process_end survisland.data matches 1 run clear @a #survisland:layers[minecraft:custom_data={survisland:{pitch_creep:1b}}]
 execute if score #process_end survisland.data matches 1 run clear @a arrow 1
-execute if score #process_end survisland.data matches 1 run gamemode survival @a[team=mTuarua]
-execute if score #process_end survisland.data matches 1 run gamemode survival @a[team=mPeluang]
+execute if score #process_end survisland.data matches 1 as @a[team=mTuarua] run gamemode survival @s
+execute if score #process_end survisland.data matches 1 as @a[team=mPeluang] run gamemode survival @s
 execute if score #process_end survisland.data matches 1 run tp @e[type=creeper] 0 -10000 0
 
 execute if score #process_end survisland.data matches 1 run fill -993 59 -2896 -993 59 -2877 air destroy

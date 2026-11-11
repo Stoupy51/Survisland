@@ -1,7 +1,7 @@
 
 ##Fonction executée lors du lancement de la partie
 
-gamemode adventure @a[gamemode=survival]
+execute as @a[gamemode=survival] run gamemode adventure @s
 effect give @a[gamemode=adventure] blindness 5 255 true
 effect give @a[gamemode=adventure] weakness 5 255 true
 effect give @a[gamemode=adventure] resistance 5 255 true

@@ -22,10 +22,10 @@ execute if score #process_end survisland.data matches 1 as @a at @s run function
 execute if score #process_end survisland.data matches 1 run effect clear @a
 execute if score #process_end survisland.data matches 1 run effect give @a slow_falling 20 1 true
 execute if score #process_end survisland.data matches 1 run effect give @a saturation 20 255 true
-$execute if score #process_end survisland.data matches 1 run gamemode spectator @a[team=!$(team1_id),team=!$(team2_id),team=!$(team3_id),gamemode=!creative]
-$execute if score #process_end survisland.data matches 1 run gamemode adventure @a[team=$(team1_id)]
-$execute if score #process_end survisland.data matches 1 run gamemode adventure @a[team=$(team2_id)]
-$execute if score #process_end survisland.data matches 1 run gamemode adventure @a[team=$(team3_id)]
+$execute if score #process_end survisland.data matches 1 as @a[team=!$(team1_id),team=!$(team2_id),team=!$(team3_id),gamemode=!creative] run gamemode spectator @s
+$execute if score #process_end survisland.data matches 1 as @a[team=$(team1_id)] run gamemode adventure @s
+$execute if score #process_end survisland.data matches 1 as @a[team=$(team2_id)] run gamemode adventure @s
+$execute if score #process_end survisland.data matches 1 as @a[team=$(team3_id)] run gamemode adventure @s
 
 execute if score #process_end survisland.data matches 6000 run function survisland:modes/1v1v1_cache_cache/stop
 

@@ -21,9 +21,9 @@ execute if score #process_end survisland.data matches 1 as @a at @s run playsoun
 execute if score #process_end survisland.data matches 1 run effect clear @a[gamemode=survival] blindness
 execute if score #process_end survisland.data matches 1 run effect give @a[gamemode=survival] slow_falling 20 1 true
 execute if score #process_end survisland.data matches 1 run effect give @a[gamemode=survival] saturation 20 255 true
-execute if score #process_end survisland.data matches 1 run gamemode spectator @a[team=!mAkijan,team=!mHainy,gamemode=!creative]
-execute if score #process_end survisland.data matches 1 run gamemode survival @a[team=mAkijan]
-execute if score #process_end survisland.data matches 1 run gamemode survival @a[team=mHainy]
+execute if score #process_end survisland.data matches 1 as @a[team=!mAkijan,team=!mHainy,gamemode=!creative] run gamemode spectator @s
+execute if score #process_end survisland.data matches 1 as @a[team=mAkijan] run gamemode survival @s
+execute if score #process_end survisland.data matches 1 as @a[team=mHainy] run gamemode survival @s
 
 execute if score #process_end survisland.data matches 6000 run function survisland:modes/cache_cache/stop
 

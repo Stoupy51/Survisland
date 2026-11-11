@@ -14,7 +14,7 @@ execute if score #process_end survisland.data matches 1 as @a at @s run function
 execute if score #process_end survisland.data matches 1 run effect clear @a
 execute if score #process_end survisland.data matches 1 run effect give @a slow_falling 20 1 true
 execute if score #process_end survisland.data matches 1 run effect give @a saturation 20 255 true
-execute if score #process_end survisland.data matches 1 run gamemode spectator @a[team=!mKecak,team=!mSinaoh,team=!mPonogoro,gamemode=!creative]
+execute if score #process_end survisland.data matches 1 as @a[team=!mKecak,team=!mSinaoh,team=!mPonogoro,gamemode=!creative] run gamemode spectator @s
 
 execute if score #process_end survisland.data matches 6000 run function survisland:modes/cache_s14/stop
 
