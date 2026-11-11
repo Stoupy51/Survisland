@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" role="img" aria-label="Un module regroupe du contenu qu'une ligne de beet.yml ajoute au pack ou en retire.">
+	<style>
+		text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #1f2328; }
+		.title { font-size: 16px; font-weight: 600; }
+		.caption { font-size: 12px; fill: #59636e; }
+		.mono { font-family: ui-monospace, Consolas, "Courier New", monospace; font-size: 12.5px; }
+		.card { fill: #f6f8fa; stroke: #d1d9e0; stroke-width: 1.5; }
+		.box { fill: #ffffff; stroke: #d1d9e0; }
+		.chevron { fill: none; stroke: #8c959f; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+		.group { fill: none; stroke: #2da44e; stroke-width: 2; stroke-dasharray: 5 4; }
+		.knob { fill: #ffffff; animation: knob 8s infinite; }
+		.track { animation: track 8s infinite; }
+		.on { animation: on 8s infinite; }
+		.off { animation: off 8s infinite; }
+		.pop { transform-box: fill-box; transform-origin: center; animation: pop 8s infinite; }
+		@keyframes knob { 0%, 48% { transform: translateX(26px); } 52%, 96% { transform: translateX(0); } 100% { transform: translateX(26px); } }
+		@keyframes track { 0%, 48% { fill: #2da44e; } 52%, 96% { fill: #8c959f; } 100% { fill: #2da44e; } }
+		@keyframes on { 0%, 48% { opacity: 1; } 52%, 96% { opacity: 0; } 100% { opacity: 1; } }
+		@keyframes off { 0%, 48% { opacity: 0; } 52%, 96% { opacity: 1; } 100% { opacity: 0; } }
+		@keyframes pop { 0%, 50% { opacity: 1; transform: scale(1); } 56%, 96% { opacity: 0; transform: scale(0.6); } 100% { opacity: 1; transform: scale(1); } }
+		@media (prefers-color-scheme: dark) {
+			text { fill: #f0f6fc; }
+			.caption { fill: #9198a1; }
+			.card { fill: #151b23; stroke: #3d444d; }
+			.box { fill: #0d1117; stroke: #3d444d; }
+			.group { stroke: #3fb950; }
+		}
+	</style>
+	<path class="chevron" d="M296 103 l9 12 l-9 12"/>
+	<path class="chevron" d="M596 103 l9 12 l-9 12"/>
+	<g transform="translate(15 15)">
+		<rect class="card" width="270" height="200" rx="12"/>
+		<text class="title" x="135" y="34" text-anchor="middle">1. Un module</text>
+		<rect class="box" x="51" y="56" width="168" height="34" rx="6"/>
+		<text class="mono" x="135" y="78" text-anchor="middle">mon_module.py</text>
+		<image x="71" y="106" width="32" height="32" style="image-rendering: pixelated" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAUdJREFUWIXVlzsOgzAMht3HwgEobHShQyW4A2cqx+A43blDR1hgq+AATIgutWTSxon7IO23QESIf/0OxAZwzMo0oWq6iY7jyGfn120/Gx/2OzaG9iEGNgU0gYJ0Qrbcyxg8D1PIvBHKYQOZNwIAQDlsjMGL6wXiyH9wxUjVdBNyCpKJjm2pmm46BclsLBZAg9PFXhGhE7DmhGTeCHHkQx6mAPdUSLDZP6wAzHNxvcyuXwctPO+PYttVaOqexWIdWAKrFOjIw1S8L0QCTMGf3S8m4FM4F8D+ilU4q+kzyedq7YAkz5K5zlNgLUBiq2SuaA/QhVWbX/1N/08Kfk4AtfydU1K0BzgROrCE0/GbKRAXkQr0C8ETVbfmxx1Qy7e3UyB1g5Zvddtble8PLFmWs50RbUxM0IYFmxh0o257bWfkvDVz3pw65wYSD7pgewmt9gAAAABJRU5ErkJggg=="/><image x="119" y="106" width="32" height="32" style="image-rendering: pixelated" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAASpJREFUWIXtl0ESgjAMRaPjEVq3uMHhALryMizkVGy4Dxdw6Aa21DvgwolTkCaNo1RnfLuUQj5J0zYAkVlxE5q2H1w7TTQ533R2ZO93W9KH9yE65hxyoCCfkA31MjrXxwJUlsP1UoHKcgAAuF4q1rmtS0gT/RQVlqbtB0QdzoNrh9K0/aAO55EtFvCq8zkRPgFkClSWQ5po0MfiMWbrMvhHQtYPKeCe55PIqZT13CAqxwX3DnzRmBWwJKSAkFL7qIAl+Asgy3CKux9QSMo2OAKhzqVzo6cgWIAkrJK5ojXwiS35d1LwF/Aq3In6nREQXyIJ8ET1fVNUhiFMr29cClgBprOi3sDdK0xnH9c6EUtey8nOyG1MONyGBZsYjIbprLczit6aRW9Oo3MDz51cUOIed8IAAAAASUVORK5CYII="/><image x="167" y="106" width="32" height="32" style="image-rendering: pixelated" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAWJJREFUWIXNVzFug0AQ3IRU7p0ijVP4Iv5glEeY3+RP/IJHWNBACz2dRYpopTW+3bs5I5Np4MRxM5rdhV2ijfES2tB0wyzX7rA397f9eLP++nw3OdSHTBwiDIEFaULerJeZ3JUFTXlGu8uVpjwjIqLd5Romr2pyh/2dK0E03TAzjufTLNexaLphPp5PN2tYAJPzQfJAVIQm4NUSMuXZn4VVTa4sqK1qyMmY/DEFcJyZ3JUFJCAZbOHHzzcc+yVk2HxcpgPPgFmGstSk/VouxOxZIskBXy6k5kdyCCThI8kZLcBnqSsLLzlSrpADMQej3wo4BBYBSp4kYG3AAqyES0lGSEAMASoiWoCW7Vp1rC7AR+67R5EkwEeYKsL8F6AEvj3cwmn4n2UIN5ECnIB85T+qdubqDizbt4dDgLoh27e2H6Pa9zs8sy03JyM5mIQgBxYeYjgMbT+qk9Hmo9nmw+nm+AUQtNRo5e4YYAAAAABJRU5ErkJggg=="/>
+		<text class="caption" x="135" y="178" text-anchor="middle">Le contenu d'un mode de jeu, regroupé</text>
+	</g>
+	<g transform="translate(315 15)">
+		<rect class="card" width="270" height="200" rx="12"/>
+		<text class="title" x="135" y="34" text-anchor="middle">2. Son interrupteur</text>
+		<rect class="box" x="27" y="56" width="216" height="34" rx="6"/>
+		<text class="mono on" x="135" y="78" text-anchor="middle">mon_module: {"items": True}</text>
+		<text class="mono off" x="135" y="78" text-anchor="middle">mon_module: {"items": False}</text>
+		<rect class="track" x="107" y="106" width="56" height="30" rx="15"/>
+		<circle class="knob" cx="122" cy="121" r="11"/>
+		<text class="caption" x="135" y="178" text-anchor="middle">Une ligne dans beet.yml</text>
+	</g>
+	<g transform="translate(615 15)">
+		<rect class="card" width="270" height="200" rx="12"/>
+		<text class="title" x="135" y="34" text-anchor="middle">3. Le pack</text>
+		<rect class="box" x="19" y="84" width="40" height="40" rx="4" stroke-width="2"/><image x="23" y="88" width="32" height="32" style="image-rendering: pixelated" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABfGlDQ1BJQ0MgUHJvZmlsZQAAeJyVkT1IQlEYhp97LYxQpHKIaLhDNeVSEY1hkQQFYQZqDd0fNcF7u9yrtDgGrUFDP0t/Q0tzrQ2tQRD0A9EeNBW1hNw4KiiBQd9yHt5z3o/vew/IRwXddNsmwbSKTjwWVZKptOJ/RaabLiL4Vd215xdnErSsr3skcd5FRC/+V0Ej4+ogKcCkbjtFkFaB8Y2iLXgPCOtrqgHSOTDsJFNpkB6FrtX4TXCuyrLoGXYS8SmQw4CSa2KtifU1xwR5DBgwTMsAOVljQ3BZsFko6fU5xYaBjLW0KHSgnxizzLOAgkaJPAWKRMhjoeASJ0a0hb+v6l+ghEaBPDoK06xjolb9iD/gV7ZudnSk1ikQhfYXz/sYBP8OVLY97/vY8yon4HuGK6vhXz+CiU/wbTe0gUMIbcLFdUPTduFyC3qfbNVRq5IPkLNZeD+DYAp6bqFzuZZb/Z7TB0iUYe4G9g9gKAehlRZ7dzTn9ueben4/ntJyuFQFygwAAAJCSURBVHicjZNPSJRBGMZ/M9/sqrvFlotUdOicBUkeosDUTBARtUuHPJh66ZB46GRWUNatLqnHrPAQeUgqkHAxjbCrJBVd7FBKHirbXHfX/eabie9zLfunPYfhHeZ9HuZ53hnBXzB5FWsMSAlCFGKMBzJCdU9S/N4r1m8merGOI6koVbhujlBYMTpURP3pEOgk49Me0oFjl37yxFoxfkXZ6v0a4QCRPUAUT2ex1mP01hcae5pgYRwyH3n2BqournJlQL6Mrdznk6NQXI7RBnaUI+OHkCVVFIXCEFZQcgRiB1iajjB4Futzlb8UFBSTGLZoz9Bw5hsyXgErLkIa3OwSns5BehmfYnSKrbHdNNTMAsYGAjk3SU3XCULZtzzun8XaORrPN6FdSzg9Q1VrhCfXE9S1gPS+kknFMNYGHsTT3i22cm8KuasMMssQPwzaJXFjjNpztTD/kEw2w/0pibUmH5vI16CUk0EW7cSk0hArQ356AXaF2u5mRq89or5FcO85dAyYfOC+9cB+AGmswcsuIJ1tCCFh+0G0duDdEEpoBsfSdAz8Ou71UEo4OELz4OZLCsKvUbhYGaXulMd8ySId/f8mBwKZnCYxHKe5+yjIQqT00K7L4IURROlG1LwFz4PjJz/jzY3A4hQkX+EszdDe6Q/pPwTqehF3JyQh5SCz7yE9i8BDa3D8z7AJgnfQ1ucnrGxrJWizQsh+QCl+jGrDG6wVbX1a3JkUhHxJGQ2O/B+5Gf5I+HansNaumm/fZAJ+03ezouO/gxC3uAAAAABJRU5ErkJggg=="/><rect class="box" x="67" y="84" width="40" height="40" rx="4" stroke-width="2"/><image x="71" y="88" width="32" height="32" style="image-rendering: pixelated" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABwElEQVR4nJVTTShEURg9w/jJ/JBSI0YoC1M02YhsjLXVZDELZWWjJolGMQ3Z+MtfUZqFrGY1K8mKBSKSrEZKRg2ZGgnvPQ3S6H6v+9w7MxunXt+9591z7vd9914TsjDlLcpkc9L/6LdJnJuzhSM1EdjmY1CUF2CmK9fB68uIRiYuZsJ80F4VhCcG8KZ+ILS9Z/BLjz4yMeUTr6y+Q01rmJtrRvIuQZyj0UmRzxk2tcG/EjhslRUITlcYcy7kCG9nyHwyUA1oQg9WhryU5uLOKS7iMUkUf0tS7HN7EJyuo7GCV7mJw+tR2p0LYoULfw6FgOtnDBg/AWY7JfMCsW5Wn1gja5J4bHQyAEZ7O4w1Zl63mn6Cw+1G8uqWUgU8CLVAvhPreii3lunZPgoZsI7j/ZOaNuProY9gL6EQCFwbPsHIvpxBvHULDSm/zmhfCO4eS2IWraUWmRMNHhL3gHONiAb4yUTpj8JmqwQ2uvVdl5sAOwBLca4BuAmDc41Mno9SeEYKqL+h7OJV+gZ8ba2znsbGVW5vc8FitUruDGwhMzhKj0j8weG5fpU5wR8TN9JU1TBkY46zS/2SSY9JxH+f8y/s3LLDBbFGAgAAAABJRU5ErkJggg=="/>
+		<g class="pop">
+			<rect class="group" x="109" y="78" width="148" height="52" rx="8"/>
+			<rect class="box" x="115" y="84" width="40" height="40" rx="4" stroke-width="2"/><image x="119" y="88" width="32" height="32" style="image-rendering: pixelated" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAUdJREFUWIXVlzsOgzAMht3HwgEobHShQyW4A2cqx+A43blDR1hgq+AATIgutWTSxon7IO23QESIf/0OxAZwzMo0oWq6iY7jyGfn120/Gx/2OzaG9iEGNgU0gYJ0Qrbcyxg8D1PIvBHKYQOZNwIAQDlsjMGL6wXiyH9wxUjVdBNyCpKJjm2pmm46BclsLBZAg9PFXhGhE7DmhGTeCHHkQx6mAPdUSLDZP6wAzHNxvcyuXwctPO+PYttVaOqexWIdWAKrFOjIw1S8L0QCTMGf3S8m4FM4F8D+ilU4q+kzyedq7YAkz5K5zlNgLUBiq2SuaA/QhVWbX/1N/08Kfk4AtfydU1K0BzgROrCE0/GbKRAXkQr0C8ETVbfmxx1Qy7e3UyB1g5Zvddtble8PLFmWs50RbUxM0IYFmxh0o257bWfkvDVz3pw65wYSD7pgewmt9gAAAABJRU5ErkJggg=="/><rect class="box" x="163" y="84" width="40" height="40" rx="4" stroke-width="2"/><image x="167" y="88" width="32" height="32" style="image-rendering: pixelated" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAASpJREFUWIXtl0ESgjAMRaPjEVq3uMHhALryMizkVGy4Dxdw6Aa21DvgwolTkCaNo1RnfLuUQj5J0zYAkVlxE5q2H1w7TTQ533R2ZO93W9KH9yE65hxyoCCfkA31MjrXxwJUlsP1UoHKcgAAuF4q1rmtS0gT/RQVlqbtB0QdzoNrh9K0/aAO55EtFvCq8zkRPgFkClSWQ5po0MfiMWbrMvhHQtYPKeCe55PIqZT13CAqxwX3DnzRmBWwJKSAkFL7qIAl+Asgy3CKux9QSMo2OAKhzqVzo6cgWIAkrJK5ojXwiS35d1LwF/Aq3In6nREQXyIJ8ET1fVNUhiFMr29cClgBprOi3sDdK0xnH9c6EUtey8nOyG1MONyGBZsYjIbprLczit6aRW9Oo3MDz51cUOIed8IAAAAASUVORK5CYII="/><rect class="box" x="211" y="84" width="40" height="40" rx="4" stroke-width="2"/><image x="215" y="88" width="32" height="32" style="image-rendering: pixelated" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAWJJREFUWIXNVzFug0AQ3IRU7p0ijVP4Iv5glEeY3+RP/IJHWNBACz2dRYpopTW+3bs5I5Np4MRxM5rdhV2ijfES2tB0wyzX7rA397f9eLP++nw3OdSHTBwiDIEFaULerJeZ3JUFTXlGu8uVpjwjIqLd5Romr2pyh/2dK0E03TAzjufTLNexaLphPp5PN2tYAJPzQfJAVIQm4NUSMuXZn4VVTa4sqK1qyMmY/DEFcJyZ3JUFJCAZbOHHzzcc+yVk2HxcpgPPgFmGstSk/VouxOxZIskBXy6k5kdyCCThI8kZLcBnqSsLLzlSrpADMQej3wo4BBYBSp4kYG3AAqyES0lGSEAMASoiWoCW7Vp1rC7AR+67R5EkwEeYKsL8F6AEvj3cwmn4n2UIN5ECnIB85T+qdubqDizbt4dDgLoh27e2H6Pa9zs8sy03JyM5mIQgBxYeYjgMbT+qk9Hmo9nmw+nm+AUQtNRo5e4YYAAAAABJRU5ErkJggg=="/>
+		</g>
+		<text class="caption on" x="135" y="178" text-anchor="middle">Les items du module sont en jeu</text>
+		<text class="caption off" x="135" y="178" text-anchor="middle">Les items du module ont disparu</text>
+	</g>
+</svg>

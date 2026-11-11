@@ -105,7 +105,11 @@ Déposez un fichier `.ogg` dans `assets/sounds/`. `assets/sounds/fart.ogg` se jo
 Ce qui se trouve dans `merge/datapack/` et `merge/resource_pack/` est copié tel quel dans le pack. `merge/datapack/data/survisland/function/ma_fonction.mcfunction` se lance avec `/function survisland:ma_fonction`.
 
 ### Un module
-Un module regroupe le contenu d'un événement ou d'un mode de jeu, pour pouvoir l'activer ou le désactiver d'un coup. Créez `user/database/modules/mon_module.py` avec une fonction `main()` :
+Un module regroupe le contenu d'un événement ou d'un mode de jeu, pour pouvoir l'activer ou le désactiver d'un coup.
+
+<p align="center"><img src=".github/readme/modules.svg" alt="Un module, son interrupteur dans beet.yml, et ses items qui apparaissent ou disparaissent du pack" width="100%"></p>
+
+Créez `user/database/modules/mon_module.py` avec une fonction `main()` :
 ```python
 from stewbeet import Item, Mem
 
@@ -186,3 +190,4 @@ git push --force-with-lease origin main
    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Stoupy51/Survisland&type=Date" />
  </picture>
 </a>
+
