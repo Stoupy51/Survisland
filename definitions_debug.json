@@ -1985,22 +1985,22 @@
 			"height": 3
 		}
 	},
-	"str_qui-est-ce": {
-		"id": "str_qui-est-ce",
+	"str_qui_est_ce": {
+		"id": "str_qui_est_ce",
 		"base_item": "minecraft:painting",
 		"recipes": [],
 		"components": {
-			"painting/variant": "survisland:str_qui-est-ce",
-			"item_model": "survisland:str_qui-est-ce",
-			"item_name": {"text": "Str Qui-Est-Ce"},
+			"painting/variant": "survisland:str_qui_est_ce",
+			"item_model": "survisland:str_qui_est_ce",
+			"item_name": {"text": "Str Qui Est Ce"},
 			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "survisland:tooltip"},{"text": "뀁Survisland","italic": false,"color": "white","font": "survisland:tooltip"}]],
-			"custom_data": {"survisland": {"str_qui-est-ce": true},"smithed": {"id": "survisland:str_qui-est-ce","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
+			"custom_data": {"survisland": {"str_qui_est_ce": true},"smithed": {"id": "survisland:str_qui_est_ce","origin": "survisland","ignore": {"functionality": true,"crafting": true}}}
 		},
 		"skip_gives": false,
 		"painting_data": {
-			"texture": "painting/str_qui-est-ce",
+			"texture": "painting/str_qui_est_ce",
 			"author": {"text": "Tata_Mymy","color": "yellow"},
-			"title": {"text": "Str Qui-Est-Ce"},
+			"title": {"text": "Str Qui Est Ce"},
 			"width": 3,
 			"height": 3
 		}

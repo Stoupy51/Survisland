@@ -1,6 +1,6 @@
 {
 	"model": {
 		"type": "minecraft:model",
-		"model": "survisland:item/str_qui-est-ce"
+		"model": "survisland:item/str_qui_est_ce"
 	}
 }

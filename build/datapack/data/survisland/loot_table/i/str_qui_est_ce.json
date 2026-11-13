@@ -10,10 +10,10 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
-								"minecraft:painting/variant": "survisland:str_qui-est-ce",
-								"minecraft:item_model": "survisland:str_qui-est-ce",
+								"minecraft:painting/variant": "survisland:str_qui_est_ce",
+								"minecraft:item_model": "survisland:str_qui_est_ce",
 								"minecraft:item_name": {
-									"text": "Str Qui-Est-Ce"
+									"text": "Str Qui Est Ce"
 								},
 								"minecraft:lore": [
 									[
@@ -24,10 +24,10 @@
 								],
 								"minecraft:custom_data": {
 									"survisland": {
-										"str_qui-est-ce": true
+										"str_qui_est_ce": true
 									},
 									"smithed": {
-										"id": "survisland:str_qui-est-ce",
+										"id": "survisland:str_qui_est_ce",
 										"origin": "survisland",
 										"ignore": {"functionality": true,"crafting": true}
 									}

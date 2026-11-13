@@ -1,6 +1,6 @@
 {
 	"parent": "minecraft:item/painting",
 	"textures": {
-		"layer0": "survisland:item/str_qui-est-ce"
+		"layer0": "survisland:item/str_qui_est_ce"
 	}
 }

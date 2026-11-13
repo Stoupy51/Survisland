@@ -91,7 +91,7 @@ def main() -> None:
 		))
 
 	# Add paintings 3x3
-	for item in ("str_qui-est-ce",):
+	for item in ("str_qui_est_ce",):
 		Painting(id=item, painting_data=PaintingData(
 			texture=f"painting/{item}",
 			author={"text":"Tata_Mymy","color":"yellow"},

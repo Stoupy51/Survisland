@@ -1,11 +1,11 @@
 {
-	"asset_id": "survisland:painting/str_qui-est-ce",
+	"asset_id": "survisland:painting/str_qui_est_ce",
 	"author": {
 		"text": "Tata_Mymy",
 		"color": "yellow"
 	},
 	"title": {
-		"text": "Str Qui-Est-Ce"
+		"text": "Str Qui Est Ce"
 	},
 	"width": 3,
 	"height": 3
