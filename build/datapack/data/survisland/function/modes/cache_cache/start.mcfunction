@@ -8,7 +8,7 @@
 
 tag @a remove survisland.alive
 tag @a[gamemode=!spectator,gamemode=!creative,tag=!survisland.seeker] add survisland.alive
-gamemode adventure @a[tag=survisland.alive]
+execute as @a[tag=survisland.alive] run gamemode adventure @s
 effect give @a[gamemode=!spectator,gamemode=!creative] blindness 900 0 true
 execute as @a at @s run playsound item.goat_horn.sound.1 ambient @s
 effect give @a[tag=survisland.seeker] strength 900 255 true

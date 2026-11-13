@@ -19,7 +19,7 @@ execute if score #winners survisland.data matches 1 run tellraw @a ["\n",{"nbt":
 execute if score #winners survisland.data matches 2.. run tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Fin de l'épreuve avec une victoire de... Ah merde, y'a égalité entre ces grands joueurs : "},{"selector":"@a[tag=survisland.winner,sort=random]"}]
 execute at @a run summon firework_rocket ~ ~1 ~ {LifeTime:30,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Flight:2,Explosions:[{Type:1,Flicker:1,Trail:1,Colors:[I;1638655]}]}}}}
 execute as @a at @s run playsound entity.wither.death ambient @s
-gamemode survival @a[gamemode=adventure]
+execute as @a[gamemode=adventure] run gamemode survival @s
 
 ##Clear tags
 tag @a remove survisland.winner

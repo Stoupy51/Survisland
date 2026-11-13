@@ -6,7 +6,7 @@
 
 ##Fonction executée lors du lancement de la partie
 
-gamemode adventure @a[gamemode=survival]
+execute as @a[gamemode=survival] run gamemode adventure @s
 
 tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Lancement de l'épreuve, bonne chance !\n"}]
 

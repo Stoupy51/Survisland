@@ -8,7 +8,7 @@
 
 tellraw @a ["\n",{"nbt":"Survisland","storage":"survisland:main","interpret":true},{"text":" Lancement de l'épreuve ! Soyez le premier à activer tous les leviers !"}]
 
-gamemode adventure @a[gamemode=survival]
+execute as @a[gamemode=survival] run gamemode adventure @s
 time set 18000
 
 scoreboard objectives add survisland.temp.sidebar dummy {"text":"Classement des lampes","color":"yellow"}

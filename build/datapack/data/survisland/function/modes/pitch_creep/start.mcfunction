@@ -7,7 +7,7 @@
 ##Fonction executée lors du lancement de la partie
 
 tag @a[gamemode=!spectator,gamemode=!creative] add survisland.alive
-gamemode adventure @a[tag=survisland.alive]
+execute as @a[tag=survisland.alive] run gamemode adventure @s
 # give @a[tag=survisland.alive] wooden_shovel{survisland:{pitch_creep:1b},Unbreakable:1b,display:{Name:'{"text":"À enfoncer avec précaution","color":"yellow","italic":false}'},Enchantments:[{id:"minecraft:knockback",lvl:5s}]}
 # give @a[tag=survisland.alive] bow{survisland:{pitch_creep:1b},Unbreakable:1b,display:{Name:'{"text":"M\'APPROCHE PAS !!!","color":"yellow","italic":false}'},Enchantments:[{id:"minecraft:infinity",lvl:10s},{id:"minecraft:punch",lvl:3s}]}
 give @a[tag=survisland.alive] arrow
