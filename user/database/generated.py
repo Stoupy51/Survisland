@@ -90,3 +90,12 @@ def main() -> None:
 			height=3
 		))
 
+	# Add paintings 3x3
+	for item in ("str_qui-est-ce",):
+		Painting(id=item, painting_data=PaintingData(
+			texture=f"painting/{item}",
+			author={"text":"Tata_Mymy","color":"yellow"},
+			width=3,
+			height=3
+		))
+
