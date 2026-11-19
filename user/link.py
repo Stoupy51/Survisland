@@ -3,7 +3,7 @@
 from pathlib import Path
 
 from beet import EntityTypeTag, ResourcePack
-from stewbeet import Context, Mem, official_lib_used, set_json_encoder
+from stewbeet import Context, Item, Mem, official_lib_used, set_json_encoder
 from stewbeet.dependencies import OFFICIAL_LIBS
 
 from user.database.idols import generate_pendent_system
@@ -30,6 +30,7 @@ SHADER_OVERLAYS: dict[str, tuple[list[int], list[int]]] = {
 
 # Main function is run just before making finalyzing the build process (zip, headers, lang, ...)
 def beet_default(ctx: Context) -> None:
+	ns: str = ctx.project_id
 	generate_scheduled_functions()
 	generate_right_click()
 	generate_dyeable_items()
@@ -56,18 +57,30 @@ def beet_default(ctx: Context) -> None:
 			official_lib_used(module)
 
 	# Delete quick actions (manual)
-	if Mem.ctx.data["minecraft"].dialogs_tags.get("quick_actions"):
-		del Mem.ctx.data["minecraft"].dialogs_tags["quick_actions"]
+	if ctx.data["minecraft"].dialogs_tags.get("quick_actions"):
+		del ctx.data["minecraft"].dialogs_tags["quick_actions"]
 
 	# Pigs (shopping kart), chickens and striders keep their rider under water
-	Mem.ctx.data["minecraft"].entity_type_tags["dismounts_underwater"] = set_json_encoder(EntityTypeTag({"replace": True, "values": [
+	ctx.data["minecraft"].entity_type_tags["dismounts_underwater"] = set_json_encoder(EntityTypeTag({"replace": True, "values": [
 		"camel", "donkey", "happy_ghast", "horse", "llama", "mule", "ravager", "spider", "trader_llama", "zombie_horse",
 	]}))
 
 	# Prevent some crafts
-	Mem.ctx.data.mcmeta.data["filter"] = {
+	ctx.data.mcmeta.data["filter"] = {
 		"block": [
 			{"namespace": "minecraft","path": "recipe/composter"}
 		]
 	}
+
+	# 3D renders
+	from stewbeet.core.utils.fonts.item_images import generate_all_iso_renders  # pyright: ignore[reportMissingTypeStubs]
+	iso_renders_cache: str = f"{ctx.directory}/iso_renders"
+	generate_all_iso_renders(ignore_vanilla=True, ignore_painting=True)
+
+	# all_items.png showcase grid
+	from PIL import Image
+	from stewbeet.plugins.ingame_manual.paths import template_path  # pyright: ignore[reportMissingTypeStubs]
+	from stewbeet.plugins.ingame_manual.showcase import generate_showcase_images  # pyright: ignore[reportMissingTypeStubs]
+	simple_case: Image.Image = Image.open(template_path("simple_case_no_border.png"))
+	generate_showcase_images(2, {}, simple_case, iso_renders_cache)
 

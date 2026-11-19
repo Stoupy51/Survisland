@@ -94,6 +94,10 @@ meta:
             folder: "assets/sounds"
             # Optional: glob patterns to exclude from processing
             exclude_patterns: []
+        # Folder holding the per-item PNG renders (isometric renders, downloaded vanilla textures,
+        # and the ones you drop yourself for items of other packs, as "<folder>/<namespace>/<item>.png").
+        # Shared by the ingame_manual and auto.text_renders plugins so an item is only rendered once.
+        iso_renders_path: "iso_renders"
         # Renders bigger than 256x256 are cut into a grid of glyphs instead of being shrunk
         text_renders:
             allow_oversized: true
