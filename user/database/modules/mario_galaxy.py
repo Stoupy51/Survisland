@@ -18,8 +18,9 @@ def main() -> None:
 	Item(id="red_coin", manual_category="misc", override_model=override_model, components={"item_name": {"text":"Pièce Rouge","color":"red","italic":False}})
 	Item(id="super_star", manual_category="misc", components={"item_name": {"text":"Etoile","color":"gold","italic":False}})
 
-	for star in ("launch_star", "launch_star_inner", "galaxy_kart"):
-		model: JsonDict = stp.json_load(f"{Mem.ctx.directory}/assets/models/mario_galaxy/{star}.json")
+	models: dict[str, str] = {"launch_star": "launch_star", "launch_star_inner": "launch_star_inner", "launch_star_blue": "launch_star_inner", "galaxy_kart": "galaxy_kart"}
+	for item_id, model_name in models.items():
+		model: JsonDict = stp.json_load(f"{Mem.ctx.directory}/assets/models/mario_galaxy/{model_name}.json")
 		for k in model["textures"]:
-			model["textures"][k] = f"{ns}:item/{star}"
-		Item(id=star, override_model=model)
+			model["textures"][k] = f"{ns}:item/{item_id}"
+		Item(id=item_id, override_model=model)
