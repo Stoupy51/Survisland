@@ -30,12 +30,6 @@ def main() -> None:
 	Item(id="jester_token", manual_category="misc")
 	Item(id="grimoire", manual_category="misc")
 
-	# For Mario Galaxy Trial
-	override_model: JsonDict = {"display": {x: {"scale": [1, 1, 1]} for x in DISPLAYS}}
-	override_model["display"]["ground"] = {"scale": [0, 0, 0]}
-	Item(id="red_coin", manual_category="misc", override_model=override_model, components={"item_name": {"text":"Pièce Rouge","color":"red","italic":False}})
-	Item(id="super_star", manual_category="misc", components={"item_name": {"text":"Etoile","color":"gold","italic":False}})
-
 	# For Village Schtroumpf
 	Item(id="str_preuve", manual_category="misc")
 	Item(id="str_voir", manual_category="misc")
