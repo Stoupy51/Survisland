@@ -77,6 +77,7 @@ meta:
             lefortdesrats: {"sounds": False, "items": True}
             lespetitstravaux: {"sounds": True, "items": True}
             blockguessr: {"items": True}
+            mario_galaxy: {"items": True}
             # Only sounds
             manoir: {"sounds": False}
             traprace: {"sounds": False}
