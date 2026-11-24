@@ -8,7 +8,7 @@
 scoreboard players add #second survisland.data 1
 scoreboard players add #minute survisland.data 1
 execute if score #second survisland.data matches 20.. run function survisland:v2.10.0/second
-execute if score #minute survisland.data matches 1200.. run function survisland:v2.10.0/minute
+execute if score #minute survisland.data matches 1201.. run function survisland:v2.10.0/minute
 
 
 # Custom Keep Inventory System

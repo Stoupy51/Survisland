@@ -1,9 +1,40 @@
 {
 	"criteria": {
-		"requirement": {
-			"trigger": "minecraft:inventory_changed"
+		"0": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bread"
+						]
+					}
+				]
+			}
+		},
+		"1": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"survisland": {
+									"croissant": true
+								}
+							}
+						}
+					}
+				]
+			}
 		}
 	},
+	"requirements": [
+		[
+			"0",
+			"1"
+		]
+	],
 	"rewards": {
 		"function": "survisland:advancements/unlock_recipes"
 	}

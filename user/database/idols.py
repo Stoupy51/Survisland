@@ -2,14 +2,22 @@
 
 Both forms of an idol share one inventory texture whenever the artist sent a single file for them, so the resource pack never carries the same PNG twice.
 """
-# ruff: noqa: E501
 # Imports
 from copy import deepcopy
 from dataclasses import dataclass
-from pathlib import Path
 from typing import Any
 
-from stewbeet import Equipment, Item, ItemModifier, JsonDict, Mem, set_json_encoder, texture_mcmeta, write_function
+from stewbeet import (
+	Equipment,
+	Item,
+	ItemModifier,
+	JsonDict,
+	Mem,
+	set_json_encoder,
+	source_textures,
+	texture_mcmeta,
+	write_function,
+)
 
 
 # Classes
@@ -82,10 +90,8 @@ HAS_ITEM_SLOTS: list[str] = ["container.*", "player.cursor", "armor.*", "weapon.
 # Functions
 def main() -> None:
 	""" Item definitions of both forms of every idol. """
-	textures_folder: str = Mem.ctx.meta.get("stewbeet", {}).get("textures_folder", "")
-
-	# Keyed by basename like the item models plugin indexes its own textures, so a name resolves wherever it sits in the folder
-	texture_names: set[str] = {path.stem for path in Path(textures_folder).rglob("*.png")}
+	# Keyed by name like the item models plugin indexes its own textures, so a name resolves wherever it sits in the folder
+	texture_names: set[str] = set(source_textures(with_extension=False))
 
 	for idol in IDOLS:
 		if idol.necklace:

@@ -1,8 +1,7 @@
 
 # Imports
-import os
 
-from stewbeet import Item, Mem, Painting, PaintingData
+from stewbeet import Item, Mem, Painting, PaintingData, source_textures
 
 
 # Main function
@@ -10,10 +9,7 @@ def main() -> None:
 	ns: str = Mem.ctx.project_id
 
 	# Get textures
-	textures_folder = str(Mem.ctx.meta.get("stewbeet", {}).get("textures_folder", ""))
-	textures: list[str] = sorted(
-		os.path.splitext(file)[0] for _, _, files in os.walk(textures_folder) for file in files if file.endswith(".png")
-	)
+	textures: list[str] = sorted(source_textures(with_extension=False))
 
 	# Add colored books
 	books: list[str] = [x for x in textures if "book_" in x]

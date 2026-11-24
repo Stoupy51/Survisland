@@ -1,8 +1,7 @@
 
 # Imports
-import os
 
-from stewbeet import Item, JsonDict, Mem
+from stewbeet import Item, JsonDict, Mem, source_textures, textures_folder
 
 # Constants
 DISPLAYS: tuple[str, ...] = (
@@ -15,10 +14,7 @@ DISPLAYS: tuple[str, ...] = (
 def main() -> None:
 
 	# Get textures
-	textures_folder = str(Mem.ctx.meta.get("stewbeet", {}).get("textures_folder", ""))
-	textures: list[str] = sorted(
-		os.path.splitext(file)[0] for _, _, files in os.walk(textures_folder) for file in files if file.endswith(".png")
-	)
+	textures: list[str] = sorted(source_textures(with_extension=False))
 
 	# Always enabled
 	Item(id="blockguessr_map", base_item="minecraft:carrot_on_a_stick", override_model={
@@ -40,7 +36,7 @@ def main() -> None:
 			continue
 
 		from PIL import Image
-		img = Image.open(f"{textures_folder}/blockguessr/{item}.png")
+		img = Image.open(f"{textures_folder()}/blockguessr/{item}.png")
 		x_on_y = img.width / img.height
 		override_model: JsonDict = {"display": {x: {"scale": [0.5*x_on_y, 0.5, 0.5]} for x in DISPLAYS}}
 		override_model["display"]["firstperson_righthand"] = {"scale": [0, 0, 0]}
