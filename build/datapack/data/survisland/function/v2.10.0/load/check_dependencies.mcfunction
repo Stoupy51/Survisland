@@ -99,4 +99,7 @@ execute if score #dependency_error survisland.data matches 0 if score #golf_ball
 execute if score #dependency_error survisland.data matches 0 unless score #shopping_kart.major load.status matches 1.. run scoreboard players set #dependency_error survisland.data 1
 execute if score #dependency_error survisland.data matches 0 if score #shopping_kart.major load.status matches 1 unless score #shopping_kart.minor load.status matches 4.. run scoreboard players set #dependency_error survisland.data 1
 execute if score #dependency_error survisland.data matches 0 if score #shopping_kart.major load.status matches 1 if score #shopping_kart.minor load.status matches 4 unless score #shopping_kart.patch load.status matches 1.. run scoreboard players set #dependency_error survisland.data 1
+execute if score #dependency_error survisland.data matches 0 unless score #survirec.major load.status matches 1.. run scoreboard players set #dependency_error survisland.data 1
+execute if score #dependency_error survisland.data matches 0 if score #survirec.major load.status matches 1 unless score #survirec.minor load.status matches 3.. run scoreboard players set #dependency_error survisland.data 1
+execute if score #dependency_error survisland.data matches 0 if score #survirec.major load.status matches 1 if score #survirec.minor load.status matches 3 unless score #survirec.patch load.status matches 2.. run scoreboard players set #dependency_error survisland.data 1
 
